@@ -1,0 +1,100 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+const {
+  title,
+  description,
+  imageSrc,
+  imageAlt
+} = Astro.props;
+---
+
+<Header />
+
+<main>
+  <section class="hero">
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </section>
+
+  <section class="infographic-section">
+    <h2>Featured Infographic</h2>
+
+    <a href={imageSrc} target="_blank" class="image-link">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        class="infographic"
+      />
+    </a>
+
+    <p class="caption">
+      Click the infographic to view and download the full-resolution image.
+    </p>
+  </section>
+</main>
+
+<Footer />
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
+  }
+
+  .infographic-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .infographic-section h2 {
+    color: #d4af37;
+    margin-top: 0;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .caption {
+    color: #cccccc;
+    margin-bottom: 0;
+  }
+</style>
