@@ -1,8 +1,65 @@
-<footer>
-  <p>© 2026 Terminus Maximus</p>
+<footer class="site-footer">
+  <div class="footer-content">
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-  </nav>
+    <div class="footer-brand">
+      Terminus Maximus Infographics
+    </div>
+
+    <nav class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+
+  </div>
 </footer>
+
+<style>
+  .site-footer {
+    background: #1e1e1e;
+    border-top: 1px solid #333;
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer-nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .footer-nav a:hover {
+    color: #d4af37;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 700px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
