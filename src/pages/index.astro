@@ -1,28 +1,125 @@
 ---
+import Header from "../components/Header.astro";
 ---
 
+<Header />
+
 <main>
-  <h1>Terminus Maximus</h1>
+  <section class="hero">
+    <h1>Terminus Maximus</h1>
+    <p>
+      Tacticus infographics designed to help
+      players progress faster and make smarter decisions.
+    </p>
+  </section>
 
-  <p>
-    Tacticus guides, infographics, and strategy resources.
-  </p>
+  <section>
+    <h2>Start Here</h2>
 
-  <h2>Featured Guide</h2>
+    <div class="card-grid">
 
-  <p>Current Guild Raid Guide</p>
+      <a class="card" href="/beginner-guide">
+        <h3>Beginner Guide</h3>
+        <p>New player priorities and Normal Campaign progression.</p>
+      </a>
 
-  <h2>Start Here</h2>
+      <a class="card" href="/elite-campaigns">
+        <h3>Elite Campaigns</h3>
+        <p>Elite Campaign minimum investment guides.</p>
+      </a>
 
-  <ul>
-    <li>Beginner Guide</li>
-    <li>Guild Raid Guide</li>
-    <li>LRE Guide</li>
-  </ul>
-  <p>
-  <a href="/about">About Terminus Maximus</a>
-<li><a href="/beginner">Beginner Guide</a></li>
-<li><a href="/guild-raid">Guild Raid Guide</a></li>
-<li><a href="/LRE-guide">LRE Guide</a></li>
-</p>
+      <a class="card" href="/guild-raid">
+        <h3>Guild Raid Guide</h3>
+        <p>Boss lineups, Maps, and recommended teams.</p>
+      </a>
+
+      <a class="card" href="/event-campaign">
+        <h3>Event Campaign</h3>
+        <p>Event details, required characters, and rewards</p>
+      </a>
+
+      <a class="card" href="/hre">
+        <h3>Hero Release Events</h3>
+        <p>Mission Guide to maximize unlock chances.</p>
+      </a>
+
+      <a class="card" href="/incursion-mow">
+        <h3>Incursion & Machine of War</h3>
+        <p>Machine of War recommendations and Incursion basics.</p>
+      </a>
+
+      <a class="card" href="/lre">
+        <h3>Legendary Release Events</h3>
+        <p>Event requirements, planning, and Best Team guides.</p>
+      </a>
+
+      <a class="card" href="/about">
+        <h3>About Me</h3>
+        <p>More about Terminus Maximus.</p>
+      </a>
+
+    </div>
+  </section>
 </main>
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: #d4af37;
+  }
+
+  .card p {
+    color: #cccccc;
+  }
+</style>
