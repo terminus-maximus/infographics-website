@@ -5,6 +5,7 @@ export const graphics = [
       description: "New player priorities and Normal Campaign progression.",
       image: "/images/beginner-guide.png",
       thumbnail: "/images/thumbnails/beginner-guide-thumb.png",
+      category: "start"
     },
     {
       title: "Elite Campaigns",
@@ -12,6 +13,7 @@ export const graphics = [
       description: "Elite Campaign minimum investment guide.",
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
+      category: "start"
     },
     {
       title: "Guild Raid Guide",
@@ -19,6 +21,7 @@ export const graphics = [
       description: "Boss lineups, maps, and recommended teams.",
       image: "/images/guild-raid-s101-mythic.png",
       thumbnail: "/images/thumbnails/guild-raid-thumb.png",
+      category: "raid"
     },
     {
       title: "Campaign Event",
@@ -26,6 +29,7 @@ export const graphics = [
       description: "Event details, required characters, and rewards.",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
+      category: "event"
     },
     {
       title: "Hero Release Events",
@@ -33,6 +37,7 @@ export const graphics = [
       description: "Mission guides designed to maximize unlock chances.",
       image: "/images/hre.png",
       thumbnail: "/images/thumbnails/hre-thumb.png",
+      category: "event"
     },
     {
       title: "Incursion / MoW",
@@ -40,6 +45,7 @@ export const graphics = [
       description: "Machine of War recommendations and Incursion basics.",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
+      category: "event"
     },
     {
       title: "Legendary Release Events",
@@ -47,6 +53,7 @@ export const graphics = [
       description: "Event requirements, planning, and best team guides.",
       image: "/images/lre.png",
       thumbnail: "/images/thumbnails/lre-thumb.png",
+      category: "event"
     },
     {
       title: "About Me",
@@ -54,5 +61,6 @@ export const graphics = [
       description: "More about Terminus Maximus.",
       image: "/images/terminus-maximus.png",
       thumbnail: "/images/thumbnails/about-thumb.png",
+      category: "about"
     },
   ];
