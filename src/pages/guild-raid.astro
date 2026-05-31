@@ -213,14 +213,14 @@ const guides = [
     padding-left: 1.25rem;
   }
 
-  .notes-box li {
-    margin-bottom: 0.5rem;
-    color: #cccccc;
+  .notes-box :global(a) {
+  color: #f5f5f5;
+  text-decoration: none;
   }
 
-  .notes-box a {
+  .notes-box :global(a:hover) {
     color: #d4af37;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   .notes-box a:hover {
