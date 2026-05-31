@@ -1,0 +1,187 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const lreGuides = [
+  {
+    title: "Farsight Legendary Release Event",
+    description: "Current LRE guide with event requirements, planning, and recommended teams.",
+    href: "/lre/farsight",
+    thumbnail: "/images/lre.png",
+  },
+  {
+    title: "Lucius Legendary Release Event",
+    description: "Lucius LRE guide with event requirements, planning, and recommended teams.",
+    href: "/lre/lucius",
+    thumbnail: "/images/lucius-lre.png",
+  },
+  {
+    title: "Uthar Legendary Release Event",
+    description: "Uthar LRE guide with event requirements, planning, and recommended teams.",
+    href: "/lre/uthar",
+    thumbnail: "/images/uthar-lre.png",
+  },
+];
+---
+
+<Header />
+
+<main>
+  <section class="hero">
+    <h1>Legendary Release Events</h1>
+    <p>
+      Legendary Release Event guides for unlock planning, team building, and event requirements.
+    </p>
+  </section>
+
+  <section>
+    <h2>LRE Guides</h2>
+
+    <div class="card-grid">
+      {lreGuides.map((guide) => (
+        <a class="card" href={guide.href}>
+          <div class="card-image-wrap">
+            <img
+              src={guide.thumbnail}
+              alt={`${guide.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+
+          <h3>{guide.title}</h3>
+          <p>{guide.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</main>
+
+<Footer />
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  section h2 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    gap: 1.5rem;
+    justify-content: start;
+  }
+
+  .card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: #121212;
+    border: 1px solid #333;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+  }
+
+  .card h3 {
+    margin: 0 0 0.5rem;
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .card p {
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1rem;
+    }
+
+    .card-image-wrap {
+      height: 110px;
+    }
+  }
+</style>

@@ -17,9 +17,7 @@ const {
 
 const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
 
-const relatedGuides = graphics.filter((g) =>
-  ["/guild-raid", "/lre", "/campaign-event"].includes(g.href)
-);
+const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
 ---
 
 <Header />
@@ -78,7 +76,7 @@ const relatedGuides = graphics.filter((g) =>
 
     <div class="card-grid">
       {relatedGuides.map((graphic) => (
-        <a class="card" href={graphic.href}>
+        <a class="card related-guide-card" href={graphic.href}>
           <div class="card-image-wrap">
             <img
               src={graphic.thumbnail}
@@ -95,6 +93,16 @@ const relatedGuides = graphics.filter((g) =>
     </div>
   </section>
 </main>
+
+<script>
+  const cards = Array.from(document.querySelectorAll(".related-guide-card"));
+
+  cards
+    .sort(() => Math.random() - 0.5)
+    .forEach((card, index) => {
+      card.style.display = index < 3 ? "block" : "none";
+    });
+</script>
 
 <Footer />
 

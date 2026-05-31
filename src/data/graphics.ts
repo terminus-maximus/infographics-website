@@ -32,6 +32,30 @@ export const graphics = [
       category: "raid"
     },
     {
+      title: "Farsight LRE - Current LRE",
+      href: "/lre/farsight",
+      description: "Farsight Legendary Release Event teams, requirements, and planning.",
+      image: "/images/lre.png",
+      thumbnail: "/images/thumbnails/lre-thumb.png",
+      category: "legendary"
+    },
+    {
+      title: "Lucius LRE",
+      href: "/lre/lucius",
+      description: "Lucius Legendary Release Event teams, requirements, and planning.",
+      image: "/images/lucius-lre.png",
+      thumbnail: "/images/lucius-lre.png",
+      category: "legendary"
+    },
+    {
+      title: "Uthar LRE",
+      href: "/lre/uthar",
+      description: "Uthar Legendary Release Event teams, requirements, and planning.",
+      image: "/images/uthar-lre.png",
+      thumbnail: "/images/uthar-lre.png",
+      category: "legendary"
+    },
+    {
       title: "Campaign Event",
       href: "/campaign-event",
       description: "Event details, required characters, and rewards.",
@@ -53,14 +77,6 @@ export const graphics = [
       description: "Machine of War recommendations and Incursion basics.",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
-      category: "event"
-    },
-    {
-      title: "Legendary Release Events",
-      href: "/lre",
-      description: "Event requirements, planning, and best team guides.",
-      image: "/images/lre.png",
-      thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "event"
     },
     {

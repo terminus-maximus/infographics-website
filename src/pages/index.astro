@@ -5,6 +5,7 @@ import { graphics } from "../data/graphics";
 
 const startHere = graphics.filter((g) => g.category === "start");
 const guildRaids = graphics.filter((g) => g.category === "raid");
+const legendaryGuides = graphics.filter((g) => g.category === "legendary");
 const gameEvents = graphics.filter((g) => g.category === "event");
 const aboutPages = graphics.filter((g) => g.category === "about");
 ---
@@ -60,6 +61,28 @@ const aboutPages = graphics.filter((g) => g.category === "about");
     </div>
   </section>
 
+  <section>
+    <h2>Legendary Guides</h2>
+
+    <div class="card-grid">
+      {legendaryGuides.map((graphic) => (
+        <a class="card" href={graphic.href}>
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+
+          <h3>{graphic.title}</h3>
+          <p>{graphic.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+  
   <section>
     <h2>Game Events</h2>
 
