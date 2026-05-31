@@ -1,0 +1,211 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const guides = [
+  {
+    title: "Mythic Bosses",
+    imageSrc: "/images/guild-raid-s102-mythic.png",
+    imageAlt: "Guild Raid Season 102 Mythic Bosses Infographic",
+    notes: `
+      <h4>Video Guides</h4>
+      <ul>
+        <li><a href="https://youtu.be/2HInUQkR18U?si=mK3HSDWFwRgFsbcg" target="_blank">M1 Dorn - 1.2 mil with AdMech</a></li>
+        <li><a href="https://youtu.be/rtEqdG50ss8?si=0B_Uv21zxmUQV3iD" target="_blank">M1 Dorn 1.1 mil with Laviscus</a></li>
+        <li><a href="https://youtu.be/sAST52AVT7Y?si=C-tcbh-12P5StmpF" target="_blank">M2 Avatar 1.3 mil with Laviscus</a></li>
+        <li><a href="https://youtu.be/UIGUORK0jTE?si=cJhZo-mKum-Jy8bc" target="_blank">M2 Avatar 1.1 mil with Neuro</a></li>
+      </ul>
+    `
+  },
+  {
+    title: "Legendary Bosses",
+    imageSrc: "/images/guild-raid-s102-legendary.png",
+    imageAlt: "Guild Raid Season 102 Legendary Bosses Infographic"
+  },
+  {
+    title: "Epic Bosses",
+    imageSrc: "/images/guild-raid-s102-epic.png",
+    imageAlt: "Guild Raid Season 102 Epic Bosses Infographic"
+  },
+  {
+    title: "Coming Soon",
+    imageSrc: "/images/guild-raid-s102-coming-soon.png",
+    imageAlt: "Guild Raid Season 102 Coming Soon Infographic"
+  }
+];
+---
+
+<Header />
+
+<main>
+  <section class="hero">
+    <h1>Guild Raid Season 102</h1>
+    <p>
+      Boss lineups, maps, and recommended teams for Guild Raid Season 102.
+    </p>
+  </section>
+
+  <section class="infographic-section">
+    <h2>Season 102 Infographics</h2>
+
+    <div class="guide-grid">
+      {guides.map((guide) => (
+        <article class="guide-card">
+          <h3>{guide.title}</h3>
+
+          <a href={guide.imageSrc} target="_blank" class="image-link">
+            <img
+              src={guide.imageSrc}
+              alt={guide.imageAlt}
+              class="infographic"
+            />
+          </a>
+
+          <p class="caption">
+            Click the infographic to view and download the full-resolution image.
+          </p>
+
+          {guide.notes && (
+            <div class="notes-box" set:html={guide.notes}></div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+</main>
+
+<Footer />
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
+  }
+
+  .infographic-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .infographic-section h2 {
+    color: #d4af37;
+    margin-top: 0;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guide-card {
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+  }
+
+  .guide-card h3 {
+    color: #d4af37;
+    margin-top: 0;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .caption {
+    color: #cccccc;
+    margin-bottom: 0;
+  }
+
+  .notes-box {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .notes-box h4 {
+    margin-top: 0;
+    color: #d4af37;
+  }
+
+  .notes-box ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  .notes-box li {
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+  }
+
+  .notes-box a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+
+  .notes-box a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .infographic-section {
+      padding: 1.25rem;
+    }
+  }
+</style>

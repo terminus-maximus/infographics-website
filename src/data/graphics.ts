@@ -16,10 +16,18 @@ export const graphics = [
       category: "start"
     },
     {
-      title: "Guild Raid Guide",
+      title: "Current Season",
       href: "/guild-raid",
-      description: "Boss lineups, maps, and recommended teams.",
-      image: "/images/guild-raid-s101-mythic.png",
+      description: "Current Guild Raid season infographics, boss lineups, and team guidance.",
+      image: "/images/guild-raid-s102-mythic.png",
+      thumbnail: "/images/guild-raid-s102-mythic.png",
+      category: "raid"
+    },
+    {
+      title: "Guild Raid Archive",
+      href: "/guild-raid/archive",
+      description: "Browse past Guild Raid seasons and infographic archives.",
+      image: "/images/guild-raid-archive.png",
       thumbnail: "/images/thumbnails/guild-raid-thumb.png",
       category: "raid"
     },
