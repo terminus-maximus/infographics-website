@@ -9,16 +9,13 @@ const gameEvents = graphics.filter((g) => g.category === "event");
 const aboutPages = graphics.filter((g) => g.category === "about");
 ---
 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
 <Header />
 
 <main>
-  <section class="hero">
-    <p>
-      Tacticus infographics designed to help players progress faster and make
-      smarter decisions.
-    </p>
-  </section>
-
   <section>
     <h2>Start Here</h2>
 
@@ -114,8 +111,9 @@ const aboutPages = graphics.filter((g) => g.category === "about");
   :global(body) {
     background-color: #121212;
     color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    margin: 0
+    overflow-x: hidden;
   }
 
   main {
