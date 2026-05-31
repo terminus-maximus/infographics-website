@@ -30,16 +30,117 @@ import Footer from "../components/Footer.astro";
       </p>
 
       <p>
-        What started as Reddit posts evolved into a growing library of guides
-        covering Campaign Events, Hero Release Events, Legendary Release Events,
-        Guild Raids, Elite Campaigns, and beginner progression.
+        What started as Reddit posts to help my guild has evolved into an official role as a Creator for Tacticus, working directly with Snowprint.
       </p>
 
-      <p>
-        The goal of this site is simple: provide clear, practical resources that
-        help players spend less time searching and more time enjoying the game.
-      </p>
     </div>
+
+<section class="info-section">
+  <h2>My Tacticus Experience</h2>
+
+  <div class="game-entry">
+    <h3>Guild Experience</h3>
+
+    <ul>
+      <li>Member of Bloody Rose: Main</li>
+      <li>Guild Raid Rank: 1</li>
+      <li>Guild War Rank: 1</li>
+      <li>
+        Guild Discord:
+        <a
+          href="https://discord.gg/bN269v34V"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join our Discord
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="game-entry">
+    <h3>Roster Progress</h3>
+
+    <ul>
+      <li>Playing since October 2022</li>
+      <li>
+        View my roster:
+        <a
+          href="https://tacticusplanner.app/sharedRoster?username=TerminusMaximus&shareToken=4a64af58-a7ed-4a67-be6f-31a49b2f4c1b"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Public Roster
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section class="info-section">
+  <h2>My Gaming Experience</h2>
+
+  <div class="game-entry">
+    <h3>Warhammer 40,000: Tacticus</h3>
+    <p class="game-dates">October 2022 to Present</p>
+
+    <ul>
+      <li>Strategy guide creator and infographic designer</li>
+      <li>Focus areas: Guild Raids, Legendary Release Events, Campaign Events, and progression optimization</li>
+      <li>Active contributor to the Reddit and Discord communities</li>
+    </ul>
+  </div>
+
+  <div class="game-entry">
+    <h3>Warhammer 40,000: Space Marine 2</h3>
+    <p class="game-dates">December 2025 to Present</p>
+
+    <ul>
+      <li>Casual player</li>
+      <li>Focus on Operations & Stratagems</li>
+    </ul>
+  </div>
+
+  <div class="game-entry">
+    <h3>Gaming Background</h3>
+
+    <ul>
+      <li>Lifelong strategy and RPG gamer</li>
+      <li>EverQuest player (1999 to 2004)</li>
+      <li>Other interests include Warhammer 40,000 tabletop, Dungeons & Dragons, music, and reading sci fi</li>
+    </ul>
+  </div>
+</section>
+
+  <section class="info-section">
+    <h2>Contact Me</h2>
+    <p>
+      Discord is my preferred platform for messages
+    </p>
+
+    <p>
+      Discord: terminus_maximus<br>
+
+      Reddit:
+      <a
+        href="https://www.reddit.com/user/terminus_maximus/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        u/terminus_maximus
+      </a><br>
+
+      YouTube:
+      <a
+        href="https://www.youtube.com/@TerminusMaximus"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @TerminusMaximus
+      </a>
+    </p>
   </section>
 </main>
 
@@ -76,11 +177,16 @@ import Footer from "../components/Footer.astro";
     color: #cccccc;
   }
 
-  .about-card {
+  .about-card,
+  .info-section {
     background: #1e1e1e;
     border: 1px solid #333;
     border-radius: 10px;
     padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-card {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -99,13 +205,36 @@ import Footer from "../components/Footer.astro";
     min-width: 300px;
   }
 
-  .about-text h2 {
+  h2 {
     color: #d4af37;
     margin-top: 0;
   }
 
-  .about-text p {
+  p {
     color: #cccccc;
     line-height: 1.6;
+  }
+
+    .info-section a {
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+
+  .info-section a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+  }
+
+  .gaming-list {
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .gaming-list > li {
+    margin-bottom: 1.5rem;
+  }
+
+  .gaming-list ul {
+    margin-top: 0.5rem;
   }
 </style>
