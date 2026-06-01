@@ -17,8 +17,19 @@ const aboutPages = graphics.filter((g) => g.category === "about");
 <Header />
 
 <main>
+<section class="hero">
+  <img
+    src="/images/TerminusMaximusInfographics.png"
+    alt="Terminus Maximus Infographics"
+    class="hero-image"
+  />
+  <p class="hero-tagline">
+  The largest collection of Tacticus infographics from one of the game's most established creators.
+  </p>
+
+</section>
   <section>
-    <h2>Start Here</h2>
+    <h2>New Player Guides</h2>
 
     <div class="card-grid">
       {startHere.map((graphic) => (
@@ -251,5 +262,31 @@ const aboutPages = graphics.filter((g) => g.category === "about");
       height: 110px;
     }
   }
+  .hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
 
 </style>
