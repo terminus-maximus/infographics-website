@@ -20,7 +20,7 @@ export const graphics = [
       href: "/guild-raid",
       description: "Current Guild Raid season infographics, boss lineups, and team guidance.",
       image: "/images/guild-raid-s102-mythic.png",
-      thumbnail: "/images/guild-raid-s102-mythic.png",
+      thumbnail: "/images/guild-raid-s102-mythic-thumb.png",
       category: "raid"
     },
     {
@@ -44,7 +44,7 @@ export const graphics = [
       href: "/lre/lucius",
       description: "Lucius Legendary Release Event teams, requirements, and planning.",
       image: "/images/lucius-lre.png",
-      thumbnail: "/images/lucius-lre.png",
+      thumbnail: "/images/lucius-lre-thumb.png",
       category: "legendary"
     },
     {
@@ -52,7 +52,7 @@ export const graphics = [
       href: "/lre/uthar",
       description: "Uthar Legendary Release Event teams, requirements, and planning.",
       image: "/images/uthar-lre.png",
-      thumbnail: "/images/uthar-lre.png",
+      thumbnail: "/images/uthar-lre-thumb.png",
       category: "legendary"
     },
     {
