@@ -1,0 +1,229 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+const {
+  title,
+  description,
+  sectionTitle,
+  guides = []
+} = Astro.props;
+---
+
+<Header />
+
+<main>
+  <section class="hero">
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </section>
+
+  <section class="infographic-section">
+    <h2>{sectionTitle}</h2>
+
+    <div class="guide-grid">
+      {guides.map((guide) => (
+        <article class="guide-card">
+          <h3>{guide.title}</h3>
+
+            <a href={guide.imageSrc} target="_blank" class="image-link">
+            <img
+                src={guide.webImageSrc || guide.imageSrc}
+                alt={guide.imageAlt}
+                class="infographic"
+                loading="lazy"
+            />
+            </a>
+
+          <p class="caption">
+            <a href={guide.imageSrc} target="_blank" class="caption-link">
+            CLICK FULL-SIZE INFOGRAPHIC
+            </a>
+          </p>
+
+          {guide.videoGuides && (
+            <div class="notes-box">
+              <table class="video-guide-table">
+                <thead>
+                  <tr>
+                    <th>Tier</th>
+                    <th>YouTube Links</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {guide.videoGuides.map((row) => (
+                    <tr>
+                      <td>{row.tier}</td>
+                      <td>
+                        {row.links.map((link) => (
+                          <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {link.text}
+                          </a>
+                        ))}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+</main>
+
+<Footer />
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
+  }
+
+  .infographic-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .infographic-section h2,
+  .guide-card h3 {
+    color: #d4af37;
+    margin-top: 0;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guide-card {
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+    .caption-link {
+    display: block;
+    text-align: center;
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: 1rem;
+    }
+
+    .caption-link:hover {
+    text-decoration: underline;
+    }
+
+  .notes-box {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .video-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .video-guide-table th,
+  .video-guide-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .video-guide-table th {
+    color: #d4af37;
+  }
+
+  .video-guide-table td:first-child {
+    width: 80px;
+    color: #f5f5f5;
+    font-weight: 700;
+  }
+
+  .video-guide-table a {
+    display: block;
+    color: #f5f5f5;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .video-guide-table a:last-child {
+    margin-bottom: 0;
+  }
+
+  .video-guide-table a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    .infographic-section {
+      padding: 1.25rem;
+    }
+  }
+</style>
