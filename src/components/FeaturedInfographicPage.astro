@@ -8,6 +8,7 @@ const {
   title,
   description,
   imageSrc,
+  webImageSrc,
   imageAlt,
   lastUpdated,
   basicsTitle,
@@ -37,14 +38,17 @@ const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
 
     <a href={imageSrc} target="_blank" class="image-link">
       <img
-        src={imageSrc}
+        src={webImageSrc || imageSrc}
         alt={imageAlt}
         class="infographic"
+        loading="lazy"
       />
     </a>
 
     <p class="caption">
-      Click the infographic to view and download the full-resolution image.
+      <a href={imageSrc} target="_blank" class="caption-link">
+        CLICK FULL-SIZE INFOGRAPHIC
+      </a>
     </p>
   </section>
 
@@ -178,8 +182,21 @@ const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
   }
 
   .caption {
-    color: #cccccc;
     margin-bottom: 0;
+  }
+
+  .caption-link {
+    display: block;
+    text-align: center;
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+
+  .caption-link:hover {
+    text-decoration: underline;
   }
 
   .markdown-content {
