@@ -1,14 +1,14 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import GuildRaidPage from "../components/GuildRaidPage.astro";
 
-const currentSeason = 102;
+const seasonNumber = "102";
 
 const guides = [
   {
     title: "Mythic Bosses",
-    imageSrc: `/images/guild-raid-s${currentSeason}-mythic.png`,
-    imageAlt: `Guild Raid Season ${currentSeason} Mythic Bosses Infographic`,
+    imageSrc: `/images/guild-raid-s${seasonNumber}-mythic.png`,
+    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-mythic.webp`,
+    imageAlt: `Guild Raid Season ${seasonNumber} Mythic Bosses Infographic`,
     videoGuides: [
       {
         tier: "M2",
@@ -28,8 +28,9 @@ const guides = [
   },
   {
     title: "Legendary Bosses",
-    imageSrc: `/images/guild-raid-s${currentSeason}-legendary.png`,
-    imageAlt: `Guild Raid Season ${currentSeason} Legendary Bosses Infographic`,
+    imageSrc: `/images/guild-raid-s${seasonNumber}-legendary.png`,
+    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-legendary.webp`,
+    imageAlt: `Guild Raid Season ${seasonNumber} Legendary Bosses Infographic`,
     videoGuides: [
       {
         tier: "L5",
@@ -62,7 +63,7 @@ const guides = [
       {
         tier: "L1",
         links: [
-          { text: "Rogal Dorn 87kk AdMech with Sho", url: "https://www.youtube.com/shorts/Gou7JAUWJHY" },
+          { text: "Rogal Dorn 870k AdMech with Sho", url: "https://www.youtube.com/shorts/Gou7JAUWJHY" },
           { text: "Rogal Dorn 861k Laviscus", url: "https://www.youtube.com/shorts/z2ONkn-zO6s" }
         ]
       }
@@ -70,275 +71,22 @@ const guides = [
   },
   {
     title: "Epic Bosses",
-    imageSrc: `/images/guild-raid-s${currentSeason}-epic.png`,
-    imageAlt: `Guild Raid Season ${currentSeason} Epic Bosses Infographic`
+    imageSrc: `/images/guild-raid-s${seasonNumber}-epic.png`,
+    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-epic.webp`,
+    imageAlt: `Guild Raid Season ${seasonNumber} Epic Bosses Infographic`
   },
   {
     title: "Coming Soon",
-    imageSrc: `/images/guild-raid-s${currentSeason}-coming-soon.png`,
-    imageAlt: `Guild Raid Season ${currentSeason} Coming Soon Infographic`
+    imageSrc: `/images/guild-raid-s${seasonNumber}-coming-soon.png`,
+    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-coming-soon.webp`,
+    imageAlt: `Guild Raid Season ${seasonNumber} Coming Soon Infographic`
   }
 ];
 ---
 
-<Header />
-
-<main>
-  <section class="hero">
-    <h1>Guild Raid Guide</h1>
-    <p>
-      Current Guild Raid season infographics, boss lineups, maps, and team recommendations.
-    </p>
-  </section>
-
-  <section class="infographic-section">
-    <div class="section-header">
-      <div>
-        <h2>Season {currentSeason} Infographics</h2>
-        <p>
-          This is the current Guild Raid season. For previous seasons, visit the archive.
-        </p>
-      </div>
-
-      <a href="/guild-raid/archive" class="archive-button">
-        Browse Archive
-      </a>
-    </div>
-
-    <div class="guide-grid">
-      {guides.map((guide) => (
-        <article class="guide-card">
-          <h3>{guide.title}</h3>
-
-          <a href={guide.imageSrc} target="_blank" class="image-link">
-            <img
-              src={guide.imageSrc}
-              alt={guide.imageAlt}
-              class="infographic"
-            />
-          </a>
-
-          <p class="caption">
-            Click the infographic to view and download the full-resolution image.
-          </p>
-
-          {guide.videoGuides && (
-            <div class="notes-box">
-              <table class="video-guide-table">
-                <thead>
-                  <tr>
-                    <th>Tier</th>
-                    <th>YouTube Links</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {guide.videoGuides.map((row) => (
-                    <tr>
-                      <td>{row.tier}</td>
-                      <td>
-                        {row.links.map((link) => (
-                          <a href={link.url} target="_blank">
-                            {link.text}
-                          </a>
-                        ))}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </article>
-      ))}
-    </div>
-  </section>
-</main>
-
-<Footer />
-
-<style>
-  :global(body) {
-    background-color: #121212;
-    color: #f5f5f5;
-    font-family: 'Lexend', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 760px;
-    margin: 0 auto;
-    color: #cccccc;
-  }
-
-  .infographic-section {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 1.5rem;
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-  }
-
-  .section-header h2 {
-    color: #d4af37;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-header p {
-    color: #cccccc;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  .archive-button {
-    flex-shrink: 0;
-    background: #d4af37;
-    color: #121212;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-  }
-
-  .archive-button:hover {
-    filter: brightness(1.1);
-  }
-
-  .guide-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .guide-card {
-    border-top: 1px solid #333;
-    padding-top: 1.5rem;
-  }
-
-  .guide-card h3 {
-    color: #d4af37;
-    margin-top: 0;
-  }
-
-  .image-link {
-    display: block;
-  }
-
-  .infographic {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .caption {
-    color: #cccccc;
-    margin-bottom: 0;
-  }
-
-  .notes-box {
-    max-width: 700px;
-    margin: 1rem auto 0;
-    padding: 1rem;
-    background: #252525;
-    border: 1px solid #333;
-    border-radius: 8px;
-  }
-
-  .video-guide-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .video-guide-table th,
-  .video-guide-table td {
-    padding: 0.75rem;
-    border-bottom: 1px solid #333;
-    vertical-align: top;
-    text-align: left;
-  }
-
-  .video-guide-table th {
-    color: #d4af37;
-  }
-
-  .video-guide-table td:first-child {
-    width: 80px;
-    color: #f5f5f5;
-    font-weight: 700;
-  }
-
-  .video-guide-table a {
-    display: block;
-    color: #f5f5f5;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    transition: color 0.2s ease;
-  }
-
-  .video-guide-table a:last-child {
-    margin-bottom: 0;
-  }
-
-  .video-guide-table a:hover {
-    color: #d4af37;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 700px) {
-    main {
-      padding: 1.25rem;
-    }
-
-    .hero {
-      margin-bottom: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.25rem;
-    }
-
-    .hero p {
-      font-size: 1rem;
-    }
-
-    .infographic-section {
-      padding: 1.25rem;
-    }
-
-    .section-header {
-      flex-direction: column;
-    }
-
-    .archive-button {
-      width: fit-content;
-    }
-  }
-</style>
+<GuildRaidPage
+  title={`Guild Raid Season ${seasonNumber}`}
+  description={`Current Guild Raid Season ${seasonNumber} infographics, boss lineups, maps, and video resources.`}
+  sectionTitle={`Season ${seasonNumber} Infographics`}
+  guides={guides}
+/>
