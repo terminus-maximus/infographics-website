@@ -8,7 +8,7 @@ http://localhost:4321
 
 cd /Users/danfoster01/Documents/Websites/terminusmaximus
 
-git add . && git commit -m "Homepage slogan" && git push
+git add . && git commit -m "s102 revision" && git push
 
 
 ~/make_thumbnails.sh
