@@ -7,20 +7,39 @@ const guides = [
     title: "Mythic Bosses",
     imageSrc: "/images/guild-raid-s102-mythic.png",
     imageAlt: "Guild Raid Season 102 Mythic Bosses Infographic",
-    notes: `
-      <h4>Video Guides</h4>
-      <ul>
-        <li><a href="https://youtu.be/2HInUQkR18U?si=mK3HSDWFwRgFsbcg" target="_blank">M1 Dorn - 1.2 mil with AdMech</a></li>
-        <li><a href="https://youtu.be/rtEqdG50ss8?si=0B_Uv21zxmUQV3iD" target="_blank">M1 Dorn 1.1 mil with Laviscus</a></li>
-        <li><a href="https://youtu.be/sAST52AVT7Y?si=C-tcbh-12P5StmpF" target="_blank">M2 Avatar 1.3 mil with Laviscus</a></li>
-        <li><a href="https://youtu.be/UIGUORK0jTE?si=cJhZo-mKum-Jy8bc" target="_blank">M2 Avatar 1.1 mil with Neuro</a></li>
-      </ul>
-    `
+    videoGuides: [
+      {
+        tier: "M2",
+        links: [
+          { text: "Avatar 1.3 mil with Laviscus", url: "https://youtu.be/sAST52AVT7Y?si=C-tcbh-12P5StmpF" },
+          { text: "Avatar 1.1 mil with Neuro", url: "https://youtu.be/UIGUORK0jTE?si=cJhZo-mKum-Jy8bc" }
+        ]
+      },
+      {
+        tier: "M1",
+        links: [
+          { text: "Dorn - 1.2 mil with AdMech", url: "https://youtu.be/2HInUQkR18U?si=mK3HSDWFwRgFsbcg" },
+          { text: "Dorn 1.1 mil with Laviscus", url: "https://youtu.be/rtEqdG50ss8?si=0B_Uv21zxmUQV3iD" }
+        ]
+      }
+    ]
   },
   {
     title: "Legendary Bosses",
     imageSrc: "/images/guild-raid-s102-legendary.png",
-    imageAlt: "Guild Raid Season 102 Legendary Bosses Infographic"
+    imageAlt: "Guild Raid Season 102 Legendary Bosses Infographic",
+    videoGuides: [
+      { tier: "L5", links: [{ text: "Cawl 1.1 mil with Lav & Dante", url: "https://www.youtube.com/shorts/OYbjpaaxYHI" },
+      { text: "Cawl 932k with Neuro & Zkar", url: "https://www.youtube.com/shorts/W-pznfDfNSI" }] },
+      { tier: "L4", links: [{ text: "Ghaz 1.4 mil with Lav & Dante", url: "https://www.youtube.com/shorts/iI-LdaFFkjM" },
+      { text: "Ghaz 1.06 mil Battlesuits", url: "https://www.youtube.com/shorts/M2HfiWBEcFQ" }] },
+      { tier: "L3", links: [{ text: "Screamer 1.54 mil with Laviscus and PBC", url: "https://www.youtube.com/shorts/qNcWGRZkzCY" },
+      { text: "Screamer 1.36 mil with Mechs & Trajann", url: "https://www.youtube.com/shorts/84FOwvOZQgE" }] },
+      { tier: "L2", links: [{ text: "Riptide 1.06 mil with Mechs & Trajann", url: "https://www.youtube.com/watch?v=5frA--xoZO0" },
+      { text: "Riptide 963k with Laviscus & Dante", url: "https://www.youtube.com/shorts/CI2qj5-DFjg" }] },
+      { tier: "L1", links: [{ text: "Rogal Dorn 87kk AdMech with Sho", url: "https://www.youtube.com/shorts/Gou7JAUWJHY" },
+      { text: "Rogal Dorn 861k Laviscus", url: "https://www.youtube.com/shorts/z2ONkn-zO6s" }] }
+    ]
   },
   {
     title: "Epic Bosses",
@@ -65,8 +84,31 @@ const guides = [
             Click the infographic to view and download the full-resolution image.
           </p>
 
-          {guide.notes && (
-            <div class="notes-box" set:html={guide.notes}></div>
+          {guide.videoGuides && (
+            <div class="notes-box">
+              <table class="video-guide-table">
+                <thead>
+                  <tr>
+                    <th>Tier</th>
+                    <th>YouTube Videos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {guide.videoGuides.map((row) => (
+                    <tr>
+                      <td>{row.tier}</td>
+                      <td>
+                        {row.links.map((link) => (
+                          <a href={link.url} target="_blank">
+                            {link.text}
+                          </a>
+                        ))}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </article>
       ))}
@@ -115,8 +157,15 @@ const guides = [
     padding: 1.5rem;
   }
 
-  .infographic-section h2 {
+  .infographic-section h2,
+  .guide-card h3,
+  .notes-box h4 {
     color: #d4af37;
+  }
+
+  .infographic-section h2,
+  .guide-card h3,
+  .notes-box h4 {
     margin-top: 0;
   }
 
@@ -129,11 +178,6 @@ const guides = [
   .guide-card {
     border-top: 1px solid #333;
     padding-top: 1.5rem;
-  }
-
-  .guide-card h3 {
-    color: #d4af37;
-    margin-top: 0;
   }
 
   .image-link {
@@ -163,27 +207,43 @@ const guides = [
     border-radius: 8px;
   }
 
-  .notes-box h4 {
-    margin-top: 0;
+  .video-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .video-guide-table th,
+  .video-guide-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .video-guide-table th {
     color: #d4af37;
   }
 
-  .notes-box ul {
-    margin-bottom: 0;
-    padding-left: 1.25rem;
+  .video-guide-table td:first-child {
+    width: 80px;
+    color: #f5f5f5;
+    font-weight: 700;
   }
 
-  .notes-box li {
-    margin-bottom: 0.5rem;
-    color: #cccccc;
-  }
-
-  .notes-box a {
-    color: #d4af37;
+  .video-guide-table a {
+    display: block;
+    color: #f5f5f5;
     text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
   }
 
-  .notes-box a:hover {
+  .video-guide-table a:last-child {
+    margin-bottom: 0;
+  }
+
+  .video-guide-table a:hover {
+    color: #d4af37;
     text-decoration: underline;
   }
 
