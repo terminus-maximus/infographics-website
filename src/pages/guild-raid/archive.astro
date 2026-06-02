@@ -7,13 +7,13 @@ const seasons = [
     title: "Season 102",
     href: "/guild-raid/s102",
     description: "Guild Raid Season 102 infographics and boss lineup archive.",
-    thumbnail: "/images/guild-raid-s102-mythic.png"
+    thumbnail: "/images/web/guild-raid-s102-mythic.webp"
   },
   {
     title: "Season 101",
     href: "/guild-raid/s101",
     description: "Guild Raid Season 101 infographics and boss lineup archive.",
-    thumbnail: "/images/guild-raid-s101-mythic.png"
+    thumbnail: "/images/web/guild-raid-s101-mythic.webp"
   }
 ];
 ---
@@ -39,6 +39,7 @@ const seasons = [
               src={season.thumbnail}
               alt={`${season.title} Guild Raid archive preview`}
               class="card-image"
+              loading="lazy"
             />
           </div>
 
