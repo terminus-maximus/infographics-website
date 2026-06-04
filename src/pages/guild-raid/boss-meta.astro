@@ -1,0 +1,689 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { graphics } from "../../data/graphics";
+import replayCsv from "../../data/boss-meta-replays.csv?raw";
+
+const title = "Guild Raid Boss Meta Guide";
+const description =
+  "Meta and alternate Guild Raid boss teams, built from researched replay data and creator examples.";
+
+const imageSrc = "/images/boss-meta.png";
+const webImageSrc = "/images/web/boss-meta.webp";
+const imageAlt = "Guild Raid Boss Meta Infographic";
+
+function parseCsv(csv) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < csv.length; i++) {
+    const char = csv[i];
+    const next = csv[i + 1];
+
+    if (char === '"' && inQuotes && next === '"') {
+      field += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      row.push(field);
+      field = "";
+    } else if ((char === "\n" || char === "\r") && !inQuotes) {
+      if (field || row.length) {
+        row.push(field);
+        rows.push(row);
+        row = [];
+        field = "";
+      }
+      if (char === "\r" && next === "\n") i++;
+    } else {
+      field += char;
+    }
+  }
+
+  if (field || row.length) {
+    row.push(field);
+    rows.push(row);
+  }
+
+  const headers = rows.shift();
+
+  return rows.map((values) =>
+    Object.fromEntries(headers.map((header, index) => [header, values[index] || ""]))
+  );
+}
+
+const choiceOrder = {
+  META: 0,
+  ALTERNATE: 1
+};
+
+const tierOrder = {
+  L1: 1,
+  L2: 2,
+  L3: 3,
+  L4: 4,
+  L5: 5,
+  M1: 6,
+  M2: 7
+};
+
+const replayData = parseCsv(replayCsv)
+  .filter((row) =>
+    ["META", "ALTERNATE"].includes(row.Final_STATUS)
+  )
+  .sort((a, b) => {
+    // 1. META before ALTERNATE
+    const choiceDiff =
+      (choiceOrder[a.Final_STATUS] ?? 99) -
+      (choiceOrder[b.Final_STATUS] ?? 99);
+
+    if (choiceDiff !== 0) return choiceDiff;
+
+    // 2. L1 -> L5 -> M1 -> M2
+    const tierDiff =
+      (tierOrder[a.Tier] ?? 99) -
+      (tierOrder[b.Tier] ?? 99);
+
+    if (tierDiff !== 0) return tierDiff;
+
+    // 3. Highest damage first
+    const damageA = Number(
+      String(a.Damage).replace(/,/g, "")
+    );
+
+    const damageB = Number(
+      String(b.Damage).replace(/,/g, "")
+    );
+
+    return damageB - damageA;
+  });
+
+const groupedReplays = replayData.reduce((groups, replay) => {
+  const boss = replay.Boss || "Other";
+
+  if (!groups[boss]) {
+    groups[boss] = [];
+  }
+
+  groups[boss].push(replay);
+  return groups;
+}, {});
+
+const statusLabels = {
+  META: "⭐ Meta Team",
+  ALTERNATE: "🔄 Alternate Team"
+};
+
+const archiveGuide = {
+  title: "Guild Raid Archive",
+  href: "/guild-raid/archive",
+  description: "Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives.",
+  thumbnail: "/images/web/guild-raid-s101-mythic.webp"
+};
+
+const relatedGuides = [
+  archiveGuide,
+  ...graphics.filter(
+    (g) =>
+      g.href !== Astro.url.pathname &&
+      g.href !== "/guild-raid/archive"
+  )
+];
+---
+
+<Header />
+
+<main>
+  <section class="hero">
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </section>
+
+  <section class="infographic-section">
+    <h2>Featured Infographic</h2>
+
+    <a href={imageSrc} target="_blank" class="image-link">
+      <img
+        src={webImageSrc || imageSrc}
+        alt={imageAlt}
+        class="infographic"
+        loading="lazy"
+      />
+    </a>
+
+    <p class="caption">
+      <a href={imageSrc} target="_blank" class="caption-link">
+        CLICK FULL-SIZE INFOGRAPHIC
+      </a>
+    </p>
+  </section>
+
+  <section class="content-section">
+    <h2>Boss Meta Guide Basics</h2>
+    <div class="markdown-content">
+      <div class="markdown-content">
+  <p>
+    Guild Raid teams are expensive to build, and investing in the wrong characters can set your account back for months. The goal of this guide is simple: identify the strongest teams for each boss based on what is actually working in the current game.
+  </p>
+
+  <p>
+    Unlike a traditional tier list, these recommendations are not based on opinion or isolated showcase videos. Every team shown here was validated through community replay research and weighted using performance, difficulty, recency, and frequency.
+  </p>
+
+  <ul>
+    <li><strong>⭐ Meta Team</strong> — The strongest overall team recommendation for that boss.</li>
+    <li><strong>🔄 Alternate Team</strong> — A strong second option, usually built around a different team archetype.</li>
+  </ul>
+
+  <p>
+    Performance still depends on more than simply owning the right characters. Rank, badges, equipment, Machine of War choice, positioning, boss mechanics, and execution all matter.
+  </p>
+
+  <p>
+    Use the replay library below to see the teams in action before deciding where to invest.
+  </p>
+</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Replay Library</h2>
+    <p class="section-intro">
+      Replay examples used to validate each boss recommendation. Only Meta and Alternate team selections are shown.
+    </p>
+    <div id="boss-jump-nav">
+  <p class="jump-bar-title">
+    Jump directly to a boss:
+  </p>
+
+  <nav class="boss-jump-bar" aria-label="Boss replay navigation">
+    {Object.keys(groupedReplays)
+      .sort((bossA, bossB) => bossA.localeCompare(bossB))
+      .map((boss) => (
+        <a href={`#${boss.toLowerCase().replaceAll(" ", "-")}`}>
+          {boss}
+        </a>
+      ))}
+  </nav>
+</div>
+
+    {Object.entries(groupedReplays)
+        .sort(([bossA], [bossB]) => bossA.localeCompare(bossB))
+        .map(([boss, replays]) => (
+            <article
+            class="boss-replay-section"
+            id={boss.toLowerCase().replaceAll(" ", "-")}
+            >
+            <h3>{boss}</h3>
+
+        <div class="table-wrap">
+          <table class="replay-table">
+            <thead>
+              <tr>
+                <th>Choice</th>
+                <th>Tier</th>
+                <th>Damage</th>
+                <th>Team</th>
+                <th>Creator</th>
+                <th>Replay</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {replays.map((replay) => (
+                <tr>
+                  <td>{statusLabels[replay.Final_STATUS] || replay.Final_STATUS}</td>
+                  <td>{replay.Tier}</td>
+                  <td>{replay.Damage}</td>
+                  <td>{replay.Team}</td>
+                  <td>
+                    {replay.creator_channel_link ? (
+                      <a
+                        href={replay.creator_channel_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {replay.creator_name}
+                      </a>
+                    ) : (
+                      replay.creator_name
+                    )}
+                  </td>
+                  <td>
+                    <a
+                      href={replay.Replay}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Watch
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top">
+  <a href="#boss-jump-nav">
+    ↑ Back to Boss List
+  </a>
+</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="content-section">
+    <h2>Methodology & Results</h2>
+    <div class="markdown-content">
+      <div class="markdown-content">
+  <h3>How This Meta Analysis Was Built</h3>
+
+  <p>
+    Rather than relying on opinion or a traditional tier list, these recommendations are based on a large-scale analysis of high-performing Guild Raid replays published by the Tacticus community.
+  </p>
+
+  <p>
+    Over 100 YouTube raid replays from multiple established creators were collected and cataloged. For each replay, the following information was recorded:
+  </p>
+
+  <ul>
+    <li>Boss</li>
+    <li>Difficulty Tier (L1-M2)</li>
+    <li>Damage dealt</li>
+    <li>Team composition</li>
+    <li>Upload date</li>
+  </ul>
+
+  <h3>Step 1: Measuring Replay Quality</h3>
+  <p>
+    Each replay was assigned a <strong>Replay Scaled Damage</strong> value. Raw damage was adjusted for raid difficulty, giving additional credit to successful clears at L5, M1, and M2.
+  </p>
+
+  <h3>Step 2: Accounting for the Current Meta</h3>
+  <p>
+    More recent replays were given greater influence through a gradual recency weighting, while older strategies still contributed to the analysis.
+  </p>
+
+  <h3>Step 3: Measuring Community Adoption</h3>
+  <p>
+    Teams that appeared repeatedly across multiple independent creators were rewarded through a <strong>Frequency Weight</strong>.
+  </p>
+
+  <h3>Step 4: Calculating the Meta Score</h3>
+  <p>
+    These factors were combined into a single Meta Score:
+  </p>
+
+  <p class="formula-callout">
+    Meta Score = Replay Scaled Damage × Date Weight × Frequency Weight
+  </p>
+
+  <p>This rewards teams that are:</p>
+
+  <ul>
+    <li>High performing</li>
+    <li>Successful at difficult content</li>
+    <li>Widely adopted by the community</li>
+    <li>Representative of the current state of the game</li>
+  </ul>
+
+  <h3>Final Recommendations</h3>
+  <p>
+    The highest-scoring composition is selected as the <strong>META</strong> recommendation.
+  </p>
+
+  <p>
+    An <strong>ALTERNATE</strong> recommendation is then chosen through manual review, favoring a fundamentally different team archetype rather than a small variation of the META team.
+  </p>
+</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Related Guides</h2>
+
+    <div class="card-grid">
+      {relatedGuides.map((graphic, index) => (
+        <a
+          class={`card related-guide-card ${index === 0 ? "forced-related-card" : ""}`}
+          href={graphic.href}
+        >
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+
+          <h3>{graphic.title}</h3>
+          <p>{graphic.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</main>
+
+<script>
+  const cards = Array.from(document.querySelectorAll(".related-guide-card"));
+  const forcedCard = document.querySelector(".forced-related-card");
+  const randomCards = cards.filter((card) => card !== forcedCard);
+
+  randomCards
+    .sort(() => Math.random() - 0.5)
+    .forEach((card, index) => {
+      card.style.display = index < 2 ? "block" : "none";
+    });
+
+  if (forcedCard) {
+    forcedCard.style.display = "block";
+  }
+</script>
+
+<Footer />
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p,
+  .section-intro {
+    color: #cccccc;
+    line-height: 1.6;
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  .infographic-section,
+  .content-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .caption {
+    margin-bottom: 0;
+  }
+
+  .caption-link {
+    display: block;
+    text-align: center;
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+
+  .caption-link:hover {
+    text-decoration: underline;
+  }
+
+  .markdown-content {
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .boss-replay-section {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .boss-replay-section h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+  }
+
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .replay-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+    background: #121212;
+  }
+
+  .replay-table th,
+  .replay-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    vertical-align: top;
+    color: #cccccc;
+  }
+
+  .replay-table th {
+    color: #d4af37;
+    background: #252525;
+  }
+
+  .replay-table td:first-child,
+  .replay-table td:nth-child(2),
+  .replay-table td:nth-child(3) {
+    color: #f5f5f5;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .replay-table a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .replay-table a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    gap: 1.5rem;
+    justify-content: start;
+  }
+
+  .card {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: #121212;
+    border: 1px solid #333;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+  }
+
+  .card h3 {
+    margin: 0 0 0.5rem;
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .card p {
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .infographic-section,
+    .content-section {
+      padding: 1rem;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1rem;
+    }
+  }
+
+    .formula-callout {
+    background: #121212;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+    }
+
+        .boss-jump-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+    }
+
+    .boss-jump-bar a {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 999px;
+    color: #d4af37;
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .boss-jump-bar a:hover,
+    .boss-jump-bar a:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    outline: none;
+    }
+
+    .jump-bar-title {
+    color: #cccccc;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    }
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+    .boss-replay-section {
+    scroll-margin-top: 20px;
+    }
+
+    .back-to-top {
+    text-align: right;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    }
+
+    .back-to-top a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    }
+
+    .back-to-top a:hover {
+    text-decoration: underline;
+    }
+
+</style>
