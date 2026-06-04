@@ -8,7 +8,9 @@ http://localhost:4321
 
 cd /Users/danfoster01/Documents/Websites/terminusmaximus
 
-git add . && git commit -m "s102 revision" && git push
+git add . && git commit -m "Boss Meta new page" && git push
 
 
 ~/make_thumbnails.sh
+
+~/make_web_images.sh
