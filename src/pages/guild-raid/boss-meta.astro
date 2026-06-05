@@ -224,46 +224,44 @@ const relatedGuides = [
             <thead>
               <tr>
                 <th>Choice</th>
+                <th>Team</th>
                 <th>Tier</th>
                 <th>Damage</th>
-                <th>Team</th>
                 <th>Creator</th>
-                <th>Replay</th>
               </tr>
             </thead>
 
             <tbody>
               {replays.map((replay) => (
                 <tr>
-                  <td>{statusLabels[replay.Final_STATUS] || replay.Final_STATUS}</td>
-                  <td>{replay.Tier}</td>
-                  <td>{replay.Damage}</td>
-                  <td>{replay.Team}</td>
                   <td>
-                    {replay.creator_channel_link ? (
-                      <a
-                        href={replay.creator_channel_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {replay.creator_name}
-                      </a>
-                    ) : (
-                      replay.creator_name
-                    )}
+                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
+                      {statusLabels[replay.Final_STATUS] || replay.Final_STATUS}
+                    </a>
                   </td>
                   <td>
-                    <a
-                      href={replay.Replay}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Watch
+                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
+                      {replay.Team}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
+                      {replay.Tier}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
+                      {replay.Damage}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
+                      {replay.creator_name}
                     </a>
                   </td>
                 </tr>
               ))}
-            </tbody>
+            </tbody>          
           </table>
         </div>
         <p class="back-to-top">
@@ -518,10 +516,8 @@ const relatedGuides = [
   }
 
   .replay-table td:first-child,
-  .replay-table td:nth-child(2),
-  .replay-table td:nth-child(3) {
-    color: #f5f5f5;
-    font-weight: 700;
+  .replay-table td:nth-child(3),
+  .replay-table td:nth-child(4) {
     white-space: nowrap;
   }
 
