@@ -2,11 +2,13 @@
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import { graphics } from "../data/graphics";
+import replayCsv from "../data/GR-replays.csv?raw";
 
 const {
   title,
   description,
   sectionTitle,
+  seasonNumber,
   guides = []
 } = Astro.props;
 
@@ -35,6 +37,76 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
   return (priority[a.href] || 99) - (priority[b.href] || 99);
 });
 
+function parseCsv(csv) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < csv.length; i++) {
+    const char = csv[i];
+    const next = csv[i + 1];
+
+    if (char === '"' && inQuotes && next === '"') {
+      field += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      row.push(field);
+      field = "";
+    } else if ((char === "\n" || char === "\r") && !inQuotes) {
+      if (field || row.length) {
+        row.push(field);
+        rows.push(row);
+        row = [];
+        field = "";
+      }
+      if (char === "\r" && next === "\n") i++;
+    } else {
+      field += char;
+    }
+  }
+
+  if (field || row.length) rows.push([...row, field]);
+
+  const headers = rows.shift();
+
+  return rows.map((values) =>
+    Object.fromEntries(headers.map((header, index) => [header, values[index] || ""]))
+  );
+}
+
+function getGuideReplayRows(guide, seasonReplays) {
+  if (guide.title.includes("Mythic")) {
+    return seasonReplays.filter((row) => row.TIER.startsWith("M"));
+  }
+
+  if (guide.title.includes("Legendary")) {
+    return seasonReplays.filter((row) => row.TIER.startsWith("L"));
+  }
+
+  if (guide.title.includes("Epic")) {
+    return seasonReplays.filter((row) => row.TIER.startsWith("E"));
+  }
+
+  return [];
+}
+
+const tierOrder = {
+  E1: 1, E2: 2, E3: 3, E4: 4, E5: 5,
+  L1: 6, L2: 7, L3: 8, L4: 9, L5: 10,
+  M1: 11, M2: 12
+};
+
+const seasonReplays = parseCsv(replayCsv)
+  .filter((row) => String(row.SEASON) === String(seasonNumber))
+  .sort((a, b) => {
+    const tierDiff = (tierOrder[b.TIER] || 0) - (tierOrder[a.TIER] || 0);
+    if (tierDiff !== 0) return tierDiff;
+
+    return a.BOSS.localeCompare(b.BOSS);
+  });
 
 ---
 
@@ -76,36 +148,56 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
             </a>
           </p>
 
-          {guide.videoGuides && (
-            <div class="notes-box">
+          {getGuideReplayRows(guide, seasonReplays).length > 0 && (
+            <>
+              <h4 class="replay-title">YouTube Replays</h4>
+
+              <div class="notes-box">              
               <table class="video-guide-table">
                 <thead>
                   <tr>
                     <th>Tier</th>
-                    <th>YouTube Links</th>
+                    <th>Boss</th>
+                    <th>Team</th>
+                    <th>Damage</th>
+                    <th>Creator</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {guide.videoGuides.map((row) => (
+                  {getGuideReplayRows(guide, seasonReplays).map((row) => (
                     <tr>
-                      <td>{row.tier}</td>
                       <td>
-                        {row.links.map((link) => (
-                          <a
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {link.text}
-                          </a>
-                        ))}
+                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
+                          {row.TIER}
+                        </a>
+                      </td>
+                      <td>
+                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
+                          {row.BOSS}
+                        </a>
+                      </td>
+                      <td>
+                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
+                          {row.TEAM}
+                        </a>
+                      </td>
+                      <td>
+                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
+                          {row.DAMAGE}
+                        </a>
+                      </td>
+                      <td>
+                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
+                          {row.CREATOR}
+                        </a>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+          </>
           )}
         </article>
       ))}
@@ -278,22 +370,16 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
     color: #d4af37;
   }
 
-  .video-guide-table td:first-child {
-    width: 80px;
-    color: #f5f5f5;
-    font-weight: 700;
+  .video-guide-table td:first-child,
+  .video-guide-table td:nth-child(2),
+  .video-guide-table td:nth-child(4) {
+    white-space: nowrap;
   }
 
   .video-guide-table a {
-    display: block;
     color: #f5f5f5;
     text-decoration: none;
-    margin-bottom: 0.5rem;
     transition: color 0.2s ease;
-  }
-
-  .video-guide-table a:last-child {
-    margin-bottom: 0;
   }
 
   .video-guide-table a:hover {
@@ -423,6 +509,14 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
 .boss-meta-button:hover,
 .boss-meta-button:focus-visible {
   opacity: 0.85;
+}
+
+.replay-title {
+  max-width: 700px;
+  margin: 1.5rem auto 0.5rem;
+  color: #d4af37;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 </style>

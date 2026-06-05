@@ -6,9 +6,8 @@ const seasonNumber = "102";
 const guides = [
   {
     title: "Mythic Bosses",
-    imageSrc: `/images/guild-raid-s${seasonNumber}-mythic.png`,
-    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-mythic.webp`,
-    imageAlt: `Guild Raid Season ${seasonNumber} Mythic Bosses Infographic`,
+    imageSrc: "/images/guild-raid-s102-mythic.png",
+    imageAlt: "Guild Raid Season 102 Mythic Bosses Infographic",
     videoGuides: [
       {
         tier: "M2",
@@ -28,9 +27,8 @@ const guides = [
   },
   {
     title: "Legendary Bosses",
-    imageSrc: `/images/guild-raid-s${seasonNumber}-legendary.png`,
-    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-legendary.webp`,
-    imageAlt: `Guild Raid Season ${seasonNumber} Legendary Bosses Infographic`,
+    imageSrc: "/images/guild-raid-s102-legendary.png",
+    imageAlt: "Guild Raid Season 102 Legendary Bosses Infographic",
     videoGuides: [
       {
         tier: "L5",
@@ -71,15 +69,13 @@ const guides = [
   },
   {
     title: "Epic Bosses",
-    imageSrc: `/images/guild-raid-s${seasonNumber}-epic.png`,
-    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-epic.webp`,
-    imageAlt: `Guild Raid Season ${seasonNumber} Epic Bosses Infographic`
+    imageSrc: "/images/guild-raid-s102-epic.png",
+    imageAlt: "Guild Raid Season 102 Epic Bosses Infographic"
   },
   {
     title: "Coming Soon",
-    imageSrc: `/images/guild-raid-s${seasonNumber}-coming-soon.png`,
-    webImageSrc: `/images/web/guild-raid-s${seasonNumber}-coming-soon.webp`,
-    imageAlt: `Guild Raid Season ${seasonNumber} Coming Soon Infographic`
+    imageSrc: "/images/guild-raid-s102-coming-soon.png",
+    imageAlt: "Guild Raid Season 102 Coming Soon Infographic"
   }
 ];
 ---
@@ -88,5 +84,6 @@ const guides = [
   title={`Guild Raid Season ${seasonNumber}`}
   description={`Current Guild Raid Season ${seasonNumber} infographics, boss lineups, maps, and video resources.`}
   sectionTitle={`Season ${seasonNumber} Infographics`}
+  seasonNumber={seasonNumber}
   guides={guides}
 />

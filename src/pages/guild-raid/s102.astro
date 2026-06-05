@@ -1,6 +1,8 @@
 ---
 import GuildRaidPage from "../../components/GuildRaidPage.astro";
 
+const seasonNumber = "102";
+
 const guides = [
   {
     title: "Mythic Bosses",
@@ -79,8 +81,9 @@ const guides = [
 ---
 
 <GuildRaidPage
-  title="Guild Raid Season 102"
-  description="Boss lineups, maps, and recommended teams for Guild Raid Season 102."
-  sectionTitle="Season 102 Infographics"
+  title={`Guild Raid Season ${seasonNumber}`}
+  description={`Current Guild Raid Season ${seasonNumber} infographics, boss lineups, maps, and video resources.`}
+  sectionTitle={`Season ${seasonNumber} Infographics`}
+  seasonNumber={seasonNumber}
   guides={guides}
 />
