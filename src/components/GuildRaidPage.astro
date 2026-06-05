@@ -26,14 +26,31 @@ const relatedGuides = [
   )
 ];
 
+const sortedRelatedGuides = relatedGuides.sort((a, b) => {
+  const priority = {
+    "/guild-raid/boss-meta": 1,
+    "/guild-raid/archive": 2
+  };
+
+  return (priority[a.href] || 99) - (priority[b.href] || 99);
+});
+
+
 ---
 
 <Header />
 
 <main>
-  <section class="hero">
-    <h1>{title}</h1>
-    <p>{description}</p>
+  <section class="boss-meta-cta">
+    <h2>Need Team Recommendations?</h2>
+    <p>
+      Looking for the strongest teams for each Guild Raid boss?<br>
+      Check out the Boss Meta Guide, built from extensive YouTube replay analysis.
+    </p>
+
+    <a href="/guild-raid/boss-meta/" class="boss-meta-button">
+      View Boss Meta Guide →
+    </a>
   </section>
 
   <section class="infographic-section">
@@ -99,11 +116,16 @@ const relatedGuides = [
   <h2>Related Guides</h2>
 
   <div class="card-grid">
-    {relatedGuides.map((graphic, index) => (
-      <a
-        class={`card related-guide-card ${index === 0 ? "forced-related-card" : ""}`}
-        href={graphic.href}
-      >
+    {sortedRelatedGuides.map((graphic) => (
+        <a
+          class={`card related-guide-card ${
+            graphic.href === "/guild-raid/boss-meta" ||
+            graphic.href === "/guild-raid/archive"
+              ? "forced-related-card"
+              : ""
+          }`}
+          href={graphic.href}
+        >
         <div class="card-image-wrap">
           <img
             src={graphic.thumbnail}
@@ -122,18 +144,24 @@ const relatedGuides = [
 
 <script>
   const cards = Array.from(document.querySelectorAll(".related-guide-card"));
-  const forcedCard = document.querySelector(".forced-related-card");
-  const randomCards = cards.filter((card) => card !== forcedCard);
+
+  const forcedCards = cards.filter((card) =>
+    card.classList.contains("forced-related-card")
+  );
+
+  const randomCards = cards.filter(
+    (card) => !card.classList.contains("forced-related-card")
+  );
 
   randomCards
     .sort(() => Math.random() - 0.5)
     .forEach((card, index) => {
-      card.style.display = index < 2 ? "block" : "none";
+      card.style.display = index < 3 ? "block" : "none";
     });
 
-  if (forcedCard) {
-    forcedCard.style.display = "block";
-  }
+  forcedCards.forEach((card) => {
+    card.style.display = "block";
+  });
 </script>
 
 </main>
@@ -357,4 +385,44 @@ const relatedGuides = [
   line-height: 1.5;
   margin-bottom: 0;
 }
+
+.boss-meta-cta {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.boss-meta-cta h2 {
+  color: #d4af37;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.boss-meta-cta p {
+  margin: 0 auto 1rem;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.boss-meta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #d4af37;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.boss-meta-button:hover,
+.boss-meta-button:focus-visible {
+  opacity: 0.85;
+}
+
 </style>

@@ -32,6 +32,14 @@ export const graphics = [
       category: "raid"
     },
     {
+      title: "Boss Meta Guide",
+      description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
+      href: "/guild-raid/boss-meta",
+      image: "/images/boss-meta.png",
+      thumbnail: "/images/thumbnails/boss-meta-thumb.png",
+      category: "raid"
+    },
+    {
       title: "Farsight LRE - Current LRE",
       href: "/lre/farsight",
       description: "Farsight Legendary Release Event teams, requirements, and planning.",
