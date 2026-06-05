@@ -16,6 +16,14 @@ export const graphics = [
       category: "start"
     },
     {
+      title: "Boss Meta Guide",
+      description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
+      href: "/guild-raid/boss-meta",
+      image: "/images/boss-meta.png",
+      thumbnail: "/images/thumbnails/boss-meta-thumb.png",
+      category: "raid"
+    },
+    {
       title: "Current Season",
       href: "/guild-raid",
       description: "Current Guild Raid season infographics, boss lineups, and team guidance.",
@@ -29,14 +37,6 @@ export const graphics = [
       description: "Browse past Guild Raid seasons and infographic archives.",
       image: "/images/guild-raid-archive.png",
       thumbnail: "/images/thumbnails/guild-raid-thumb.png",
-      category: "raid"
-    },
-    {
-      title: "Boss Meta Guide",
-      description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
-      href: "/guild-raid/boss-meta",
-      image: "/images/boss-meta.png",
-      thumbnail: "/images/thumbnails/boss-meta-thumb.png",
       category: "raid"
     },
     {
