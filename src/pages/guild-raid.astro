@@ -1,13 +1,8 @@
 ---
-// Automatic season rollover while traveling.
-// June 16, 2026 @ 2:45 AM Pacific = 09:45 UTC.
-
-const cutoff = new Date("2026-06-16T09:45:00Z").getTime();
-const target =
-  Date.now() >= cutoff
-    ? "/guild-raid/s103"
-    : "/guild-raid/s102";
+const target = "/guild-raid/s103";
 ---
+
+<meta http-equiv="refresh" content={`0; url=${target}`} />
 
 <script is:inline define:vars={{ target }}>
   window.location.replace(target);
