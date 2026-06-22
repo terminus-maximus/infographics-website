@@ -57,9 +57,16 @@
     <a href="/">Home</a>
 
     <div class="dropdown">
-      <button class="dropdown-button" type="button">Graphics</button>
+      <button
+        class="dropdown-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="graphics-menu"
+      >
+        Graphics
+      </button>
 
-      <div class="dropdown-menu">
+      <div class="dropdown-menu" id="graphics-menu">
         <a href="/beginner-guide">Beginner Guide</a>
         <a href="/elite-campaigns">Elite Campaigns</a>
         <a href="/guild-raid">Guild Raid</a>
@@ -73,6 +80,33 @@
     <a href="/about">About</a>
   </nav>
 </header>
+
+<script is:inline>
+  const dropdown = document.querySelector(".site-header .dropdown");
+  const dropdownButton = document.querySelector(".site-header .dropdown-button");
+
+  if (dropdown instanceof HTMLElement && dropdownButton instanceof HTMLButtonElement) {
+    dropdownButton.addEventListener("click", () => {
+      const isOpen = dropdown.classList.toggle("is-open");
+      dropdownButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!(event.target instanceof Node) || dropdown.contains(event.target)) return;
+
+      dropdown.classList.remove("is-open");
+      dropdownButton.setAttribute("aria-expanded", "false");
+    });
+
+    dropdown.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+
+      dropdown.classList.remove("is-open");
+      dropdownButton.setAttribute("aria-expanded", "false");
+      dropdownButton.focus();
+    });
+  }
+</script>
 
 <style>
   .site-header {
@@ -137,7 +171,9 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   }
 
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown.is-open .dropdown-menu {
     display: block;
   }
 
