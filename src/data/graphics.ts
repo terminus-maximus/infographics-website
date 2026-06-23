@@ -13,6 +13,7 @@ export const graphics = [
       description: "Elite Campaign minimum investment guide.",
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
+      badge: "Popular",
       category: "start"
     },
     {
@@ -21,6 +22,7 @@ export const graphics = [
       href: "/guild-raid/boss-meta",
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
+      badge: "Popular",
       category: "raid"
     },
     {
