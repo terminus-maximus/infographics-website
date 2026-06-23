@@ -1,13 +1,21 @@
 <footer class="site-footer">
   <div class="footer-content">
 
-    <div class="footer-brand">
+    <a class="footer-brand" href="/">
       Terminus Maximus Infographics
-    </div>
+    </a>
 
-    <nav class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
+    <nav class="footer-nav" aria-label="Footer links">
+      <span>
+        Follow me:
+        <a href="https://www.reddit.com/user/terminus_maximus/" target="_blank" rel="noopener noreferrer">
+          Reddit
+        </a>
+      </span>
+      <span>
+        Contact me:
+        <a href="/about#contact-me">Discord</a>
+      </span>
     </nav>
 
   </div>
@@ -34,29 +42,34 @@
   .footer-brand {
     color: #888;
     font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-brand:hover,
+  .footer-brand:focus-visible {
+    color: #d4af37;
+    outline: none;
   }
 
   .footer-nav {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
   }
 
   .footer-nav a {
-    color: #f5f5f5;
+    color: #aaa;
     text-decoration: none;
-    background: #252525;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .footer-nav a:hover,
   .footer-nav a:focus-visible {
     color: #d4af37;
-    border-color: #d4af37;
-    transform: translateY(-2px);
     outline: none;
   }
 
@@ -74,12 +87,6 @@
     .footer-nav {
       justify-content: center;
       width: 100%;
-    }
-
-    .footer-nav a {
-      flex: 1;
-      max-width: 140px;
-      text-align: center;
     }
   }
 </style>
