@@ -27,8 +27,8 @@ export const graphics = [
       title: "Current Season",
       href: "/guild-raid",
       description: "Current Guild Raid season infographics, boss lineups, and team guidance.",
-      image: "/images/guild-raid-s102-mythic.png",
-      thumbnail: "/images/thumbnails/guild-raid-s102-mythic-thumb.png",
+      image: "/images/guild-raid-s103-mythic.png",
+      thumbnail: "/images/thumbnails/guild-raid-s103-mythic-thumb.png",
       category: "raid"
     },
     {
