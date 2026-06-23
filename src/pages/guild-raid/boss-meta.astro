@@ -147,7 +147,15 @@ const relatedGuides = [
   <section class="infographic-section">
     <h2>Featured Infographic</h2>
 
-    <a href={imageSrc} target="_blank" class="image-link">
+    <a
+      href={imageSrc}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="image-link"
+      data-ga4-infographic-open
+      data-ga4-infographic-title={title}
+      data-ga4-link-source="image"
+    >
       <img
         src={webImageSrc || imageSrc}
         alt={imageAlt}
@@ -157,7 +165,15 @@ const relatedGuides = [
     </a>
 
     <p class="caption">
-      <a href={imageSrc} target="_blank" class="caption-link">
+      <a
+        href={imageSrc}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="caption-link"
+        data-ga4-infographic-open
+        data-ga4-infographic-title={title}
+        data-ga4-link-source="caption"
+      >
         CLICK FULL-SIZE INFOGRAPHIC
       </a>
     </p>

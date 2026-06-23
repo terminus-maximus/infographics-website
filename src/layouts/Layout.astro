@@ -23,6 +23,24 @@ const {
 
 			gtag('config', 'G-9K17FDPZKJ');
 		</script>
+		<script is:inline>
+			document.addEventListener("click", (event) => {
+				const target = event.target;
+
+				if (!(target instanceof Element)) return;
+
+				const link = target.closest("[data-ga4-infographic-open]");
+
+				if (!link || typeof gtag !== "function") return;
+
+				gtag("event", "full_resolution_infographic_open", {
+					infographic_title: link.dataset.ga4InfographicTitle || document.title,
+					infographic_url: link.href,
+					link_source: link.dataset.ga4LinkSource || link.textContent.trim() || "image",
+					page_path: window.location.pathname
+				});
+			});
+		</script>
 
 		<title>{title}</title>
 		<meta name="description" content={description} />

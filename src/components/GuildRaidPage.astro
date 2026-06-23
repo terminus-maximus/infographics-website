@@ -135,7 +135,15 @@ const seasonReplays = parseCsv(replayCsv)
         <article class="guide-card">
           <h3>{guide.title}</h3>
 
-            <a href={guide.imageSrc} target="_blank" class="image-link">
+            <a
+              href={guide.imageSrc}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="image-link"
+              data-ga4-infographic-open
+              data-ga4-infographic-title={`${title} - ${guide.title}`}
+              data-ga4-link-source="image"
+            >
             <img
                 src={guide.webImageSrc || guide.imageSrc}
                 alt={guide.imageAlt}
@@ -145,7 +153,15 @@ const seasonReplays = parseCsv(replayCsv)
             </a>
 
           <p class="caption">
-            <a href={guide.imageSrc} target="_blank" class="caption-link">
+            <a
+              href={guide.imageSrc}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="caption-link"
+              data-ga4-infographic-open
+              data-ga4-infographic-title={`${title} - ${guide.title}`}
+              data-ga4-link-source="caption"
+            >
             CLICK FULL-SIZE INFOGRAPHIC
             </a>
           </p>
