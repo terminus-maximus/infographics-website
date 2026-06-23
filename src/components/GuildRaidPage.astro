@@ -183,8 +183,8 @@ const seasonReplays = parseCsv(replayCsv)
                 </thead>
 
                 <tbody>
-                  {getGuideReplayRows(guide, seasonReplays).map((row) => (
-                    <tr>
+                  {getGuideReplayRows(guide, seasonReplays).map((row, index, rows) => (
+                    <tr class:list={{ "tier-end": index < rows.length - 1 && row.TIER !== rows[index + 1].TIER }}>
                       <td>
                         <a href={row.URL} target="_blank" rel="noopener noreferrer">
                           {row.TIER}
@@ -374,7 +374,8 @@ const seasonReplays = parseCsv(replayCsv)
 
   .video-guide-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
   }
 
   .video-guide-table th,
@@ -387,6 +388,13 @@ const seasonReplays = parseCsv(replayCsv)
 
   .video-guide-table th {
     color: #d4af37;
+    border-bottom-color: rgba(212, 175, 55, 0.75);
+    border-bottom-width: 2px;
+  }
+
+  .video-guide-table tr.tier-end td {
+    border-bottom-color: rgba(212, 175, 55, 0.75);
+    border-bottom-width: 2px;
   }
 
   .video-guide-table td:first-child,
