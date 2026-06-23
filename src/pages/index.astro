@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { graphics } from "../data/graphics";
@@ -10,13 +11,10 @@ const gameEvents = graphics.filter((g) => g.category === "event");
 const aboutPages = graphics.filter((g) => g.category === "about");
 ---
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
+<Layout>
+  <Header />
 
-<Header />
-
-<main>
+  <main>
 <section class="hero">
   <img
     src="/images/TerminusMaximusInfographics.webp"
@@ -75,7 +73,6 @@ const aboutPages = graphics.filter((g) => g.category === "about");
 
 
 
-</section>
   <section>
     <h2>New Player Guides</h2>
 
@@ -185,9 +182,10 @@ const aboutPages = graphics.filter((g) => g.category === "about");
       ))}
     </div>
   </section>
-</main>
+  </main>
 
-<Footer />
+  <Footer />
+</Layout>
 
 <style>
   :global(body) {

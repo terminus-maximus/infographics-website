@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import { marked } from "marked";
@@ -21,9 +22,10 @@ const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
 const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
 ---
 
-<Header />
+<Layout title={`${title} | Terminus Maximus Infographics`} description={description}>
+  <Header />
 
-<main>
+  <main>
   <section class="hero">
     <h1>{title}</h1>
     <p>{description}</p>
@@ -96,9 +98,9 @@ const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
       ))}
     </div>
   </section>
-</main>
+  </main>
 
-<script>
+  <script>
   const cards = Array.from(document.querySelectorAll(".related-guide-card"));
 
   cards
@@ -106,9 +108,10 @@ const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
     .forEach((card, index) => {
       card.style.display = index < 3 ? "block" : "none";
     });
-</script>
+  </script>
 
-<Footer />
+  <Footer />
+</Layout>
 
 <style>
   :global(body) {

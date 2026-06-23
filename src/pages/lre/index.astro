@@ -1,4 +1,5 @@
 ---
+import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
@@ -24,9 +25,13 @@ const lreGuides = [
 ];
 ---
 
-<Header />
+<Layout
+  title="Legendary Release Events | Terminus Maximus Infographics"
+  description="Legendary Release Event guides for unlock planning, team building, and event requirements."
+>
+  <Header />
 
-<main>
+  <main>
   <section class="hero">
     <h1>Legendary Release Events</h1>
     <p>
@@ -55,9 +60,10 @@ const lreGuides = [
       ))}
     </div>
   </section>
-</main>
+  </main>
 
-<Footer />
+  <Footer />
+</Layout>
 
 <style>
   :global(body) {

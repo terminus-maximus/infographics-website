@@ -1,13 +1,22 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 const target = "/guild-raid/s103";
 ---
 
-<meta http-equiv="refresh" content={`0; url=${target}`} />
+<Layout
+  title="Current Guild Raid Season | Terminus Maximus Infographics"
+  description="Redirecting to the current Guild Raid season guide."
+>
+  <Fragment slot="head">
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+  </Fragment>
 
-<script is:inline define:vars={{ target }}>
+  <script is:inline define:vars={{ target }}>
   window.location.replace(target);
-</script>
+  </script>
 
-<p>
-  Redirecting to <a href={target}>current Guild Raid guide</a>...
-</p>
+  <p>
+    Redirecting to <a href={target}>current Guild Raid guide</a>...
+  </p>
+</Layout>
