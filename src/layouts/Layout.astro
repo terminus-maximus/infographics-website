@@ -29,15 +29,33 @@ const {
 
 				if (!(target instanceof Element)) return;
 
-				const link = target.closest("[data-ga4-infographic-open]");
+				const infographicLink = target.closest("[data-ga4-infographic-open]");
 
-				if (!link || typeof gtag !== "function") return;
+				if (infographicLink && typeof gtag === "function") {
+					gtag("event", "full_resolution_infographic_open", {
+						infographic_title: infographicLink.dataset.ga4InfographicTitle || document.title,
+						infographic_url: infographicLink.href,
+						link_source: infographicLink.dataset.ga4LinkSource || infographicLink.textContent.trim() || "image",
+						page_path: window.location.pathname
+					});
+				}
 
-				gtag("event", "full_resolution_infographic_open", {
-					infographic_title: link.dataset.ga4InfographicTitle || document.title,
-					infographic_url: link.href,
-					link_source: link.dataset.ga4LinkSource || link.textContent.trim() || "image",
-					page_path: window.location.pathname
+				const youtubeLink = target.closest("a[href]");
+
+				if (!youtubeLink || typeof gtag !== "function") return;
+				if (!window.location.pathname.startsWith("/guild-raid")) return;
+
+				const linkUrl = new URL(youtubeLink.href);
+				const youtubeHosts = ["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"];
+
+				if (!youtubeHosts.includes(linkUrl.hostname)) return;
+
+				gtag("event", "guild_raid_youtube_click", {
+					link_url: youtubeLink.href,
+					link_text: youtubeLink.textContent.trim(),
+					link_host: linkUrl.hostname,
+					page_path: window.location.pathname,
+					page_title: document.title
 				});
 			});
 		</script>
