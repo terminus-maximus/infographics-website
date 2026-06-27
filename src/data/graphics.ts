@@ -42,15 +42,7 @@ export const graphics = [
       category: "raid"
     },
     {
-      title: "Farsight LRE - Current LRE",
-      href: "/lre/farsight",
-      description: "Farsight Legendary Release Event teams, requirements, and planning.",
-      image: "/images/lre.png",
-      thumbnail: "/images/thumbnails/lre-thumb.png",
-      category: "legendary"
-    },
-    {
-      title: "Lucius LRE",
+      title: "Lucius LRE - Current LRE",
       href: "/lre/lucius",
       description: "Lucius Legendary Release Event teams, requirements, and planning.",
       image: "/images/lucius-lre.png",
@@ -63,6 +55,14 @@ export const graphics = [
       description: "Uthar Legendary Release Event teams, requirements, and planning.",
       image: "/images/uthar-lre.png",
       thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
+      category: "legendary"
+    },
+    {
+      title: "Farsight LRE",
+      href: "/lre/farsight",
+      description: "Farsight Legendary Release Event teams, requirements, and planning.",
+      image: "/images/lre.png",
+      thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
     },
     {
