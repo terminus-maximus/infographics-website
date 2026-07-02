@@ -20,9 +20,16 @@ const {
 const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
 
 const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
+const displayImageSrc =
+  webImageSrc ||
+  imageSrc.replace(/^\/images\//, "/images/web/").replace(/\.[^.]+$/, ".webp");
 ---
 
-<Layout title={`${title} | Terminus Maximus Infographics`} description={description}>
+<Layout
+  title={`${title} | Terminus Maximus Infographics`}
+  description={description}
+  image={displayImageSrc}
+>
   <Header />
 
   <main>
@@ -48,7 +55,7 @@ const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
       data-ga4-link-source="image"
     >
       <img
-        src={webImageSrc || imageSrc}
+        src={displayImageSrc}
         alt={imageAlt}
         class="infographic"
         loading="lazy"

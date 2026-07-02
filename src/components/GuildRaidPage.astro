@@ -38,6 +38,8 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
   return (priority[a.href] || 99) - (priority[b.href] || 99);
 });
 
+const pageImage = guides[0]?.webImageSrc || guides[0]?.imageSrc;
+
 function parseCsv(csv) {
   const rows = [];
   let row = [];
@@ -111,7 +113,11 @@ const seasonReplays = parseCsv(replayCsv)
 
 ---
 
-<Layout title={`${title} | Terminus Maximus Infographics`} description={description}>
+<Layout
+  title={`${title} | Terminus Maximus Infographics`}
+  description={description}
+  image={pageImage}
+>
   <Header />
 
   <main>

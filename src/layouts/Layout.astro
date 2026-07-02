@@ -2,9 +2,13 @@
 const {
 	title = "Terminus Maximus Infographics",
 	description = "Tacticus infographics, strategy guides, Guild Raid resources, and Legendary Event planning.",
-	image = "https://terminusmaximus.com/images/TerminusMaximusInfographics.png",
-	url = "https://terminusmaximus.com/"
+	image = "/images/web/TerminusMaximusInfographics.webp",
+	url
 } = Astro.props;
+
+const siteUrl = "https://terminusmaximus.com";
+const absoluteImage = new URL(image, siteUrl).href;
+const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 ---
 
 <!doctype html>
@@ -74,14 +78,14 @@ const {
 
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={image} />
-		<meta property="og:url" content={url} />
+		<meta property="og:image" content={absoluteImage} />
+		<meta property="og:url" content={absoluteUrl} />
 		<meta property="og:type" content="website" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={image} />
+		<meta name="twitter:image" content={absoluteImage} />
 
 		<slot name="head" />
 	</head>

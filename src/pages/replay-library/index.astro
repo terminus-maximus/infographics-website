@@ -15,7 +15,7 @@ import { createReplayLibraryData } from "../../lib/replayLibrary";
 
 const title = "Replay Library";
 const description =
-  "The largest Guild Raid Replay collection, categorized by Boss, Map, Team, and Damage.";
+  "The largest public Guild Raid Replay collection, categorized by Boss, Map, Team, and Damage.";
 
 const replayLibraryData = createReplayLibraryData(
   replayRows,
@@ -300,6 +300,17 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       </td>
     `;
 
+    const youtubeLogoHtml = () => `
+      <img
+        class="youtube-logo"
+        src="/images/replay-library/YTLogo.webp"
+        width="28"
+        height="20"
+        alt="YouTube"
+        loading="lazy"
+      />
+    `;
+
     const replayRowHtml = (replay) => `
       <tr
         class="replay-row"
@@ -312,6 +323,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         ${linkedCell(replay, escapeHtml(replay.damageLabel))}
         ${linkedCell(replay, `<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero)).join("")}</div>`)}
         ${linkedCell(replay, iconHtml("mow", replay.mow))}
+        ${linkedCell(replay, youtubeLogoHtml())}
         ${linkedCell(replay, escapeHtml(replay.creator))}
       </tr>
     `;
@@ -789,8 +801,19 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
   :global(.replay-table td:nth-child(1)),
   :global(.replay-table td:nth-child(4)),
   :global(.replay-table td:nth-child(5)),
-  :global(.replay-table td:nth-child(7)) {
+  :global(.replay-table td:nth-child(6)),
+  :global(.replay-table td:nth-child(7)),
+  :global(.replay-table td:nth-child(8)) {
     white-space: nowrap;
+  }
+
+  :global(.replay-table th:nth-child(6)),
+  :global(.replay-table td:nth-child(6)),
+  :global(.replay-table th:nth-child(7)),
+  :global(.replay-table td:nth-child(7)),
+  :global(.replay-table th:nth-child(8)),
+  :global(.replay-table td:nth-child(8)) {
+    width: 1%;
   }
 
   :global(.replay-cell-link) {
@@ -800,6 +823,47 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     min-height: 3.25rem;
     padding: 0.75rem;
     text-decoration: none;
+  }
+
+  :global(.replay-table th:nth-child(6)) {
+    padding-right: 0.2rem;
+  }
+
+  :global(.replay-table th:nth-child(7)) {
+    padding-left: 0.2rem;
+    padding-right: 0.8rem;
+  }
+
+  :global(.replay-table th:nth-child(8)) {
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+  }
+
+  :global(.replay-table th:nth-child(9)) {
+    padding-left: 0.2rem;
+  }
+
+  :global(.replay-table td:nth-child(6) .replay-cell-link) {
+    padding-right: 0.15rem;
+    width: max-content;
+  }
+
+  :global(.replay-table td:nth-child(7) .replay-cell-link) {
+    padding-left: 0.15rem;
+    padding-right: 0.8rem;
+    width: max-content;
+  }
+
+  :global(.replay-table td:nth-child(8) .replay-cell-link) {
+    justify-content: center;
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+    width: max-content;
+  }
+
+  :global(.replay-table td:nth-child(9) .replay-cell-link) {
+    padding-left: 0.2rem;
+    width: max-content;
   }
 
   :global(.replay-cell-link:focus-visible) {
@@ -829,6 +893,13 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     height: 40px;
     border-radius: 8px;
     object-fit: contain;
+  }
+
+  :global(.youtube-logo) {
+    display: block;
+    height: 20px;
+    object-fit: contain;
+    width: 28px;
   }
 
   :global(.icon-fallback) {

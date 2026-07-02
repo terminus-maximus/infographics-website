@@ -8,19 +8,19 @@ const lreGuides = [
     title: "Lucius -- Next LRE Event",
     description: "Coming July 26",
     href: "/lre/lucius",
-    thumbnail: "/images/lucius-lre.png",
+    thumbnail: "/images/web/lucius-lre.webp",
   },
   {
     title: "Uthar LRE Guide",
     description: "Next to occur after Lucius, unless a new LRE is announced",
     href: "/lre/uthar",
-    thumbnail: "/images/uthar-lre.png",
+    thumbnail: "/images/web/uthar-lre.webp",
   },
   {
     title: "Farsight LRE Guide",
     description: "Last seen June 2026, his 3rd event date is TBD",
     href: "/lre/farsight",
-    thumbnail: "/images/lre.png",
+    thumbnail: "/images/web/farsight-lre.webp",
   },
 ];
 ---
@@ -28,11 +28,17 @@ const lreGuides = [
 <Layout
   title="Legendary Release Events | Terminus Maximus Infographics"
   description="Legendary Release Event guides for unlock planning, team building, and event requirements."
+  image="/images/web/lre.webp"
 >
   <Header />
 
   <main>
   <section class="hero">
+    <img
+      src="/images/web/lre.webp"
+      alt="Legendary Release Events"
+      class="hero-image"
+    />
     <h1>Legendary Release Events</h1>
     <p>
       Legendary Release Event guides for unlock planning, team building, and event requirements.
@@ -83,6 +89,14 @@ const lreGuides = [
   .hero {
     text-align: center;
     margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
   }
 
   .hero h1 {
