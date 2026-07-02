@@ -1,5 +1,5 @@
 ---
-const { bosses = [], teams = [] } = Astro.props;
+const { bosses = [], teams = [], tiers = [] } = Astro.props;
 ---
 
 <section class="content-section replay-library-panel replay-library-filters" aria-labelledby="replay-filters-heading">
@@ -17,19 +17,29 @@ const { bosses = [], teams = [] } = Astro.props;
     </label>
 
     <label class="filter-field" data-dependent-filter hidden>
-      <span>Map</span>
-      <select name="map" data-filter="map" disabled>
-        <option value="">All Maps</option>
-      </select>
-    </label>
-
-    <label class="filter-field" data-dependent-filter hidden>
       <span>Team</span>
       <select name="team" data-filter="team" disabled>
         <option value="">All Teams</option>
         {teams.map((team) => (
           <option value={team}>{team}</option>
         ))}
+      </select>
+    </label>
+
+    <label class="filter-field" data-dependent-filter hidden>
+      <span>Tier</span>
+      <select name="tier" data-filter="tier" disabled>
+        <option value="">All Tiers</option>
+        {tiers.map((tier) => (
+          <option value={tier}>{tier}</option>
+        ))}
+      </select>
+    </label>
+
+    <label class="filter-field" data-dependent-filter hidden>
+      <span>Map</span>
+      <select name="map" data-filter="map" disabled>
+        <option value="">All Maps</option>
       </select>
     </label>
 
@@ -130,6 +140,10 @@ const { bosses = [], teams = [] } = Astro.props;
 
   [data-filter="team"] {
     width: 11rem;
+  }
+
+  [data-filter="tier"] {
+    width: 8rem;
   }
 
   .hero-dropdown-toggle {

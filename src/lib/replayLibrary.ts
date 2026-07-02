@@ -57,6 +57,7 @@ export type ReplayLibraryData = {
   bosses: { value: string; label: string }[];
   mapsByBoss: Record<string, string[]>;
   teams: string[];
+  tiers: string[];
   heroesByTeam: Record<string, string[]>;
 };
 
@@ -140,6 +141,9 @@ export function createReplayLibraryData(
     .filter((team) => replays.some((replay) => replay.team === team))
     .sort((a, b) => a.localeCompare(b));
 
+  const tierOrder = ["M2", "M1", "L5", "L4", "L3", "L2", "L1"];
+  const tiers = tierOrder.filter((tier) => replays.some((replay) => replay.tier === tier));
+
   const heroesByTeam = Object.fromEntries(
     teams.map((team) => [
       team,
@@ -156,6 +160,7 @@ export function createReplayLibraryData(
     bosses,
     mapsByBoss,
     teams,
+    tiers,
     heroesByTeam
   };
 }

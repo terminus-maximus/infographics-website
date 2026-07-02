@@ -50,7 +50,11 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     </section>
 
     <ReplayStatistics />
-    <ReplayLibraryFilters bosses={replayLibraryData.bosses} teams={replayLibraryData.teams} />
+    <ReplayLibraryFilters
+      bosses={replayLibraryData.bosses}
+      teams={replayLibraryData.teams}
+      tiers={replayLibraryData.tiers}
+    />
     <ReplayResultsTable />
 
     <section class="content-section">
@@ -84,6 +88,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       boss: "",
       map: "",
       team: "",
+      tier: "",
       includedHeroes: [],
       excludedHeroes: []
     };
@@ -93,6 +98,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     const bossSelect = document.querySelector('[data-filter="boss"]');
     const mapSelect = document.querySelector('[data-filter="map"]');
     const teamSelect = document.querySelector('[data-filter="team"]');
+    const tierSelect = document.querySelector('[data-filter="tier"]');
     const heroToggles = {
       includedHeroes: document.querySelector('[data-hero-toggle="includedHeroes"]'),
       excludedHeroes: document.querySelector('[data-hero-toggle="excludedHeroes"]')
@@ -210,17 +216,19 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         field.hidden = !hasBoss;
       });
 
-      [mapSelect, teamSelect].forEach((field) => {
+      [teamSelect, tierSelect, mapSelect].forEach((field) => {
         field.disabled = !hasBoss;
       });
 
       if (!hasBoss) {
         state.map = "";
         state.team = "";
+        state.tier = "";
         state.includedHeroes = [];
         state.excludedHeroes = [];
         mapSelect.value = "";
         teamSelect.value = "";
+        tierSelect.value = "";
         setHeroOptions("");
         return;
       }
@@ -241,8 +249,9 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
       return replayLibraryData.replays.filter((replay) => {
         if (replay.boss !== state.boss) return false;
-        if (state.map && replay.map !== state.map) return false;
         if (state.team && replay.team !== state.team) return false;
+        if (state.tier && replay.tier !== state.tier) return false;
+        if (state.map && replay.map !== state.map) return false;
         if (state.includedHeroes.some((hero) => !replay.heroes.includes(hero))) return false;
         if (state.excludedHeroes.some((hero) => replay.heroes.includes(hero))) return false;
         return true;
@@ -357,6 +366,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
       if (filterName === "boss") {
         state.map = "";
+        state.tier = "";
       }
 
       if (filterName === "team") {
