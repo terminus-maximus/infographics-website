@@ -1,0 +1,37 @@
+{
+  "status": "beta",
+  "exported_at": "2026-07-01T21:53:32",
+  "replays_filename": "PgC5E7jYNBPh8SoE9CGtXMH.json",
+  "exports": [
+    {
+      "source": "bosses.csv",
+      "output": "bosses.json",
+      "rows": 12
+    },
+    {
+      "source": "characters.csv",
+      "output": "characters.json",
+      "rows": 36
+    },
+    {
+      "source": "maps_directory.csv",
+      "output": "maps_directory.json",
+      "rows": 56
+    },
+    {
+      "source": "mow.csv",
+      "output": "mow.json",
+      "rows": 6
+    },
+    {
+      "source": "team_templates.csv",
+      "output": "team_templates.json",
+      "rows": 6
+    },
+    {
+      "source": "replays_master.csv",
+      "output": "PgC5E7jYNBPh8SoE9CGtXMH.json",
+      "rows": 1263
+    }
+  ]
+}

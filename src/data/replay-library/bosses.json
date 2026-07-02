@@ -1,0 +1,74 @@
+[
+  {
+    "Boss":"Avatar",
+    "Long Name":"Avatar of Khaine",
+    "Common Abbreviations":"Avatar, AoK",
+    "Common Misspellings \/ Variants":"Khaine, Khain, Avatar Khaine, L2Avatar"
+  },
+  {
+    "Boss":"Cawl",
+    "Long Name":"Belisarius Cawl",
+    "Common Abbreviations":"Cawl",
+    "Common Misspellings \/ Variants":"Belisarius, Belisarius Crawl"
+  },
+  {
+    "Boss":"Ghaz",
+    "Long Name":"Ghazghkull Mag Uruk Thraka",
+    "Common Abbreviations":"Ghaz, Ghazzy, Ghazghkull",
+    "Common Misspellings \/ Variants":"Gaz, Gazghkull, Ghazkul, Ghazkull, Ghazghull, Ghazgkull, Ghazgkhull"
+  },
+  {
+    "Boss":"Hive Tyrant",
+    "Long Name":"Hive Tyrant",
+    "Common Abbreviations":"Hive Tyrant, HT, Nid, Flyrant",
+    "Common Misspellings \/ Variants":"Hivetyrant, Hive Fleet Leviathan, Tyrant"
+  },
+  {
+    "Boss":"Lion",
+    "Long Name":"Lion El'Jonson",
+    "Common Abbreviations":"Lion, El'Jonson",
+    "Common Misspellings \/ Variants":"El Johnson, Jonson, Johnson"
+  },
+  {
+    "Boss":"Magnus",
+    "Long Name":"Magnus the Red",
+    "Common Abbreviations":"Magnus, Mag, Maggy",
+    "Common Misspellings \/ Variants":"Magnus Red"
+  },
+  {
+    "Boss":"Mortarion",
+    "Long Name":"Mortarion",
+    "Common Abbreviations":"Morty",
+    "Common Misspellings \/ Variants":"Mortarian, Morterion"
+  },
+  {
+    "Boss":"Dorn",
+    "Long Name":"Rogal Dorn Battle Tank",
+    "Common Abbreviations":"Dorn, Rogal, Tank",
+    "Common Misspellings \/ Variants":"Rogul Dorn, Rogle Dorn"
+  },
+  {
+    "Boss":"Screamer",
+    "Long Name":"Screamer-Killer",
+    "Common Abbreviations":"Screamer, SK",
+    "Common Misspellings \/ Variants":"Screamer Killer, Screamerkiller"
+  },
+  {
+    "Boss":"Szarekh",
+    "Long Name":"Szarekh the Silent King",
+    "Common Abbreviations":"Szarekh, Silent King, SKing, Sza",
+    "Common Misspellings \/ Variants":"Szerakh, Szarek, SilentKing, Silent King, szarehk"
+  },
+  {
+    "Boss":"Tervigon",
+    "Long Name":"Tervigon",
+    "Common Abbreviations":"Terv, Tervi, Nid",
+    "Common Misspellings \/ Variants":"Tervigonn, Tervignon, Terivgon, Tervington, L2Tervigon"
+  },
+  {
+    "Boss":"Riptide",
+    "Long Name":"Riptide Battlesuit",
+    "Common Abbreviations":"Rip, Riptide",
+    "Common Misspellings \/ Variants":"Ripitde"
+  }
+]

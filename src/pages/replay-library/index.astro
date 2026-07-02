@@ -1,0 +1,868 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ReplayLibraryFilters from "../../components/replay-library/ReplayLibraryFilters.astro";
+import ReplayStatistics from "../../components/replay-library/ReplayStatistics.astro";
+import ReplayResultsTable from "../../components/replay-library/ReplayResultsTable.astro";
+import { graphics } from "../../data/graphics";
+import replayRows from "../../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
+import bossRows from "../../data/replay-library/bosses.json";
+import characterRows from "../../data/replay-library/characters.json";
+import mapRows from "../../data/replay-library/maps_directory.json";
+import teamTemplateRows from "../../data/replay-library/team_templates.json";
+import { createReplayLibraryData } from "../../lib/replayLibrary";
+
+const title = "Replay Library";
+const description =
+  "The largest Guild Replay collection, categorized by Boss, Map, Team, and Damage.";
+
+const replayLibraryData = createReplayLibraryData(
+  replayRows,
+  bossRows,
+  characterRows,
+  mapRows,
+  teamTemplateRows
+);
+
+const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pathname);
+---
+
+<Layout
+  title={`${title} | Terminus Maximus Infographics`}
+  description={description}
+  image="https://terminusmaximus.com/images/web/ReplayLibraryBanner.webp"
+  url="https://terminusmaximus.com/replay-library"
+>
+  <Header />
+
+  <main>
+    <section class="hero">
+      <img
+        src="/images/web/ReplayLibraryBanner.webp"
+        alt="Replay Library"
+        width="1200"
+        height="592"
+        class="hero-image"
+      />
+      <h1>{title}</h1>
+      <p class="hero-tagline">{description}</p>
+    </section>
+
+    <ReplayStatistics />
+    <ReplayLibraryFilters bosses={replayLibraryData.bosses} teams={replayLibraryData.teams} />
+    <ReplayResultsTable />
+
+    <section class="content-section">
+      <h2>Related Guides</h2>
+
+      <div class="card-grid">
+        {relatedGuides.map((graphic) => (
+          <a class="card related-guide-card" href={graphic.href}>
+            <div class="card-image-wrap">
+              <img
+                src={graphic.thumbnail}
+                alt={`${graphic.title} preview`}
+                class="card-image"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-title-row">
+              <h3>{graphic.title}</h3>
+              {graphic.badge && <span class="card-badge">{graphic.badge}</span>}
+            </div>
+            <p>{graphic.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <script define:vars={{ replayLibraryData }}>
+    const state = {
+      boss: "",
+      map: "",
+      team: "",
+      includedHeroes: [],
+      excludedHeroes: []
+    };
+
+    const form = document.querySelector("[data-replay-filters]");
+    const dependentFilters = Array.from(document.querySelectorAll("[data-dependent-filter]"));
+    const bossSelect = document.querySelector('[data-filter="boss"]');
+    const mapSelect = document.querySelector('[data-filter="map"]');
+    const teamSelect = document.querySelector('[data-filter="team"]');
+    const heroToggles = {
+      includedHeroes: document.querySelector('[data-hero-toggle="includedHeroes"]'),
+      excludedHeroes: document.querySelector('[data-hero-toggle="excludedHeroes"]')
+    };
+    const heroMenus = {
+      includedHeroes: document.querySelector('[data-hero-menu="includedHeroes"]'),
+      excludedHeroes: document.querySelector('[data-hero-menu="excludedHeroes"]')
+    };
+    const statisticsPanel = document.querySelector("[data-replay-statistics]");
+    const resultsWrap = document.querySelector("[data-results-wrap]");
+    const resultsBody = document.querySelector("[data-results-body]");
+    const emptyState = document.querySelector("[data-empty-state]");
+
+    const statElements = {
+      matchingReplays: document.querySelector('[data-stat="matchingReplays"]'),
+      highestDamage: document.querySelector('[data-stat="highestDamage"]'),
+      averageDamage: document.querySelector('[data-stat="averageDamage"]'),
+      uniqueCreators: document.querySelector('[data-stat="uniqueCreators"]'),
+      uniqueMaps: document.querySelector('[data-stat="uniqueMaps"]')
+    };
+    const matchingReplayLabel = statElements.matchingReplays?.previousElementSibling;
+
+    const escapeHtml = (value) =>
+      String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+    const getReplayIconPath = (type, value) => {
+      const normalizedValue = type === "bosses" && value === "Hive Tyrant" ? "Hive_Tyrant" : value;
+      return `/images/replay-library/${type}/${normalizedValue}.webp`;
+    };
+
+    const iconHtml = (type, value, title = value) => {
+      if (!value) return "";
+      const safeValue = escapeHtml(value);
+      const safeTitle = escapeHtml(title);
+      const src = escapeHtml(getReplayIconPath(type, value));
+
+      return `
+        <span class="replay-icon-wrap">
+          <img
+            class="replay-icon"
+            src="${src}"
+            width="40"
+            height="40"
+            alt="${safeTitle}"
+            title="${safeTitle}"
+            loading="lazy"
+            onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+          />
+          <span class="icon-fallback" hidden>${safeValue}</span>
+        </span>
+      `;
+    };
+
+    const resetSelect = (select, placeholder, options, selectedValues = []) => {
+      const selectedSet = new Set(selectedValues);
+      select.innerHTML = [
+        `<option value="">${escapeHtml(placeholder)}</option>`,
+        ...options.map((option) => {
+          const selected = selectedSet.has(option) ? " selected" : "";
+          return `<option value="${escapeHtml(option)}"${selected}>${escapeHtml(option)}</option>`;
+        })
+      ].join("");
+    };
+
+    const getHeroToggleText = (team, selectedCount) => {
+      if (!team) return "Select a Team first";
+      if (selectedCount === 0) return "Select all that apply";
+      return `${selectedCount} selected`;
+    };
+
+    const closeHeroMenu = (filterName) => {
+      heroMenus[filterName].hidden = true;
+      heroToggles[filterName].setAttribute("aria-expanded", "false");
+    };
+
+    const renderHeroMenu = (filterName, heroes, team) => {
+      const selectedSet = new Set(state[filterName]);
+      heroToggles[filterName].disabled = !team;
+      heroToggles[filterName].textContent = getHeroToggleText(team, selectedSet.size);
+
+      if (!team) {
+        heroMenus[filterName].innerHTML = "<p>Select a Team first</p>";
+        closeHeroMenu(filterName);
+        return;
+      }
+
+      heroMenus[filterName].innerHTML = heroes
+        .map((hero) => {
+          const safeHero = escapeHtml(hero);
+          const checked = selectedSet.has(hero) ? " checked" : "";
+          return `
+            <label class="hero-checkbox-option">
+              <input type="checkbox" value="${safeHero}" data-hero-checkbox="${filterName}"${checked} />
+              <span>${safeHero}</span>
+            </label>
+          `;
+        })
+        .join("");
+    };
+
+    const setHeroOptions = (team) => {
+      const heroes = team ? replayLibraryData.heroesByTeam[team] || [] : [];
+      renderHeroMenu("includedHeroes", heroes, team);
+      renderHeroMenu("excludedHeroes", heroes, team);
+    };
+
+    const updateDependentFilters = () => {
+      const hasBoss = Boolean(state.boss);
+      dependentFilters.forEach((field) => {
+        field.hidden = !hasBoss;
+      });
+
+      [mapSelect, teamSelect].forEach((field) => {
+        field.disabled = !hasBoss;
+      });
+
+      if (!hasBoss) {
+        state.map = "";
+        state.team = "";
+        state.includedHeroes = [];
+        state.excludedHeroes = [];
+        mapSelect.value = "";
+        teamSelect.value = "";
+        setHeroOptions("");
+        return;
+      }
+
+      const maps = replayLibraryData.mapsByBoss[state.boss] || [];
+      resetSelect(mapSelect, "All Maps", maps);
+      if (maps.includes(state.map)) {
+        mapSelect.value = state.map;
+      } else {
+        state.map = "";
+      }
+
+      setHeroOptions(state.team);
+    };
+
+    const filterReplays = () => {
+      if (!state.boss) return [];
+
+      return replayLibraryData.replays.filter((replay) => {
+        if (replay.boss !== state.boss) return false;
+        if (state.map && replay.map !== state.map) return false;
+        if (state.team && replay.team !== state.team) return false;
+        if (state.includedHeroes.some((hero) => !replay.heroes.includes(hero))) return false;
+        if (state.excludedHeroes.some((hero) => replay.heroes.includes(hero))) return false;
+        return true;
+      });
+    };
+
+    const updateStatistics = (replays) => {
+      if (!state.boss) {
+        replays = replayLibraryData.replays;
+        matchingReplayLabel.textContent = "Archived Replays";
+      } else {
+        matchingReplayLabel.textContent = "Matching Replays";
+      }
+
+      statisticsPanel.hidden = false;
+      const count = replays.length;
+      const highestDamage = count ? replays[0].damage : 0;
+      const averageDamage = count
+        ? Math.round(replays.reduce((total, replay) => total + replay.damage, 0) / count)
+        : 0;
+
+      statElements.matchingReplays.textContent = count.toLocaleString();
+      statElements.highestDamage.textContent = count ? replays[0].damageLabel : "-";
+      statElements.averageDamage.textContent = count ? formatDamage(averageDamage) : "-";
+      statElements.uniqueCreators.textContent = new Set(replays.map((replay) => replay.creator)).size.toLocaleString();
+      statElements.uniqueMaps.textContent = new Set(replays.map((replay) => replay.map)).size.toLocaleString();
+    };
+
+    const formatDamage = (value) => {
+      if (value >= 1000000) return `${(value / 1000000).toFixed(2)}M`;
+      if (value >= 1000) return `${Math.floor(value / 1000)}K`;
+      return String(value);
+    };
+
+    const linkedCell = (replay, content) => `
+      <td>
+        <a
+          class="replay-cell-link"
+          href="${escapeHtml(replay.videoUrl)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open ${escapeHtml(replay.creator)} replay on YouTube"
+        >
+          ${content}
+        </a>
+      </td>
+    `;
+
+    const replayRowHtml = (replay) => `
+      <tr
+        class="replay-row"
+        data-replay-url="${escapeHtml(replay.videoUrl)}"
+      >
+        ${linkedCell(replay, iconHtml("bosses", replay.boss, replay.bossLongName))}
+        ${linkedCell(replay, escapeHtml(replay.team))}
+        ${linkedCell(replay, escapeHtml(replay.map))}
+        ${linkedCell(replay, escapeHtml(replay.tier))}
+        ${linkedCell(replay, escapeHtml(replay.damageLabel))}
+        ${linkedCell(replay, `<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero)).join("")}</div>`)}
+        ${linkedCell(replay, iconHtml("mow", replay.mow))}
+        ${linkedCell(replay, escapeHtml(replay.creator))}
+      </tr>
+    `;
+
+    const updateResults = (replays) => {
+      if (!state.boss) {
+        emptyState.textContent = "Select a Boss to begin exploring the Replay Library.";
+        emptyState.hidden = false;
+        resultsWrap.hidden = true;
+        resultsBody.innerHTML = "";
+        return;
+      }
+
+      if (replays.length === 0) {
+        emptyState.textContent = "No matching replays found.";
+        emptyState.hidden = false;
+        resultsWrap.hidden = true;
+        resultsBody.innerHTML = "";
+        return;
+      }
+
+      emptyState.hidden = true;
+      resultsWrap.hidden = false;
+      resultsBody.innerHTML = replays.map(replayRowHtml).join("");
+    };
+
+    const render = () => {
+      updateDependentFilters();
+      const replays = filterReplays();
+      updateStatistics(replays);
+      updateResults(replays);
+    };
+
+    form.addEventListener("input", (event) => {
+      const heroCheckbox = event.target.closest("[data-hero-checkbox]");
+
+      if (heroCheckbox) {
+        const filterName = heroCheckbox.dataset.heroCheckbox;
+        const checkedHeroes = Array.from(
+          heroMenus[filterName].querySelectorAll("[data-hero-checkbox]:checked")
+        ).map((checkbox) => checkbox.value);
+        state[filterName] = checkedHeroes;
+        render();
+        return;
+      }
+
+      const field = event.target.closest("[data-filter]");
+      if (!field) return;
+
+      const filterName = field.dataset.filter;
+      state[filterName] = field.value;
+
+      if (filterName === "boss") {
+        state.map = "";
+      }
+
+      if (filterName === "team") {
+        state.includedHeroes = [];
+        state.excludedHeroes = [];
+      }
+
+      render();
+    });
+
+    Object.entries(heroToggles).forEach(([filterName, toggle]) => {
+      toggle.addEventListener("click", () => {
+        if (toggle.disabled) return;
+        const willOpen = heroMenus[filterName].hidden;
+        Object.keys(heroMenus).forEach(closeHeroMenu);
+        heroMenus[filterName].hidden = !willOpen;
+        toggle.setAttribute("aria-expanded", String(willOpen));
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".hero-filter-field")) return;
+      Object.keys(heroMenus).forEach(closeHeroMenu);
+    });
+
+    const relatedCards = Array.from(document.querySelectorAll(".related-guide-card"));
+    relatedCards
+      .sort(() => Math.random() - 0.5)
+      .forEach((card, index) => {
+        card.style.display = index < 3 ? "block" : "none";
+      });
+
+    render();
+  </script>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 0 0 0.75rem;
+  }
+
+  .hero-tagline {
+    color: #cccccc;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  .content-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    gap: 1.5rem;
+    justify-content: start;
+  }
+
+  .card {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: #121212;
+    border: 1px solid #333;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+  }
+
+  .card-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card h3 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .card-badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+    background: rgba(212, 175, 55, 0.12);
+    color: #f5d76e;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .card p {
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  :global(.content-section) {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  :global(section h2) {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  :global(.replay-library-panel) {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.filters-grid) {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  :global(.filter-field) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    color: #cccccc;
+    font-weight: 600;
+    min-width: 12rem;
+    position: relative;
+    width: fit-content;
+  }
+
+  :global(.hero-filter-field) {
+    min-width: 13.5rem;
+  }
+
+  :global(.filter-field span),
+  :global(.stat-label) {
+    color: #aaaaaa;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  :global(.replay-library-filters select),
+  :global(.hero-dropdown-toggle) {
+    width: 11rem;
+    min-width: 11rem;
+    max-width: min(20rem, calc(100vw - 3.5rem));
+    box-sizing: border-box;
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 0.8rem;
+  }
+
+  :global(.replay-library-filters select:disabled),
+  :global(.hero-dropdown-toggle:disabled) {
+    color: #777;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  :global(.replay-library-filters select:focus-visible),
+  :global(.hero-dropdown-toggle:focus-visible) {
+    border-color: #d4af37;
+    outline: 2px solid rgba(212, 175, 55, 0.25);
+    outline-offset: 2px;
+  }
+
+  :global(.hero-dropdown-toggle) {
+    cursor: pointer;
+    text-align: left;
+  }
+
+  :global(.replay-library-filters [data-filter="boss"]) {
+    width: 10rem;
+    min-width: 10rem;
+  }
+
+  :global(.replay-library-filters [data-filter="map"]) {
+    width: 10.5rem;
+    min-width: 10.5rem;
+  }
+
+  :global(.replay-library-filters [data-filter="team"]) {
+    width: 11rem;
+    min-width: 11rem;
+  }
+
+  :global(.hero-dropdown-toggle) {
+    width: 13.5rem;
+  }
+
+  :global(.hero-dropdown-toggle::after) {
+    content: "v";
+    color: #d4af37;
+    float: right;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+
+  :global(.hero-dropdown-menu) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+    left: 0;
+    margin-top: 0.35rem;
+    max-height: 16rem;
+    min-width: 13.5rem;
+    overflow-y: auto;
+    padding: 0.45rem;
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    z-index: 20;
+  }
+
+  :global(.hero-dropdown-menu p) {
+    color: #888;
+    margin: 0;
+    padding: 0.6rem 0.7rem;
+  }
+
+  :global(.hero-checkbox-option) {
+    align-items: center;
+    border-radius: 6px;
+    color: #cccccc;
+    cursor: pointer;
+    display: flex;
+    gap: 0.55rem;
+    padding: 0.45rem 0.55rem;
+    white-space: nowrap;
+  }
+
+  :global(.hero-checkbox-option:hover),
+  :global(.hero-checkbox-option:focus-within) {
+    background: #202020;
+    color: #f5f5f5;
+  }
+
+  :global(.hero-checkbox-option input) {
+    accent-color: #d4af37;
+    margin: 0;
+  }
+
+  :global(.stat-grid) {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  :global(.stat-card) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    min-height: 5.25rem;
+    padding: 1rem;
+  }
+
+  :global(.stat-card strong) {
+    display: block;
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-top: 0.6rem;
+  }
+
+  :global(.empty-state) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  :global(.table-wrap) {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  :global(.replay-table) {
+    width: 100%;
+    min-width: 1040px;
+    border-collapse: collapse;
+    background: #121212;
+  }
+
+  :global(.replay-table th),
+  :global(.replay-table td) {
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  :global(.replay-table th) {
+    background: #252525;
+    color: #d4af37;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    padding: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  :global(.replay-row) {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  :global(.replay-row:hover),
+  :global(.replay-row:focus-within) {
+    background: #202020;
+    outline: none;
+  }
+
+  :global(.replay-row:hover td),
+  :global(.replay-row:focus-within td) {
+    color: #f5f5f5;
+  }
+
+  :global(.replay-table td:nth-child(1)),
+  :global(.replay-table td:nth-child(4)),
+  :global(.replay-table td:nth-child(5)),
+  :global(.replay-table td:nth-child(7)) {
+    white-space: nowrap;
+  }
+
+  :global(.replay-cell-link) {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    min-height: 3.25rem;
+    padding: 0.75rem;
+    text-decoration: none;
+  }
+
+  :global(.replay-cell-link:focus-visible) {
+    color: #f5f5f5;
+    outline: 2px solid rgba(212, 175, 55, 0.45);
+    outline-offset: -2px;
+  }
+
+  :global(.hero-icons) {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-width: 220px;
+  }
+
+  :global(.replay-icon-wrap) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  :global(.replay-icon) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  :global(.icon-fallback) {
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    :global(.stat-grid) {
+      grid-template-columns: repeat(2, minmax(0, max-content));
+    }
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    :global(.content-section) {
+      padding: 1rem;
+    }
+
+    :global(.filters-grid),
+    :global(.stat-grid),
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1rem;
+    }
+
+    .card-image-wrap {
+      height: 110px;
+    }
+  }
+</style>
