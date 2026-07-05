@@ -142,7 +142,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         .replaceAll("'", "&#039;");
 
     const getReplayIconPath = (type, value) => {
-      const normalizedValue = type === "bosses" ? value.replaceAll(" ", "_") : value;
+      const normalizedValue = type === "bosses" || type === "maps" ? value.replaceAll(" ", "_") : value;
       return `/images/replay-library/${type}/${normalizedValue}.webp`;
     };
 
@@ -172,12 +172,11 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     const choiceIconHtml = (filterName, value, label = value) => {
       if (filterName === "tier") return "";
 
-      if (!value || filterName === "map") {
+      if (!value) {
         return '<span class="choice-icon choice-icon-empty" aria-hidden="true"></span>';
       }
 
-      const safeLabel = escapeHtml(label);
-      const type = filterName === "boss" ? "bosses" : "heroes";
+      const type = filterName === "boss" ? "bosses" : filterName === "map" ? "maps" : "heroes";
       const iconValue = filterName === "team" ? teamIconMap[value] || value : value;
       const src = escapeHtml(getReplayIconPath(type, iconValue));
 
@@ -843,6 +842,17 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
   :global(.choice-icon-empty) {
     border: 1px dashed #444;
     box-sizing: border-box;
+  }
+
+  :global([data-choice-menu="map"] .choice-option) {
+    gap: 0.75rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  :global([data-choice-menu="map"] .choice-icon) {
+    flex-basis: 112px;
+    height: 112px;
+    width: 112px;
   }
 
   :global(.hero-dropdown-toggle) {
