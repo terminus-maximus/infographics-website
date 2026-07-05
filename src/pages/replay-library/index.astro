@@ -61,6 +61,123 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     />
     <ReplayResultsTable />
 
+    <section class="content-section replay-library-copy" aria-labelledby="about-replay-library-heading">
+      <h2 id="about-replay-library-heading">About the Replay Library</h2>
+
+      <p>
+        The Replay Library is a searchable collection of real Guild Raid runs published by Tacticus creators on
+        YouTube. Each replay is cataloged by Boss, Map, Tier, Damage, Team Archetype, full Hero lineup, Machine of
+        War, and Creator.
+      </p>
+
+      <p>
+        <strong>The goal is simple:</strong> help you find a replay that is relevant to the team you actually want to
+        use!
+      </p>
+
+      <h3>How to Use the Replay Library</h3>
+
+      <p>Start by selecting a <strong>Boss</strong>. From there, use the additional filters to narrow the results.</p>
+
+      <p>You can filter by:</p>
+
+      <ul>
+        <li><strong>Team</strong> to focus on a particular archetype, such as Neuro, AdMech, or Multi-Hit.</li>
+        <li><strong>Map</strong> to find runs from a specific starting position or layout.</li>
+        <li><strong>Tier</strong> to compare Legendary and Mythic difficulty runs.</li>
+        <li><strong>Included Heroes</strong> to find replays using specific characters.</li>
+        <li>
+          <strong>Excluded Heroes</strong> to look for alternatives when you are missing a key character or want to
+          test a different lineup.
+        </li>
+      </ul>
+
+      <p>
+        The statistics above the results update with your filters, showing the number of matching replays, highest
+        and average damage, creator coverage, and map coverage.
+      </p>
+
+      <p>Replay results are sorted by damage. Click any result row to open the original YouTube replay in a new tab.</p>
+
+      <h3>Find Replays for the Team You Actually Have</h3>
+
+      <p>The most useful question this library can answer is not always, "What is the best team?"</p>
+
+      <p>Often, the better question is:</p>
+
+      <p><strong>"Given the characters I have, what real replays can I watch?"</strong></p>
+
+      <p>
+        A top-performing Guild Raid team may include a character you have not unlocked or invested in. The Included
+        and Excluded Hero filters are designed to make alternate lineups easier to find.
+      </p>
+
+      <p>
+        For example, you can select a Team Archetype, exclude a character you do not have, and see which replacements
+        have appeared in real community replays. You can also require one or more Heroes to find runs built around
+        characters you have already invested in.
+      </p>
+
+      <p>
+        The library does not promise that every lineup is optimal. It gives you evidence: real teams, real damage
+        results, and a direct path to watch how the run was played.
+      </p>
+
+      <h3>How the Library Was Built</h3>
+
+      <p>
+        The Replay Library began as a personal analytics project for studying Guild Raid teams and understanding how
+        the meta changes over time.
+      </p>
+
+      <p>
+        Publicly available Guild Raid videos from selected YouTube creators are collected and reviewed. Useful replay
+        information is then cataloged, including:
+      </p>
+
+      <ul>
+        <li>Boss and difficulty tier</li>
+        <li>Map</li>
+        <li>Damage dealt</li>
+        <li>Team Archetype</li>
+        <li>All five Heroes</li>
+        <li>Machine of War</li>
+        <li>Creator</li>
+        <li>Original replay link</li>
+      </ul>
+
+      <p>
+        The workflow combines simple automation with human review. Python and Jupyter Notebooks help with repetitive
+        tasks such as finding replay candidates, organizing data, checking completeness, and preparing website-ready
+        files. The actual replay data is reviewed and validated before it becomes part of the library.
+      </p>
+
+      <p>
+        This same dataset also supports broader Guild Raid research, including Boss Meta analysis, team comparisons,
+        character usage, alternate lineup discovery, and future trend analysis.
+      </p>
+
+      <h3>Built From Community Replays</h3>
+
+      <p>
+        The Replay Library is possible because Tacticus creators take the time to record and publish their Guild Raid
+        runs.
+      </p>
+
+      <p>
+        The videos remain the work of their original creators. This library does not rehost them. Every result links
+        directly to the original YouTube video, with the goal of making strong runs easier to discover and helping more
+        players learn from the creators who produced them.
+      </p>
+
+      <p>
+        As the library grows, the goal is to build a deeper evidence base for Guild Raid strategy: not just which teams
+        are popular, but how different teams perform across Bosses, Maps, Tiers, and roster variations.
+      </p>
+
+      <p>This is an evolving resource. More replays, creators, and analysis will be added over time.</p>
+    </section>
+
     <section class="content-section">
       <h2>Related Guides</h2>
 
@@ -170,14 +287,14 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     };
 
     const choiceIconHtml = (filterName, value, label = value) => {
-      if (filterName === "tier") return "";
-
       if (!value) {
         return '<span class="choice-icon choice-icon-empty" aria-hidden="true"></span>';
       }
 
-      const type = filterName === "boss" ? "bosses" : filterName === "map" ? "maps" : "heroes";
-      const iconValue = filterName === "team" ? teamIconMap[value] || value : value;
+      const type =
+        filterName === "boss" ? "bosses" : filterName === "map" ? "maps" : filterName === "tier" ? "tier" : "heroes";
+      const iconValue =
+        filterName === "team" ? teamIconMap[value] || value : filterName === "tier" ? (value.startsWith("M") ? "mythic" : "legendary") : value;
       const src = escapeHtml(getReplayIconPath(type, iconValue));
 
       return `
@@ -665,6 +782,40 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     color: #cccccc;
     line-height: 1.5;
     margin-bottom: 0;
+  }
+
+  .replay-library-copy {
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .replay-library-copy h3 {
+    color: #f5d76e;
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin: 2rem 0 0.75rem;
+  }
+
+  .replay-library-copy p {
+    max-width: 78ch;
+  }
+
+  .replay-library-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .replay-library-copy ul {
+    margin: 0 0 1.25rem;
+    max-width: 78ch;
+    padding-left: 1.35rem;
+  }
+
+  .replay-library-copy li {
+    margin-bottom: 0.45rem;
+  }
+
+  .replay-library-copy strong {
+    color: #f5f5f5;
   }
 
   [hidden] {

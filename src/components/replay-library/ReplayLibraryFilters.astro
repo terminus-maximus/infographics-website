@@ -110,14 +110,27 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
         aria-expanded="false"
         disabled
       >
-        <span class="choice-placeholder">All Tiers</span>
+        <span class="choice-toggle-content">
+          <span class="choice-icon choice-icon-empty" aria-hidden="true"></span>
+          <span>All Tiers</span>
+        </span>
       </button>
       <div class="choice-menu" data-choice-menu="tier" hidden>
         <button class="choice-option" type="button" data-choice-option="tier" data-value="">
+          <span class="choice-icon choice-icon-empty" aria-hidden="true"></span>
           <span>All Tiers</span>
         </button>
         {tiers.map((tier) => (
           <button class="choice-option" type="button" data-choice-option="tier" data-value={tier}>
+            <img
+              class="choice-icon"
+              src={`/images/replay-library/tier/${tier.startsWith("M") ? "mythic" : "legendary"}.webp`}
+              width="28"
+              height="28"
+              alt=""
+              loading="lazy"
+              onerror="this.hidden=true;"
+            />
             <span>{tier}</span>
           </button>
         ))}
