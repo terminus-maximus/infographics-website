@@ -11,6 +11,7 @@ import bossRows from "../../data/replay-library/bosses.json";
 import characterRows from "../../data/replay-library/characters.json";
 import mapRows from "../../data/replay-library/maps_directory.json";
 import teamTemplateRows from "../../data/replay-library/team_templates.json";
+import teamArchetypeRows from "../../data/replay-library/team_archetype.json";
 import { createReplayLibraryData } from "../../lib/replayLibrary";
 
 const title = "Replay Library";
@@ -23,6 +24,9 @@ const replayLibraryData = createReplayLibraryData(
   characterRows,
   mapRows,
   teamTemplateRows
+);
+const teamIconMap = Object.fromEntries(
+  teamArchetypeRows.map((team) => [team.team_archetype, team.team_icon])
 );
 
 const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pathname);
@@ -83,7 +87,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     </section>
   </main>
 
-  <script define:vars={{ replayLibraryData }}>
+  <script define:vars={{ replayLibraryData, teamIconMap }}>
     const state = {
       boss: "",
       map: "",
@@ -95,10 +99,18 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
     const form = document.querySelector("[data-replay-filters]");
     const dependentFilters = Array.from(document.querySelectorAll("[data-dependent-filter]"));
-    const bossSelect = document.querySelector('[data-filter="boss"]');
-    const mapSelect = document.querySelector('[data-filter="map"]');
-    const teamSelect = document.querySelector('[data-filter="team"]');
-    const tierSelect = document.querySelector('[data-filter="tier"]');
+    const choiceToggles = {
+      boss: document.querySelector('[data-choice-toggle="boss"]'),
+      team: document.querySelector('[data-choice-toggle="team"]'),
+      map: document.querySelector('[data-choice-toggle="map"]'),
+      tier: document.querySelector('[data-choice-toggle="tier"]')
+    };
+    const choiceMenus = {
+      boss: document.querySelector('[data-choice-menu="boss"]'),
+      team: document.querySelector('[data-choice-menu="team"]'),
+      map: document.querySelector('[data-choice-menu="map"]'),
+      tier: document.querySelector('[data-choice-menu="tier"]')
+    };
     const heroToggles = {
       includedHeroes: document.querySelector('[data-hero-toggle="includedHeroes"]'),
       excludedHeroes: document.querySelector('[data-hero-toggle="excludedHeroes"]')
@@ -130,7 +142,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         .replaceAll("'", "&#039;");
 
     const getReplayIconPath = (type, value) => {
-      const normalizedValue = type === "bosses" && value === "Hive Tyrant" ? "Hive_Tyrant" : value;
+      const normalizedValue = type === "bosses" ? value.replaceAll(" ", "_") : value;
       return `/images/replay-library/${type}/${normalizedValue}.webp`;
     };
 
@@ -157,15 +169,91 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       `;
     };
 
-    const resetSelect = (select, placeholder, options, selectedValues = []) => {
-      const selectedSet = new Set(selectedValues);
-      select.innerHTML = [
-        `<option value="">${escapeHtml(placeholder)}</option>`,
-        ...options.map((option) => {
-          const selected = selectedSet.has(option) ? " selected" : "";
-          return `<option value="${escapeHtml(option)}"${selected}>${escapeHtml(option)}</option>`;
-        })
+    const choiceIconHtml = (filterName, value, label = value) => {
+      if (filterName === "tier") return "";
+
+      if (!value || filterName === "map") {
+        return '<span class="choice-icon choice-icon-empty" aria-hidden="true"></span>';
+      }
+
+      const safeLabel = escapeHtml(label);
+      const type = filterName === "boss" ? "bosses" : "heroes";
+      const iconValue = filterName === "team" ? teamIconMap[value] || value : value;
+      const src = escapeHtml(getReplayIconPath(type, iconValue));
+
+      return `
+        <img
+          class="choice-icon"
+          src="${src}"
+          width="28"
+          height="28"
+          alt=""
+          loading="lazy"
+          onerror="this.hidden=true;"
+        />
+      `;
+    };
+
+    const selectedChoiceHtml = (filterName, value, placeholder, label = value) => {
+      if (!value && filterName === "map") {
+        return `
+          <span class="choice-toggle-content">
+            ${choiceIconHtml(filterName, "", placeholder)}
+            <span>${escapeHtml(placeholder)}</span>
+          </span>
+        `;
+      }
+      if (!value) return `<span class="choice-placeholder">${escapeHtml(placeholder)}</span>`;
+      return `
+        <span class="choice-toggle-content">
+          ${choiceIconHtml(filterName, value, label)}
+          <span>${escapeHtml(label)}</span>
+        </span>
+      `;
+    };
+
+    const setChoiceValue = (filterName, value) => {
+      const placeholder = {
+        boss: "Select a Boss",
+        team: "All Teams",
+        map: "All Maps",
+        tier: "All Tiers"
+      }[filterName];
+      const label = value || placeholder;
+
+      choiceToggles[filterName].innerHTML = selectedChoiceHtml(filterName, value, placeholder, label);
+      choiceMenus[filterName]
+        .querySelectorAll("[data-choice-option]")
+        .forEach((option) => {
+          option.setAttribute("aria-selected", String(option.dataset.value === value));
+        });
+    };
+
+    const renderChoiceMenu = (filterName, placeholder, options) => {
+      choiceMenus[filterName].innerHTML = [
+        `
+          <button class="choice-option" type="button" data-choice-option="${filterName}" data-value="">
+            ${choiceIconHtml(filterName, "", placeholder)}
+            <span>${escapeHtml(placeholder)}</span>
+          </button>
+        `,
+        ...options.map((option) => `
+          <button class="choice-option" type="button" data-choice-option="${filterName}" data-value="${escapeHtml(option)}">
+            ${choiceIconHtml(filterName, option)}
+            <span>${escapeHtml(option)}</span>
+          </button>
+        `)
       ].join("");
+      setChoiceValue(filterName, state[filterName] || "");
+    };
+
+    const closeChoiceMenu = (filterName) => {
+      choiceMenus[filterName].hidden = true;
+      choiceToggles[filterName].setAttribute("aria-expanded", "false");
+    };
+
+    const closeAllChoiceMenus = () => {
+      Object.keys(choiceMenus).forEach(closeChoiceMenu);
     };
 
     const getHeroToggleText = (team, selectedCount) => {
@@ -216,7 +304,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         field.hidden = !hasBoss;
       });
 
-      [teamSelect, tierSelect, mapSelect].forEach((field) => {
+      [choiceToggles.team, choiceToggles.tier, choiceToggles.map].forEach((field) => {
         field.disabled = !hasBoss;
       });
 
@@ -226,21 +314,25 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         state.tier = "";
         state.includedHeroes = [];
         state.excludedHeroes = [];
-        mapSelect.value = "";
-        teamSelect.value = "";
-        tierSelect.value = "";
+        setChoiceValue("map", "");
+        setChoiceValue("team", "");
+        setChoiceValue("tier", "");
         setHeroOptions("");
         return;
       }
 
       const maps = replayLibraryData.mapsByBoss[state.boss] || [];
-      resetSelect(mapSelect, "All Maps", maps);
+      renderChoiceMenu("map", "All Maps", maps);
       if (maps.includes(state.map)) {
-        mapSelect.value = state.map;
+        setChoiceValue("map", state.map);
       } else {
         state.map = "";
+        setChoiceValue("map", "");
       }
 
+      setChoiceValue("boss", state.boss);
+      setChoiceValue("team", state.team);
+      setChoiceValue("tier", state.tier);
       setHeroOptions(state.team);
     };
 
@@ -370,15 +462,32 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         return;
       }
 
-      const field = event.target.closest("[data-filter]");
-      if (!field) return;
+    });
 
-      const filterName = field.dataset.filter;
-      state[filterName] = field.value;
+    Object.entries(choiceToggles).forEach(([filterName, toggle]) => {
+      toggle.addEventListener("click", () => {
+        if (toggle.disabled) return;
+        const willOpen = choiceMenus[filterName].hidden;
+        closeAllChoiceMenus();
+        Object.keys(heroMenus).forEach(closeHeroMenu);
+        choiceMenus[filterName].hidden = !willOpen;
+        toggle.setAttribute("aria-expanded", String(willOpen));
+      });
+    });
+
+    form.addEventListener("click", (event) => {
+      const option = event.target.closest("[data-choice-option]");
+      if (!option) return;
+
+      const filterName = option.dataset.choiceOption;
+      state[filterName] = option.dataset.value || "";
 
       if (filterName === "boss") {
         state.map = "";
         state.tier = "";
+        state.team = "";
+        state.includedHeroes = [];
+        state.excludedHeroes = [];
       }
 
       if (filterName === "team") {
@@ -386,6 +495,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         state.excludedHeroes = [];
       }
 
+      closeAllChoiceMenus();
       render();
     });
 
@@ -393,6 +503,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       toggle.addEventListener("click", () => {
         if (toggle.disabled) return;
         const willOpen = heroMenus[filterName].hidden;
+        closeAllChoiceMenus();
         Object.keys(heroMenus).forEach(closeHeroMenu);
         heroMenus[filterName].hidden = !willOpen;
         toggle.setAttribute("aria-expanded", String(willOpen));
@@ -400,8 +511,9 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     });
 
     document.addEventListener("click", (event) => {
-      if (event.target.closest(".hero-filter-field")) return;
+      if (event.target.closest(".hero-filter-field") || event.target.closest(".choice-filter-field")) return;
       Object.keys(heroMenus).forEach(closeHeroMenu);
+      closeAllChoiceMenus();
     });
 
     const relatedCards = Array.from(document.querySelectorAll(".related-guide-card"));
@@ -601,7 +713,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     min-width: 13.5rem;
   }
 
-  :global(.filter-field span),
+  :global(.filter-field > span),
   :global(.stat-label) {
     color: #aaaaaa;
     font-size: 0.82rem;
@@ -610,10 +722,14 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     text-transform: uppercase;
   }
 
-  :global(.replay-library-filters select),
+  :global(.choice-toggle),
   :global(.hero-dropdown-toggle) {
-    width: 11rem;
-    min-width: 11rem;
+    align-items: center;
+    display: inline-flex;
+    gap: 0.55rem;
+    justify-content: space-between;
+    width: 12rem;
+    min-width: 12rem;
     max-width: min(20rem, calc(100vw - 3.5rem));
     box-sizing: border-box;
     background: #121212;
@@ -624,52 +740,163 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     font-size: 1rem;
     min-height: 2.75rem;
     padding: 0.7rem 0.8rem;
+    text-align: left;
   }
 
-  :global(.replay-library-filters select:disabled),
+  :global(.choice-toggle:disabled),
   :global(.hero-dropdown-toggle:disabled) {
     color: #777;
     cursor: not-allowed;
     opacity: 0.7;
   }
 
-  :global(.replay-library-filters select:focus-visible),
+  :global(.choice-toggle:focus-visible),
   :global(.hero-dropdown-toggle:focus-visible) {
     border-color: #d4af37;
     outline: 2px solid rgba(212, 175, 55, 0.25);
     outline-offset: 2px;
   }
 
+  :global(.choice-toggle),
   :global(.hero-dropdown-toggle) {
     cursor: pointer;
+  }
+
+  :global(.choice-toggle::after),
+  :global(.hero-dropdown-toggle::after) {
+    content: "v";
+    color: #d4af37;
+    font-size: 0.8rem;
+    margin-left: auto;
+  }
+
+  :global(.choice-toggle[aria-expanded="true"]::after),
+  :global(.hero-dropdown-toggle[aria-expanded="true"]::after) {
+    content: "^";
+  }
+
+  :global(.choice-toggle-content) {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  :global(.choice-toggle-content span),
+  :global(.choice-placeholder) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  :global(.choice-menu) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+    left: 0;
+    margin-top: 0.35rem;
+    max-height: min(20rem, 65vh);
+    min-width: 100%;
+    overflow-y: auto;
+    padding: 0.35rem;
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    z-index: 30;
+  }
+
+  :global(.choice-option) {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: #cccccc;
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    gap: 0.55rem;
+    padding: 0.45rem 0.55rem;
     text-align: left;
+    white-space: nowrap;
+    width: 100%;
   }
 
-  :global(.replay-library-filters [data-filter="boss"]) {
-    width: 10rem;
-    min-width: 10rem;
+  :global(.choice-option:hover),
+  :global(.choice-option:focus-visible),
+  :global(.choice-option[aria-selected="true"]) {
+    background: #202020;
+    color: #f5f5f5;
+    outline: none;
   }
 
-  :global(.replay-library-filters [data-filter="map"]) {
-    width: 10.5rem;
-    min-width: 10.5rem;
+  :global(.choice-icon) {
+    border-radius: 6px;
+    display: block;
+    flex: 0 0 28px;
+    height: 28px;
+    object-fit: contain;
+    width: 28px;
   }
 
-  :global(.replay-library-filters [data-filter="team"]) {
-    width: 11rem;
-    min-width: 11rem;
+  :global(.choice-icon-empty) {
+    border: 1px dashed #444;
+    box-sizing: border-box;
   }
 
   :global(.hero-dropdown-toggle) {
     width: 13.5rem;
   }
 
-  :global(.hero-dropdown-toggle::after) {
-    content: "v";
+  :global(.more-filters) {
+    align-self: end;
+    position: relative;
+  }
+
+  :global(.more-filters summary) {
+    align-items: center;
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 700;
+    gap: 0.55rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 0.9rem;
+    user-select: none;
+  }
+
+  :global(.more-filters summary::marker),
+  :global(.more-filters summary::-webkit-details-marker) {
+    display: none;
+  }
+
+  :global(.more-filters summary::after) {
     color: #d4af37;
-    float: right;
+    content: "v";
     font-size: 0.8rem;
-    margin-left: 1rem;
+  }
+
+  :global(.more-filters[open] summary::after) {
+    content: "^";
+  }
+
+  :global(.more-filters-panel) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    position: absolute;
+    right: 0;
+    z-index: 15;
   }
 
   :global(.hero-dropdown-menu) {

@@ -1,0 +1,26 @@
+[
+  {
+    "team_archetype":"Laviscus",
+    "team_icon":"Lav"
+  },
+  {
+    "team_archetype":"Neuro",
+    "team_icon":"Neuro"
+  },
+  {
+    "team_archetype":"AdMech",
+    "team_icon":"Rho"
+  },
+  {
+    "team_archetype":"Battlesuits",
+    "team_icon":"Farsight"
+  },
+  {
+    "team_archetype":"Custodes",
+    "team_icon":"Kari"
+  },
+  {
+    "team_archetype":"Forcasmo",
+    "team_icon":"Forcas"
+  }
+]
