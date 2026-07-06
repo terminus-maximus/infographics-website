@@ -172,6 +172,30 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
             <p>Select a Team first</p>
           </div>
         </div>
+
+        <label class="filter-field range-filter-field">
+          <span>Minimum Damage</span>
+          <input
+            class="range-filter"
+            type="range"
+            min="0"
+            max="2000000"
+            step="10000"
+            value="0"
+            data-filter="minimumDamage"
+          />
+          <output class="range-filter-value" data-minimum-damage-value>No floor</output>
+        </label>
+
+        <label class="filter-field date-filter-field">
+          <span>Minimum Date</span>
+          <input
+            class="date-filter"
+            type="date"
+            data-filter="minimumDate"
+            aria-label="Minimum published date"
+          />
+        </label>
       </div>
     </details>
   </form>
@@ -391,12 +415,53 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
     border-radius: 8px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
     padding: 0.8rem;
     position: absolute;
     right: 0;
     z-index: 15;
+  }
+
+  .date-filter-field {
+    min-width: 13.5rem;
+  }
+
+  .range-filter-field {
+    min-width: 8.5rem;
+  }
+
+  .range-filter-value {
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .range-filter {
+    accent-color: #d4af37;
+    min-height: 2.75rem;
+    width: 8.5rem;
+  }
+
+  .date-filter {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    color-scheme: dark;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 0.8rem;
+    width: 13.5rem;
+  }
+
+  .date-filter:focus-visible {
+    border-color: #d4af37;
+    outline: 2px solid rgba(212, 175, 55, 0.25);
+    outline-offset: 2px;
   }
 
   .hero-dropdown-menu p {
@@ -437,12 +502,16 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
     .more-filters,
     .more-filters summary,
     .more-filters-panel,
-    .hero-dropdown-toggle {
+    .hero-dropdown-toggle,
+    .range-filter,
+    .date-filter {
       width: 100%;
     }
 
     .choice-filter-field,
-    .hero-filter-field {
+    .hero-filter-field,
+    .range-filter-field,
+    .date-filter-field {
       min-width: min(100%, 16rem);
     }
 

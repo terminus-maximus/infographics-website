@@ -5,6 +5,7 @@ type ReplayRecord = {
   boss_final?: string;
   damage_guess?: number;
   damage_final?: string | number;
+  published_at?: string;
   review_status?: string;
   map?: string | null;
   team_archetype?: string;
@@ -49,6 +50,9 @@ export type ReplayLibraryReplay = {
   mow: string;
   creator: string;
   videoUrl: string;
+  publishedAt: string;
+  publishedAtLabel: string;
+  publishedAtTimestamp: number;
 };
 
 export type ReplayLibraryData = {
@@ -73,6 +77,19 @@ export function formatReplayDamage(value: number) {
   return String(value);
 }
 
+export function parseReplayPublishedAt(value: string | undefined) {
+  if (!value) return 0;
+  const timestamp = Date.parse(value);
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+export function formatReplayPublishedAt(value: string | undefined) {
+  const timestamp = parseReplayPublishedAt(value);
+  if (!timestamp) return "";
+  const date = new Date(timestamp);
+  return `${date.toLocaleString("en-US", { month: "short" })} ${date.getDate()}`;
+}
+
 export function getReplayIconPath(type: "bosses" | "heroes" | "mow", value: string) {
   const normalizedValue = type === "bosses" && value === "Hive Tyrant" ? "Hive_Tyrant" : value;
   return `/images/replay-library/${type}/${normalizedValue}.webp`;
@@ -93,6 +110,7 @@ export function createReplayLibraryData(
     .filter((replay) => replay.review_status === "VALID_REPLAY")
     .map((replay, index) => {
       const damage = parseReplayDamage(replay.damage_final, replay.damage_guess);
+      const publishedAt = replay.published_at || "";
       const heroes = [replay.hero_1, replay.hero_2, replay.hero_3, replay.hero_4, replay.hero_5]
         .filter((hero): hero is string => Boolean(hero));
 
@@ -108,7 +126,10 @@ export function createReplayLibraryData(
         heroes,
         mow: replay.MoW || "",
         creator: replay.creator || "Unknown",
-        videoUrl: replay.video_url || "#"
+        videoUrl: replay.video_url || "#",
+        publishedAt,
+        publishedAtLabel: formatReplayPublishedAt(publishedAt),
+        publishedAtTimestamp: parseReplayPublishedAt(publishedAt)
       };
     })
     .filter((replay) => replay.boss !== "Unknown" && replay.damage > 0 && replay.videoUrl !== "#")

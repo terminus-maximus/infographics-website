@@ -9,15 +9,34 @@
     <table class="replay-table">
       <thead>
         <tr>
-          <th>Boss</th>
-          <th>Team</th>
-          <th>Map</th>
-          <th>Tier</th>
-          <th>Damage</th>
-          <th>Heroes</th>
-          <th>MoW</th>
+          <th data-sort-header="boss">
+            <button class="sort-button" type="button" data-sort-key="boss">Boss</button>
+          </th>
+          <th data-sort-header="team">
+            <button class="sort-button" type="button" data-sort-key="team">Team</button>
+          </th>
+          <th data-sort-header="damage" aria-sort="descending">
+            <button class="sort-button" type="button" data-sort-key="damage">Damage</button>
+          </th>
+          <th data-sort-header="tier">
+            <button class="sort-button" type="button" data-sort-key="tier">Tier</button>
+          </th>
+          <th data-sort-header="map">
+            <button class="sort-button" type="button" data-sort-key="map">Map</button>
+          </th>
+          <th data-sort-header="heroes">
+            <button class="sort-button" type="button" data-sort-key="heroes">Heroes</button>
+          </th>
+          <th data-sort-header="mow">
+            <button class="sort-button" type="button" data-sort-key="mow">MoW</button>
+          </th>
           <th aria-label="Watch replay"></th>
-          <th>Creator</th>
+          <th data-sort-header="creator">
+            <button class="sort-button" type="button" data-sort-key="creator">Creator</button>
+          </th>
+          <th data-sort-header="publishedAt">
+            <button class="sort-button" type="button" data-sort-key="publishedAt">Date</button>
+          </th>
         </tr>
       </thead>
       <tbody data-results-body></tbody>

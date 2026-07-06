@@ -210,12 +210,32 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       map: "",
       team: "",
       tier: "",
+      minimumDamage: 0,
+      minimumDate: "",
       includedHeroes: [],
       excludedHeroes: []
+    };
+    const sortState = {
+      key: "damage",
+      direction: "desc"
+    };
+    const tierSortRank = {
+      M2: 0,
+      M1: 1,
+      L5: 2,
+      L4: 3,
+      L3: 4,
+      L2: 5,
+      L1: 6
     };
 
     const form = document.querySelector("[data-replay-filters]");
     const dependentFilters = Array.from(document.querySelectorAll("[data-dependent-filter]"));
+    const sortButtons = Array.from(document.querySelectorAll("[data-sort-key]"));
+    const sortHeaders = Array.from(document.querySelectorAll("[data-sort-header]"));
+    const minimumDamageInput = document.querySelector('[data-filter="minimumDamage"]');
+    const minimumDamageValue = document.querySelector("[data-minimum-damage-value]");
+    const minimumDateInput = document.querySelector('[data-filter="minimumDate"]');
     const choiceToggles = {
       boss: document.querySelector('[data-choice-toggle="boss"]'),
       team: document.querySelector('[data-choice-toggle="team"]'),
@@ -263,14 +283,15 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       return `/images/replay-library/${type}/${normalizedValue}.webp`;
     };
 
-    const iconHtml = (type, value, title = value) => {
+    const iconHtml = (type, value, title = value, extraClass = "") => {
       if (!value) return "";
       const safeValue = escapeHtml(value);
       const safeTitle = escapeHtml(title);
       const src = escapeHtml(getReplayIconPath(type, value));
+      const className = `replay-icon-wrap${extraClass ? ` ${extraClass}` : ""}`;
 
       return `
-        <span class="replay-icon-wrap">
+        <span class="${className}" data-icon-title="${safeTitle}">
           <img
             class="replay-icon"
             src="${src}"
@@ -378,6 +399,18 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       return `${selectedCount} selected`;
     };
 
+    const formatFullDamage = (value) => (Number(value || 0) > 0 ? Number(value).toLocaleString() : "No floor");
+
+    const parseDateFilterTimestamp = (value) => {
+      if (!value) return 0;
+      const timestamp = new Date(`${value}T00:00:00`).getTime();
+      return Number.isFinite(timestamp) ? timestamp : 0;
+    };
+
+    const updateMinimumDamageLabel = () => {
+      minimumDamageValue.textContent = formatFullDamage(state.minimumDamage);
+    };
+
     const closeHeroMenu = (filterName) => {
       heroMenus[filterName].hidden = true;
       heroToggles[filterName].setAttribute("aria-expanded", "false");
@@ -428,8 +461,13 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         state.map = "";
         state.team = "";
         state.tier = "";
+        state.minimumDamage = 0;
+        state.minimumDate = "";
         state.includedHeroes = [];
         state.excludedHeroes = [];
+        minimumDamageInput.value = String(state.minimumDamage);
+        minimumDateInput.value = "";
+        updateMinimumDamageLabel();
         setChoiceValue("map", "");
         setChoiceValue("team", "");
         setChoiceValue("tier", "");
@@ -460,9 +498,55 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         if (state.team && replay.team !== state.team) return false;
         if (state.tier && replay.tier !== state.tier) return false;
         if (state.map && replay.map !== state.map) return false;
+        if (replay.damage < state.minimumDamage) return false;
+        if (state.minimumDate && replay.publishedAtTimestamp < parseDateFilterTimestamp(state.minimumDate)) return false;
         if (state.includedHeroes.some((hero) => !replay.heroes.includes(hero))) return false;
         if (state.excludedHeroes.some((hero) => replay.heroes.includes(hero))) return false;
         return true;
+      });
+    };
+
+    const getSortValue = (replay, key) => {
+      if (key === "damage") return replay.damage;
+      if (key === "heroes") return replay.heroes.join(" ");
+      if (key === "tier") return tierSortRank[replay.tier] ?? 99;
+      if (key === "mow") return replay.mow || "";
+      if (key === "publishedAt") return replay.publishedAtTimestamp || 0;
+      return replay[key] || "";
+    };
+
+    const compareSortValues = (a, b, key) => {
+      const aValue = getSortValue(a, key);
+      const bValue = getSortValue(b, key);
+
+      if (typeof aValue === "number" && typeof bValue === "number") {
+        return aValue - bValue;
+      }
+
+      return String(aValue).localeCompare(String(bValue), undefined, {
+        numeric: true,
+        sensitivity: "base"
+      });
+    };
+
+    const sortReplays = (replays) =>
+      [...replays].sort((a, b) => {
+        const comparison = compareSortValues(a, b, sortState.key);
+        if (comparison !== 0) return sortState.direction === "asc" ? comparison : -comparison;
+        return b.damage - a.damage;
+      });
+
+    const updateSortHeaders = () => {
+      sortHeaders.forEach((header) => {
+        const isActive = header.dataset.sortHeader === sortState.key;
+        header.setAttribute(
+          "aria-sort",
+          isActive ? (sortState.direction === "asc" ? "ascending" : "descending") : "none"
+        );
+      });
+
+      sortButtons.forEach((button) => {
+        button.dataset.sortDirection = button.dataset.sortKey === sortState.key ? sortState.direction : "";
       });
     };
 
@@ -476,13 +560,15 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
       statisticsPanel.hidden = false;
       const count = replays.length;
-      const highestDamage = count ? replays[0].damage : 0;
+      const highestReplay = count
+        ? replays.reduce((highest, replay) => (replay.damage > highest.damage ? replay : highest), replays[0])
+        : null;
       const averageDamage = count
         ? Math.round(replays.reduce((total, replay) => total + replay.damage, 0) / count)
         : 0;
 
       statElements.matchingReplays.textContent = count.toLocaleString();
-      statElements.highestDamage.textContent = count ? replays[0].damageLabel : "-";
+      statElements.highestDamage.textContent = highestReplay ? highestReplay.damageLabel : "-";
       statElements.averageDamage.textContent = count ? formatDamage(averageDamage) : "-";
       statElements.uniqueCreators.textContent = new Set(replays.map((replay) => replay.creator)).size.toLocaleString();
       statElements.uniqueMaps.textContent = new Set(replays.map((replay) => replay.map)).size.toLocaleString();
@@ -519,20 +605,54 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       />
     `;
 
+    const teamIconHtml = (team) => iconHtml("heroes", teamIconMap[team] || team, team, "labeled-icon-wrap");
+
+    const mapIconHtml = (map) => {
+      if (!map) return "";
+      const safeMap = escapeHtml(map);
+      const src = escapeHtml(getReplayIconPath("maps", map));
+
+      return `
+        <span class="map-preview-wrap">
+          <img
+            class="replay-icon map-icon"
+            src="${src}"
+            width="40"
+            height="40"
+            alt="${safeMap}"
+            title="${safeMap}"
+            loading="lazy"
+            onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+          />
+          <span class="icon-fallback" hidden>${safeMap}</span>
+          <span class="map-preview" aria-hidden="true">
+            <img
+              src="${src}"
+              width="150"
+              height="150"
+              alt=""
+              loading="lazy"
+            />
+          </span>
+        </span>
+      `;
+    };
+
     const replayRowHtml = (replay) => `
       <tr
         class="replay-row"
         data-replay-url="${escapeHtml(replay.videoUrl)}"
       >
-        ${linkedCell(replay, iconHtml("bosses", replay.boss, replay.bossLongName))}
-        ${linkedCell(replay, escapeHtml(replay.team))}
-        ${linkedCell(replay, escapeHtml(replay.map))}
-        ${linkedCell(replay, escapeHtml(replay.tier))}
+        ${linkedCell(replay, iconHtml("bosses", replay.boss, replay.bossLongName, "labeled-icon-wrap"))}
+        ${linkedCell(replay, teamIconHtml(replay.team))}
         ${linkedCell(replay, escapeHtml(replay.damageLabel))}
-        ${linkedCell(replay, `<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero)).join("")}</div>`)}
-        ${linkedCell(replay, iconHtml("mow", replay.mow))}
+        ${linkedCell(replay, escapeHtml(replay.tier))}
+        ${linkedCell(replay, mapIconHtml(replay.map))}
+        ${linkedCell(replay, `<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero, hero, "labeled-icon-wrap")).join("")}</div>`)}
+        ${linkedCell(replay, iconHtml("mow", replay.mow, replay.mow, "labeled-icon-wrap"))}
         ${linkedCell(replay, youtubeLogoHtml())}
         ${linkedCell(replay, escapeHtml(replay.creator))}
+        ${linkedCell(replay, `<span title="${escapeHtml(replay.publishedAt)}">${escapeHtml(replay.publishedAtLabel || "-")}</span>`)}
       </tr>
     `;
 
@@ -560,12 +680,28 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
     const render = () => {
       updateDependentFilters();
-      const replays = filterReplays();
+      const replays = sortReplays(filterReplays());
+      updateSortHeaders();
       updateStatistics(replays);
       updateResults(replays);
     };
 
     form.addEventListener("input", (event) => {
+      const minimumDamageField = event.target.closest('[data-filter="minimumDamage"]');
+      if (minimumDamageField) {
+        state.minimumDamage = Number(minimumDamageField.value) || 0;
+        updateMinimumDamageLabel();
+        render();
+        return;
+      }
+
+      const minimumDateField = event.target.closest('[data-filter="minimumDate"]');
+      if (minimumDateField) {
+        state.minimumDate = minimumDateField.value;
+        render();
+        return;
+      }
+
       const heroCheckbox = event.target.closest("[data-hero-checkbox]");
 
       if (heroCheckbox) {
@@ -602,8 +738,13 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         state.map = "";
         state.tier = "";
         state.team = "";
+        state.minimumDamage = 0;
+        state.minimumDate = "";
         state.includedHeroes = [];
         state.excludedHeroes = [];
+        minimumDamageInput.value = String(state.minimumDamage);
+        minimumDateInput.value = "";
+        updateMinimumDamageLabel();
       }
 
       if (filterName === "team") {
@@ -613,6 +754,22 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
       closeAllChoiceMenus();
       render();
+    });
+
+    sortButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const sortKey = button.dataset.sortKey;
+        if (!sortKey) return;
+
+        if (sortState.key === sortKey) {
+          sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
+        } else {
+          sortState.key = sortKey;
+          sortState.direction = sortKey === "damage" ? "desc" : "asc";
+        }
+
+        render();
+      });
     });
 
     Object.entries(heroToggles).forEach(([filterName, toggle]) => {
@@ -1052,12 +1209,53 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     border-radius: 8px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
     padding: 0.8rem;
     position: absolute;
     right: 0;
     z-index: 15;
+  }
+
+  :global(.date-filter-field) {
+    min-width: 13.5rem;
+  }
+
+  :global(.range-filter-field) {
+    min-width: 8.5rem;
+  }
+
+  :global(.range-filter-value) {
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  :global(.range-filter) {
+    accent-color: #d4af37;
+    min-height: 2.75rem;
+    width: 8.5rem;
+  }
+
+  :global(.date-filter) {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    color-scheme: dark;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 0.8rem;
+    width: 13.5rem;
+  }
+
+  :global(.date-filter:focus-visible) {
+    border-color: #d4af37;
+    outline: 2px solid rgba(212, 175, 55, 0.25);
+    outline-offset: 2px;
   }
 
   :global(.hero-dropdown-menu) {
@@ -1170,6 +1368,45 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     text-transform: uppercase;
   }
 
+  :global(.sort-button) {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    gap: 0.35rem;
+    justify-content: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    text-align: inherit;
+    text-transform: inherit;
+  }
+
+  :global(.sort-button::after) {
+    color: #f5d76e;
+    content: "";
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1;
+    min-width: 0.7rem;
+  }
+
+  :global(.sort-button[data-sort-direction="asc"]::after) {
+    content: "^";
+  }
+
+  :global(.sort-button[data-sort-direction="desc"]::after) {
+    content: "v";
+  }
+
+  :global(.sort-button:hover),
+  :global(.sort-button:focus-visible) {
+    color: #f5f5f5;
+    outline: none;
+  }
+
   :global(.replay-row) {
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -1187,20 +1424,35 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
   }
 
   :global(.replay-table td:nth-child(1)),
+  :global(.replay-table td:nth-child(2)),
+  :global(.replay-table td:nth-child(3)),
   :global(.replay-table td:nth-child(4)),
   :global(.replay-table td:nth-child(5)),
   :global(.replay-table td:nth-child(6)),
   :global(.replay-table td:nth-child(7)),
-  :global(.replay-table td:nth-child(8)) {
+  :global(.replay-table td:nth-child(8)),
+  :global(.replay-table td:nth-child(10)) {
     white-space: nowrap;
   }
 
+  :global(.replay-table th:nth-child(1)),
+  :global(.replay-table td:nth-child(1)),
+  :global(.replay-table th:nth-child(2)),
+  :global(.replay-table td:nth-child(2)),
+  :global(.replay-table th:nth-child(3)),
+  :global(.replay-table td:nth-child(3)),
+  :global(.replay-table th:nth-child(4)),
+  :global(.replay-table td:nth-child(4)),
+  :global(.replay-table th:nth-child(5)),
+  :global(.replay-table td:nth-child(5)),
   :global(.replay-table th:nth-child(6)),
   :global(.replay-table td:nth-child(6)),
   :global(.replay-table th:nth-child(7)),
   :global(.replay-table td:nth-child(7)),
   :global(.replay-table th:nth-child(8)),
-  :global(.replay-table td:nth-child(8)) {
+  :global(.replay-table td:nth-child(8)),
+  :global(.replay-table th:nth-child(10)),
+  :global(.replay-table td:nth-child(10)) {
     width: 1%;
   }
 
@@ -1211,6 +1463,19 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     min-height: 3.25rem;
     padding: 0.75rem;
     text-decoration: none;
+  }
+
+  :global(.replay-table th:nth-child(1)),
+  :global(.replay-table th:nth-child(2)),
+  :global(.replay-table th:nth-child(5)) {
+    text-align: center;
+  }
+
+  :global(.replay-table td:nth-child(1) .replay-cell-link),
+  :global(.replay-table td:nth-child(2) .replay-cell-link),
+  :global(.replay-table td:nth-child(5) .replay-cell-link) {
+    justify-content: center;
+    width: max-content;
   }
 
   :global(.replay-table th:nth-child(6)) {
@@ -1254,6 +1519,10 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     width: max-content;
   }
 
+  :global(.replay-table td:nth-child(10) .replay-cell-link) {
+    width: max-content;
+  }
+
   :global(.replay-cell-link:focus-visible) {
     color: #f5f5f5;
     outline: 2px solid rgba(212, 175, 55, 0.45);
@@ -1273,6 +1542,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     justify-content: center;
     min-width: 40px;
     min-height: 40px;
+    position: relative;
   }
 
   :global(.replay-icon) {
@@ -1281,6 +1551,74 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     height: 40px;
     border-radius: 8px;
     object-fit: contain;
+  }
+
+  :global(.labeled-icon-wrap::after) {
+    background: #121212;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    bottom: calc(100% + 0.4rem);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+    color: #f5f5f5;
+    content: attr(data-icon-title);
+    font-size: 0.78rem;
+    font-weight: 700;
+    left: 50%;
+    line-height: 1;
+    opacity: 0;
+    padding: 0.35rem 0.45rem;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%) translateY(0.2rem);
+    transition: opacity 0.12s ease, transform 0.12s ease;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 65;
+  }
+
+  :global(.labeled-icon-wrap:hover::after) {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
+  }
+
+  :global(.map-preview-wrap) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  :global(.map-preview) {
+    background: #121212;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    left: 50%;
+    opacity: 0;
+    padding: 0.35rem;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    transform: translateX(-50%) scale(0.96);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    visibility: hidden;
+    z-index: 60;
+  }
+
+  :global(.map-preview img) {
+    border-radius: 6px;
+    display: block;
+    height: auto;
+    max-width: 150px;
+    width: 150px;
+  }
+
+  :global(.map-preview-wrap:hover .map-preview),
+  :global(.replay-cell-link:focus-visible .map-preview) {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    visibility: visible;
   }
 
   :global(.youtube-logo) {
