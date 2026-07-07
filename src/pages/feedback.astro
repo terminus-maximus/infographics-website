@@ -1,0 +1,321 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// This public key is safe to expose. Prefer setting PUBLIC_TURNSTILE_SITE_KEY in
+// Cloudflare Pages so future key rotation does not require a code change.
+const turnstileSiteKey =
+  import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAADxGa6EGxciFcw_4";
+---
+
+<Layout
+  title="Feedback | Terminus Maximus Infographics"
+  description="Send feedback, suggestions, or corrections for Terminus Maximus Infographics."
+  image="/images/web/TerminusMaximusInfographics.webp"
+>
+  <Fragment slot="head">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </Fragment>
+
+  <Header />
+
+  <main>
+    <section class="feedback-intro">
+      <h1>Feedback</h1>
+      <p>
+        Send a suggestion, correction, or note about anything on Terminus Maximus Infographics.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <form id="feedback-form" class="feedback-form">
+        <input type="hidden" name="pageUrl" value="" />
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required autocomplete="off" maxlength="160" />
+        </div>
+
+        <div class="field">
+          <label for="feedback">Feedback</label>
+          <textarea id="feedback" name="feedback" required rows="8" maxlength="5000"></textarea>
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="discordName">Discord name <span>optional</span></label>
+            <input id="discordName" name="discordName" type="text" autocomplete="nickname" maxlength="120" />
+          </div>
+
+          <div class="field">
+            <label for="replyEmail">Reply email <span>optional</span></label>
+            <input id="replyEmail" name="replyEmail" type="email" autocomplete="email" maxlength="254" />
+          </div>
+        </div>
+
+        <div class="turnstile-wrap">
+          <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-button">Send Feedback</button>
+          <p id="feedback-status" class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.querySelector("#feedback-form");
+  const statusMessage = document.querySelector("#feedback-status");
+  const submitButton = form?.querySelector("button[type='submit']");
+  const pageUrlInput = form?.querySelector("input[name='pageUrl']");
+
+  if (pageUrlInput instanceof HTMLInputElement) {
+    pageUrlInput.value = window.location.href;
+  }
+
+  const setStatus = (message, type) => {
+    if (!(statusMessage instanceof HTMLElement)) return;
+
+    statusMessage.textContent = message;
+    statusMessage.dataset.type = type;
+  };
+
+  const resetTurnstile = () => {
+    if (typeof window.turnstile?.reset === "function") {
+      window.turnstile.reset();
+    }
+  };
+
+  if (form instanceof HTMLFormElement && submitButton instanceof HTMLButtonElement) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const turnstileToken = String(formData.get("cf-turnstile-response") || "");
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+      setStatus("Sending feedback...", "loading");
+
+      try {
+        const response = await fetch("/api/feedback", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            subject: formData.get("subject"),
+            feedback: formData.get("feedback"),
+            discordName: formData.get("discordName"),
+            replyEmail: formData.get("replyEmail"),
+            pageUrl: formData.get("pageUrl") || window.location.href,
+            turnstileToken,
+          }),
+        });
+
+        const result = await response.json().catch(() => ({
+          error: "Feedback could not be sent. Please try again later.",
+        }));
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.error || "Feedback could not be sent. Please try again later.");
+        }
+
+        form.reset();
+
+        if (pageUrlInput instanceof HTMLInputElement) {
+          pageUrlInput.value = window.location.href;
+        }
+
+        resetTurnstile();
+        setStatus(result.message || "Feedback sent. Thank you!", "success");
+      } catch (error) {
+        resetTurnstile();
+        setStatus(error instanceof Error ? error.message : "Feedback could not be sent.", "error");
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Feedback";
+      }
+    });
+  }
+</script>
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .feedback-intro {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    color: #d4af37;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0 0 1rem;
+  }
+
+  .feedback-intro p {
+    color: #cccccc;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 720px;
+  }
+
+  .content-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .feedback-form {
+    display: grid;
+    gap: 1.35rem;
+  }
+
+  .field,
+  .field-grid {
+    min-width: 0;
+  }
+
+  .field {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  label {
+    color: #f5f5f5;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  label span {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: #121212;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font: inherit;
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  textarea {
+    line-height: 1.6;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.16);
+    outline: none;
+  }
+
+  .turnstile-wrap {
+    min-height: 65px;
+  }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .submit-button {
+    background: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    color: #121212;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    padding: 0.85rem 1.25rem;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .submit-button:hover,
+  .submit-button:focus-visible {
+    background: #f0d36f;
+    border-color: #f0d36f;
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .submit-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+    transform: none;
+  }
+
+  .form-status {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .form-status[data-type="success"] {
+    color: #9fd49f;
+  }
+
+  .form-status[data-type="error"] {
+    color: #ffb4a8;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .content-section {
+      padding: 1.5rem;
+    }
+
+    .field-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .submit-button {
+      width: 100%;
+    }
+  }
+</style>
