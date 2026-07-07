@@ -46,6 +46,9 @@ const basics = [
       "LREs reward accounts that invest in flexible characters before the event begins. Healers, durable tanks, summoners, reusable damage dealers, and broadly useful support units often carry value across several Legendary Release Events.",
   },
 ];
+
+const basicsIntro =
+  "Legendary Release Events are some of the most demanding roster-check events in Tacticus. They reward long-term preparation, flexible characters, and careful team planning across multiple tracks rather than one perfect lineup.";
 ---
 
 <Layout
@@ -89,6 +92,8 @@ const basics = [
     <h2>LRE Basics</h2>
 
     <div class="markdown-content">
+      <p class="section-intro">{basicsIntro}</p>
+
       {basics.map((item) => (
         <div class="basic-copy">
           <h3>{item.title}</h3>
@@ -153,9 +158,18 @@ const basics = [
     padding: 1.5rem;
   }
 
+  .content-section h2 {
+    margin-top: 0;
+  }
+
   .markdown-content {
     color: #cccccc;
     line-height: 1.7;
+  }
+
+  .section-intro {
+    max-width: 900px;
+    margin: 0 0 1.5rem;
   }
 
   .basic-copy + .basic-copy {
@@ -188,6 +202,10 @@ const basics = [
     text-decoration: none;
     color: inherit;
     transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .content-section .card {
+    background: #121212;
   }
 
   .card:hover,

@@ -36,24 +36,24 @@ const guildRaidGuides = [
 
 const basics = [
   {
-    title: "Current Season",
+    title: "What Are Guild Raids?",
     description:
-      "The Current Season guide is the fastest way to see the active Guild Raid lineup. Use it for boss order, map previews, difficulty tiers, and the recommended teams you should prepare before spending tokens.",
+      "Guild Raid is one of the core competitive and cooperative modes in Tacticus. Players spend raid tokens attacking rotating bosses across different maps and difficulty tiers, with each attack contributing damage toward guild progress and season rewards.",
   },
   {
-    title: "Boss Meta Guide",
+    title: "Why Guild Raid Matters",
     description:
-      "The Boss Meta Guide compares the strongest proven teams for each boss, with alternate options when a roster is missing key characters. It is meant to help you decide where to invest and which replays are worth studying before committing resources.",
+      "Guild Raid rewards steady account growth, strong roster planning, and efficient use of limited attacks. It is also one of the clearest places where character investment decisions show up: the right team can improve your results for many seasons, while a narrow or outdated build can slow progress for months.",
   },
   {
-    title: "Replay Library",
+    title: "Investment Philosophy",
     description:
-      "The Replay Library turns community videos into searchable evidence. Filter by boss, map, tier, team archetype, hero lineup, Machine of War, creator, and damage to find runs that match the team you actually have.",
+      "Guild Raid teams are expensive, so the goal is not to chase every showcase lineup. Prioritize characters and team archetypes that solve multiple bosses, overlap with other important game modes, and match the roster you can realistically build. Strong alternate teams are often more useful than a perfect meta team you cannot field.",
   },
   {
-    title: "Season Archive",
+    title: "Using Evidence",
     description:
-      "The Season Archive keeps older Guild Raid seasons available for reference. Use it to look back at previous boss rotations, compare map history, revisit older infographic sets, and prepare when familiar lineups return.",
+      "These guides lean on real replay data rather than isolated opinion. Use the Boss Meta Guide to understand which teams are performing well, the Replay Library to watch those teams in action, and the Current Season guide to prepare for the specific boss order, maps, and difficulties in front of your guild.",
   },
 ];
 
@@ -101,12 +101,12 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     <section class="content-section">
       <h2>Guild Raid Basics</h2>
 
-      <div class="basics-grid">
+      <div class="markdown-content">
         {basics.map((item) => (
-          <article class="basic-item">
+          <div class="basic-copy">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-          </article>
+          </div>
         ))}
       </div>
     </section>
@@ -201,29 +201,23 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     padding: 1.5rem;
   }
 
-  .basics-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+  .markdown-content {
+    color: #cccccc;
+    line-height: 1.7;
   }
 
-  .basic-item {
-    background: #121212;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1.25rem;
+  .basic-copy + .basic-copy {
+    margin-top: 1.5rem;
   }
 
-  .basic-item h3 {
+  .basic-copy h3 {
     color: #d4af37;
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
     line-height: 1.3;
   }
 
-  .basic-item p {
-    color: #cccccc;
-    line-height: 1.6;
+  .basic-copy p {
     margin: 0;
   }
 
@@ -326,14 +320,12 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
       padding: 1rem;
     }
 
-    .basics-grid,
     .card-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
     }
 
-    .card,
-    .basic-item {
+    .card {
       padding: 1rem;
     }
 

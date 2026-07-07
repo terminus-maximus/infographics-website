@@ -9,6 +9,11 @@ const relatedPages = graphics.filter((graphic) => graphic.category !== "event");
 
 const basics = [
   {
+    title: "Game Event Basics",
+    description:
+      "Recurring events are limited-time modes that reward preparation, daily participation, and careful resource planning. They do not all work the same way, but each one asks the same basic question: which rewards matter most to your account right now, and how much roster investment is worth spending to reach them?",
+  },
+  {
     title: "Campaign Event",
     description:
       "Campaign Events are 14-day recurring events built around a locked path choice and three required characters. Use this guide to understand event timing, path selection, Normal borrowing, Extremis restrictions, and how much roster investment each path may require.",
@@ -67,12 +72,12 @@ const basics = [
     <section class="content-section">
       <h2>Event Basics</h2>
 
-      <div class="basics-grid">
+      <div class="markdown-content">
         {basics.map((item) => (
-          <article class="basic-item">
+          <div class="basic-copy">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-          </article>
+          </div>
         ))}
       </div>
     </section>
@@ -167,29 +172,23 @@ const basics = [
     padding: 1.5rem;
   }
 
-  .basics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+  .markdown-content {
+    color: #cccccc;
+    line-height: 1.7;
   }
 
-  .basic-item {
-    background: #121212;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1.25rem;
+  .basic-copy + .basic-copy {
+    margin-top: 1.5rem;
   }
 
-  .basic-item h3 {
+  .basic-copy h3 {
     color: #d4af37;
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
     line-height: 1.3;
   }
 
-  .basic-item p {
-    color: #cccccc;
-    line-height: 1.6;
+  .basic-copy p {
     margin: 0;
   }
 
@@ -275,12 +274,6 @@ const basics = [
     margin-bottom: 0;
   }
 
-  @media (max-width: 900px) {
-    .basics-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
   @media (max-width: 700px) {
     main {
       padding: 1.25rem;
@@ -303,8 +296,7 @@ const basics = [
       gap: 1rem;
     }
 
-    .card,
-    .basic-item {
+    .card {
       padding: 1rem;
     }
 
