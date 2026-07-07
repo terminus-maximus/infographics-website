@@ -23,6 +23,29 @@ const lreGuides = [
     thumbnail: "/images/web/farsight-lre.webp",
   },
 ];
+
+const basics = [
+  {
+    title: "Event Goal",
+    description:
+      "Legendary Release Events are built around earning enough points to unlock the featured Legendary character. Progress carries over between appearances, so every clear matters even when an unlock will take more than one event cycle.",
+  },
+  {
+    title: "Tracks and Requirements",
+    description:
+      "Each LRE is split into multiple battle tracks with different restrictions and scoring opportunities. Strong planning means matching teams to faction, damage type, trait, rarity, survival, and character limitations without wasting your best units too early.",
+  },
+  {
+    title: "Team Planning",
+    description:
+      "The best LRE teams balance requirement coverage, durability, damage, and roster availability. Some teams stack several requirements at once, while others focus on one high-value requirement with characters that can reliably survive deeper stages.",
+  },
+  {
+    title: "Long-Term Preparation",
+    description:
+      "LREs reward accounts that invest in flexible characters before the event begins. Healers, durable tanks, summoners, reusable damage dealers, and broadly useful support units often carry value across several Legendary Release Events.",
+  },
+];
 ---
 
 <Layout
@@ -34,11 +57,6 @@ const lreGuides = [
 
   <main>
   <section class="hero">
-    <img
-      src="/images/web/lre.webp"
-      alt="Legendary Release Events"
-      class="hero-image"
-    />
     <h1>Legendary Release Events</h1>
     <p>
       Legendary Release Event guides for unlock planning, team building, and event requirements.
@@ -63,6 +81,19 @@ const lreGuides = [
           <h3>{guide.title}</h3>
           <p>{guide.description}</p>
         </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>LRE Basics</h2>
+
+    <div class="markdown-content">
+      {basics.map((item) => (
+        <div class="basic-copy">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
       ))}
     </div>
   </section>
@@ -91,14 +122,6 @@ const lreGuides = [
     margin-bottom: 3rem;
   }
 
-  .hero-image {
-    display: block;
-    width: min(100%, 520px);
-    height: auto;
-    margin: 0 auto 1.5rem;
-    border-radius: 8px;
-  }
-
   .hero h1 {
     font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: 1rem;
@@ -121,6 +144,33 @@ const lreGuides = [
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #333;
+  }
+
+  .content-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .markdown-content {
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .basic-copy + .basic-copy {
+    margin-top: 1.5rem;
+  }
+
+  .basic-copy h3 {
+    color: #d4af37;
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .basic-copy p {
+    margin: 0;
   }
 
   .card-grid {
@@ -189,6 +239,10 @@ const lreGuides = [
 
     section {
       margin-bottom: 3rem;
+    }
+
+    .content-section {
+      padding: 1rem;
     }
 
     .card-grid {

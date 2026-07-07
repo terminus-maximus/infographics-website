@@ -1,3 +1,5 @@
+import { currentGuildRaidSeason } from "./guildRaid";
+
 export const graphics = [
     {
       title: "Beginner Guide",
@@ -27,10 +29,10 @@ export const graphics = [
     },
     {
       title: "Current Season",
-      href: "/guild-raid/s104",
-      description: "Current Guild Raid season infographics, boss lineups, and team guidance.",
-      image: "/images/guild-raid-s104-mythic.png",
-      thumbnail: "/images/thumbnails/guild-raid-s104-mythic-thumb.png",
+      href: currentGuildRaidSeason.href,
+      description: currentGuildRaidSeason.description,
+      image: currentGuildRaidSeason.image,
+      thumbnail: currentGuildRaidSeason.thumbnail,
       category: "raid"
     },
     {

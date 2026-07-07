@@ -1,3 +1,7 @@
+---
+import { currentGuildRaidSeason } from "../data/guildRaid";
+---
+
 <header class="site-header">
   <a class="logo" href="/">Terminus Maximus</a>
 
@@ -17,11 +21,67 @@
       <div class="dropdown-menu" id="graphics-menu">
         <a href="/beginner-guide">Beginner Guide</a>
         <a href="/elite-campaigns">Elite Campaigns</a>
-        <a href="/guild-raid">Guild Raid</a>
-        <a href="/campaign-event">Campaign Event</a>
-        <a href="/hre">HRE</a>
-        <a href="/incursion-mow">Incursion / MoW</a>
-        <a href="/lre">LRE</a>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/guild-raid">Guild Raid</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Guild Raid menu"
+              aria-expanded="false"
+              aria-controls="guild-raid-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="guild-raid-menu">
+            <a href={currentGuildRaidSeason.href}>Current Season</a>
+            <a href="/guild-raid/boss-meta">Boss Meta Guide</a>
+            <a href="/replay-library">Replay Library</a>
+            <a href="/guild-raid/archive">Season Archive</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/events">Events</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Events menu"
+              aria-expanded="false"
+              aria-controls="events-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="events-menu">
+            <a href="/campaign-event">Campaign Event</a>
+            <a href="/hre">HRE</a>
+            <a href="/incursion-mow">Incursion</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/lre">LRE</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open LRE menu"
+              aria-expanded="false"
+              aria-controls="lre-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="lre-menu">
+            <a href="/lre/lucius">Lucius</a>
+            <a href="/lre/uthar">Uthar</a>
+            <a href="/lre/farsight">Farsight</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -32,6 +92,13 @@
 <script is:inline>
   const dropdown = document.querySelector(".site-header .dropdown");
   const dropdownButton = document.querySelector(".site-header .dropdown-button");
+  const submenus = Array.from(document.querySelectorAll(".site-header .submenu"));
+  const submenuButtons = Array.from(document.querySelectorAll(".site-header .submenu-button"));
+
+  const closeSubmenus = () => {
+    submenus.forEach((submenu) => submenu.classList.remove("is-open"));
+    submenuButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
+  };
 
   if (dropdown instanceof HTMLElement && dropdownButton instanceof HTMLButtonElement) {
     dropdownButton.addEventListener("click", () => {
@@ -43,6 +110,7 @@
       if (!(event.target instanceof Node) || dropdown.contains(event.target)) return;
 
       dropdown.classList.remove("is-open");
+      closeSubmenus();
       dropdownButton.setAttribute("aria-expanded", "false");
     });
 
@@ -50,10 +118,31 @@
       if (event.key !== "Escape") return;
 
       dropdown.classList.remove("is-open");
+      closeSubmenus();
       dropdownButton.setAttribute("aria-expanded", "false");
       dropdownButton.focus();
     });
   }
+
+  submenus.forEach((submenu) => {
+    const submenuButton = submenu.querySelector(".submenu-button");
+
+    if (!(submenuButton instanceof HTMLButtonElement)) return;
+
+    submenuButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      submenus
+        .filter((otherSubmenu) => otherSubmenu !== submenu)
+        .forEach((otherSubmenu) => otherSubmenu.classList.remove("is-open"));
+      submenuButtons
+        .filter((button) => button !== submenuButton)
+        .forEach((button) => button.setAttribute("aria-expanded", "false"));
+
+      const isOpen = submenu.classList.toggle("is-open");
+      submenuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
 </script>
 
 <style>
@@ -127,15 +216,77 @@
 
   .dropdown-menu a {
     display: block;
+    width: 100%;
     padding: 0.75rem 1rem;
     white-space: nowrap;
     color: #f5f5f5;
     text-decoration: none;
+    box-sizing: border-box;
   }
 
-  .dropdown-menu a:hover {
+  .submenu-header {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .submenu-link {
+    display: flex !important;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .submenu-button {
+    display: flex;
+    flex: 0 0 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0;
+    background: transparent;
+    border: 0;
+    border-left: 1px solid rgba(51, 51, 51, 0.8);
+    color: #f5f5f5;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .dropdown-menu a:hover,
+  .submenu-button:hover,
+  .submenu-button:focus-visible {
     background: #2a2a2a;
     color: #d4af37;
+    outline: none;
+  }
+
+  .submenu {
+    border-top: 1px solid rgba(51, 51, 51, 0.6);
+    border-bottom: 1px solid rgba(51, 51, 51, 0.6);
+  }
+
+  .submenu-arrow {
+    color: #d4af37;
+    font-size: 0.85rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .submenu.is-open .submenu-arrow {
+    transform: rotate(180deg);
+  }
+
+  .submenu-menu {
+    display: none;
+    padding: 0 0 0.35rem;
+    background: #181818;
+  }
+
+  .submenu.is-open .submenu-menu {
+    display: block;
+  }
+
+  .submenu-menu a {
+    padding-left: 1.75rem;
+    font-size: 0.95rem;
   }
   @media (max-width: 700px) {
   .site-header {
@@ -160,6 +311,10 @@
 
   .dropdown-menu {
     min-width: 200px;
+  }
+
+  .submenu-menu {
+    margin: 0;
   }
 }
 </style>

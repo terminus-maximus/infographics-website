@@ -3,81 +3,47 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { graphics } from "../../data/graphics";
-import { currentGuildRaidSeason } from "../../data/guildRaid";
 
-const guildRaidGuides = [
-  {
-    title: currentGuildRaidSeason.title,
-    description: `Guild Raid Season ${currentGuildRaidSeason.seasonNumber} boss lineups, maps, and recommended teams.`,
-    href: currentGuildRaidSeason.href,
-    thumbnail: currentGuildRaidSeason.webImage,
-  },
-  {
-    title: "Boss Meta Guide",
-    description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
-    href: "/guild-raid/boss-meta",
-    thumbnail: "/images/web/boss-meta.webp",
-    badge: "Popular",
-  },
-  {
-    title: "Replay Library",
-    description: "Searchable Guild Raid replay data organized by boss, map, team, tier, and damage.",
-    href: "/replay-library",
-    thumbnail: "/images/web/ReplayLibraryBanner.webp",
-    badge: "New",
-  },
-  {
-    title: "Season Archive",
-    description: "Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives.",
-    href: "/guild-raid/archive",
-    thumbnail: "/images/web/guild-raid-s103-mythic.webp",
-  },
-];
+const eventGuides = graphics.filter((graphic) => graphic.category === "event");
+const relatedPages = graphics.filter((graphic) => graphic.category !== "event");
 
 const basics = [
   {
-    title: "Current Season",
+    title: "Campaign Event",
     description:
-      "The Current Season guide is the fastest way to see the active Guild Raid lineup. Use it for boss order, map previews, difficulty tiers, and the recommended teams you should prepare before spending tokens.",
+      "Campaign Events are 14-day recurring events built around a locked path choice and three required characters. Use this guide to understand event timing, path selection, Normal borrowing, Extremis restrictions, and how much roster investment each path may require.",
   },
   {
-    title: "Boss Meta Guide",
+    title: "Hero Release Events",
     description:
-      "The Boss Meta Guide compares the strongest proven teams for each boss, with alternate options when a roster is missing key characters. It is meant to help you decide where to invest and which replays are worth studying before committing resources.",
+      "Hero Release Events focus on earning shards for a newly released character through missions and regular daily play. Use this guide to plan unlock progress, understand which activities contribute, and decide how aggressively to pursue higher promotion levels.",
   },
   {
-    title: "Replay Library",
+    title: "Incursion / MoW",
     description:
-      "The Replay Library turns community videos into searchable evidence. Filter by boss, map, tier, team archetype, hero lineup, Machine of War, creator, and damage to find runs that match the team you actually have.",
-  },
-  {
-    title: "Season Archive",
-    description:
-      "The Season Archive keeps older Guild Raid seasons available for reference. Use it to look back at previous boss rotations, compare map history, revisit older infographic sets, and prepare when familiar lineups return.",
+      "Incursion events are the main path for unlocking and improving Machines of War. Use this guide to compare Machine of War choices, understand the locked-selection system, plan progression through rarity tiers, and set expectations for rewards across multiple event cycles.",
   },
 ];
-
-const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
 ---
 
 <Layout
-  title="Guild Raid Guides | Terminus Maximus Infographics"
-  description="Resources for maximizing Tacticus Guild Raid results"
-  image={currentGuildRaidSeason.webImage}
+  title="Events | Terminus Maximus Infographics"
+  description="Guides for recurring game modes"
+  image="/images/web/campaign-event.webp"
 >
   <Header />
 
   <main>
     <section class="hero">
-      <h1>Guild Raid Guides</h1>
-      <p>Resources for maximizing Tacticus Guild Raid results</p>
+      <h1>Events</h1>
+      <p>Guides for recurring game modes</p>
     </section>
 
     <section>
-      <h2>Guild Raid Resources</h2>
+      <h2>Game Event Guides</h2>
 
       <div class="card-grid">
-        {guildRaidGuides.map((guide) => (
+        {eventGuides.map((guide) => (
           <a class="card" href={guide.href}>
             <div class="card-image-wrap">
               <img
@@ -99,7 +65,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     </section>
 
     <section class="content-section">
-      <h2>Guild Raid Basics</h2>
+      <h2>Event Basics</h2>
 
       <div class="basics-grid">
         {basics.map((item) => (
@@ -112,11 +78,11 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     </section>
 
     <section class="content-section">
-      <h2>Related Guides</h2>
+      <h2>Related Pages</h2>
 
       <div class="card-grid">
-        {relatedGuides.map((graphic) => (
-          <a class="card related-guide-card" href={graphic.href}>
+        {relatedPages.map((graphic) => (
+          <a class="card related-page-card" href={graphic.href}>
             <div class="card-image-wrap">
               <img
                 src={graphic.thumbnail}
@@ -138,7 +104,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
   </main>
 
   <script>
-    const cards = Array.from(document.querySelectorAll(".related-guide-card"));
+    const cards = Array.from(document.querySelectorAll(".related-page-card"));
 
     cards
       .sort(() => Math.random() - 0.5)
@@ -203,7 +169,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
 
   .basics-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -309,6 +275,12 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     margin-bottom: 0;
   }
 
+  @media (max-width: 900px) {
+    .basics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 700px) {
     main {
       padding: 1.25rem;
@@ -326,7 +298,6 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
       padding: 1rem;
     }
 
-    .basics-grid,
     .card-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
