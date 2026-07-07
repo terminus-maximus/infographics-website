@@ -34,29 +34,6 @@ const guildRaidGuides = [
   },
 ];
 
-const basics = [
-  {
-    title: "What Are Guild Raids?",
-    description:
-      "Guild Raid is one of the core competitive and cooperative modes in Tacticus. Players spend raid tokens attacking rotating bosses across different maps and difficulty tiers, with each attack contributing damage toward guild progress and season rewards.",
-  },
-  {
-    title: "Why Guild Raid Matters",
-    description:
-      "Guild Raid rewards steady account growth, strong roster planning, and efficient use of limited attacks. It is also one of the clearest places where character investment decisions show up: the right team can improve your results for many seasons, while a narrow or outdated build can slow progress for months.",
-  },
-  {
-    title: "Investment Philosophy",
-    description:
-      "Guild Raid teams are expensive, so the goal is not to chase every showcase lineup. Prioritize characters and team archetypes that solve multiple bosses, overlap with other important game modes, and match the roster you can realistically build. Strong alternate teams are often more useful than a perfect meta team you cannot field.",
-  },
-  {
-    title: "Using Evidence",
-    description:
-      "These guides lean on real replay data rather than isolated opinion. Use the Boss Meta Guide to understand which teams are performing well, the Replay Library to watch those teams in action, and the Current Season guide to prepare for the specific boss order, maps, and difficulties in front of your guild.",
-  },
-];
-
 const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
 ---
 
@@ -102,12 +79,74 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
       <h2>Guild Raid Basics</h2>
 
       <div class="markdown-content">
-        {basics.map((item) => (
-          <div class="basic-copy">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
-        ))}
+        <h3>Build Teams, Not Just Characters</h3>
+
+        <p>
+          Guild Raid is one of the most important team-building modes in Tacticus.
+          Each season, your guild works together to defeat a rotating lineup of bosses
+          across increasingly difficult tiers.
+        </p>
+
+        <p>
+          Strong results come from more than upgrading your highest-damage character.
+          The best Guild Raid teams combine characters that work together through:
+        </p>
+
+        <ul>
+          <li>Damage and scaling</li>
+          <li>Buffs and support</li>
+          <li>Boss-specific mechanics</li>
+          <li>Positioning and map strategy</li>
+        </ul>
+
+        <p>
+          When deciding where to invest, think about the complete team you are building
+          and which bosses that team can realistically fight.
+        </p>
+
+        <h3>Don't Chase Every Meta Team</h3>
+
+        <p>
+          Guild Raid characters are expensive to build. For most players, trying to
+          build every top-performing team is neither realistic nor necessary.
+        </p>
+
+        <p>
+          Instead, prioritize teams and characters that:
+        </p>
+
+        <ul>
+          <li>Perform well against multiple bosses.</li>
+          <li>Share characters with teams you already use.</li>
+          <li>Provide value in other important game modes.</li>
+          <li>Fit the roster and resources you can realistically develop.</li>
+        </ul>
+
+        <p>
+          A strong team you can actually build is more valuable than a perfect meta
+          team that will take months to finish.
+        </p>
+
+        <h3>Use Real Replays Before You Invest</h3>
+
+        <p>
+          Guild Raid strategy changes as new bosses, characters, and team combinations
+          enter the game. These guides use real replay data to help you understand what
+          teams are working and how players are using them.
+        </p>
+
+        <p>
+          Use the <a href="/guild-raid/boss-meta">Boss Meta Guide</a> to compare strong
+          teams across bosses, the <a href="/replay-library">Replay Library</a> to watch
+          those teams in action, and the Current Season guide to prepare for the bosses
+          and maps your guild is facing now.
+        </p>
+
+        <p>
+          Use these resources as a starting point, not a rulebook. Your best Guild Raid
+          path depends on your roster, your guild's progression, and the teams you are
+          already building.
+        </p>
       </div>
     </section>
 
@@ -194,31 +233,24 @@ const relatedGuides = graphics.filter((graphic) => graphic.category !== "raid");
     border-bottom: 1px solid #333;
   }
 
-  .content-section {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 1.5rem;
-  }
+.content-section {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
 
   .markdown-content {
     color: #cccccc;
     line-height: 1.7;
   }
 
-  .basic-copy + .basic-copy {
-    margin-top: 1.5rem;
-  }
-
-  .basic-copy h3 {
+  .markdown-content :global(a) {
     color: #d4af37;
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-    line-height: 1.3;
   }
 
-  .basic-copy p {
-    margin: 0;
+  .markdown-content :global(a:hover) {
+    text-decoration: underline;
   }
 
   .card-grid {

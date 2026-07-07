@@ -23,32 +23,6 @@ const lreGuides = [
     thumbnail: "/images/web/farsight-lre.webp",
   },
 ];
-
-const basics = [
-  {
-    title: "Event Goal",
-    description:
-      "Legendary Release Events are built around earning enough points to unlock the featured Legendary character. Progress carries over between appearances, so every clear matters even when an unlock will take more than one event cycle.",
-  },
-  {
-    title: "Tracks and Requirements",
-    description:
-      "Each LRE is split into multiple battle tracks with different restrictions and scoring opportunities. Strong planning means matching teams to faction, damage type, trait, rarity, survival, and character limitations without wasting your best units too early.",
-  },
-  {
-    title: "Team Planning",
-    description:
-      "The best LRE teams balance requirement coverage, durability, damage, and roster availability. Some teams stack several requirements at once, while others focus on one high-value requirement with characters that can reliably survive deeper stages.",
-  },
-  {
-    title: "Long-Term Preparation",
-    description:
-      "LREs reward accounts that invest in flexible characters before the event begins. Healers, durable tanks, summoners, reusable damage dealers, and broadly useful support units often carry value across several Legendary Release Events.",
-  },
-];
-
-const basicsIntro =
-  "Legendary Release Events are some of the most demanding roster-check events in Tacticus. They reward long-term preparation, flexible characters, and careful team planning across multiple tracks rather than one perfect lineup.";
 ---
 
 <Layout
@@ -59,49 +33,107 @@ const basicsIntro =
   <Header />
 
   <main>
-  <section class="hero">
-    <h1>Legendary Release Events</h1>
-    <p>
-      Legendary Release Event guides for unlock planning, team building, and event requirements.
-    </p>
-  </section>
+    <section class="hero">
+      <h1>Legendary Release Events</h1>
+      <p>Guides for unlock planning, team building, and event requirements.</p>
+    </section>
 
-  <section>
-    <h2>LRE Guides</h2>
+    <section>
+      <h2>LRE Guides</h2>
 
-    <div class="card-grid">
-      {lreGuides.map((guide) => (
-        <a class="card" href={guide.href}>
-          <div class="card-image-wrap">
-            <img
-              src={guide.thumbnail}
-              alt={`${guide.title} preview`}
-              class="card-image"
-              loading="lazy"
-            />
-          </div>
+      <div class="card-grid">
+        {lreGuides.map((guide) => (
+          <a class="card" href={guide.href}>
+            <div class="card-image-wrap">
+              <img
+                src={guide.thumbnail}
+                alt={`${guide.title} preview`}
+                class="card-image"
+                loading="lazy"
+              />
+            </div>
 
-          <h3>{guide.title}</h3>
-          <p>{guide.description}</p>
-        </a>
-      ))}
-    </div>
-  </section>
+            <h3>{guide.title}</h3>
+            <p>{guide.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
 
-  <section class="content-section">
-    <h2>LRE Basics</h2>
+    <section class="content-section">
+      <h2>LRE Basics</h2>
 
-    <div class="markdown-content">
-      <p class="section-intro">{basicsIntro}</p>
+      <div class="markdown-content">
+        <h3>Legendary Release Events Are Roster Checks</h3>
 
-      {basics.map((item) => (
-        <div class="basic-copy">
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-        </div>
-      ))}
-    </div>
-  </section>
+        <p>
+          Legendary Release Events are some of the most demanding events in Tacticus.
+          The goal is simple: earn enough points to unlock the featured Legendary character.
+        </p>
+
+        <p>
+          The challenge is that you are not clearing one normal campaign path. LREs are split
+          across multiple tracks, each with its own battles, restrictions, and scoring requirements.
+        </p>
+
+        <p>
+          Progress carries over between appearances, so every clear matters even if you will not
+          unlock the character in a single event.
+        </p>
+
+        <h3>Requirements Drive the Strategy</h3>
+
+        <p>
+          Most LRE planning comes down to matching the right characters to the right requirements.
+          A good team is not always your five strongest characters.
+        </p>
+
+        <p>Common requirements include things like:</p>
+
+        <ul>
+          <li>Faction restrictions</li>
+          <li>Damage types</li>
+          <li>Traits and keywords</li>
+          <li>Rarity limits</li>
+          <li>Survival or no-summon conditions</li>
+        </ul>
+
+        <p>
+          The best teams often cover multiple requirements at once while still having enough damage,
+          healing, summons, or durability to survive deeper stages.
+        </p>
+
+        <h3>Plan Around the Roster You Actually Have</h3>
+
+        <p>
+          It is easy to look at an ideal LRE team and feel like you are missing half the pieces.
+          That is normal.
+        </p>
+
+        <p>
+          Instead of chasing every perfect lineup, focus on characters that solve multiple problems:
+          durable tanks, reliable healers, reusable damage dealers, summoners, and supports that show
+          up across more than one event.
+        </p>
+
+        <p>
+          A flexible roster will carry you farther than one narrow team built for a single requirement.
+        </p>
+
+        <h3>Use These Guides as a Planning Tool</h3>
+
+        <p>
+          The goal of these LRE guides is to make the event easier to understand before you spend
+          resources. Use them to compare tracks, spot useful characters, and identify which requirements
+          your account is already close to covering.
+        </p>
+
+        <p>
+          You do not need to perfect every battle. Focus on steady progress, smart investment, and
+          building characters that will keep paying off in future Legendary Release Events.
+        </p>
+      </div>
+    </section>
   </main>
 
   <Footer />
@@ -165,26 +197,35 @@ const basicsIntro =
   .markdown-content {
     color: #cccccc;
     line-height: 1.7;
-  }
-
-  .section-intro {
     max-width: 900px;
-    margin: 0 0 1.5rem;
   }
 
-  .basic-copy + .basic-copy {
-    margin-top: 1.5rem;
-  }
-
-  .basic-copy h3 {
-    color: #d4af37;
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
+  .markdown-content h3 {
+    color: #f5f5f5;
+    margin: 1.75rem 0 0.5rem;
+    font-size: 1.15rem;
     line-height: 1.3;
   }
 
-  .basic-copy p {
-    margin: 0;
+  .markdown-content h3:first-child {
+    margin-top: 0;
+  }
+
+  .markdown-content p {
+    margin: 0 0 1rem;
+  }
+
+  .markdown-content ul {
+    margin: 0 0 1rem 1.25rem;
+    padding: 0;
+  }
+
+  .markdown-content li {
+    margin-bottom: 0.4rem;
+  }
+
+  .markdown-content a {
+    color: #d4af37;
   }
 
   .card-grid {
@@ -202,10 +243,6 @@ const basicsIntro =
     text-decoration: none;
     color: inherit;
     transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .content-section .card {
-    background: #121212;
   }
 
   .card:hover,
