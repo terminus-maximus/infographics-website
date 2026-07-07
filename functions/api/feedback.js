@@ -18,6 +18,14 @@ export async function onRequest({ request, env }) {
   }
 
   if (!env.RESEND_API_KEY || !env.FEEDBACK_TO_EMAIL || !env.FEEDBACK_FROM_EMAIL || !env.TURNSTILE_SECRET_KEY) {
+    console.log("Feedback env check", {
+      hasEnv: Boolean(env),
+      envKeys: Object.keys(env || {}),
+      has_RESEND_API_KEY: Boolean(env?.RESEND_API_KEY),
+      has_FEEDBACK_TO_EMAIL: Boolean(env?.FEEDBACK_TO_EMAIL),
+      has_FEEDBACK_FROM_EMAIL: Boolean(env?.FEEDBACK_FROM_EMAIL),
+      has_TURNSTILE_SECRET_KEY: Boolean(env?.TURNSTILE_SECRET_KEY),
+    });
     return jsonResponse({ success: false, error: "Feedback is not configured yet." }, 500);
   }
 
