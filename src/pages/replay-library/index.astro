@@ -563,6 +563,14 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       </td>
     `;
 
+    const plainCell = (content) => `
+      <td>
+        <span class="replay-cell-content">
+          ${content}
+        </span>
+      </td>
+    `;
+
     const youtubeLogoHtml = () => `
       <img
         class="youtube-logo"
@@ -612,13 +620,13 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         class="replay-row"
         data-replay-url="${escapeHtml(replay.videoUrl)}"
       >
-        ${linkedCell(replay, iconHtml("bosses", replay.boss, replay.bossLongName, "labeled-icon-wrap"))}
-        ${linkedCell(replay, teamIconHtml(replay.team))}
+        ${plainCell(iconHtml("bosses", replay.boss, replay.boss, "labeled-icon-wrap"))}
+        ${plainCell(teamIconHtml(replay.team))}
         ${linkedCell(replay, escapeHtml(replay.damageLabel))}
         ${linkedCell(replay, escapeHtml(replay.tier))}
-        ${linkedCell(replay, mapIconHtml(replay.map))}
-        ${linkedCell(replay, `<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero, hero, "labeled-icon-wrap")).join("")}</div>`)}
-        ${linkedCell(replay, iconHtml("mow", replay.mow, replay.mow, "labeled-icon-wrap"))}
+        ${plainCell(mapIconHtml(replay.map))}
+        ${plainCell(`<div class="hero-icons">${replay.heroes.map((hero) => iconHtml("heroes", hero, hero, "labeled-icon-wrap")).join("")}</div>`)}
+        ${plainCell(iconHtml("mow", replay.mow, replay.mow, "labeled-icon-wrap"))}
         ${linkedCell(replay, youtubeLogoHtml())}
         ${linkedCell(replay, escapeHtml(replay.creator))}
         ${linkedCell(replay, `<span title="${escapeHtml(replay.publishedAt)}">${escapeHtml(replay.publishedAtLabel || "-")}</span>`)}
@@ -1425,7 +1433,8 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     width: 1%;
   }
 
-  :global(.replay-cell-link) {
+  :global(.replay-cell-link),
+  :global(.replay-cell-content) {
     align-items: center;
     color: inherit;
     display: flex;
@@ -1440,9 +1449,9 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     text-align: center;
   }
 
-  :global(.replay-table td:nth-child(1) .replay-cell-link),
-  :global(.replay-table td:nth-child(2) .replay-cell-link),
-  :global(.replay-table td:nth-child(5) .replay-cell-link) {
+  :global(.replay-table td:nth-child(1) .replay-cell-content),
+  :global(.replay-table td:nth-child(2) .replay-cell-content),
+  :global(.replay-table td:nth-child(5) .replay-cell-content) {
     justify-content: center;
     width: max-content;
   }
@@ -1465,12 +1474,12 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     padding-left: 0.2rem;
   }
 
-  :global(.replay-table td:nth-child(6) .replay-cell-link) {
+  :global(.replay-table td:nth-child(6) .replay-cell-content) {
     padding-right: 0.15rem;
     width: max-content;
   }
 
-  :global(.replay-table td:nth-child(7) .replay-cell-link) {
+  :global(.replay-table td:nth-child(7) .replay-cell-content) {
     padding-left: 0.15rem;
     padding-right: 0.8rem;
     width: max-content;
@@ -1496,6 +1505,19 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     color: #f5f5f5;
     outline: 2px solid rgba(212, 175, 55, 0.45);
     outline-offset: -2px;
+  }
+
+  :global(.replay-table td:nth-child(3) .replay-cell-link:hover),
+  :global(.replay-table td:nth-child(3) .replay-cell-link:focus-visible),
+  :global(.replay-table td:nth-child(4) .replay-cell-link:hover),
+  :global(.replay-table td:nth-child(4) .replay-cell-link:focus-visible),
+  :global(.replay-table td:nth-child(9) .replay-cell-link:hover),
+  :global(.replay-table td:nth-child(9) .replay-cell-link:focus-visible),
+  :global(.replay-table td:nth-child(10) .replay-cell-link:hover),
+  :global(.replay-table td:nth-child(10) .replay-cell-link:focus-visible) {
+    color: #d4af37;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
   }
 
   :global(.hero-icons) {
@@ -1584,7 +1606,8 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
   }
 
   :global(.map-preview-wrap:hover .map-preview),
-  :global(.replay-cell-link:focus-visible .map-preview) {
+  :global(.replay-cell-link:focus-visible .map-preview),
+  :global(.replay-cell-content:focus-visible .map-preview) {
     opacity: 1;
     transform: translateX(-50%) scale(1);
     visibility: visible;
