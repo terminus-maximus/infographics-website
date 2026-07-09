@@ -1,0 +1,402 @@
+---
+import ReplayIcon from "./ReplayIcon.astro";
+import type { ReplayLibraryReplay } from "../../lib/replayLibrary";
+
+interface Props {
+  replays: ReplayLibraryReplay[];
+  teamIconMap?: Record<string, string>;
+  labelledBy?: string;
+}
+
+const { replays, teamIconMap = {}, labelledBy } = Astro.props;
+
+const getTeamIcon = (team: string) => teamIconMap[team] || team;
+---
+
+<div class="table-wrap curated-replay-table-wrap">
+  <table class="replay-table curated-replay-table" aria-labelledby={labelledBy}>
+    <thead>
+      <tr>
+        <th>Boss</th>
+        <th>Team</th>
+        <th>Damage</th>
+        <th>Tier</th>
+        <th>Map</th>
+        <th>Heroes</th>
+        <th>MoW</th>
+        <th aria-label="Watch replay"></th>
+        <th>Creator</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {replays.map((replay) => (
+        <tr class="replay-row" data-replay-url={replay.videoUrl}>
+          <td data-label="Boss">
+            <span class="replay-cell-content">
+              <ReplayIcon type="bosses" value={replay.boss} title={replay.boss} className="labeled-icon-wrap" />
+            </span>
+          </td>
+          <td data-label="Team">
+            <span class="replay-cell-content">
+              <ReplayIcon type="heroes" value={getTeamIcon(replay.team)} title={replay.team} className="labeled-icon-wrap" />
+            </span>
+          </td>
+          <td data-label="Damage">
+            <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
+              {replay.damageLabel}
+            </a>
+          </td>
+          <td data-label="Tier">
+            <a class="replay-cell-link tier-cell" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
+              {replay.tier}
+            </a>
+          </td>
+          <td data-label="Map">
+            <span class="replay-cell-content">
+              <ReplayIcon type="maps" value={replay.map} title={replay.map} preview />
+            </span>
+          </td>
+          <td data-label="Heroes">
+            <span class="replay-cell-content">
+              <div class="hero-icons">
+                {replay.heroes.map((hero) => (
+                  <ReplayIcon type="heroes" value={hero} title={hero} className="labeled-icon-wrap" />
+                ))}
+              </div>
+            </span>
+          </td>
+          <td data-label="MoW">
+            <span class="replay-cell-content">
+              <ReplayIcon type="mow" value={replay.mow} title={replay.mow} className="labeled-icon-wrap" />
+            </span>
+          </td>
+          <td data-label="Watch">
+            <a
+              class="replay-cell-link"
+              href={replay.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${replay.creator} replay on YouTube`}
+            >
+              <img
+                class="youtube-logo"
+                src="/images/replay-library/YTLogo.webp"
+                width="28"
+                height="20"
+                alt="YouTube"
+                loading="lazy"
+              />
+            </a>
+          </td>
+          <td data-label="Creator">
+            <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
+              {replay.creator}
+            </a>
+          </td>
+          <td data-label="Date">
+            <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
+              <span title={replay.publishedAt}>{replay.publishedAtLabel || "-"}</span>
+            </a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  document.querySelectorAll("[data-replay-url]").forEach((row) => {
+    if (row.dataset.replayRowEnhanced === "true") return;
+    row.dataset.replayRowEnhanced = "true";
+    row.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      const replayUrl = row.dataset.replayUrl;
+      if (replayUrl) window.open(replayUrl, "_blank", "noopener,noreferrer");
+    });
+  });
+</script>
+
+<style is:global>
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  .replay-table {
+    width: 100%;
+    min-width: 1040px;
+    border-collapse: collapse;
+    background: #121212;
+  }
+
+  .replay-table th,
+  .replay-table td {
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .replay-table th {
+    background: #252525;
+    color: #d4af37;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    padding: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .replay-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .replay-row:hover,
+  .replay-row:focus-within {
+    background: #202020;
+    outline: none;
+  }
+
+  .replay-row:hover td,
+  .replay-row:focus-within td {
+    color: #f5f5f5;
+  }
+
+  .replay-table td:nth-child(1),
+  .replay-table td:nth-child(2),
+  .replay-table td:nth-child(3),
+  .replay-table td:nth-child(4),
+  .replay-table td:nth-child(5),
+  .replay-table td:nth-child(6),
+  .replay-table td:nth-child(7),
+  .replay-table td:nth-child(8),
+  .replay-table td:nth-child(10) {
+    white-space: nowrap;
+  }
+
+  .replay-table th:nth-child(1),
+  .replay-table td:nth-child(1),
+  .replay-table th:nth-child(2),
+  .replay-table td:nth-child(2),
+  .replay-table th:nth-child(3),
+  .replay-table td:nth-child(3),
+  .replay-table th:nth-child(4),
+  .replay-table td:nth-child(4),
+  .replay-table th:nth-child(5),
+  .replay-table td:nth-child(5),
+  .replay-table th:nth-child(6),
+  .replay-table td:nth-child(6),
+  .replay-table th:nth-child(7),
+  .replay-table td:nth-child(7),
+  .replay-table th:nth-child(8),
+  .replay-table td:nth-child(8),
+  .replay-table th:nth-child(10),
+  .replay-table td:nth-child(10) {
+    width: 1%;
+  }
+
+  .replay-cell-link,
+  .replay-cell-content {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    min-height: 3.25rem;
+    padding: 0.75rem;
+    text-decoration: none;
+  }
+
+  .replay-table th:nth-child(1),
+  .replay-table th:nth-child(2),
+  .replay-table th:nth-child(5) {
+    text-align: center;
+  }
+
+  .replay-table td:nth-child(1) .replay-cell-content,
+  .replay-table td:nth-child(2) .replay-cell-content,
+  .replay-table td:nth-child(5) .replay-cell-content {
+    justify-content: center;
+    width: max-content;
+  }
+
+  .replay-table th:nth-child(6) {
+    padding-right: 0.2rem;
+  }
+
+  .replay-table th:nth-child(7) {
+    padding-left: 0.2rem;
+    padding-right: 0.8rem;
+  }
+
+  .replay-table th:nth-child(8) {
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+  }
+
+  .replay-table th:nth-child(9) {
+    padding-left: 0.2rem;
+  }
+
+  .replay-table td:nth-child(6) .replay-cell-content {
+    padding-right: 0.15rem;
+    width: max-content;
+  }
+
+  .replay-table td:nth-child(7) .replay-cell-content {
+    padding-left: 0.15rem;
+    padding-right: 0.8rem;
+    width: max-content;
+  }
+
+  .replay-table td:nth-child(8) .replay-cell-link {
+    justify-content: center;
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+    width: max-content;
+  }
+
+  .replay-table td:nth-child(9) .replay-cell-link {
+    padding-left: 0.2rem;
+    width: max-content;
+  }
+
+  .replay-table td:nth-child(10) .replay-cell-link {
+    width: max-content;
+  }
+
+  .tier-cell {
+    gap: 0.45rem;
+  }
+
+  .replay-cell-link:focus-visible {
+    color: #f5f5f5;
+    outline: 2px solid rgba(212, 175, 55, 0.45);
+    outline-offset: -2px;
+  }
+
+  .replay-table td:nth-child(3) .replay-cell-link:hover,
+  .replay-table td:nth-child(3) .replay-cell-link:focus-visible,
+  .replay-table td:nth-child(4) .replay-cell-link:hover,
+  .replay-table td:nth-child(4) .replay-cell-link:focus-visible,
+  .replay-table td:nth-child(9) .replay-cell-link:hover,
+  .replay-table td:nth-child(9) .replay-cell-link:focus-visible,
+  .replay-table td:nth-child(10) .replay-cell-link:hover,
+  .replay-table td:nth-child(10) .replay-cell-link:focus-visible {
+    color: #d4af37;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .hero-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-width: 220px;
+  }
+
+  .replay-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    position: relative;
+  }
+
+  .replay-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  .labeled-icon-wrap::after {
+    background: #121212;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    bottom: calc(100% + 0.4rem);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+    color: #f5f5f5;
+    content: attr(data-icon-title);
+    font-size: 0.78rem;
+    font-weight: 700;
+    left: 50%;
+    line-height: 1;
+    opacity: 0;
+    padding: 0.35rem 0.45rem;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%) translateY(0.2rem);
+    transition: opacity 0.12s ease, transform 0.12s ease;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 65;
+  }
+
+  .labeled-icon-wrap:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
+  }
+
+  .map-preview-wrap {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .map-preview {
+    background: #121212;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    left: 50%;
+    opacity: 0;
+    padding: 0.35rem;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    transform: translateX(-50%) scale(0.96);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    visibility: hidden;
+    z-index: 60;
+  }
+
+  .map-preview img {
+    border-radius: 6px;
+    display: block;
+    height: auto;
+    max-width: 150px;
+    width: 150px;
+  }
+
+  .map-preview-wrap:hover .map-preview,
+  .replay-cell-link:focus-visible .map-preview,
+  .replay-cell-content:focus-visible .map-preview {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    visibility: visible;
+  }
+
+  .youtube-logo {
+    display: block;
+    height: 20px;
+    object-fit: contain;
+    width: 28px;
+  }
+
+  .icon-fallback {
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+</style>

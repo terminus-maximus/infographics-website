@@ -2,8 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
 import { graphics } from "../data/graphics";
-import replayCsv from "../data/GR-replays.csv?raw";
+import replayCsv from "../data/GR-replays-v2.csv?raw";
+import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
+import bossRows from "../data/replay-library/bosses.json";
+import characterRows from "../data/replay-library/characters.json";
+import mapRows from "../data/replay-library/maps_directory.json";
+import teamTemplateRows from "../data/replay-library/team_templates.json";
+import teamArchetypeRows from "../data/replay-library/team_archetype.json";
+import {
+  createReplayLibraryData,
+  extractYouTubeVideoId,
+  formatReplayDamage,
+  formatReplayPublishedAt,
+  parseReplayDamage,
+  parseReplayPublishedAt
+} from "../lib/replayLibrary";
 
 const {
   title,
@@ -40,6 +55,8 @@ const sortedRelatedGuides = relatedGuides.sort((a, b) => {
 
 const pageImage = guides[0]?.webImageSrc || guides[0]?.imageSrc;
 
+// Future season pages only need their `seasonNumber` and image paths updated;
+// curated Mythic/Legendary replay picks come from GR-replays-v2.csv by video_id.
 function parseCsv(csv) {
   const rows = [];
   let row = [];
@@ -80,36 +97,104 @@ function parseCsv(csv) {
   );
 }
 
-function getGuideReplayRows(guide, seasonReplays) {
-  if (guide.title.includes("Mythic")) {
-    return seasonReplays.filter((row) => row.TIER.startsWith("M"));
-  }
-
-  if (guide.title.includes("Legendary")) {
-    return seasonReplays.filter((row) => row.TIER.startsWith("L"));
-  }
-
-  if (guide.title.includes("Epic")) {
-    return seasonReplays.filter((row) => row.TIER.startsWith("E"));
-  }
-
-  return [];
-}
-
 const tierOrder = {
-  E1: 1, E2: 2, E3: 3, E4: 4, E5: 5,
-  L1: 6, L2: 7, L3: 8, L4: 9, L5: 10,
-  M1: 11, M2: 12
+  M2: 1, M1: 2,
+  L5: 3, L4: 4, L3: 5, L2: 6, L1: 7,
+  E5: 8, E4: 9, E3: 10, E2: 11, E1: 12
 };
 
-const seasonReplays = parseCsv(replayCsv)
-  .filter((row) => String(row.SEASON) === String(seasonNumber))
-  .sort((a, b) => {
-    const tierDiff = (tierOrder[b.TIER] || 0) - (tierOrder[a.TIER] || 0);
-    if (tierDiff !== 0) return tierDiff;
+const replayLibraryData = createReplayLibraryData(
+  replayRows,
+  bossRows,
+  characterRows,
+  mapRows,
+  teamTemplateRows
+);
 
-    return a.BOSS.localeCompare(b.BOSS);
+const teamIconMap = Object.fromEntries(
+  teamArchetypeRows.map((team) => [team.team_archetype, team.team_icon])
+);
+
+const replayByVideoId = Object.fromEntries(
+  replayLibraryData.replays.map((replay) => [replay.videoId, replay])
+);
+
+const rawReplayByVideoId = Object.fromEntries(
+  replayRows.map((replay) => [replay.video_id || extractYouTubeVideoId(replay.video_url || ""), replay])
+);
+
+function createMinimalReplay(row) {
+  const videoId = row.video_id?.trim();
+  const replay = rawReplayByVideoId[videoId];
+
+  if (!replay) return null;
+
+  const damage = parseReplayDamage(replay.damage_final, replay.damage_guess);
+  const publishedAt = replay.published_at || "";
+
+  return {
+    id: `${replay.video_url || videoId}-guild-raid-fallback`,
+    videoId,
+    boss: replay.boss_final || replay.boss_guess || "Replay",
+    bossLongName: replay.boss_final || replay.boss_guess || "Replay",
+    team: replay.team_archetype || "",
+    map: replay.map || "",
+    tier: row.TIER || row.Tier || replay.tier_final || "",
+    damage,
+    damageLabel: damage > 0 ? formatReplayDamage(damage) : "-",
+    heroes: [replay.hero_1, replay.hero_2, replay.hero_3, replay.hero_4, replay.hero_5].filter(Boolean),
+    mow: replay.MoW || "",
+    creator: replay.creator || "Unknown",
+    videoUrl: replay.video_url || `https://www.youtube.com/watch?v=${videoId}`,
+    publishedAt,
+    publishedAtLabel: formatReplayPublishedAt(publishedAt),
+    publishedAtTimestamp: parseReplayPublishedAt(publishedAt)
+  };
+}
+
+const seasonReplayRefs = parseCsv(replayCsv)
+  .filter((row) => String(row.SEASON || row.Season) === String(seasonNumber))
+  .sort((a, b) => {
+    const tierDiff = (tierOrder[a.TIER || a.Tier] || 99) - (tierOrder[b.TIER || b.Tier] || 99);
+    return tierDiff;
   });
+
+const seasonReplays = seasonReplayRefs
+  .map((row) => {
+    const videoId = row.video_id?.trim();
+    const tier = row.TIER || row.Tier;
+    const replay = replayByVideoId[videoId] || createMinimalReplay(row);
+
+    if (!replay) {
+      console.warn(`Guild Raid Season ${seasonNumber}: replay video_id "${videoId}" was not found in Replay Library JSON.`);
+      return null;
+    }
+
+    return {
+      ...replay,
+      tier: tier || replay.tier
+    };
+  })
+  .filter((replay) => Boolean(replay));
+
+const mythicReplays = seasonReplays.filter((replay) => replay.tier.startsWith("M"));
+const legendaryReplays = seasonReplays.filter((replay) => replay.tier.startsWith("L"));
+const guideReplaySections = guides.map((guide) => {
+  const isMythic = guide.title.includes("Mythic");
+  const isLegendary = guide.title.includes("Legendary");
+  const replays = isMythic ? mythicReplays : isLegendary ? legendaryReplays : [];
+
+  return {
+    guide,
+    replays,
+    replayHeading: isMythic ? "Mythic Replays" : isLegendary ? "Legendary Replays" : "",
+    replayDescription: isMythic
+      ? "Recommended Mythic runs for this season, pulled from the analyzed Replay Library dataset."
+      : isLegendary
+        ? "Recommended Legendary runs for this season, pulled from the analyzed Replay Library dataset."
+        : ""
+    };
+});
 
 ---
 
@@ -121,23 +206,11 @@ const seasonReplays = parseCsv(replayCsv)
   <Header />
 
   <main>
-  <section class="boss-meta-cta">
-    <h2>Need Team Recommendations?</h2>
-    <p>
-      Looking for the strongest teams for each Guild Raid boss?<br>
-      Check out the Boss Meta Guide, built from extensive YouTube replay analysis.
-    </p>
-
-    <a href="/guild-raid/boss-meta/" class="boss-meta-button">
-      View Boss Meta Guide →
-    </a>
-  </section>
-
   <section class="infographic-section">
     <h2>{sectionTitle}</h2>
 
     <div class="guide-grid">
-      {guides.map((guide) => (
+      {guideReplaySections.map(({ guide, replays, replayHeading, replayDescription }) => (
         <article class="guide-card">
           <h3>{guide.title}</h3>
 
@@ -172,57 +245,21 @@ const seasonReplays = parseCsv(replayCsv)
             </a>
           </p>
 
-          {getGuideReplayRows(guide, seasonReplays).length > 0 && (
-            <>
-              <h4 class="replay-title">YouTube Replays</h4>
-
-              <div class="notes-box">              
-              <table class="video-guide-table">
-                <thead>
-                  <tr>
-                    <th>Tier</th>
-                    <th>Boss</th>
-                    <th>Team</th>
-                    <th>Damage</th>
-                    <th>Creator</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {getGuideReplayRows(guide, seasonReplays).map((row, index, rows) => (
-                    <tr class:list={{ "tier-end": index < rows.length - 1 && row.TIER !== rows[index + 1].TIER }}>
-                      <td>
-                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
-                          {row.TIER}
-                        </a>
-                      </td>
-                      <td>
-                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
-                          {row.BOSS}
-                        </a>
-                      </td>
-                      <td>
-                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
-                          {row.TEAM}
-                        </a>
-                      </td>
-                      <td>
-                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
-                          {row.DAMAGE}
-                        </a>
-                      </td>
-                      <td>
-                        <a href={row.URL} target="_blank" rel="noopener noreferrer">
-                          {row.CREATOR}
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          {replays.length > 0 && (
+            <div class="guide-replay-box">
+              <h4 id={`season-${seasonNumber}-${replayHeading.toLowerCase().replaceAll(" ", "-")}`}>{replayHeading}</h4>
+              <p>{replayDescription}</p>
+              <CuratedReplayTable
+                replays={replays}
+                teamIconMap={teamIconMap}
+                labelledBy={`season-${seasonNumber}-${replayHeading.toLowerCase().replaceAll(" ", "-")}`}
+              />
+              <p class="replay-library-cta">
+                <a href="/replay-library/">Need a different replay? Search 1,000+ analyzed replays in the Replay Library.</a>
+              </p>
             </div>
-          </>
           )}
+
         </article>
       ))}
     </div>
@@ -335,10 +372,14 @@ const seasonReplays = parseCsv(replayCsv)
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    min-width: 0;
   }
 
   .guide-card {
     border-top: 1px solid #333;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
     padding-top: 1.5rem;
   }
 
@@ -368,57 +409,6 @@ const seasonReplays = parseCsv(replayCsv)
     .caption-link:hover {
     text-decoration: underline;
     }
-
-  .notes-box {
-    max-width: 700px;
-    margin: 1rem auto 0;
-    padding: 1rem;
-    background: #252525;
-    border: 1px solid #333;
-    border-radius: 8px;
-  }
-
-  .video-guide-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-
-  .video-guide-table th,
-  .video-guide-table td {
-    padding: 0.75rem;
-    border-bottom: 1px solid #333;
-    vertical-align: top;
-    text-align: left;
-  }
-
-  .video-guide-table th {
-    color: #d4af37;
-    border-bottom-color: rgba(212, 175, 55, 0.75);
-    border-bottom-width: 2px;
-  }
-
-  .video-guide-table tr.tier-end td {
-    border-bottom-color: rgba(212, 175, 55, 0.75);
-    border-bottom-width: 2px;
-  }
-
-  .video-guide-table td:first-child,
-  .video-guide-table td:nth-child(2),
-  .video-guide-table td:nth-child(4) {
-    white-space: nowrap;
-  }
-
-  .video-guide-table a {
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .video-guide-table a:hover {
-    color: #d4af37;
-    text-decoration: underline;
-  }
 
   @media (max-width: 700px) {
     main {
@@ -505,51 +495,49 @@ const seasonReplays = parseCsv(replayCsv)
   margin-bottom: 0;
 }
 
-.boss-meta-cta {
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  padding: 1.5rem;
-  text-align: center;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 12px;
-  background: rgba(212, 175, 55, 0.05);
-}
-
-.boss-meta-cta h2 {
-  color: #d4af37;
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-.boss-meta-cta p {
-  margin: 0 auto 1rem;
-  max-width: 700px;
-  line-height: 1.6;
-  color: #cccccc;
-}
-
-.boss-meta-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #d4af37;
-  color: #111;
-  text-decoration: none;
-  font-weight: 700;
+.guide-replay-box {
+  background: #252525;
+  border: 1px solid #333;
   border-radius: 8px;
-  transition: opacity 0.2s ease;
+  box-sizing: border-box;
+  margin: 1.5rem auto 0;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 1rem;
 }
 
-.boss-meta-button:hover,
-.boss-meta-button:focus-visible {
-  opacity: 0.85;
-}
-
-.replay-title {
-  max-width: 700px;
-  margin: 1.5rem auto 0.5rem;
-  color: #d4af37;
+.guide-replay-box h4 {
+  color: #f5d76e;
   font-size: 1.1rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
+.guide-replay-box p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  max-width: 760px;
+}
+
+.replay-library-cta {
+  margin: 1rem auto 0;
+  max-width: 100%;
+}
+
+.replay-library-cta a {
+  color: #f5d76e;
   font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.replay-library-cta a:hover,
+.replay-library-cta a:focus-visible {
+  color: #d4af37;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 </style>

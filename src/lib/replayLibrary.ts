@@ -1,5 +1,6 @@
 type ReplayRecord = {
   creator?: string;
+  video_id?: string;
   video_url?: string;
   tier_final?: string;
   boss_final?: string;
@@ -39,6 +40,7 @@ type TeamTemplateRecord = {
 
 export type ReplayLibraryReplay = {
   id: string;
+  videoId: string;
   boss: string;
   bossLongName: string;
   team: string;
@@ -90,8 +92,8 @@ export function formatReplayPublishedAt(value: string | undefined) {
   return `${date.toLocaleString("en-US", { month: "short" })} ${date.getDate()}`;
 }
 
-export function getReplayIconPath(type: "bosses" | "heroes" | "mow", value: string) {
-  const normalizedValue = type === "bosses" && value === "Hive Tyrant" ? "Hive_Tyrant" : value;
+export function getReplayIconPath(type: "bosses" | "heroes" | "mow" | "maps" | "tier", value: string) {
+  const normalizedValue = type === "bosses" || type === "maps" ? value.replaceAll(" ", "_") : value;
   return `/images/replay-library/${type}/${normalizedValue}.webp`;
 }
 
@@ -116,6 +118,7 @@ export function createReplayLibraryData(
 
       return {
         id: `${replay.video_url || "replay"}-${index}`,
+        videoId: replay.video_id || extractYouTubeVideoId(replay.video_url || "") || "",
         boss: replay.boss_final || "Unknown",
         bossLongName: bossLongNames[replay.boss_final || ""] || replay.boss_final || "Unknown",
         team: replay.team_archetype || "Unknown",
@@ -184,4 +187,12 @@ export function createReplayLibraryData(
     tiers,
     heroesByTeam
   };
+}
+
+export function extractYouTubeVideoId(url: string) {
+  if (!url) return "";
+  const watchMatch = url.match(/[?&]v=([^&]+)/);
+  if (watchMatch?.[1]) return watchMatch[1];
+  const shortMatch = url.match(/youtu\.be\/([^?&/]+)/);
+  return shortMatch?.[1] || "";
 }

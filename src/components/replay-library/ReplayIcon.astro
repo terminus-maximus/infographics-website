@@ -1,0 +1,45 @@
+---
+import { getReplayIconPath } from "../../lib/replayLibrary";
+
+type IconType = "bosses" | "heroes" | "mow" | "maps" | "tier";
+
+interface Props {
+  type: IconType;
+  value?: string;
+  title?: string;
+  className?: string;
+  preview?: boolean;
+}
+
+const {
+  type,
+  value = "",
+  title = value,
+  className = "",
+  preview = false
+} = Astro.props;
+
+const src = value ? getReplayIconPath(type, value) : "";
+const classes = ["replay-icon-wrap", className].filter(Boolean).join(" ");
+---
+
+{value && (
+  <span class={preview ? "map-preview-wrap" : classes} data-icon-title={title}>
+    <img
+      class:list={["replay-icon", { "map-icon": preview }]}
+      src={src}
+      width="40"
+      height="40"
+      alt={title}
+      title={title}
+      loading="lazy"
+      onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+    />
+    <span class="icon-fallback" hidden>{value}</span>
+    {preview && (
+      <span class="map-preview" aria-hidden="true">
+        <img src={src} width="150" height="150" alt="" loading="lazy" />
+      </span>
+    )}
+  </span>
+)}
