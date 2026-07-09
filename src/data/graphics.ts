@@ -15,17 +15,8 @@ export const graphics = [
       description: "Elite Campaign minimum investment guide.",
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
-      badge: "Popular",
+      badge: "Updated",
       category: "start"
-    },
-    {
-      title: "Boss Meta Guide",
-      description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
-      href: "/guild-raid/boss-meta",
-      image: "/images/boss-meta.png",
-      thumbnail: "/images/thumbnails/boss-meta-thumb.png",
-      badge: "Popular",
-      category: "raid"
     },
     {
       title: "Current Season",
@@ -36,19 +27,46 @@ export const graphics = [
       category: "raid"
     },
     {
+      title: "Season 105",
+      href: "/guild-raid/s105",
+      description: "Get ready for triple Primarchs on July 15th",
+      image: "/images/guild-raid-s105-mythic.png",
+      thumbnail: "/images/thumbnails/guild-raid-s105-mythic-thumb.png",
+      badge: "New",
+      category: "raid"
+    },
+    {
+      title: "Boss Meta Guide",
+      description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
+      href: "/guild-raid/boss-meta",
+      image: "/images/boss-meta.png",
+      thumbnail: "/images/thumbnails/boss-meta-thumb.png",
+      category: "raid"
+    },
+    {
+      title: "Replay Library",
+      href: "/replay-library",
+      description: "Web exclusive feature! Search replays by Boss, Map, Team, or even specific Heroes",
+      image: "/images/ReplayLibraryBanner.png",
+      thumbnail: "/images/thumbnails/ReplayLibraryBanner-thumb.png",
+      badge: "New",
+      category: "raid"
+    },
+    {
       title: "Guild Raid Archive",
       href: "/guild-raid/archive",
       description: "Browse past Guild Raid seasons and infographic archives.",
       image: "/images/guild-raid-archive.png",
-      thumbnail: "/images/thumbnails/guild-raid-thumb.png",
+      thumbnail: "/images/thumbnails/guild-raid-s97-mythic-thumb.png",
       category: "raid"
     },
     {
-      title: "Lucius LRE - Current LRE",
+      title: "Lucius LRE",
       href: "/lre/lucius",
       description: "Lucius Legendary Release Event teams, requirements, and planning.",
       image: "/images/lucius-lre.png",
       thumbnail: "/images/thumbnails/lucius-lre-thumb.png",
+      badge: "Coming Soon",
       category: "legendary"
     },
     {
