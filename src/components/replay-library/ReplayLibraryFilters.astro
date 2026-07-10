@@ -43,7 +43,7 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
       </div>
     </div>
 
-    <div class="filter-field choice-filter-field" data-dependent-filter hidden>
+    <div class="filter-field choice-filter-field">
       <span>Team</span>
       <button
         class="choice-toggle"
@@ -51,7 +51,6 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
         data-choice-toggle="team"
         data-filter="team"
         aria-expanded="false"
-        disabled
       >
         <span class="choice-placeholder">All Teams</span>
       </button>

@@ -76,10 +76,11 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       <h3>How to Use the Replay Library</h3>
 
       <p>
-        Start by selecting a <strong>Boss</strong>, then use the additional filters to narrow the results by:
+        Start by selecting a <strong>Boss</strong> or <strong>Team</strong>, then use the additional filters to narrow the results by:
       </p>
 
       <ul>
+        <li><strong>Boss</strong> to find replays against a specific Guild Raid Boss.</li>
         <li><strong>Team</strong> to focus on an archetype such as Neuro, AdMech, or Laviscus.</li>
         <li><strong>Map</strong> to find runs for a specific Boss map</li>
         <li><strong>Tier</strong> to compare Legendary and Mythic difficulty runs.</li>
@@ -417,18 +418,17 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     };
 
     const updateDependentFilters = () => {
-      const hasBoss = Boolean(state.boss);
+      const hasPrimaryFilter = Boolean(state.boss || state.team);
       dependentFilters.forEach((field) => {
-        field.hidden = !hasBoss;
+        field.hidden = !hasPrimaryFilter;
       });
 
-      [choiceToggles.team, choiceToggles.tier, choiceToggles.map].forEach((field) => {
-        field.disabled = !hasBoss;
+      [choiceToggles.tier, choiceToggles.map].forEach((field) => {
+        field.disabled = !hasPrimaryFilter;
       });
 
-      if (!hasBoss) {
+      if (!hasPrimaryFilter) {
         state.map = "";
-        state.team = "";
         state.tier = "";
         state.minimumDamage = 0;
         state.minimumDate = "";
@@ -444,7 +444,9 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         return;
       }
 
-      const maps = replayLibraryData.mapsByBoss[state.boss] || [];
+      const maps = state.boss
+        ? replayLibraryData.mapsByBoss[state.boss] || []
+        : [...new Set(replayLibraryData.replays.filter((replay) => replay.team === state.team).map((replay) => replay.map))].sort();
       renderChoiceMenu("map", "All Maps", maps);
       if (maps.includes(state.map)) {
         setChoiceValue("map", state.map);
@@ -460,10 +462,10 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     };
 
     const filterReplays = () => {
-      if (!state.boss) return [];
+      if (!state.boss && !state.team) return [];
 
       return replayLibraryData.replays.filter((replay) => {
-        if (replay.boss !== state.boss) return false;
+        if (state.boss && replay.boss !== state.boss) return false;
         if (state.team && replay.team !== state.team) return false;
         if (state.tier && replay.tier !== state.tier) return false;
         if (state.map && replay.map !== state.map) return false;
@@ -520,7 +522,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     };
 
     const updateStatistics = (replays) => {
-      if (!state.boss) {
+      if (!state.boss && !state.team) {
         replays = replayLibraryData.replays;
         matchingReplayLabel.textContent = "Archived Replays";
       } else {
@@ -634,8 +636,8 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     `;
 
     const updateResults = (replays) => {
-      if (!state.boss) {
-        emptyState.textContent = "Select a Boss to begin exploring the Replay Library.";
+      if (!state.boss && !state.team) {
+        emptyState.textContent = "Select a Boss or Team to begin exploring the Replay Library.";
         emptyState.hidden = false;
         resultsWrap.hidden = true;
         resultsBody.innerHTML = "";
@@ -714,7 +716,6 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       if (filterName === "boss") {
         state.map = "";
         state.tier = "";
-        state.team = "";
         state.minimumDamage = 0;
         state.minimumDate = "";
         state.includedHeroes = [];
