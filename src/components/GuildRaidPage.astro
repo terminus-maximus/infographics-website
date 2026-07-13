@@ -255,7 +255,9 @@ const guideReplaySections = guides.map((guide) => {
                 labelledBy={`season-${seasonNumber}-${replayHeading.toLowerCase().replaceAll(" ", "-")}`}
               />
               <p class="replay-library-cta">
-                <a href="/replay-library/">Need a different replay? Search 1,000+ analyzed replays in the Replay Library.</a>
+                <a class="replay-library-cta-link" href="/replay-library/"><strong>Need a different replay?</strong></a>
+                <span> Search 1,000+ analyzed replays in the </span>
+                <a class="replay-library-cta-link" href="/replay-library/">Replay Library</a><span>.</span>
               </p>
             </div>
           )}
@@ -521,23 +523,37 @@ const guideReplaySections = guides.map((guide) => {
   max-width: 760px;
 }
 
-.replay-library-cta {
+.guide-replay-box .replay-library-cta {
+  color: #ffffff;
+  line-height: 1.5;
   margin: 1rem auto 0;
   max-width: 100%;
+}
+
+.replay-library-cta strong {
+  color: #f5d76e;
+  font-weight: 700;
 }
 
 .replay-library-cta a {
   color: #f5d76e;
   font-weight: 700;
-  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.replay-library-cta .replay-library-cta-link {
   text-decoration: none;
+}
+
+.replay-library-cta .replay-library-cta-link:hover,
+.replay-library-cta .replay-library-cta-link:focus-visible {
+  text-decoration: underline;
 }
 
 .replay-library-cta a:hover,
 .replay-library-cta a:focus-visible {
   color: #d4af37;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
 }
 
 </style>

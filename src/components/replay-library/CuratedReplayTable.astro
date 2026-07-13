@@ -30,8 +30,11 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
       </tr>
     </thead>
     <tbody>
-      {replays.map((replay) => (
-        <tr class="replay-row" data-replay-url={replay.videoUrl}>
+      {replays.map((replay, index) => (
+        <tr
+          class:list={["replay-row", { "tier-divider-before": index > 0 && replay.tier !== replays[index - 1].tier }]}
+          data-replay-url={replay.videoUrl}
+        >
           <td data-label="Boss">
             <span class="replay-cell-content">
               <ReplayIcon type="bosses" value={replay.boss} title={replay.boss} className="labeled-icon-wrap" />
@@ -143,6 +146,10 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
     color: #cccccc;
     text-align: left;
     vertical-align: middle;
+  }
+
+  .replay-row.tier-divider-before td {
+    border-top: 3px solid #d4af37;
   }
 
   .replay-table th {
