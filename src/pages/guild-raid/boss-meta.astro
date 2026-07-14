@@ -2,8 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import BossMetaResults from "../../components/replay-library/BossMetaResults.astro";
 import { graphics } from "../../data/graphics";
-import replayCsv from "../../data/boss-meta-replays.csv?raw";
 
 const title = "Guild Raid Boss Meta Guide";
 const description =
@@ -12,111 +12,6 @@ const description =
 const imageSrc = "/images/boss-meta.png";
 const webImageSrc = "/images/web/boss-meta.webp";
 const imageAlt = "Guild Raid Boss Meta Infographic";
-
-function parseCsv(csv) {
-  const rows = [];
-  let row = [];
-  let field = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < csv.length; i++) {
-    const char = csv[i];
-    const next = csv[i + 1];
-
-    if (char === '"' && inQuotes && next === '"') {
-      field += '"';
-      i++;
-    } else if (char === '"') {
-      inQuotes = !inQuotes;
-    } else if (char === "," && !inQuotes) {
-      row.push(field);
-      field = "";
-    } else if ((char === "\n" || char === "\r") && !inQuotes) {
-      if (field || row.length) {
-        row.push(field);
-        rows.push(row);
-        row = [];
-        field = "";
-      }
-      if (char === "\r" && next === "\n") i++;
-    } else {
-      field += char;
-    }
-  }
-
-  if (field || row.length) {
-    row.push(field);
-    rows.push(row);
-  }
-
-  const headers = rows.shift();
-
-  return rows.map((values) =>
-    Object.fromEntries(headers.map((header, index) => [header, values[index] || ""]))
-  );
-}
-
-const choiceOrder = {
-  META: 0,
-  ALTERNATE: 1
-};
-
-const tierOrder = {
-  L1: 1,
-  L2: 2,
-  L3: 3,
-  L4: 4,
-  L5: 5,
-  M1: 6,
-  M2: 7
-};
-
-const replayData = parseCsv(replayCsv)
-  .filter((row) =>
-    ["META", "ALTERNATE"].includes(row.Final_STATUS)
-  )
-  .sort((a, b) => {
-    // 1. META before ALTERNATE
-    const choiceDiff =
-      (choiceOrder[a.Final_STATUS] ?? 99) -
-      (choiceOrder[b.Final_STATUS] ?? 99);
-
-    if (choiceDiff !== 0) return choiceDiff;
-
-    // 2. L1 -> L5 -> M1 -> M2
-    const tierDiff =
-      (tierOrder[a.Tier] ?? 99) -
-      (tierOrder[b.Tier] ?? 99);
-
-    if (tierDiff !== 0) return tierDiff;
-
-    // 3. Highest damage first
-    const damageA = Number(
-      String(a.Damage).replace(/,/g, "")
-    );
-
-    const damageB = Number(
-      String(b.Damage).replace(/,/g, "")
-    );
-
-    return damageB - damageA;
-  });
-
-const groupedReplays = replayData.reduce((groups, replay) => {
-  const boss = replay.Boss || "Other";
-
-  if (!groups[boss]) {
-    groups[boss] = [];
-  }
-
-  groups[boss].push(replay);
-  return groups;
-}, {});
-
-const statusLabels = {
-  META: "⭐ Meta Team",
-  ALTERNATE: "🔄 Alternate Team"
-};
 
 const archiveGuide = {
   title: "Guild Raid Archive",
@@ -146,6 +41,7 @@ const relatedGuides = [
   <section class="hero">
     <h1>{title}</h1>
     <p>{description}</p>
+    <p class="last-updated">Last Updated: July 2026</p>
   </section>
 
   <section class="infographic-section">
@@ -188,178 +84,135 @@ const relatedGuides = [
     <div class="markdown-content">
       <div class="markdown-content">
   <p>
-    Guild Raid teams are expensive to build, and investing in the wrong characters can set your account back for months. The goal of this guide is simple: identify the strongest teams for each boss based on what is actually working in the current game.
-  </p>
-
-  <p>
-    Unlike a traditional tier list, these recommendations are not based on opinion or isolated showcase videos. Every team shown here was validated through community replay research and weighted using performance, difficulty, recency, and frequency.
+    Guild Raid teams are expensive to build, so choosing the right investments matters. This guide identifies the strongest Meta and Alternate teams for every Guild Raid boss using large-scale replay analysis rather than opinion alone.
   </p>
 
   <ul>
-    <li><strong>⭐ Meta Team</strong> — The strongest overall team recommendation for that boss.</li>
-    <li><strong>🔄 Alternate Team</strong> — A strong second option, usually built around a different team archetype.</li>
+    <li><strong>⭐ Meta Team</strong> — The strongest overall recommendation for that boss.</li>
+    <li><strong>🔄 Alternate Team</strong> — A powerful second option, usually built around a different team archetype.</li>
   </ul>
 
   <p>
-    Performance still depends on more than simply owning the right characters. Rank, badges, equipment, Machine of War choice, positioning, boss mechanics, and execution all matter.
-  </p>
-
-  <p>
-    Use the replay library below to see the teams in action before deciding where to invest.
+    Every recommendation includes the exact five-character lineup, recommended Machine of War, summary performance statistics, and curated replay examples so you can compare strategies before investing resources.
   </p>
 </div>
     </div>
   </section>
 
   <section class="content-section">
-    <h2>Replay Library</h2>
+    <h2>Boss Meta Teams &amp; Replay Results</h2>
     <p class="section-intro">
-      Replay examples used to validate each boss recommendation. Only Meta and Alternate team selections are shown.
+      Explore the recommended Meta and Alternate team for each Guild Raid boss, including the selected lineup, analyzed performance, and curated replay examples.
     </p>
-    <div id="boss-jump-nav">
-  <p class="jump-bar-title">
-    Jump directly to a boss:
-  </p>
-
-  <nav class="boss-jump-bar" aria-label="Boss replay navigation">
-    {Object.keys(groupedReplays)
-      .sort((bossA, bossB) => bossA.localeCompare(bossB))
-      .map((boss) => (
-        <a href={`#${boss.toLowerCase().replaceAll(" ", "-")}`}>
-          {boss}
-        </a>
-      ))}
-  </nav>
-</div>
-
-    {Object.entries(groupedReplays)
-        .sort(([bossA], [bossB]) => bossA.localeCompare(bossB))
-        .map(([boss, replays]) => (
-            <article
-            class="boss-replay-section"
-            id={boss.toLowerCase().replaceAll(" ", "-")}
-            >
-            <h3>{boss}</h3>
-
-        <div class="table-wrap">
-          <table class="replay-table">
-            <thead>
-              <tr>
-                <th>Choice</th>
-                <th>Team</th>
-                <th>Tier</th>
-                <th>Damage</th>
-                <th>Creator</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {replays.map((replay) => (
-                <tr>
-                  <td>
-                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
-                      {statusLabels[replay.Final_STATUS] || replay.Final_STATUS}
-                    </a>
-                  </td>
-                  <td>
-                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
-                      {replay.Team}
-                    </a>
-                  </td>
-                  <td>
-                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
-                      {replay.Tier}
-                    </a>
-                  </td>
-                  <td>
-                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
-                      {replay.Damage}
-                    </a>
-                  </td>
-                  <td>
-                    <a href={replay.Replay} target="_blank" rel="noopener noreferrer">
-                      {replay.creator_name}
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>          
-          </table>
-        </div>
-        <p class="back-to-top">
-  <a href="#boss-jump-nav">
-    ↑ Back to Boss List
-  </a>
-</p>
-      </article>
-    ))}
+    <BossMetaResults />
   </section>
 
-  <section class="content-section">
+  <section class="content-section" id="methodology">
     <h2>Methodology & Results</h2>
     <div class="markdown-content">
       <div class="markdown-content">
-  <h3>How This Meta Analysis Was Built</h3>
+  <h3>How the Analysis Works</h3>
 
-  <p>
-    Rather than relying on opinion or a traditional tier list, these recommendations are based on a large-scale analysis of high-performing Guild Raid replays published by the Tacticus community.
+  <p class="methodology-lead">
+    Rather than relying on opinion or isolated showcase videos, these recommendations are built from a <a href="/replay-library/">large dataset</a> of Guild Raid replay videos collected from experienced creators across multiple raid seasons.
   </p>
 
   <p>
-    Over 100 YouTube raid replays from multiple established creators were collected and cataloged. For each replay, the following information was recorded:
+    Each replay is reviewed and cataloged with:
   </p>
 
   <ul>
     <li>Boss</li>
-    <li>Difficulty Tier (L1-M2)</li>
-    <li>Damage dealt</li>
-    <li>Team composition</li>
-    <li>Upload date</li>
+    <li>Difficulty Tier</li>
+    <li>Damage Dealt</li>
+    <li>Five-Hero Team Composition</li>
+    <li>Machine of War</li>
+    <li>Upload Date</li>
   </ul>
+
+  <p class="methodology-key-point">
+    The objective is not simply to identify the single highest damage replay, but to determine which complete teams consistently perform best in today's Guild Raid environment.
+  </p>
 
   <h3>Step 1: Measuring Replay Quality</h3>
   <p>
-    Each replay was assigned a <strong>Replay Scaled Damage</strong> value. Raw damage was adjusted for raid difficulty, giving additional credit to successful clears at L5, M1, and M2.
+    Every replay receives a quality score based primarily on damage dealt. Performance is adjusted for raid difficulty, giving additional credit to successful clears at higher Legendary and Mythic tiers.
   </p>
 
-  <h3>Step 2: Accounting for the Current Meta</h3>
+  <h3>Step 2: Weighting the Current Meta</h3>
   <p>
-    More recent replays were given greater influence through a gradual recency weighting, while older strategies still contributed to the analysis.
+    Guild Raid strategies evolve over time. More recent replays receive greater influence through a gradual recency weighting, while older successful strategies continue contributing to the overall analysis.
   </p>
 
-  <h3>Step 3: Measuring Community Adoption</h3>
+  <h3>Step 3: Identifying the Best Teams</h3>
   <p>
-    Teams that appeared repeatedly across multiple independent creators were rewarded through a <strong>Frequency Weight</strong>.
+    Replays are first grouped into broader team archetypes before identifying the strongest exact team within each archetype.
   </p>
 
-  <h3>Step 4: Calculating the Meta Score</h3>
   <p>
-    These factors were combined into a single Meta Score:
+    An exact team consists of:
   </p>
-
-  <p class="formula-callout">
-    Meta Score = Replay Scaled Damage × Date Weight × Frequency Weight
-  </p>
-
-  <p>This rewards teams that are:</p>
 
   <ul>
-    <li>High performing</li>
-    <li>Successful at difficult content</li>
-    <li>Widely adopted by the community</li>
-    <li>Representative of the current state of the game</li>
+    <li>The five heroes</li>
+    <li>The selected Machine of War</li>
   </ul>
 
-  <h3>Final Recommendations</h3>
   <p>
-    The highest-scoring composition is selected as the <strong>META</strong> recommendation.
+    Machine of War is treated as part of the team itself because changing the Machine of War frequently changes both the strategy and overall performance.
+  </p>
+
+  <h3>Step 4: Community Confidence</h3>
+
+  <p class="methodology-key-point">
+    Popularity still matters—but only as a confidence signal.
   </p>
 
   <p>
-    An <strong>ALTERNATE</strong> recommendation is then chosen through manual review, favoring a fundamentally different team archetype rather than a small variation of the META team.
+    Teams that repeatedly appear across successful community replays receive a modest frequency bonus, while average performance remains the primary factor in determining the final rankings. This rewards strategies that consistently succeed without allowing replay volume alone to dominate the results.
+  </p>
+
+  <h3>Step 5: Selecting the Final Recommendations</h3>
+
+  <p>
+    For each boss, the highest-ranked qualifying archetype becomes the <strong>META</strong> recommendation, while the strongest qualifying alternative archetype becomes the <strong>ALTERNATE</strong> recommendation.
+  </p>
+
+  <p>
+    Within each recommendation, a single exact team is selected consisting of five heroes and one Machine of War.
+  </p>
+
+  <p>
+    Minimum replay thresholds ensure recommendations are supported by multiple successful examples. If an alternate archetype lacks sufficient replay data, another well-supported team is selected instead.
+  </p>
+
+  <h3>Replay Examples</h3>
+
+  <p>
+    The replay examples shown above are curated examples of the exact recommended team—not simply similar teams from the same archetype.
+  </p>
+
+  <p>
+    Every replay displayed matches the recommended:
+  </p>
+
+  <ul>
+    <li>Five heroes</li>
+    <li>Machine of War</li>
+  </ul>
+
+  <p>
+    This allows you to study positioning, deployment order, movement, and execution from successful runs using the exact lineup being recommended.
+  </p>
+
+  <p class="methodology-closing">
+    These recommendations represent hundreds of hours of replay collection, validation, and analysis. As new replay data becomes available, future updates automatically adapt to reflect the evolving Guild Raid meta.
   </p>
 </div>
     </div>
+    <p class="methodology-back-to-bosses">
+      <a href="#boss-jump-nav">↑ Back to Boss List</a>
+    </p>
   </section>
 
   <section class="content-section">
@@ -444,6 +297,12 @@ const relatedGuides = [
     margin: 0 auto;
   }
 
+  .hero .last-updated {
+    color: #d4af37;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
   section {
     margin-bottom: 4rem;
   }
@@ -500,59 +359,115 @@ const relatedGuides = [
     line-height: 1.7;
   }
 
-  .boss-replay-section {
-    margin-top: 2rem;
-    margin-bottom: 2.5rem;
+  #methodology {
+    scroll-margin-top: 1rem;
   }
 
-  .boss-replay-section h3 {
+  #methodology .markdown-content > .markdown-content {
+    margin: 0 auto;
+    max-width: 980px;
+  }
+
+  #methodology .markdown-content h3 {
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.02));
+    border-left: 3px solid #d4af37;
+    border-radius: 0 8px 8px 0;
     color: #d4af37;
-    margin-bottom: 1rem;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.35;
+    margin: 2rem 0 0.85rem;
+    padding: 0.75rem 1rem;
   }
 
-  .table-wrap {
-    width: 100%;
-    overflow-x: auto;
+  #methodology .markdown-content h3:first-child {
+    margin-top: 0.25rem;
+  }
+
+  #methodology .markdown-content p {
+    margin: 0.8rem 0;
+  }
+
+  #methodology .markdown-content a {
+    color: #d4af37;
+    font-weight: 700;
+    text-decoration-color: rgba(212, 175, 55, 0.65);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  #methodology .markdown-content a:hover,
+  #methodology .markdown-content a:focus-visible {
+    color: #f5d76e;
+    text-decoration-thickness: 2px;
+  }
+
+  #methodology .markdown-content strong {
+    color: #f5d76e;
+  }
+
+  #methodology .markdown-content ul {
+    background: #161616;
     border: 1px solid #333;
     border-radius: 8px;
+    display: grid;
+    gap: 0.35rem 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0.85rem 0 1.1rem;
+    padding: 0.85rem 1rem 0.85rem 2.4rem;
   }
 
-  .replay-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 850px;
+  #methodology .markdown-content li::marker {
+    color: #d4af37;
+  }
+
+  #methodology .methodology-lead,
+  #methodology .methodology-closing {
+    background: #151515;
+    border: 1px solid #3a3a3a;
+    border-left: 3px solid #d4af37;
+    border-radius: 8px;
+    color: #e4e4e4;
+    padding: 1rem 1.1rem;
+  }
+
+  #methodology .methodology-lead {
+    font-size: 1.02rem;
+  }
+
+  #methodology .methodology-key-point {
+    border-left: 2px solid rgba(212, 175, 55, 0.65);
+    color: #e0e0e0;
+    font-weight: 650;
+    padding: 0.2rem 0 0.2rem 0.9rem;
+  }
+
+  #methodology .methodology-closing {
+    margin-top: 1.25rem;
+  }
+
+  .methodology-back-to-bosses {
+    margin: 1.25rem 0 0;
+    text-align: right;
+  }
+
+  .methodology-back-to-bosses a {
     background: #121212;
-  }
-
-  .replay-table th,
-  .replay-table td {
-    padding: 0.75rem;
-    border-bottom: 1px solid #333;
-    text-align: left;
-    vertical-align: top;
-    color: #cccccc;
-  }
-
-  .replay-table th {
+    border: 1px solid #444;
+    border-radius: 999px;
     color: #d4af37;
-    background: #252525;
-  }
-
-  .replay-table td:first-child,
-  .replay-table td:nth-child(3),
-  .replay-table td:nth-child(4) {
-    white-space: nowrap;
-  }
-
-  .replay-table a {
-    color: #f5f5f5;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.55rem 0.85rem;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .replay-table a:hover {
-    color: #d4af37;
-    text-decoration: underline;
+  .methodology-back-to-bosses a:hover,
+  .methodology-back-to-bosses a:focus-visible {
+    border-color: #d4af37;
+    outline: none;
+    transform: translateY(-2px);
   }
 
   .card-grid {
@@ -636,73 +551,14 @@ const relatedGuides = [
     .card {
       padding: 1rem;
     }
+
+    #methodology .markdown-content ul {
+      grid-template-columns: 1fr;
+    }
   }
-
-    .formula-callout {
-    background: #121212;
-    border: 1px solid #d4af37;
-    border-radius: 8px;
-    color: #f5f5f5;
-    font-weight: 700;
-    padding: 1rem;
-    text-align: center;
-    }
-
-        .boss-jump-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin: 1.5rem 0 2rem;
-    }
-
-    .boss-jump-bar a {
-    background: #121212;
-    border: 1px solid #333;
-    border-radius: 999px;
-    color: #d4af37;
-    font-weight: 700;
-    padding: 0.5rem 0.85rem;
-    text-decoration: none;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .boss-jump-bar a:hover,
-    .boss-jump-bar a:focus-visible {
-    border-color: #d4af37;
-    transform: translateY(-2px);
-    outline: none;
-    }
-
-    .jump-bar-title {
-    color: #cccccc;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    }
 
     html {
     scroll-behavior: smooth;
-    }
-
-    .boss-replay-section {
-    scroll-margin-top: 20px;
-    }
-
-    .back-to-top {
-    text-align: right;
-    margin-top: 0.75rem;
-    margin-bottom: 0;
-    }
-
-    .back-to-top a {
-    color: #d4af37;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: color 0.2s ease;
-    }
-
-    .back-to-top a:hover {
-    text-decoration: underline;
     }
 
 </style>

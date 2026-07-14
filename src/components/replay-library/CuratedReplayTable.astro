@@ -6,61 +6,89 @@ interface Props {
   replays: ReplayLibraryReplay[];
   teamIconMap?: Record<string, string>;
   labelledBy?: string;
+  sortable?: boolean;
+  showTierDividers?: boolean;
 }
 
-const { replays, teamIconMap = {}, labelledBy } = Astro.props;
+const {
+  replays,
+  teamIconMap = {},
+  labelledBy,
+  sortable = false,
+  showTierDividers = true
+} = Astro.props;
 
 const getTeamIcon = (team: string) => teamIconMap[team] || team;
+const tierSortRank = { M2: 0, M1: 1, L5: 2, L4: 3, L3: 4, L2: 5, L1: 6 };
+const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damage) : replays;
 ---
 
-<div class="table-wrap curated-replay-table-wrap">
+<div class="table-wrap curated-replay-table-wrap" data-curated-sortable={sortable ? "true" : undefined}>
   <table class="replay-table curated-replay-table" aria-labelledby={labelledBy}>
     <thead>
       <tr>
-        <th>Boss</th>
-        <th>Team</th>
-        <th>Damage</th>
-        <th>Tier</th>
-        <th>Map</th>
-        <th>Heroes</th>
-        <th>MoW</th>
+        <th data-curated-sort-header={sortable ? "boss" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="boss" data-column-index="0">Boss</button> : "Boss"}
+        </th>
+        <th data-curated-sort-header={sortable ? "team" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="team" data-column-index="1">Team</button> : "Team"}
+        </th>
+        <th data-curated-sort-header={sortable ? "damage" : undefined} aria-sort={sortable ? "descending" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="damage" data-column-index="2" data-sort-direction="desc">Damage</button> : "Damage"}
+        </th>
+        <th data-curated-sort-header={sortable ? "tier" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="tier" data-column-index="3">Tier</button> : "Tier"}
+        </th>
+        <th data-curated-sort-header={sortable ? "map" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="map" data-column-index="4">Map</button> : "Map"}
+        </th>
+        <th data-curated-sort-header={sortable ? "heroes" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="heroes" data-column-index="5">Heroes</button> : "Heroes"}
+        </th>
+        <th data-curated-sort-header={sortable ? "mow" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="mow" data-column-index="6">MoW</button> : "MoW"}
+        </th>
         <th aria-label="Watch replay"></th>
-        <th>Creator</th>
-        <th>Date</th>
+        <th data-curated-sort-header={sortable ? "creator" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="creator" data-column-index="8">Creator</button> : "Creator"}
+        </th>
+        <th data-curated-sort-header={sortable ? "publishedAt" : undefined} aria-sort={sortable ? "none" : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="publishedAt" data-column-index="9">Date</button> : "Date"}
+        </th>
       </tr>
     </thead>
     <tbody>
-      {replays.map((replay, index) => (
+      {displayReplays.map((replay, index) => (
         <tr
-          class:list={["replay-row", { "tier-divider-before": index > 0 && replay.tier !== replays[index - 1].tier }]}
+          class:list={["replay-row", { "tier-divider-before": showTierDividers && index > 0 && replay.tier !== displayReplays[index - 1].tier }]}
           data-replay-url={replay.videoUrl}
         >
-          <td data-label="Boss">
+          <td data-label="Boss" data-sort-value={replay.boss}>
             <span class="replay-cell-content">
               <ReplayIcon type="bosses" value={replay.boss} title={replay.boss} className="labeled-icon-wrap" />
             </span>
           </td>
-          <td data-label="Team">
+          <td data-label="Team" data-sort-value={replay.team}>
             <span class="replay-cell-content">
               <ReplayIcon type="heroes" value={getTeamIcon(replay.team)} title={replay.team} className="labeled-icon-wrap" />
             </span>
           </td>
-          <td data-label="Damage">
+          <td data-label="Damage" data-sort-value={replay.damage}>
             <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
               {replay.damageLabel}
             </a>
           </td>
-          <td data-label="Tier">
+          <td data-label="Tier" data-sort-value={tierSortRank[replay.tier] ?? 99}>
             <a class="replay-cell-link tier-cell" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
               {replay.tier}
             </a>
           </td>
-          <td data-label="Map">
+          <td data-label="Map" data-sort-value={replay.map}>
             <span class="replay-cell-content">
               <ReplayIcon type="maps" value={replay.map} title={replay.map} preview />
             </span>
           </td>
-          <td data-label="Heroes">
+          <td data-label="Heroes" data-sort-value={replay.heroes.join(" ")}>
             <span class="replay-cell-content">
               <div class="hero-icons">
                 {replay.heroes.map((hero) => (
@@ -69,7 +97,7 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
               </div>
             </span>
           </td>
-          <td data-label="MoW">
+          <td data-label="MoW" data-sort-value={replay.mow}>
             <span class="replay-cell-content">
               <ReplayIcon type="mow" value={replay.mow} title={replay.mow} className="labeled-icon-wrap" />
             </span>
@@ -92,12 +120,12 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
               />
             </a>
           </td>
-          <td data-label="Creator">
+          <td data-label="Creator" data-sort-value={replay.creator}>
             <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
               {replay.creator}
             </a>
           </td>
-          <td data-label="Date">
+          <td data-label="Date" data-sort-value={replay.publishedAtTimestamp}>
             <a class="replay-cell-link" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
               <span title={replay.publishedAt}>{replay.publishedAtLabel || "-"}</span>
             </a>
@@ -109,6 +137,67 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
 </div>
 
 <script>
+  document.querySelectorAll("[data-curated-sortable]").forEach((wrapper) => {
+    if (wrapper.dataset.sortEnhanced === "true") return;
+    wrapper.dataset.sortEnhanced = "true";
+
+    const table = wrapper.querySelector("table");
+    const body = table?.querySelector("tbody");
+    const buttons = Array.from(wrapper.querySelectorAll("[data-curated-sort-key]"));
+    const headers = Array.from(wrapper.querySelectorAll("[data-curated-sort-header]"));
+    if (!body) return;
+
+    const sortState = { key: "damage", direction: "desc" };
+    const numericKeys = new Set(["damage", "tier", "publishedAt"]);
+
+    const updateHeaders = () => {
+      headers.forEach((header) => {
+        const active = header.dataset.curatedSortHeader === sortState.key;
+        header.setAttribute("aria-sort", active ? (sortState.direction === "asc" ? "ascending" : "descending") : "none");
+      });
+      buttons.forEach((button) => {
+        button.dataset.sortDirection = button.dataset.curatedSortKey === sortState.key ? sortState.direction : "";
+      });
+    };
+
+    const sortRows = (columnIndex) => {
+      const rows = Array.from(body.querySelectorAll("tr"));
+      rows.sort((rowA, rowB) => {
+        const valueA = rowA.cells[columnIndex]?.dataset.sortValue || "";
+        const valueB = rowB.cells[columnIndex]?.dataset.sortValue || "";
+        const comparison = numericKeys.has(sortState.key)
+          ? Number(valueA) - Number(valueB)
+          : valueA.localeCompare(valueB, undefined, { numeric: true, sensitivity: "base" });
+        if (comparison !== 0) return sortState.direction === "asc" ? comparison : -comparison;
+
+        const damageA = Number(rowA.cells[2]?.dataset.sortValue || 0);
+        const damageB = Number(rowB.cells[2]?.dataset.sortValue || 0);
+        return damageB - damageA;
+      });
+      rows.forEach((row) => body.append(row));
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const key = button.dataset.curatedSortKey;
+        const columnIndex = Number(button.dataset.columnIndex);
+        if (!key || !Number.isInteger(columnIndex)) return;
+
+        if (sortState.key === key) {
+          sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
+        } else {
+          sortState.key = key;
+          sortState.direction = key === "damage" ? "desc" : "asc";
+        }
+
+        sortRows(columnIndex);
+        updateHeaders();
+      });
+    });
+
+    updateHeaders();
+  });
+
   document.querySelectorAll("[data-replay-url]").forEach((row) => {
     if (row.dataset.replayRowEnhanced === "true") return;
     row.dataset.replayRowEnhanced = "true";
@@ -159,6 +248,45 @@ const getTeamIcon = (team: string) => teamIconMap[team] || team;
     letter-spacing: 0.04em;
     padding: 0.75rem;
     text-transform: uppercase;
+  }
+
+  .sort-button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    gap: 0.35rem;
+    justify-content: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    text-align: inherit;
+    text-transform: inherit;
+  }
+
+  .sort-button::after {
+    color: #f5d76e;
+    content: "";
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1;
+    min-width: 0.7rem;
+  }
+
+  .sort-button[data-sort-direction="asc"]::after {
+    content: "^";
+  }
+
+  .sort-button[data-sort-direction="desc"]::after {
+    content: "v";
+  }
+
+  .sort-button:hover,
+  .sort-button:focus-visible {
+    color: #f5f5f5;
+    outline: none;
   }
 
   .replay-row {

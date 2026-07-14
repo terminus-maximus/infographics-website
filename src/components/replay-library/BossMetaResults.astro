@@ -1,0 +1,379 @@
+---
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
+import BossMetaTeamSummary from "./BossMetaTeamSummary.astro";
+import CuratedReplayTable from "./CuratedReplayTable.astro";
+import ReplayIcon from "./ReplayIcon.astro";
+import teamSummaryRows from "../../data/BossMeta_TeamSummary.json";
+import replayMapRows from "../../data/BossMeta_WebsiteReplayMap.json";
+import replayRows from "../../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
+import bossRows from "../../data/replay-library/bosses.json";
+import characterRows from "../../data/replay-library/characters.json";
+import mapRows from "../../data/replay-library/maps_directory.json";
+import teamTemplateRows from "../../data/replay-library/team_templates.json";
+import teamArchetypeRows from "../../data/replay-library/team_archetype.json";
+import { createReplayLibraryData, getReplayIconPath } from "../../lib/replayLibrary";
+
+const choices = ["META", "ALTERNATE"];
+const knownBosses = new Set(bossRows.map((boss) => boss.Boss));
+const bossLongNames = Object.fromEntries(bossRows.map((boss) => [boss.Boss, boss["Long Name"] || boss.Boss]));
+const bossOrder = [...new Set(teamSummaryRows.map((row) => row.boss_clean))];
+const summaryByKey = new Map();
+
+for (const summary of teamSummaryRows) {
+  const key = `${summary.boss_clean}|${summary.meta_choice}`;
+  if (!knownBosses.has(summary.boss_clean)) {
+    console.warn(`Boss Meta: team summary references unknown boss "${summary.boss_clean}".`);
+  }
+  if (summaryByKey.has(key)) {
+    console.warn(`Boss Meta: duplicate team summary for ${key}; the first record will be used.`);
+    continue;
+  }
+  summaryByKey.set(key, summary);
+}
+
+const replayLibraryData = createReplayLibraryData(
+  replayRows,
+  bossRows,
+  characterRows,
+  mapRows,
+  teamTemplateRows
+);
+const replayByVideoId = new Map(replayLibraryData.replays.map((replay) => [replay.videoId, replay]));
+const teamIconMap = Object.fromEntries(teamArchetypeRows.map((team) => [team.team_archetype, team.team_icon]));
+const replayRefsByKey = new Map();
+
+for (const ref of replayMapRows) {
+  const key = `${ref.boss_clean}|${ref.meta_choice}`;
+  const refs = replayRefsByKey.get(key) || [];
+  if (refs.some((existing) => existing.video_id === ref.video_id)) {
+    console.warn(`Boss Meta: duplicate replay video_id "${ref.video_id}" in ${key}; the duplicate will be skipped.`);
+    continue;
+  }
+  refs.push(ref);
+  replayRefsByKey.set(key, refs);
+}
+
+for (const [key, refs] of replayRefsByKey) {
+  if (!summaryByKey.has(key)) console.warn(`Boss Meta: replay group ${key} has no matching team summary.`);
+  if (refs.length > 10) console.warn(`Boss Meta: ${key} has ${refs.length} replay rows; only the first 10 will render.`);
+}
+
+function assetExists(type, value) {
+  if (!value) return false;
+  return existsSync(resolve(process.cwd(), "public", getReplayIconPath(type, value).replace(/^\//, "")));
+}
+
+const bosses = bossOrder.map((boss) => {
+  if (!knownBosses.has(boss)) return null;
+
+  if (!assetExists("bosses", boss)) console.warn(`Boss Meta: no boss icon was found for "${boss}".`);
+
+  const teams = choices.map((choice) => {
+    const key = `${boss}|${choice}`;
+    const summary = summaryByKey.get(key);
+    if (!summary) {
+      console.warn(`Boss Meta: missing ${choice} team summary for "${boss}".`);
+      return { choice, summary: null, replays: [] };
+    }
+
+    [summary.hero_1, summary.hero_2, summary.hero_3, summary.hero_4, summary.hero_5].forEach((hero) => {
+      if (!assetExists("heroes", hero)) console.warn(`Boss Meta: no hero icon was found for "${hero}" (${key}).`);
+    });
+    if (!assetExists("mow", summary.mow)) console.warn(`Boss Meta: no Machine of War icon was found for "${summary.mow}" (${key}).`);
+
+    const replays = (replayRefsByKey.get(key) || []).slice(0, 10).flatMap((ref) => {
+      const replay = replayByVideoId.get(ref.video_id);
+      if (!replay) {
+        console.warn(`Boss Meta: replay video_id "${ref.video_id}" in ${key} was not found in the public Replay Library model.`);
+        return [];
+      }
+      return [replay];
+    });
+
+    return { choice, summary, replays };
+  });
+
+  return {
+    name: boss,
+    longName: bossLongNames[boss] || boss,
+    id: boss.toLowerCase().replaceAll(" ", "-"),
+    teams
+  };
+}).filter(Boolean);
+---
+
+<div id="boss-jump-nav">
+  <p class="jump-bar-title">Jump directly to a boss:</p>
+  <nav class="boss-jump-bar" aria-label="Boss replay navigation">
+    {bosses.map((boss) => <a href={`#${boss.id}`}>{boss.name}</a>)}
+    <a href="#methodology">Methodology</a>
+  </nav>
+</div>
+
+{bosses.map((boss) => (
+  <article class="boss-meta-section" id={boss.id}>
+    <header class="boss-heading">
+      <ReplayIcon type="bosses" value={boss.name} title={boss.longName} className="labeled-icon-wrap boss-heading-icon" />
+      <div>
+        <p>Guild Raid Boss</p>
+        <h3>{boss.name}</h3>
+      </div>
+    </header>
+
+    <div class="boss-team-list">
+      {boss.teams.map(({ choice, summary, replays }) => {
+        const headingId = `${boss.id}-${choice.toLowerCase()}-team`;
+        return (
+          <section class="boss-team-section" aria-labelledby={headingId}>
+            <h4 id={headingId} class="visually-hidden">{boss.name} {choice === "META" ? "Meta" : "Alternate"} Team</h4>
+            {summary ? (
+              <>
+                <BossMetaTeamSummary summary={summary} headingId={headingId} />
+                <div class="replay-examples">
+                  <details class="replay-examples-disclosure">
+                    <summary>
+                      <span id={`${headingId}-replays`} class="replay-examples-title">
+                        {choice === "META" ? "Meta Team" : "Alternate Team"} Replay Examples
+                      </span>
+                      <span class="replay-count-hint">{replays.length} examples</span>
+                    </summary>
+                    <div class="replay-examples-content">
+                      {replays.length > 0 ? (
+                        <CuratedReplayTable
+                          replays={replays}
+                          teamIconMap={teamIconMap}
+                          labelledBy={`${headingId}-replays`}
+                          sortable
+                          showTierDividers={false}
+                        />
+                      ) : (
+                        <p class="empty-state">No curated replay examples are available for this team yet.</p>
+                      )}
+                    </div>
+                  </details>
+                  {choice === "ALTERNATE" && (
+                    <>
+                      <p class="replay-library-cta">
+                        <a href="/replay-library/"><strong>Explore More Replays</strong></a>
+                        <span> in the full Replay Library, with filters for boss, team, hero, map, tier, and more.</span>
+                      </p>
+                      <p class="back-to-top"><a href="#boss-jump-nav">↑ Back to Boss List</a></p>
+                    </>
+                  )}
+                </div>
+              </>
+            ) : (
+              <p class="empty-state">This team summary is temporarily unavailable.</p>
+            )}
+          </section>
+        );
+      })}
+    </div>
+
+  </article>
+))}
+
+<style>
+  .jump-bar-title {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .boss-jump-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+
+  .boss-jump-bar a {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 999px;
+    color: #d4af37;
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .boss-jump-bar a:hover,
+  .boss-jump-bar a:focus-visible {
+    border-color: #d4af37;
+    outline: none;
+    transform: translateY(-2px);
+  }
+
+  .boss-meta-section {
+    border-top: 1px solid #444;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    scroll-margin-top: 20px;
+  }
+
+  .boss-heading {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .boss-heading p {
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .boss-heading h3 {
+    color: #d4af37;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin: 0;
+  }
+
+  :global(.boss-heading-icon) {
+    min-height: 82px;
+    min-width: 82px;
+  }
+
+  :global(.boss-heading-icon .replay-icon) {
+    border: 2px solid #d4af37;
+    border-radius: 14px;
+    height: 82px;
+    width: 82px;
+  }
+
+  .boss-team-list {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .boss-team-section {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .replay-examples-disclosure {
+    margin-top: 1rem;
+  }
+
+  .replay-examples-disclosure summary {
+    align-items: center;
+    background: #151515;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    min-height: 3.25rem;
+    padding: 0.8rem 1rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    user-select: none;
+  }
+
+  .replay-examples-disclosure summary::marker,
+  .replay-examples-disclosure summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .replay-examples-disclosure summary::after {
+    color: #d4af37;
+    content: "v";
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .replay-examples-disclosure[open] summary::after {
+    content: "^";
+  }
+
+  .replay-examples-disclosure summary:hover,
+  .replay-examples-disclosure summary:focus-visible {
+    background: #1b1b1b;
+    border-color: #d4af37;
+    outline: none;
+  }
+
+  .replay-examples-title {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .replay-count-hint {
+    color: #999;
+    font-size: 0.78rem;
+    margin-left: auto;
+  }
+
+  .replay-examples-content {
+    margin-top: 0.75rem;
+  }
+
+  .replay-library-cta {
+    color: #aaa;
+    line-height: 1.5;
+    margin: 0.9rem 0 0;
+  }
+
+  .replay-library-cta a,
+  .back-to-top a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+
+  .replay-library-cta a:hover,
+  .replay-library-cta a:focus-visible,
+  .back-to-top a:hover,
+  .back-to-top a:focus-visible {
+    text-decoration: underline;
+  }
+
+  .back-to-top {
+    margin: 1rem 0 0;
+    text-align: right;
+  }
+
+  .back-to-top a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .empty-state {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #aaa;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .visually-hidden {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 700px) {
+    .boss-meta-section {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+    }
+
+    .boss-heading {
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,187 @@
+---
+import ReplayIcon from "./ReplayIcon.astro";
+import { formatReplayDamage } from "../../lib/replayLibrary";
+
+interface TeamSummary {
+  meta_choice: "META" | "ALTERNATE";
+  hero_1: string;
+  hero_2: string;
+  hero_3: string;
+  hero_4: string;
+  hero_5: string;
+  mow: string;
+  replay_count: number;
+  average_damage: number;
+  max_damage: number;
+}
+
+interface Props {
+  summary: TeamSummary;
+  headingId: string;
+}
+
+const { summary, headingId } = Astro.props;
+const heroes = [summary.hero_1, summary.hero_2, summary.hero_3, summary.hero_4, summary.hero_5];
+const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLocaleString("en-US");
+---
+
+<header class:list={["team-summary", summary.meta_choice.toLowerCase()]}>
+  <div class="team-summary-topline">
+    <p class="team-choice-label">{summary.meta_choice === "META" ? "Meta Team" : "Alternate Team"}</p>
+
+    <div class="team-lineup" aria-label={`${summary.meta_choice === "META" ? "Meta" : "Alternate"} team lineup`}>
+      <div class="hero-lineup" aria-label={`Five heroes and Machine of War ${summary.mow}`}>
+        {heroes.map((hero) => (
+          <ReplayIcon type="heroes" value={hero} title={hero} className="labeled-icon-wrap team-summary-icon" />
+        ))}
+        <ReplayIcon type="mow" value={summary.mow} title={summary.mow} className="labeled-icon-wrap team-summary-icon team-summary-mow-icon" />
+      </div>
+    </div>
+  </div>
+
+  <dl class="team-stats" aria-labelledby={headingId}>
+    <div>
+      <dt>Replays</dt>
+      <dd>{formatWholeNumber(summary.replay_count)}</dd>
+    </div>
+    <div>
+      <dt>Average Damage</dt>
+      <dd>{formatReplayDamage(summary.average_damage)}</dd>
+    </div>
+    <div>
+      <dt>Maximum Damage</dt>
+      <dd>{formatReplayDamage(summary.max_damage)}</dd>
+    </div>
+  </dl>
+</header>
+
+<style>
+  .team-summary {
+    background: linear-gradient(135deg, #202020, #151515);
+    border: 1px solid #3a3a3a;
+    border-left: 4px solid #d4af37;
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .team-summary.alternate {
+    border-left-color: #9aa3ad;
+  }
+
+  .team-summary-topline {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .team-choice-label {
+    color: #d4af37;
+    flex: 0 0 auto;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .alternate .team-choice-label {
+    color: #d7dbe0;
+  }
+
+  .team-lineup,
+  .hero-lineup {
+    align-items: center;
+    display: flex;
+  }
+
+  .team-lineup {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    justify-content: flex-end;
+  }
+
+  .hero-lineup {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .team-stats {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1rem 0 0;
+  }
+
+  .team-stats div {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+  }
+
+  .team-stats dt {
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .team-stats dd {
+    color: #f5f5f5;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 800;
+    margin: 0.3rem 0 0;
+  }
+
+  :global(.team-summary-icon) {
+    min-height: 58px;
+    min-width: 58px;
+  }
+
+  :global(.team-summary-icon .replay-icon) {
+    border: 1px solid #454545;
+    height: 58px;
+    width: 58px;
+  }
+
+  :global(.team-summary-mow-icon) {
+    margin-left: 0.25rem;
+  }
+
+  @media (max-width: 760px) {
+    .team-summary-topline {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .team-lineup {
+      justify-content: flex-start;
+    }
+
+    .hero-lineup {
+      gap: 0.15rem;
+    }
+
+    .team-stats {
+      grid-template-columns: 1fr;
+    }
+
+    :global(.team-summary-icon) {
+      min-height: 40px;
+      min-width: 40px;
+    }
+
+    :global(.team-summary-icon .replay-icon) {
+      height: 40px;
+      width: 40px;
+    }
+
+
+    :global(.team-summary-mow-icon) {
+      margin-left: 0;
+    }
+  }
+</style>
