@@ -172,6 +172,10 @@ const relatedGuides = [
     Teams that repeatedly appear across successful community replays receive a modest frequency bonus, while average performance remains the primary factor in determining the final rankings. This rewards strategies that consistently succeed without allowing replay volume alone to dominate the results.
   </p>
 
+  <p class="methodology-threshold-callout">
+    A five-hero and one Machine of War team needs at least 4 qualifying replays to be considered for the final selection.
+  </p>
+
   <h3>Step 5: Selecting the Final Recommendations</h3>
 
   <p>
@@ -439,6 +443,27 @@ const relatedGuides = [
     color: #e0e0e0;
     font-weight: 650;
     padding: 0.2rem 0 0.2rem 0.9rem;
+  }
+
+  #methodology .methodology-threshold-callout {
+    align-items: flex-start;
+    background: #161616;
+    border: 1px solid #333;
+    border-left: 3px solid #d4af37;
+    border-radius: 8px;
+    color: #e4e4e4;
+    display: flex;
+    font-weight: 400;
+    gap: 0.65rem;
+    margin: 0.85rem 0 1.1rem;
+    padding: 0.85rem 1rem;
+  }
+
+  #methodology .methodology-threshold-callout::before {
+    color: #d4af37;
+    content: "•";
+    flex: 0 0 auto;
+    font-weight: 800;
   }
 
   #methodology .methodology-closing {

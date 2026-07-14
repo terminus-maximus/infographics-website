@@ -27,20 +27,12 @@ export const graphics = [
       category: "raid"
     },
     {
-      title: "Season 105",
-      href: "/guild-raid/s105",
-      description: "Get ready for triple Primarchs on July 15th",
-      image: "/images/guild-raid-s105-mythic.png",
-      thumbnail: "/images/thumbnails/guild-raid-s105-mythic-thumb.png",
-      badge: "New",
-      category: "raid"
-    },
-    {
       title: "Boss Meta Guide",
       description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
       href: "/guild-raid/boss-meta",
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
+      badge: "Updated",
       category: "raid"
     },
     {
