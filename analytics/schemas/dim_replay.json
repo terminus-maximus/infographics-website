@@ -1,0 +1,22 @@
+[
+  { "name": "video_id", "type": "STRING", "mode": "REQUIRED", "description": "YouTube video identifier and replay dimension key." },
+  { "name": "youtube_url", "type": "STRING", "mode": "REQUIRED", "description": "Public YouTube replay URL." },
+  { "name": "creator", "type": "STRING", "mode": "NULLABLE", "description": "Replay video creator." },
+  { "name": "boss", "type": "STRING", "mode": "NULLABLE", "description": "Reviewed Guild Raid boss label." },
+  { "name": "tier", "type": "STRING", "mode": "NULLABLE", "description": "Reviewed Guild Raid tier." },
+  { "name": "guild_raid_season", "type": "INTEGER", "mode": "NULLABLE", "description": "Guild Raid season when available; not inferred from publication date." },
+  { "name": "team_archetype", "type": "STRING", "mode": "NULLABLE", "description": "Reviewed team archetype." },
+  { "name": "hero_1", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "hero_2", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "hero_3", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "hero_4", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "hero_5", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "mow", "type": "STRING", "mode": "NULLABLE", "description": "Machine of War label." },
+  { "name": "map", "type": "STRING", "mode": "NULLABLE", "description": "Reviewed Guild Raid map identifier." },
+  { "name": "damage", "type": "INTEGER", "mode": "NULLABLE", "description": "Reviewed replay damage as an integer." },
+  { "name": "published_date", "type": "DATE", "mode": "NULLABLE", "description": "Date portion supplied by the canonical Replay Library export." },
+  { "name": "review_status", "type": "STRING", "mode": "REQUIRED" },
+  { "name": "is_valid_replay", "type": "BOOLEAN", "mode": "REQUIRED" },
+  { "name": "source_exported_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Replay Library export-manifest timestamp." },
+  { "name": "loaded_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Timestamp when the generated SQL rebuilt the dimension." }
+]
