@@ -51,8 +51,8 @@ Daily export arrival is not guaranteed at a precise hour for a standard GA4 prop
 1. Update the website's canonical Replay Library JSON through its existing publishing workflow.
 2. Run `node analytics/scripts/build-replay-dimension.mjs`.
 3. Review the generated row count and validation summary.
-4. Load the generated file into the development replay seed table using the documented schema; replace the table atomically.
-5. Rebuild `dim_replay` and run replay validation.
+4. Review and run the generated `analytics/generated/create_dim_replay.sql`; it replaces the development dimension atomically without external storage.
+5. Run replay validation.
 6. Promote only after invalid IDs, duplicate IDs, and enum mismatches are zero.
 
 The builder excludes workflow-only fields such as notes and discovery timestamps.

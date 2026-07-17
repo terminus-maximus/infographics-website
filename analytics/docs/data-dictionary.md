@@ -19,7 +19,7 @@ Internal table. Grain: one exported GA4 event. Partition: `event_date`. Cluster:
 
 ## `int_ga4_sessions` / `fct_session`
 
-Grain: one non-null `user_pseudo_id` + `ga_session_id` collected on an accepted production hostname. Partition: `session_date`. The public `fct_session` view exposes the canonical intermediate columns without implementation-only timestamps.
+Grain: one non-null `user_pseudo_id` + `ga_session_id` with an observed `session_start`, collected on an accepted production hostname. Duplicate start events sharing the same composite key remain one session. Partition: `session_date`. The public `fct_session` view exposes the canonical intermediate columns without implementation-only timestamps.
 
 Important fields:
 
@@ -52,7 +52,7 @@ Grain: one canonical path observed on an accepted production hostname.
 
 ## `dim_replay`
 
-Grain: one valid `video_id` from the canonical Replay Library export. The deterministic builder excludes non-valid rows and private workflow notes. `guild_raid_season` remains null because the current source does not contain a trustworthy season field.
+Grain: one valid `video_id` from the canonical Replay Library export. The deterministic builder excludes non-valid rows and private workflow notes, then emits both a reviewable CSV and self-contained BigQuery SQL. `source_exported_at` preserves the manifest timestamp and `loaded_at` records the table rebuild. `guild_raid_season` remains null because the current source does not contain a trustworthy season field.
 
 ## `fct_event`
 

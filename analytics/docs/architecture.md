@@ -59,7 +59,7 @@ Production semantic layer. It is created or modified only after the analytics-la
 
 ### Sessions
 
-A session is the composite of non-null `user_pseudo_id` and the `ga_session_id` event parameter. Timestamp proximity is never used as a substitute when `ga_session_id` exists. Events missing either component remain in the event fact but cannot contribute to session metrics.
+A session is the composite of non-null `user_pseudo_id` and the `ga_session_id` event parameter, with at least one observed `session_start` event. Timestamp proximity is never used as a substitute. Events missing the identity components or an observed start remain in the event fact but cannot contribute to canonical session metrics. Duplicate `session_start` events sharing the same composite key count as one session.
 
 ### Session acquisition
 

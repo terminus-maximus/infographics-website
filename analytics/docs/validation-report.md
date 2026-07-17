@@ -55,13 +55,67 @@ Validated on July 16, 2026 without executing model SQL or creating BigQuery obje
 - Local deterministic builders passed, including 1,303 valid Replay rows with zero duplicate IDs or missing required fields.
 - The Astro production build passed with 28 generated pages.
 
-### Remaining compile boundary
+## Development deployment and reconciliation
 
-Full dependency-aware compilation and reconciliation require the reversible development objects to exist. Creating those objects is the next cloud-changing action and requires explicit owner approval.
+Deployed to `terminus-maximus-analytics.terminus_analytics_dev` on July 16, 2026 after explicit owner approval.
+
+### Objects created
+
+Twelve expected development objects are present:
+
+- Internal tables: `map_page_classification`, `stg_ga4_events`, and `int_ga4_sessions`
+- Dimensions: `dim_page` and `dim_replay`
+- Public views: `fct_event` and `fct_session`
+- Aggregate tables: `fct_daily_site`, `fct_daily_page`, and `fct_traffic_acquisition`
+- Monitoring views: `vw_data_freshness` and `vw_tracking_anomalies`
+
+No production dataset, scheduled query, IAM binding, or raw GA4 table was created or modified.
+
+### Staging reconciliation
+
+| Reporting date | Staging events | Distinct event keys | Production events | Excluded events |
+| --- | ---: | ---: | ---: | ---: |
+| 2026-07-14 | 3,214 | 3,214 | 3,183 | 31 |
+| 2026-07-15 | 2,649 | 2,649 | 2,649 | 0 |
+
+Staging retained every raw event with no duplicate candidate keys. The 31 known local-development events remain auditable and are absent from public production-host facts.
+
+### Core metric reconciliation
+
+All modeled values matched direct production-host raw calculations:
+
+| Date | Users | Page views | Canonical sessions | Infographic opens | Legacy replay clicks | Canonical replay clicks |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2026-07-14 | 446 | 1,080 | 569 | 265 | 61 | 0 |
+| 2026-07-15 | 342 | 836 | 491 | 193 | 97 | 0 |
+
+Each modeled-minus-raw difference was zero. Canonical sessions use distinct `user_pseudo_id` + `ga_session_id` keys with an observed `session_start`. During validation, four isolated first-day events had session IDs but no observed start, while one session had a duplicate start event. The model now excludes the orphan groups and counts the duplicate key once.
+
+### Integrity checks
+
+- Session duplicate keys: 0
+- Negative session durations: 0
+- Missing session identities: 0
+- Replay rows: 1,303
+- Replay duplicate video IDs: 0
+- Replay missing required fields: 0
+- Replay negative damage values: 0
+- `source_exported_at` and `loaded_at` are both BigQuery `TIMESTAMP` fields.
+- Latest raw date: 2026-07-15
+- Latest modeled date: 2026-07-15
+- Modeled lag: 0 days
+- Current monitoring output: one expected medium-severity `excluded_hostname` row for the 31 July 14 local-development events
+
+### Open classification decision
+
+`/guild-raid/s106` is the only observed unclassified path. It was present on both reporting dates with 6 page views, 5 daily session-path counts, and 4 entrances. The current repository has no season-106 page and its maintained classification map ends at season 105. It remains intentionally unclassified until the owner confirms whether it is current content, archived content, or an obsolete URL.
+
+### Cost evidence
+
+The initial deployment and validation used 35 successful parent query jobs with no failures. They processed 44,522,051 bytes and billed 534,773,760 bytes after BigQuery minimum billing increments, corresponding to substantially less than $0.01 at on-demand rates.
 
 ## Pending validation
 
-1. Create the approved development objects in dependency order and complete dependency-aware compilation.
-2. Populate development objects and reconcile core metrics.
-3. Validate page classifications and Replay dimension joins.
-4. Validate at least three known journeys after the new tracking is deployed.
+1. Resolve the `/guild-raid/s106` classification.
+2. Validate Replay event-to-dimension joins after canonical Replay instrumentation is deployed.
+3. Validate at least three known journeys after the new tracking is deployed.

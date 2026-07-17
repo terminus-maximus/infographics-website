@@ -64,12 +64,12 @@ INSERT INTO `terminus-maximus-analytics.terminus_analytics_dev.int_ga4_sessions`
 )
 WITH sessions AS (
   SELECT
-    MIN(event_date) AS session_date,
+    MIN(IF(event_name = 'session_start', event_date, NULL)) AS session_date,
     session_key,
     user_pseudo_id,
     ga_session_id,
     MAX(ga_session_number) AS ga_session_number,
-    MIN(event_timestamp) AS session_start_timestamp,
+    MIN(IF(event_name = 'session_start', event_timestamp, NULL)) AS session_start_timestamp,
     MAX(event_timestamp) AS session_end_timestamp,
     TIMESTAMP_DIFF(MAX(event_timestamp), MIN(event_timestamp), SECOND) AS session_duration_seconds,
     ARRAY_AGG(IF(event_name = 'page_view', page_path, NULL) IGNORE NULLS ORDER BY event_timestamp, event_bundle_sequence_id, batch_event_index LIMIT 1)[SAFE_OFFSET(0)] AS landing_page_path,
@@ -101,7 +101,8 @@ WITH sessions AS (
     AND session_key IS NOT NULL
     AND is_production_hostname
   GROUP BY session_key, user_pseudo_id, ga_session_id
-  HAVING MIN(event_date) BETWEEN refresh_start_date AND refresh_end_date
+  HAVING MIN(IF(event_name = 'session_start', event_date, NULL))
+    BETWEEN refresh_start_date AND refresh_end_date
 )
 SELECT
   session_date,
