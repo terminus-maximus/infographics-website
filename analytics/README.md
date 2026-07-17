@@ -61,7 +61,7 @@ analytics/
 - Production dataset: `terminus_analytics`
 - Dataset location: `US`
 - Reporting timezone: `America/Los_Angeles`
-- Native export begins: `2026-07-15`
+- Native export begins: `2026-07-14` (validated as a complete reporting day)
 - Scheduled refresh lookback: seven reporting dates
 - SQL dialect: BigQuery GoogleSQL
 

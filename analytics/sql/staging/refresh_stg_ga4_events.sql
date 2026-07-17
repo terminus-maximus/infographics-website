@@ -5,7 +5,7 @@
 -- Cost control: _TABLE_SUFFIX is bounded to the refresh window.
 
 DECLARE refresh_end_date DATE DEFAULT DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY);
-DECLARE refresh_start_date DATE DEFAULT GREATEST(DATE '2026-07-15', DATE_SUB(refresh_end_date, INTERVAL 6 DAY));
+DECLARE refresh_start_date DATE DEFAULT GREATEST(DATE '2026-07-14', DATE_SUB(refresh_end_date, INTERVAL 6 DAY));
 
 CREATE TABLE IF NOT EXISTS `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events` (
   event_date DATE,

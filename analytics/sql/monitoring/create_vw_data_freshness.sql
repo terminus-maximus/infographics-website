@@ -13,7 +13,7 @@ WITH raw AS (
 modeled AS (
   SELECT MAX(event_date) AS latest_modeled_date
   FROM `terminus-maximus-analytics.terminus_analytics_dev.fct_daily_site`
-  WHERE event_date BETWEEN DATE '2026-07-15' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY)
+  WHERE event_date BETWEEN DATE '2026-07-14' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY)
 )
 SELECT
   raw.latest_raw_date,

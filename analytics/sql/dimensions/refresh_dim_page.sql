@@ -15,7 +15,7 @@ WITH observed AS (
     MIN(event_date) AS first_seen_date,
     MAX(event_date) AS last_seen_date
   FROM `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events`
-  WHERE event_date BETWEEN DATE '2026-07-15' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY)
+  WHERE event_date BETWEEN DATE '2026-07-14' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY)
     AND page_path IS NOT NULL
   GROUP BY page_path
 )

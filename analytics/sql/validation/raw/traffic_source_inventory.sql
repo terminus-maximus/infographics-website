@@ -16,6 +16,6 @@ SELECT
   COUNT(*) AS events,
   COUNT(DISTINCT CONCAT(user_pseudo_id, '.', CAST((SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_id') AS STRING))) AS sessions
 FROM `terminus-maximus-analytics.analytics_540087863.events_*`
-WHERE _TABLE_SUFFIX BETWEEN '20260715' AND FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY))
+WHERE _TABLE_SUFFIX BETWEEN '20260714' AND FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY))
 GROUP BY source, medium
 ORDER BY sessions DESC, events DESC;

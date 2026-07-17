@@ -43,4 +43,4 @@ SELECT
   replay_zero_result_events,
   is_new_user
 FROM `terminus-maximus-analytics.terminus_analytics_dev.int_ga4_sessions`
-WHERE session_date BETWEEN DATE '2026-07-15' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY);
+WHERE session_date BETWEEN DATE '2026-07-14' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY);
