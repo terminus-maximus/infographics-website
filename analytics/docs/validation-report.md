@@ -14,13 +14,34 @@ Validated in BigQuery on July 16, 2026 using a query restricted to `events_20260
 - July 14 spans essentially the full midnight-to-midnight Los Angeles reporting day and is the first native export date.
 - The semantic layer must begin at `2026-07-14`.
 - July 15 reconciles to the previously validated 2,649-event result.
-- Thirty-one July 14 events came from hostnames outside the production allowlist. Those events must remain visible in staging until their hostnames are identified and an explicit inclusion/exclusion rule is approved.
 - The coverage query processed approximately 435.56 KB and created or modified no resources.
+
+## July 14 non-production hostname inventory
+
+Validated in BigQuery on July 16, 2026 using a read-only query restricted to `events_20260714`.
+
+| Hostname | Event name | Events | Pseudo-users |
+| --- | --- | ---: | ---: |
+| `localhost` | `page_view` | 8 | 1 |
+| `localhost` | `user_engagement` | 7 | 1 |
+| `127.0.0.1` | `page_view` | 6 | 1 |
+| `127.0.0.1` | `scroll` | 4 | 1 |
+| `localhost` | `scroll` | 2 | 1 |
+| `127.0.0.1` | `user_engagement` | 2 | 1 |
+| `localhost` | `session_start` | 1 | 1 |
+| `127.0.0.1` | `session_start` | 1 | 1 |
+
+### Conclusions
+
+- All 31 events outside the production hostname allowlist are attributable to local development traffic.
+- No unknown preview, staging, or third-party hostname was present.
+- Raw and staging data must retain these events for auditability.
+- Production-facing facts and metrics should include only `terminusmaximus.com` and `www.terminusmaximus.com`, while monitoring should continue to report excluded hostname counts.
+- The hostname inventory query created or modified no resources.
 
 ## Pending validation
 
-1. Identify the July 14 non-production hostname values and event types.
-2. BigQuery-compile and dry-run every development model.
-3. Populate development objects and reconcile core metrics.
-4. Validate page classifications and Replay dimension joins.
-5. Validate at least three known journeys after the new tracking is deployed.
+1. BigQuery-compile and dry-run every development model.
+2. Populate development objects and reconcile core metrics.
+3. Validate page classifications and Replay dimension joins.
+4. Validate at least three known journeys after the new tracking is deployed.
