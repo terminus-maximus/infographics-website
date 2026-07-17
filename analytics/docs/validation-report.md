@@ -106,9 +106,11 @@ Each modeled-minus-raw difference was zero. Canonical sessions use distinct `use
 - Modeled lag: 0 days
 - Current monitoring output: one expected medium-severity `excluded_hostname` row for the 31 July 14 local-development events
 
-### Open classification decision
+### Invalid-route classification
 
-`/guild-raid/s106` is the only observed unclassified path. It was present on both reporting dates with 6 page views, 5 daily session-path counts, and 4 entrances. The current repository has no season-106 page and its maintained classification map ends at season 105. It remains intentionally unclassified until the owner confirms whether it is current content, archived content, or an obsolete URL.
+`/guild-raid/s106` was present on both reporting dates with 6 page views, 5 daily session-path counts, and 4 entrances. The owner confirmed that no season-106 page existed and that these requests were users probing for advance access. It is explicitly classified as `content_type = 'not_found'`, `guide_category = 'guild_raid'`, and `page_template = 'not_found'`. Its season and all publication-state flags remain null or false so the model does not imply that season-106 content existed.
+
+After rebuilding the development page dimension and daily page fact, all 19 observed paths are classified, both `/guild-raid/s106` daily rows carry `not_found`, and its original counts remain unchanged.
 
 ### Cost evidence
 
@@ -116,6 +118,5 @@ The initial deployment and validation used 35 successful parent query jobs with 
 
 ## Pending validation
 
-1. Resolve the `/guild-raid/s106` classification.
-2. Validate Replay event-to-dimension joins after canonical Replay instrumentation is deployed.
-3. Validate at least three known journeys after the new tracking is deployed.
+1. Validate Replay event-to-dimension joins after canonical Replay instrumentation is deployed.
+2. Validate at least three known journeys after the new tracking is deployed.

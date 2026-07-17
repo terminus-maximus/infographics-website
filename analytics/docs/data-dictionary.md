@@ -36,6 +36,8 @@ Important fields:
 
 Grain: one maintained canonical path. This is repository-owned business metadata, not observed GA4 data. It defines `content_type`, `guide_category`, page template, season, archive/current-season flags, and evergreen status.
 
+Known requests for routes that do not exist may be mapped with `content_type = 'not_found'`. Those visits remain in site and event metrics but can be separated from published-content performance. A requested season number stays null unless actual season content existed.
+
 ## `dim_page`
 
 Grain: one canonical path observed on an accepted production hostname.

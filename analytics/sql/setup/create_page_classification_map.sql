@@ -48,5 +48,6 @@ FROM UNNEST([
   ('/guild-raid/s103', 'Guild Raid Season 103', 'season', 'guild_raid', 'guild_raid_season', 103, NULL, NULL, FALSE, FALSE, TRUE, FALSE),
   ('/guild-raid/s104', 'Guild Raid Season 104', 'season', 'guild_raid', 'guild_raid_season', 104, NULL, NULL, FALSE, FALSE, TRUE, FALSE),
   ('/guild-raid/s105', 'Guild Raid Season 105', 'season', 'guild_raid', 'guild_raid_season', 105, NULL, NULL, FALSE, TRUE, FALSE, FALSE),
+  ('/guild-raid/s106', 'Guild Raid Season 106 Probe', 'not_found', 'guild_raid', 'not_found', NULL, NULL, NULL, FALSE, FALSE, FALSE, FALSE),
   ('/replay-library', 'Replay Library', 'interactive_tool', 'guild_raid', 'replay_library', NULL, NULL, NULL, TRUE, FALSE, FALSE, TRUE)
 ]);
