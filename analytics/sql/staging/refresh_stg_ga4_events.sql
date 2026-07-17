@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `terminus-maximus-analytics.terminus_analytics_dev.st
   page_path STRING,
   page_title STRING,
   hostname STRING,
+  is_production_hostname BOOL,
   page_referrer STRING,
   link_url STRING,
   link_text STRING,
@@ -79,7 +80,7 @@ INSERT INTO `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events` (
   event_date, event_timestamp, event_name, event_key, event_bundle_sequence_id,
   batch_event_index, user_pseudo_id, ga_session_id, ga_session_number, session_key,
   session_engaged, engagement_time_msec, page_location, page_path, page_title,
-  hostname, page_referrer, link_url, link_text, link_host, outbound,
+  hostname, is_production_hostname, page_referrer, link_url, link_text, link_host, outbound,
   infographic_title, infographic_url, link_source, filter_name, filter_value,
   filter_action, result_count, active_filter_count, sort_order, video_id, creator,
   boss, tier, team_archetype, mow, map, guild_raid_season, result_position,
@@ -224,6 +225,11 @@ SELECT
   END,
   NULLIF(p.page_title, ''),
   LOWER(COALESCE(NULLIF(device_hostname, ''), NET.HOST(p.page_location))),
+  COALESCE(
+    LOWER(COALESCE(NULLIF(device_hostname, ''), NET.HOST(p.page_location)))
+      IN ('terminusmaximus.com', 'www.terminusmaximus.com'),
+    FALSE
+  ),
   NULLIF(p.page_referrer, ''),
   NULLIF(p.link_url, ''),
   NULLIF(p.link_text, ''),

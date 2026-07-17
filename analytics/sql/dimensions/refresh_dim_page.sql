@@ -17,6 +17,7 @@ WITH observed AS (
   FROM `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events`
   WHERE event_date BETWEEN DATE '2026-07-14' AND DATE_SUB(CURRENT_DATE('America/Los_Angeles'), INTERVAL 1 DAY)
     AND page_path IS NOT NULL
+    AND is_production_hostname
   GROUP BY page_path
 )
 SELECT

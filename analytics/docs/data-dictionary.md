@@ -8,7 +8,7 @@ Internal table. Grain: one exported GA4 event. Partition: `event_date`. Cluster:
 | --- | --- | --- |
 | Identity | `event_key`, `event_name`, `event_timestamp` | Deterministic event candidate key, collected name, and UTC timestamp. |
 | User/session | `user_pseudo_id`, `ga_session_id`, `ga_session_number`, `session_key`, `session_engaged` | Pseudonymous browser identity and exported GA4 session parameters. |
-| Page | `page_location`, `page_path`, `page_title`, `hostname`, `page_referrer` | Normalized page context. Query strings and fragments are excluded from `page_path`. |
+| Page | `page_location`, `page_path`, `page_title`, `hostname`, `is_production_hostname`, `page_referrer` | Normalized page context. Query strings and fragments are excluded from `page_path`; the Boolean flag applies the maintained production-hostname allowlist. |
 | Links | `link_url`, `link_text`, `link_host`, `outbound` | Enhanced-measurement and custom link context. |
 | Infographic | `infographic_title`, `infographic_url`, `link_source` | Parameters for `full_resolution_infographic_open`. |
 | Replay filters | `filter_name`, `filter_value`, `filter_action`, `result_count`, `active_filter_count`, `sort_order` | Planned Replay Library interaction parameters. |
@@ -19,7 +19,7 @@ Internal table. Grain: one exported GA4 event. Partition: `event_date`. Cluster:
 
 ## `int_ga4_sessions` / `fct_session`
 
-Grain: one non-null `user_pseudo_id` + `ga_session_id`. Partition: `session_date`. The public `fct_session` view exposes the canonical intermediate columns without implementation-only timestamps.
+Grain: one non-null `user_pseudo_id` + `ga_session_id` collected on an accepted production hostname. Partition: `session_date`. The public `fct_session` view exposes the canonical intermediate columns without implementation-only timestamps.
 
 Important fields:
 
@@ -38,7 +38,7 @@ Grain: one maintained canonical path. This is repository-owned business metadata
 
 ## `dim_page`
 
-Grain: one observed canonical path.
+Grain: one canonical path observed on an accepted production hostname.
 
 | Field | Meaning |
 | --- | --- |
@@ -56,7 +56,7 @@ Grain: one valid `video_id` from the canonical Replay Library export. The determ
 
 ## `fct_event`
 
-Grain: one analytics event. This public view exposes flattened event, page, infographic, filter, and replay fields. It intentionally retains automatic events so agents can inspect the full collected event inventory without raw nested records.
+Grain: one analytics event collected on an accepted production hostname. This public view exposes flattened event, page, infographic, filter, and replay fields. It intentionally retains automatic production events so agents can inspect the full collected production inventory without raw nested records. Events from other hostnames remain available in staging for auditability.
 
 ## `fct_daily_site`
 

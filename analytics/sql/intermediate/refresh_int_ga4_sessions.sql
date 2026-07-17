@@ -99,6 +99,7 @@ WITH sessions AS (
   FROM `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events`
   WHERE event_date BETWEEN DATE_SUB(refresh_start_date, INTERVAL 1 DAY) AND refresh_end_date
     AND session_key IS NOT NULL
+    AND is_production_hostname
   GROUP BY session_key, user_pseudo_id, ga_session_id
   HAVING MIN(event_date) BETWEEN refresh_start_date AND refresh_end_date
 )

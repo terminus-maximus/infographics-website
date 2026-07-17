@@ -76,6 +76,10 @@ First-user fields are retained separately and are not substituted for session ac
 
 Canonical paths are normalized by removing query strings, fragments, duplicate trailing slashes, and a trailing slash other than `/`. Stable classifications come from `map_page_classification`, which is maintained as SQL in the repository. Newly observed paths remain visible as `unclassified` so classification gaps are monitorable.
 
+### Environment boundary
+
+Staging retains every exported event and marks whether its normalized hostname is in the production allowlist: `terminusmaximus.com` or `www.terminusmaximus.com`. Public event, session, page, and aggregate models include only allowlisted production traffic. Monitoring continues to expose excluded hostname counts so local or unexpected traffic is auditable without contaminating production metrics.
+
 ### Replay metadata
 
 `dim_replay` is generated from `src/data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json`. Only analytically useful, public replay fields are emitted. Internal notes and discovery workflow fields are excluded.

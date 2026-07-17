@@ -13,7 +13,7 @@ WITH daily AS (
     COUNTIF(event_name = 'full_resolution_infographic_open') AS infographic_opens,
     COUNTIF(event_name = 'guild_raid_youtube_click') AS legacy_replay_clicks,
     COUNTIF(event_name = 'replay_youtube_click') AS replay_clicks,
-    COUNTIF(hostname IS NOT NULL AND hostname NOT IN ('terminusmaximus.com', 'www.terminusmaximus.com')) AS unexpected_hostname_events,
+    COUNTIF(NOT is_production_hostname) AS excluded_hostname_events,
     COUNTIF(event_name = 'full_resolution_infographic_open' AND (infographic_title IS NULL OR infographic_url IS NULL OR link_source IS NULL OR page_path IS NULL)) AS incomplete_infographic_events,
     COUNTIF(event_name = 'replay_youtube_click' AND (video_id IS NULL OR link_url IS NULL OR page_path IS NULL)) AS incomplete_replay_clicks
   FROM `terminus-maximus-analytics.terminus_analytics_dev.stg_ga4_events`
@@ -36,7 +36,7 @@ issues AS (
   UNION ALL
   SELECT event_date, 'event_volume_spike', 'medium', events, 'Event volume increased by more than 150% day over day.' FROM with_previous WHERE previous_events > 0 AND SAFE_DIVIDE(events, previous_events) > 2.5
   UNION ALL
-  SELECT event_date, 'unexpected_hostname', 'high', unexpected_hostname_events, 'Events arrived from a hostname outside the production allowlist.' FROM with_previous WHERE unexpected_hostname_events > 0
+  SELECT event_date, 'excluded_hostname', 'medium', excluded_hostname_events, 'Events from outside the production allowlist were retained in staging and excluded from production-facing metrics.' FROM with_previous WHERE excluded_hostname_events > 0
   UNION ALL
   SELECT event_date, 'incomplete_infographic_event', 'medium', incomplete_infographic_events, 'Required infographic parameters were null.' FROM with_previous WHERE incomplete_infographic_events > 0
   UNION ALL
