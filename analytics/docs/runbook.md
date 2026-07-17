@@ -14,9 +14,24 @@ All datasets are in the BigQuery `US` multi-region. Do not copy tables across re
 
 1. GA4 writes or updates `analytics_540087863.events_YYYYMMDD`.
 2. At `20:07 UTC`, the semantic refresh rebuilds the latest seven reporting dates.
-3. The refresh runs staging, session, dimension, fact, and monitoring SQL in dependency order.
+3. The refresh runs staging, session, page-dimension, and aggregate-fact SQL in dependency order. The event, session, freshness, and anomaly views reflect the refreshed tables automatically.
 4. BigQuery sends an email only if the scheduled query fails.
 5. `vw_data_freshness` and `vw_tracking_anomalies` are the first diagnostic surfaces.
+
+### Production schedule
+
+- Display name: `Terminus Maximus Analytics - Daily Semantic Refresh`
+- Transfer configuration: `6ac850c5-0000-274d-b8a5-582429b3b1d8`
+- Project and location: `terminus-maximus-analytics`, `US`
+- Frequency: daily at `20:07 UTC`, starting immediately and ending never
+- Refresh window: the latest seven reporting dates
+- Destination table: none; the multi-statement workflow manages its own target tables
+- Execution identity: the requesting user credential; no service account was selected
+- Notifications: BigQuery failure email enabled; no Pub/Sub topic configured
+
+The configuration uses the SQL produced by `npm run analytics:build-scheduled-query` with the target dataset changed deterministically from `terminus_analytics_dev` to `terminus_analytics`. Production business logic must continue to come from the reviewed repository SQL; do not edit only the console copy.
+
+To request a one-time manual test, open the configuration, choose **Schedule backfill**, keep **Run one time scheduled query** selected, and confirm. This is safe because the workflow deletes and rebuilds its bounded seven-day window.
 
 ## Confirming freshness
 
@@ -30,11 +45,11 @@ Daily export arrival is not guaranteed at a precise hour for a standard GA4 prop
 
 ## Scheduled-query failure
 
-1. Open BigQuery > Scheduled queries and select the semantic refresh.
+1. Open BigQuery > Scheduled queries and select `Terminus Maximus Analytics - Daily Semantic Refresh`.
 2. Read the failed transfer run's query error; do not rerun blindly.
 3. Confirm the raw table exists for the affected date.
 4. Confirm the query remained in the `US` location.
-5. Confirm the execution identity still has BigQuery Job User on the project, Data Viewer on the raw dataset, and Data Editor on the target dataset.
+5. Confirm the requesting user execution identity still has permission to create query jobs, read the raw dataset, and edit the production dataset.
 6. Fix SQL in the repository first, review the diff, then update the scheduled-query text.
 7. Manually backfill the affected date range using the repository SQL and rerun validation.
 
