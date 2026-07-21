@@ -17,6 +17,15 @@ const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={absoluteUrl} />
+
+		<script is:inline>
+			// Keep duplicate trailing slashes from splitting the same page in GA4.
+			if (window.location.pathname !== "/" && /\/{2,}$/.test(window.location.pathname)) {
+				const canonicalPath = window.location.pathname.replace(/\/+$/, "/");
+				window.history.replaceState(null, "", canonicalPath + window.location.search + window.location.hash);
+			}
+		</script>
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9K17FDPZKJ"></script>

@@ -29,7 +29,7 @@ export const graphics = [
     {
       title: "Boss Meta Guide",
       description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
-      href: "/guild-raid/boss-meta",
+      href: "/guild-raid/boss-meta/",
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
       badge: "Updated",

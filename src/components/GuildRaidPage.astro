@@ -46,7 +46,7 @@ const relatedGuides = [
 
 const sortedRelatedGuides = relatedGuides.sort((a, b) => {
   const priority = {
-    "/guild-raid/boss-meta": 1,
+    "/guild-raid/boss-meta/": 1,
     "/guild-raid/archive": 2
   };
 
@@ -274,7 +274,7 @@ const guideReplaySections = guides.map((guide) => {
     {sortedRelatedGuides.map((graphic) => (
         <a
           class={`card related-guide-card ${
-            graphic.href === "/guild-raid/boss-meta" ||
+            graphic.href === "/guild-raid/boss-meta/" ||
             graphic.href === "/guild-raid/archive"
               ? "forced-related-card"
               : ""
