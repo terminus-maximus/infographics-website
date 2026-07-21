@@ -197,6 +197,10 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
         </label>
       </div>
     </details>
+
+    <div class="filter-actions" aria-label="Replay Library filter actions">
+      <button class="clear-filters-button" type="button" data-clear-filters>Clear Filters</button>
+    </div>
   </form>
 </section>
 
@@ -463,6 +467,38 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
     outline-offset: 2px;
   }
 
+  .filter-actions {
+    align-items: center;
+    align-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    min-height: 2.75rem;
+  }
+
+  .clear-filters-button {
+    background: #121212;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #dddddd;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .clear-filters-button:hover,
+  .clear-filters-button:focus-visible {
+    filter: brightness(1.1);
+  }
+
+  .clear-filters-button:focus-visible {
+    outline: 2px solid rgba(212, 175, 55, 0.3);
+    outline-offset: 2px;
+  }
+
   .hero-dropdown-menu p {
     color: #888;
     margin: 0;
@@ -504,6 +540,10 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
     .hero-dropdown-toggle,
     .range-filter,
     .date-filter {
+      width: 100%;
+    }
+
+    .filter-actions {
       width: 100%;
     }
 

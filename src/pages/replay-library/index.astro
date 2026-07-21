@@ -175,7 +175,19 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
   </main>
 
   <script define:vars={{ replayLibraryData, teamIconMap }}>
-    const state = {
+    // Public query-string names intentionally differ from some internal state names.
+    const FILTER_QUERY_PARAMS = Object.freeze({
+      boss: "boss",
+      team: "team",
+      map: "map",
+      tier: "tier",
+      minimumDamage: "minDamage",
+      minimumDate: "minDate",
+      includedHeroes: "hero",
+      excludedHeroes: "excludeHero"
+    });
+    const MULTI_VALUE_FILTERS = new Set(["includedHeroes", "excludedHeroes"]);
+    const createDefaultFilterState = () => ({
       boss: "",
       map: "",
       team: "",
@@ -184,7 +196,8 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       minimumDate: "",
       includedHeroes: [],
       excludedHeroes: []
-    };
+    });
+    const state = createDefaultFilterState();
     const sortState = {
       key: "damage",
       direction: "desc"
@@ -206,6 +219,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     const minimumDamageInput = document.querySelector('[data-filter="minimumDamage"]');
     const minimumDamageValue = document.querySelector("[data-minimum-damage-value]");
     const minimumDateInput = document.querySelector('[data-filter="minimumDate"]');
+    const clearFiltersButton = document.querySelector("[data-clear-filters]");
     const choiceToggles = {
       boss: document.querySelector('[data-choice-toggle="boss"]'),
       team: document.querySelector('[data-choice-toggle="team"]'),
@@ -239,6 +253,99 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       uniqueMaps: document.querySelector('[data-stat="uniqueMaps"]')
     };
     const matchingReplayLabel = statElements.matchingReplays?.previousElementSibling;
+
+    const getAvailableMaps = (filterState = state) => {
+      if (filterState.boss) return replayLibraryData.mapsByBoss[filterState.boss] || [];
+      if (!filterState.team) return [];
+      return [...new Set(
+        replayLibraryData.replays
+          .filter((replay) => replay.team === filterState.team)
+          .map((replay) => replay.map)
+      )].sort();
+    };
+
+    const isValidDateFilter = (value) => {
+      const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+      if (!match) return false;
+      const [, year, month, day] = match.map(Number);
+      const date = new Date(year, month - 1, day);
+      return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+    };
+
+    const getFirstValidParam = (params, stateKey, isValid) =>
+      params.getAll(FILTER_QUERY_PARAMS[stateKey]).find(isValid) || "";
+
+    const readFiltersFromUrl = () => {
+      const params = new URL(window.location.href).searchParams;
+      const nextState = createDefaultFilterState();
+      const validBosses = new Set(replayLibraryData.bosses.map((boss) => boss.value));
+      const validTeams = new Set(replayLibraryData.teams);
+
+      nextState.boss = getFirstValidParam(params, "boss", (value) => validBosses.has(value));
+      nextState.team = getFirstValidParam(params, "team", (value) => validTeams.has(value));
+
+      if (nextState.boss || nextState.team) {
+        const validMaps = new Set(getAvailableMaps(nextState));
+        const validTiers = new Set(replayLibraryData.tiers);
+        nextState.map = getFirstValidParam(params, "map", (value) => validMaps.has(value));
+        nextState.tier = getFirstValidParam(params, "tier", (value) => validTiers.has(value));
+
+        const minimumDamage = getFirstValidParam(params, "minimumDamage", (value) => {
+          const number = Number(value);
+          return Number.isInteger(number) && number >= 0 && number <= 2000000 && number % 10000 === 0;
+        });
+        nextState.minimumDamage = minimumDamage ? Number(minimumDamage) : 0;
+        nextState.minimumDate = getFirstValidParam(params, "minimumDate", isValidDateFilter);
+
+        if (nextState.team) {
+          const validHeroes = new Set(replayLibraryData.heroesByTeam[nextState.team] || []);
+          nextState.includedHeroes = [...new Set(
+            params.getAll(FILTER_QUERY_PARAMS.includedHeroes).filter((hero) => validHeroes.has(hero))
+          )];
+          nextState.excludedHeroes = [...new Set(
+            params.getAll(FILTER_QUERY_PARAMS.excludedHeroes).filter((hero) => validHeroes.has(hero))
+          )];
+        }
+      }
+
+      Object.assign(state, nextState);
+    };
+
+    const applyFiltersToControls = () => {
+      minimumDamageInput.value = String(state.minimumDamage);
+      minimumDateInput.value = state.minimumDate;
+      updateMinimumDamageLabel();
+    };
+
+    const getActiveFilters = () => Object.fromEntries(
+      Object.keys(FILTER_QUERY_PARAMS).filter((stateKey) => {
+        const value = state[stateKey];
+        return Array.isArray(value) ? value.length > 0 : Boolean(value);
+      }).map((stateKey) => [stateKey, state[stateKey]])
+    );
+
+    const clearFilterParams = (url) => {
+      Object.values(FILTER_QUERY_PARAMS).forEach((queryParam) => url.searchParams.delete(queryParam));
+      return url;
+    };
+
+    const addActiveFiltersToUrl = (url) => {
+      clearFilterParams(url);
+      Object.entries(getActiveFilters()).forEach(([stateKey, value]) => {
+        const queryParam = FILTER_QUERY_PARAMS[stateKey];
+        if (MULTI_VALUE_FILTERS.has(stateKey)) {
+          value.forEach((item) => url.searchParams.append(queryParam, item));
+        } else {
+          url.searchParams.set(queryParam, String(value));
+        }
+      });
+      return url;
+    };
+
+    const writeFiltersToUrl = () => {
+      const url = addActiveFiltersToUrl(new URL(window.location.href));
+      window.history.replaceState(window.history.state, "", url);
+    };
 
     const escapeHtml = (value) =>
       String(value ?? "")
@@ -437,6 +544,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         minimumDamageInput.value = String(state.minimumDamage);
         minimumDateInput.value = "";
         updateMinimumDamageLabel();
+        setChoiceValue("boss", "");
         setChoiceValue("map", "");
         setChoiceValue("team", "");
         setChoiceValue("tier", "");
@@ -444,9 +552,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         return;
       }
 
-      const maps = state.boss
-        ? replayLibraryData.mapsByBoss[state.boss] || []
-        : [...new Set(replayLibraryData.replays.filter((replay) => replay.team === state.team).map((replay) => replay.map))].sort();
+      const maps = getAvailableMaps();
       renderChoiceMenu("map", "All Maps", maps);
       if (maps.includes(state.map)) {
         setChoiceValue("map", state.map);
@@ -657,12 +763,14 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       resultsBody.innerHTML = replays.map(replayRowHtml).join("");
     };
 
-    const render = () => {
+    const render = ({ syncUrl = false } = {}) => {
       updateDependentFilters();
+      applyFiltersToControls();
       const replays = sortReplays(filterReplays());
       updateSortHeaders();
       updateStatistics(replays);
       updateResults(replays);
+      if (syncUrl) writeFiltersToUrl();
     };
 
     form.addEventListener("input", (event) => {
@@ -670,14 +778,14 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       if (minimumDamageField) {
         state.minimumDamage = Number(minimumDamageField.value) || 0;
         updateMinimumDamageLabel();
-        render();
+        render({ syncUrl: true });
         return;
       }
 
       const minimumDateField = event.target.closest('[data-filter="minimumDate"]');
       if (minimumDateField) {
         state.minimumDate = minimumDateField.value;
-        render();
+        render({ syncUrl: true });
         return;
       }
 
@@ -689,7 +797,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
           heroMenus[filterName].querySelectorAll("[data-hero-checkbox]:checked")
         ).map((checkbox) => checkbox.value);
         state[filterName] = checkedHeroes;
-        render();
+        render({ syncUrl: true });
         return;
       }
 
@@ -731,7 +839,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       }
 
       closeAllChoiceMenus();
-      render();
+      render({ syncUrl: true });
     });
 
     sortButtons.forEach((button) => {
@@ -761,6 +869,20 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       });
     });
 
+    clearFiltersButton.addEventListener("click", () => {
+      Object.assign(state, createDefaultFilterState());
+      closeAllChoiceMenus();
+      Object.keys(heroMenus).forEach(closeHeroMenu);
+      render({ syncUrl: true });
+    });
+
+    window.addEventListener("popstate", () => {
+      readFiltersFromUrl();
+      closeAllChoiceMenus();
+      Object.keys(heroMenus).forEach(closeHeroMenu);
+      render();
+    });
+
     document.addEventListener("click", (event) => {
       if (event.target.closest(".hero-filter-field") || event.target.closest(".choice-filter-field")) return;
       Object.keys(heroMenus).forEach(closeHeroMenu);
@@ -774,6 +896,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
         card.style.display = index < 3 ? "block" : "none";
       });
 
+    readFiltersFromUrl();
     render();
   </script>
 
