@@ -15,7 +15,7 @@ export const graphics = [
       description: "Elite Campaign minimum investment guide.",
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
-      badge: "Updated",
+      badge: "Popular",
       category: "start"
     },
     {
@@ -33,6 +33,7 @@ export const graphics = [
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
       badge: "Updated",
+      badge: "Popular",
       category: "raid"
     },
     {
@@ -41,7 +42,7 @@ export const graphics = [
       description: "Web exclusive feature! Search replays by Boss, Map, Team, or even specific Heroes",
       image: "/images/ReplayLibraryBanner.png",
       thumbnail: "/images/thumbnails/ReplayLibraryBanner-thumb.png",
-      badge: "New",
+      badge: "Popular",
       category: "raid"
     },
     {
@@ -58,7 +59,6 @@ export const graphics = [
       description: "Lucius Legendary Release Event teams, requirements, and planning.",
       image: "/images/lucius-lre.png",
       thumbnail: "/images/thumbnails/lucius-lre-thumb.png",
-      badge: "Coming Soon",
       category: "legendary"
     },
     {
