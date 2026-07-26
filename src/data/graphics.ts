@@ -32,8 +32,6 @@ export const graphics = [
       href: "/guild-raid/boss-meta/",
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
-      badge: "Updated",
-      badge: "Popular",
       category: "raid"
     },
     {
