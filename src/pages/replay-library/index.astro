@@ -249,6 +249,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       matchingReplays: document.querySelector('[data-stat="matchingReplays"]'),
       highestDamage: document.querySelector('[data-stat="highestDamage"]'),
       averageDamage: document.querySelector('[data-stat="averageDamage"]'),
+      newestVideo: document.querySelector('[data-stat="newestVideo"]'),
       uniqueCreators: document.querySelector('[data-stat="uniqueCreators"]'),
       uniqueMaps: document.querySelector('[data-stat="uniqueMaps"]')
     };
@@ -643,10 +644,18 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       const averageDamage = count
         ? Math.round(replays.reduce((total, replay) => total + replay.damage, 0) / count)
         : 0;
+      const newestReplay = count
+        ? replays.reduce(
+            (newest, replay) =>
+              replay.publishedAtTimestamp > newest.publishedAtTimestamp ? replay : newest,
+            replays[0]
+          )
+        : null;
 
       statElements.matchingReplays.textContent = count.toLocaleString();
       statElements.highestDamage.textContent = highestReplay ? highestReplay.damageLabel : "-";
       statElements.averageDamage.textContent = count ? formatDamage(averageDamage) : "-";
+      statElements.newestVideo.textContent = newestReplay?.publishedAtLabel || "-";
       statElements.uniqueCreators.textContent = new Set(replays.map((replay) => replay.creator)).size.toLocaleString();
       statElements.uniqueMaps.textContent = new Set(replays.map((replay) => replay.map)).size.toLocaleString();
     };
@@ -1407,7 +1416,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
 
   :global(.stat-grid) {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
   }
 
