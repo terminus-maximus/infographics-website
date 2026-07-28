@@ -1,0 +1,14 @@
+---
+import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
+import { getLreBasicsContent } from "../../data/lreBasics";
+---
+
+<FeaturedInfographicPage
+  title="Lysander Legendary Release Event"
+  description="Event requirements, planning, and best team guide."
+  imageSrc="/images/lysander-lre.png"
+  imageAlt="Lysander Legendary Release Event Infographic"
+  lastUpdated="July 28, 2026"
+  basicsTitle="Lysander LRE Basics"
+  basicsContent={getLreBasicsContent("Lysander")}
+/>

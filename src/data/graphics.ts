@@ -60,6 +60,15 @@ export const graphics = [
       category: "legendary"
     },
     {
+      title: "Lysander LRE",
+      href: "/lre/lysander",
+      description: "Lysander Legendary Release Event teams, requirements, and planning.",
+      image: "/images/lysander-lre.png",
+      thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
+      badge: "New",
+      category: "legendary"
+    },
+    {
       title: "Uthar LRE",
       href: "/lre/uthar",
       description: "Uthar Legendary Release Event teams, requirements, and planning.",

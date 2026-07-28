@@ -34,6 +34,7 @@ FROM UNNEST([
   ('/incursion-mow', 'Incursion and Machine of War', 'guide', 'event', 'featured_infographic', NULL, NULL, NULL, FALSE, FALSE, FALSE, TRUE),
   ('/lre', 'Legendary Release Events', 'category', 'legendary_release_event', 'category_landing', NULL, NULL, NULL, FALSE, FALSE, FALSE, TRUE),
   ('/lre/farsight', 'Farsight LRE', 'guide', 'legendary_release_event', 'featured_infographic', NULL, NULL, 'farsight', FALSE, FALSE, FALSE, TRUE),
+  ('/lre/lysander', 'Lysander LRE', 'guide', 'legendary_release_event', 'featured_infographic', NULL, NULL, 'lysander', FALSE, FALSE, FALSE, TRUE),
   ('/lre/lucius', 'Lucius LRE', 'guide', 'legendary_release_event', 'featured_infographic', NULL, NULL, 'lucius', FALSE, FALSE, FALSE, TRUE),
   ('/lre/uthar', 'Uthar LRE', 'guide', 'legendary_release_event', 'featured_infographic', NULL, NULL, 'uthar', FALSE, FALSE, FALSE, TRUE),
   ('/guild-raid', 'Guild Raid', 'category', 'guild_raid', 'category_landing', NULL, NULL, NULL, FALSE, FALSE, FALSE, TRUE),
