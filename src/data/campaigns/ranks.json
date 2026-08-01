@@ -1,0 +1,174 @@
+{
+  "ranks": {
+    "Stone1": {
+      "name": "Stone I",
+      "sort": 1,
+      "badge": "stone-1.webp"
+    },
+    "Stone2": {
+      "name": "Stone II",
+      "sort": 2,
+      "badge": "stone-2.webp"
+    },
+    "Stone3": {
+      "name": "Stone III",
+      "sort": 3,
+      "badge": "stone-3.webp"
+    },
+    "Iron1": {
+      "name": "Iron I",
+      "sort": 4,
+      "badge": "iron-1.webp"
+    },
+    "Iron2": {
+      "name": "Iron II",
+      "sort": 5,
+      "badge": "iron-2.webp"
+    },
+    "Iron3": {
+      "name": "Iron III",
+      "sort": 6,
+      "badge": "iron-3.webp"
+    },
+    "Bronze1": {
+      "name": "Bronze I",
+      "sort": 7,
+      "badge": "bronze-1.webp"
+    },
+    "Bronze2": {
+      "name": "Bronze II",
+      "sort": 8,
+      "badge": "bronze-2.webp"
+    },
+    "Bronze3": {
+      "name": "Bronze III",
+      "sort": 9,
+      "badge": "bronze-3.webp"
+    },
+    "Silver1": {
+      "name": "Silver I",
+      "sort": 10,
+      "badge": "silver-1.webp"
+    },
+    "Silver2": {
+      "name": "Silver II",
+      "sort": 11,
+      "badge": "silver-2.webp"
+    },
+    "Silver3": {
+      "name": "Silver III",
+      "sort": 12,
+      "badge": "silver-3.webp"
+    },
+    "Gold1": {
+      "name": "Gold I",
+      "sort": 13,
+      "badge": "gold-1.webp"
+    },
+    "Gold2": {
+      "name": "Gold II",
+      "sort": 14,
+      "badge": "gold-2.webp"
+    },
+    "Gold3": {
+      "name": "Gold III",
+      "sort": 15,
+      "badge": "gold-3.webp"
+    },
+    "Diamond1": {
+      "name": "Diamond I",
+      "sort": 16,
+      "badge": "diamond-1.webp"
+    },
+    "Diamond2": {
+      "name": "Diamond II",
+      "sort": 17,
+      "badge": "diamond-2.webp"
+    },
+    "Diamond3": {
+      "name": "Diamond III",
+      "sort": 18,
+      "badge": "diamond-3.webp"
+    },
+    "Adamantine1": {
+      "name": "Adamantine I",
+      "sort": 19,
+      "badge": "adamantine-1.webp"
+    },
+    "Adamantine2": {
+      "name": "Adamantine II",
+      "sort": 20,
+      "badge": "adamantine-2.webp"
+    },
+    "Adamantine3": {
+      "name": "Adamantine III",
+      "sort": 21,
+      "badge": "adamantine-3.webp"
+    }
+  },
+  "aliases": {
+    "adamantine 1": "Adamantine1",
+    "adamantine 2": "Adamantine2",
+    "adamantine 3": "Adamantine3",
+    "adamantine i": "Adamantine1",
+    "adamantine ii": "Adamantine2",
+    "adamantine iii": "Adamantine3",
+    "adamantine1": "Adamantine1",
+    "adamantine2": "Adamantine2",
+    "adamantine3": "Adamantine3",
+    "bronze 1": "Bronze1",
+    "bronze 2": "Bronze2",
+    "bronze 3": "Bronze3",
+    "bronze i": "Bronze1",
+    "bronze ii": "Bronze2",
+    "bronze iii": "Bronze3",
+    "bronze1": "Bronze1",
+    "bronze2": "Bronze2",
+    "bronze3": "Bronze3",
+    "diamond 1": "Diamond1",
+    "diamond 2": "Diamond2",
+    "diamond 3": "Diamond3",
+    "diamond i": "Diamond1",
+    "diamond ii": "Diamond2",
+    "diamond iii": "Diamond3",
+    "diamond1": "Diamond1",
+    "diamond2": "Diamond2",
+    "diamond3": "Diamond3",
+    "gold 1": "Gold1",
+    "gold 2": "Gold2",
+    "gold 3": "Gold3",
+    "gold i": "Gold1",
+    "gold ii": "Gold2",
+    "gold iii": "Gold3",
+    "gold1": "Gold1",
+    "gold2": "Gold2",
+    "gold3": "Gold3",
+    "iron 1": "Iron1",
+    "iron 2": "Iron2",
+    "iron 3": "Iron3",
+    "iron i": "Iron1",
+    "iron ii": "Iron2",
+    "iron iii": "Iron3",
+    "iron1": "Iron1",
+    "iron2": "Iron2",
+    "iron3": "Iron3",
+    "silver 1": "Silver1",
+    "silver 2": "Silver2",
+    "silver 3": "Silver3",
+    "silver i": "Silver1",
+    "silver ii": "Silver2",
+    "silver iii": "Silver3",
+    "silver1": "Silver1",
+    "silver2": "Silver2",
+    "silver3": "Silver3",
+    "stone 1": "Stone1",
+    "stone 2": "Stone2",
+    "stone 3": "Stone3",
+    "stone i": "Stone1",
+    "stone ii": "Stone2",
+    "stone iii": "Stone3",
+    "stone1": "Stone1",
+    "stone2": "Stone2",
+    "stone3": "Stone3"
+  }
+}

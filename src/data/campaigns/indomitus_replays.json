@@ -1,0 +1,3853 @@
+{
+  "id": "indomitus",
+  "name": "Indomitus",
+  "updatedAt": "2026-08-01",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "08Jtk2yYY7U",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "15:27",
+              "timestampSeconds": 927
+            },
+            {
+              "videoId": "jSLLtqmlj44",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:09",
+              "timestampSeconds": 189
+            },
+            {
+              "videoId": "zX0lftfBXmE",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:26",
+              "timestampSeconds": 86
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "RCqCgWvodf0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:47",
+              "timestampSeconds": 347
+            },
+            {
+              "videoId": "V9KRGy9u5a4",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:59",
+              "timestampSeconds": 119
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "tNxtX3L6ZT0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:09",
+              "timestampSeconds": 69
+            },
+            {
+              "videoId": "y3Kn-rdln7g",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:12",
+              "timestampSeconds": 72
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "UvOnr-S9_VM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ]
+            },
+            {
+              "videoId": "wl85120donU",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:44",
+              "timestampSeconds": 224
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "NxEAmgjst58",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:41",
+              "timestampSeconds": 101
+            },
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:27",
+              "timestampSeconds": 87
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:42",
+              "timestampSeconds": 162
+            },
+            {
+              "videoId": "U32h6xd7lrM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:03",
+              "timestampSeconds": 123
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "5INsiYnwx1U",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:18",
+              "timestampSeconds": 78
+            },
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:12",
+              "timestampSeconds": 132
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:10",
+              "timestampSeconds": 250
+            },
+            {
+              "videoId": "KyQCW21ityA",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:09",
+              "timestampSeconds": 69
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "yFUMrVyz3zE",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:37",
+              "timestampSeconds": 97
+            },
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:27",
+              "timestampSeconds": 267
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:42",
+              "timestampSeconds": 342
+            },
+            {
+              "videoId": "qIxw-gE2h6Q",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:24",
+              "timestampSeconds": 144
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "3oMBOxu9_sE",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:11",
+              "timestampSeconds": 71
+            },
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:09",
+              "timestampSeconds": 309
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:18",
+              "timestampSeconds": 438
+            },
+            {
+              "videoId": "YlcJvPrFk0E",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:30",
+              "timestampSeconds": 90
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "QEP4RKlAXWU",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:40",
+              "timestampSeconds": 100
+            },
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:36",
+              "timestampSeconds": 396
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:14",
+              "timestampSeconds": 554
+            },
+            {
+              "videoId": "nrXHvVlooXs",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:13",
+              "timestampSeconds": 193
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "evidence": [
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:27",
+              "timestampSeconds": 447
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:18",
+              "timestampSeconds": 678
+            },
+            {
+              "videoId": "eFTDUHwmtbI",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:43",
+              "timestampSeconds": 163
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:15",
+              "timestampSeconds": 495
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:34",
+              "timestampSeconds": 814
+            },
+            {
+              "videoId": "9glkxy3HD3Q",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:25",
+              "timestampSeconds": 85
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "E6KF0v44iec",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:36",
+              "timestampSeconds": 636
+            },
+            {
+              "videoId": "LVDx5-o7E8A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "15:54",
+              "timestampSeconds": 954
+            },
+            {
+              "videoId": "qd_4cGIrx4U",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:42",
+              "timestampSeconds": 162
+            },
+            {
+              "videoId": "J2QkI2Oav2s",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:37",
+              "timestampSeconds": 97
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "cySN3Az-Q4o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:27",
+              "timestampSeconds": 207
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "cySN3Az-Q4o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:29",
+              "timestampSeconds": 269
+            },
+            {
+              "videoId": "nYdbmTz2_HI",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:08",
+              "timestampSeconds": 128
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "cySN3Az-Q4o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:30",
+              "timestampSeconds": 330
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "cySN3Az-Q4o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:09",
+              "timestampSeconds": 429
+            },
+            {
+              "videoId": "bDITAm64BLM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:51",
+              "timestampSeconds": 111
+            },
+            {
+              "videoId": "nM8vTsDH6yY",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:08",
+              "timestampSeconds": 68
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "Zvim15L37jc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:00",
+              "timestampSeconds": 180
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "Zvim15L37jc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:36",
+              "timestampSeconds": 216
+            },
+            {
+              "videoId": "hTRp_aNYeKI",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:46",
+              "timestampSeconds": 106
+            },
+            {
+              "videoId": "lFOmNEoaGRg",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:06",
+              "timestampSeconds": 66
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "cySN3Az-Q4o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:39",
+              "timestampSeconds": 579
+            },
+            {
+              "videoId": "s1UReHv4d1s",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:52",
+              "timestampSeconds": 112
+            },
+            {
+              "videoId": "a1Z0tj11A4E",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:08",
+              "timestampSeconds": 68
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "Zvim15L37jc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:24",
+              "timestampSeconds": 264
+            },
+            {
+              "videoId": "eysRFR_iLzM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:20",
+              "timestampSeconds": 80
+            },
+            {
+              "videoId": "NC1O27ShVyw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:20",
+              "timestampSeconds": 140
+            },
+            {
+              "videoId": "i88_ghAzXDo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:19",
+              "timestampSeconds": 79
+            },
+            {
+              "videoId": "CRKgAevWkOY",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:00",
+              "timestampSeconds": 300
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:48",
+              "timestampSeconds": 108
+            },
+            {
+              "videoId": "_FHJ6PiAZ1M",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:37",
+              "timestampSeconds": 97
+            },
+            {
+              "videoId": "yUqGepPjLR4",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:14",
+              "timestampSeconds": 74
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:36",
+              "timestampSeconds": 156
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:46",
+              "timestampSeconds": 166
+            },
+            {
+              "videoId": "dvgNCwTRfik",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:58",
+              "timestampSeconds": 118
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:30",
+              "timestampSeconds": 210
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:22",
+              "timestampSeconds": 262
+            },
+            {
+              "videoId": "gNIeqbF_UI0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:15",
+              "timestampSeconds": 135
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:21",
+              "timestampSeconds": 261
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:46",
+              "timestampSeconds": 346
+            },
+            {
+              "videoId": "gVSP7Vdbk7E",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:11",
+              "timestampSeconds": 131
+            },
+            {
+              "videoId": "oOIdt9HdIr8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:38",
+              "timestampSeconds": 98
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:15",
+              "timestampSeconds": 315
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:54",
+              "timestampSeconds": 594
+            },
+            {
+              "videoId": "oA6FxmwbKCY",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:45",
+              "timestampSeconds": 105
+            },
+            {
+              "videoId": "dTJDfJNN64k",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:26",
+              "timestampSeconds": 86
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:06",
+              "timestampSeconds": 366
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:46",
+              "timestampSeconds": 706
+            },
+            {
+              "videoId": "xCQ8fckL9cA",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:51",
+              "timestampSeconds": 111
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:00",
+              "timestampSeconds": 420
+            },
+            {
+              "videoId": "E77-3eM08yQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:58",
+              "timestampSeconds": 838
+            },
+            {
+              "videoId": "nAWhq-uJFnI",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:31",
+              "timestampSeconds": 211
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "PWO-YZM8-xw",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCanoness",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:06",
+              "timestampSeconds": 486
+            },
+            {
+              "videoId": "lqpUtxnuZ2c",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:32",
+              "timestampSeconds": 152
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:30",
+              "timestampSeconds": 90
+            },
+            {
+              "videoId": "T20piw3NYAc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:18",
+              "timestampSeconds": 78
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:51",
+              "timestampSeconds": 171
+            },
+            {
+              "videoId": "AeRaUn7sA5k",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:33",
+              "timestampSeconds": 153
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:51",
+              "timestampSeconds": 231
+            },
+            {
+              "videoId": "crQnWOjZ8v0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:14",
+              "timestampSeconds": 74
+            },
+            {
+              "videoId": "Qsk9jujKKmQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:16",
+              "timestampSeconds": 76
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:21",
+              "timestampSeconds": 381
+            },
+            {
+              "videoId": "guEkBbNEb1E",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:19",
+              "timestampSeconds": 139
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:36",
+              "timestampSeconds": 456
+            },
+            {
+              "videoId": "Vm7p5GNZjf8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:51",
+              "timestampSeconds": 111
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:42",
+              "timestampSeconds": 522
+            },
+            {
+              "videoId": "ixfnD0tAUlg",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:01",
+              "timestampSeconds": 121
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:27",
+              "timestampSeconds": 567
+            }
+          ]
+        },
+        {
+          "number": 32,
+          "evidence": [
+            {
+              "videoId": "s2CPdCUcrQo",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:57",
+              "timestampSeconds": 717
+            },
+            {
+              "videoId": "Mk-8cNaCq3c",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:09",
+              "timestampSeconds": 129
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:48",
+              "timestampSeconds": 228
+            },
+            {
+              "videoId": "RB_2VaNwCO0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:06",
+              "timestampSeconds": 126
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:45",
+              "timestampSeconds": 285
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:00",
+              "timestampSeconds": 360
+            },
+            {
+              "videoId": "CNte_gqRpU8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:03",
+              "timestampSeconds": 183
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:21",
+              "timestampSeconds": 441
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:33",
+              "timestampSeconds": 513
+            },
+            {
+              "videoId": "X5dFDVctUmM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:19",
+              "timestampSeconds": 79
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:42",
+              "timestampSeconds": 582
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:36",
+              "timestampSeconds": 636
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "q9Dx8iSth2Y",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "18:36",
+              "timestampSeconds": 1116
+            },
+            {
+              "videoId": "15ihnMOoyYs",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:03",
+              "timestampSeconds": 183
+            },
+            {
+              "videoId": "u4v3KJtE1ZM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:19",
+              "timestampSeconds": 199
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "08Jtk2yYY7U": {
+      "title": "Warhammer 40,000: Tacticus (Mobile) Indomitus Campaign: Battles 66 - 70 Walkthrough",
+      "creator": "Patrick Bradshaw",
+      "url": "https://www.youtube.com/watch?v=08Jtk2yYY7U"
+    },
+    "jSLLtqmlj44": {
+      "title": "Indomitus-70: 3 Medal no Yarrick, with Isabella",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=jSLLtqmlj44"
+    },
+    "zX0lftfBXmE": {
+      "title": "INDOMITUS: BATTLE 70 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=zX0lftfBXmE"
+    },
+    "RCqCgWvodf0": {
+      "title": "Warhammer Tacticus. How to beat level 71",
+      "creator": "Unknown..",
+      "url": "https://www.youtube.com/watch?v=RCqCgWvodf0"
+    },
+    "V9KRGy9u5a4": {
+      "title": "INDOMITUS: BATTLE 71 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=V9KRGy9u5a4"
+    },
+    "tNxtX3L6ZT0": {
+      "title": "Indomitus-72 3 Medals!",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=tNxtX3L6ZT0"
+    },
+    "y3Kn-rdln7g": {
+      "title": "INDOMITUS: BATTLE 72 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=y3Kn-rdln7g"
+    },
+    "UvOnr-S9_VM": {
+      "title": "INDOMITUS: BATTLE 73 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=UvOnr-S9_VM"
+    },
+    "wl85120donU": {
+      "title": "Indomitus 73: Base Units 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=wl85120donU"
+    },
+    "NxEAmgjst58": {
+      "title": "INDOMITUS ELITE: BATTLE 1 - 3 stars - warhammer 40.000 tacticus",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=NxEAmgjst58"
+    },
+    "E6KF0v44iec": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (1-8) Missions",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=E6KF0v44iec"
+    },
+    "LVDx5-o7E8A": {
+      "title": "Warhammer 40k Tacticus | Indomitus Elite Campaign 1 - 8 | Gameplay",
+      "creator": "Cagedslinky",
+      "url": "https://www.youtube.com/watch?v=LVDx5-o7E8A"
+    },
+    "U32h6xd7lrM": {
+      "title": "TACTICUS - Indomitus Elite : BATTLE 1 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=U32h6xd7lrM"
+    },
+    "5INsiYnwx1U": {
+      "title": "INDOMITUS ELITE: BATTLE 2 - 3 STARS - warhammer 40.000 tacticus - walkthrough",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=5INsiYnwx1U"
+    },
+    "KyQCW21ityA": {
+      "title": "TACTICUS - Indomitus Elite : BATTLE 2 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=KyQCW21ityA"
+    },
+    "yFUMrVyz3zE": {
+      "title": "INDOMITUS ELITE: BATTLE 3 - 3 STARS - warhammer 40.000 tacticus - walkthrough",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=yFUMrVyz3zE"
+    },
+    "qIxw-gE2h6Q": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 3 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qIxw-gE2h6Q"
+    },
+    "3oMBOxu9_sE": {
+      "title": "INDOMITUS ELITE: BATTLE 4 - 3 STARS - warhammer 40.000 tacticus - walkthrough",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=3oMBOxu9_sE"
+    },
+    "YlcJvPrFk0E": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 4 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=YlcJvPrFk0E"
+    },
+    "QEP4RKlAXWU": {
+      "title": "INDOMITUS ELITE: BATTLE 5 - 3 STARS - warhammer 40.000 tacticus - walkthrough",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=QEP4RKlAXWU"
+    },
+    "nrXHvVlooXs": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 5 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nrXHvVlooXs"
+    },
+    "eFTDUHwmtbI": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 6 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=eFTDUHwmtbI"
+    },
+    "9glkxy3HD3Q": {
+      "title": "Indomitus Elite Stage 7 | 3 Stars Clear | Ultramarines Vs Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=9glkxy3HD3Q"
+    },
+    "qd_4cGIrx4U": {
+      "title": "TACTICUS - Indomitus Elite : BATTLE 8 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qd_4cGIrx4U"
+    },
+    "J2QkI2Oav2s": {
+      "title": "Indomitus Elite Stage 8 | 3 Stars Clear | Ultramarines Vs Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=J2QkI2Oav2s"
+    },
+    "cySN3Az-Q4o": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (9-16) Missions",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=cySN3Az-Q4o"
+    },
+    "nYdbmTz2_HI": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 10 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nYdbmTz2_HI"
+    },
+    "bDITAm64BLM": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 12 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=bDITAm64BLM"
+    },
+    "nM8vTsDH6yY": {
+      "title": "Indomitus Elite Stage 12 | 3 Stars Clear | Ultramarines Vs Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=nM8vTsDH6yY"
+    },
+    "Zvim15L37jc": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (9-16) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=Zvim15L37jc"
+    },
+    "hTRp_aNYeKI": {
+      "title": "Indomitus 14 Elite 3 star. (Bronze II units)",
+      "creator": "Jego Go",
+      "url": "https://www.youtube.com/watch?v=hTRp_aNYeKI"
+    },
+    "lFOmNEoaGRg": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 14 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lFOmNEoaGRg"
+    },
+    "s1UReHv4d1s": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 15 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=s1UReHv4d1s"
+    },
+    "a1Z0tj11A4E": {
+      "title": "Indomitus Elite Stage 15 | 3 Stars Clear | Ultramarine VS Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=a1Z0tj11A4E"
+    },
+    "eysRFR_iLzM": {
+      "title": "Warhammer 40k Tacticus. Indomitus Elite 16",
+      "creator": "LegionariusXII",
+      "url": "https://www.youtube.com/watch?v=eysRFR_iLzM"
+    },
+    "NC1O27ShVyw": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 16 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=NC1O27ShVyw"
+    },
+    "i88_ghAzXDo": {
+      "title": "Indomitus Elite Stage 16 | 3 Stars Clear | Ultramarine VS Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=i88_ghAzXDo"
+    },
+    "CRKgAevWkOY": {
+      "title": "warhammer tacticus 3 stars indomitus elite campain 16-34",
+      "creator": "Sun-Shower",
+      "url": "https://www.youtube.com/watch?v=CRKgAevWkOY"
+    },
+    "PWO-YZM8-xw": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (17-24) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=PWO-YZM8-xw"
+    },
+    "_FHJ6PiAZ1M": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 17 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=_FHJ6PiAZ1M"
+    },
+    "yUqGepPjLR4": {
+      "title": "Indomitus Elite Stage 17 | 3 Stars Clear | Ultramarine VS Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=yUqGepPjLR4"
+    },
+    "E77-3eM08yQ": {
+      "title": "Indomitus Elite Levels 17-24 (no sound)",
+      "creator": "NoxTempest",
+      "url": "https://www.youtube.com/watch?v=E77-3eM08yQ"
+    },
+    "dvgNCwTRfik": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 18 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=dvgNCwTRfik"
+    },
+    "gNIeqbF_UI0": {
+      "title": "Elite Indomitus-19: 3 Medals with only Tig/Bellator/Certus",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=gNIeqbF_UI0"
+    },
+    "gVSP7Vdbk7E": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 20 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=gVSP7Vdbk7E"
+    },
+    "oOIdt9HdIr8": {
+      "title": "Indomitus Elite Stage 20 | 3 Stars Clear | Ultramarine VS Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=oOIdt9HdIr8"
+    },
+    "oA6FxmwbKCY": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 21 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=oA6FxmwbKCY"
+    },
+    "dTJDfJNN64k": {
+      "title": "Indomitus Elite Stage 21 | 3 Stars Clear | Ultramarine VS Necrons | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=dTJDfJNN64k"
+    },
+    "xCQ8fckL9cA": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 22 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=xCQ8fckL9cA"
+    },
+    "nAWhq-uJFnI": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 23 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nAWhq-uJFnI"
+    },
+    "lqpUtxnuZ2c": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 24 - warhammer 40k - walkthrough with Isabella",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lqpUtxnuZ2c"
+    },
+    "s2CPdCUcrQo": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (25-32) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=s2CPdCUcrQo"
+    },
+    "T20piw3NYAc": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 25 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=T20piw3NYAc"
+    },
+    "AeRaUn7sA5k": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 26 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=AeRaUn7sA5k"
+    },
+    "crQnWOjZ8v0": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 27 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=crQnWOjZ8v0"
+    },
+    "Qsk9jujKKmQ": {
+      "title": "Warhammer 40.000 Tacticus Indomitus Elite 27 Fazt Boom Boyz",
+      "creator": "rancidbob",
+      "url": "https://www.youtube.com/watch?v=Qsk9jujKKmQ"
+    },
+    "guEkBbNEb1E": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 28 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=guEkBbNEb1E"
+    },
+    "Vm7p5GNZjf8": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 29 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Vm7p5GNZjf8"
+    },
+    "ixfnD0tAUlg": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 30 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ixfnD0tAUlg"
+    },
+    "Mk-8cNaCq3c": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 32 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Mk-8cNaCq3c"
+    },
+    "q9Dx8iSth2Y": {
+      "title": "Warhammer: Tacticus - Indomitus Elite Battle Campaign (33-40) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=q9Dx8iSth2Y"
+    },
+    "RB_2VaNwCO0": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 33 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=RB_2VaNwCO0"
+    },
+    "CNte_gqRpU8": {
+      "title": "Elite Indomitus 35 (Minimum Gear to beat Elite Ind)",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=CNte_gqRpU8"
+    },
+    "X5dFDVctUmM": {
+      "title": "Elite Indomitus 37",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=X5dFDVctUmM"
+    },
+    "15ihnMOoyYs": {
+      "title": "Indomitus Elite 40 Budget Clear",
+      "creator": "Crazyirshman",
+      "url": "https://www.youtube.com/watch?v=15ihnMOoyYs"
+    },
+    "u4v3KJtE1ZM": {
+      "title": "Indomitus Elite 40 3 Medals (Polska)",
+      "creator": "Ether",
+      "url": "https://www.youtube.com/watch?v=u4v3KJtE1ZM"
+    }
+  }
+}

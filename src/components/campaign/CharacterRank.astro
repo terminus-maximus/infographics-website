@@ -1,0 +1,66 @@
+---
+import RankBadge from "./RankBadge.astro";
+import type { CharacterReference, RankReference } from "../../lib/campaigns";
+
+interface Props {
+  character: CharacterReference;
+  rank: RankReference;
+  highlighted?: boolean;
+}
+
+const { character, rank, highlighted = false } = Astro.props;
+---
+
+<div class:list={["character-rank", { highlighted }]}>
+  <img
+    class="portrait"
+    src={character.portrait}
+    alt={`${character.name} portrait`}
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <div class="details">
+    <strong>{character.shortName}</strong>
+    <RankBadge rank={rank} />
+  </div>
+</div>
+
+<style>
+  .character-rank {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 7.75rem;
+    padding: 0.65rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #1e1e1e;
+  }
+
+  .character-rank.highlighted {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 1px rgb(212 175 55 / 28%);
+  }
+
+  .portrait {
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #121212;
+    object-fit: cover;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  strong {
+    color: #f5f5f5;
+    font-size: 0.8rem;
+  }
+</style>

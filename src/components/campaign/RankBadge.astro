@@ -1,0 +1,38 @@
+---
+import type { RankReference } from "../../lib/campaigns";
+
+interface Props {
+  rank: RankReference;
+}
+
+const { rank } = Astro.props;
+---
+
+<figure class="rank-badge" title={rank.name}>
+  <img src={rank.badge} alt={`${rank.name} rank badge`} width="64" height="64" loading="lazy" />
+  <figcaption>{rank.name}</figcaption>
+</figure>
+
+<style>
+  .rank-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+  }
+
+  figcaption {
+    color: #cccccc;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+</style>

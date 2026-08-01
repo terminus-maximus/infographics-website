@@ -1,0 +1,105 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  thumbnail: string;
+  badge?: string;
+}
+
+const { title, description, href, thumbnail, badge } = Astro.props;
+---
+
+<a class="campaign-card" href={href}>
+  <div class="image-wrap">
+    <img src={thumbnail} alt={`${title} preview`} loading="lazy" />
+  </div>
+
+  <div class="title-row">
+    <h3>{title}</h3>
+    {badge && <span class="badge">{badge}</span>}
+  </div>
+  <p>{description}</p>
+</a>
+
+<style>
+  .campaign-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background: #1e1e1e;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .campaign-card:hover,
+  .campaign-card:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  .image-wrap {
+    position: relative;
+    height: 120px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #121212;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+  }
+
+  .title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .badge {
+    padding: 0.2rem 0.55rem;
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.12);
+    color: #f5d76e;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    color: #cccccc;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 700px) {
+    .campaign-card {
+      padding: 1rem;
+    }
+
+    .image-wrap {
+      height: 110px;
+    }
+  }
+</style>

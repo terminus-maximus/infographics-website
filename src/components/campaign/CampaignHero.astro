@@ -1,0 +1,95 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  image?: string;
+  imageAlt?: string;
+  updatedAt?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const { title, subtitle, image, imageAlt = "", updatedAt, backHref, backLabel } = Astro.props;
+const formattedUpdatedAt = updatedAt
+  ? new Date(`${updatedAt}T12:00:00`).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  : "";
+---
+
+<section class="campaign-hero">
+  {backHref && backLabel && (
+    <a class="back-link" href={backHref}>&larr; {backLabel}</a>
+  )}
+
+  {image && (
+    <img class="hero-image" src={image} alt={imageAlt} width="1200" height="592" />
+  )}
+
+  <h1>{title}</h1>
+  <p class="subtitle">{subtitle}</p>
+
+  {formattedUpdatedAt && (
+    <p class="last-updated">Replay data updated: <time datetime={updatedAt}>{formattedUpdatedAt}</time></p>
+  )}
+</section>
+
+<style>
+  .campaign-hero {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .back-link {
+    display: block;
+    margin-bottom: 1.25rem;
+    color: #d4af37;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    color: #f5d76e;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .hero-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
+  }
+
+  h1 {
+    max-width: 950px;
+    margin: 0 auto 1.25rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #cccccc;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+  }
+
+  .last-updated {
+    margin: 1rem auto 0;
+    color: #d4af37;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 700px) {
+    .campaign-hero {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

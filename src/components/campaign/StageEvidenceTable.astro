@@ -1,0 +1,1302 @@
+---
+import CharacterRank from "./CharacterRank.astro";
+import type {
+  CampaignMode,
+  CampaignVideo,
+  CharacterReference,
+  RankReference,
+} from "../../lib/campaigns";
+
+interface Props {
+  modes: CampaignMode[];
+  videos: Record<string, CampaignVideo>;
+  characters: Record<string, CharacterReference>;
+  ranks: Record<string, RankReference>;
+}
+
+const { modes, videos, characters, ranks } = Astro.props;
+const allEvidence = modes.flatMap((mode) =>
+  mode.stages.flatMap((stage) => stage.evidence.map((evidence) => ({ mode, stage, evidence }))),
+);
+const creators = [...new Set(allEvidence.map(({ evidence }) => videos[evidence.videoId].creator))].sort((a, b) =>
+  a.localeCompare(b),
+);
+const requiredCharacterIds = ["ultraTigurius", "ultraEliminatorSgt", "ultraInceptorSgt"];
+const requiredCharacterIdSet = new Set(requiredCharacterIds);
+const requiredCharacters = requiredCharacterIds.map((characterId) => characters[characterId]);
+const supportingCharacterIds = [
+  ...new Set(
+    allEvidence.flatMap(({ evidence }) =>
+      evidence.roster
+        .filter(({ characterId }) => !requiredCharacterIdSet.has(characterId))
+        .map(({ characterId }) => characterId),
+    ),
+  ),
+].sort((left, right) => characters[left].shortName.localeCompare(characters[right].shortName));
+const rankOptions = Object.values(ranks).sort((left, right) => left.sort - right.sort);
+const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
+  if (timestampSeconds == null) return url;
+  const timestampedUrl = new URL(url);
+  timestampedUrl.searchParams.set("t", `${timestampSeconds}s`);
+  return timestampedUrl.toString();
+};
+---
+
+<section class="filter-section" aria-labelledby="campaign-filter-heading">
+  <h2 id="campaign-filter-heading">Campaign Guide Filters</h2>
+  <form class="filters" data-campaign-filters>
+    {requiredCharacters.map((character) => (
+      <div class="filter-field menu-field" data-menu-field>
+        <span class="filter-label" title={`${character.shortName} maximum rank`}>
+          <img class="filter-label-icon" src={character.portrait} alt="" width="28" height="28" loading="lazy" />
+          <span class="visually-hidden">{character.shortName}</span>
+          <span>Max rank</span>
+        </span>
+        <button
+          class="filter-toggle"
+          type="button"
+          aria-label={`${character.shortName} maximum rank`}
+          aria-expanded="false"
+          data-menu-toggle
+          data-rank-toggle={character.id}
+          data-max-sort=""
+        >
+          <span class="toggle-content">
+            <img class="toggle-icon" data-toggle-icon src="" alt="" width="26" height="26" hidden />
+            <span data-toggle-text>Any rank</span>
+          </span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="filter-menu rank-menu" data-filter-menu hidden>
+          <button
+            class="filter-option"
+            type="button"
+            data-rank-option
+            data-rank-id=""
+            data-rank-sort=""
+            data-rank-label="Any rank"
+            data-rank-badge=""
+          >
+            <span class="empty-option-icon" aria-hidden="true">—</span>
+            <span>Any rank</span>
+          </button>
+          {rankOptions.map((rank) => (
+            <button
+              class="filter-option"
+              type="button"
+              data-rank-option
+              data-rank-id={rank.id}
+              data-rank-sort={rank.sort}
+              data-rank-label={rank.name}
+              data-rank-badge={rank.badge}
+            >
+              <img src={rank.badge} alt="" width="28" height="28" loading="lazy" />
+              <span>{rank.name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="filter-field menu-field" data-menu-field>
+      <span class="filter-label">Supporting Heroes</span>
+      <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-hero-toggle="supporting">
+        <span class="toggle-content">
+          <img class="toggle-icon" data-toggle-icon src="" alt="" width="26" height="26" hidden />
+          <span data-toggle-text>Select all that apply</span>
+        </span>
+        <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="filter-menu hero-menu" data-filter-menu hidden>
+        {supportingCharacterIds.map((characterId) => {
+          const character = characters[characterId];
+          return (
+            <label class="hero-option">
+              <input
+                type="checkbox"
+                name="supportingHero"
+                value={characterId}
+                data-hero-checkbox="supporting"
+                data-icon={character.portrait}
+              />
+              <img src={character.portrait} alt="" width="32" height="32" loading="lazy" />
+              <span>{character.shortName}</span>
+            </label>
+          );
+        })}
+      </div>
+    </div>
+
+    <details class="more-filters" data-more-filters>
+      <summary>
+        <span>More Filters</span>
+        <span class="active-filter-count" data-more-filter-count hidden></span>
+      </summary>
+      <div class="more-filter-panel">
+        <div class="filter-field menu-field" data-menu-field>
+          <span class="filter-label">Excluded Heroes</span>
+          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-hero-toggle="excluded">
+            <span class="toggle-content">
+              <img class="toggle-icon" data-toggle-icon src="" alt="" width="26" height="26" hidden />
+              <span data-toggle-text>Select all that apply</span>
+            </span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="filter-menu hero-menu" data-filter-menu hidden>
+            {supportingCharacterIds.map((characterId) => {
+              const character = characters[characterId];
+              return (
+                <label class="hero-option">
+                  <input
+                    type="checkbox"
+                    name="excludedHero"
+                    value={characterId}
+                    data-hero-checkbox="excluded"
+                    data-icon={character.portrait}
+                  />
+                  <img src={character.portrait} alt="" width="32" height="32" loading="lazy" />
+                  <span>{character.shortName}</span>
+                </label>
+              );
+            })}
+          </div>
+        </div>
+
+        <div class="filter-field menu-field" data-menu-field>
+          <span class="filter-label">Mode</span>
+          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="mode">
+            <span class="toggle-content">
+              <span data-toggle-text>All modes</span>
+            </span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="filter-menu multi-menu" data-filter-menu hidden>
+            {modes.map((mode) => (
+              <label class="multi-option stage-option">
+                <input type="checkbox" name="mode" value={mode.id} data-multi-checkbox="mode" />
+                <span>{mode.name}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-field menu-field" data-menu-field>
+          <span class="filter-label">Stage</span>
+          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="stage">
+            <span class="toggle-content">
+              <span data-toggle-text>All stages</span>
+            </span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="filter-menu multi-menu" data-filter-menu hidden>
+            {modes.flatMap((mode) =>
+              mode.stages.map((stage) => (
+                <label class="multi-option stage-option">
+                  <input type="checkbox" name="stage" value={`${mode.id}:${stage.number}`} data-multi-checkbox="stage" />
+                  <span>{mode.name} {stage.number}</span>
+                </label>
+              )),
+            )}
+          </div>
+        </div>
+
+        <div class="filter-field menu-field creator-filter" data-menu-field>
+          <span class="filter-label">
+            <img class="filter-label-icon youtube-icon" src="/images/replay-library/YTLogo.webp" alt="" width="28" height="28" loading="lazy" />
+            <span>Creator</span>
+          </span>
+          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="creator">
+            <span class="toggle-content">
+              <img class="toggle-icon youtube-icon" src="/images/replay-library/YTLogo.webp" alt="" width="26" height="26" />
+              <span data-toggle-text>All creators</span>
+            </span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="filter-menu multi-menu" data-filter-menu hidden>
+            {creators.map((creator) => (
+              <label class="multi-option creator-option">
+                <input type="checkbox" name="creator" value={creator} data-multi-checkbox="creator" />
+                <img class="youtube-icon" src="/images/replay-library/YTLogo.webp" alt="" width="32" height="32" loading="lazy" />
+                <span>{creator}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <button class="clear-filters" type="reset">Clear filters</button>
+  </form>
+</section>
+
+<section class="strategies-section" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
+  <h2 id="campaign-strategies-heading">Campaign Strategies</h2>
+
+  <div class="stage-table" role="region" aria-label="Indomitus stage replay evidence" tabindex="0">
+    <div class="table-header" aria-hidden="true">
+      <span class="expand-header">+</span>
+      <span>Mode</span>
+      <span>Stage</span>
+      <span>Replay count</span>
+      <span>Supporting characters</span>
+    </div>
+
+    {modes.flatMap((mode) =>
+      mode.stages.map((stage) => {
+        const stageSupportingCharacterIds = [
+          ...new Set(
+            stage.evidence.flatMap((evidence) =>
+              evidence.roster
+                .filter(({ characterId }) => !requiredCharacterIdSet.has(characterId))
+                .map(({ characterId }) => characterId),
+            ),
+          ),
+        ];
+        return (
+          <details class="stage-row" data-stage-row data-mode={mode.id} data-stage={`${mode.id}:${stage.number}`}>
+            <summary>
+              <span class="expand-indicator" aria-hidden="true">+</span>
+              <span class={`mode-label mode-${mode.id}`}>{mode.name}</span>
+              <strong class="stage-number">{stage.number}</strong>
+              <span class="replay-count"><span data-visible-count>{stage.evidence.length}</span> <span data-replay-word>{stage.evidence.length === 1 ? "replay" : "replays"}</span></span>
+              <span class="supporting-characters">
+                {stageSupportingCharacterIds.map((characterId) => (
+                  <img
+                    src={characters[characterId].portrait}
+                    alt={characters[characterId].name}
+                    title={characters[characterId].shortName}
+                    width="46"
+                    height="46"
+                    loading="lazy"
+                    data-supporting-summary-character={characterId}
+                    data-supporting-summary-name={characters[characterId].shortName}
+                  />
+                ))}
+                <span
+                  class="supporting-empty"
+                  aria-label="No supporting characters"
+                  data-supporting-summary-empty
+                  hidden={stageSupportingCharacterIds.length > 0}
+                >—</span>
+              </span>
+            </summary>
+
+            <div class="evidence-list">
+              {stage.evidence.map((evidence) => {
+                const video = videos[evidence.videoId];
+                const videoUrl = getTimestampedVideoUrl(video.url, evidence.timestampSeconds);
+                const highestRankSort = Math.max(...evidence.roster.map(({ rankId }) => ranks[rankId].sort));
+                const rosterData = evidence.roster.map(({ characterId, rankId }) => `${characterId}:${rankId}`).join("|");
+                const requiredRankData = evidence.roster
+                  .filter(({ characterId }) => requiredCharacterIdSet.has(characterId))
+                  .map(({ characterId, rankId }) => `${characterId}:${ranks[rankId].sort}`)
+                  .join("|");
+                const supportingCharacterData = evidence.roster
+                  .filter(({ characterId }) => !requiredCharacterIdSet.has(characterId))
+                  .map(({ characterId }) => characterId)
+                  .join("|");
+                return (
+                  <article
+                    class="evidence-card"
+                    data-evidence-card
+                    data-creator={video.creator}
+                    data-roster={rosterData}
+                    data-required-ranks={requiredRankData}
+                    data-supporting-characters={supportingCharacterData}
+                  >
+                    <div class="roster">
+                      {evidence.roster.map(({ characterId, rankId }) => (
+                        <CharacterRank
+                          character={characters[characterId]}
+                          rank={ranks[rankId]}
+                          highlighted={ranks[rankId].sort === highestRankSort}
+                        />
+                      ))}
+                    </div>
+                    <a
+                      class="video-link"
+                      href={videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${video.creator} replay${evidence.timestamp ? ` at ${evidence.timestamp}` : ""} on YouTube`}
+                    >
+                      <span class="play-icon" aria-hidden="true">&#9654;</span>
+                      <span>
+                        <strong>{video.creator}</strong>
+                        <small>{video.title}{evidence.timestamp ? ` · Starts at ${evidence.timestamp}` : ""}</small>
+                      </span>
+                    </a>
+                  </article>
+                );
+              })}
+            </div>
+          </details>
+        );
+      }),
+    )}
+  </div>
+
+  <p class="empty-state" data-empty-state hidden>No replay observations match these filters.</p>
+</section>
+
+<script>
+  const filterForm = document.querySelector("[data-campaign-filters]");
+  const stageRows = Array.from(document.querySelectorAll("[data-stage-row]"));
+  const emptyState = document.querySelector("[data-empty-state]");
+  const menuToggles = Array.from(document.querySelectorAll("[data-menu-toggle]"));
+  const rankToggles = Array.from(document.querySelectorAll("[data-rank-toggle]"));
+  const heroToggles = Array.from(document.querySelectorAll("[data-hero-toggle]"));
+  const multiToggles = Array.from(document.querySelectorAll("[data-multi-toggle]"));
+  const statisticsSection = document.querySelector("[data-campaign-statistics]");
+  const statisticsGrid = document.querySelector("[data-statistics-grid]");
+  const statisticsEmpty = document.querySelector("[data-statistics-empty]");
+  type StatisticRank = { name: string; sort: number; badge: string };
+  let statisticRankMap: Record<string, StatisticRank> = {};
+  if (statisticsSection instanceof HTMLElement) {
+    try {
+      statisticRankMap = JSON.parse(statisticsSection.dataset.rankMap || "{}");
+    } catch {
+      statisticRankMap = {};
+    }
+  }
+
+  const closeMenu = (toggle: Element) => {
+    if (!(toggle instanceof HTMLButtonElement)) return;
+    const menu = toggle.closest("[data-menu-field]")?.querySelector("[data-filter-menu]");
+    if (menu instanceof HTMLElement) menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  const closeAllMenus = (exceptToggle: Element | null = null) => {
+    menuToggles.forEach((toggle) => {
+      if (toggle !== exceptToggle) closeMenu(toggle);
+    });
+  };
+
+  const updateHeroToggle = (filterName: string) => {
+    const toggle = heroToggles.find((candidate) => candidate.getAttribute("data-hero-toggle") === filterName);
+    if (!(toggle instanceof HTMLButtonElement) || !(filterForm instanceof HTMLFormElement)) return;
+    const selected = Array.from(
+      filterForm.querySelectorAll(`[data-hero-checkbox="${filterName}"]:checked`),
+    );
+    const text = toggle.querySelector("[data-toggle-text]");
+    const icon = toggle.querySelector("[data-toggle-icon]");
+
+    if (text) text.textContent = selected.length ? `${selected.length} selected` : "Select all that apply";
+    if (icon instanceof HTMLImageElement) {
+      const firstSelected = selected[0];
+      const iconPath = firstSelected instanceof HTMLInputElement ? firstSelected.dataset.icon || "" : "";
+      icon.src = iconPath;
+      icon.hidden = !iconPath;
+    }
+  };
+
+  const getSelectedMultiValues = (filterName: string) => {
+    if (!(filterForm instanceof HTMLFormElement)) return [];
+    return Array.from(filterForm.querySelectorAll(`[data-multi-checkbox="${filterName}"]:checked`)).flatMap(
+      (checkbox) => checkbox instanceof HTMLInputElement ? [checkbox.value] : [],
+    );
+  };
+
+  const updateMultiToggle = (filterName: string) => {
+    const toggle = multiToggles.find((candidate) => candidate.getAttribute("data-multi-toggle") === filterName);
+    if (!(toggle instanceof HTMLButtonElement)) return;
+    const selectedCount = getSelectedMultiValues(filterName).length;
+    const text = toggle.querySelector("[data-toggle-text]");
+    if (!text) return;
+
+    if (!selectedCount) {
+      text.textContent = {
+        mode: "All modes",
+        stage: "All stages",
+        creator: "All creators",
+      }[filterName] || "All";
+      return;
+    }
+
+    const noun = filterName === "mode" ? "mode" : filterName === "stage" ? "stage" : "creator";
+    text.textContent = `${selectedCount} ${noun}${selectedCount === 1 ? "" : "s"} selected`;
+  };
+
+  const updateMoreFilterCount = () => {
+    if (!(filterForm instanceof HTMLFormElement)) return;
+    const excludedHeroCount = filterForm.querySelectorAll('[data-hero-checkbox="excluded"]:checked').length;
+    const count =
+      excludedHeroCount +
+      getSelectedMultiValues("mode").length +
+      getSelectedMultiValues("stage").length +
+      getSelectedMultiValues("creator").length;
+    const badge = filterForm.querySelector("[data-more-filter-count]");
+    if (badge instanceof HTMLElement) {
+      badge.textContent = String(count);
+      badge.hidden = count === 0;
+    }
+  };
+
+  const updateStatistics = () => {
+    if (!(statisticsGrid instanceof HTMLElement)) return;
+    const observations = new Map<
+      string,
+      { eliteStages: Set<string>; normalStages: Set<string>; highestRankId: string; highestSort: number }
+    >();
+    document.querySelectorAll("[data-evidence-card]:not([hidden])").forEach((card) => {
+      if (!(card instanceof HTMLElement)) return;
+      const stageRow = card.closest("[data-stage-row]");
+      if (!(stageRow instanceof HTMLElement)) return;
+      const modeId = stageRow.dataset.mode || "";
+      const stageKey = stageRow.dataset.stage || "";
+      (card.dataset.roster || "").split("|").filter(Boolean).forEach((entry) => {
+        const [characterId, rankId] = entry.split(":");
+        const rank = statisticRankMap[rankId];
+        if (!characterId || !rank) return;
+        const current = observations.get(characterId);
+        const eliteStages = new Set(current?.eliteStages || []);
+        const normalStages = new Set(current?.normalStages || []);
+        if (modeId === "elite") eliteStages.add(stageKey);
+        if (modeId === "normal") normalStages.add(stageKey);
+        observations.set(characterId, {
+          eliteStages,
+          normalStages,
+          highestRankId: !current || rank.sort > current.highestSort ? rankId : current.highestRankId,
+          highestSort: !current || rank.sort > current.highestSort ? rank.sort : current.highestSort,
+        });
+      });
+    });
+
+    const statCards = Array.from(statisticsGrid.querySelectorAll("[data-character-stat]")).filter(
+      (card): card is HTMLElement => card instanceof HTMLElement,
+    );
+    statCards.forEach((card) => {
+      const characterId = card.dataset.characterId || "";
+      const statistic = observations.get(characterId);
+      card.hidden = !statistic;
+      const stageCount = (statistic?.eliteStages.size || 0) + (statistic?.normalStages.size || 0);
+      card.dataset.currentStageCount = String(stageCount);
+      const supportingCheckbox = filterForm?.querySelector(
+        `[data-hero-checkbox="supporting"][value="${characterId}"]`,
+      );
+      if (card.dataset.statGroup === "supporting") {
+        const isSelected = supportingCheckbox instanceof HTMLInputElement && supportingCheckbox.checked;
+        card.setAttribute(
+          "aria-pressed",
+          String(isSelected),
+        );
+        card.setAttribute(
+          "aria-label",
+          `${isSelected ? "Remove" : "Require"} ${card.dataset.characterName || "hero"} in Supporting Heroes`,
+        );
+      }
+      if (!statistic) return;
+
+      const eliteCount = statistic.eliteStages.size;
+      const normalCount = statistic.normalStages.size;
+      const eliteStageCount = card.querySelector("[data-elite-stage-count]");
+      const normalStageCount = card.querySelector("[data-normal-stage-count]");
+      if (eliteStageCount) {
+        eliteStageCount.textContent = `Elite: ${eliteCount} ${eliteCount === 1 ? "stage" : "stages"}`;
+      }
+      if (normalStageCount) {
+        normalStageCount.textContent = `Normal: ${normalCount} ${normalCount === 1 ? "stage" : "stages"}`;
+      }
+      const rank = statisticRankMap[statistic.highestRankId];
+      const rankBadge = card.querySelector(".rank-badge");
+      const rankImage = rankBadge?.querySelector("img");
+      const rankCaption = rankBadge?.querySelector("figcaption");
+      if (rankBadge && rank) rankBadge.setAttribute("title", rank.name);
+      if (rankImage instanceof HTMLImageElement && rank) {
+        rankImage.src = rank.badge;
+        rankImage.alt = `${rank.name} rank badge`;
+      }
+      if (rankCaption && rank) rankCaption.textContent = rank.name;
+    });
+
+    const requiredCards = statCards.filter((card) => card.dataset.statGroup === "required");
+    const supportingCards = statCards
+      .filter((card) => card.dataset.statGroup === "supporting")
+      .sort((left, right) => {
+        const stageDifference =
+          Number(right.dataset.currentStageCount || 0) - Number(left.dataset.currentStageCount || 0);
+        return stageDifference || (left.dataset.characterName || "").localeCompare(right.dataset.characterName || "");
+      });
+    [...requiredCards, ...supportingCards].forEach((card) => statisticsGrid.append(card));
+
+    if (statisticsEmpty instanceof HTMLElement) {
+      statisticsEmpty.hidden = statCards.some((card) => !card.hidden);
+    }
+  };
+
+  const applyFilters = () => {
+    if (!(filterForm instanceof HTMLFormElement)) return;
+    const selectedModes = getSelectedMultiValues("mode");
+    const selectedStages = getSelectedMultiValues("stage");
+    const selectedCreators = getSelectedMultiValues("creator");
+    const supportingHeroes = Array.from(filterForm.querySelectorAll('[data-hero-checkbox="supporting"]:checked'))
+      .filter((checkbox) => checkbox instanceof HTMLInputElement)
+      .map((checkbox) => checkbox.value);
+    const excludedHeroes = Array.from(filterForm.querySelectorAll('[data-hero-checkbox="excluded"]:checked'))
+      .filter((checkbox) => checkbox instanceof HTMLInputElement)
+      .map((checkbox) => checkbox.value);
+    let visibleStageCount = 0;
+
+    stageRows.forEach((stageRow) => {
+      if (!(stageRow instanceof HTMLElement)) return;
+      const modeMatches = !selectedModes.length || selectedModes.includes(stageRow.dataset.mode || "");
+      const stageMatches = !selectedStages.length || selectedStages.includes(stageRow.dataset.stage || "");
+      const evidenceCards = Array.from(stageRow.querySelectorAll("[data-evidence-card]"));
+      const visibleSupportingCharacterCounts = new Map<string, number>();
+      let visibleEvidenceCount = 0;
+
+      evidenceCards.forEach((card) => {
+        if (!(card instanceof HTMLElement)) return;
+        const creatorMatches = !selectedCreators.length || selectedCreators.includes(card.dataset.creator || "");
+        const requiredRanks = Object.fromEntries(
+          (card.dataset.requiredRanks || "")
+            .split("|")
+            .filter(Boolean)
+            .map((entry) => entry.split(":")),
+        );
+        const maxRanksMatch = rankToggles.every((toggle) => {
+          if (!(toggle instanceof HTMLButtonElement) || !toggle.dataset.maxSort) return true;
+          const characterId = toggle.dataset.rankToggle || "";
+          return Number(requiredRanks[characterId]) <= Number(toggle.dataset.maxSort);
+        });
+        const supportingCharacters = (card.dataset.supportingCharacters || "").split("|").filter(Boolean);
+        const supportingMatch = supportingHeroes.every((characterId) => supportingCharacters.includes(characterId));
+        const excludedMatch = excludedHeroes.every((characterId) => !supportingCharacters.includes(characterId));
+        const matches = modeMatches && stageMatches && creatorMatches && maxRanksMatch && supportingMatch && excludedMatch;
+        card.hidden = !matches;
+        if (matches) {
+          visibleEvidenceCount += 1;
+          supportingCharacters.forEach((characterId) => {
+            visibleSupportingCharacterCounts.set(
+              characterId,
+              (visibleSupportingCharacterCounts.get(characterId) || 0) + 1,
+            );
+          });
+        }
+      });
+
+      stageRow.hidden = visibleEvidenceCount === 0;
+      const count = stageRow.querySelector("[data-visible-count]");
+      if (count) count.textContent = String(visibleEvidenceCount);
+      const replayWord = stageRow.querySelector("[data-replay-word]");
+      if (replayWord) replayWord.textContent = visibleEvidenceCount === 1 ? "replay" : "replays";
+      const supportingContainer = stageRow.querySelector(".supporting-characters");
+      const supportingPortraits = Array.from(
+        stageRow.querySelectorAll("[data-supporting-summary-character]"),
+      ).filter((portrait): portrait is HTMLImageElement => portrait instanceof HTMLImageElement);
+      supportingPortraits
+        .sort((left, right) => {
+          const countDifference =
+            (visibleSupportingCharacterCounts.get(right.dataset.supportingSummaryCharacter || "") || 0) -
+            (visibleSupportingCharacterCounts.get(left.dataset.supportingSummaryCharacter || "") || 0);
+          return countDifference ||
+            (left.dataset.supportingSummaryName || "").localeCompare(right.dataset.supportingSummaryName || "");
+        })
+        .forEach((portrait) => {
+          portrait.hidden = !visibleSupportingCharacterCounts.has(portrait.dataset.supportingSummaryCharacter || "");
+          supportingContainer?.append(portrait);
+        });
+      const supportingEmpty = stageRow.querySelector("[data-supporting-summary-empty]");
+      if (supportingEmpty instanceof HTMLElement) {
+        supportingEmpty.hidden = visibleSupportingCharacterCounts.size > 0;
+        supportingContainer?.append(supportingEmpty);
+      }
+      if (visibleEvidenceCount > 0) visibleStageCount += 1;
+    });
+
+    if (emptyState instanceof HTMLElement) emptyState.hidden = visibleStageCount > 0;
+    updateMoreFilterCount();
+    updateStatistics();
+  };
+
+  menuToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      if (!(toggle instanceof HTMLButtonElement)) return;
+      const menu = toggle.closest("[data-menu-field]")?.querySelector("[data-filter-menu]");
+      if (!(menu instanceof HTMLElement)) return;
+      const willOpen = menu.hidden;
+      closeAllMenus(toggle);
+      menu.hidden = !willOpen;
+      toggle.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  filterForm?.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const option = event.target.closest("[data-rank-option]");
+    if (!(option instanceof HTMLButtonElement)) return;
+    const field = option.closest("[data-menu-field]");
+    const toggle = field?.querySelector("[data-rank-toggle]");
+    if (!(toggle instanceof HTMLButtonElement)) return;
+
+    toggle.dataset.maxSort = option.dataset.rankSort || "";
+    const text = toggle.querySelector("[data-toggle-text]");
+    const icon = toggle.querySelector("[data-toggle-icon]");
+    if (text) text.textContent = option.dataset.rankLabel || "Any rank";
+    if (icon instanceof HTMLImageElement) {
+      icon.src = option.dataset.rankBadge || "";
+      icon.hidden = !option.dataset.rankBadge;
+    }
+    field?.querySelectorAll("[data-rank-option]").forEach((candidate) => {
+      candidate.setAttribute("aria-selected", String(candidate === option));
+    });
+    closeMenu(toggle);
+    applyFilters();
+  });
+
+  filterForm?.addEventListener("change", (event) => {
+    if (!(event.target instanceof HTMLInputElement)) return;
+    const changedCheckbox = event.target;
+
+    if (changedCheckbox.matches("[data-hero-checkbox]")) {
+      const filterName = changedCheckbox.dataset.heroCheckbox || "";
+      if (changedCheckbox.checked) {
+        const oppositeName = filterName === "supporting" ? "excluded" : "supporting";
+        const opposite = Array.from(filterForm.querySelectorAll(`[data-hero-checkbox="${oppositeName}"]`)).find(
+          (candidate) => candidate instanceof HTMLInputElement && candidate.value === changedCheckbox.value,
+        );
+        if (opposite instanceof HTMLInputElement) opposite.checked = false;
+        updateHeroToggle(oppositeName);
+      }
+      updateHeroToggle(filterName);
+    }
+
+    if (changedCheckbox.matches("[data-multi-checkbox]")) {
+      updateMultiToggle(changedCheckbox.dataset.multiCheckbox || "");
+    }
+
+    applyFilters();
+  });
+
+  const enableSupportingHeroFromStatistic = (trigger: Element) => {
+    if (!(filterForm instanceof HTMLFormElement)) return;
+    const characterId = trigger.getAttribute("data-supporting-stat-trigger") || "";
+    const supportingCheckbox = Array.from(
+      filterForm.querySelectorAll('[data-hero-checkbox="supporting"]'),
+    ).find((candidate) => candidate instanceof HTMLInputElement && candidate.value === characterId);
+    if (!(supportingCheckbox instanceof HTMLInputElement)) return;
+    supportingCheckbox.checked = !supportingCheckbox.checked;
+
+    const excludedCheckbox = Array.from(
+      filterForm.querySelectorAll('[data-hero-checkbox="excluded"]'),
+    ).find((candidate) => candidate instanceof HTMLInputElement && candidate.value === characterId);
+    if (supportingCheckbox.checked && excludedCheckbox instanceof HTMLInputElement) excludedCheckbox.checked = false;
+    updateHeroToggle("supporting");
+    updateHeroToggle("excluded");
+    applyFilters();
+  };
+
+  statisticsGrid?.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const trigger = event.target.closest("[data-supporting-stat-trigger]");
+    if (trigger) enableSupportingHeroFromStatistic(trigger);
+  });
+
+  statisticsGrid?.addEventListener("keydown", (event) => {
+    if (!(event instanceof KeyboardEvent) || !(event.target instanceof Element) || !["Enter", " "].includes(event.key)) return;
+    const trigger = event.target.closest("[data-supporting-stat-trigger]");
+    if (!trigger) return;
+    event.preventDefault();
+    enableSupportingHeroFromStatistic(trigger);
+  });
+
+  filterForm?.addEventListener("reset", () => {
+    window.setTimeout(() => {
+      rankToggles.forEach((toggle) => {
+        if (!(toggle instanceof HTMLButtonElement)) return;
+        toggle.dataset.maxSort = "";
+        const text = toggle.querySelector("[data-toggle-text]");
+        const icon = toggle.querySelector("[data-toggle-icon]");
+        if (text) text.textContent = "Any rank";
+        if (icon instanceof HTMLImageElement) {
+          icon.src = "";
+          icon.hidden = true;
+        }
+      });
+      updateHeroToggle("supporting");
+      updateHeroToggle("excluded");
+      updateMultiToggle("mode");
+      updateMultiToggle("stage");
+      updateMultiToggle("creator");
+      closeAllMenus();
+      applyFilters();
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("[data-menu-field]")) return;
+    closeAllMenus();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeAllMenus();
+  });
+
+  applyFilters();
+</script>
+
+<style>
+  .filter-section,
+  .strategies-section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+  }
+
+  .filters {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(160px, 1.1fr) repeat(3, minmax(135px, 1fr)) minmax(135px, 0.8fr) auto;
+    align-items: end;
+    gap: 0.9rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background: #1e1e1e;
+  }
+
+  .filter-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .filter-label {
+    display: flex;
+    align-items: center;
+    min-height: 1.75rem;
+    gap: 0.4rem;
+    color: #cccccc;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .filter-label-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: #181818;
+    object-fit: cover;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  select,
+  .filters button,
+  .more-filters > summary {
+    min-height: 2.75rem;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #121212;
+    color: #f5f5f5;
+    font: inherit;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .filters button {
+    padding: 0.65rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .toggle-content {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 0.45rem;
+  }
+
+  .toggle-content > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .toggle-icon {
+    flex: 0 0 1.65rem;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
+  [data-hero-toggle] .toggle-icon {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .chevron {
+    color: #d4af37;
+    font-size: 0.8rem;
+  }
+
+  .filter-menu {
+    position: absolute;
+    z-index: 12;
+    top: calc(100% + 0.35rem);
+    right: 0;
+    left: 0;
+    max-height: 19rem;
+    overflow-y: auto;
+    padding: 0.35rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #121212;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 45%);
+  }
+
+  .filter-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem !important;
+    gap: 0.65rem;
+    padding: 0.4rem 0.55rem !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-weight: 500 !important;
+    text-align: left;
+  }
+
+  .filter-option:hover,
+  .filter-option:focus-visible,
+  .filter-option[aria-selected="true"] {
+    background: #252525 !important;
+    color: #f5d76e;
+  }
+
+  .filter-option img,
+  .empty-option-icon {
+    flex: 0 0 1.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: contain;
+  }
+
+  .empty-option-icon {
+    display: grid;
+    place-items: center;
+    color: #777;
+  }
+
+  .hero-option,
+  .multi-option {
+    display: grid;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .hero-option,
+  .creator-option {
+    grid-template-columns: auto 2rem 1fr;
+  }
+
+  .stage-option {
+    grid-template-columns: auto 1fr;
+  }
+
+  .hero-option:hover,
+  .hero-option:focus-within,
+  .multi-option:hover,
+  .multi-option:focus-within {
+    background: #252525;
+  }
+
+  .hero-option input,
+  .multi-option input {
+    accent-color: #d4af37;
+  }
+
+  .hero-option img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #181818;
+    object-fit: cover;
+  }
+
+  .creator-option img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .youtube-icon {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    object-fit: contain !important;
+  }
+
+  .more-filters {
+    position: relative;
+    align-self: end;
+  }
+
+  .more-filters > summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .more-filters > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .more-filters > summary::after {
+    content: "▾";
+    color: #d4af37;
+  }
+
+  .more-filters[open] > summary::after {
+    content: "▴";
+  }
+
+  .active-filter-count {
+    display: grid;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    place-items: center;
+    border-radius: 999px;
+    background: #d4af37;
+    color: #121212;
+    font-size: 0.7rem;
+  }
+
+  .active-filter-count[hidden] {
+    display: none;
+  }
+
+  .more-filter-panel {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    width: min(35rem, calc(100vw - 4rem));
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: #1a1a1a;
+    box-shadow: 0 16px 36px rgb(0 0 0 / 50%);
+  }
+
+  .creator-filter {
+    grid-column: 1 / -1;
+  }
+
+  .clear-filters {
+    align-self: end;
+    white-space: nowrap;
+  }
+
+  select:focus-visible,
+  .filters button:hover,
+  .filters button:focus-visible,
+  .more-filters > summary:hover,
+  .more-filters > summary:focus-visible {
+    border-color: #d4af37;
+    outline: none;
+  }
+
+  .stage-table {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #121212;
+  }
+
+  .table-header,
+  .stage-row > summary {
+    display: grid;
+    grid-template-columns: 3.25rem 8rem 5rem 9rem minmax(15rem, 1fr);
+    align-items: center;
+    min-width: 720px;
+  }
+
+  .table-header {
+    background: #252525;
+    color: #d4af37;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .table-header span,
+  .stage-row > summary > span,
+  .stage-number {
+    padding: 0.75rem;
+  }
+
+  .stage-row {
+    min-width: 720px;
+    border-bottom: 1px solid #333;
+  }
+
+  .stage-row:last-child {
+    border-bottom: 0;
+  }
+
+  .stage-row > summary {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .stage-row > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .expand-header,
+  .expand-indicator {
+    color: #f59e0b;
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .stage-row[open] .expand-indicator {
+    font-size: 0;
+  }
+
+  .stage-row[open] .expand-indicator::before {
+    content: "−";
+    font-size: 1.35rem;
+  }
+
+  .stage-row > summary:hover,
+  .stage-row > summary:focus-visible {
+    background: #202020;
+    outline: none;
+  }
+
+  .mode-label {
+    color: #cccccc;
+    font-weight: 700;
+  }
+
+  .mode-elite {
+    color: #f5d76e;
+  }
+
+  .stage-number {
+    text-align: center;
+  }
+
+  .supporting-characters {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .supporting-characters img {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #181818;
+    object-fit: cover;
+  }
+
+  .replay-count {
+    color: #cccccc;
+    font-size: 0.9rem;
+  }
+
+  .supporting-empty {
+    color: #777;
+    font-size: 1.1rem;
+  }
+
+  .evidence-list {
+    padding: 0.75rem;
+    border-top: 1px solid #333;
+    background: #181818;
+  }
+
+  .evidence-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #121212;
+  }
+
+  .evidence-card[hidden] {
+    display: none;
+  }
+
+  .evidence-card + .evidence-card {
+    margin-top: 0.75rem;
+  }
+
+  .roster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .video-link {
+    display: flex;
+    align-items: center;
+    flex: 0 0 18rem;
+    gap: 0.75rem;
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+
+  .video-link:hover strong,
+  .video-link:focus-visible strong {
+    color: #d4af37;
+  }
+
+  .video-link:focus-visible {
+    outline: none;
+  }
+
+  .video-link > span:last-child {
+    min-width: 0;
+  }
+
+  .play-icon {
+    display: grid;
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: 7px;
+    background: #e62117;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  .video-link strong,
+  .video-link small {
+    display: block;
+  }
+
+  .video-link small {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 0.2rem;
+    color: #999;
+    font-size: 0.7rem;
+    line-height: 1.35;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .empty-state {
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #cccccc;
+    text-align: center;
+  }
+
+  @media (max-width: 1050px) {
+    .filters {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .clear-filters {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .evidence-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .video-link {
+      flex-basis: auto;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .filters {
+      grid-template-columns: 1fr;
+    }
+
+    .more-filter-panel {
+      position: static;
+      grid-template-columns: 1fr;
+      width: auto;
+      margin-top: 0.5rem;
+      box-shadow: none;
+    }
+
+    .creator-filter {
+      grid-column: auto;
+    }
+
+    .table-header,
+    summary,
+    .stage-row {
+      min-width: 650px;
+    }
+
+    .table-header,
+    .stage-row > summary {
+      grid-template-columns: 3rem 7rem 4rem 8rem minmax(14rem, 1fr);
+    }
+  }
+</style>

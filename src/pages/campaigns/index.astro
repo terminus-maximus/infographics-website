@@ -1,0 +1,138 @@
+---
+import CampaignCard from "../../components/campaign/CampaignCard.astro";
+import CampaignHero from "../../components/campaign/CampaignHero.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import { campaignLanding } from "../../data/campaigns/campaignCatalog";
+import { graphics } from "../../data/graphics";
+
+const overviewGuides = graphics.filter((guide) => ["/beginner-guide", "/elite-campaigns"].includes(guide.href));
+const campaignGuides = graphics.filter((guide) => guide.category === "campaign");
+const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysander", "/lre/uthar"].includes(guide.href));
+---
+
+<Layout
+  title={campaignLanding.title}
+  description={campaignLanding.description}
+  image={campaignLanding.heroImage}
+  url="https://terminusmaximus.com/campaigns/"
+>
+  <Header />
+
+  <main>
+    <CampaignHero
+      title={campaignLanding.title}
+      subtitle={campaignLanding.subtitle}
+      image={campaignLanding.heroImage}
+      imageAlt="Terminus Maximus Campaign Guides for Warhammer 40,000: Tacticus"
+    />
+
+    <section class="content-section" aria-labelledby="overview-guides-heading">
+      <h2 id="overview-guides-heading">Overview Guides</h2>
+      <div class="card-grid">
+        {overviewGuides.map((guide) => (
+          <CampaignCard
+            title={guide.title}
+            description={guide.description}
+            href={guide.href}
+            thumbnail={guide.thumbnail}
+            badge={guide.badge}
+          />
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="campaign-guides-heading">
+      <h2 id="campaign-guides-heading">Campaign Guides</h2>
+      <div class="card-grid">
+        {campaignGuides.map((guide) => <CampaignCard {...guide} />)}
+      </div>
+    </section>
+
+    <section class="content-section related-section" aria-labelledby="related-guides-heading">
+      <h2 id="related-guides-heading">Related Guides</h2>
+      <div class="card-grid related-grid">
+        {relatedGuides.map((guide) => (
+          <CampaignCard
+            title={guide.title}
+            description={guide.description}
+            href={guide.href}
+            thumbnail={guide.thumbnail}
+            badge={guide.badge}
+          />
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    margin: 0;
+    overflow-x: hidden;
+    background: #121212;
+    color: #f5f5f5;
+    font-family: "Lexend", sans-serif;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .content-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #242424;
+    border-radius: 12px;
+    background: #181818;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    justify-content: start;
+    gap: 1.5rem;
+  }
+
+  .related-section {
+    background: #1e1e1e;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 800px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .content-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

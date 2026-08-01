@@ -1,0 +1,367 @@
+---
+import CampaignHero from "../../../components/campaign/CampaignHero.astro";
+import RankBadge from "../../../components/campaign/RankBadge.astro";
+import StageEvidenceTable from "../../../components/campaign/StageEvidenceTable.astro";
+import Footer from "../../../components/Footer.astro";
+import Header from "../../../components/Header.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { indomitusPage } from "../../../data/campaigns/campaignCatalog";
+import {
+  characterReferences,
+  indomitusCampaign,
+  rankReferences,
+} from "../../../lib/campaigns";
+
+const allEvidence = indomitusCampaign.modes.flatMap((mode) =>
+  mode.stages.flatMap((stage) =>
+    stage.evidence.map((evidence) => ({ modeId: mode.id, stageNumber: stage.number, evidence })),
+  ),
+);
+const characterStatistics = new Map<
+  string,
+  { eliteStages: Set<number>; normalStages: Set<number>; highestRankId: string }
+>();
+allEvidence.forEach(({ modeId, stageNumber, evidence }) => {
+  evidence.roster.forEach(({ characterId, rankId }) => {
+    const current = characterStatistics.get(characterId);
+    const eliteStages = new Set(current?.eliteStages || []);
+    const normalStages = new Set(current?.normalStages || []);
+    if (modeId === "elite") eliteStages.add(stageNumber);
+    if (modeId === "normal") normalStages.add(stageNumber);
+    characterStatistics.set(characterId, {
+      eliteStages,
+      normalStages,
+      highestRankId:
+        !current || rankReferences[rankId].sort > rankReferences[current.highestRankId].sort
+          ? rankId
+          : current.highestRankId,
+    });
+  });
+});
+
+const requiredCharacterIds = ["ultraTigurius", "ultraEliminatorSgt", "ultraInceptorSgt"];
+const requiredCharacterIdSet = new Set(requiredCharacterIds);
+const supportingCharacterIds = [...characterStatistics.keys()]
+  .filter((characterId) => !requiredCharacterIdSet.has(characterId))
+  .sort((left, right) => {
+    const leftStatistics = characterStatistics.get(left)!;
+    const rightStatistics = characterStatistics.get(right)!;
+    const stageDifference =
+      rightStatistics.eliteStages.size + rightStatistics.normalStages.size -
+      (leftStatistics.eliteStages.size + leftStatistics.normalStages.size);
+    return stageDifference || characterReferences[left].shortName.localeCompare(characterReferences[right].shortName);
+  });
+const statisticCharacterIds = [...requiredCharacterIds, ...supportingCharacterIds];
+const rankMap = Object.fromEntries(
+  Object.values(rankReferences).map((rank) => [rank.id, { name: rank.name, sort: rank.sort, badge: rank.badge }]),
+);
+---
+
+<Layout
+  title={indomitusPage.title}
+  description={indomitusPage.description}
+  image={indomitusPage.featuredWebImage}
+  url="https://terminusmaximus.com/campaigns/indomitus/"
+>
+  <Header />
+
+  <main>
+    <CampaignHero
+      title={indomitusPage.title}
+      subtitle={indomitusPage.subtitle}
+      updatedAt={indomitusCampaign.updatedAt}
+      backHref="/campaigns/"
+      backLabel="All Campaign Guides"
+    />
+
+    <section class="featured-section" aria-labelledby="featured-infographic-heading">
+      <h2 id="featured-infographic-heading">Featured Infographic</h2>
+      <a
+        class="image-link"
+        href={indomitusPage.featuredImage}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-ga4-infographic-open
+        data-ga4-infographic-title="Indomitus Campaign Guide"
+        data-ga4-link-source="image"
+      >
+        <img
+          class="infographic"
+          src={indomitusPage.featuredWebImage}
+          alt={indomitusPage.featuredImageAlt}
+          loading="lazy"
+        />
+      </a>
+      <p class="caption"><a href={indomitusPage.featuredImage} target="_blank" rel="noopener noreferrer">CLICK FULL-SIZE INFOGRAPHIC</a></p>
+    </section>
+
+    <StageEvidenceTable
+      modes={indomitusCampaign.modes}
+      videos={indomitusCampaign.videos}
+      characters={characterReferences}
+      ranks={rankReferences}
+    />
+
+    <section
+      class="statistics-section"
+      aria-labelledby="campaign-statistics-heading"
+      data-campaign-statistics
+      data-rank-map={JSON.stringify(rankMap)}
+    >
+      <h2 id="campaign-statistics-heading">Campaign Guide Statistics</h2>
+      <p class="statistics-note">These ranks change as you apply Filters</p>
+      <div class="statistics-grid" data-statistics-grid>
+        {statisticCharacterIds.map((characterId) => {
+          const character = characterReferences[characterId];
+          const statistics = characterStatistics.get(characterId)!;
+          const rank = rankReferences[statistics.highestRankId];
+          const isSupporting = !requiredCharacterIdSet.has(characterId);
+          return (
+            <article
+              class:list={["stat-card", "character-stat", { "supporting-stat": isSupporting }]}
+              data-character-stat
+              data-character-id={characterId}
+              data-character-name={character.shortName}
+              data-stat-group={isSupporting ? "supporting" : "required"}
+              data-supporting-stat-trigger={isSupporting ? characterId : undefined}
+              role={isSupporting ? "button" : undefined}
+              tabindex={isSupporting ? 0 : undefined}
+              aria-pressed={isSupporting ? "false" : undefined}
+              aria-label={isSupporting ? `Require ${character.shortName} in Supporting Heroes` : undefined}
+            >
+              <img src={character.portrait} alt={`${character.name} portrait`} width="58" height="58" loading="lazy" />
+              <div class="character-summary">
+                <strong>{character.shortName}</strong>
+                <small data-stage-counts>
+                  <span data-elite-stage-count>Elite: {statistics.eliteStages.size} {statistics.eliteStages.size === 1 ? "stage" : "stages"}</span>
+                  <span data-normal-stage-count>Normal: {statistics.normalStages.size} {statistics.normalStages.size === 1 ? "stage" : "stages"}</span>
+                </small>
+              </div>
+              <div class="rank-summary">
+                <span>Max Rank</span>
+                <RankBadge rank={rank} />
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <p class="statistics-empty" data-statistics-empty hidden>No character rank observations match these filters.</p>
+    </section>
+
+    <section class="method-section" aria-labelledby="about-evidence-heading">
+      <h2 id="about-evidence-heading">About This Campaign Evidence</h2>
+      <p>
+        This Indomitus campaign guide organizes real Tacticus clears by mode and stage. Expand any stage to compare the
+        exact character ranks recorded for each team and open the original creator's YouTube replay.
+      </p>
+      <p>
+        Elite campaign evidence covers stages 1-40. Normal campaign data currently covers stages 70-73, so missing Normal
+        stages are not presented as completed or inferred strategies.
+      </p>
+      <p><a href="/campaigns/">Return to all Tacticus Campaign Guides</a>.</p>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    margin: 0;
+    overflow-x: hidden;
+    background: #121212;
+    color: #f5f5f5;
+    font-family: "Lexend", sans-serif;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .featured-section,
+  .statistics-section,
+  .method-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background: #1e1e1e;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .caption {
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+
+  .caption a,
+  .method-section a {
+    color: #d4af37;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .caption a:hover,
+  .caption a:focus-visible,
+  .method-section a:hover,
+  .method-section a:focus-visible {
+    color: #f5d76e;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .statistics-note,
+  .method-section p {
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .stat-card {
+    display: flex;
+    min-height: 7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #121212;
+    text-align: center;
+  }
+
+  .stat-card[hidden],
+  .statistics-empty[hidden] {
+    display: none;
+  }
+
+  .stat-card span,
+  .stat-card small {
+    color: #999;
+  }
+
+  .stat-card strong {
+    color: #d4af37;
+    font-size: 1.4rem;
+  }
+
+  .character-stat {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    text-align: left;
+  }
+
+  .supporting-stat {
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .supporting-stat:hover,
+  .supporting-stat:focus-visible,
+  .supporting-stat[aria-pressed="true"] {
+    border-color: #d4af37;
+    background: #181818;
+    outline: none;
+  }
+
+  .supporting-stat:hover,
+  .supporting-stat:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .character-stat > img {
+    width: 3.6rem;
+    height: 3.6rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .character-stat span,
+  .character-stat strong,
+  .character-stat small {
+    display: block;
+  }
+
+  .character-stat small {
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+  .rank-summary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: center;
+  }
+
+  .rank-summary > span {
+    color: #999;
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .statistics-empty {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #cccccc;
+    text-align: center;
+  }
+
+  .method-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .statistics-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+
+    .featured-section,
+    .statistics-section,
+    .method-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    .statistics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,981 @@
+{
+  "characters": {
+    "astarCyrus": {
+      "name": "Cyrus",
+      "shortName": "Cyrus",
+      "portrait": "Cyrus.webp"
+    },
+    "astarLysander": {
+      "name": "Darnath Lysander",
+      "shortName": "Lysander",
+      "portrait": "Lysander.webp"
+    },
+    "admecRuststalker": {
+      "name": "Exitor-Rho-1.15/x",
+      "shortName": "Rho",
+      "portrait": "Rho.webp"
+    },
+    "admecDominus": {
+      "name": "Magos Dominus Vitruvius Thannek",
+      "shortName": "Vitru",
+      "portrait": "Vitru.webp"
+    },
+    "admecManipulus": {
+      "name": "Manipulus Actus Fulgorosus",
+      "shortName": "Actus",
+      "portrait": "Actus.webp"
+    },
+    "admecDestroyer": {
+      "name": "Sy-gex-KPH008/15.mk41",
+      "shortName": "Sygex",
+      "portrait": "Sygex.webp"
+    },
+    "admecMarshall": {
+      "name": "Tan Gi'da",
+      "shortName": "Tan",
+      "portrait": "Tan.webp"
+    },
+    "eldarAutarch": {
+      "name": "Aethana Barantharal",
+      "shortName": "Aethana",
+      "portrait": "Aethana.webp"
+    },
+    "eldarRanger": {
+      "name": "Calandis Tawaren",
+      "shortName": "Calandis",
+      "portrait": "Calandis.webp"
+    },
+    "eldarFarseer": {
+      "name": "Eldryon Ynaduin",
+      "shortName": "Eldy",
+      "portrait": "Eldy.webp"
+    },
+    "eldarJainZar": {
+      "name": "Jain Zar",
+      "shortName": "Jain",
+      "portrait": "Jain.webp"
+    },
+    "eldarLhykhis": {
+      "name": "Lhykhis",
+      "shortName": "Lhykhis",
+      "portrait": "Lhykhis.webp"
+    },
+    "eldarMauganRa": {
+      "name": "Maugan Ra",
+      "shortName": "Maugan",
+      "portrait": "Maugan.webp"
+    },
+    "astraYarrick": {
+      "name": "Commissar Sebastian Yarrick",
+      "shortName": "Yarrick",
+      "portrait": "Yarrick.webp"
+    },
+    "astraBullgryn": {
+      "name": "Kut Skoden",
+      "shortName": "Kut",
+      "portrait": "Kut.webp"
+    },
+    "astraCreed": {
+      "name": "Lord Castellan Ursarkar E. Creed",
+      "shortName": "Creed",
+      "portrait": "Creed.webp"
+    },
+    "astraDreir": {
+      "name": "Lord Marshal Varnan Dreir",
+      "shortName": "Dreir",
+      "portrait": "Dreir.webp"
+    },
+    "astraPrimarisPsy": {
+      "name": "Sibyll Devine",
+      "shortName": "Sibyll",
+      "portrait": "Sibyll.webp"
+    },
+    "astraOrdnance": {
+      "name": "Thaddeus Noble",
+      "shortName": "Thad",
+      "portrait": "Thad.webp"
+    },
+    "blackAbaddon": {
+      "name": "Abaddon the Despoiler",
+      "shortName": "Abaddon",
+      "portrait": "Abaddon.webp"
+    },
+    "blackTerminator": {
+      "name": "Drakfus Angrax",
+      "shortName": "Angrax",
+      "portrait": "Angrax.webp"
+    },
+    "blackHaarken": {
+      "name": "Haarken Worldclaimer",
+      "shortName": "Haarken",
+      "portrait": "Haarken.webp"
+    },
+    "blackPossession": {
+      "name": "Master Archimatos",
+      "shortName": "Archi",
+      "portrait": "Archi.webp"
+    },
+    "blackObliterator": {
+      "name": "Volk, Reforged by the Warp",
+      "shortName": "Volk",
+      "portrait": "Volk.webp"
+    },
+    "templAncient": {
+      "name": "Ancient Cantus Thoread",
+      "shortName": "Thoread",
+      "portrait": "Thoread.webp"
+    },
+    "templChampion": {
+      "name": "Brother Kenric Jaeger",
+      "shortName": "Jaeger",
+      "portrait": "Jaeger.webp"
+    },
+    "templAggressor": {
+      "name": "Brother Raimund Burchard",
+      "shortName": "Burchard",
+      "portrait": "Burchard.webp"
+    },
+    "templHelbrecht": {
+      "name": "High Marshal Helbrecht",
+      "shortName": "Helb",
+      "portrait": "Helb.webp"
+    },
+    "templSwordBrother": {
+      "name": "Sword Brother Fedreus Godswyl",
+      "shortName": "Godswyl",
+      "portrait": "Godswyl.webp"
+    },
+    "bloodTerminator": {
+      "name": "Cezare",
+      "shortName": "Cezare",
+      "portrait": "Cezare.webp"
+    },
+    "bloodDante": {
+      "name": "Commander Dante",
+      "shortName": "Dante",
+      "portrait": "Dante.webp"
+    },
+    "bloodDeathCompany": {
+      "name": "Lucien",
+      "shortName": "Lucien",
+      "portrait": "Lucien.webp"
+    },
+    "bloodIntercessor": {
+      "name": "Mataneo",
+      "shortName": "Mataneo",
+      "portrait": "Mataneo.webp"
+    },
+    "bloodMephiston": {
+      "name": "Mephiston",
+      "shortName": "Meph",
+      "portrait": "Meph.webp"
+    },
+    "bloodSanguinary": {
+      "name": "Nicodemus",
+      "shortName": "Nico",
+      "portrait": "Nico.webp"
+    },
+    "custoVexilusPraetor": {
+      "name": "Aesoth Koumadra",
+      "shortName": "Aesoth",
+      "portrait": "Aesoth.webp"
+    },
+    "custoAtlacoya": {
+      "name": "Atlacoya",
+      "shortName": "Atla",
+      "portrait": "Atla.webp"
+    },
+    "custoBladeChampion": {
+      "name": "Kariyan Helsates",
+      "shortName": "Kari",
+      "portrait": "Kari.webp"
+    },
+    "custoTrajann": {
+      "name": "Trajann Valoris",
+      "shortName": "Traj",
+      "portrait": "Traj.webp"
+    },
+    "custoKyrus": {
+      "name": "Tyrith Shiva Kyrus",
+      "shortName": "Tyrith",
+      "portrait": "Tyrith.webp"
+    },
+    "darkaAsmodai": {
+      "name": "Asmodai",
+      "shortName": "Asmo",
+      "portrait": "Asmo.webp"
+    },
+    "darkaAzrael": {
+      "name": "Azrael",
+      "shortName": "Azrael",
+      "portrait": "Azrael.webp"
+    },
+    "darkaTerminator": {
+      "name": "Baraqiel",
+      "shortName": "Barq",
+      "portrait": "Barq.webp"
+    },
+    "darkaCompanion": {
+      "name": "Forcas Oathsworn",
+      "shortName": "Forcas",
+      "portrait": "Forcas.webp"
+    },
+    "darkaSternguard": {
+      "name": "Ramus",
+      "shortName": "Ramus",
+      "portrait": "Ramus.webp"
+    },
+    "darkaHellblaster": {
+      "name": "Sarquael",
+      "shortName": "Sarq",
+      "portrait": "Sarq.webp"
+    },
+    "deathBlightbringer": {
+      "name": "Corrodius Achebile",
+      "shortName": "Corro",
+      "portrait": "Corro.webp"
+    },
+    "deathBlightlord": {
+      "name": "Maladus Phlegmore",
+      "shortName": "Maladus",
+      "portrait": "Maladus.webp"
+    },
+    "deathRotbone": {
+      "name": "Nauseous Rotbone",
+      "shortName": "Rotbone",
+      "portrait": "Rotbone.webp"
+    },
+    "deathPutrifier": {
+      "name": "Pestillian Witherpus",
+      "shortName": "Pesti",
+      "portrait": "Pesti.webp"
+    },
+    "deathTyphus": {
+      "name": "Typhus, Host of the Destroyer Hive",
+      "shortName": "Typhus",
+      "portrait": "Typhus.webp"
+    },
+    "emperKakophonist": {
+      "name": "Adamatar Xandassus, Mirrorborn",
+      "shortName": "Adamantar",
+      "portrait": "Adamantar.webp"
+    },
+    "emperFlawlessBlade": {
+      "name": "Hascule Thorn of the Silken Blade",
+      "shortName": "Hascule",
+      "portrait": "Hascule.webp"
+    },
+    "emperExultant": {
+      "name": "Laviscus Sentrillion, the Perfect",
+      "shortName": "Lav",
+      "portrait": "Lav.webp"
+    },
+    "emperLucius": {
+      "name": "Lucius the Eternal",
+      "shortName": "Lucius",
+      "portrait": "Lucius.webp"
+    },
+    "emperNoiseMarine": {
+      "name": "Shiron Capersi, the Idolator",
+      "shortName": "Shiron",
+      "portrait": "Shiron.webp"
+    },
+    "genesBiophagus": {
+      "name": "Hollan Baumgart",
+      "shortName": "Hollan",
+      "portrait": "Hollan.webp"
+    },
+    "genesPrimus": {
+      "name": "Isaak Starn",
+      "shortName": "Isaak",
+      "portrait": "Isaak.webp"
+    },
+    "genesKelermorph": {
+      "name": "Judh Lhaska",
+      "shortName": "Judh",
+      "portrait": "Judh.webp"
+    },
+    "genesPatriarch": {
+      "name": "The Patermine",
+      "shortName": "Pater",
+      "portrait": "Pater.webp"
+    },
+    "genesMagus": {
+      "name": "Xybia Kheiser",
+      "shortName": "Xybia",
+      "portrait": "Xybia.webp"
+    },
+    "votanBeserk": {
+      "name": "H√¢vyr W√¢rspeke",
+      "shortName": "Havyr",
+      "portrait": "Havyr.webp"
+    },
+    "votanChampion": {
+      "name": "K√Æmm Sk√¢rstreng",
+      "shortName": "Kymm",
+      "portrait": "Kymm.webp"
+    },
+    "votanIronmaster": {
+      "name": "Vynn Conglahr",
+      "shortName": "Vynn",
+      "portrait": "Vynn.webp"
+    },
+    "votanMemnyr": {
+      "name": "√Çmmuk Keen Eye",
+      "shortName": "Ammuk",
+      "portrait": "Ammuk.webp"
+    },
+    "votanUthar": {
+      "name": "√õthar the Destined",
+      "shortName": "Uthar",
+      "portrait": "Uthar.webp"
+    },
+    "necroSpyder": {
+      "name": "Canoptek Spyder Aleph-Null",
+      "shortName": "Aleph",
+      "portrait": "Aleph.webp"
+    },
+    "necroDestroyer": {
+      "name": "Hexmark Destroyer Imospekh",
+      "shortName": "Imo",
+      "portrait": "Imo.webp"
+    },
+    "necroOverlord": {
+      "name": "Overlord Anuphet",
+      "shortName": "Anu",
+      "portrait": "Anu.webp"
+    },
+    "necroPlasmancer": {
+      "name": "Plasmancer Thutmose",
+      "shortName": "Thut",
+      "portrait": "Thut.webp"
+    },
+    "necroWarden": {
+      "name": "Royal Warden Makhotep",
+      "shortName": "Makho",
+      "portrait": "Makho.webp"
+    },
+    "necroChronomancer": {
+      "name": "Thothmek",
+      "shortName": "Thoth",
+      "portrait": "Thoth.webp"
+    },
+    "orksBigMek": {
+      "name": "Gibbascrapz, da Spezulist",
+      "shortName": "Gibba",
+      "portrait": "Gibba.webp"
+    },
+    "orksRuntherd": {
+      "name": "Grumbal Snotflogga",
+      "shortName": "Snot",
+      "portrait": "Snot.webp"
+    },
+    "orksWarboss": {
+      "name": "Gulgortz Bulldoza",
+      "shortName": "Boss",
+      "portrait": "Boss.webp"
+    },
+    "orksNob": {
+      "name": "Olog Tanksmasha",
+      "shortName": "Tank",
+      "portrait": "Tank.webp"
+    },
+    "orksKillaKan": {
+      "name": "Snappawrecka",
+      "shortName": "Snappa",
+      "portrait": "Snappa.webp"
+    },
+    "adeptRetributor": {
+      "name": "Battle Sister Vindicta",
+      "shortName": "Vindi",
+      "portrait": "Vindi.webp"
+    },
+    "adeptCelestine": {
+      "name": "Celestine, the living Saint",
+      "shortName": "Cele",
+      "portrait": "Cele.webp"
+    },
+    "adeptHospitaller": {
+      "name": "Isabella Mariken",
+      "shortName": "Isa",
+      "portrait": "Isa.webp"
+    },
+    "adeptMorvenn": {
+      "name": "Morvenn Vahl",
+      "shortName": "Morvenn",
+      "portrait": "Morvenn.webp"
+    },
+    "adeptCanoness": {
+      "name": "Roswitha Esther",
+      "shortName": "Rosie",
+      "portrait": "Rosie.webp"
+    },
+    "spaceRockfist": {
+      "name": "Arjac Rockfist",
+      "shortName": "Arjac",
+      "portrait": "Arjac.webp"
+    },
+    "spaceWolfPriest": {
+      "name": "Baldr Thunderbrow",
+      "shortName": "Baldr",
+      "portrait": "Baldr.webp"
+    },
+    "spaceStormcaller": {
+      "name": "Njal Stormcaller",
+      "shortName": "Njal",
+      "portrait": "Njal.webp"
+    },
+    "spaceBlackmane": {
+      "name": "Ragnar Blackmane",
+      "shortName": "Rag",
+      "portrait": "Rag.webp"
+    },
+    "spaceHound": {
+      "name": "Tjark Wyrdslayer",
+      "shortName": "Tjark",
+      "portrait": "Tjark.webp"
+    },
+    "spaceWulfen": {
+      "name": "Ulf Frosthowl",
+      "shortName": "Ulf",
+      "portrait": "Ulf.webp"
+    },
+    "tauAunShi": {
+      "name": "Aun'Shi",
+      "shortName": "Aunshi",
+      "portrait": "Aunshi.webp"
+    },
+    "tauDarkstrider": {
+      "name": "Shas'el T'au Myamoto",
+      "shortName": "Darkstrider",
+      "portrait": "Darkstrider.webp"
+    },
+    "tauShadowsun": {
+      "name": "Shas'o T'au Shaserra",
+      "shortName": "SS",
+      "portrait": "SS.webp"
+    },
+    "tauFarsight": {
+      "name": "Shas'o Vior'la Shovah Kais Mont'yr",
+      "shortName": "Farsight",
+      "portrait": "Farsight.webp"
+    },
+    "tauMarksman": {
+      "name": "Shas'ui Vior'la Sho'syl",
+      "shortName": "Sho",
+      "portrait": "Sho.webp"
+    },
+    "tauCrisis": {
+      "name": "Shas'vre Vior'la Re'vas",
+      "shortName": "Revas",
+      "portrait": "Revas.webp"
+    },
+    "thousAhriman": {
+      "name": "Ahzek Ahriman",
+      "shortName": "Ahri",
+      "portrait": "Ahri.webp"
+    },
+    "thousInfernalMaster": {
+      "name": "Arkarzar Abraxas",
+      "shortName": "Abrax",
+      "portrait": "Abrax.webp"
+    },
+    "thousSorcerer": {
+      "name": "Kairatar Thaumachus",
+      "shortName": "Thaum",
+      "portrait": "Thaum.webp"
+    },
+    "thousSekhetar": {
+      "name": "Sekhetar Robot",
+      "shortName": "Sek",
+      "portrait": "Sek.webp"
+    },
+    "thousTerminator": {
+      "name": "Sokar Toth",
+      "shortName": "Toth",
+      "portrait": "Toth.webp"
+    },
+    "thousTzaangor": {
+      "name": "Yazaghor Ficklefate",
+      "shortName": "Yaz",
+      "portrait": "Yaz.webp"
+    },
+    "tyranDeathleaper": {
+      "name": "Deathleaper",
+      "shortName": "DL",
+      "portrait": "DL.webp"
+    },
+    "tyranNeurothrope": {
+      "name": "Neurothrope",
+      "shortName": "Neuro",
+      "portrait": "Neuro.webp"
+    },
+    "tyranParasite": {
+      "name": "Parasite of Mortrex",
+      "shortName": "Parasite",
+      "portrait": "Parasite.webp"
+    },
+    "tyranTyrantGuard": {
+      "name": "Tyrant Guard",
+      "shortName": "TG",
+      "portrait": "TG.webp"
+    },
+    "tyranWingedPrime": {
+      "name": "Winged Tyranid Prime",
+      "shortName": "Winged",
+      "portrait": "Winged.webp"
+    },
+    "ultraApothecary": {
+      "name": "Apothecary Incisus",
+      "shortName": "Incisus",
+      "portrait": "Incisus.webp"
+    },
+    "ultraTitus": {
+      "name": "Demetrian Titus",
+      "shortName": "Titus",
+      "portrait": "Titus.webp"
+    },
+    "ultraCalgar": {
+      "name": "Marneus Calgar",
+      "shortName": "Calgar",
+      "portrait": "Calgar.webp"
+    },
+    "ultraInceptorSgt": {
+      "name": "Sergeant Bellator",
+      "shortName": "Bella",
+      "portrait": "Bella.webp"
+    },
+    "ultraEliminatorSgt": {
+      "name": "Sergeant Certus",
+      "shortName": "Certus",
+      "portrait": "Certus.webp"
+    },
+    "ultraTigurius": {
+      "name": "Varro Tigurius",
+      "shortName": "Tiggy",
+      "portrait": "Tiggy.webp"
+    },
+    "worldEightbound": {
+      "name": "Azkor, the Eightfold",
+      "shortName": "Azkor",
+      "portrait": "Azkor.webp"
+    },
+    "worldKharn": {
+      "name": "Kh√¢rn the Betrayer",
+      "shortName": "Kharn",
+      "portrait": "Kharn.webp"
+    },
+    "worldJakhal": {
+      "name": "Macer Bloodgrin",
+      "shortName": "Macer",
+      "portrait": "Macer.webp"
+    },
+    "worldExecutions": {
+      "name": "Tarvakh, the Headsman",
+      "shortName": "Tarvakh",
+      "portrait": "Tarvakh.webp"
+    },
+    "worldTerminator": {
+      "name": "Wrask, the Butcher",
+      "shortName": "Wrask",
+      "portrait": "Wrask.webp"
+    }
+  },
+  "aliases": {
+    "abaddon": "blackAbaddon",
+    "abaddon the despoiler": "blackAbaddon",
+    "abrax": "thousInfernalMaster",
+    "abraxas": "thousInfernalMaster",
+    "actus": "admecManipulus",
+    "adamantar": "emperKakophonist",
+    "adamatar": "emperKakophonist",
+    "adamatar xandassus mirrorborn": "emperKakophonist",
+    "adeptcanoness": "adeptCanoness",
+    "adeptcelestine": "adeptCelestine",
+    "adepthospitaller": "adeptHospitaller",
+    "adeptmorvenn": "adeptMorvenn",
+    "adeptretributor": "adeptRetributor",
+    "admecdestroyer": "admecDestroyer",
+    "admecdominus": "admecDominus",
+    "admecmanipulus": "admecManipulus",
+    "admecmarshall": "admecMarshall",
+    "admecruststalker": "admecRuststalker",
+    "aesoth": "custoVexilusPraetor",
+    "aesoth koumadra": "custoVexilusPraetor",
+    "aethana": "eldarAutarch",
+    "aethana barantharal": "eldarAutarch",
+    "ahri": "thousAhriman",
+    "ahriman": "thousAhriman",
+    "ahzek ahriman": "thousAhriman",
+    "aleph": "necroSpyder",
+    "aleph null": "necroSpyder",
+    "ammuk": "votanMemnyr",
+    "ancient cantus thoread": "templAncient",
+    "ancient thoread": "templAncient",
+    "angrax": "blackTerminator",
+    "anu": "necroOverlord",
+    "anuphet": "necroOverlord",
+    "apothecary incisus": "ultraApothecary",
+    "archi": "blackPossession",
+    "archimatos": "blackPossession",
+    "arjac": "spaceRockfist",
+    "arjac rockfist": "spaceRockfist",
+    "arkarzar abraxas": "thousInfernalMaster",
+    "asmo": "darkaAsmodai",
+    "asmodai": "darkaAsmodai",
+    "astarcyrus": "astarCyrus",
+    "astarlysander": "astarLysander",
+    "astrabullgryn": "astraBullgryn",
+    "astracreed": "astraCreed",
+    "astradreir": "astraDreir",
+    "astraordnance": "astraOrdnance",
+    "astraprimarispsy": "astraPrimarisPsy",
+    "astrayarrick": "astraYarrick",
+    "atla": "custoAtlacoya",
+    "atlacoya": "custoAtlacoya",
+    "aun shi": "tauAunShi",
+    "aunshi": "tauAunShi",
+    "azkor": "worldEightbound",
+    "azkor the eightfold": "worldEightbound",
+    "azrael": "darkaAzrael",
+    "baldr": "spaceWolfPriest",
+    "baldr thunderbrow": "spaceWolfPriest",
+    "baraqiel": "darkaTerminator",
+    "barq": "darkaTerminator",
+    "battle sister vindicta": "adeptRetributor",
+    "bella": "ultraInceptorSgt",
+    "bellator": "ultraInceptorSgt",
+    "blackabaddon": "blackAbaddon",
+    "blackhaarken": "blackHaarken",
+    "blackobliterator": "blackObliterator",
+    "blackpossession": "blackPossession",
+    "blackterminator": "blackTerminator",
+    "blooddante": "bloodDante",
+    "blooddeathcompany": "bloodDeathCompany",
+    "bloodintercessor": "bloodIntercessor",
+    "bloodmephiston": "bloodMephiston",
+    "bloodsanguinary": "bloodSanguinary",
+    "bloodterminator": "bloodTerminator",
+    "boss": "orksWarboss",
+    "boss gulgortz": "orksWarboss",
+    "brother burchard": "templAggressor",
+    "brother jaeger": "templChampion",
+    "brother kenric jaeger": "templChampion",
+    "brother raimund burchard": "templAggressor",
+    "burchard": "templAggressor",
+    "calandis": "eldarRanger",
+    "calandis tawaren": "eldarRanger",
+    "calgar": "ultraCalgar",
+    "canoptek spyder aleph null": "necroSpyder",
+    "castellan creed": "astraCreed",
+    "cele": "adeptCelestine",
+    "celestine": "adeptCelestine",
+    "celestine the living saint": "adeptCelestine",
+    "certus": "ultraEliminatorSgt",
+    "cezare": "bloodTerminator",
+    "commander dante": "bloodDante",
+    "commander farsight": "tauFarsight",
+    "commander shadowsun": "tauShadowsun",
+    "commissar sebastian yarrick": "astraYarrick",
+    "commissar yarrick": "astraYarrick",
+    "corro": "deathBlightbringer",
+    "corrodius": "deathBlightbringer",
+    "corrodius achebile": "deathBlightbringer",
+    "creed": "astraCreed",
+    "custoatlacoya": "custoAtlacoya",
+    "custobladechampion": "custoBladeChampion",
+    "custokyrus": "custoKyrus",
+    "custotrajann": "custoTrajann",
+    "custovexiluspraetor": "custoVexilusPraetor",
+    "cyrus": "astarCyrus",
+    "dante": "bloodDante",
+    "darkaasmodai": "darkaAsmodai",
+    "darkaazrael": "darkaAzrael",
+    "darkacompanion": "darkaCompanion",
+    "darkahellblaster": "darkaHellblaster",
+    "darkasternguard": "darkaSternguard",
+    "darkaterminator": "darkaTerminator",
+    "darkstrider": "tauDarkstrider",
+    "darnath lysander": "astarLysander",
+    "deathblightbringer": "deathBlightbringer",
+    "deathblightlord": "deathBlightlord",
+    "deathleaper": "tyranDeathleaper",
+    "deathputrifier": "deathPutrifier",
+    "deathrotbone": "deathRotbone",
+    "deathtyphus": "deathTyphus",
+    "demetrian titus": "ultraTitus",
+    "dl": "tyranDeathleaper",
+    "drakfus angrax": "blackTerminator",
+    "dreir": "astraDreir",
+    "eldarautarch": "eldarAutarch",
+    "eldarfarseer": "eldarFarseer",
+    "eldarjainzar": "eldarJainZar",
+    "eldarlhykhis": "eldarLhykhis",
+    "eldarmauganra": "eldarMauganRa",
+    "eldarranger": "eldarRanger",
+    "eldryon": "eldarFarseer",
+    "eldryon ynaduin": "eldarFarseer",
+    "eldy": "eldarFarseer",
+    "emperexultant": "emperExultant",
+    "emperflawlessblade": "emperFlawlessBlade",
+    "emperkakophonist": "emperKakophonist",
+    "emperlucius": "emperLucius",
+    "empernoisemarine": "emperNoiseMarine",
+    "exitor rho": "admecRuststalker",
+    "exitor rho 1 15 x": "admecRuststalker",
+    "farsight": "tauFarsight",
+    "forcas": "darkaCompanion",
+    "forcas oathsworn": "darkaCompanion",
+    "genesbiophagus": "genesBiophagus",
+    "geneskelermorph": "genesKelermorph",
+    "genesmagus": "genesMagus",
+    "genespatriarch": "genesPatriarch",
+    "genesprimus": "genesPrimus",
+    "gibba": "orksBigMek",
+    "gibbascrapz": "orksBigMek",
+    "gibbascrapz da spezulist": "orksBigMek",
+    "godswyl": "templSwordBrother",
+    "grumbal snotflogga": "orksRuntherd",
+    "gulgortz": "orksWarboss",
+    "gulgortz bulldoza": "orksWarboss",
+    "h vyr": "votanBeserk",
+    "h vyr w rspeke": "votanBeserk",
+    "haarken": "blackHaarken",
+    "haarken worldclaimer": "blackHaarken",
+    "hascule": "emperFlawlessBlade",
+    "hascule thorn of the silken blade": "emperFlawlessBlade",
+    "havyr": "votanBeserk",
+    "helb": "templHelbrecht",
+    "helbrecht": "templHelbrecht",
+    "hexmark destroyer imospekh": "necroDestroyer",
+    "high marshal helbrecht": "templHelbrecht",
+    "hollan": "genesBiophagus",
+    "hollan baumgart": "genesBiophagus",
+    "imo": "necroDestroyer",
+    "imospekh": "necroDestroyer",
+    "incisus": "ultraApothecary",
+    "isa": "adeptHospitaller",
+    "isaak": "genesPrimus",
+    "isaak starn": "genesPrimus",
+    "isabella": "adeptHospitaller",
+    "isabella mariken": "adeptHospitaller",
+    "jaeger": "templChampion",
+    "jain": "eldarJainZar",
+    "jain zar": "eldarJainZar",
+    "judh": "genesKelermorph",
+    "judh lhaska": "genesKelermorph",
+    "k mm": "votanChampion",
+    "k mm sk rstreng": "votanChampion",
+    "kairatar thaumachus": "thousSorcerer",
+    "kari": "custoBladeChampion",
+    "kariyan": "custoBladeChampion",
+    "kariyan helsates": "custoBladeChampion",
+    "kh rn": "worldKharn",
+    "kh rn the betrayer": "worldKharn",
+    "kharn": "worldKharn",
+    "kimm": "votanChampion",
+    "kut": "astraBullgryn",
+    "kut skoden": "astraBullgryn",
+    "kymm": "votanChampion",
+    "lav": "emperExultant",
+    "laviscus": "emperExultant",
+    "laviscus sentrillion the perfect": "emperExultant",
+    "lhykhis": "eldarLhykhis",
+    "lord castellan ursarkar e creed": "astraCreed",
+    "lord marshal varnan dreir": "astraDreir",
+    "lucien": "bloodDeathCompany",
+    "lucius": "emperLucius",
+    "lucius the eternal": "emperLucius",
+    "lysander": "astarLysander",
+    "macer": "worldJakhal",
+    "macer bloodgrin": "worldJakhal",
+    "magos dominus vitruvius thannek": "admecDominus",
+    "makho": "necroWarden",
+    "makhotep": "necroWarden",
+    "maladus": "deathBlightlord",
+    "maladus phlegmore": "deathBlightlord",
+    "manipulus actus fulgorosus": "admecManipulus",
+    "marneus calgar": "ultraCalgar",
+    "marshal dreir": "astraDreir",
+    "master archimatos": "blackPossession",
+    "mataneo": "bloodIntercessor",
+    "maugan": "eldarMauganRa",
+    "maugan ra": "eldarMauganRa",
+    "meph": "bloodMephiston",
+    "mephiston": "bloodMephiston",
+    "mmuk": "votanMemnyr",
+    "mmuk keen eye": "votanMemnyr",
+    "morvenn": "adeptMorvenn",
+    "morvenn vahl": "adeptMorvenn",
+    "nauseous": "deathRotbone",
+    "nauseous rotbone": "deathRotbone",
+    "necrochronomancer": "necroChronomancer",
+    "necrodestroyer": "necroDestroyer",
+    "necrooverlord": "necroOverlord",
+    "necroplasmancer": "necroPlasmancer",
+    "necrospyder": "necroSpyder",
+    "necrowarden": "necroWarden",
+    "neuro": "tyranNeurothrope",
+    "neurothrope": "tyranNeurothrope",
+    "nico": "bloodSanguinary",
+    "nicodemus": "bloodSanguinary",
+    "njal": "spaceStormcaller",
+    "njal stormcaller": "spaceStormcaller",
+    "olog tanksmasha": "orksNob",
+    "orksbigmek": "orksBigMek",
+    "orkskillakan": "orksKillaKan",
+    "orksnob": "orksNob",
+    "orksruntherd": "orksRuntherd",
+    "orkswarboss": "orksWarboss",
+    "overlord anuphet": "necroOverlord",
+    "parasite": "tyranParasite",
+    "parasite of mortrex": "tyranParasite",
+    "pater": "genesPatriarch",
+    "pesti": "deathPutrifier",
+    "pestillian": "deathPutrifier",
+    "pestillian witherpus": "deathPutrifier",
+    "plasmancer thutmose": "necroPlasmancer",
+    "rag": "spaceBlackmane",
+    "ragnar": "spaceBlackmane",
+    "ragnar blackmane": "spaceBlackmane",
+    "ramus": "darkaSternguard",
+    "re vas": "tauCrisis",
+    "revas": "tauCrisis",
+    "rho": "admecRuststalker",
+    "rosie": "adeptCanoness",
+    "roswitha": "adeptCanoness",
+    "roswitha esther": "adeptCanoness",
+    "rotbone": "deathRotbone",
+    "royal warden makhotep": "necroWarden",
+    "sarq": "darkaHellblaster",
+    "sarquael": "darkaHellblaster",
+    "sek": "thousSekhetar",
+    "sekhetar robot": "thousSekhetar",
+    "sergeant bellator": "ultraInceptorSgt",
+    "sergeant certus": "ultraEliminatorSgt",
+    "shadowsun": "tauShadowsun",
+    "shas el t au myamoto": "tauDarkstrider",
+    "shas o t au shaserra": "tauShadowsun",
+    "shas o vior la shovah kais mont yr": "tauFarsight",
+    "shas ui vior la sho syl": "tauMarksman",
+    "shas vre vior la re vas": "tauCrisis",
+    "shiron": "emperNoiseMarine",
+    "shiron capersi the idolator": "emperNoiseMarine",
+    "sho": "tauMarksman",
+    "sho syl": "tauMarksman",
+    "sibyll": "astraPrimarisPsy",
+    "sibyll devine": "astraPrimarisPsy",
+    "snappa": "orksKillaKan",
+    "snappawrecka": "orksKillaKan",
+    "snot": "orksRuntherd",
+    "snotflogga": "orksRuntherd",
+    "sokar toth": "thousTerminator",
+    "spaceblackmane": "spaceBlackmane",
+    "spacehound": "spaceHound",
+    "spacerockfist": "spaceRockfist",
+    "spacestormcaller": "spaceStormcaller",
+    "spacewolfpriest": "spaceWolfPriest",
+    "spacewulfen": "spaceWulfen",
+    "ss": "tauShadowsun",
+    "sword brother fedreus godswyl": "templSwordBrother",
+    "sword brother godswyl": "templSwordBrother",
+    "sy gex": "admecDestroyer",
+    "sy gex kph008 15 mk41": "admecDestroyer",
+    "sygex": "admecDestroyer",
+    "tan": "admecMarshall",
+    "tan gi da": "admecMarshall",
+    "tank": "orksNob",
+    "tanksmasha": "orksNob",
+    "tarvakh": "worldExecutions",
+    "tarvakh the headsman": "worldExecutions",
+    "tauaunshi": "tauAunShi",
+    "taucrisis": "tauCrisis",
+    "taudarkstrider": "tauDarkstrider",
+    "taufarsight": "tauFarsight",
+    "taumarksman": "tauMarksman",
+    "taushadowsun": "tauShadowsun",
+    "templaggressor": "templAggressor",
+    "templancient": "templAncient",
+    "templchampion": "templChampion",
+    "templhelbrecht": "templHelbrecht",
+    "templswordbrother": "templSwordBrother",
+    "tg": "tyranTyrantGuard",
+    "thad": "astraOrdnance",
+    "thaddeus": "astraOrdnance",
+    "thaddeus noble": "astraOrdnance",
+    "thar": "votanUthar",
+    "thar the destined": "votanUthar",
+    "thaum": "thousSorcerer",
+    "thaumachus": "thousSorcerer",
+    "the patermine": "genesPatriarch",
+    "thoread": "templAncient",
+    "thoth": "necroChronomancer",
+    "thothmek": "necroChronomancer",
+    "thousahriman": "thousAhriman",
+    "thousinfernalmaster": "thousInfernalMaster",
+    "thoussekhetar": "thousSekhetar",
+    "thoussorcerer": "thousSorcerer",
+    "thousterminator": "thousTerminator",
+    "thoustzaangor": "thousTzaangor",
+    "thut": "necroPlasmancer",
+    "thutmose": "necroPlasmancer",
+    "tiggy": "ultraTigurius",
+    "tigurius": "ultraTigurius",
+    "titus": "ultraTitus",
+    "tjark": "spaceHound",
+    "tjark wyrdslayer": "spaceHound",
+    "toth": "thousTerminator",
+    "traj": "custoTrajann",
+    "trajann": "custoTrajann",
+    "trajann valoris": "custoTrajann",
+    "typhus": "deathTyphus",
+    "typhus host of the destroyer hive": "deathTyphus",
+    "tyrandeathleaper": "tyranDeathleaper",
+    "tyranneurothrope": "tyranNeurothrope",
+    "tyranparasite": "tyranParasite",
+    "tyrant guard": "tyranTyrantGuard",
+    "tyrantyrantguard": "tyranTyrantGuard",
+    "tyranwingedprime": "tyranWingedPrime",
+    "tyrith": "custoKyrus",
+    "tyrith shiva kyrus": "custoKyrus",
+    "ulf": "spaceWulfen",
+    "ulf frosthowl": "spaceWulfen",
+    "ultraapothecary": "ultraApothecary",
+    "ultracalgar": "ultraCalgar",
+    "ultraeliminatorsgt": "ultraEliminatorSgt",
+    "ultrainceptorsgt": "ultraInceptorSgt",
+    "ultratigurius": "ultraTigurius",
+    "ultratitus": "ultraTitus",
+    "uthar": "votanUthar",
+    "varro tigurius": "ultraTigurius",
+    "vindi": "adeptRetributor",
+    "vindicta": "adeptRetributor",
+    "vitru": "admecDominus",
+    "vitruvius": "admecDominus",
+    "volk": "blackObliterator",
+    "volk reforged by the warp": "blackObliterator",
+    "votanbeserk": "votanBeserk",
+    "votanchampion": "votanChampion",
+    "votanironmaster": "votanIronmaster",
+    "votanmemnyr": "votanMemnyr",
+    "votanuthar": "votanUthar",
+    "vynn": "votanIronmaster",
+    "vynn conglahr": "votanIronmaster",
+    "winged": "tyranWingedPrime",
+    "winged prime": "tyranWingedPrime",
+    "winged tyranid prime": "tyranWingedPrime",
+    "worldeightbound": "worldEightbound",
+    "worldexecutions": "worldExecutions",
+    "worldjakhal": "worldJakhal",
+    "worldkharn": "worldKharn",
+    "worldterminator": "worldTerminator",
+    "wrask": "worldTerminator",
+    "wrask the butcher": "worldTerminator",
+    "xybia": "genesMagus",
+    "xybia kheiser": "genesMagus",
+    "yarrick": "astraYarrick",
+    "yaz": "thousTzaangor",
+    "yazaghor": "thousTzaangor",
+    "yazaghor ficklefate": "thousTzaangor"
+  }
+}

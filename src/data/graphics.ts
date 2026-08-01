@@ -19,6 +19,23 @@ export const graphics = [
       category: "start"
     },
     {
+      title: "Campaign Guides",
+      href: "/campaigns/",
+      description: "Replay-backed teams and character ranks for Normal and Elite Campaign stages.",
+      image: "/images/CampaignGuideBanner.png",
+      thumbnail: "/images/thumbnails/CampaignGuideBanner-thumb.png",
+      category: "start"
+    },
+    {
+      title: "Indomitus Campaign Guide",
+      href: "/campaigns/indomitus/",
+      description: "Stage-by-stage Indomitus teams, character ranks, and replay evidence.",
+      image: "/images/indomitus.png",
+      thumbnail: "/images/thumbnails/indomitus-thumb.png",
+      badge: "WIP",
+      category: "campaign"
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,
