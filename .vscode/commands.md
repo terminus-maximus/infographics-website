@@ -21,7 +21,7 @@ git switch main
 git pull --ff-only
 
 git add .
-git commit -m "Lucius homepage"
+git commit -m "Copy Edits, Lucius RIP"
 git push origin main
 
 
