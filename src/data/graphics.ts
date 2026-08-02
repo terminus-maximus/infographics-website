@@ -69,17 +69,9 @@ export const graphics = [
       category: "raid"
     },
     {
-      title: "Lucius LRE",
-      href: "/lre/lucius",
-      description: "Lucius Legendary Release Event teams, requirements, and planning.",
-      image: "/images/lucius-lre.png",
-      thumbnail: "/images/thumbnails/lucius-lre-thumb.png",
-      category: "legendary"
-    },
-    {
       title: "Lysander LRE",
       href: "/lre/lysander",
-      description: "Lysander Legendary Release Event teams, requirements, and planning.",
+      description: "Unlock the 1st Captain on Aug 29th",
       image: "/images/lysander-lre.png",
       thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
       badge: "New",
@@ -88,7 +80,7 @@ export const graphics = [
     {
       title: "Uthar LRE",
       href: "/lre/uthar",
-      description: "Uthar Legendary Release Event teams, requirements, and planning.",
+      description: "Be ready for the Votann Legendary on Oct 3rd",
       image: "/images/uthar-lre.png",
       thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
       category: "legendary"
@@ -96,7 +88,7 @@ export const graphics = [
     {
       title: "Farsight LRE",
       href: "/lre/farsight",
-      description: "Farsight Legendary Release Event teams, requirements, and planning.",
+      description: "Be ready for the Farsight Legendary on Nov 15th",
       image: "/images/lre.png",
       thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
@@ -104,7 +96,7 @@ export const graphics = [
     {
       title: "Campaign Event",
       href: "/campaign-event",
-      description: "Event details, required characters, and rewards.",
+      description: "Next CE begins Aug 6",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
       category: "event"
@@ -112,7 +104,7 @@ export const graphics = [
     {
       title: "Hero Release Events",
       href: "/hre",
-      description: "Mission guides designed to maximize unlock chances.",
+      description: "Next HRE begins Aug 9",
       image: "/images/hre.png",
       thumbnail: "/images/thumbnails/hre-thumb.png",
       category: "event"
@@ -120,7 +112,7 @@ export const graphics = [
     {
       title: "Incursion / MoW",
       href: "/incursion-mow",
-      description: "Machine of War recommendations and Incursion basics.",
+      description: "Next Incursion begins Aug 24",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
       category: "event"
