@@ -163,24 +163,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
         </div>
 
         <div class="filter-field menu-field" data-menu-field>
-          <span class="filter-label">Mode</span>
-          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="mode">
-            <span class="toggle-content">
-              <span data-toggle-text>All modes</span>
-            </span>
-            <span class="chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="filter-menu multi-menu" data-filter-menu hidden>
-            {modes.map((mode) => (
-              <label class="multi-option stage-option">
-                <input type="checkbox" name="mode" value={mode.id} data-multi-checkbox="mode" />
-                <span>{mode.name}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-        <div class="filter-field menu-field" data-menu-field>
           <span class="filter-label">Stage</span>
           <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="stage">
             <span class="toggle-content">
@@ -227,6 +209,22 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
     <button class="clear-filters" type="reset">Clear filters</button>
   </form>
+</section>
+
+<section class="mode-filter-section" aria-labelledby="campaign-mode-filter-heading">
+  <h2 id="campaign-mode-filter-heading">Mode</h2>
+  <div class="mode-filter-buttons" aria-label="Campaign modes">
+    {modes.map((mode) => (
+      <button
+        class="mode-filter-button"
+        type="button"
+        aria-pressed={mode.id === "normal" ? "true" : "false"}
+        data-mode-filter={mode.id}
+      >
+        {mode.name}
+      </button>
+    ))}
+  </div>
 </section>
 
 <section class="strategies-section" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
@@ -347,6 +345,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   const rankToggles = Array.from(document.querySelectorAll("[data-rank-toggle]"));
   const heroToggles = Array.from(document.querySelectorAll("[data-hero-toggle]"));
   const multiToggles = Array.from(document.querySelectorAll("[data-multi-toggle]"));
+  const modeFilterButtons = Array.from(document.querySelectorAll("[data-mode-filter]"));
   const statisticsSection = document.querySelector("[data-campaign-statistics]");
   const statisticsGrid = document.querySelector("[data-statistics-grid]");
   const statisticsEmpty = document.querySelector("[data-statistics-empty]");
@@ -423,7 +422,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     const excludedHeroCount = filterForm.querySelectorAll('[data-hero-checkbox="excluded"]:checked').length;
     const count =
       excludedHeroCount +
-      getSelectedMultiValues("mode").length +
       getSelectedMultiValues("stage").length +
       getSelectedMultiValues("creator").length;
     const badge = filterForm.querySelector("[data-more-filter-count]");
@@ -527,7 +525,11 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
   const applyFilters = () => {
     if (!(filterForm instanceof HTMLFormElement)) return;
-    const selectedModes = getSelectedMultiValues("mode");
+    const selectedModes = modeFilterButtons.flatMap((button) =>
+      button instanceof HTMLButtonElement && button.getAttribute("aria-pressed") === "true"
+        ? [button.dataset.modeFilter || ""]
+        : [],
+    );
     const selectedStages = getSelectedMultiValues("stage");
     const selectedCreators = getSelectedMultiValues("creator");
     const supportingHeroes = Array.from(filterForm.querySelectorAll('[data-hero-checkbox="supporting"]:checked'))
@@ -540,7 +542,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
     stageRows.forEach((stageRow) => {
       if (!(stageRow instanceof HTMLElement)) return;
-      const modeMatches = !selectedModes.length || selectedModes.includes(stageRow.dataset.mode || "");
+      const modeMatches = selectedModes.includes(stageRow.dataset.mode || "");
       const stageMatches = !selectedStages.length || selectedStages.includes(stageRow.dataset.stage || "");
       const evidenceCards = Array.from(stageRow.querySelectorAll("[data-evidence-card]"));
       const visibleSupportingCharacterCounts = new Map<string, number>();
@@ -561,7 +563,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
           return Number(requiredRanks[characterId]) <= Number(toggle.dataset.maxSort);
         });
         const supportingCharacters = (card.dataset.supportingCharacters || "").split("|").filter(Boolean);
-        const supportingMatch = supportingHeroes.every((characterId) => supportingCharacters.includes(characterId));
+        const supportingMatch =
+          !supportingHeroes.length || supportingHeroes.some((characterId) => supportingCharacters.includes(characterId));
         const excludedMatch = excludedHeroes.every((characterId) => !supportingCharacters.includes(characterId));
         const matches = modeMatches && stageMatches && creatorMatches && maxRanksMatch && supportingMatch && excludedMatch;
         card.hidden = !matches;
@@ -619,6 +622,15 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       closeAllMenus(toggle);
       menu.hidden = !willOpen;
       toggle.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  modeFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!(button instanceof HTMLButtonElement)) return;
+      const isSelected = button.getAttribute("aria-pressed") === "true";
+      button.setAttribute("aria-pressed", String(!isSelected));
+      applyFilters();
     });
   });
 
@@ -716,9 +728,14 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       });
       updateHeroToggle("supporting");
       updateHeroToggle("excluded");
-      updateMultiToggle("mode");
       updateMultiToggle("stage");
       updateMultiToggle("creator");
+      modeFilterButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.getAttribute("data-mode-filter") === "normal"));
+      });
+      stageRows.forEach((stageRow) => {
+        if (stageRow instanceof HTMLDetailsElement) stageRow.open = false;
+      });
       closeAllMenus();
       applyFilters();
     });
@@ -738,6 +755,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
 <style>
   .filter-section,
+  .mode-filter-section,
   .strategies-section {
     margin-bottom: 3rem;
   }
@@ -755,7 +773,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     grid-template-columns: minmax(160px, 1.1fr) repeat(3, minmax(135px, 1fr)) minmax(135px, 0.8fr) auto;
     align-items: end;
     gap: 0.9rem;
+    width: 100%;
+    max-width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
     border: 1px solid #333;
     border-radius: 12px;
     background: #1e1e1e;
@@ -767,6 +788,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     flex-direction: column;
     gap: 0.4rem;
     min-width: 0;
+    max-width: 100%;
   }
 
   .filter-label {
@@ -826,6 +848,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    min-width: 0;
     gap: 0.5rem;
     text-align: left;
   }
@@ -868,6 +891,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     right: 0;
     left: 0;
     max-height: 19rem;
+    max-width: 100%;
+    box-sizing: border-box;
     overflow-y: auto;
     padding: 0.35rem;
     border: 1px solid #444;
@@ -968,6 +993,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   .more-filters {
     position: relative;
     align-self: end;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .more-filters > summary {
@@ -1018,8 +1045,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     display: grid;
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     width: min(35rem, calc(100vw - 4rem));
+    max-width: 100%;
     gap: 1rem;
     padding: 1rem;
+    box-sizing: border-box;
     border: 1px solid #444;
     border-radius: 10px;
     background: #1a1a1a;
@@ -1033,6 +1062,40 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   .clear-filters {
     align-self: end;
     white-space: nowrap;
+  }
+
+  .mode-filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .mode-filter-button {
+    min-height: 5rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #121212;
+    color: #f5f5f5;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 800;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+
+  .mode-filter-button:hover,
+  .mode-filter-button:focus-visible {
+    border-color: #f59e0b;
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  .mode-filter-button[aria-pressed="true"] {
+    border-color: #d4af37;
+    background: #121212;
+    color: #f5f5f5;
+    box-shadow: 0 0 0 1px rgb(212 175 55 / 28%);
   }
 
   select:focus-visible,
@@ -1280,6 +1343,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       position: static;
       grid-template-columns: 1fr;
       width: auto;
+      max-width: 100%;
       margin-top: 0.5rem;
       box-shadow: none;
     }
@@ -1289,14 +1353,49 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     }
 
     .table-header,
-    summary,
-    .stage-row {
+    .stage-row > summary {
       min-width: 650px;
+    }
+
+    .stage-row {
+      min-width: 0;
     }
 
     .table-header,
     .stage-row > summary {
       grid-template-columns: 3rem 7rem 4rem 8rem minmax(14rem, 1fr);
+    }
+
+    .evidence-list {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .evidence-card {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .roster {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    .roster :global(.character-rank) {
+      min-width: 0;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding: 0.5rem 0.35rem;
+    }
+
+    .mode-filter-buttons {
+      gap: 0.75rem;
+    }
+
+    .mode-filter-button {
+      min-height: 4.25rem;
     }
   }
 </style>

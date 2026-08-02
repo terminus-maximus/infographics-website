@@ -8,6 +8,610 @@
       "name": "Normal",
       "stages": [
         {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "29OqfLWxue0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:52",
+              "timestampSeconds": 112,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "3e6i1lUrRTU",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:18",
+              "timestampSeconds": 138,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "OPEmTXsUL-U",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:29",
+              "timestampSeconds": 89,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "WBZ21bluOIA",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:30",
+              "timestampSeconds": 90,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "h36SXnnPXhc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:22",
+              "timestampSeconds": 82,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "jwFe4QaOGrs",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:09",
+              "timestampSeconds": 129,
+              "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves two defeated cards"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "EsTWGkAjR_w",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:54",
+              "timestampSeconds": 114,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "TceuWYn6kAs",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:25",
+              "timestampSeconds": 85,
+              "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "K4P8Yp_UYRc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Stone2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:57",
+              "timestampSeconds": 237,
+              "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves defeated support card"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "6hcdOWyORNM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:41",
+              "timestampSeconds": 101,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "9HYl7O8LM4U",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:24",
+              "timestampSeconds": 144,
+              "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves two defeated support cards"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "-JkltJ28bvA",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:43",
+              "timestampSeconds": 163,
+              "notes": "Campaign Replay Research 1.0; Victory plus battle evidence resolves defeated support card"
+            },
+            {
+              "videoId": "oMHcmAZBYAk",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:16",
+              "timestampSeconds": 136,
+              "notes": "Campaign Replay Research 1.0; recovered settled Victory; all five cards visible"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "Zu-ZjQ-qNx8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:14",
+              "timestampSeconds": 134,
+              "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
+            },
+            {
+              "videoId": "lA3R_QQPgho",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:10",
+              "timestampSeconds": 70,
+              "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "McHDtai_8m8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:47",
+              "timestampSeconds": 107,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "Dkqr5aiRFpQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:18",
+              "timestampSeconds": 78,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "eOmYmQNw42A",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:09",
+              "timestampSeconds": 69,
+              "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
+            }
+          ]
+        },
+        {
           "number": 70,
           "evidence": [
             {
@@ -290,6 +894,412 @@
               ],
               "timestamp": "3:44",
               "timestampSeconds": 224
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "JAw87pt_Wl8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:26",
+              "timestampSeconds": 146,
+              "notes": "Campaign Replay Research 1.0; Victory plus deployment evidence resolves defeated Morvenn card"
+            },
+            {
+              "videoId": "ZASPFRdjbW8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:52",
+              "timestampSeconds": 232,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
+            },
+            {
+              "videoId": "ee6lll6ckz8",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:28",
+              "timestampSeconds": 88,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "4uFVQrMH3PE",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:08",
+              "timestampSeconds": 128,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory; battle evidence resolves defeated Certus card"
+            },
+            {
+              "videoId": "FgfMDn6-r6g",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Stone3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:29",
+              "timestampSeconds": 149,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "KWIIgPqB3fY",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:50",
+              "timestampSeconds": 290,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "MVdpzi5TJEc",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:16",
+              "timestampSeconds": 376,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "O0EOSHy7ffM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:20",
+              "timestampSeconds": 200,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory; all five cards visible"
+            },
+            {
+              "videoId": "VGCIwoRNU8o",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:40",
+              "timestampSeconds": 160,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "rnbNvRJwbvQ",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Diamond3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Diamond2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:51",
+              "timestampSeconds": 111,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards and rank crests visible"
+            },
+            {
+              "videoId": "si4cHRfzBcE",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:31",
+              "timestampSeconds": 91,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "tnNkZgI0DU0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraApothecary",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:13",
+              "timestampSeconds": 193,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
             }
           ]
         }
@@ -2624,6 +3634,72 @@
               ],
               "timestamp": "2:32",
               "timestampSeconds": 152
+            },
+            {
+              "videoId": "46lH6k56HcA",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:22",
+              "timestampSeconds": 202,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
+            },
+            {
+              "videoId": "MvJrhgoC3gM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:45",
+              "timestampSeconds": 165,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
         },
@@ -3261,6 +4337,52 @@
               ],
               "timestamp": "3:03",
               "timestampSeconds": 183
+            },
+            {
+              "videoId": "57HLuLu5AiM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:00",
+              "timestampSeconds": 120,
+              "notes": "Campaign Replay Research 1.0; recovered embedded Victory window; three required cards visible"
+            },
+            {
+              "videoId": "U5wXZQDfkF0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:57",
+              "timestampSeconds": 117,
+              "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             }
           ]
         },
@@ -3347,6 +4469,34 @@
               ],
               "timestamp": "1:19",
               "timestampSeconds": 79
+            },
+            {
+              "videoId": "tAw1werfiyM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:20",
+              "timestampSeconds": 80,
+              "notes": "Campaign Replay Research 1.0; settled Victory; four cards visible"
             }
           ]
         },
@@ -3512,6 +4662,105 @@
               ],
               "timestamp": "3:19",
               "timestampSeconds": 199
+            },
+            {
+              "videoId": "MZt25paZMsY",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:33",
+              "timestampSeconds": 153,
+              "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
+            },
+            {
+              "videoId": "Ps11jXEsO8k",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "spaceBlackmane",
+                  "rankId": "Diamond2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:25",
+              "timestampSeconds": 205,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
+            },
+            {
+              "videoId": "RgT9BPH-cWM",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:49",
+              "timestampSeconds": 169,
+              "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
         }
@@ -3848,6 +5097,196 @@
       "title": "Indomitus Elite 40 3 Medals (Polska)",
       "creator": "Ether",
       "url": "https://www.youtube.com/watch?v=u4v3KJtE1ZM"
+    },
+    "46lH6k56HcA": {
+      "title": "Elite Indomitus 24: Aleph-Null Boss Fight!",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=46lH6k56HcA"
+    },
+    "MvJrhgoC3gM": {
+      "title": "TACTICUS - Indomitus Elite: BATTLE 24 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=MvJrhgoC3gM"
+    },
+    "57HLuLu5AiM": {
+      "title": "WH40k Tacticus - Campaign Elite Indomitus 35",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=57HLuLu5AiM"
+    },
+    "U5wXZQDfkF0": {
+      "title": "Indomitus Elite Requirements! Level 35!",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=U5wXZQDfkF0"
+    },
+    "tAw1werfiyM": {
+      "title": "WH40k Tacticus - Campaign Elite Indomitus 37",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=tAw1werfiyM"
+    },
+    "MZt25paZMsY": {
+      "title": "WH40k Tacticus - Campaign Elite Indomitus 40",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=MZt25paZMsY"
+    },
+    "Ps11jXEsO8k": {
+      "title": "Indom Elite 40 3* with bronze and silver characters",
+      "creator": "Bigbob",
+      "url": "https://www.youtube.com/watch?v=Ps11jXEsO8k"
+    },
+    "RgT9BPH-cWM": {
+      "title": "Level 40 Indomitus Elite Tacticus",
+      "creator": "Alot of sands",
+      "url": "https://www.youtube.com/watch?v=RgT9BPH-cWM"
+    },
+    "29OqfLWxue0": {
+      "title": "Warhammer 40k Tacticus Sly Marbo Walkthru Indomitus Campaign Level 60",
+      "creator": "Jay Campbell",
+      "url": "https://www.youtube.com/watch?v=29OqfLWxue0"
+    },
+    "3e6i1lUrRTU": {
+      "title": "Indomitus 60, Tacticus Thutmose",
+      "creator": "Torrenaattori",
+      "url": "https://www.youtube.com/watch?v=3e6i1lUrRTU"
+    },
+    "OPEmTXsUL-U": {
+      "title": "INDOMITUS: BATTLE 60 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=OPEmTXsUL-U"
+    },
+    "WBZ21bluOIA": {
+      "title": "How to clear stage 60 Thutmose in Tacticus. Edit - Look at the description.",
+      "creator": "一Emperor一",
+      "url": "https://www.youtube.com/watch?v=WBZ21bluOIA"
+    },
+    "h36SXnnPXhc": {
+      "title": "Indomitus-60: Base Units vs. Thutmose!",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=h36SXnnPXhc"
+    },
+    "jwFe4QaOGrs": {
+      "title": "INDOMITUS: BATTLE 60 - warhammer 40.000 tacticus - walkthrough / gameplay #warhammer40k",
+      "creator": "Play XD 0.1",
+      "url": "https://www.youtube.com/watch?v=jwFe4QaOGrs"
+    },
+    "EsTWGkAjR_w": {
+      "title": "INDOMITUS: BATTLE 61 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=EsTWGkAjR_w"
+    },
+    "TceuWYn6kAs": {
+      "title": "INDOMITUS: BATTLE 62 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=TceuWYn6kAs"
+    },
+    "K4P8Yp_UYRc": {
+      "title": "INDOMITUS: BATTLE 63 - warhammer 40.000 tacticus - walkthrough / gameplay #youtubeshorts",
+      "creator": "Play XD 0.1",
+      "url": "https://www.youtube.com/watch?v=K4P8Yp_UYRc"
+    },
+    "6hcdOWyORNM": {
+      "title": "INDOMITUS: BATTLE 64 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=6hcdOWyORNM"
+    },
+    "9HYl7O8LM4U": {
+      "title": "INDOMITUS: BATTLE 64 - warhammer 40.000 tacticus - walkthrough / gameplay #warhammer40k",
+      "creator": "Play XD 0.1",
+      "url": "https://www.youtube.com/watch?v=9HYl7O8LM4U"
+    },
+    "-JkltJ28bvA": {
+      "title": "INDOMITUS: BATTLE 65 - warhammer 40.000 tacticus - walkthrough / gameplay #warhammer40k #foryou",
+      "creator": "Play XD 0.1",
+      "url": "https://www.youtube.com/watch?v=-JkltJ28bvA"
+    },
+    "oMHcmAZBYAk": {
+      "title": "INDOMITUS: BATTLE 65 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=oMHcmAZBYAk"
+    },
+    "Zu-ZjQ-qNx8": {
+      "title": "Stage Indomitus stage 66 3* Lightning Victory",
+      "creator": "一Emperor一",
+      "url": "https://www.youtube.com/watch?v=Zu-ZjQ-qNx8"
+    },
+    "lA3R_QQPgho": {
+      "title": "INDOMITUS: BATTLE 66 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=lA3R_QQPgho"
+    },
+    "McHDtai_8m8": {
+      "title": "INDOMITUS: BATTLE 67 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=McHDtai_8m8"
+    },
+    "Dkqr5aiRFpQ": {
+      "title": "INDOMITUS: BATTLE 68 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=Dkqr5aiRFpQ"
+    },
+    "eOmYmQNw42A": {
+      "title": "INDOMITUS: BATTLE 69 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=eOmYmQNw42A"
+    },
+    "JAw87pt_Wl8": {
+      "title": "Indomitus 74: With Yarrick",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=JAw87pt_Wl8"
+    },
+    "ZASPFRdjbW8": {
+      "title": "Indomitus 74 3 stars with base units (No Yarrick). Unit stats at the end of the video.",
+      "creator": "一Emperor一",
+      "url": "https://www.youtube.com/watch?v=ZASPFRdjbW8"
+    },
+    "ee6lll6ckz8": {
+      "title": "INDOMITUS: BATTLE 74 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=ee6lll6ckz8"
+    },
+    "4uFVQrMH3PE": {
+      "title": "Warhammer 40,000: Tacticus - Gameplay Part 24 - Anuphet boss fight (Indomitus 75)",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=4uFVQrMH3PE"
+    },
+    "FgfMDn6-r6g": {
+      "title": "Indomitus 75 - Detailed guide with base units (2026)",
+      "creator": "TacticiansUnited",
+      "url": "https://www.youtube.com/watch?v=FgfMDn6-r6g"
+    },
+    "KWIIgPqB3fY": {
+      "title": "Warhammer 40k Tacticus: Viewer Request: 3 Medal Indomitus 75",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=KWIIgPqB3fY"
+    },
+    "MVdpzi5TJEc": {
+      "title": "Warhammer 40k Tacticus - Indomitus: Battle 75 - Tips - Walk-through",
+      "creator": "Cagedslinky",
+      "url": "https://www.youtube.com/watch?v=MVdpzi5TJEc"
+    },
+    "O0EOSHy7ffM": {
+      "title": "Indomitus 75: No Yarrick or Indomitus 75: \"Base\" Units",
+      "creator": "Владимир Питерский",
+      "url": "https://www.youtube.com/watch?v=O0EOSHy7ffM"
+    },
+    "VGCIwoRNU8o": {
+      "title": "INDOMITUS: BATTLE 75 - warhammer 40.000 tacticus - 3 stars",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=VGCIwoRNU8o"
+    },
+    "rnbNvRJwbvQ": {
+      "title": "Indomitus 75: Anuphet Boss Fight 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=rnbNvRJwbvQ"
+    },
+    "si4cHRfzBcE": {
+      "title": "Tacticus - Indomitus 75",
+      "creator": "Fionn Colvin",
+      "url": "https://www.youtube.com/watch?v=si4cHRfzBcE"
+    },
+    "tnNkZgI0DU0": {
+      "title": "Indomitus 75 3 stars (Anuphet) with initial units (Varro, Vindicta, Certus, Bellator, Incisus)",
+      "creator": "一Emperor一",
+      "url": "https://www.youtube.com/watch?v=tnNkZgI0DU0"
     }
   }
 }
