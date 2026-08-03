@@ -1,0 +1,301 @@
+---
+import {
+  getTeamScheduledEnergy,
+  type CampaignMode,
+  type CampaignStage,
+  type CampaignVideo,
+  type CharacterReference,
+  type RankReference,
+} from "../../lib/campaigns";
+
+interface Props {
+  mode: CampaignMode;
+  stage: CampaignStage;
+  videos: Record<string, CampaignVideo>;
+  characters: Record<string, CharacterReference>;
+  ranks: Record<string, RankReference>;
+}
+
+const { mode, stage, videos, characters, ranks } = Astro.props;
+const stageKey = `${mode.id}:${stage.number}`;
+const previewEvidence = [...stage.evidence]
+  .sort((left, right) => getTeamScheduledEnergy(left.roster) - getTeamScheduledEnergy(right.roster))
+  .slice(0, 2);
+const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
+  if (timestampSeconds == null) return url;
+  const timestampedUrl = new URL(url);
+  timestampedUrl.searchParams.set("t", `${timestampSeconds}s`);
+  return timestampedUrl.toString();
+};
+---
+
+<aside class="strategy-replays" aria-label={`${mode.name} ${stage.number} strategy replays`}>
+  <div class="replay-panel-heading">
+    <div>
+      <span class="eyebrow">Strategy Replays</span>
+      <h4>{stage.evidence.length} {stage.evidence.length === 1 ? "replay" : "replays"} available</h4>
+    </div>
+    <span class:list={["mode-badge", `mode-${mode.id}`]}>{mode.name} {stage.number}</span>
+  </div>
+
+  <div class="replay-previews">
+    {previewEvidence.map((evidence) => {
+      const video = videos[evidence.videoId];
+      const teamEnergy = getTeamScheduledEnergy(evidence.roster);
+      return (
+        <a
+          class="replay-preview"
+          href={getTimestampedVideoUrl(video.url, evidence.timestampSeconds)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${video.creator} ${mode.name} ${stage.number} replay on YouTube`}
+        >
+          <span class="preview-roster" aria-label={`${evidence.roster.length} hero roster`}>
+            {evidence.roster.map(({ characterId, rankId }) => (
+              <span class="preview-hero" title={`${characters[characterId].shortName}: ${ranks[rankId].name}`}>
+                <img src={characters[characterId].portrait} alt="" width="34" height="34" loading="lazy" />
+                <img class="preview-rank" src={ranks[rankId].badge} alt="" width="22" height="22" loading="lazy" />
+              </span>
+            ))}
+          </span>
+          <span class="preview-meta">
+            <strong>{video.creator}</strong>
+            <small><img src="/images/ranks/energy.webp" alt="" width="16" height="16" loading="lazy" /> {teamEnergy.toLocaleString("en-US")}</small>
+          </span>
+          <span class="youtube-play" aria-hidden="true">▶</span>
+        </a>
+      );
+    })}
+  </div>
+
+  <p class="compare-note">Compare successful clears with different ranks, supporting heroes, and turn strategies.</p>
+
+  <button
+    class="view-replays-button"
+    type="button"
+    data-strategy-replay-filter
+    data-mode-target={mode.id}
+    data-stage-target={stageKey}
+  >View {mode.name} {stage.number} Replays</button>
+</aside>
+
+<script>
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const trigger = event.target.closest("[data-strategy-replay-filter]");
+    if (!(trigger instanceof HTMLButtonElement)) return;
+    document.dispatchEvent(new CustomEvent("campaign:filter-stage", {
+      detail: {
+        modeId: trigger.dataset.modeTarget || "",
+        stageKey: trigger.dataset.stageTarget || "",
+      },
+    }));
+  });
+</script>
+
+<style>
+  .strategy-replays {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 9px;
+    background: #1b1b1b;
+  }
+
+  .replay-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .eyebrow {
+    display: block;
+    margin-bottom: 0.15rem;
+    color: #d4af37;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    margin: 0;
+    color: #f5f5f5;
+    font-size: 0.95rem;
+  }
+
+  .mode-badge {
+    flex: 0 0 auto;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #555;
+    border-radius: 999px;
+    color: #ccc;
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+
+  .mode-elite {
+    border-color: #6a5925;
+    color: #f5d76e;
+  }
+
+  .replay-previews {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .replay-preview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.65rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #121212;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .replay-preview:hover,
+  .replay-preview:focus-visible {
+    border-color: #d4af37;
+    background: #161616;
+    outline: none;
+  }
+
+  .preview-roster {
+    display: flex;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .preview-hero {
+    position: relative;
+    display: inline-block;
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+
+  .preview-hero > img:first-child {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #444;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .preview-rank {
+    position: absolute;
+    right: -0.3rem;
+    bottom: -0.3rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    object-fit: contain;
+  }
+
+  .preview-meta {
+    min-width: 6rem;
+    text-align: right;
+  }
+
+  .preview-meta strong,
+  .preview-meta small {
+    display: block;
+  }
+
+  .preview-meta strong {
+    color: #f5f5f5;
+    font-size: 0.78rem;
+  }
+
+  .preview-meta small {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.2rem;
+    margin-top: 0.15rem;
+    color: #aaa;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .preview-meta img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .youtube-play {
+    display: grid;
+    width: 2.25rem;
+    height: 1.65rem;
+    place-items: center;
+    border-radius: 6px;
+    background: #e62117;
+    color: white;
+    font-size: 0.72rem;
+  }
+
+  .compare-note {
+    margin: 0;
+    padding-left: 0.75rem;
+    border-left: 3px solid #d4af37;
+    color: #aaa;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .view-replays-button {
+    width: 100%;
+    min-height: 2.65rem;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background: #121212;
+    color: #f5f5f5;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 800;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .view-replays-button:hover,
+  .view-replays-button:focus-visible {
+    background: #d4af37;
+    color: #121212;
+    outline: none;
+  }
+
+  @media (max-width: 600px) {
+    .strategy-replays {
+      padding: 0.75rem;
+    }
+
+    .replay-panel-heading {
+      align-items: flex-start;
+    }
+
+    .replay-preview {
+      grid-template-columns: minmax(0, 1fr) auto;
+      padding: 0.55rem;
+    }
+
+    .preview-meta {
+      grid-column: 1 / -1;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .preview-meta small {
+      justify-content: flex-start;
+    }
+  }
+</style>

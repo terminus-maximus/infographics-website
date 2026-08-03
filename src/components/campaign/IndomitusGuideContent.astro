@@ -1,0 +1,634 @@
+---
+import type { CampaignMode, CampaignVideo, CharacterReference, RankReference } from "../../lib/campaigns";
+import {
+  bossContent,
+  difficultStageGroups,
+  overviewContent,
+  requiredHeroContent,
+  supportingHeroGroups,
+} from "../../data/campaigns/indomitusGuideContent";
+import HeroGuideCard from "./HeroGuideCard.astro";
+import StageReplayPreview from "./StageReplayPreview.astro";
+
+interface Props {
+  characters: Record<string, CharacterReference>;
+  modes: CampaignMode[];
+  videos: Record<string, CampaignVideo>;
+  ranks: Record<string, RankReference>;
+}
+
+const { characters, modes, videos, ranks } = Astro.props;
+
+const findMode = (modeId: string) => modes.find((mode) => mode.id === modeId)!;
+const findStage = (modeId: string, stageNumber: number) =>
+  findMode(modeId).stages.find((stage) => stage.number === stageNumber)!;
+
+const tocGroups = [
+  {
+    title: "Guide",
+    links: [
+      ["Overview", "#overview"],
+      ["Required Heroes", "#required-heroes"],
+      ["Supporting Heroes", "#supporting-heroes"],
+      ["Difficult Stages", "#difficult-stages"],
+    ],
+  },
+  {
+    title: "Supporting Heroes",
+    links: [
+      ["Early Game", "#early-game-heroes"],
+      ["Mid Game", "#mid-game-heroes"],
+      ["Elite Heroes", "#elite-heroes"],
+    ],
+  },
+  {
+    title: "Difficult Stages",
+    links: [
+      ["Normal", "#difficult-normal-stages"],
+      ["Elite", "#difficult-elite-stages"],
+      ["Bosses", "#campaign-bosses"],
+    ],
+  },
+  {
+    title: "Replay Data",
+    links: [
+      ["Replay Filters", "#campaign-replay-filters"],
+      ["Campaign Replays", "#campaign-replays"],
+      ["Replay Statistics", "#campaign-replay-statistics"],
+      ["Related Guides", "#related-guides"],
+    ],
+  },
+];
+---
+
+<nav class="table-of-contents guide-panel" aria-labelledby="table-of-contents-heading">
+  <h2 id="table-of-contents-heading">Table of Contents</h2>
+  <div class="toc-grid">
+    {tocGroups.map((group) => (
+      <div class="toc-group">
+        <h3>{group.title}</h3>
+        <ul>
+          {group.links.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</nav>
+
+<section class="guide-panel" id="overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading">Overview</h2>
+  <div class="overview-grid">
+    <article class="overview-card">
+      <span class="section-icon" aria-hidden="true">◷</span>
+      <div>
+        <h3>Timing</h3>
+        <p class="content-callout">{overviewContent.timing.callout}</p>
+        <div class="copy-stack">{overviewContent.timing.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div>
+      </div>
+    </article>
+
+    <article class="overview-card">
+      <span class="section-icon" aria-hidden="true">↗</span>
+      <div>
+        <h3>Progression</h3>
+        <p class="content-callout">{overviewContent.progression.callout}</p>
+        <p>{overviewContent.progression.introduction}</p>
+        <ol>{overviewContent.progression.steps.map((step) => <li>{step}</li>)}</ol>
+        <div class="copy-stack">{overviewContent.progression.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div>
+      </div>
+    </article>
+
+    <article class="overview-card investment-card">
+      <span class="section-icon" aria-hidden="true">◆</span>
+      <div>
+        <h3>Recommended Investment</h3>
+        <p>{overviewContent.investmentIntroduction}</p>
+
+        <h4>Normal Investment</h4>
+        <div class="table-scroll" tabindex="0" aria-label="Normal investment recommendations">
+          <table>
+            <thead><tr><th>Hero</th><th>Low-investment clearing range</th><th>Comfortable target</th><th>Recommendation</th></tr></thead>
+            <tbody>{overviewContent.normalInvestment.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+          </table>
+        </div>
+        <p>Replay-backed clears exist with the required heroes at Iron rank and, in some cases, even lower. Those examples demonstrate what is possible with exact play; they should not replace a straightforward beginner recommendation.</p>
+
+        <h4>Elite Investment</h4>
+        <div class="table-scroll" tabindex="0" aria-label="Elite investment recommendations">
+          <table>
+            <thead><tr><th>Hero</th><th>Recommended baseline</th><th>Ability emphasis</th><th>Equipment emphasis</th></tr></thead>
+            <tbody>{overviewContent.eliteInvestment.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+          </table>
+        </div>
+        <p class="content-callout">Recommended Elite baseline: Silver I Varro, Silver I Certus, and Gold I Bellator, with strong defensive equipment on Varro and Certus.</p>
+        <p>Bronze-rank mandatory-character clears do exist, but they typically transfer the investment elsewhere: maximized epic armor, Isabella, stronger Gold or Diamond carries, exact positioning, favorable critical hits, or favorable enemy movement. Treat those as challenge clears rather than universal minimums.</p>
+      </div>
+    </article>
+
+    <article class="overview-card strategy-card">
+      <span class="section-icon" aria-hidden="true">✦</span>
+      <div>
+        <h3>Strategy &amp; Tips</h3>
+        <div class="tip-list">
+          {overviewContent.strategyTips.map(([title, copy]) => (
+            <section class="tip-card">
+              <h4>{title}</h4>
+              <p>{copy}</p>
+            </section>
+          ))}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="guide-panel" id="required-heroes" aria-labelledby="required-heroes-heading">
+  <h2 id="required-heroes-heading">Required Heroes</h2>
+  <p class="section-intro">Varro Tigurius, Certus, and Bellator are required throughout Indomitus. Later Elite stages restrict deployment to this trio, so premium supporting heroes cannot eliminate the need to keep all three alive.</p>
+  <div class="hero-grid required-grid">
+    {requiredHeroContent.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} />)}
+  </div>
+</section>
+
+<section class="guide-panel" id="supporting-heroes" aria-labelledby="supporting-heroes-heading">
+  <h2 id="supporting-heroes-heading">Supporting Heroes</h2>
+  <p class="section-intro">Supporting heroes can make open-deployment stages much easier, but remember that several Elite maps allow only Varro, Certus, and Bellator. Build supports that improve your wider roster rather than expecting one premium hero to solve every stage.</p>
+  <div class="disclosure-stack">
+    {supportingHeroGroups.map((group) => (
+      <details class="guide-disclosure" id={group.id}>
+        <summary>
+          <span>{group.title}</span>
+          <span class="summary-portraits" aria-hidden="true">
+            {group.heroes.map((guide) => (
+              <img src={characters[guide.characterId].portrait} alt="" width="34" height="34" loading="lazy" />
+            ))}
+          </span>
+        </summary>
+        <div class="disclosure-content hero-grid">
+          {group.heroes.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} />)}
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<section class="guide-panel" id="difficult-stages" aria-labelledby="difficult-stages-heading">
+  <h2 id="difficult-stages-heading">Difficult Stages</h2>
+  <p class="section-intro">The stages below generated the strongest concentration of community help requests, difficult replay searches, and “final missing medal” complaints. Difficulty is not determined by rank alone—deployment, equipment, target priority, and enemy behavior can be just as important.</p>
+  <div class="disclosure-stack">
+    {difficultStageGroups.map((group) => (
+      <details class="guide-disclosure" id={group.id}>
+        <summary>{group.title}</summary>
+        <div class="disclosure-content stage-grid">
+          {group.stages.map((stage) => (
+            <article class="stage-card">
+              <span class="stage-number">{stage.number}</span>
+              <div>
+                <h3>{group.title} {stage.number} — {stage.title}</h3>
+                <h4>Why players struggle</h4>
+                <p>{stage.why}</p>
+                <h4>Strategy</h4>
+                <ul>{stage.strategy.map((item) => <li>{item}</li>)}</ul>
+                <h4>Closing note</h4>
+                <p>{stage.closing}</p>
+                <StageReplayPreview
+                  mode={findMode(group.modeId)}
+                  stage={findStage(group.modeId, stage.number)}
+                  videos={videos}
+                  characters={characters}
+                  ranks={ranks}
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      </details>
+    ))}
+
+    <details class="guide-disclosure" id="campaign-bosses">
+      <summary>Bosses</summary>
+      <div class="disclosure-content boss-content">
+        <p class="boss-intro">The five Indomitus bosses appear at Normal Stages 15, 30, 45, 60, and 75. Their Elite chapter encounters occur at Stages 8, 16, 24, 32, and 40.</p>
+        <div class="boss-grid">
+        {bossContent.map((boss) => {
+          const character = characters[boss.characterId];
+          return (
+            <article class="hero-card boss-card">
+              <img src={character.portrait} alt={`${character.name} portrait`} width="64" height="64" loading="lazy" />
+              <div>
+                <h3>{boss.heading}</h3>
+                <div class="appearance-list" aria-label={`${boss.heading} stage appearances`}>
+                  {boss.appearances.map((appearance) => <span>{appearance}</span>)}
+                </div>
+                <div class="copy-stack">{boss.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div>
+              </div>
+            </article>
+          );
+        })}
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<style>
+  .guide-panel {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    scroll-margin-top: 6rem;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background: #1e1e1e;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+  }
+
+  h3 {
+    margin: 0 0 0.35rem;
+    color: #f5f5f5;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  h4 {
+    margin: 1rem 0 0.4rem;
+    color: #d4af37;
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  ol,
+  ul {
+    margin: 0.7rem 0;
+    padding-left: 1.35rem;
+    color: #c7c7c7;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  li + li {
+    margin-top: 0.3rem;
+  }
+
+  .section-intro {
+    margin: -0.15rem 0 1.25rem;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .toc-group {
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 9px;
+    background: #151515;
+  }
+
+  .toc-group h3 {
+    color: #d4af37;
+  }
+
+  .toc-group ul {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .toc-group a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #d5d5d5;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .toc-group a::before {
+    color: #f59e0b;
+    content: "›";
+    font-weight: 800;
+  }
+
+  .toc-group a:hover,
+  .toc-group a:focus-visible {
+    color: #f5d76e;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .overview-grid,
+  .hero-grid,
+  .stage-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .required-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-card,
+  .hero-card,
+  .stage-card {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 9px;
+    background: #121212;
+  }
+
+  .overview-card,
+  .hero-card,
+  .stage-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.85rem;
+  }
+
+  .overview-card > div,
+  .hero-card > div,
+  .stage-card > div {
+    min-width: 0;
+  }
+
+  .copy-stack,
+  .tip-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .content-callout {
+    margin: 0.7rem 0 1rem;
+    padding: 0.8rem 0.9rem;
+    border-left: 3px solid #d4af37;
+    border-radius: 0 7px 7px 0;
+    background: rgba(212, 175, 55, 0.08);
+    color: #f5d76e;
+    font-weight: 800;
+  }
+
+  .table-scroll {
+    width: 100%;
+    margin: 0.55rem 0 0.9rem;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .table-scroll:focus-visible {
+    border-color: #d4af37;
+    outline: none;
+  }
+
+  table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    background: #151515;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  th,
+  td {
+    padding: 0.65rem 0.7rem;
+    border-bottom: 1px solid #303030;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #252525;
+    color: #d4af37;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  td {
+    color: #ccc;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .tip-list {
+    margin-top: 0.75rem;
+  }
+
+  .tip-card {
+    padding: 0.85rem;
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+    background: #181818;
+  }
+
+  .tip-card h4 {
+    margin-top: 0;
+  }
+
+  .section-icon,
+  .stage-number {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border: 1px solid #5b4b1c;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.09);
+    color: #f5d76e;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .hero-card > img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: #1e1e1e;
+    object-fit: cover;
+  }
+
+  .disclosure-stack {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .guide-disclosure {
+    scroll-margin-top: 6rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #151515;
+    overflow: clip;
+  }
+
+  .guide-disclosure[open] {
+    border-color: #5b4b1c;
+  }
+
+  .guide-disclosure summary {
+    display: flex;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-weight: 800;
+    list-style: none;
+  }
+
+  .guide-disclosure summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .guide-disclosure summary::after {
+    margin-left: 0;
+    color: #f59e0b;
+    content: "+";
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .guide-disclosure[open] summary::after {
+    content: "−";
+  }
+
+  .guide-disclosure summary:hover,
+  .guide-disclosure summary:focus-visible {
+    background: #1b1b1b;
+    color: #f5d76e;
+    outline: none;
+  }
+
+  .disclosure-content {
+    padding: 0 1rem 1rem;
+    border-top: 1px solid #292929;
+  }
+
+  .disclosure-content.hero-grid,
+  .disclosure-content.stage-grid {
+    padding-top: 1rem;
+  }
+
+  .boss-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .boss-content {
+    padding: 1rem;
+  }
+
+  .boss-intro {
+    margin-bottom: 1rem;
+  }
+
+  .appearance-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.35rem 0 0.75rem;
+  }
+
+  .appearance-list span {
+    padding: 0.25rem 0.55rem;
+    border: 1px solid #49411f;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.08);
+    color: #f5d76e;
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+
+  .summary-portraits {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 0.5rem;
+  }
+
+  .summary-portraits img {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: #181818;
+    object-fit: cover;
+  }
+
+  .summary-portraits img + img {
+    margin-left: -0.45rem;
+  }
+
+  @media (max-width: 900px) {
+    .toc-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .guide-panel {
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    .toc-grid,
+    .overview-grid,
+    .hero-grid,
+    .stage-grid,
+    .required-grid,
+    .boss-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .summary-portraits img {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .toc-group,
+    .overview-card,
+    .hero-card,
+    .stage-card {
+      padding: 0.85rem;
+    }
+
+    .hero-card > img {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    .overview-card,
+    .stage-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

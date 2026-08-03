@@ -1,11 +1,14 @@
 ---
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
+import CampaignCard from "../../../components/campaign/CampaignCard.astro";
+import IndomitusGuideContent from "../../../components/campaign/IndomitusGuideContent.astro";
 import RankBadge from "../../../components/campaign/RankBadge.astro";
 import StageEvidenceTable from "../../../components/campaign/StageEvidenceTable.astro";
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
 import Layout from "../../../layouts/Layout.astro";
 import { indomitusPage } from "../../../data/campaigns/campaignCatalog";
+import { graphics } from "../../../data/graphics";
 import {
   characterReferences,
   indomitusCampaign,
@@ -55,6 +58,7 @@ const statisticCharacterIds = [...requiredCharacterIds, ...supportingCharacterId
 const rankMap = Object.fromEntries(
   Object.values(rankReferences).map((rank) => [rank.id, { name: rank.name, sort: rank.sort, badge: rank.badge }]),
 );
+const relatedGuides = graphics.filter((guide) => ["/campaigns/", "/beginner-guide", "/elite-campaigns"].includes(guide.href));
 ---
 
 <Layout
@@ -95,20 +99,34 @@ const rankMap = Object.fromEntries(
       <p class="caption"><a href={indomitusPage.featuredImage} target="_blank" rel="noopener noreferrer">CLICK FULL-SIZE INFOGRAPHIC</a></p>
     </section>
 
+    <IndomitusGuideContent
+      characters={characterReferences}
+      modes={indomitusCampaign.modes}
+      videos={indomitusCampaign.videos}
+      ranks={rankReferences}
+    />
+
     <StageEvidenceTable
       modes={indomitusCampaign.modes}
       videos={indomitusCampaign.videos}
       characters={characterReferences}
       ranks={rankReferences}
-    />
+    >
+      <div class="filter-introduction" slot="filter-introduction">
+        <p class="filter-callout"><strong>Stuck on a specific stage?</strong> Select the difficulty and stage number to compare team compositions, hero ranks, and successful strategies.</p>
+        <p>Every recommendation on this page is supported by community discussion, documented clears, or the Terminus Maximus Campaign Replay Library. Use the filters below to find successful Indomitus runs for any Normal or Elite stage.</p>
+        <p>Compare teams carefully. A low-rank clear may depend on stronger equipment, a premium supporting hero, a heavily developed carry, favorable enemy movement, or exact turn-by-turn positioning. The most useful replay is not always the one with the lowest ranks—it is the one whose roster and investment most closely resemble your own.</p>
+      </div>
+    </StageEvidenceTable>
 
     <section
       class="statistics-section"
+      id="campaign-replay-statistics"
       aria-labelledby="campaign-statistics-heading"
       data-campaign-statistics
       data-rank-map={JSON.stringify(rankMap)}
     >
-      <h2 id="campaign-statistics-heading">Campaign Guide Statistics</h2>
+      <h2 id="campaign-statistics-heading">Campaign Replay Statistics</h2>
       <p class="statistics-note">These ranks change as you apply Filters</p>
       <div class="statistics-grid" data-statistics-grid>
         {statisticCharacterIds.map((characterId) => {
@@ -148,17 +166,11 @@ const rankMap = Object.fromEntries(
       <p class="statistics-empty" data-statistics-empty hidden>No character rank observations match these filters.</p>
     </section>
 
-    <section class="method-section" aria-labelledby="about-evidence-heading">
-      <h2 id="about-evidence-heading">About This Campaign Evidence</h2>
-      <p>
-        This Indomitus campaign guide organizes real Tacticus clears by mode and stage. Expand any stage to compare the
-        exact character ranks recorded for each team and open the original creator's YouTube replay.
-      </p>
-      <p>
-        Elite campaign evidence covers stages 1-40. Normal campaign data currently covers stages 70-73, so missing Normal
-        stages are not presented as completed or inferred strategies.
-      </p>
-      <p><a href="/campaigns/">Return to all Tacticus Campaign Guides</a>.</p>
+    <section class="related-section" id="related-guides" aria-labelledby="related-guides-heading">
+      <h2 id="related-guides-heading">Related Guides</h2>
+      <div class="related-grid">
+        {relatedGuides.map((guide) => <CampaignCard {...guide} />)}
+      </div>
     </section>
   </main>
 
@@ -182,12 +194,17 @@ const rankMap = Object.fromEntries(
 
   .featured-section,
   .statistics-section,
-  .method-section {
+  .related-section {
     margin-bottom: 3rem;
     padding: 1.5rem;
     border: 1px solid #333;
     border-radius: 12px;
     background: #1e1e1e;
+  }
+
+  .statistics-section,
+  .related-section {
+    scroll-margin-top: 6rem;
   }
 
   h2 {
@@ -216,7 +233,7 @@ const rankMap = Object.fromEntries(
   }
 
   .caption a,
-  .method-section a {
+  .related-section a {
     color: #d4af37;
     font-weight: 700;
     text-decoration: none;
@@ -224,17 +241,36 @@ const rankMap = Object.fromEntries(
 
   .caption a:hover,
   .caption a:focus-visible,
-  .method-section a:hover,
-  .method-section a:focus-visible {
+  .related-section a:hover,
+  .related-section a:focus-visible {
     color: #f5d76e;
     text-decoration: underline;
     outline: none;
   }
 
-  .statistics-note,
-  .method-section p {
+  .statistics-note {
     color: #cccccc;
     line-height: 1.7;
+  }
+
+  .filter-introduction {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0 0 1rem;
+    color: #ccc;
+    line-height: 1.7;
+  }
+
+  .filter-introduction p {
+    margin: 0;
+  }
+
+  .filter-callout {
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid #d4af37;
+    border-radius: 0 7px 7px 0;
+    background: rgba(212, 175, 55, 0.08);
+    color: #f5d76e;
   }
 
   .statistics-grid {
@@ -338,12 +374,18 @@ const rankMap = Object.fromEntries(
     text-align: center;
   }
 
-  .method-section p:last-child {
-    margin-bottom: 0;
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   @media (max-width: 900px) {
     .statistics-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .related-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -355,12 +397,16 @@ const rankMap = Object.fromEntries(
 
     .featured-section,
     .statistics-section,
-    .method-section {
+    .related-section {
       margin-bottom: 2rem;
       padding: 1rem;
     }
 
     .statistics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .related-grid {
       grid-template-columns: 1fr;
     }
   }

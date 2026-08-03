@@ -44,8 +44,9 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 };
 ---
 
-<section class="filter-section" aria-labelledby="campaign-filter-heading">
-  <h2 id="campaign-filter-heading">Campaign Guide Filters</h2>
+<section class="filter-section" id="campaign-replay-filters" aria-labelledby="campaign-filter-heading">
+  <h2 id="campaign-filter-heading">Campaign Replay Filters</h2>
+  <slot name="filter-introduction" />
   <form class="filters" data-campaign-filters>
     {requiredCharacters.map((character) => (
       <div class="filter-field menu-field" data-menu-field>
@@ -229,8 +230,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   </div>
 </section>
 
-<section class="strategies-section" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
-  <h2 id="campaign-strategies-heading">Campaign Strategies</h2>
+<section class="strategies-section" id="campaign-replays" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
+  <h2 id="campaign-strategies-heading">Campaign Replays</h2>
 
   <div class="stage-table" role="region" aria-label="Indomitus stage replay evidence" tabindex="0">
     <div class="table-header" aria-hidden="true">
@@ -745,6 +746,73 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     applyFilters();
   };
 
+  const applyStageReplaySelection = (
+    modeId: string,
+    stageKey: string,
+    options: { scroll?: boolean; updateUrl?: boolean } = {},
+  ) => {
+    if (!(filterForm instanceof HTMLFormElement)) return;
+    const targetStageRow = stageRows.find(
+      (stageRow) => stageRow instanceof HTMLElement && stageRow.dataset.stage === stageKey,
+    );
+    const requestedModeExists = modeFilterButtons.some(
+      (button) => button instanceof HTMLButtonElement && button.dataset.modeFilter === modeId,
+    );
+    if (!(targetStageRow instanceof HTMLDetailsElement) || !requestedModeExists) return;
+
+    filterForm.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+      if (input instanceof HTMLInputElement) input.checked = false;
+    });
+    rankToggles.forEach((toggle) => {
+      if (!(toggle instanceof HTMLButtonElement)) return;
+      toggle.dataset.maxSort = "";
+      const text = toggle.querySelector("[data-toggle-text]");
+      const icon = toggle.querySelector("[data-toggle-icon]");
+      if (text) text.textContent = "Any rank";
+      if (icon instanceof HTMLImageElement) {
+        icon.src = "";
+        icon.hidden = true;
+      }
+    });
+    const targetStageCheckbox = Array.from(
+      filterForm.querySelectorAll('[data-multi-checkbox="stage"]'),
+    ).find((input) => input instanceof HTMLInputElement && input.value === stageKey);
+    if (targetStageCheckbox instanceof HTMLInputElement) targetStageCheckbox.checked = true;
+    modeFilterButtons.forEach((button) => {
+      if (button instanceof HTMLButtonElement) {
+        button.setAttribute("aria-pressed", String(button.dataset.modeFilter === modeId));
+      }
+    });
+    stageRows.forEach((stageRow) => {
+      if (stageRow instanceof HTMLDetailsElement) stageRow.open = false;
+    });
+    updateHeroToggle("supporting");
+    updateHeroToggle("excluded");
+    updateMultiToggle("stage");
+    updateMultiToggle("creator");
+    closeAllMenus();
+    applyFilters();
+    targetStageRow.open = true;
+
+    if (options.updateUrl !== false) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("mode", modeId);
+      url.searchParams.set("stage", stageKey);
+      url.hash = "campaign-replays";
+      window.history.replaceState(null, "", url);
+    }
+    if (options.scroll !== false) {
+      document.querySelector("#campaign-replays")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  document.addEventListener("campaign:filter-stage", (event) => {
+    if (!(event instanceof CustomEvent)) return;
+    const modeId = typeof event.detail?.modeId === "string" ? event.detail.modeId : "";
+    const stageKey = typeof event.detail?.stageKey === "string" ? event.detail.stageKey : "";
+    applyStageReplaySelection(modeId, stageKey);
+  });
+
   statisticsGrid?.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
     const trigger = event.target.closest("[data-supporting-stat-trigger]");
@@ -784,6 +852,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       });
       closeAllMenus();
       applyFilters();
+      const url = new URL(window.location.href);
+      url.searchParams.delete("mode");
+      url.searchParams.delete("stage");
+      window.history.replaceState(null, "", url);
     });
   });
 
@@ -796,10 +868,22 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     if (event.key === "Escape") closeAllMenus();
   });
 
-  applyFilters();
+  const initialUrl = new URL(window.location.href);
+  const initialMode = initialUrl.searchParams.get("mode") || "";
+  const initialStage = initialUrl.searchParams.get("stage") || "";
+  if (initialMode && initialStage) {
+    applyStageReplaySelection(initialMode, initialStage, { scroll: false, updateUrl: false });
+  } else {
+    applyFilters();
+  }
 </script>
 
 <style>
+  .filter-section,
+  .strategies-section {
+    scroll-margin-top: 6rem;
+  }
+
   .filter-section,
   .mode-filter-section,
   .strategies-section {
