@@ -3,14 +3,15 @@ import type { RankReference } from "../../lib/campaigns";
 
 interface Props {
   rank: RankReference;
+  showLabel?: boolean;
 }
 
-const { rank } = Astro.props;
+const { rank, showLabel = true } = Astro.props;
 ---
 
 <figure class="rank-badge" title={rank.name}>
   <img src={rank.badge} alt={`${rank.name} rank badge`} width="64" height="64" loading="lazy" />
-  <figcaption>{rank.name}</figcaption>
+  {showLabel && <figcaption>{rank.name}</figcaption>}
 </figure>
 
 <style>

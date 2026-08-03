@@ -1,10 +1,12 @@
 ---
 import CharacterRank from "./CharacterRank.astro";
-import type {
-  CampaignMode,
-  CampaignVideo,
-  CharacterReference,
-  RankReference,
+import {
+  getCharacterScheduledEnergy,
+  getTeamScheduledEnergy,
+  type CampaignMode,
+  type CampaignVideo,
+  type CharacterReference,
+  type RankReference,
 } from "../../lib/campaigns";
 
 interface Props {
@@ -218,7 +220,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       <button
         class="mode-filter-button"
         type="button"
-        aria-pressed={mode.id === "normal" ? "true" : "false"}
+        aria-pressed="true"
         data-mode-filter={mode.id}
       >
         {mode.name}
@@ -241,6 +243,9 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
     {modes.flatMap((mode) =>
       mode.stages.map((stage) => {
+        const displayedEvidence = [...stage.evidence].sort(
+          (left, right) => getTeamScheduledEnergy(left.roster) - getTeamScheduledEnergy(right.roster),
+        );
         const stageSupportingCharacterIds = [
           ...new Set(
             stage.evidence.flatMap((evidence) =>
@@ -280,10 +285,16 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
             </summary>
 
             <div class="evidence-list">
-              {stage.evidence.map((evidence) => {
+              {displayedEvidence.map((evidence) => {
                 const video = videos[evidence.videoId];
                 const videoUrl = getTimestampedVideoUrl(video.url, evidence.timestampSeconds);
-                const highestRankSort = Math.max(...evidence.roster.map(({ rankId }) => ranks[rankId].sort));
+                const teamEnergy = getTeamScheduledEnergy(evidence.roster);
+                const rosterEnergy = evidence.roster.map(({ characterId, rankId }) => ({
+                  characterId,
+                  rankId,
+                  energy: getCharacterScheduledEnergy(characterId, rankId),
+                }));
+                const highestCharacterEnergy = Math.max(...rosterEnergy.map(({ energy }) => energy));
                 const rosterData = evidence.roster.map(({ characterId, rankId }) => `${characterId}:${rankId}`).join("|");
                 const requiredRankData = evidence.roster
                   .filter(({ characterId }) => requiredCharacterIdSet.has(characterId))
@@ -301,13 +312,30 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
                     data-roster={rosterData}
                     data-required-ranks={requiredRankData}
                     data-supporting-characters={supportingCharacterData}
+                    data-team-energy={teamEnergy}
                   >
                     <div class="roster">
-                      {evidence.roster.map(({ characterId, rankId }) => (
+                      <div class="team-energy-card" aria-label={`Team Energy: ${teamEnergy.toLocaleString("en-US")}`}>
+                        <img
+                          class="energy-icon"
+                          src="/images/ranks/energy.webp"
+                          alt="Energy"
+                          width="64"
+                          height="64"
+                          loading="lazy"
+                        />
+                        <div class="team-energy-details">
+                          <span class="least-energy-badge" data-least-energy-badge hidden>Least Energy</span>
+                          <strong>Team Energy</strong>
+                          <span class="team-energy-value">{teamEnergy.toLocaleString("en-US")}</span>
+                        </div>
+                      </div>
+                      {rosterEnergy.map(({ characterId, rankId, energy }) => (
                         <CharacterRank
                           character={characters[characterId]}
                           rank={ranks[rankId]}
-                          highlighted={ranks[rankId].sort === highestRankSort}
+                          energy={energy}
+                          highlighted={energy === highestCharacterEnergy}
                         />
                       ))}
                     </div>
@@ -579,6 +607,24 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
         }
       });
 
+      const energyCards = evidenceCards.filter(
+        (card): card is HTMLElement => card instanceof HTMLElement && Boolean(card.dataset.teamEnergy),
+      );
+      if (energyCards.length) {
+        energyCards
+          .sort((left, right) => Number(left.dataset.teamEnergy) - Number(right.dataset.teamEnergy))
+          .forEach((card) => card.parentElement?.append(card));
+        const visibleEnergyCards = energyCards.filter((card) => !card.hidden);
+        const lowestVisibleEnergy = Math.min(...visibleEnergyCards.map((card) => Number(card.dataset.teamEnergy)));
+        energyCards.forEach((card) => {
+          const badge = card.querySelector("[data-least-energy-badge]");
+          if (badge instanceof HTMLElement) {
+            badge.hidden =
+              visibleEnergyCards.length < 2 || card.hidden || Number(card.dataset.teamEnergy) !== lowestVisibleEnergy;
+          }
+        });
+      }
+
       stageRow.hidden = visibleEvidenceCount === 0;
       const count = stageRow.querySelector("[data-visible-count]");
       if (count) count.textContent = String(visibleEvidenceCount);
@@ -731,7 +777,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       updateMultiToggle("stage");
       updateMultiToggle("creator");
       modeFilterButtons.forEach((button) => {
-        button.setAttribute("aria-pressed", String(button.getAttribute("data-mode-filter") === "normal"));
+        button.setAttribute("aria-pressed", "true");
       });
       stageRows.forEach((stageRow) => {
         if (stageRow instanceof HTMLDetailsElement) stageRow.open = false;
@@ -1043,9 +1089,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     top: calc(100% + 0.5rem);
     right: 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    width: min(35rem, calc(100vw - 4rem));
-    max-width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(44rem, calc(100vw - 2rem));
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -1055,8 +1100,27 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     box-shadow: 0 16px 36px rgb(0 0 0 / 50%);
   }
 
-  .creator-filter {
-    grid-column: 1 / -1;
+  .more-filter-panel .filter-field,
+  .more-filter-panel .filter-toggle,
+  .more-filter-panel .filter-menu {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .more-filter-panel .filter-toggle {
+    height: 2.75rem;
+    padding-block: 0.35rem;
+  }
+
+  .more-filter-panel .filter-label {
+    white-space: nowrap;
+  }
+
+  .hero-option > span,
+  .multi-option > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.3;
   }
 
   .clear-filters {
@@ -1259,6 +1323,63 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     text-decoration: none;
   }
 
+  .team-energy-card {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 7.75rem;
+    padding: 0.65rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #1e1e1e;
+  }
+
+  .energy-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #121212;
+    object-fit: contain;
+  }
+
+  .team-energy-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+  }
+
+  .team-energy-details > strong {
+    color: #f5f5f5;
+    font-size: 0.8rem;
+  }
+
+  .team-energy-value {
+    color: #cccccc;
+    font-size: 0.85rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .least-energy-badge {
+    padding: 0.2rem 0.55rem;
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.12);
+    color: #f5d76e;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .least-energy-badge[hidden] {
+    display: none;
+  }
+
   .video-link:hover strong,
   .video-link:focus-visible strong {
     color: #d4af37;
@@ -1316,6 +1437,22 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     .clear-filters {
       width: 100%;
     }
+
+    .more-filters {
+      grid-column: span 2;
+      width: 100%;
+    }
+
+    .more-filters > summary {
+      width: 100%;
+    }
+
+    .more-filter-panel {
+      position: static;
+      width: 100%;
+      margin-top: 0.5rem;
+      box-shadow: none;
+    }
   }
 
   @media (max-width: 900px) {
@@ -1332,6 +1469,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       flex-basis: auto;
       width: 100%;
     }
+
   }
 
   @media (max-width: 700px) {
@@ -1340,15 +1478,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     }
 
     .more-filter-panel {
-      position: static;
       grid-template-columns: 1fr;
-      width: auto;
-      max-width: 100%;
-      margin-top: 0.5rem;
-      box-shadow: none;
     }
 
-    .creator-filter {
+    .more-filters {
       grid-column: auto;
     }
 
@@ -1383,7 +1516,13 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       gap: 0.5rem;
     }
 
-    .roster :global(.character-rank) {
+	.roster :global(.character-rank) {
+		min-width: 0;
+		gap: 0.35rem;
+		padding: 0.5rem 0.35rem;
+	}
+
+    .team-energy-card {
       min-width: 0;
       flex-direction: column;
       gap: 0.35rem;

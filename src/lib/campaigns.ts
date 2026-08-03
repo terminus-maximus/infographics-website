@@ -5,6 +5,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 import characterSource from "../data/campaigns/characters.json";
+import characterRankEnergySource from "../data/campaigns/character_rank_energy.json";
 import rankSource from "../data/campaigns/ranks.json";
 import replaySource from "../data/campaigns/indomitus_replays.json";
 
@@ -62,6 +63,12 @@ export interface CampaignGuideData {
   videos: Record<string, CampaignVideo>;
 }
 
+export interface CharacterRankEnergy {
+  scheduledEnergy: number;
+  expectedEnergy: number;
+  complete: boolean;
+}
+
 const MODE_LIMITS: Record<string, { minimumStage: number; maximumStage: number }> = {
   normal: { minimumStage: 1, maximumStage: 75 },
   elite: { minimumStage: 1, maximumStage: 40 },
@@ -86,6 +93,11 @@ function requireString(value: unknown, label: string) {
 function requireInteger(value: unknown, label: string) {
   if (!Number.isInteger(value)) throw new Error(`${label} must be an integer.`);
   return Number(value);
+}
+
+function requireNumber(value: unknown, label: string) {
+  if (typeof value !== "number" || !Number.isFinite(value)) throw new Error(`${label} must be a finite number.`);
+  return value;
 }
 
 function validatePublicAsset(assetPath: string, label: string) {
@@ -177,6 +189,80 @@ const rankData = loadRankReferences(rankSource);
 
 export const characterReferences = characterData.references;
 export const rankReferences = rankData.references;
+
+function loadCharacterRankEnergy(source: unknown) {
+  const sourceObject = requireObject(source, "Character rank energy source");
+  const version = requireInteger(sourceObject.version, "Character rank energy version");
+  const generatedDate = requireString(sourceObject.generatedDate, "Character rank energy generatedDate");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(generatedDate)) {
+    throw new Error(`Character rank energy generatedDate must use YYYY-MM-DD.`);
+  }
+  const sourceMetadata = requireObject(sourceObject.source, "Character rank energy metadata");
+  const startRankId = requireString(sourceMetadata.startRankId, "Character rank energy startRankId");
+  if (!rankReferences[startRankId]) throw new Error(`Character rank energy has unknown start rank "${startRankId}".`);
+  if (!Array.isArray(sourceMetadata.targetRankIds)) {
+    throw new Error(`Character rank energy targetRankIds must be an array.`);
+  }
+  const targetRankIds = sourceMetadata.targetRankIds.map((value, index) => {
+    const rankId = requireString(value, `Character rank energy target rank ${index + 1}`);
+    if (!rankReferences[rankId]) throw new Error(`Character rank energy has unknown target rank "${rankId}".`);
+    return rankId;
+  });
+  const rawCharacters = requireObject(sourceObject.characters, "Character rank energy characters");
+  const energyCharacterIds = Object.keys(rawCharacters);
+  const missingCharacterIds = Object.keys(characterReferences).filter((characterId) => !rawCharacters[characterId]);
+  const extraCharacterIds = energyCharacterIds.filter((characterId) => !characterReferences[characterId]);
+  if (missingCharacterIds.length || extraCharacterIds.length) {
+    throw new Error(
+      `Character rank energy coverage mismatch. Missing: ${missingCharacterIds.join(", ") || "none"}; extra: ${extraCharacterIds.join(", ") || "none"}.`,
+    );
+  }
+
+  const references: Record<string, Record<string, CharacterRankEnergy>> = {};
+  energyCharacterIds.forEach((characterId) => {
+    const character = requireObject(rawCharacters[characterId], `Character rank energy "${characterId}"`);
+    const rawRanks = requireObject(character.ranks, `Character rank energy "${characterId}" ranks`);
+    references[characterId] = {};
+    targetRankIds.forEach((rankId) => {
+      const rawEnergy = requireObject(rawRanks[rankId], `Character rank energy "${characterId}" ${rankId}`);
+      const scheduledEnergy = requireInteger(
+        rawEnergy.scheduledEnergy,
+        `Character rank energy "${characterId}" ${rankId} scheduledEnergy`,
+      );
+      const expectedEnergy = requireNumber(
+        rawEnergy.expectedEnergy,
+        `Character rank energy "${characterId}" ${rankId} expectedEnergy`,
+      );
+      if (scheduledEnergy < 0 || expectedEnergy < 0) {
+        throw new Error(`Character rank energy "${characterId}" ${rankId} cannot be negative.`);
+      }
+      if (typeof rawEnergy.complete !== "boolean") {
+        throw new Error(`Character rank energy "${characterId}" ${rankId} complete must be boolean.`);
+      }
+      references[characterId][rankId] = { scheduledEnergy, expectedEnergy, complete: rawEnergy.complete };
+    });
+  });
+
+  return { references, version, generatedDate, startRankId, characterCount: energyCharacterIds.length };
+}
+
+const characterRankEnergyData = loadCharacterRankEnergy(characterRankEnergySource);
+export const characterRankEnergyReferences = characterRankEnergyData.references;
+
+export function getCharacterScheduledEnergy(characterId: string, rankId: string) {
+  if (rankId === characterRankEnergyData.startRankId) return 0;
+  const energy = characterRankEnergyReferences[characterId]?.[rankId];
+  if (!energy) throw new Error(`Missing scheduled energy for "${characterId}" at "${rankId}".`);
+  if (!energy.complete) throw new Error(`Scheduled energy for "${characterId}" at "${rankId}" is incomplete.`);
+  return energy.scheduledEnergy;
+}
+
+export function getTeamScheduledEnergy(roster: CampaignEvidence["roster"]) {
+  return roster.reduce(
+    (total, { characterId, rankId }) => total + getCharacterScheduledEnergy(characterId, rankId),
+    0,
+  );
+}
 
 function parseTimestamp(timestamp: string) {
   const parts = timestamp.split(":");
@@ -292,6 +378,9 @@ export const campaignAudit = {
   characterAliasCount: characterData.aliasCount,
   rankReferenceCount: rankData.sourceCount,
   rankAliasCount: rankData.aliasCount,
+  characterRankEnergyVersion: characterRankEnergyData.version,
+  characterRankEnergyGeneratedDate: characterRankEnergyData.generatedDate,
+  characterRankEnergyCharacterCount: characterRankEnergyData.characterCount,
   sourceObservationCount: allEvidence.length,
   normalizedObservationCount: allEvidence.length,
   videoCount: Object.keys(indomitusCampaign.videos).length,
