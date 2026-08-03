@@ -1,7 +1,7 @@
 {
   "id": "indomitus",
   "name": "Indomitus",
-  "updatedAt": "2026-08-01",
+  "updatedAt": "2026-08-03",
   "modes": [
     {
       "id": "normal",
@@ -39,8 +39,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:52",
-              "timestampSeconds": 112,
+              "timestamp": "0:37",
+              "timestampSeconds": 37,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -72,8 +72,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:18",
-              "timestampSeconds": 138,
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -105,8 +105,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:29",
-              "timestampSeconds": 89,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -138,8 +138,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:30",
-              "timestampSeconds": 90,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -171,8 +171,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:22",
-              "timestampSeconds": 82,
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -204,8 +204,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:09",
-              "timestampSeconds": 129,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves two defeated cards"
             }
           ]
@@ -242,8 +242,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:54",
-              "timestampSeconds": 114,
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
@@ -270,8 +270,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:25",
-              "timestampSeconds": 85,
+              "timestamp": "0:17",
+              "timestampSeconds": 17,
               "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             }
           ]
@@ -308,8 +308,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:57",
-              "timestampSeconds": 237,
+              "timestamp": "0:40",
+              "timestampSeconds": 40,
               "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves defeated support card"
             }
           ]
@@ -346,8 +346,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:41",
-              "timestampSeconds": 101,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -379,8 +379,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:24",
-              "timestampSeconds": 144,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; Victory plus early deployment evidence resolves two defeated support cards"
             }
           ]
@@ -417,8 +417,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:43",
-              "timestampSeconds": 163,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; Victory plus battle evidence resolves defeated support card"
             },
             {
@@ -450,8 +450,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:16",
-              "timestampSeconds": 136,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; recovered settled Victory; all five cards visible"
             }
           ]
@@ -478,8 +478,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "2:14",
-              "timestampSeconds": 134,
+              "timestamp": "0:48",
+              "timestampSeconds": 48,
               "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             },
             {
@@ -501,8 +501,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:10",
-              "timestampSeconds": 70,
+              "timestamp": "0:19",
+              "timestampSeconds": 19,
               "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             }
           ]
@@ -539,8 +539,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:47",
-              "timestampSeconds": 107,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
@@ -577,8 +577,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:18",
-              "timestampSeconds": 78,
+              "timestamp": "0:14",
+              "timestampSeconds": 14,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
@@ -605,8 +605,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:09",
-              "timestampSeconds": 69,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             }
           ]
@@ -643,8 +643,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "15:27",
-              "timestampSeconds": 927
+              "timestamp": "14:04",
+              "timestampSeconds": 844
             },
             {
               "videoId": "jSLLtqmlj44",
@@ -675,8 +675,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:09",
-              "timestampSeconds": 189
+              "timestamp": "0:15",
+              "timestampSeconds": 15
             },
             {
               "videoId": "zX0lftfBXmE",
@@ -707,8 +707,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:26",
-              "timestampSeconds": 86
+              "timestamp": "0:12",
+              "timestampSeconds": 12
             }
           ]
         },
@@ -744,8 +744,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:47",
-              "timestampSeconds": 347
+              "timestamp": "1:38",
+              "timestampSeconds": 98
             },
             {
               "videoId": "V9KRGy9u5a4",
@@ -776,8 +776,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:59",
-              "timestampSeconds": 119
+              "timestamp": "0:10",
+              "timestampSeconds": 10
             }
           ]
         },
@@ -803,8 +803,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:09",
-              "timestampSeconds": 69
+              "timestamp": "0:03",
+              "timestampSeconds": 3
             },
             {
               "videoId": "y3Kn-rdln7g",
@@ -825,8 +825,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:12",
-              "timestampSeconds": 72
+              "timestamp": "0:15",
+              "timestampSeconds": 15
             }
           ]
         },
@@ -861,7 +861,9 @@
                   "rankId": "Iron3",
                   "role": "optional"
                 }
-              ]
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "wl85120donU",
@@ -892,8 +894,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:44",
-              "timestampSeconds": 224
+              "timestamp": "0:45",
+              "timestampSeconds": 45
             }
           ]
         },
@@ -929,8 +931,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:26",
-              "timestampSeconds": 146,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; Victory plus deployment evidence resolves defeated Morvenn card"
             },
             {
@@ -962,8 +964,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:52",
-              "timestampSeconds": 232,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
             },
             {
@@ -995,8 +997,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:28",
-              "timestampSeconds": 88,
+              "timestamp": "0:09",
+              "timestampSeconds": 9,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
@@ -1033,8 +1035,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:08",
-              "timestampSeconds": 128,
+              "timestamp": "0:54",
+              "timestampSeconds": 54,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory; battle evidence resolves defeated Certus card"
             },
             {
@@ -1066,8 +1068,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:29",
-              "timestampSeconds": 149,
+              "timestamp": "0:51",
+              "timestampSeconds": 51,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -1099,8 +1101,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:50",
-              "timestampSeconds": 290,
+              "timestamp": "2:31",
+              "timestampSeconds": 151,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -1132,8 +1134,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "6:16",
-              "timestampSeconds": 376,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -1165,8 +1167,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:20",
-              "timestampSeconds": 200,
+              "timestamp": "0:11",
+              "timestampSeconds": 11,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory; all five cards visible"
             },
             {
@@ -1198,8 +1200,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:40",
-              "timestampSeconds": 160,
+              "timestamp": "0:14",
+              "timestampSeconds": 14,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -1231,8 +1233,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:51",
-              "timestampSeconds": 111,
+              "timestamp": "0:19",
+              "timestampSeconds": 19,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards and rank crests visible"
             },
             {
@@ -1264,8 +1266,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:31",
-              "timestampSeconds": 91,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -1297,8 +1299,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:13",
-              "timestampSeconds": 193,
+              "timestamp": "0:23",
+              "timestampSeconds": 23,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
             }
           ]
@@ -1341,8 +1343,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:41",
-              "timestampSeconds": 101
+              "timestamp": "0:09",
+              "timestampSeconds": 9
             },
             {
               "videoId": "E6KF0v44iec",
@@ -1373,8 +1375,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:27",
-              "timestampSeconds": 87
+              "timestamp": "0:25",
+              "timestampSeconds": 25
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1405,8 +1407,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:42",
-              "timestampSeconds": 162
+              "timestamp": "0:47",
+              "timestampSeconds": 47
             },
             {
               "videoId": "U32h6xd7lrM",
@@ -1437,8 +1439,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:03",
-              "timestampSeconds": 123
+              "timestamp": "0:19",
+              "timestampSeconds": 19
             }
           ]
         },
@@ -1474,8 +1476,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:18",
-              "timestampSeconds": 78
+              "timestamp": "0:12",
+              "timestampSeconds": 12
             },
             {
               "videoId": "E6KF0v44iec",
@@ -1506,8 +1508,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:12",
-              "timestampSeconds": 132
+              "timestamp": "1:33",
+              "timestampSeconds": 93
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1538,8 +1540,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:10",
-              "timestampSeconds": 250
+              "timestamp": "2:52",
+              "timestampSeconds": 172
             },
             {
               "videoId": "KyQCW21ityA",
@@ -1570,8 +1572,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:09",
-              "timestampSeconds": 69
+              "timestamp": "0:24",
+              "timestampSeconds": 24
             }
           ]
         },
@@ -1607,8 +1609,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:37",
-              "timestampSeconds": 97
+              "timestamp": "0:18",
+              "timestampSeconds": 18
             },
             {
               "videoId": "E6KF0v44iec",
@@ -1639,8 +1641,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:27",
-              "timestampSeconds": 267
+              "timestamp": "2:20",
+              "timestampSeconds": 140
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1671,8 +1673,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:42",
-              "timestampSeconds": 342
+              "timestamp": "4:26",
+              "timestampSeconds": 266
             },
             {
               "videoId": "qIxw-gE2h6Q",
@@ -1703,8 +1705,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:24",
-              "timestampSeconds": 144
+              "timestamp": "1:02",
+              "timestampSeconds": 62
             }
           ]
         },
@@ -1730,8 +1732,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:11",
-              "timestampSeconds": 71
+              "timestamp": "0:33",
+              "timestampSeconds": 33
             },
             {
               "videoId": "E6KF0v44iec",
@@ -1752,8 +1754,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "5:09",
-              "timestampSeconds": 309
+              "timestamp": "4:37",
+              "timestampSeconds": 277
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1774,8 +1776,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "7:18",
-              "timestampSeconds": 438
+              "timestamp": "5:59",
+              "timestampSeconds": 359
             },
             {
               "videoId": "YlcJvPrFk0E",
@@ -1796,8 +1798,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:30",
-              "timestampSeconds": 90
+              "timestamp": "0:31",
+              "timestampSeconds": 31
             }
           ]
         },
@@ -1833,8 +1835,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:40",
-              "timestampSeconds": 100
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "E6KF0v44iec",
@@ -1865,8 +1867,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "6:36",
-              "timestampSeconds": 396
+              "timestamp": "5:25",
+              "timestampSeconds": 325
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1897,8 +1899,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "9:14",
-              "timestampSeconds": 554
+              "timestamp": "7:35",
+              "timestampSeconds": 455
             },
             {
               "videoId": "nrXHvVlooXs",
@@ -1929,8 +1931,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:13",
-              "timestampSeconds": 193
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -1966,8 +1968,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "7:27",
-              "timestampSeconds": 447
+              "timestamp": "6:42",
+              "timestampSeconds": 402
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -1998,8 +2000,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "11:18",
-              "timestampSeconds": 678
+              "timestamp": "9:28",
+              "timestampSeconds": 568
             },
             {
               "videoId": "eFTDUHwmtbI",
@@ -2030,8 +2032,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:43",
-              "timestampSeconds": 163
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2067,8 +2069,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "8:15",
-              "timestampSeconds": 495
+              "timestamp": "7:34",
+              "timestampSeconds": 454
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -2099,8 +2101,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "13:34",
-              "timestampSeconds": 814
+              "timestamp": "11:33",
+              "timestampSeconds": 693
             },
             {
               "videoId": "9glkxy3HD3Q",
@@ -2126,8 +2128,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:25",
-              "timestampSeconds": 85
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2163,8 +2165,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "10:36",
-              "timestampSeconds": 636
+              "timestamp": "8:23",
+              "timestampSeconds": 503
             },
             {
               "videoId": "LVDx5-o7E8A",
@@ -2195,8 +2197,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "15:54",
-              "timestampSeconds": 954
+              "timestamp": "13:57",
+              "timestampSeconds": 837
             },
             {
               "videoId": "qd_4cGIrx4U",
@@ -2227,8 +2229,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:42",
-              "timestampSeconds": 162
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "J2QkI2Oav2s",
@@ -2259,8 +2261,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:37",
-              "timestampSeconds": 97
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2286,8 +2288,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "3:27",
-              "timestampSeconds": 207
+              "timestamp": "1:42",
+              "timestampSeconds": 102
             }
           ]
         },
@@ -2318,8 +2320,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:29",
-              "timestampSeconds": 269
+              "timestamp": "3:36",
+              "timestampSeconds": 216
             },
             {
               "videoId": "nYdbmTz2_HI",
@@ -2345,8 +2347,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:08",
-              "timestampSeconds": 128
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2382,8 +2384,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:30",
-              "timestampSeconds": 330
+              "timestamp": "4:37",
+              "timestampSeconds": 277
             }
           ]
         },
@@ -2419,8 +2421,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "7:09",
-              "timestampSeconds": 429
+              "timestamp": "5:43",
+              "timestampSeconds": 343
             },
             {
               "videoId": "bDITAm64BLM",
@@ -2451,8 +2453,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:51",
-              "timestampSeconds": 111
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "nM8vTsDH6yY",
@@ -2483,8 +2485,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:08",
-              "timestampSeconds": 68
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2515,8 +2517,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:00",
-              "timestampSeconds": 180
+              "timestamp": "0:49",
+              "timestampSeconds": 49
             }
           ]
         },
@@ -2542,8 +2544,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "3:36",
-              "timestampSeconds": 216
+              "timestamp": "3:07",
+              "timestampSeconds": 187
             },
             {
               "videoId": "hTRp_aNYeKI",
@@ -2564,8 +2566,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:46",
-              "timestampSeconds": 106
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "lFOmNEoaGRg",
@@ -2586,8 +2588,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:06",
-              "timestampSeconds": 66
+              "timestamp": "0:15",
+              "timestampSeconds": 15
             }
           ]
         },
@@ -2623,8 +2625,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "9:39",
-              "timestampSeconds": 579
+              "timestamp": "9:12",
+              "timestampSeconds": 552
             },
             {
               "videoId": "s1UReHv4d1s",
@@ -2655,8 +2657,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:52",
-              "timestampSeconds": 112
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "a1Z0tj11A4E",
@@ -2687,8 +2689,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:08",
-              "timestampSeconds": 68
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2724,8 +2726,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:24",
-              "timestampSeconds": 264
+              "timestamp": "3:43",
+              "timestampSeconds": 223
             },
             {
               "videoId": "eysRFR_iLzM",
@@ -2751,8 +2753,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:20",
-              "timestampSeconds": 80
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             },
             {
               "videoId": "NC1O27ShVyw",
@@ -2783,8 +2785,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:20",
-              "timestampSeconds": 140
+              "timestamp": "0:27",
+              "timestampSeconds": 27
             },
             {
               "videoId": "i88_ghAzXDo",
@@ -2810,8 +2812,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:19",
-              "timestampSeconds": 79
+              "timestamp": "0:12",
+              "timestampSeconds": 12
             },
             {
               "videoId": "CRKgAevWkOY",
@@ -2842,8 +2844,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:00",
-              "timestampSeconds": 300
+              "timestamp": "3:46",
+              "timestampSeconds": 226
             }
           ]
         },
@@ -2879,8 +2881,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:48",
-              "timestampSeconds": 108
+              "timestamp": "0:47",
+              "timestampSeconds": 47
             },
             {
               "videoId": "_FHJ6PiAZ1M",
@@ -2911,8 +2913,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:37",
-              "timestampSeconds": 97
+              "timestamp": "0:25",
+              "timestampSeconds": 25
             },
             {
               "videoId": "yUqGepPjLR4",
@@ -2943,8 +2945,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:14",
-              "timestampSeconds": 74
+              "timestamp": "0:01",
+              "timestampSeconds": 1
             }
           ]
         },
@@ -2980,8 +2982,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:36",
-              "timestampSeconds": 156
+              "timestamp": "1:57",
+              "timestampSeconds": 117
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3012,8 +3014,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:46",
-              "timestampSeconds": 166
+              "timestamp": "0:09",
+              "timestampSeconds": 9
             },
             {
               "videoId": "dvgNCwTRfik",
@@ -3044,8 +3046,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:58",
-              "timestampSeconds": 118
+              "timestamp": "0:17",
+              "timestampSeconds": 17
             }
           ]
         },
@@ -3071,8 +3073,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "3:30",
-              "timestampSeconds": 210
+              "timestamp": "2:42",
+              "timestampSeconds": 162
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3093,8 +3095,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "4:22",
-              "timestampSeconds": 262
+              "timestamp": "2:55",
+              "timestampSeconds": 175
             },
             {
               "videoId": "gNIeqbF_UI0",
@@ -3115,8 +3117,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "2:15",
-              "timestampSeconds": 135
+              "timestamp": "0:30",
+              "timestampSeconds": 30
             }
           ]
         },
@@ -3152,8 +3154,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:21",
-              "timestampSeconds": 261
+              "timestamp": "3:39",
+              "timestampSeconds": 219
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3184,8 +3186,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:46",
-              "timestampSeconds": 346
+              "timestamp": "4:29",
+              "timestampSeconds": 269
             },
             {
               "videoId": "gVSP7Vdbk7E",
@@ -3216,8 +3218,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:11",
-              "timestampSeconds": 131
+              "timestamp": "0:14",
+              "timestampSeconds": 14
             },
             {
               "videoId": "oOIdt9HdIr8",
@@ -3248,8 +3250,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:38",
-              "timestampSeconds": 98
+              "timestamp": "0:07",
+              "timestampSeconds": 7
             }
           ]
         },
@@ -3280,8 +3282,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "5:15",
-              "timestampSeconds": 315
+              "timestamp": "4:28",
+              "timestampSeconds": 268
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3312,8 +3314,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "9:54",
-              "timestampSeconds": 594
+              "timestamp": "5:55",
+              "timestampSeconds": 355
             },
             {
               "videoId": "oA6FxmwbKCY",
@@ -3339,8 +3341,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:45",
-              "timestampSeconds": 105
+              "timestamp": "0:23",
+              "timestampSeconds": 23
             },
             {
               "videoId": "dTJDfJNN64k",
@@ -3366,8 +3368,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:26",
-              "timestampSeconds": 86
+              "timestamp": "0:11",
+              "timestampSeconds": 11
             }
           ]
         },
@@ -3403,8 +3405,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "6:06",
-              "timestampSeconds": 366
+              "timestamp": "5:20",
+              "timestampSeconds": 320
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3435,8 +3437,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "11:46",
-              "timestampSeconds": 706
+              "timestamp": "10:19",
+              "timestampSeconds": 619
             },
             {
               "videoId": "xCQ8fckL9cA",
@@ -3467,8 +3469,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:51",
-              "timestampSeconds": 111
+              "timestamp": "0:40",
+              "timestampSeconds": 40
             }
           ]
         },
@@ -3504,8 +3506,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "7:00",
-              "timestampSeconds": 420
+              "timestamp": "6:12",
+              "timestampSeconds": 372
             },
             {
               "videoId": "E77-3eM08yQ",
@@ -3536,8 +3538,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "13:58",
-              "timestampSeconds": 838
+              "timestamp": "12:01",
+              "timestampSeconds": 721
             },
             {
               "videoId": "nAWhq-uJFnI",
@@ -3563,8 +3565,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:31",
-              "timestampSeconds": 211
+              "timestamp": "0:33",
+              "timestampSeconds": 33
             }
           ]
         },
@@ -3600,8 +3602,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "8:06",
-              "timestampSeconds": 486
+              "timestamp": "7:06",
+              "timestampSeconds": 426
             },
             {
               "videoId": "lqpUtxnuZ2c",
@@ -3632,8 +3634,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:32",
-              "timestampSeconds": 152
+              "timestamp": "0:27",
+              "timestampSeconds": 27
             },
             {
               "videoId": "46lH6k56HcA",
@@ -3664,8 +3666,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:22",
-              "timestampSeconds": 202,
+              "timestamp": "2:36",
+              "timestampSeconds": 156,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
             },
             {
@@ -3697,8 +3699,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:45",
-              "timestampSeconds": 165,
+              "timestamp": "0:24",
+              "timestampSeconds": 24,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]
@@ -3735,8 +3737,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:30",
-              "timestampSeconds": 90
+              "timestamp": "0:29",
+              "timestampSeconds": 29
             },
             {
               "videoId": "T20piw3NYAc",
@@ -3767,8 +3769,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:18",
-              "timestampSeconds": 78
+              "timestamp": "0:11",
+              "timestampSeconds": 11
             }
           ]
         },
@@ -3799,8 +3801,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:51",
-              "timestampSeconds": 171
+              "timestamp": "1:35",
+              "timestampSeconds": 95
             },
             {
               "videoId": "AeRaUn7sA5k",
@@ -3826,8 +3828,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:33",
-              "timestampSeconds": 153
+              "timestamp": "0:18",
+              "timestampSeconds": 18
             }
           ]
         },
@@ -3853,8 +3855,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "3:51",
-              "timestampSeconds": 231
+              "timestamp": "2:57",
+              "timestampSeconds": 177
             },
             {
               "videoId": "crQnWOjZ8v0",
@@ -3875,8 +3877,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:14",
-              "timestampSeconds": 74
+              "timestamp": "0:14",
+              "timestampSeconds": 14
             },
             {
               "videoId": "Qsk9jujKKmQ",
@@ -3897,8 +3899,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:16",
-              "timestampSeconds": 76
+              "timestamp": "0:07",
+              "timestampSeconds": 7
             }
           ]
         },
@@ -3929,8 +3931,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "6:21",
-              "timestampSeconds": 381
+              "timestamp": "3:53",
+              "timestampSeconds": 233
             },
             {
               "videoId": "guEkBbNEb1E",
@@ -3956,8 +3958,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:19",
-              "timestampSeconds": 139
+              "timestamp": "0:17",
+              "timestampSeconds": 17
             }
           ]
         },
@@ -3993,8 +3995,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "7:36",
-              "timestampSeconds": 456
+              "timestamp": "6:27",
+              "timestampSeconds": 387
             },
             {
               "videoId": "Vm7p5GNZjf8",
@@ -4025,8 +4027,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:51",
-              "timestampSeconds": 111
+              "timestamp": "0:17",
+              "timestampSeconds": 17
             }
           ]
         },
@@ -4062,8 +4064,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "8:42",
-              "timestampSeconds": 522
+              "timestamp": "7:42",
+              "timestampSeconds": 462
             },
             {
               "videoId": "ixfnD0tAUlg",
@@ -4094,8 +4096,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:01",
-              "timestampSeconds": 121
+              "timestamp": "0:21",
+              "timestampSeconds": 21
             }
           ]
         },
@@ -4126,8 +4128,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "9:27",
-              "timestampSeconds": 567
+              "timestamp": "8:47",
+              "timestampSeconds": 527
             }
           ]
         },
@@ -4163,8 +4165,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "11:57",
-              "timestampSeconds": 717
+              "timestamp": "10:38",
+              "timestampSeconds": 638
             },
             {
               "videoId": "Mk-8cNaCq3c",
@@ -4190,8 +4192,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:09",
-              "timestampSeconds": 129
+              "timestamp": "0:27",
+              "timestampSeconds": 27
             }
           ]
         },
@@ -4222,8 +4224,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:48",
-              "timestampSeconds": 228
+              "timestamp": "2:20",
+              "timestampSeconds": 140
             },
             {
               "videoId": "RB_2VaNwCO0",
@@ -4249,8 +4251,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:06",
-              "timestampSeconds": 126
+              "timestamp": "0:39",
+              "timestampSeconds": 39
             }
           ]
         },
@@ -4281,8 +4283,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "4:45",
-              "timestampSeconds": 285
+              "timestamp": "3:56",
+              "timestampSeconds": 236
             }
           ]
         },
@@ -4313,8 +4315,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "6:00",
-              "timestampSeconds": 360
+              "timestamp": "4:48",
+              "timestampSeconds": 288
             },
             {
               "videoId": "CNte_gqRpU8",
@@ -4335,8 +4337,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "3:03",
-              "timestampSeconds": 183
+              "timestamp": "1:09",
+              "timestampSeconds": 69
             },
             {
               "videoId": "57HLuLu5AiM",
@@ -4357,8 +4359,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "2:00",
-              "timestampSeconds": 120,
+              "timestamp": "0:20",
+              "timestampSeconds": 20,
               "notes": "Campaign Replay Research 1.0; recovered embedded Victory window; three required cards visible"
             },
             {
@@ -4380,8 +4382,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "1:57",
-              "timestampSeconds": 117,
+              "timestamp": "0:52",
+              "timestampSeconds": 52,
               "notes": "Campaign Replay Research 1.0; settled Victory; three required cards visible"
             }
           ]
@@ -4413,8 +4415,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "7:21",
-              "timestampSeconds": 441
+              "timestamp": "6:02",
+              "timestampSeconds": 362
             }
           ]
         },
@@ -4440,8 +4442,8 @@
                   "role": "required"
                 }
               ],
-              "timestamp": "8:33",
-              "timestampSeconds": 513
+              "timestamp": "7:32",
+              "timestampSeconds": 452
             },
             {
               "videoId": "X5dFDVctUmM",
@@ -4467,8 +4469,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:19",
-              "timestampSeconds": 79
+              "timestamp": "0:26",
+              "timestampSeconds": 26
             },
             {
               "videoId": "tAw1werfiyM",
@@ -4494,8 +4496,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "1:20",
-              "timestampSeconds": 80,
+              "timestamp": "0:23",
+              "timestampSeconds": 23,
               "notes": "Campaign Replay Research 1.0; settled Victory; four cards visible"
             }
           ]
@@ -4527,8 +4529,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "9:42",
-              "timestampSeconds": 582
+              "timestamp": "8:42",
+              "timestampSeconds": 522
             }
           ]
         },
@@ -4559,8 +4561,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "10:36",
-              "timestampSeconds": 636
+              "timestamp": "9:52",
+              "timestampSeconds": 592
             }
           ]
         },
@@ -4596,8 +4598,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "18:36",
-              "timestampSeconds": 1116
+              "timestamp": "10:40",
+              "timestampSeconds": 640
             },
             {
               "videoId": "15ihnMOoyYs",
@@ -4628,8 +4630,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:03",
-              "timestampSeconds": 183
+              "timestamp": "0:04",
+              "timestampSeconds": 4
             },
             {
               "videoId": "u4v3KJtE1ZM",
@@ -4660,8 +4662,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:19",
-              "timestampSeconds": 199
+              "timestamp": "0:06",
+              "timestampSeconds": 6
             },
             {
               "videoId": "MZt25paZMsY",
@@ -4692,8 +4694,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:33",
-              "timestampSeconds": 153,
+              "timestamp": "0:09",
+              "timestampSeconds": 9,
               "notes": "Campaign Replay Research 1.0; recovered earlier Victory window; all five cards visible"
             },
             {
@@ -4725,8 +4727,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "3:25",
-              "timestampSeconds": 205,
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             },
             {
@@ -4758,8 +4760,8 @@
                   "role": "optional"
                 }
               ],
-              "timestamp": "2:49",
-              "timestampSeconds": 169,
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.0; settled Victory; all five cards visible"
             }
           ]

@@ -32,7 +32,7 @@ export const graphics = [
       description: "Stage-by-stage Indomitus teams, character ranks, and replay evidence.",
       image: "/images/indomitus.png",
       thumbnail: "/images/thumbnails/indomitus-thumb.png",
-      badge: "WIP",
+      badge: "New",
       category: "campaign"
     },
     {

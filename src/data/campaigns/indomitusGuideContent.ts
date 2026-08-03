@@ -26,17 +26,15 @@ export const overviewContent = {
     ],
     callout: "Clear first. Medal later. Invest when the next unlock is worth it.",
   },
-  investmentIntroduction:
-    "Campaign clears depend on more than rank alone. Equipment quality, ability levels, supporting heroes, positioning, critical hits, and enemy behavior can all change the apparent minimum. The targets below are designed to be comfortable and reproducible—not the lowest clears ever recorded.",
   normalInvestment: [
-    ["Varro Tigurius", "Iron III–Bronze I", "Bronze I", "Enough durability for a practical Normal clear without overinvesting."],
-    ["Certus", "Iron III–Bronze I", "Bronze I", "Prioritize survival and equipment over expensive ability upgrades."],
-    ["Bellator", "Bronze I", "Silver I", "More than Normal requires, but prepares him for Elite and wider account use."],
+    { characterId: "ultraTigurius", rankId: "Bronze1", abilityIconName: "Tiggy", active: "17+", passive: "8+" },
+    { characterId: "ultraEliminatorSgt", rankId: "Bronze1", abilityIconName: "Certus", active: "8+", passive: "1" },
+    { characterId: "ultraInceptorSgt", rankId: "Silver1", abilityIconName: "Bella", active: "26+", passive: "8+" },
   ],
   eliteInvestment: [
-    ["Varro Tigurius", "Silver I", "Active approximately 26–35", "Best available defensive armor"],
-    ["Certus", "Silver I", "Active optional; passive low priority", "Best available defensive armor"],
-    ["Bellator", "Gold I", "Active approximately 35; higher for summon-focused clears", "Enough durability to hold the frontline"],
+    { characterId: "ultraTigurius", rankId: "Silver1", abilityIconName: "Tiggy", active: "26+", passive: "17+" },
+    { characterId: "ultraEliminatorSgt", rankId: "Silver1", abilityIconName: "Certus", active: "17+", passive: "8+" },
+    { characterId: "ultraInceptorSgt", rankId: "Gold1", abilityIconName: "Bella", active: "35+", passive: "17+" },
   ],
   strategyTips: [
     ["Build Around Bellator", "Bellator’s active, Death from Above, is the campaign’s most important ability. It summons one Inceptor for each round that has begun, so waiting can create a larger force—but delaying is not always correct when Scarabs, Deathmarks, or a backline breach require an immediate answer."],
@@ -53,7 +51,12 @@ export type HeroGuide = {
   characterId: string;
   heading: string;
   role: string;
-  recommendations?: Array<[string, string]>;
+  rankTargets?: { normal: string; elite: string };
+  abilityTargets?: {
+    iconName: string;
+    active: { normal: string; elite: string };
+    passive: { normal: string; elite: string };
+  };
   paragraphs: string[];
   callout: string;
   featured?: boolean;
@@ -64,7 +67,8 @@ export const requiredHeroContent: HeroGuide[] = [
     characterId: "ultraTigurius",
     heading: "Varro Tigurius",
     role: "Psychic area damage and clustered-enemy removal.",
-    recommendations: [["Normal", "Bronze I comfortable target"], ["Elite", "Silver I recommended baseline"], ["Active", "Second-highest campaign ability priority"], ["Passive", "Useful when it meaningfully improves team survival, but secondary to rank and active damage"]],
+    rankTargets: { normal: "Bronze1", elite: "Silver1" },
+    abilityTargets: { iconName: "Tiggy", active: { normal: "17+", elite: "26+" }, passive: { normal: "8+", elite: "17+" } },
     paragraphs: [
       "Varro’s active deals Psychic damage to a target and adjacent enemies, making it one of the starter team’s best answers to clustered Necron Warriors and other armored targets. It is especially useful when several enemies can be damaged together or when lower-pierce attacks are struggling to finish a target.",
       "For Normal, Bronze I is a comfortable target rather than a requirement. For Elite, Silver I provides a reproducible survival baseline without assuming Isabella or a much stronger Diamond carry.",
@@ -76,7 +80,8 @@ export const requiredHeroContent: HeroGuide[] = [
     characterId: "ultraEliminatorSgt",
     heading: "Certus",
     role: "Long-range damage, tactical displacement, and backline support.",
-    recommendations: [["Normal", "Bronze I comfortable target"], ["Elite", "Silver I recommended baseline"], ["Active", "Optional tactical investment"], ["Passive", "Lowest campaign badge priority"], ["Equipment", "Highest available defensive gear"]],
+    rankTargets: { normal: "Bronze1", elite: "Silver1" },
+    abilityTargets: { iconName: "Certus", active: { normal: "8+", elite: "17+" }, passive: { normal: "1", elite: "8+" } },
     paragraphs: [
       "Certus contributes long-range Heavy Round damage and can push a target one hex with his active. The displacement can break formations, alter movement, or move an enemy into Varro’s or Vindicta’s area damage.",
       "His abilities are not the main campaign investment. Certus usually benefits more from rank, rarity, and defensive equipment than from heavy badge spending. His passive can remain low unless badges are abundant and other priorities are already covered.",
@@ -88,7 +93,8 @@ export const requiredHeroContent: HeroGuide[] = [
     characterId: "ultraInceptorSgt",
     heading: "Bellator",
     role: "Primary carry, frontline tank, multi-hit attacker, and summon engine.",
-    recommendations: [["Normal", "Silver I future-proof target"], ["Elite", "Gold I recommended baseline"], ["Active", "Highest campaign badge priority"], ["Passive", "Useful, but secondary to the active"]],
+    rankTargets: { normal: "Silver1", elite: "Gold1" },
+    abilityTargets: { iconName: "Bella", active: { normal: "26+", elite: "35+" }, passive: { normal: "8+", elite: "17+" } },
     paragraphs: [
       "Bellator is the campaign MVP. His active summons one Inceptor for each round that has begun, giving the team damage, extra bodies, route blocking, and safer targets for enemy attacks.",
       "Bellator and his Inceptors are also the starter roster’s default answer to Scarab Swarms because their high hit counts can remove a full swarm before it multiplies. On restricted three-character stages, the summoned Inceptors often provide the frontline that Varro and Certus cannot.",

@@ -1,13 +1,16 @@
 ---
-import type { CharacterReference } from "../../lib/campaigns";
+import type { CharacterReference, RankReference } from "../../lib/campaigns";
 import type { HeroGuide } from "../../data/campaigns/indomitusGuideContent";
 
 interface Props {
   guide: HeroGuide;
   character: CharacterReference;
+  ranks: Record<string, RankReference>;
 }
 
-const { guide, character } = Astro.props;
+const { guide, character, ranks } = Astro.props;
+const abilityIcon = (ability: "Active" | "Passive") =>
+  `/images/abilities/${guide.abilityTargets?.iconName}-${ability}.webp`;
 ---
 
 <article class:list={["hero-guide-card", { featured: guide.featured }]}>
@@ -21,14 +24,39 @@ const { guide, character } = Astro.props;
 
   <p class="hero-callout">{guide.callout}</p>
 
-  {guide.recommendations && (
+  {guide.rankTargets && guide.abilityTargets && (
     <dl class="recommendations" aria-label={`${guide.heading} recommended investment`}>
-      {guide.recommendations.map(([label, value]) => (
-        <div>
-          <dt>{label}</dt>
-          <dd>{value}</dd>
-        </div>
-      ))}
+      <div class="recommendation-card">
+        <dt>Rank</dt>
+        <dd class="target-list">
+          {(["normal", "elite"] as const).map((mode) => {
+            const rank = ranks[guide.rankTargets![mode]];
+            return (
+              <span class="target-row">
+                <span>{mode === "normal" ? "Normal" : "Elite"}</span>
+                <img class="rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="44" height="44" loading="lazy" />
+              </span>
+            );
+          })}
+        </dd>
+      </div>
+
+      {(["active", "passive"] as const).map((ability) => {
+        const abilityLabel = ability === "active" ? "Active" : "Passive";
+        const targets = guide.abilityTargets![ability];
+        return (
+          <div class="recommendation-card">
+            <dt class="ability-title">
+              <img src={abilityIcon(abilityLabel)} alt="" width="40" height="40" loading="lazy" />
+              <span>{abilityLabel}</span>
+            </dt>
+            <dd class="target-list">
+              <span class="target-row"><span>Normal</span><strong>{targets.normal}</strong></span>
+              <span class="target-row"><span>Elite</span><strong>{targets.elite}</strong></span>
+            </dd>
+          </div>
+        );
+      })}
     </dl>
   )}
 
@@ -90,12 +118,12 @@ const { guide, character } = Astro.props;
 
   .recommendations {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.55rem;
     margin: 0;
   }
 
-  .recommendations > div {
+  .recommendation-card {
     padding: 0.65rem 0.75rem;
     border: 1px solid #2f2f2f;
     border-radius: 7px;
@@ -111,11 +139,57 @@ const { guide, character } = Astro.props;
     text-transform: uppercase;
   }
 
+  .ability-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ability-title img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
   dd {
     margin: 0;
     color: #d5d5d5;
     font-size: 0.82rem;
     line-height: 1.45;
+  }
+
+  .target-list {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 0.45rem;
+  }
+
+  .target-row {
+    display: flex;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .target-row > span:first-child {
+    color: #999;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .target-row strong {
+    color: #f5f5f5;
+    font-size: 1rem;
+  }
+
+  .rank-icon {
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
   }
 
   .hero-copy {

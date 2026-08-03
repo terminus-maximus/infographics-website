@@ -102,26 +102,44 @@ const tocGroups = [
       <span class="section-icon" aria-hidden="true">◆</span>
       <div>
         <h3>Recommended Investment</h3>
-        <p>{overviewContent.investmentIntroduction}</p>
 
         <h4>Normal Investment</h4>
         <div class="table-scroll" tabindex="0" aria-label="Normal investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Low-investment clearing range</th><th>Comfortable target</th><th>Recommendation</th></tr></thead>
-            <tbody>{overviewContent.normalInvestment.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th></tr></thead>
+            <tbody>{overviewContent.normalInvestment.map((row) => {
+              const character = characters[row.characterId];
+              const rank = ranks[row.rankId];
+              return (
+                <tr>
+                  <td><span class="table-hero"><img src={character.portrait} alt="" width="42" height="42" loading="lazy" /><strong>{character.name}</strong></span></td>
+                  <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
+                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
+                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                </tr>
+              );
+            })}</tbody>
           </table>
         </div>
-        <p>Replay-backed clears exist with the required heroes at Iron rank and, in some cases, even lower. Those examples demonstrate what is possible with exact play; they should not replace a straightforward beginner recommendation.</p>
 
         <h4>Elite Investment</h4>
         <div class="table-scroll" tabindex="0" aria-label="Elite investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Recommended baseline</th><th>Ability emphasis</th><th>Equipment emphasis</th></tr></thead>
-            <tbody>{overviewContent.eliteInvestment.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody>
+            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th></tr></thead>
+            <tbody>{overviewContent.eliteInvestment.map((row) => {
+              const character = characters[row.characterId];
+              const rank = ranks[row.rankId];
+              return (
+                <tr>
+                  <td><span class="table-hero"><img src={character.portrait} alt="" width="42" height="42" loading="lazy" /><strong>{character.name}</strong></span></td>
+                  <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
+                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
+                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                </tr>
+              );
+            })}</tbody>
           </table>
         </div>
-        <p class="content-callout">Recommended Elite baseline: Silver I Varro, Silver I Certus, and Gold I Bellator, with strong defensive equipment on Varro and Certus.</p>
-        <p>Bronze-rank mandatory-character clears do exist, but they typically transfer the investment elsewhere: maximized epic armor, Isabella, stronger Gold or Diamond carries, exact positioning, favorable critical hits, or favorable enemy movement. Treat those as challenge clears rather than universal minimums.</p>
       </div>
     </article>
 
@@ -146,7 +164,7 @@ const tocGroups = [
   <h2 id="required-heroes-heading">Required Heroes</h2>
   <p class="section-intro">Varro Tigurius, Certus, and Bellator are required throughout Indomitus. Later Elite stages restrict deployment to this trio, so premium supporting heroes cannot eliminate the need to keep all three alive.</p>
   <div class="hero-grid required-grid">
-    {requiredHeroContent.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} />)}
+    {requiredHeroContent.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} />)}
   </div>
 </section>
 
@@ -165,7 +183,7 @@ const tocGroups = [
           </span>
         </summary>
         <div class="disclosure-content hero-grid">
-          {group.heroes.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} />)}
+          {group.heroes.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} />)}
         </div>
       </details>
     ))}
@@ -427,6 +445,56 @@ const tocGroups = [
 
   td {
     color: #ccc;
+  }
+
+  .table-hero,
+  .table-ability {
+    display: flex;
+    align-items: center;
+  }
+
+  .table-hero {
+    min-width: 10rem;
+    gap: 0.65rem;
+  }
+
+  .table-hero img {
+    width: 2.65rem;
+    height: 2.65rem;
+    flex: 0 0 auto;
+    border: 1px solid #444;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .table-hero strong {
+    color: #f5f5f5;
+    font-size: 0.78rem;
+  }
+
+  .table-rank-icon {
+    display: block;
+    width: 2.65rem;
+    height: 2.65rem;
+    object-fit: contain;
+  }
+
+  .table-ability {
+    gap: 0.3rem;
+  }
+
+  .table-ability img {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid #444;
+    border-radius: 7px;
+    object-fit: cover;
+  }
+
+  .table-ability strong {
+    color: #f5f5f5;
+    font-size: 0.8rem;
   }
 
   tbody tr:last-child td {
