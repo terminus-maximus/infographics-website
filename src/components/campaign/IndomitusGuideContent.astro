@@ -112,7 +112,7 @@ const tocGroups = [
               const rank = ranks[row.rankId];
               return (
                 <tr>
-                  <td><span class="table-hero"><img src={character.portrait} alt="" width="42" height="42" loading="lazy" /><strong>{character.name}</strong></span></td>
+                  <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
                   <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
@@ -131,7 +131,7 @@ const tocGroups = [
               const rank = ranks[row.rankId];
               return (
                 <tr>
-                  <td><span class="table-hero"><img src={character.portrait} alt="" width="42" height="42" loading="lazy" /><strong>{character.name}</strong></span></td>
+                  <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
                   <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
@@ -420,7 +420,8 @@ const tocGroups = [
 
   table {
     width: 100%;
-    min-width: 680px;
+    min-width: 0;
+    table-layout: fixed;
     border-collapse: collapse;
     background: #151515;
     font-size: 0.78rem;
@@ -454,8 +455,7 @@ const tocGroups = [
   }
 
   .table-hero {
-    min-width: 10rem;
-    gap: 0.65rem;
+    min-width: 0;
   }
 
   .table-hero img {
@@ -467,11 +467,6 @@ const tocGroups = [
     object-fit: cover;
   }
 
-  .table-hero strong {
-    color: #f5f5f5;
-    font-size: 0.78rem;
-  }
-
   .table-rank-icon {
     display: block;
     width: 2.65rem;
@@ -480,7 +475,7 @@ const tocGroups = [
   }
 
   .table-ability {
-    gap: 0.3rem;
+    gap: 0.2rem;
   }
 
   .table-ability img {
@@ -680,6 +675,45 @@ const tocGroups = [
     .summary-portraits img {
       width: 1.75rem;
       height: 1.75rem;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
+    }
+
+    th {
+      font-size: 0.61rem;
+      letter-spacing: 0;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 18%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 32%;
+    }
+
+    .table-hero img,
+    .table-rank-icon {
+      width: 2.35rem;
+      height: 2.35rem;
+    }
+
+    .table-ability img {
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+
+    .table-ability strong {
+      font-size: 0.72rem;
     }
 
     .toc-group,
