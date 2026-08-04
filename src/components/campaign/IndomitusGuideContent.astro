@@ -7,6 +7,8 @@ import {
   requiredHeroContent,
   supportingHeroGroups,
 } from "../../data/campaigns/indomitusGuideContent";
+import { getIndomitusEquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
+import EquipmentBadge from "./EquipmentBadge.astro";
 import HeroGuideCard from "./HeroGuideCard.astro";
 import StageReplayPreview from "./StageReplayPreview.astro";
 
@@ -106,16 +108,19 @@ const tocGroups = [
         <h4>Normal Investment</h4>
         <div class="table-scroll" tabindex="0" aria-label="Normal investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th></tr></thead>
+            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
             <tbody>{overviewContent.normalInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
+              const equipment = getIndomitusEquipmentRecommendation(row.abilityIconName).normal;
               return (
                 <tr>
                   <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
                   <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
+                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
                 </tr>
               );
             })}</tbody>
@@ -125,16 +130,19 @@ const tocGroups = [
         <h4>Elite Investment</h4>
         <div class="table-scroll" tabindex="0" aria-label="Elite investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th></tr></thead>
+            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
             <tbody>{overviewContent.eliteInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
+              const equipment = getIndomitusEquipmentRecommendation(row.abilityIconName).elite;
               return (
                 <tr>
                   <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
                   <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
                   <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
+                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
                 </tr>
               );
             })}</tbody>
@@ -164,7 +172,14 @@ const tocGroups = [
   <h2 id="required-heroes-heading">Required Heroes</h2>
   <p class="section-intro">Varro Tigurius, Certus, and Bellator are required throughout Indomitus. Later Elite stages restrict deployment to this trio, so premium supporting heroes cannot eliminate the need to keep all three alive.</p>
   <div class="hero-grid required-grid">
-    {requiredHeroContent.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} />)}
+    {requiredHeroContent.map((guide) => (
+      <HeroGuideCard
+        guide={guide}
+        character={characters[guide.characterId]}
+        ranks={ranks}
+        equipment={guide.abilityTargets ? getIndomitusEquipmentRecommendation(guide.abilityTargets.iconName) : undefined}
+      />
+    ))}
   </div>
 </section>
 
@@ -449,7 +464,8 @@ const tocGroups = [
   }
 
   .table-hero,
-  .table-ability {
+  .table-ability,
+  .table-equipment {
     display: flex;
     align-items: center;
   }
@@ -476,6 +492,15 @@ const tocGroups = [
 
   .table-ability {
     gap: 0.2rem;
+  }
+
+  .table-equipment {
+    gap: 0.15rem;
+  }
+
+  .table-equipment strong {
+    color: #f5f5f5;
+    font-size: 0.8rem;
   }
 
   .table-ability img {

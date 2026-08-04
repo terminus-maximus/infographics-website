@@ -1,0 +1,56 @@
+---
+import type { EquipmentTarget } from "../../data/campaigns/equipmentRecommendations";
+
+interface Props {
+  equipment: EquipmentTarget;
+  size?: number;
+}
+
+const { equipment, size = 48 } = Astro.props;
+const itemSrc = `/images/equipment/${equipment.icon}`;
+const frameSrc = `/images/equipment/frames/frame-${equipment.rarity.toLowerCase()}.webp`;
+---
+
+<span
+  class="equipment-badge"
+  style={`--equipment-size: ${size}px`}
+  role="img"
+  aria-label={`${equipment.rarity} ${equipment.name}, rank ${equipment.rank}`}
+  title={`${equipment.rarity} ${equipment.name}`}
+>
+  <img class="equipment-badge__item" src={itemSrc} alt="" loading="lazy" decoding="async" />
+  <img class="equipment-badge__frame" src={frameSrc} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+</span>
+
+<style>
+  .equipment-badge {
+    position: relative;
+    display: inline-block;
+    width: var(--equipment-size);
+    height: var(--equipment-size);
+    flex: 0 0 auto;
+  }
+
+  .equipment-badge > img {
+    position: absolute;
+    display: block;
+    object-fit: fill;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .equipment-badge__item {
+    z-index: 1;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+  }
+
+  .equipment-badge__frame {
+    z-index: 2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,4 @@
+Campaign,URL,Reference,terminus_name,Normal_1_Icon,Normal_1_Rank,Normal_2_Icon,Normal_2_Rank,Elite_1_Icon,Elite_1_Rank,Elite_2_Icon,Elite_2_Rank
+Indomitus,/campaigns/indomitus,required_hero_1_terminus_name,Tiggy,Tiggy-1-Rare-Combat-Knife.webp,1,Tiggy-2-Rare-Sanctified-MK-X-Pauldron.webp,1,Tiggy-1-Rare-Combat-Knife.webp,1,Tiggy-2-Rare-Sanctified-MK-X-Pauldron.webp,7
+Indomitus,/campaigns/indomitus,required_hero_2_terminus_name,Certus,Certus-1-Rare-Combat-Knife.webp,1,Certus-2-Rare-Sanctified-MK-X-Pauldron.webp,1,Certus-1-Rare-Combat-Knife.webp,1,Certus-2-Rare-Sanctified-MK-X-Pauldron.webp,7
+Indomitus,/campaigns/indomitus,required_hero_3_terminus_name,Bella,Bella-1-Rare-Sanctified-Bolt-Pistol.webp,1,Bella-2-Rare-Plated-Greaves.webp,1,Bella-1-Epic-Bolt-Pistol.webp,1,Bella-2-Epic-Plated-Greaves.webp,1

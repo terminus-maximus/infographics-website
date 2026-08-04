@@ -1,14 +1,17 @@
 ---
 import type { CharacterReference, RankReference } from "../../lib/campaigns";
 import type { HeroGuide } from "../../data/campaigns/indomitusGuideContent";
+import type { EquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
+import EquipmentBadge from "./EquipmentBadge.astro";
 
 interface Props {
   guide: HeroGuide;
   character: CharacterReference;
   ranks: Record<string, RankReference>;
+  equipment?: EquipmentRecommendation;
 }
 
-const { guide, character, ranks } = Astro.props;
+const { guide, character, ranks, equipment } = Astro.props;
 const abilityIcon = (ability: "Active" | "Passive") =>
   `/images/abilities/${guide.abilityTargets?.iconName}-${ability}.webp`;
 ---
@@ -57,6 +60,26 @@ const abilityIcon = (ability: "Active" | "Passive") =>
           </div>
         );
       })}
+
+      {equipment && (["weapon", "defense"] as const).map((slot) => (
+        <div class="recommendation-card">
+          <dt>{slot === "weapon" ? "Weapon" : "Defense"}</dt>
+          <dd class="target-list">
+            {(["normal", "elite"] as const).map((mode) => {
+              const target = equipment[mode][slot];
+              return (
+                <span class="target-row">
+                  <span>{mode === "normal" ? "Normal" : "Elite"}</span>
+                  <span class="equipment-target">
+                    <EquipmentBadge equipment={target} size={44} />
+                    <strong>{target.rank}</strong>
+                  </span>
+                </span>
+              );
+            })}
+          </dd>
+        </div>
+      ))}
     </dl>
   )}
 
@@ -118,7 +141,7 @@ const abilityIcon = (ability: "Active" | "Passive") =>
 
   .recommendations {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.55rem;
     margin: 0;
   }
@@ -185,6 +208,12 @@ const abilityIcon = (ability: "Active" | "Passive") =>
     font-size: 1rem;
   }
 
+  .equipment-target {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
   .rank-icon {
     display: block;
     width: 2.75rem;
@@ -218,6 +247,12 @@ const abilityIcon = (ability: "Active" | "Passive") =>
 
     .recommendations {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 701px) and (max-width: 1100px) {
+    .recommendations {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 </style>
