@@ -15,7 +15,6 @@ export const graphics = [
       description: "Elite Campaign minimum investment guide.",
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
-      badge: "Popular",
       category: "start"
     },
     {
@@ -24,7 +23,7 @@ export const graphics = [
       description: "Replay-backed teams and character ranks for Normal and Elite Campaign stages.",
       image: "/images/CampaignGuideBanner.png",
       thumbnail: "/images/thumbnails/CampaignGuideBanner-thumb.png",
-      category: "start"
+      category: "campaign"
     },
     {
       title: "Indomitus Campaign Guide",
