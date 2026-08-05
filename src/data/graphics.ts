@@ -36,6 +36,15 @@ export const graphics = [
       category: "campaign"
     },
     {
+      title: "Indomitus Mirror Campaign Guide",
+      href: "/campaigns/indomitus-mirror/",
+      description: "Necron teams, investment targets, difficult stages, and replay evidence for Indomitus Mirror.",
+      image: "/images/indomitus-mirror.png",
+      thumbnail: "/images/thumbnails/indomitus-mirror-thumb.png",
+      badge: "New",
+      category: "campaign"
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

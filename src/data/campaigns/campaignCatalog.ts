@@ -17,3 +17,14 @@ export const indomitusPage = {
   featuredWebImage: "/images/web/indomitus.webp",
   featuredImageAlt: "Tacticus Indomitus Campaign Guide infographic",
 };
+
+export const indomitusMirrorPage = {
+  title: "Tacticus Indomitus Mirror Campaign Guide",
+  subtitle:
+    "Beat every Indomitus Mirror Normal and Elite stage with recommended Necron teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Indomitus Mirror campaign guide with Normal and Elite teams, dynamic hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/indomitus-mirror.png",
+  featuredWebImage: "/images/web/indomitus-mirror.webp",
+  featuredImageAlt: "Tacticus Indomitus Mirror Campaign Guide infographic",
+};

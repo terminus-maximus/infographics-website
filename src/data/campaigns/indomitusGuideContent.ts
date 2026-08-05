@@ -29,12 +29,12 @@ export const overviewContent = {
   normalInvestment: [
     { characterId: "ultraTigurius", rankId: "Bronze1", abilityIconName: "Tiggy", active: "17+", passive: "8+" },
     { characterId: "ultraEliminatorSgt", rankId: "Bronze1", abilityIconName: "Certus", active: "8+", passive: "1" },
-    { characterId: "ultraInceptorSgt", rankId: "Silver1", abilityIconName: "Bella", active: "26+", passive: "8+" },
+    { characterId: "ultraInceptorSgt", rankId: "Silver1", abilityIconName: "Bella", active: "26+", passive: "17+" },
   ],
   eliteInvestment: [
     { characterId: "ultraTigurius", rankId: "Silver1", abilityIconName: "Tiggy", active: "26+", passive: "17+" },
     { characterId: "ultraEliminatorSgt", rankId: "Silver1", abilityIconName: "Certus", active: "17+", passive: "8+" },
-    { characterId: "ultraInceptorSgt", rankId: "Gold1", abilityIconName: "Bella", active: "35+", passive: "17+" },
+    { characterId: "ultraInceptorSgt", rankId: "Gold1", abilityIconName: "Bella", active: "35+", passive: "26+" },
   ],
   strategyTips: [
     ["Build Around Bellator", "Bellator’s active, Death from Above, is the campaign’s most important ability. It summons one Inceptor for each round that has begun, so waiting can create a larger force—but delaying is not always correct when Scarabs, Deathmarks, or a backline breach require an immediate answer."],
@@ -94,7 +94,7 @@ export const requiredHeroContent: HeroGuide[] = [
     heading: "Bellator",
     role: "Primary carry, frontline tank, multi-hit attacker, and summon engine.",
     rankTargets: { normal: "Silver1", elite: "Gold1" },
-    abilityTargets: { iconName: "Bella", active: { normal: "26+", elite: "35+" }, passive: { normal: "8+", elite: "17+" } },
+    abilityTargets: { iconName: "Bella", active: { normal: "26+", elite: "35+" }, passive: { normal: "17+", elite: "26+" } },
     paragraphs: [
       "Bellator is the campaign MVP. His active summons one Inceptor for each round that has begun, giving the team damage, extra bodies, route blocking, and safer targets for enemy attacks.",
       "Bellator and his Inceptors are also the starter roster’s default answer to Scarab Swarms because their high hit counts can remove a full swarm before it multiplies. On restricted three-character stages, the summoned Inceptors often provide the frontline that Varro and Certus cannot.",

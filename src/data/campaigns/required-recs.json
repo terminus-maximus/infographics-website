@@ -1,0 +1,74 @@
+[
+  {
+    "Campaign": "Indomitus",
+    "URL": "/campaigns/indomitus",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Tiggy",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "17+",
+    "Active_Elite": "26+",
+    "Passive_Normal": "8+",
+    "Passive_Elite": "17+"
+  },
+  {
+    "Campaign": "Indomitus",
+    "URL": "/campaigns/indomitus",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Certus",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "8+",
+    "Active_Elite": "17+",
+    "Passive_Normal": "1",
+    "Passive_Elite": "8+"
+  },
+  {
+    "Campaign": "Indomitus",
+    "URL": "/campaigns/indomitus",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Bella",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": "26+",
+    "Active_Elite": "8+",
+    "Passive_Normal": "17+",
+    "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Indomitus Mirror",
+    "URL": "/campaigns/indomitus-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Makho",
+    "Rank_Normal": "Bronze 3",
+    "Rank_Elite": "Silver 2",
+    "Active_Normal": "1",
+    "Active_Elite": "1",
+    "Passive_Normal": "8+",
+    "Passive_Elite": "17+"
+  },
+  {
+    "Campaign": "Indomitus Mirror",
+    "URL": "/campaigns/indomitus-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Imo",
+    "Rank_Normal": "Bronze 3",
+    "Rank_Elite": "Silver 2",
+    "Active_Normal": "8+",
+    "Active_Elite": "17+",
+    "Passive_Normal": "17+",
+    "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Indomitus Mirror",
+    "URL": "/campaigns/indomitus-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Aleph",
+    "Rank_Normal": "Silver 2",
+    "Rank_Elite": "Gold 2",
+    "Active_Normal": "26",
+    "Active_Elite": "35+",
+    "Passive_Normal": "17+",
+    "Passive_Elite": "26+"
+  }
+]

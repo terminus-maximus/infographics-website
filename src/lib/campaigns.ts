@@ -8,6 +8,7 @@ import characterSource from "../data/campaigns/characters.json";
 import characterRankEnergySource from "../data/campaigns/character_rank_energy.json";
 import rankSource from "../data/campaigns/ranks.json";
 import replaySource from "../data/campaigns/indomitus_replays.json";
+import indomitusMirrorReplaySource from "../data/campaigns/indomitus-mirror.json";
 
 declare const process: { cwd: () => string };
 
@@ -371,6 +372,7 @@ export function validateCampaignGuide(source: unknown): CampaignGuideData {
 }
 
 export const indomitusCampaign = validateCampaignGuide(replaySource);
+export const indomitusMirrorCampaign = validateCampaignGuide(indomitusMirrorReplaySource);
 
 const allEvidence = indomitusCampaign.modes.flatMap((mode) => mode.stages.flatMap((stage) => stage.evidence));
 export const campaignAudit = {

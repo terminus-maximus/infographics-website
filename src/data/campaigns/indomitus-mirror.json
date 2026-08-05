@@ -1,0 +1,4656 @@
+{
+  "id": "indomitus_mirror",
+  "name": "Indomitus Mirror",
+  "updatedAt": "2026-08-05",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "Dze-UOLiOwU",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "9:02",
+              "timestampSeconds": 542,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "GYPaTvy8Ujc",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:19",
+              "timestampSeconds": 19,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Q0Ka40fxk3A",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:09",
+              "timestampSeconds": 9,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "cNruJmSzHBg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "9:01",
+              "timestampSeconds": 541,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "RuCNTCK0T3k",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:14",
+              "timestampSeconds": 14,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Ws2615d5WCQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:48",
+              "timestampSeconds": 108,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "c2JFvQcXjzA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:39",
+              "timestampSeconds": 39,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "2XkWSYZAR9w",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:13",
+              "timestampSeconds": 13,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "J0h7zDaQRoI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:28",
+              "timestampSeconds": 28,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Ws2615d5WCQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:35",
+              "timestampSeconds": 695,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "kBbeKReI7u8",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:25",
+              "timestampSeconds": 685,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 45,
+          "evidence": [
+            {
+              "videoId": "FI7ApdhQ8sA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:23",
+              "timestampSeconds": 23,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "LQ-hLKT5dyg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:04",
+              "timestampSeconds": 4,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "ZCGQBZuYr9Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:20",
+              "timestampSeconds": 620,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "GmTpeqeZHfU",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "KKU-vkZK658",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:18",
+              "timestampSeconds": 678,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Z4u1MtAy6dg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "GdJqnaJlihg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9iam0paOAY",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "C9Vd3_7Pzkg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "GdJqnaJlihg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:47",
+              "timestampSeconds": 587,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:39",
+              "timestampSeconds": 99,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "GdJqnaJlihg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:57",
+              "timestampSeconds": 717,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:09",
+              "timestampSeconds": 129,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "k16muojNMdk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:04",
+              "timestampSeconds": 4,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "GdJqnaJlihg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "14:09",
+              "timestampSeconds": 849,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "WAl3E6lOMIg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:49",
+              "timestampSeconds": 169,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "lSMoo_DUsiA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "raszX4SSFCU",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "2S8aXDKy8uk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "GdJqnaJlihg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "15:41",
+              "timestampSeconds": 941,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "WAl3E6lOMIg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:35",
+              "timestampSeconds": 215,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:29",
+              "timestampSeconds": 269,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vRXC9bXKY_Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "zkZUf_Ij8W0",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:11",
+              "timestampSeconds": 11,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "IjzHvmOWH2Q",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:21",
+              "timestampSeconds": 21,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:59",
+              "timestampSeconds": 299,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "lSMoo_DUsiA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:46",
+              "timestampSeconds": 166,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vRXC9bXKY_Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:07",
+              "timestampSeconds": 607,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:37",
+              "timestampSeconds": 337,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "xoT-0StmYww",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "LjNfSH0ATw4",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:23",
+              "timestampSeconds": 383,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vRXC9bXKY_Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:57",
+              "timestampSeconds": 837,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "8s2r2BUMsN0",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:20",
+              "timestampSeconds": 20,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Gg-rxChKXHI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:04",
+              "timestampSeconds": 4,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:05",
+              "timestampSeconds": 425,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vRXC9bXKY_Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "16:29",
+              "timestampSeconds": 989,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "ymqUhy31xLg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:27",
+              "timestampSeconds": 27,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "-eI67MXcWJQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:05",
+              "timestampSeconds": 5,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "JSHux_lg05o",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:27",
+              "timestampSeconds": 27,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "_P24MNtVHjQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:14",
+              "timestampSeconds": 14,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:55",
+              "timestampSeconds": 475,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "b2mKdQYAIXw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:21",
+              "timestampSeconds": 561,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "pEH_Itk_Pcg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "xuvr2NubizA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "5N0W3zDtOUE",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:11",
+              "timestampSeconds": 611,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "s8fDImeSn_U",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:08",
+              "timestampSeconds": 8,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vS7IVYLgfpA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:21",
+              "timestampSeconds": 21,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "GEXdSrQBF4M",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:21",
+              "timestampSeconds": 681,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "5m7KvS8Xlgg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:50",
+              "timestampSeconds": 50,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "H6athmydpI4",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Jh9RAhf4_3I",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "g9HnFYBFNho",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "12:51",
+              "timestampSeconds": 771,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "lq9cPFx0Kuo",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "vPHCccj-bXQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:24",
+              "timestampSeconds": 24,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "xD75UImeOiA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:06",
+              "timestampSeconds": 6,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "-ZCWupGxOfw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:13",
+              "timestampSeconds": 13,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:00",
+              "timestampSeconds": 60,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "1hg5PgnzjjU",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:14",
+              "timestampSeconds": 14,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:18",
+              "timestampSeconds": 318,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:01",
+              "timestampSeconds": 361,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:03",
+              "timestampSeconds": 423,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "_bX5KGNejQA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "pyUNYVM6CU0",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "ITx5V0Lz_U0",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:12",
+              "timestampSeconds": 12,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:28",
+              "timestampSeconds": 508,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "evidence": [
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:08",
+              "timestampSeconds": 548,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "_tGU8yakBdM",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:11",
+              "timestampSeconds": 11,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:33",
+              "timestampSeconds": 633,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "P2HEz45jl98",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:33",
+              "timestampSeconds": 693,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:40",
+              "timestampSeconds": 40,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:36",
+              "timestampSeconds": 216,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:09",
+              "timestampSeconds": 309,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:12",
+              "timestampSeconds": 372,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:38",
+              "timestampSeconds": 458,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:31",
+              "timestampSeconds": 511,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:32",
+              "timestampSeconds": 572,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "IjWxWBsXNrI",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:25",
+              "timestampSeconds": 625,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:21",
+              "timestampSeconds": 261,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:17",
+              "timestampSeconds": 317,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:23",
+              "timestampSeconds": 383,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:29",
+              "timestampSeconds": 449,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:57",
+              "timestampSeconds": 537,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "56gx79Gb_SE",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:57",
+              "timestampSeconds": 597,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "34I41OjS9Mk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:59",
+              "timestampSeconds": 659,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:15",
+              "timestampSeconds": 315,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:19",
+              "timestampSeconds": 379,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:47",
+              "timestampSeconds": 467,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:05",
+              "timestampSeconds": 545,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "QTiQugnfSh4",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:25",
+              "timestampSeconds": 685,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "evidence": [
+            {
+              "videoId": "bluTVo3Dz7E",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "12:33",
+              "timestampSeconds": 753,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 32,
+          "evidence": [
+            {
+              "videoId": "WaEXqOuPEkw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "cSO-7onR3qA",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:32",
+              "timestampSeconds": 812,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "sQVzzz2as-Q",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:18",
+              "timestampSeconds": 18,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:39",
+              "timestampSeconds": 399,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:21",
+              "timestampSeconds": 501,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "9:27",
+              "timestampSeconds": 567,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:49",
+              "timestampSeconds": 649,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "evidence": [
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "12:11",
+              "timestampSeconds": 731,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "LlNdhEYszPM",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "Sxg9trV-1dg",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:12",
+              "timestampSeconds": 12,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "14:05",
+              "timestampSeconds": 845,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "jCPXwNg9Dcw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "oNB_tMLHGgo",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "BTZHJjzjis0",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "FWX5UAK8fHE",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Lqn5eBLiGzw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "P6CmJGea8pY",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Wur2DJgfYDQ",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "d4JEk1nw_Qw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "dlhzn9UkJfk",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "16:37",
+              "timestampSeconds": 997,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "jsNqOGqWgmE",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "Dze-UOLiOwU": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Campaign (Necron walkthrough 1-15 missions)",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=Dze-UOLiOwU"
+    },
+    "GYPaTvy8Ujc": {
+      "title": "Indomitus Mirror-15: Base Units",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=GYPaTvy8Ujc"
+    },
+    "Q0Ka40fxk3A": {
+      "title": "VINDICTA BOSS - INDOMITUS MIRROR: BATTLE 15 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=Q0Ka40fxk3A"
+    },
+    "cNruJmSzHBg": {
+      "title": "Warhammer 40,000: Tacticus (Mobile) Indomitus Mirror Campaign: Battles 11 - 15 Walkthrough",
+      "creator": "Patrick Bradshaw",
+      "url": "https://www.youtube.com/watch?v=cNruJmSzHBg"
+    },
+    "RuCNTCK0T3k": {
+      "title": "INDOMITUS MIRROR: BATTLE 29 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=RuCNTCK0T3k"
+    },
+    "Ws2615d5WCQ": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Campaign (Necron walkthrough 16-30 missions)",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=Ws2615d5WCQ"
+    },
+    "c2JFvQcXjzA": {
+      "title": "Indomitus Mirror 29 Base Units",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=c2JFvQcXjzA"
+    },
+    "2XkWSYZAR9w": {
+      "title": "INDOMITUS MIRROR: BATTLE 30 - warhammer 40.000 tacticus - walkthrough / gameplay",
+      "creator": "3rdRound",
+      "url": "https://www.youtube.com/watch?v=2XkWSYZAR9w"
+    },
+    "J0h7zDaQRoI": {
+      "title": "Indomitus Mirror 30: Bellator Boss Fight, 3 Medals, Base Units!",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=J0h7zDaQRoI"
+    },
+    "kBbeKReI7u8": {
+      "title": "Warhammer 40,000: Tacticus (Mobile) Indomitus Mirror Campaign: Battle 26 - 30 Walkthrough",
+      "creator": "Patrick Bradshaw",
+      "url": "https://www.youtube.com/watch?v=kBbeKReI7u8"
+    },
+    "FI7ApdhQ8sA": {
+      "title": "Indomitus Mirror 45: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=FI7ApdhQ8sA"
+    },
+    "LQ-hLKT5dyg": {
+      "title": "Beating Indomitus Mirror 45 With Only THREE Necrons",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=LQ-hLKT5dyg"
+    },
+    "ZCGQBZuYr9Y": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Campaign (Necron walkthrough 31-45 missions)",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=ZCGQBZuYr9Y"
+    },
+    "GmTpeqeZHfU": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 60 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=GmTpeqeZHfU"
+    },
+    "KKU-vkZK658": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Campaign (Necron walkthrough 46-60 missions)",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=KKU-vkZK658"
+    },
+    "Z4u1MtAy6dg": {
+      "title": "Indomitus Mirror 60: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=Z4u1MtAy6dg"
+    },
+    "GdJqnaJlihg": {
+      "title": "Indomitus Mirror: 61-65",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=GdJqnaJlihg"
+    },
+    "g9HnFYBFNho": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Campaign (Necron walkthrough 61-75 missions)",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=g9HnFYBFNho"
+    },
+    "g9iam0paOAY": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 61 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=g9iam0paOAY"
+    },
+    "C9Vd3_7Pzkg": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 62 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=C9Vd3_7Pzkg"
+    },
+    "k16muojNMdk": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 63 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=k16muojNMdk"
+    },
+    "WAl3E6lOMIg": {
+      "title": "Indomitus Mirror 64 and 65: if at first you don't succeed...",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=WAl3E6lOMIg"
+    },
+    "lSMoo_DUsiA": {
+      "title": "Warhammer 40,000: Tacticus - Gameplay Part 55 - Indomitus Mirror campaign battles 64~67",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=lSMoo_DUsiA"
+    },
+    "raszX4SSFCU": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 64 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=raszX4SSFCU"
+    },
+    "2S8aXDKy8uk": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 65 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=2S8aXDKy8uk"
+    },
+    "vRXC9bXKY_Y": {
+      "title": "Indomitus Mirror: 66-70",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=vRXC9bXKY_Y"
+    },
+    "zkZUf_Ij8W0": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 66 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=zkZUf_Ij8W0"
+    },
+    "IjzHvmOWH2Q": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 67 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=IjzHvmOWH2Q"
+    },
+    "xoT-0StmYww": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 68 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=xoT-0StmYww"
+    },
+    "LjNfSH0ATw4": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 69 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=LjNfSH0ATw4"
+    },
+    "8s2r2BUMsN0": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 70 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=8s2r2BUMsN0"
+    },
+    "Gg-rxChKXHI": {
+      "title": "Indomitus Mirror Stage 70 | 3 Stars Clear | Necrons VS Ultramarine | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=Gg-rxChKXHI"
+    },
+    "ymqUhy31xLg": {
+      "title": "Indomitus Mirror 70: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=ymqUhy31xLg"
+    },
+    "-eI67MXcWJQ": {
+      "title": "Indomitus Mirror Stage 71 | 3 Stars Clear | Necrons VS Ultramarine | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=-eI67MXcWJQ"
+    },
+    "JSHux_lg05o": {
+      "title": "Indomitus Mirror 71: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=JSHux_lg05o"
+    },
+    "_P24MNtVHjQ": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 71 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=_P24MNtVHjQ"
+    },
+    "b2mKdQYAIXw": {
+      "title": "Indomitus Mirror 72: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=b2mKdQYAIXw"
+    },
+    "pEH_Itk_Pcg": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 72 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=pEH_Itk_Pcg"
+    },
+    "xuvr2NubizA": {
+      "title": "Indomitus Mirror Stage 72 | 3 Stars Clear | Necrons VS Ultramarine | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=xuvr2NubizA"
+    },
+    "5N0W3zDtOUE": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 73 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=5N0W3zDtOUE"
+    },
+    "s8fDImeSn_U": {
+      "title": "Indomitus Mirror Stage 73 | 3 Stars Clear | Necrons VS Ultramarine | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=s8fDImeSn_U"
+    },
+    "vS7IVYLgfpA": {
+      "title": "Indomitus Mirror 73: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=vS7IVYLgfpA"
+    },
+    "GEXdSrQBF4M": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 74 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=GEXdSrQBF4M"
+    },
+    "5m7KvS8Xlgg": {
+      "title": "Indomitus Mirror 75: 3 Medals",
+      "creator": "Xarnak Gaming",
+      "url": "https://www.youtube.com/watch?v=5m7KvS8Xlgg"
+    },
+    "H6athmydpI4": {
+      "title": "3 star Indomitus Mirror mission 75 Tacticus Warhammer 40k",
+      "creator": "Lolme",
+      "url": "https://www.youtube.com/watch?v=H6athmydpI4"
+    },
+    "Jh9RAhf4_3I": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 75 - 2 medals",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Jh9RAhf4_3I"
+    },
+    "lq9cPFx0Kuo": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 75 Fail #2",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lq9cPFx0Kuo"
+    },
+    "vPHCccj-bXQ": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 75 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=vPHCccj-bXQ"
+    },
+    "xD75UImeOiA": {
+      "title": "TACTICUS - Indomitus MIRROR: BATTLE 75 Fail #1",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=xD75UImeOiA"
+    },
+    "-ZCWupGxOfw": {
+      "title": "TACTICUS - Indomitus MIRROR Elite: BATTLE 1 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=-ZCWupGxOfw"
+    },
+    "P2HEz45jl98": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Elite Battle Campaign (1-8) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=P2HEz45jl98"
+    },
+    "1hg5PgnzjjU": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 2 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1hg5PgnzjjU"
+    },
+    "_bX5KGNejQA": {
+      "title": "Warhammer 40k Tacticus: Indomitus Elite Mirror Chapter 4 Early Look",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=_bX5KGNejQA"
+    },
+    "pyUNYVM6CU0": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 4 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=pyUNYVM6CU0"
+    },
+    "ITx5V0Lz_U0": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 5 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ITx5V0Lz_U0"
+    },
+    "_tGU8yakBdM": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 6 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=_tGU8yakBdM"
+    },
+    "IjWxWBsXNrI": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Elite Battle Campaign (9-16) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=IjWxWBsXNrI"
+    },
+    "34I41OjS9Mk": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Elite Battle Campaign (17-24) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=34I41OjS9Mk"
+    },
+    "56gx79Gb_SE": {
+      "title": "WH40k Tacticus - Campaign Indomitus Mirror Elite 22",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=56gx79Gb_SE"
+    },
+    "cSO-7onR3qA": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Elite Battle Campaign (25-32) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=cSO-7onR3qA"
+    },
+    "QTiQugnfSh4": {
+      "title": "Tacticus Indomitus Mirror Elite: Battle 30",
+      "creator": "Sean Sy",
+      "url": "https://www.youtube.com/watch?v=QTiQugnfSh4"
+    },
+    "bluTVo3Dz7E": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 31 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=bluTVo3Dz7E"
+    },
+    "WaEXqOuPEkw": {
+      "title": "Indomitus Mirror Elite 32 Core 3",
+      "creator": "ForgottenSaber",
+      "url": "https://www.youtube.com/watch?v=WaEXqOuPEkw"
+    },
+    "sQVzzz2as-Q": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 32 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=sQVzzz2as-Q"
+    },
+    "dlhzn9UkJfk": {
+      "title": "Warhammer: Tacticus - Indomitus Mirror Elite Battle Campaign (33-40) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=dlhzn9UkJfk"
+    },
+    "LlNdhEYszPM": {
+      "title": "WH40K Tacticus - Indomitus Mirror : Elite 39 - SUCCESSFUL 3 medal clear 🏅🏅🏅",
+      "creator": "Eyes on Eternity Gaming",
+      "url": "https://www.youtube.com/watch?v=LlNdhEYszPM"
+    },
+    "Sxg9trV-1dg": {
+      "title": "Indomitus Mirror Elite 39, or Hell for short",
+      "creator": "firedrake110",
+      "url": "https://www.youtube.com/watch?v=Sxg9trV-1dg"
+    },
+    "jCPXwNg9Dcw": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Indomitus 39",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=jCPXwNg9Dcw"
+    },
+    "oNB_tMLHGgo": {
+      "title": "WH40K Tacticus - Indomitus Mirror: Elite 39 - 1 medal",
+      "creator": "Eyes on Eternity Gaming",
+      "url": "https://www.youtube.com/watch?v=oNB_tMLHGgo"
+    },
+    "BTZHJjzjis0": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Indomitus 40 - Calgar",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=BTZHJjzjis0"
+    },
+    "FWX5UAK8fHE": {
+      "title": "Indomitus Mirror Elite 40: G1 Clear 3 Medal - Tacticus",
+      "creator": "BMunkey",
+      "url": "https://www.youtube.com/watch?v=FWX5UAK8fHE"
+    },
+    "Lqn5eBLiGzw": {
+      "title": "TACTICUS - Indomitus Elite Mirror: BATTLE 40 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Lqn5eBLiGzw"
+    },
+    "P6CmJGea8pY": {
+      "title": "Indomitus Mirror Elite: 40 Clear G1 3 Medal Tacticus",
+      "creator": "BMunkey",
+      "url": "https://www.youtube.com/watch?v=P6CmJGea8pY"
+    },
+    "Wur2DJgfYDQ": {
+      "title": "Warhammer 40K: Tacticus Indomitus Mirror Elite 40 (1 badge)",
+      "creator": "BareMinimumTacticus",
+      "url": "https://www.youtube.com/watch?v=Wur2DJgfYDQ"
+    },
+    "d4JEk1nw_Qw": {
+      "title": "Tacticus: Indomitus Mirror Elite 40 - 3 medal victory with core 3 Necrons",
+      "creator": "UltraBrother",
+      "url": "https://www.youtube.com/watch?v=d4JEk1nw_Qw"
+    },
+    "jsNqOGqWgmE": {
+      "title": "WH40K Tacticus - Indomitus Mirror: Elite 40 - 3 medal clear",
+      "creator": "Eyes on Eternity Gaming",
+      "url": "https://www.youtube.com/watch?v=jsNqOGqWgmE"
+    }
+  }
+}

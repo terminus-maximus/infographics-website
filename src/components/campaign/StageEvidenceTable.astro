@@ -14,16 +14,24 @@ interface Props {
   videos: Record<string, CampaignVideo>;
   characters: Record<string, CharacterReference>;
   ranks: Record<string, RankReference>;
+  requiredCharacterIds?: string[];
+  campaignName?: string;
 }
 
-const { modes, videos, characters, ranks } = Astro.props;
+const {
+  modes,
+  videos,
+  characters,
+  ranks,
+  requiredCharacterIds = ["ultraTigurius", "ultraEliminatorSgt", "ultraInceptorSgt"],
+  campaignName = "Indomitus",
+} = Astro.props;
 const allEvidence = modes.flatMap((mode) =>
   mode.stages.flatMap((stage) => stage.evidence.map((evidence) => ({ mode, stage, evidence }))),
 );
 const creators = [...new Set(allEvidence.map(({ evidence }) => videos[evidence.videoId].creator))].sort((a, b) =>
   a.localeCompare(b),
 );
-const requiredCharacterIds = ["ultraTigurius", "ultraEliminatorSgt", "ultraInceptorSgt"];
 const requiredCharacterIdSet = new Set(requiredCharacterIds);
 const requiredCharacters = requiredCharacterIds.map((characterId) => characters[characterId]);
 const supportingCharacterIds = [
@@ -233,7 +241,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 <section class="strategies-section" id="campaign-replays" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
   <h2 id="campaign-strategies-heading">Campaign Replays</h2>
 
-  <div class="stage-table" role="region" aria-label="Indomitus stage replay evidence" tabindex="0">
+  <div class="stage-table" role="region" aria-label={`${campaignName} stage replay evidence`} tabindex="0">
     <div class="table-header" aria-hidden="true">
       <span class="expand-header">+</span>
       <span>Mode</span>
