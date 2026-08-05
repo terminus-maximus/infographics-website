@@ -1,6 +1,46 @@
 import { currentGuildRaidSeason } from "./guildRaid";
+import characterSource from "./campaigns/characters.json";
+import requiredRecommendations from "./campaigns/required-recs.json";
 
-export const graphics = [
+export interface RequiredHeroIcon {
+  name: string;
+  portrait: string;
+}
+
+export interface Graphic {
+  title: string;
+  href: string;
+  description: string;
+  image: string;
+  thumbnail: string;
+  category: string;
+  badge?: string;
+  requiredHeroes?: RequiredHeroIcon[];
+}
+
+const characters = Object.values(characterSource.characters);
+
+const getRequiredHeroes = (campaignUrl: string): RequiredHeroIcon[] =>
+  requiredRecommendations
+    .filter((recommendation) => recommendation.URL === campaignUrl)
+    .map((recommendation) => {
+      const character = characters.find(
+        (candidate) => candidate.shortName === recommendation.terminus_name,
+      );
+
+      if (!character) {
+        throw new Error(
+          `Missing character portrait for required hero ${recommendation.terminus_name}`,
+        );
+      }
+
+      return {
+        name: character.name,
+        portrait: `/images/heroes/${character.portrait}`,
+      };
+    });
+
+export const graphics: Graphic[] = [
     {
       title: "Beginner Guide",
       href: "/beginner-guide",
@@ -32,16 +72,18 @@ export const graphics = [
       image: "/images/indomitus.png",
       thumbnail: "/images/thumbnails/indomitus-thumb.png",
       badge: "New",
-      category: "campaign"
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/indomitus")
     },
     {
-      title: "Indomitus Mirror Campaign Guide",
+      title: "Indomitus Mirror Guide",
       href: "/campaigns/indomitus-mirror/",
       description: "Necron teams, investment targets, difficult stages, and replay evidence for Indomitus Mirror.",
       image: "/images/indomitus-mirror.png",
       thumbnail: "/images/thumbnails/indomitus-mirror-thumb.png",
       badge: "New",
-      category: "campaign"
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/indomitus-mirror")
     },
     {
       title: "Current Season",

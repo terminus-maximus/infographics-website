@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
 import { marked } from "marked";
 import { graphics } from "../data/graphics";
 
@@ -119,7 +120,11 @@ const displayImageSrc =
             <h3>{graphic.title}</h3>
             {graphic.badge && <span class="card-badge">{graphic.badge}</span>}
           </div>
-          <p>{graphic.description}</p>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
         </a>
       ))}
     </div>

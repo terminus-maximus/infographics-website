@@ -1,0 +1,44 @@
+---
+import type { RequiredHeroIcon } from "../../data/graphics";
+
+interface Props {
+  heroes: RequiredHeroIcon[];
+}
+
+const { heroes } = Astro.props;
+---
+
+<div
+  class="required-heroes"
+  aria-label={`Required heroes: ${heroes.map((hero) => hero.name).join(", ")}`}
+>
+  {heroes.map((hero) => (
+    <img
+      src={hero.portrait}
+      alt={hero.name}
+      title={hero.name}
+      width="58"
+      height="58"
+      loading="lazy"
+    />
+  ))}
+</div>
+
+<style>
+  .required-heroes {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+  }
+
+  .required-heroes img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    border-radius: 10px;
+    background: #121212;
+  }
+</style>

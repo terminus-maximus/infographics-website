@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
+import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
 import { graphics } from "../data/graphics";
 import replayCsv from "../data/GR-replays-v2.csv?raw";
 import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
@@ -291,7 +292,11 @@ const guideReplaySections = guides.map((guide) => {
         </div>
 
         <h3>{graphic.title}</h3>
-        <p>{graphic.description}</p>
+        {graphic.requiredHeroes?.length ? (
+          <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+        ) : (
+          <p>{graphic.description}</p>
+        )}
       </a>
     ))}
   </div>

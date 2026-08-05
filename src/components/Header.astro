@@ -23,6 +23,26 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
         <a href="/elite-campaigns">Elite Campaigns</a>
         <div class="submenu">
           <div class="submenu-header">
+            <a class="submenu-link" href="/campaigns">Campaign Guides</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Campaign Guides menu"
+              aria-expanded="false"
+              aria-controls="campaign-guides-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="campaign-guides-menu">
+            <a href="/campaigns/indomitus/">Indomitus</a>
+            <a href="/campaigns/indomitus-mirror/">Indomitus Mirror</a>
+            <span class="submenu-coming-soon">More Soon!</span>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
             <a class="submenu-link" href="/guild-raid">Guild Raid</a>
             <button
               class="submenu-button"
@@ -305,6 +325,15 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
   .submenu-menu a {
     padding-left: 1.75rem;
     font-size: 0.95rem;
+  }
+
+  .submenu-coming-soon {
+    display: block;
+    padding: 0.75rem 1rem 0.75rem 1.75rem;
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+    white-space: nowrap;
   }
   @media (max-width: 700px) {
   .site-header {

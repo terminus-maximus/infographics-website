@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import ReplayLibraryFilters from "../../components/replay-library/ReplayLibraryFilters.astro";
 import ReplayStatistics from "../../components/replay-library/ReplayStatistics.astro";
 import ReplayResultsTable from "../../components/replay-library/ReplayResultsTable.astro";
+import RequiredHeroIcons from "../../components/campaign/RequiredHeroIcons.astro";
 import { graphics } from "../../data/graphics";
 import replayRows from "../../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
 import bossRows from "../../data/replay-library/bosses.json";
@@ -167,7 +168,11 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
               <h3>{graphic.title}</h3>
               {graphic.badge && <span class="card-badge">{graphic.badge}</span>}
             </div>
-            <p>{graphic.description}</p>
+            {graphic.requiredHeroes?.length ? (
+              <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+            ) : (
+              <p>{graphic.description}</p>
+            )}
           </a>
         ))}
       </div>

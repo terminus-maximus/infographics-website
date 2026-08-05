@@ -1,13 +1,17 @@
 ---
+import RequiredHeroIcons from "./RequiredHeroIcons.astro";
+import type { RequiredHeroIcon } from "../../data/graphics";
+
 interface Props {
   title: string;
   description: string;
   href: string;
   thumbnail: string;
   badge?: string;
+  requiredHeroes?: RequiredHeroIcon[];
 }
 
-const { title, description, href, thumbnail, badge } = Astro.props;
+const { title, description, href, thumbnail, badge, requiredHeroes } = Astro.props;
 ---
 
 <a class="campaign-card" href={href}>
@@ -19,7 +23,11 @@ const { title, description, href, thumbnail, badge } = Astro.props;
     <h3>{title}</h3>
     {badge && <span class="badge">{badge}</span>}
   </div>
-  <p>{description}</p>
+  {requiredHeroes?.length ? (
+    <RequiredHeroIcons heroes={requiredHeroes} />
+  ) : (
+    <p>{description}</p>
+  )}
 </a>
 
 <style>
@@ -51,7 +59,7 @@ const { title, description, href, thumbnail, badge } = Astro.props;
     background: #121212;
   }
 
-  img {
+  .image-wrap img {
     display: block;
     width: 100%;
     height: 100%;

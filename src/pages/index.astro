@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
 import { graphics } from "../data/graphics";
 
 const startHere = graphics.filter((g) => g.category === "start");
+const campaignGuides = graphics.filter((g) => g.category === "campaign");
 const guildRaids = graphics.filter((g) => g.category === "raid");
 const legendaryGuides = graphics.filter((g) => g.category === "legendary");
 const gameEvents = graphics.filter((g) => g.category === "event");
@@ -118,7 +120,40 @@ const aboutPages = graphics.filter((g) => g.category === "about");
             <h3>{graphic.title}</h3>
             {graphic.badge && <span class="card-badge">{graphic.badge}</span>}
           </div>
-          <p>{graphic.description}</p>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Campaign Guides</h2>
+
+    <div class="card-grid">
+      {campaignGuides.map((graphic) => (
+        <a class="card" href={graphic.href}>
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-title-row">
+            <h3>{graphic.title}</h3>
+            {graphic.badge && <span class="card-badge">{graphic.badge}</span>}
+          </div>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
         </a>
       ))}
     </div>
