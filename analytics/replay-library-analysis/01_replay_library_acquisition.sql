@@ -1,6 +1,6 @@
 -- Question 1: Where are Replay Library users coming from?
 -- Read-only GoogleSQL. No persistent or temporary BigQuery objects are created.
--- The raw wildcard is bounded to the verified July 14-29, 2026 export.
+-- The raw wildcard is bounded to the verified July 14-August 4, 2026 export.
 -- Output contract: output_name + rows_json (JSON array split locally into CSVs).
 
 WITH
@@ -11,29 +11,29 @@ windows AS (
       '7 days (exact)' AS window_label,
       7 AS requested_days,
       7 AS available_days,
-      DATE '2026-07-23' AS requested_start_date,
-      DATE '2026-07-23' AS available_start_date,
-      DATE '2026-07-29' AS end_date,
+      DATE '2026-07-29' AS requested_start_date,
+      DATE '2026-07-29' AS available_start_date,
+      DATE '2026-08-04' AS end_date,
       FALSE AS is_partial_window
     ),
     (
       2,
-      '28 days (available 16 of requested 28)',
+      '28 days (available 22 of requested 28)',
       28,
-      16,
-      DATE '2026-07-02',
+      22,
+      DATE '2026-07-08',
       DATE '2026-07-14',
-      DATE '2026-07-29',
+      DATE '2026-08-04',
       TRUE
     ),
     (
       3,
-      '90 days (available 16 of requested 90)',
+      '90 days (available 22 of requested 90)',
       90,
-      16,
-      DATE '2026-05-01',
+      22,
+      DATE '2026-05-07',
       DATE '2026-07-14',
-      DATE '2026-07-29',
+      DATE '2026-08-04',
       TRUE
     )
   ])
@@ -64,7 +64,7 @@ raw AS (
     traffic_source.name AS first_user_campaign,
     event_params
   FROM `terminus-maximus-analytics.analytics_540087863.events_*`
-  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260729'
+  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260804'
 ),
 extracted AS (
   SELECT

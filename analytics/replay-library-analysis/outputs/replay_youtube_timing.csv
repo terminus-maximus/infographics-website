@@ -1,0 +1,12 @@
+analysis_period_label,event_name,click_classification,timing_relative_to_first_replay,qualifies_as_replay_library_youtube_click,event_page_path,current_page_path,event_count,sessions,users
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/boss-meta/,/guild-raid/boss-meta/,30,10,9
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,After first Replay Library visit,false,/guild-raid/s105/,/guild-raid/s105/,29,20,17
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/s106/,/guild-raid/s106/,21,16,14
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/s105/,/guild-raid/s105/,17,16,15
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,After first Replay Library visit,false,/guild-raid/s106/,/guild-raid/s106/,16,11,10
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/s105/,(no page context),5,3,3
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,After first Replay Library visit,false,/guild-raid/boss-meta/,/guild-raid/boss-meta/,4,4,4
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/s106/,(no page context),3,2,2
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,After first Replay Library visit,false,/guild-raid/s105/,/guild-raid/s106/,2,1,1
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,During Replay Library page context,false,/guild-raid/boss-meta/,/replay-library/,2,1,1
+Available export: 2026-07-14 to 2026-08-04 (22 days),guild_raid_youtube_click,Guild Raid YouTube click outside Replay Library,Before first Replay Library visit,false,/guild-raid/s106/,/lre/lysander/,1,1,1

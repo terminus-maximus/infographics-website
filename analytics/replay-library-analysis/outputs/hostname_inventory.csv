@@ -1,0 +1,6 @@
+hostname,is_production_hostname,events,page_views,pseudo_users,first_date,last_date
+terminusmaximus.com,true,55519,21630,3408,2026-07-14,2026-08-04
+www.terminusmaximus.com,true,1238,490,73,2026-07-14,2026-08-04
+localhost,false,552,236,2,2026-07-14,2026-08-04
+127.0.0.1,false,306,194,1,2026-07-14,2026-08-04
+infographics-website.pages.dev,false,9,3,3,2026-07-28,2026-07-29

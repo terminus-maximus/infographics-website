@@ -2,19 +2,19 @@
 -- Target events:
 --   guild_raid_youtube_click
 --   full_resolution_infographic_open
--- Read-only and bounded to events_20260714 through events_20260729.
+-- Read-only and bounded to events_20260714 through events_20260804.
 -- `infographic_url` is the implemented field; `open_url` is validated as absent.
 
 WITH
 windows AS (
   SELECT * FROM UNNEST([
     STRUCT(1 AS window_order, '7 days (exact)' AS window_label, 7 AS requested_days,
-      7 AS available_days, DATE '2026-07-23' AS available_start_date,
-      DATE '2026-07-29' AS end_date, FALSE AS is_partial_window),
-    (2, '28 days (available 16 of requested 28)', 28, 16,
-      DATE '2026-07-14', DATE '2026-07-29', TRUE),
-    (3, '90 days (available 16 of requested 90)', 90, 16,
-      DATE '2026-07-14', DATE '2026-07-29', TRUE)
+      7 AS available_days, DATE '2026-07-29' AS available_start_date,
+      DATE '2026-08-04' AS end_date, FALSE AS is_partial_window),
+    (2, '28 days (available 22 of requested 28)', 28, 22,
+      DATE '2026-07-14', DATE '2026-08-04', TRUE),
+    (3, '90 days (available 22 of requested 90)', 90, 22,
+      DATE '2026-07-14', DATE '2026-08-04', TRUE)
   ])
 ),
 raw AS (
@@ -39,7 +39,7 @@ raw AS (
     collected_traffic_source.manual_campaign_name AS collected_campaign,
     event_params
   FROM `terminus-maximus-analytics.analytics_540087863.events_*`
-  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260729'
+  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260804'
 ),
 extracted AS (
   SELECT
@@ -209,7 +209,7 @@ event_summary_rows AS (
 ),
 calendar_dates AS (
   SELECT day
-  FROM UNNEST(GENERATE_DATE_ARRAY(DATE '2026-07-14', DATE '2026-07-29')) AS day
+  FROM UNNEST(GENERATE_DATE_ARRAY(DATE '2026-07-14', DATE '2026-08-04')) AS day
 ),
 event_names AS (
   SELECT event_name
@@ -234,9 +234,9 @@ weekly_rows AS (
     DATE_TRUNC(event_date, WEEK(MONDAY)) AS week_start_date,
     DATE_ADD(DATE_TRUNC(event_date, WEEK(MONDAY)), INTERVAL 6 DAY) AS week_end_date,
     GREATEST(DATE_TRUNC(event_date, WEEK(MONDAY)), DATE '2026-07-14') AS observed_start_date,
-    LEAST(DATE_ADD(DATE_TRUNC(event_date, WEEK(MONDAY)), INTERVAL 6 DAY), DATE '2026-07-29') AS observed_end_date,
+    LEAST(DATE_ADD(DATE_TRUNC(event_date, WEEK(MONDAY)), INTERVAL 6 DAY), DATE '2026-08-04') AS observed_end_date,
     DATE_DIFF(
-      LEAST(DATE_ADD(DATE_TRUNC(event_date, WEEK(MONDAY)), INTERVAL 6 DAY), DATE '2026-07-29'),
+      LEAST(DATE_ADD(DATE_TRUNC(event_date, WEEK(MONDAY)), INTERVAL 6 DAY), DATE '2026-08-04'),
       GREATEST(DATE_TRUNC(event_date, WEEK(MONDAY)), DATE '2026-07-14'),
       DAY
     ) + 1 AS available_days_in_week,

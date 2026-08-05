@@ -1,13 +1,13 @@
 -- Question 3: What happens before and after Replay Library use?
 -- Primary entry = first /replay-library/ page_view in each official session.
 -- A separate output retains every Replay Library page_view in sequence.
--- Read-only and bounded to events_20260714 through events_20260729.
+-- Read-only and bounded to events_20260714 through events_20260804.
 
 WITH
 constants AS (
   SELECT
-    'Available export: 2026-07-14 to 2026-07-29 (16 days)' AS analysis_period_label,
-    '/guild-raid/s105/' AS current_guild_raid_during_export_path,
+    'Available export: 2026-07-14 to 2026-08-04 (22 days)' AS analysis_period_label,
+    '/guild-raid/s105/' AS prior_guild_raid_path,
     '/guild-raid/s106/' AS current_guild_raid_as_of_report_path
 ),
 raw AS (
@@ -30,7 +30,7 @@ raw AS (
     collected_traffic_source.manual_campaign_name AS collected_campaign,
     event_params
   FROM `terminus-maximus-analytics.analytics_540087863.events_*`
-  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260729'
+  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260804'
 ),
 extracted AS (
   SELECT
@@ -168,7 +168,7 @@ replay_visits_pre AS (
 first_replay AS (
   SELECT *
   FROM replay_visits_pre
-  QUALIFY replay_visit_number = 1
+  WHERE replay_visit_number = 1
 ),
 replay_session_rollup AS (
   SELECT
@@ -378,7 +378,7 @@ exploration_long AS (
     STRUCT('Boss Meta' AS target_name, p.page_path = '/guild-raid/boss-meta/' AS matches_target),
     ('Elite Campaigns', STARTS_WITH(COALESCE(p.page_path, ''), '/elite-campaigns/')),
     ('LRE pages', STARTS_WITH(COALESCE(p.page_path, ''), '/lre/')),
-    ('Current Guild Raid during export: Season 105', p.page_path = '/guild-raid/s105/'),
+    ('Guild Raid Season 105', p.page_path = '/guild-raid/s105/'),
     ('Current Guild Raid as of report: Season 106', p.page_path = '/guild-raid/s106/'),
     ('Home page', p.page_path = '/')
   ])
@@ -456,6 +456,6 @@ SELECT
 FROM exploration_rows e
 UNION ALL
 SELECT
-  'replay_session_detail',
+  'replay_journey_session_detail',
   TO_JSON_STRING(ARRAY_AGG(r ORDER BY session_date, session_key)) AS rows_json
 FROM replay_sessions r;

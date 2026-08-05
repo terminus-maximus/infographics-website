@@ -1,0 +1,12 @@
+event_name,param_name,total_events,populated_events,missing_or_empty_events,populated_percent,implementation_note
+full_resolution_infographic_open,infographic_title,4438,4438,0,100,
+full_resolution_infographic_open,infographic_url,4438,4438,0,100,
+full_resolution_infographic_open,link_source,4438,4438,0,100,
+full_resolution_infographic_open,open_url,4438,0,4438,0,Not implemented; use infographic_url.
+full_resolution_infographic_open,page_path,4438,4438,0,100,
+full_resolution_infographic_open,page_title,4438,4438,0,100,
+guild_raid_youtube_click,link_host,869,869,0,100,
+guild_raid_youtube_click,link_text,869,827,42,95.17,
+guild_raid_youtube_click,link_url,869,869,0,100,
+guild_raid_youtube_click,page_path,869,869,0,100,
+guild_raid_youtube_click,page_title,869,869,0,100,

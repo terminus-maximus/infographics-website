@@ -40,7 +40,7 @@ raw AS (
     )) AS session_campaign,
     event_params
   FROM `terminus-maximus-analytics.analytics_540087863.events_*`
-  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260729'
+  WHERE _TABLE_SUFFIX BETWEEN '20260714' AND '20260804'
 ),
 events AS (
   SELECT
@@ -98,7 +98,7 @@ date_rows AS (
     COUNT(DISTINCT IF(PARSE_DATE('%Y%m%d', e.event_date) = calendar_date, e.user_pseudo_id, NULL)) AS pseudo_users,
     COUNTIF(PARSE_DATE('%Y%m%d', e.event_date) = calendar_date AND e.event_name = 'page_view') AS page_views,
     COUNTIF(PARSE_DATE('%Y%m%d', e.event_date) = calendar_date AND e.event_name = 'session_start') AS raw_session_start_events
-  FROM UNNEST(GENERATE_DATE_ARRAY(DATE '2026-07-14', DATE '2026-07-29')) AS calendar_date
+  FROM UNNEST(GENERATE_DATE_ARRAY(DATE '2026-07-14', DATE '2026-08-04')) AS calendar_date
   LEFT JOIN events e
     ON PARSE_DATE('%Y%m%d', e.event_date) = calendar_date
   GROUP BY calendar_date
@@ -196,8 +196,8 @@ quality_summary AS (
     'US' AS dataset_location,
     'events_YYYYMMDD' AS raw_table_pattern,
     DATE '2026-07-14' AS available_start_date,
-    DATE '2026-07-29' AS available_end_date,
-    16 AS available_complete_days,
+    DATE '2026-08-04' AS available_end_date,
+    22 AS available_complete_days,
     0 AS missing_dates_within_coverage,
     FALSE AS intraday_table_present,
     COUNT(*) AS total_events,
