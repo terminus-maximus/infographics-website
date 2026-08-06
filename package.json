@@ -9,9 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "analytics:build-replay-dimension": "node analytics/scripts/build-replay-dimension.mjs",
-    "analytics:build-scheduled-query": "node analytics/scripts/build-scheduled-query.mjs"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "^6.4.2",

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# analytics workspaces and local query outputs belong outside the public site repository
+/analytics/

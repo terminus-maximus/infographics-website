@@ -1,4 +1,0 @@
-window_order,window_label,requested_days,available_days,requested_start_date,available_start_date,end_date,is_partial_window,users,sessions,views,engaged_sessions,engagement_rate_percent,total_page_context_engagement_seconds,page_context_engagement_seconds_per_replay_user,new_users,returning_users
-1,7 days (exact),7,7,2026-07-29,2026-07-29,2026-08-04,false,370,1029,3771,783,76.09,41812.81,113.01,179,191
-2,28 days (available 22 of requested 28),28,22,2026-07-08,2026-07-14,2026-08-04,true,750,2293,6443,1615,70.43,88728.56,118.3,544,206
-3,90 days (available 22 of requested 90),90,22,2026-05-07,2026-07-14,2026-08-04,true,750,2293,6443,1615,70.43,88728.56,118.3,544,206
