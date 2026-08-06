@@ -1,7 +1,7 @@
 {
   "id": "indomitus",
   "name": "Indomitus",
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-06",
   "modes": [
     {
       "id": "normal",
@@ -1441,6 +1441,39 @@
               ],
               "timestamp": "0:19",
               "timestampSeconds": 19
+            },
+            {
+              "videoId": "xcNgrR0emg0",
+              "roster": [
+                {
+                  "characterId": "ultraTigurius",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptMorvenn",
+                  "rankId": "Iron3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:04",
+              "timestampSeconds": 64,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific stage, Victory, roster, and rank review"
             }
           ]
         },
@@ -5289,6 +5322,11 @@
       "title": "Indomitus 75 3 stars (Anuphet) with initial units (Varro, Vindicta, Certus, Bellator, Incisus)",
       "creator": "一Emperor一",
       "url": "https://www.youtube.com/watch?v=tnNkZgI0DU0"
+    },
+    "xcNgrR0emg0": {
+      "title": "Warhammer 40,000: Tacticus - Gameplay Part 25 - Indomitus elite unlocked (Indomitus elite 1~4)",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=xcNgrR0emg0"
     }
   }
 }

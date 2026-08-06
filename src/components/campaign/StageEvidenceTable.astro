@@ -56,58 +56,43 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   <h2 id="campaign-filter-heading">Campaign Replay Filters</h2>
   <slot name="filter-introduction" />
   <form class="filters" data-campaign-filters>
-    {requiredCharacters.map((character) => (
-      <div class="filter-field menu-field" data-menu-field>
-        <span class="filter-label" title={`${character.shortName} maximum rank`}>
-          <img class="filter-label-icon" src={character.portrait} alt="" width="28" height="28" loading="lazy" />
-          <span class="visually-hidden">{character.shortName}</span>
-          <span>Max rank</span>
+    <div class="filter-field menu-field" data-menu-field>
+      <span class="filter-label">Difficulty</span>
+      <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="difficulty">
+        <span class="toggle-content">
+          <span data-toggle-text>All</span>
         </span>
-        <button
-          class="filter-toggle"
-          type="button"
-          aria-label={`${character.shortName} maximum rank`}
-          aria-expanded="false"
-          data-menu-toggle
-          data-rank-toggle={character.id}
-          data-max-sort=""
-        >
-          <span class="toggle-content">
-            <img class="toggle-icon" data-toggle-icon src="" alt="" width="26" height="26" hidden />
-            <span data-toggle-text>Any rank</span>
-          </span>
-          <span class="chevron" aria-hidden="true">▾</span>
-        </button>
-        <div class="filter-menu rank-menu" data-filter-menu hidden>
-          <button
-            class="filter-option"
-            type="button"
-            data-rank-option
-            data-rank-id=""
-            data-rank-sort=""
-            data-rank-label="Any rank"
-            data-rank-badge=""
-          >
-            <span class="empty-option-icon" aria-hidden="true">—</span>
-            <span>Any rank</span>
-          </button>
-          {rankOptions.map((rank) => (
-            <button
-              class="filter-option"
-              type="button"
-              data-rank-option
-              data-rank-id={rank.id}
-              data-rank-sort={rank.sort}
-              data-rank-label={rank.name}
-              data-rank-badge={rank.badge}
-            >
-              <img src={rank.badge} alt="" width="28" height="28" loading="lazy" />
-              <span>{rank.name}</span>
-            </button>
-          ))}
-        </div>
+        <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="filter-menu multi-menu" data-filter-menu hidden>
+        {modes.map((mode) => (
+          <label class="multi-option difficulty-option">
+            <input type="checkbox" name="difficulty" value={mode.id} data-multi-checkbox="difficulty" checked />
+            <span>{mode.name}</span>
+          </label>
+        ))}
       </div>
-    ))}
+    </div>
+
+    <div class="filter-field menu-field" data-menu-field>
+      <span class="filter-label">Stage</span>
+      <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="stage">
+        <span class="toggle-content">
+          <span data-toggle-text>All stages</span>
+        </span>
+        <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="filter-menu multi-menu" data-filter-menu hidden>
+        {modes.flatMap((mode) =>
+          mode.stages.map((stage) => (
+            <label class="multi-option stage-option">
+              <input type="checkbox" name="stage" value={`${mode.id}:${stage.number}`} data-multi-checkbox="stage" />
+              <span>{mode.name} {stage.number}</span>
+            </label>
+          )),
+        )}
+      </div>
+    </div>
 
     <div class="filter-field menu-field" data-menu-field>
       <span class="filter-label">Supporting Heroes</span>
@@ -144,6 +129,59 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
         <span class="active-filter-count" data-more-filter-count hidden></span>
       </summary>
       <div class="more-filter-panel">
+        {requiredCharacters.map((character) => (
+          <div class="filter-field menu-field" data-menu-field>
+            <span class="filter-label" title={`${character.shortName} maximum rank`}>
+              <img class="filter-label-icon" src={character.portrait} alt="" width="28" height="28" loading="lazy" />
+              <span class="filter-label-name">{character.shortName}</span>
+              <span>Max rank</span>
+            </span>
+            <button
+              class="filter-toggle"
+              type="button"
+              aria-label={`${character.shortName} maximum rank`}
+              aria-expanded="false"
+              data-menu-toggle
+              data-rank-toggle={character.id}
+              data-max-sort=""
+            >
+              <span class="toggle-content">
+                <img class="toggle-icon" data-toggle-icon src="" alt="" width="26" height="26" hidden />
+                <span data-toggle-text>Any rank</span>
+              </span>
+              <span class="chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="filter-menu rank-menu" data-filter-menu hidden>
+              <button
+                class="filter-option"
+                type="button"
+                data-rank-option
+                data-rank-id=""
+                data-rank-sort=""
+                data-rank-label="Any rank"
+                data-rank-badge=""
+              >
+                <span class="empty-option-icon" aria-hidden="true">—</span>
+                <span>Any rank</span>
+              </button>
+              {rankOptions.map((rank) => (
+                <button
+                  class="filter-option"
+                  type="button"
+                  data-rank-option
+                  data-rank-id={rank.id}
+                  data-rank-sort={rank.sort}
+                  data-rank-label={rank.name}
+                  data-rank-badge={rank.badge}
+                >
+                  <img src={rank.badge} alt="" width="28" height="28" loading="lazy" />
+                  <span>{rank.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+
         <div class="filter-field menu-field" data-menu-field>
           <span class="filter-label">Excluded Heroes</span>
           <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-hero-toggle="excluded">
@@ -173,26 +211,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
           </div>
         </div>
 
-        <div class="filter-field menu-field" data-menu-field>
-          <span class="filter-label">Stage</span>
-          <button class="filter-toggle" type="button" aria-expanded="false" data-menu-toggle data-multi-toggle="stage">
-            <span class="toggle-content">
-              <span data-toggle-text>All stages</span>
-            </span>
-            <span class="chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="filter-menu multi-menu" data-filter-menu hidden>
-            {modes.flatMap((mode) =>
-              mode.stages.map((stage) => (
-                <label class="multi-option stage-option">
-                  <input type="checkbox" name="stage" value={`${mode.id}:${stage.number}`} data-multi-checkbox="stage" />
-                  <span>{mode.name} {stage.number}</span>
-                </label>
-              )),
-            )}
-          </div>
-        </div>
-
         <div class="filter-field menu-field creator-filter" data-menu-field>
           <span class="filter-label">
             <img class="filter-label-icon youtube-icon" src="/images/replay-library/YTLogo.webp" alt="" width="28" height="28" loading="lazy" />
@@ -218,24 +236,8 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       </div>
     </details>
 
-    <button class="clear-filters" type="reset">Clear filters</button>
+    <button class="clear-filters" type="reset">Clear Filters</button>
   </form>
-</section>
-
-<section class="mode-filter-section" aria-labelledby="campaign-mode-filter-heading">
-  <h2 id="campaign-mode-filter-heading">Mode</h2>
-  <div class="mode-filter-buttons" aria-label="Campaign modes">
-    {modes.map((mode) => (
-      <button
-        class="mode-filter-button"
-        type="button"
-        aria-pressed="true"
-        data-mode-filter={mode.id}
-      >
-        {mode.name}
-      </button>
-    ))}
-  </div>
 </section>
 
 <section class="strategies-section" id="campaign-replays" aria-labelledby="campaign-strategies-heading" data-campaign-evidence>
@@ -382,7 +384,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   const rankToggles = Array.from(document.querySelectorAll("[data-rank-toggle]"));
   const heroToggles = Array.from(document.querySelectorAll("[data-hero-toggle]"));
   const multiToggles = Array.from(document.querySelectorAll("[data-multi-toggle]"));
-  const modeFilterButtons = Array.from(document.querySelectorAll("[data-mode-filter]"));
   const statisticsSection = document.querySelector("[data-campaign-statistics]");
   const statisticsGrid = document.querySelector("[data-statistics-grid]");
   const statisticsEmpty = document.querySelector("[data-statistics-empty]");
@@ -441,25 +442,37 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     const text = toggle.querySelector("[data-toggle-text]");
     if (!text) return;
 
+    if (filterName === "difficulty") {
+      const selectedDifficulties = getSelectedMultiValues("difficulty");
+      text.textContent = selectedDifficulties.length === 2
+        ? "All"
+        : selectedDifficulties.length === 1
+          ? selectedDifficulties[0].replace(/^./, (letter) => letter.toUpperCase())
+          : "No difficulties";
+      return;
+    }
+
     if (!selectedCount) {
       text.textContent = {
-        mode: "All modes",
         stage: "All stages",
         creator: "All creators",
       }[filterName] || "All";
       return;
     }
 
-    const noun = filterName === "mode" ? "mode" : filterName === "stage" ? "stage" : "creator";
+    const noun = filterName === "stage" ? "stage" : "creator";
     text.textContent = `${selectedCount} ${noun}${selectedCount === 1 ? "" : "s"} selected`;
   };
 
   const updateMoreFilterCount = () => {
     if (!(filterForm instanceof HTMLFormElement)) return;
     const excludedHeroCount = filterForm.querySelectorAll('[data-hero-checkbox="excluded"]:checked').length;
+    const maximumRankCount = rankToggles.filter(
+      (toggle) => toggle instanceof HTMLButtonElement && Boolean(toggle.dataset.maxSort),
+    ).length;
     const count =
+      maximumRankCount +
       excludedHeroCount +
-      getSelectedMultiValues("stage").length +
       getSelectedMultiValues("creator").length;
     const badge = filterForm.querySelector("[data-more-filter-count]");
     if (badge instanceof HTMLElement) {
@@ -562,11 +575,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
   const applyFilters = () => {
     if (!(filterForm instanceof HTMLFormElement)) return;
-    const selectedModes = modeFilterButtons.flatMap((button) =>
-      button instanceof HTMLButtonElement && button.getAttribute("aria-pressed") === "true"
-        ? [button.dataset.modeFilter || ""]
-        : [],
-    );
+    const selectedDifficulties = getSelectedMultiValues("difficulty");
     const selectedStages = getSelectedMultiValues("stage");
     const selectedCreators = getSelectedMultiValues("creator");
     const supportingHeroes = Array.from(filterForm.querySelectorAll('[data-hero-checkbox="supporting"]:checked'))
@@ -579,7 +588,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
 
     stageRows.forEach((stageRow) => {
       if (!(stageRow instanceof HTMLElement)) return;
-      const modeMatches = selectedModes.includes(stageRow.dataset.mode || "");
+      const difficultyMatches = selectedDifficulties.includes(stageRow.dataset.mode || "");
       const stageMatches = !selectedStages.length || selectedStages.includes(stageRow.dataset.stage || "");
       const evidenceCards = Array.from(stageRow.querySelectorAll("[data-evidence-card]"));
       const visibleSupportingCharacterCounts = new Map<string, number>();
@@ -601,9 +610,9 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
         });
         const supportingCharacters = (card.dataset.supportingCharacters || "").split("|").filter(Boolean);
         const supportingMatch =
-          !supportingHeroes.length || supportingHeroes.some((characterId) => supportingCharacters.includes(characterId));
+          !supportingHeroes.length || supportingHeroes.every((characterId) => supportingCharacters.includes(characterId));
         const excludedMatch = excludedHeroes.every((characterId) => !supportingCharacters.includes(characterId));
-        const matches = modeMatches && stageMatches && creatorMatches && maxRanksMatch && supportingMatch && excludedMatch;
+        const matches = difficultyMatches && stageMatches && creatorMatches && maxRanksMatch && supportingMatch && excludedMatch;
         card.hidden = !matches;
         if (matches) {
           visibleEvidenceCount += 1;
@@ -680,15 +689,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     });
   });
 
-  modeFilterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (!(button instanceof HTMLButtonElement)) return;
-      const isSelected = button.getAttribute("aria-pressed") === "true";
-      button.setAttribute("aria-pressed", String(!isSelected));
-      applyFilters();
-    });
-  });
-
   filterForm?.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
     const option = event.target.closest("[data-rank-option]");
@@ -709,6 +709,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       candidate.setAttribute("aria-selected", String(candidate === option));
     });
     closeMenu(toggle);
+    updateMoreFilterCount();
     applyFilters();
   });
 
@@ -763,8 +764,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     const targetStageRow = stageRows.find(
       (stageRow) => stageRow instanceof HTMLElement && stageRow.dataset.stage === stageKey,
     );
-    const requestedModeExists = modeFilterButtons.some(
-      (button) => button instanceof HTMLButtonElement && button.dataset.modeFilter === modeId,
+    const requestedModeExists = Array.from(
+      filterForm.querySelectorAll('[data-multi-checkbox="difficulty"]'),
+    ).some(
+      (checkbox) => checkbox instanceof HTMLInputElement && checkbox.value === modeId,
     );
     if (!(targetStageRow instanceof HTMLDetailsElement) || !requestedModeExists) return;
 
@@ -786,16 +789,15 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       filterForm.querySelectorAll('[data-multi-checkbox="stage"]'),
     ).find((input) => input instanceof HTMLInputElement && input.value === stageKey);
     if (targetStageCheckbox instanceof HTMLInputElement) targetStageCheckbox.checked = true;
-    modeFilterButtons.forEach((button) => {
-      if (button instanceof HTMLButtonElement) {
-        button.setAttribute("aria-pressed", String(button.dataset.modeFilter === modeId));
-      }
+    filterForm.querySelectorAll('[data-multi-checkbox="difficulty"]').forEach((checkbox) => {
+      if (checkbox instanceof HTMLInputElement) checkbox.checked = checkbox.value === modeId;
     });
     stageRows.forEach((stageRow) => {
       if (stageRow instanceof HTMLDetailsElement) stageRow.open = false;
     });
     updateHeroToggle("supporting");
     updateHeroToggle("excluded");
+    updateMultiToggle("difficulty");
     updateMultiToggle("stage");
     updateMultiToggle("creator");
     closeAllMenus();
@@ -850,11 +852,9 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       });
       updateHeroToggle("supporting");
       updateHeroToggle("excluded");
+      updateMultiToggle("difficulty");
       updateMultiToggle("stage");
       updateMultiToggle("creator");
-      modeFilterButtons.forEach((button) => {
-        button.setAttribute("aria-pressed", "true");
-      });
       stageRows.forEach((stageRow) => {
         if (stageRow instanceof HTMLDetailsElement) stageRow.open = false;
       });
@@ -893,7 +893,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   }
 
   .filter-section,
-  .mode-filter-section,
   .strategies-section {
     margin-bottom: 3rem;
   }
@@ -908,7 +907,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   .filters {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(160px, 1.1fr) repeat(3, minmax(135px, 1fr)) minmax(135px, 0.8fr) auto;
+    grid-template-columns: minmax(145px, 0.85fr) minmax(155px, 1fr) minmax(180px, 1.15fr) minmax(140px, 0.8fr) auto;
     align-items: end;
     gap: 0.9rem;
     width: 100%;
@@ -946,6 +945,13 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     border-radius: 50%;
     background: #181818;
     object-fit: cover;
+  }
+
+  .filter-label-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .visually-hidden {
@@ -1095,6 +1101,10 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     grid-template-columns: auto 1fr;
   }
 
+  .difficulty-option {
+    grid-template-columns: auto 1fr;
+  }
+
   .hero-option:hover,
   .hero-option:focus-within,
   .multi-option:hover,
@@ -1182,7 +1192,7 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     right: 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(44rem, calc(100vw - 2rem));
+    width: min(48rem, calc(100vw - 2rem));
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -1204,10 +1214,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
     padding-block: 0.35rem;
   }
 
-  .more-filter-panel .filter-label {
-    white-space: nowrap;
-  }
-
   .hero-option > span,
   .multi-option > span {
     min-width: 0;
@@ -1218,40 +1224,6 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
   .clear-filters {
     align-self: end;
     white-space: nowrap;
-  }
-
-  .mode-filter-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .mode-filter-button {
-    min-height: 5rem;
-    padding: 1rem;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background: #121212;
-    color: #f5f5f5;
-    cursor: pointer;
-    font: inherit;
-    font-size: 1.05rem;
-    font-weight: 800;
-    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-
-  .mode-filter-button:hover,
-  .mode-filter-button:focus-visible {
-    border-color: #f59e0b;
-    transform: translateY(-2px);
-    outline: none;
-  }
-
-  .mode-filter-button[aria-pressed="true"] {
-    border-color: #d4af37;
-    background: #121212;
-    color: #f5f5f5;
-    box-shadow: 0 0 0 1px rgb(212 175 55 / 28%);
   }
 
   select:focus-visible,
@@ -1621,12 +1593,5 @@ const getTimestampedVideoUrl = (url: string, timestampSeconds?: number) => {
       padding: 0.5rem 0.35rem;
     }
 
-    .mode-filter-buttons {
-      gap: 0.75rem;
-    }
-
-    .mode-filter-button {
-      min-height: 4.25rem;
-    }
   }
 </style>

@@ -1,7 +1,7 @@
 {
   "id": "indomitus_mirror",
   "name": "Indomitus Mirror",
-  "updatedAt": "2026-08-05",
+  "updatedAt": "2026-08-06",
   "modes": [
     {
       "id": "normal",
@@ -1260,6 +1260,29 @@
               "timestamp": "10:07",
               "timestampSeconds": 607,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "y2ZhvPFgJgY",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -1326,6 +1349,29 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "y2ZhvPFgJgY",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:37",
+              "timestampSeconds": 157,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -1425,6 +1471,29 @@
               "timestamp": "13:57",
               "timestampSeconds": 837,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review; timestamp unverified"
+            },
+            {
+              "videoId": "DaiFZaTmK8Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:05",
+              "timestampSeconds": 5,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -1570,6 +1639,29 @@
               "timestamp": "0:27",
               "timestampSeconds": 27,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "DaiFZaTmK8Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:42",
+              "timestampSeconds": 102,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -1692,6 +1784,29 @@
               "timestamp": "7:55",
               "timestampSeconds": 475,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "DaiFZaTmK8Y",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:37",
+              "timestampSeconds": 277,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -1992,6 +2107,29 @@
               "timestamp": "11:21",
               "timestampSeconds": 681,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "f-0iAkaMnnw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:04",
+              "timestampSeconds": 4,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         },
@@ -2193,6 +2331,52 @@
               "timestamp": "0:06",
               "timestampSeconds": 6,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "f-0iAkaMnnw",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:00",
+              "timestampSeconds": 300,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
+            },
+            {
+              "videoId": "Tcz4Gl5mNVs",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:15",
+              "timestampSeconds": 75,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         }
@@ -4265,6 +4449,85 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.6; source-specific Victory roster review"
+            },
+            {
+              "videoId": "PKTfFmh0Fgs",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroPlasmancer",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
+            },
+            {
+              "videoId": "hVD6PY8Mxk8",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
+            },
+            {
+              "videoId": "zvu7pQViLKE",
+              "roster": [
+                {
+                  "characterId": "necroWarden",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroDestroyer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroSpyder",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "necroOverlord",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.7 hydration; source-specific Victory roster review"
             }
           ]
         }
@@ -4651,6 +4914,41 @@
       "title": "WH40K Tacticus - Indomitus Mirror: Elite 40 - 3 medal clear",
       "creator": "Eyes on Eternity Gaming",
       "url": "https://www.youtube.com/watch?v=jsNqOGqWgmE"
+    },
+    "DaiFZaTmK8Y": {
+      "title": "The Penultimate Indomitus Mirror? | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=DaiFZaTmK8Y"
+    },
+    "f-0iAkaMnnw": {
+      "title": "The End Of Indomitus Mirror! | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=f-0iAkaMnnw"
+    },
+    "y2ZhvPFgJgY": {
+      "title": "Indomitus Mirror- The Grind Continues | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=y2ZhvPFgJgY"
+    },
+    "Tcz4Gl5mNVs": {
+      "title": "Warhammer 40,000: Tacticus - Gameplay Part 58 - Marneus Calgar boss fight (Indomitus Mirror 75)",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=Tcz4Gl5mNVs"
+    },
+    "PKTfFmh0Fgs": {
+      "title": "Indomitus Mirror Eliete 40",
+      "creator": "elsmurf01",
+      "url": "https://www.youtube.com/watch?v=PKTfFmh0Fgs"
+    },
+    "hVD6PY8Mxk8": {
+      "title": "Indom Mirror Elite 40 Update: 3 Medal: Viewer Request: Warhammer 40k Tacticus",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=hVD6PY8Mxk8"
+    },
+    "zvu7pQViLKE": {
+      "title": "WH40k Tacticus - Indom Mirror Elite 40 3*",
+      "creator": "KaiserArctan - Tacticus",
+      "url": "https://www.youtube.com/watch?v=zvu7pQViLKE"
     }
   }
 }
