@@ -1,58 +1,16 @@
-import requiredRecommendationsSource from "./required-recs.json";
 import type { HeroGuide } from "./indomitusGuideContent";
+import { getRequiredRecommendationsForCampaign } from "./requiredRecommendations";
 
-type RequiredRecommendationRow = {
-  Campaign: string;
-  URL: string;
-  Reference: string;
-  terminus_name: string;
-  Rank_Normal: string;
-  Rank_Elite: string;
-  Active_Normal: string;
-  Active_Elite: string;
-  Passive_Normal: string;
-  Passive_Elite: string;
-};
-
-const campaignUrl = "/campaigns/indomitus-mirror";
-const recommendationRows = (requiredRecommendationsSource as RequiredRecommendationRow[])
-  .filter((row) => row.URL === campaignUrl)
-  .sort((left, right) => left.Reference.localeCompare(right.Reference));
-
-if (recommendationRows.length !== 3) {
-  throw new Error(`required-recs.json must contain exactly three recommendations for ${campaignUrl}.`);
-}
-
-const characterByTerminusName: Record<string, string> = {
-  Makho: "necroWarden",
-  Imo: "necroDestroyer",
-  Aleph: "necroSpyder",
-};
-
-const rankId = (rank: string) => rank.replaceAll(" ", "");
+const recommendationRows = getRequiredRecommendationsForCampaign("/campaigns/indomitus-mirror");
 const recommendationByName = Object.fromEntries(
-  recommendationRows.map((row) => [row.terminus_name, row]),
-) as Record<string, RequiredRecommendationRow>;
+  recommendationRows.map((recommendation) => [recommendation.terminusName, recommendation]),
+);
 
-for (const terminusName of Object.keys(characterByTerminusName)) {
-  if (!recommendationByName[terminusName]) {
-    throw new Error(`required-recs.json is missing ${terminusName} for ${campaignUrl}.`);
-  }
-}
-
-const investmentRows = recommendationRows.map((row) => ({
-  characterId: characterByTerminusName[row.terminus_name],
-  abilityIconName: row.terminus_name,
-  normal: {
-    rankId: rankId(row.Rank_Normal),
-    active: row.Active_Normal,
-    passive: row.Passive_Normal,
-  },
-  elite: {
-    rankId: rankId(row.Rank_Elite),
-    active: row.Active_Elite,
-    passive: row.Passive_Elite,
-  },
+const investmentRows = recommendationRows.map((recommendation) => ({
+  characterId: recommendation.characterId,
+  abilityIconName: recommendation.terminusName,
+  normal: recommendation.normal,
+  elite: recommendation.elite,
 }));
 
 export const overviewContent = {
@@ -108,20 +66,20 @@ export const overviewContent = {
 };
 
 const targetsFor = (terminusName: string) => {
-  const row = recommendationByName[terminusName];
+  const recommendation = recommendationByName[terminusName];
   return {
-    rankTargets: { normal: rankId(row.Rank_Normal), elite: rankId(row.Rank_Elite) },
+    characterId: recommendation.characterId,
+    rankTargets: { normal: recommendation.normal.rankId, elite: recommendation.elite.rankId },
     abilityTargets: {
       iconName: terminusName,
-      active: { normal: row.Active_Normal, elite: row.Active_Elite },
-      passive: { normal: row.Passive_Normal, elite: row.Passive_Elite },
+      active: { normal: recommendation.normal.active, elite: recommendation.elite.active },
+      passive: { normal: recommendation.normal.passive, elite: recommendation.elite.passive },
     },
   };
 };
 
 export const requiredHeroContent: HeroGuide[] = [
   {
-    characterId: "necroWarden",
     heading: "Makhotep",
     role: "Repair support, movement utility, ranged chip damage, and summon tempo.",
     ...targetsFor("Makho"),
@@ -133,7 +91,6 @@ export const requiredHeroContent: HeroGuide[] = [
     callout: "Support the formation and summons; do not try to turn Makhotep into the primary carry.",
   },
   {
-    characterId: "necroDestroyer",
     heading: "Imospekh",
     role: "Ranged area denial, Overwatch control, and multi-target pressure.",
     ...targetsFor("Imo"),
@@ -145,7 +102,6 @@ export const requiredHeroContent: HeroGuide[] = [
     callout: "Claim safe High Ground first, build the lane, then let the enemy enter it.",
   },
   {
-    characterId: "necroSpyder",
     heading: "Aleph-Null",
     role: "Primary carry, Mechanical healer, durable anchor, and Scarab summoner.",
     ...targetsFor("Aleph"),

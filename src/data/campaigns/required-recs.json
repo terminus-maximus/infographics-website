@@ -31,7 +31,7 @@
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
     "Active_Normal": "26+",
-    "Active_Elite": "8+",
+    "Active_Elite": "35+",
     "Passive_Normal": "17+",
     "Passive_Elite": "26+"
   },
@@ -68,6 +68,42 @@
     "Rank_Elite": "Gold 2",
     "Active_Normal": "26",
     "Active_Elite": "35+",
+    "Passive_Normal": "17+",
+    "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Fall of Cadia",
+    "URL": "/campaigns/fall-of-cadia",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Angrax",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": "1",
+    "Active_Elite": "1",
+    "Passive_Normal": "8+",
+    "Passive_Elite": "17+"
+  },
+  {
+    "Campaign": "Fall of Cadia",
+    "URL": "/campaigns/fall-of-cadia",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Archi",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": "26",
+    "Active_Elite": "35",
+    "Passive_Normal": "8+",
+    "Passive_Elite": "17+"
+  },
+  {
+    "Campaign": "Fall of Cadia",
+    "URL": "/campaigns/fall-of-cadia",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Haarken",
+    "Rank_Normal": "Bronze 3",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "1",
+    "Active_Elite": "1",
     "Passive_Normal": "17+",
     "Passive_Elite": "26+"
   }

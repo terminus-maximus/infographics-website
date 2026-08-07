@@ -9,6 +9,7 @@ import characterRankEnergySource from "../data/campaigns/character_rank_energy.j
 import rankSource from "../data/campaigns/ranks.json";
 import replaySource from "../data/campaigns/indomitus_replays.json";
 import indomitusMirrorReplaySource from "../data/campaigns/indomitus-mirror.json";
+import fallOfCadiaReplaySource from "../data/campaigns/fall-of-cadia.json";
 
 declare const process: { cwd: () => string };
 
@@ -373,6 +374,7 @@ export function validateCampaignGuide(source: unknown): CampaignGuideData {
 
 export const indomitusCampaign = validateCampaignGuide(replaySource);
 export const indomitusMirrorCampaign = validateCampaignGuide(indomitusMirrorReplaySource);
+export const fallOfCadiaCampaign = validateCampaignGuide(fallOfCadiaReplaySource);
 
 const allEvidence = indomitusCampaign.modes.flatMap((mode) => mode.stages.flatMap((stage) => stage.evidence));
 export const campaignAudit = {

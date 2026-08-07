@@ -86,6 +86,16 @@ export const graphics: Graphic[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/indomitus-mirror")
     },
     {
+      title: "Fall of Cadia Campaign Guide",
+      href: "/campaigns/fall-of-cadia/",
+      description: "Chaos teams, investment targets, difficult stages, and replay evidence for Fall of Cadia.",
+      image: "/images/fall-of-cadia.png",
+      thumbnail: "/images/thumbnails/fall-of-cadia-thumb.png",
+      badge: "New",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

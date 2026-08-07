@@ -1,3 +1,30 @@
+import { getRequiredRecommendationsForCampaign } from "./requiredRecommendations";
+
+const recommendationRows = getRequiredRecommendationsForCampaign("/campaigns/indomitus");
+const recommendationByName = Object.fromEntries(
+  recommendationRows.map((recommendation) => [recommendation.terminusName, recommendation]),
+);
+
+const investmentRows = recommendationRows.map((recommendation) => ({
+  characterId: recommendation.characterId,
+  abilityIconName: recommendation.terminusName,
+  normal: recommendation.normal,
+  elite: recommendation.elite,
+}));
+
+const targetsFor = (terminusName: string) => {
+  const recommendation = recommendationByName[terminusName];
+  return {
+    characterId: recommendation.characterId,
+    rankTargets: { normal: recommendation.normal.rankId, elite: recommendation.elite.rankId },
+    abilityTargets: {
+      iconName: terminusName,
+      active: { normal: recommendation.normal.active, elite: recommendation.elite.active },
+      passive: { normal: recommendation.normal.passive, elite: recommendation.elite.passive },
+    },
+  };
+};
+
 export const overviewContent = {
   timing: {
     paragraphs: [
@@ -26,16 +53,20 @@ export const overviewContent = {
     ],
     callout: "Clear first. Medal later. Invest when the next unlock is worth it.",
   },
-  normalInvestment: [
-    { characterId: "ultraTigurius", rankId: "Bronze1", abilityIconName: "Tiggy", active: "17+", passive: "8+" },
-    { characterId: "ultraEliminatorSgt", rankId: "Bronze1", abilityIconName: "Certus", active: "8+", passive: "1" },
-    { characterId: "ultraInceptorSgt", rankId: "Silver1", abilityIconName: "Bella", active: "26+", passive: "17+" },
-  ],
-  eliteInvestment: [
-    { characterId: "ultraTigurius", rankId: "Silver1", abilityIconName: "Tiggy", active: "26+", passive: "17+" },
-    { characterId: "ultraEliminatorSgt", rankId: "Silver1", abilityIconName: "Certus", active: "17+", passive: "8+" },
-    { characterId: "ultraInceptorSgt", rankId: "Gold1", abilityIconName: "Bella", active: "35+", passive: "26+" },
-  ],
+  normalInvestment: investmentRows.map((row) => ({
+    characterId: row.characterId,
+    rankId: row.normal.rankId,
+    abilityIconName: row.abilityIconName,
+    active: row.normal.active,
+    passive: row.normal.passive,
+  })),
+  eliteInvestment: investmentRows.map((row) => ({
+    characterId: row.characterId,
+    rankId: row.elite.rankId,
+    abilityIconName: row.abilityIconName,
+    active: row.elite.active,
+    passive: row.elite.passive,
+  })),
   strategyTips: [
     ["Build Around Bellator", "Bellator’s active, Death from Above, is the campaign’s most important ability. It summons one Inceptor for each round that has begun, so waiting can create a larger force—but delaying is not always correct when Scarabs, Deathmarks, or a backline breach require an immediate answer."],
     ["Protect Varro and Certus", "In late Elite, Varro and Certus are often survival objectives rather than frontline damage dealers. Keep them behind Bellator, durable supports, summons, terrain, or Isabella’s healing formation. Do not expose Certus for a marginally better shot."],
@@ -64,11 +95,9 @@ export type HeroGuide = {
 
 export const requiredHeroContent: HeroGuide[] = [
   {
-    characterId: "ultraTigurius",
     heading: "Varro Tigurius",
     role: "Psychic area damage and clustered-enemy removal.",
-    rankTargets: { normal: "Bronze1", elite: "Silver1" },
-    abilityTargets: { iconName: "Tiggy", active: { normal: "17+", elite: "26+" }, passive: { normal: "8+", elite: "17+" } },
+    ...targetsFor("Tiggy"),
     paragraphs: [
       "Varro’s active deals Psychic damage to a target and adjacent enemies, making it one of the starter team’s best answers to clustered Necron Warriors and other armored targets. It is especially useful when several enemies can be damaged together or when lower-pierce attacks are struggling to finish a target.",
       "For Normal, Bronze I is a comfortable target rather than a requirement. For Elite, Silver I provides a reproducible survival baseline without assuming Isabella or a much stronger Diamond carry.",
@@ -77,11 +106,9 @@ export const requiredHeroContent: HeroGuide[] = [
     callout: "Ability priority: Bellator active first, Varro active second.",
   },
   {
-    characterId: "ultraEliminatorSgt",
     heading: "Certus",
     role: "Long-range damage, tactical displacement, and backline support.",
-    rankTargets: { normal: "Bronze1", elite: "Silver1" },
-    abilityTargets: { iconName: "Certus", active: { normal: "8+", elite: "17+" }, passive: { normal: "1", elite: "8+" } },
+    ...targetsFor("Certus"),
     paragraphs: [
       "Certus contributes long-range Heavy Round damage and can push a target one hex with his active. The displacement can break formations, alter movement, or move an enemy into Varro’s or Vindicta’s area damage.",
       "His abilities are not the main campaign investment. Certus usually benefits more from rank, rarity, and defensive equipment than from heavy badge spending. His passive can remain low unless badges are abundant and other priorities are already covered.",
@@ -90,11 +117,9 @@ export const requiredHeroContent: HeroGuide[] = [
     callout: "Build Certus to survive—not to carry.",
   },
   {
-    characterId: "ultraInceptorSgt",
     heading: "Bellator",
     role: "Primary carry, frontline tank, multi-hit attacker, and summon engine.",
-    rankTargets: { normal: "Silver1", elite: "Gold1" },
-    abilityTargets: { iconName: "Bella", active: { normal: "26+", elite: "35+" }, passive: { normal: "17+", elite: "26+" } },
+    ...targetsFor("Bella"),
     paragraphs: [
       "Bellator is the campaign MVP. His active summons one Inceptor for each round that has begun, giving the team damage, extra bodies, route blocking, and safer targets for enemy attacks.",
       "Bellator and his Inceptors are also the starter roster’s default answer to Scarab Swarms because their high hit counts can remove a full swarm before it multiplies. On restricted three-character stages, the summoned Inceptors often provide the frontline that Varro and Certus cannot.",

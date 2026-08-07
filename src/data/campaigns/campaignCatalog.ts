@@ -28,3 +28,14 @@ export const indomitusMirrorPage = {
   featuredWebImage: "/images/web/indomitus-mirror.webp",
   featuredImageAlt: "Tacticus Indomitus Mirror Campaign Guide infographic",
 };
+
+export const fallOfCadiaPage = {
+  title: "Tacticus Fall of Cadia Campaign Guide",
+  subtitle:
+    "Beat every Fall of Cadia Normal and Elite stage with recommended Chaos teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Fall of Cadia campaign guide with Normal and Elite teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/fall-of-cadia.png",
+  featuredWebImage: "/images/web/fall-of-cadia.webp",
+  featuredImageAlt: "Tacticus Fall of Cadia Campaign Guide infographic",
+};
