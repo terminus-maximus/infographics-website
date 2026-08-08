@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 
 const getTeamIcon = (team: string) => teamIconMap[team] || team;
-const tierSortRank = { M2: 0, M1: 1, L5: 2, L4: 3, L3: 4, L2: 5, L1: 6 };
+const tierSortRank = { M3: 0, M2: 1, M1: 2, L5: 3, L4: 4, L3: 5, L2: 6, L1: 7 };
 const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damage) : replays;
 ---
 

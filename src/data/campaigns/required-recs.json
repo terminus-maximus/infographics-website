@@ -106,5 +106,41 @@
     "Active_Elite": "1",
     "Passive_Normal": "17+",
     "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Kut",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": null,
+    "Active_Elite": null,
+    "Passive_Normal": null,
+    "Passive_Elite": null
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Sibyll",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": null,
+    "Active_Elite": null,
+    "Passive_Normal": null,
+    "Passive_Elite": null
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Thad",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": null,
+    "Active_Elite": null,
+    "Passive_Normal": null,
+    "Passive_Elite": null
   }
 ]
