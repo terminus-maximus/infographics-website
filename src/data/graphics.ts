@@ -96,6 +96,16 @@ export const graphics: Graphic[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia")
     },
     {
+      title: "Fall of Cadia Mirror Guide",
+      href: "/campaigns/fall-of-cadia-mirror/",
+      description: "Imperial teams, investment targets, difficult stages, and replay evidence for Fall of Cadia Mirror.",
+      image: "/images/fall-of-cadia-mirror.png",
+      thumbnail: "/images/thumbnails/fall-of-cadia-mirror-thumb.png",
+      badge: "New",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia-mirror")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

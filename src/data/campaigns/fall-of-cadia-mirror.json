@@ -1,0 +1,2525 @@
+{
+  "id": "fall_of_cadia_mirror",
+  "name": "Fall Of Cadia Mirror",
+  "updatedAt": "2026-08-10",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "n0bPQglLyB8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "EuiR4E-wFWM",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "pPazJiYmsoc",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "24:46",
+              "timestampSeconds": 1486,
+              "notes": "Process 1.72 formal QC; native adjacent frames; all gates source-specific"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "ffB8ff5JtxY",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "RQb0l3rQMpg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "0WwEKKvwdzA",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "Epq4gPjc_2g",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraEliminatorSgt",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:18",
+              "timestampSeconds": 18,
+              "notes": "Process 1.72 formal QC; native adjacent frames; all gates source-specific"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "fcqfcIPyZVQ",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "RQb0l3rQMpg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "RQb0l3rQMpg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "1qCrdvVTHqU",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "RQb0l3rQMpg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "HwFUjMqN63o",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "VN9Xcfgotrk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "RQb0l3rQMpg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "3An66U_tX-0",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "81VVYIJRll0",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "tdKIg7I1aMo",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "Ogu77GxnqWk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "2AuwNmSBS3U",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "6UuXLM15PEI",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "Ogu77GxnqWk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "ZS5h9fwGKbQ",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "sRePX-ZnATM",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "Ogu77GxnqWk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "MN7ob7caQz8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "Ogu77GxnqWk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "faY95HMAxKs",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "MsSq-0kpMeM",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "TYUFs48nLbI",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "ACRsK0IOXqo",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "z_SghQMGqLY",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "XO0MqYcggPA",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "HnapoHbRdD8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "6KnmHPhSKE0",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "rGiSPrQlCRU",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "q6ffPOZqd70",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "mrI4vwkNX7M",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Diamond3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "Tbd2POY0T2k",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "FBruz3Z20c8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "kETAwH4A6VE",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "1pAwHgwk1ds",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "8YQOzgNw5-4",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "q4ftLQ1yltE",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "Aetost9JsL4",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "CHiTbwNuzkc",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "1dk9fqQNZWE",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "w5T4fpq7JaQ",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "bsFDE3ApSM8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "L8SDYPfU0Po",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "B7Fw1zgaQDg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "g-ua6Of-DMk",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "VrFNtImW6_I",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "lhvnzO9JTVI",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "G-ZSVQO_mHs",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "uOxzsK6TL8E",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "qD3je9ZovB4",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "29VCddXbZ98",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraTitus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "TtuwQGOVhk0",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "5jPISS976KM",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Diamond3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "dinBgQ_uNuw",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72 formal QC; exact ranks agree across adjacent native frames; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "3jriIKGmJF4",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "EPNhM8t63Rc",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "FA8Kse0X_Qg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "smnO0_b2GjY",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Diamond3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "9CslJ_FxNYQ",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptRetributor",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72 formal QC; native retry evidence; conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "GwxozC1Tj6Y",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.71; source-specific settled-Victory roster review; conservative unverified start"
+            },
+            {
+              "videoId": "MYPbkkTiePU",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "custoKyrus",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72 formal QC; client-pinned native evidence; direct in-game stage frame; conservative unverified start"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "n0bPQglLyB8": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 60 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=n0bPQglLyB8"
+    },
+    "ffB8ff5JtxY": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 61 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ffB8ff5JtxY"
+    },
+    "fcqfcIPyZVQ": {
+      "title": "Fall Of Cadia Mirror Stage 62 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=fcqfcIPyZVQ"
+    },
+    "RQb0l3rQMpg": {
+      "title": "Fall of Cadia Mirror 61-65 | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=RQb0l3rQMpg"
+    },
+    "1qCrdvVTHqU": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 64 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1qCrdvVTHqU"
+    },
+    "VN9Xcfgotrk": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 65 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=VN9Xcfgotrk"
+    },
+    "3An66U_tX-0": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 66 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=3An66U_tX-0"
+    },
+    "tdKIg7I1aMo": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 67 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=tdKIg7I1aMo"
+    },
+    "6UuXLM15PEI": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 68 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=6UuXLM15PEI"
+    },
+    "sRePX-ZnATM": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 69 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=sRePX-ZnATM"
+    },
+    "MN7ob7caQz8": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 70 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=MN7ob7caQz8"
+    },
+    "MsSq-0kpMeM": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 71 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=MsSq-0kpMeM"
+    },
+    "ACRsK0IOXqo": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 72 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ACRsK0IOXqo"
+    },
+    "XO0MqYcggPA": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 73 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=XO0MqYcggPA"
+    },
+    "6KnmHPhSKE0": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 74 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=6KnmHPhSKE0"
+    },
+    "rGiSPrQlCRU": {
+      "title": "TACTICUS - FALL OF CADIA Mirror: BATTLE 75 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=rGiSPrQlCRU"
+    },
+    "mrI4vwkNX7M": {
+      "title": "First Look: Fall of Cadia Mirror Elite Chapters 1 and 2: Warhammer 40k Tacticus",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=mrI4vwkNX7M"
+    },
+    "5jPISS976KM": {
+      "title": "First Look: Fall of Cadia Mirror Elite Chapter 4: Warhammer 40k Tacticus",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=5jPISS976KM"
+    },
+    "3jriIKGmJF4": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Cadia 36 (3-man) (Practical)",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=3jriIKGmJF4"
+    },
+    "EPNhM8t63Rc": {
+      "title": "Fall of Cadia Mirror Elite 36 3 star with g1 Thad s2 Kut & s1 Sybil",
+      "creator": "Jordan",
+      "url": "https://www.youtube.com/watch?v=EPNhM8t63Rc"
+    },
+    "FA8Kse0X_Qg": {
+      "title": "Tacticus: Fall of Cadia Mirror Elite 36",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=FA8Kse0X_Qg"
+    },
+    "smnO0_b2GjY": {
+      "title": "First Look: Call of Cadia Mirror Elite Chapter 5: Warhammer 40k Tacticus",
+      "creator": "DZG Jayce",
+      "url": "https://www.youtube.com/watch?v=smnO0_b2GjY"
+    },
+    "GwxozC1Tj6Y": {
+      "title": "WH40K Tacticus - Fall of Cadia Mirror Elite 40",
+      "creator": "KaiserArctan - Tacticus",
+      "url": "https://www.youtube.com/watch?v=GwxozC1Tj6Y"
+    },
+    "EuiR4E-wFWM": {
+      "title": "Fall Of Cadia Mirror Stage 60 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=EuiR4E-wFWM"
+    },
+    "0WwEKKvwdzA": {
+      "title": "Fall Of Cadia Mirror Stage 61 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=0WwEKKvwdzA"
+    },
+    "HwFUjMqN63o": {
+      "title": "Fall Of Cadia Mirror Stage 64 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=HwFUjMqN63o"
+    },
+    "81VVYIJRll0": {
+      "title": "Fall Of Cadia Mirror Stage 66 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=81VVYIJRll0"
+    },
+    "Ogu77GxnqWk": {
+      "title": "Fall of Cadia Mirror 65-70 | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=Ogu77GxnqWk"
+    },
+    "2AuwNmSBS3U": {
+      "title": "Fall Of Cadia Mirror Stage 67 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=2AuwNmSBS3U"
+    },
+    "ZS5h9fwGKbQ": {
+      "title": "Fall Of Cadia Mirror Stage 68 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=ZS5h9fwGKbQ"
+    },
+    "faY95HMAxKs": {
+      "title": "Fall Of Cadia Mirror Stage 70 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=faY95HMAxKs"
+    },
+    "TYUFs48nLbI": {
+      "title": "Fall Of Cadia Mirror Stage 71 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=TYUFs48nLbI"
+    },
+    "z_SghQMGqLY": {
+      "title": "Fall Of Cadia Mirror Stage 72 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=z_SghQMGqLY"
+    },
+    "HnapoHbRdD8": {
+      "title": "Fall Of Cadia Mirror Stage 73 | 3 Stars Clear | Imperial Guard VS Chaos | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=HnapoHbRdD8"
+    },
+    "q6ffPOZqd70": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 1 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=q6ffPOZqd70"
+    },
+    "Tbd2POY0T2k": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 3 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Tbd2POY0T2k"
+    },
+    "FBruz3Z20c8": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 4 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=FBruz3Z20c8"
+    },
+    "kETAwH4A6VE": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 7 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=kETAwH4A6VE"
+    },
+    "1pAwHgwk1ds": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 8 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1pAwHgwk1ds"
+    },
+    "8YQOzgNw5-4": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 9 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=8YQOzgNw5-4"
+    },
+    "q4ftLQ1yltE": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 10 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=q4ftLQ1yltE"
+    },
+    "Aetost9JsL4": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 11 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Aetost9JsL4"
+    },
+    "CHiTbwNuzkc": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 14 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=CHiTbwNuzkc"
+    },
+    "1dk9fqQNZWE": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 15 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1dk9fqQNZWE"
+    },
+    "w5T4fpq7JaQ": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 16 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=w5T4fpq7JaQ"
+    },
+    "bsFDE3ApSM8": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 17 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=bsFDE3ApSM8"
+    },
+    "L8SDYPfU0Po": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 18 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=L8SDYPfU0Po"
+    },
+    "B7Fw1zgaQDg": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 19 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=B7Fw1zgaQDg"
+    },
+    "g-ua6Of-DMk": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 20 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=g-ua6Of-DMk"
+    },
+    "VrFNtImW6_I": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 21 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=VrFNtImW6_I"
+    },
+    "lhvnzO9JTVI": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 22 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lhvnzO9JTVI"
+    },
+    "G-ZSVQO_mHs": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 23 - warhammer 40k - Walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=G-ZSVQO_mHs"
+    },
+    "uOxzsK6TL8E": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 25 - warhammer 40k - Walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=uOxzsK6TL8E"
+    },
+    "qD3je9ZovB4": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 26 - warhammer 40k - Walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qD3je9ZovB4"
+    },
+    "29VCddXbZ98": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 27 - warhammer 40k - Walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=29VCddXbZ98"
+    },
+    "TtuwQGOVhk0": {
+      "title": "TACTICUS - Fall of Cadia Elite Mirror: BATTLE 28 - warhammer 40k - Walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=TtuwQGOVhk0"
+    },
+    "pPazJiYmsoc": {
+      "title": "Warhammer 40k Tacticus Fall of Cadia mirror walkthrough Teil 4 deutsch",
+      "creator": "Haniball Games",
+      "url": "https://www.youtube.com/watch?v=pPazJiYmsoc"
+    },
+    "Epq4gPjc_2g": {
+      "title": "Warhammer 40k Tacticus Fall of Cadia mirror walkthrough Teil 5 deutsch",
+      "creator": "Haniball Games",
+      "url": "https://www.youtube.com/watch?v=Epq4gPjc_2g"
+    },
+    "dinBgQ_uNuw": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Cadia 29 (3-man stage)",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=dinBgQ_uNuw"
+    },
+    "9CslJ_FxNYQ": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Cadia 39 with tiny Sibyll and Kut",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=9CslJ_FxNYQ"
+    },
+    "MYPbkkTiePU": {
+      "title": "Cleared!! FOC Mirror Elite 40 1st try using Gold 1 Thaddeus, Tyrith, Isabella & Silver 3 Sibyl / Kut",
+      "creator": "Puzzlelator",
+      "url": "https://www.youtube.com/watch?v=MYPbkkTiePU"
+    }
+  }
+}

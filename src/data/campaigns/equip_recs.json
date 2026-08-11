@@ -124,5 +124,47 @@
     "Elite_1_Rank": 1,
     "Elite_2_Icon": "Haarken-2-Rare-Force-Field.webp",
     "Elite_2_Rank": 5
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Kut",
+    "Normal_1_Icon": "Kut-1-Rare-Sanctified-Bolt-Pistol.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Kut-2-Rare-Mantle.webp",
+    "Normal_2_Rank": 5,
+    "Elite_1_Icon": "Kut-1-Epic-Bolt-Pistol.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Kut-2-Epic-Mantle.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Sibyll",
+    "Normal_1_Icon": "Sibyll-1-Rare-Ceremonial-Knife.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Sibyll-2-Rare-Mantle.webp",
+    "Normal_2_Rank": 5,
+    "Elite_1_Icon": "Sibyll-1-Epic-Ceremonial-Knife.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Sibyll-2-Epic-Mantle.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Fall of Cadia Mirror",
+    "URL": "/campaigns/fall-of-cadia-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Thad",
+    "Normal_1_Icon": "Thad-1-Rare-Sanctified-Bolt-Pistol.webp",
+    "Normal_1_Rank": 5,
+    "Normal_2_Icon": "Thad-2-Rare-Plated-Greaves.webp",
+    "Normal_2_Rank": 5,
+    "Elite_1_Icon": "Thad-1-Epic-Bolt-Pistol.webp",
+    "Elite_1_Rank": 3,
+    "Elite_2_Icon": "Thad-2-Epic-Plated-Greaves.webp",
+    "Elite_2_Rank": 3
   }
 ]

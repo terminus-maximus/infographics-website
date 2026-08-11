@@ -7,8 +7,8 @@
     "Rank_Normal": "Bronze 1",
     "Rank_Elite": "Silver 1",
     "Active_Normal": "17+",
-    "Active_Elite": "26+",
     "Passive_Normal": "8+",
+    "Active_Elite": "26+",
     "Passive_Elite": "17+"
   },
   {
@@ -19,8 +19,8 @@
     "Rank_Normal": "Bronze 1",
     "Rank_Elite": "Silver 1",
     "Active_Normal": "8+",
-    "Active_Elite": "17+",
     "Passive_Normal": "1",
+    "Active_Elite": "17+",
     "Passive_Elite": "8+"
   },
   {
@@ -31,8 +31,8 @@
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
     "Active_Normal": "26+",
-    "Active_Elite": "35+",
     "Passive_Normal": "17+",
+    "Active_Elite": "35+",
     "Passive_Elite": "26+"
   },
   {
@@ -43,8 +43,8 @@
     "Rank_Normal": "Bronze 3",
     "Rank_Elite": "Silver 2",
     "Active_Normal": "1",
-    "Active_Elite": "1",
     "Passive_Normal": "8+",
+    "Active_Elite": "1",
     "Passive_Elite": "17+"
   },
   {
@@ -55,8 +55,8 @@
     "Rank_Normal": "Bronze 3",
     "Rank_Elite": "Silver 2",
     "Active_Normal": "8+",
-    "Active_Elite": "17+",
     "Passive_Normal": "17+",
+    "Active_Elite": "17+",
     "Passive_Elite": "26+"
   },
   {
@@ -67,8 +67,8 @@
     "Rank_Normal": "Silver 2",
     "Rank_Elite": "Gold 2",
     "Active_Normal": "26",
-    "Active_Elite": "35+",
     "Passive_Normal": "17+",
+    "Active_Elite": "35+",
     "Passive_Elite": "26+"
   },
   {
@@ -79,8 +79,8 @@
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
     "Active_Normal": "1",
-    "Active_Elite": "1",
     "Passive_Normal": "8+",
+    "Active_Elite": "1",
     "Passive_Elite": "17+"
   },
   {
@@ -91,8 +91,8 @@
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
     "Active_Normal": "26",
-    "Active_Elite": "35",
     "Passive_Normal": "8+",
+    "Active_Elite": "35",
     "Passive_Elite": "17+"
   },
   {
@@ -103,8 +103,8 @@
     "Rank_Normal": "Bronze 3",
     "Rank_Elite": "Silver 1",
     "Active_Normal": "1",
-    "Active_Elite": "1",
     "Passive_Normal": "17+",
+    "Active_Elite": "1",
     "Passive_Elite": "26+"
   },
   {
@@ -114,10 +114,10 @@
     "terminus_name": "Kut",
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
-    "Active_Normal": null,
-    "Active_Elite": null,
-    "Passive_Normal": null,
-    "Passive_Elite": null
+    "Active_Normal": "17+",
+    "Passive_Normal": "8+",
+    "Active_Elite": "26+",
+    "Passive_Elite": "17+"
   },
   {
     "Campaign": "Fall of Cadia Mirror",
@@ -126,10 +126,10 @@
     "terminus_name": "Sibyll",
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
-    "Active_Normal": null,
-    "Active_Elite": null,
-    "Passive_Normal": null,
-    "Passive_Elite": null
+    "Active_Normal": "17+",
+    "Passive_Normal": "17+",
+    "Active_Elite": "26+",
+    "Passive_Elite": "26+"
   },
   {
     "Campaign": "Fall of Cadia Mirror",
@@ -138,9 +138,9 @@
     "terminus_name": "Thad",
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
-    "Active_Normal": null,
-    "Active_Elite": null,
-    "Passive_Normal": null,
-    "Passive_Elite": null
+    "Active_Normal": "26",
+    "Passive_Normal": "17",
+    "Active_Elite": "35",
+    "Passive_Elite": "26"
   }
 ]

@@ -39,3 +39,14 @@ export const fallOfCadiaPage = {
   featuredWebImage: "/images/web/fall-of-cadia.webp",
   featuredImageAlt: "Tacticus Fall of Cadia Campaign Guide infographic",
 };
+
+export const fallOfCadiaMirrorPage = {
+  title: "Tacticus Fall of Cadia Mirror Campaign Guide",
+  subtitle:
+    "Beat every Fall of Cadia Mirror Normal and Elite stage with recommended Imperial teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Fall of Cadia Mirror campaign guide with Normal and Elite teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/fall-of-cadia-mirror.png",
+  featuredWebImage: "/images/web/fall-of-cadia-mirror.webp",
+  featuredImageAlt: "Tacticus Fall of Cadia Mirror Campaign Guide infographic",
+};
