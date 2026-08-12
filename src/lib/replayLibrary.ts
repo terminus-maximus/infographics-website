@@ -165,7 +165,7 @@ export function createReplayLibraryData(
     .filter((team) => replays.some((replay) => replay.team === team))
     .sort((a, b) => a.localeCompare(b));
 
-  const tierOrder = ["M2", "M1", "L5", "L4", "L3", "L2", "L1"];
+  const tierOrder = ["M3", "M2", "M1", "L5", "L4", "L3", "L2", "L1"];
   const tiers = tierOrder.filter((tier) => replays.some((replay) => replay.tier === tier));
 
   const heroesByTeam = Object.fromEntries(

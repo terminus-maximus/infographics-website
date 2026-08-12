@@ -14,7 +14,6 @@ export interface Graphic {
   image: string;
   thumbnail: string;
   category: string;
-  badge?: string;
   requiredHeroes?: RequiredHeroIcon[];
 }
 
@@ -71,7 +70,6 @@ export const graphics: Graphic[] = [
       description: "Stage-by-stage Indomitus teams, character ranks, and replay evidence.",
       image: "/images/indomitus.png",
       thumbnail: "/images/thumbnails/indomitus-thumb.png",
-      badge: "New",
       category: "campaign",
       requiredHeroes: getRequiredHeroes("/campaigns/indomitus")
     },
@@ -81,7 +79,6 @@ export const graphics: Graphic[] = [
       description: "Necron teams, investment targets, difficult stages, and replay evidence for Indomitus Mirror.",
       image: "/images/indomitus-mirror.png",
       thumbnail: "/images/thumbnails/indomitus-mirror-thumb.png",
-      badge: "New",
       category: "campaign",
       requiredHeroes: getRequiredHeroes("/campaigns/indomitus-mirror")
     },
@@ -91,7 +88,6 @@ export const graphics: Graphic[] = [
       description: "Chaos teams, investment targets, difficult stages, and replay evidence for Fall of Cadia.",
       image: "/images/fall-of-cadia.png",
       thumbnail: "/images/thumbnails/fall-of-cadia-thumb.png",
-      badge: "New",
       category: "campaign",
       requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia")
     },
@@ -101,7 +97,6 @@ export const graphics: Graphic[] = [
       description: "Imperial teams, investment targets, difficult stages, and replay evidence for Fall of Cadia Mirror.",
       image: "/images/fall-of-cadia-mirror.png",
       thumbnail: "/images/thumbnails/fall-of-cadia-mirror-thumb.png",
-      badge: "New",
       category: "campaign",
       requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia-mirror")
     },
@@ -127,7 +122,6 @@ export const graphics: Graphic[] = [
       description: "Web exclusive feature! Search replays by Boss, Map, Team, or even specific Heroes",
       image: "/images/ReplayLibraryBanner.png",
       thumbnail: "/images/thumbnails/ReplayLibraryBanner-thumb.png",
-      badge: "Popular",
       category: "raid"
     },
     {
@@ -144,7 +138,6 @@ export const graphics: Graphic[] = [
       description: "Unlock the 1st Captain on Aug 29th",
       image: "/images/lysander-lre.png",
       thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
-      badge: "New",
       category: "legendary"
     },
     {
