@@ -1,7 +1,7 @@
 {
   "id": "fall_of_cadia",
   "name": "Fall Of Cadia",
-  "updatedAt": "2026-08-06",
+  "updatedAt": "2026-08-12",
   "modes": [
     {
       "id": "normal",
@@ -1225,6 +1225,28 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "N-RWS7c4Tpo",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         }
@@ -1406,6 +1428,38 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "OTtouh3569k",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldEightbound",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -1441,6 +1495,33 @@
             },
             {
               "videoId": "FZHDYcUULcs",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldEightbound",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "iLof-WKl13I",
               "roster": [
                 {
                   "characterId": "blackTerminator",
@@ -1514,6 +1595,28 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "kPEL8FyJlN8",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -1554,6 +1657,38 @@
             },
             {
               "videoId": "ANm6Wnocji8",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldEightbound",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "UkC8v6wZS7w",
               "roster": [
                 {
                   "characterId": "blackTerminator",
@@ -1915,6 +2050,28 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "ONeJ8t9K2AA",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -1981,6 +2138,28 @@
                 {
                   "characterId": "blackHaarken",
                   "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "ukbbv6uGdNo",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold3",
                   "role": "required"
                 }
               ],
@@ -2141,6 +2320,33 @@
                 {
                   "characterId": "blackAbaddon",
                   "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "E_MidiQ84fY",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Silver1",
                   "role": "optional"
                 }
               ],
@@ -2742,6 +2948,38 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "BuKixXsOg-I",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldEightbound",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -2772,6 +3010,28 @@
             },
             {
               "videoId": "PB1bYEJIVpI",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "r9lmx8RMwpM",
               "roster": [
                 {
                   "characterId": "blackTerminator",
@@ -3010,6 +3270,38 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "YNrBmeNIfaY",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldEightbound",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -3096,6 +3388,28 @@
               ],
               "timestamp": "0:00",
               "timestampSeconds": 0
+            },
+            {
+              "videoId": "HaLLTffMqxQ",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
             }
           ]
         },
@@ -3123,6 +3437,33 @@
                 {
                   "characterId": "deathRotbone",
                   "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "Jm487vZc2qc",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
                   "role": "optional"
                 }
               ],
@@ -3163,6 +3504,33 @@
             },
             {
               "videoId": "grvOnQjM-04",
+              "roster": [
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0
+            },
+            {
+              "videoId": "Zu1AQcPaTag",
               "roster": [
                 {
                   "characterId": "blackTerminator",
@@ -4285,6 +4653,76 @@
       "title": "Warhammer 40k Tacticus Bosskampf Elitekampagne Fall of Cadia Sybill Devine",
       "creator": "Haniball Games",
       "url": "https://www.youtube.com/watch?v=uUAPwT4-sYc"
+    },
+    "OTtouh3569k": {
+      "title": "Fall Of Cadia Elite Stage 4   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=OTtouh3569k"
+    },
+    "iLof-WKl13I": {
+      "title": "Fall Of Cadia Elite Stage 5   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=iLof-WKl13I"
+    },
+    "kPEL8FyJlN8": {
+      "title": "Fall Of Cadia Elite Stage 6   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=kPEL8FyJlN8"
+    },
+    "UkC8v6wZS7w": {
+      "title": "Fall Of Cadia Elite Stage 7   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=UkC8v6wZS7w"
+    },
+    "ONeJ8t9K2AA": {
+      "title": "Fall Of Cadia Elite Stage 11   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=ONeJ8t9K2AA"
+    },
+    "ukbbv6uGdNo": {
+      "title": "Fall Of Cadia Elite Stage 12   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=ukbbv6uGdNo"
+    },
+    "BuKixXsOg-I": {
+      "title": "Fall Of Cadia Elite Stage 21   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=BuKixXsOg-I"
+    },
+    "r9lmx8RMwpM": {
+      "title": "Fall Of Cadia Elite Stage 22   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=r9lmx8RMwpM"
+    },
+    "YNrBmeNIfaY": {
+      "title": "Fall Of Cadia Elite Stage 24   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=YNrBmeNIfaY"
+    },
+    "HaLLTffMqxQ": {
+      "title": "Fall Of Cadia Elite Stage 26   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=HaLLTffMqxQ"
+    },
+    "Zu1AQcPaTag": {
+      "title": "Fall Of Cadia Elite Stage 28   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=Zu1AQcPaTag"
+    },
+    "E_MidiQ84fY": {
+      "title": "Fall Of Cadia Elite Stage 14   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=E_MidiQ84fY"
+    },
+    "Jm487vZc2qc": {
+      "title": "Fall Of Cadia Elite Stage 27   3 Stars Clear   Chaos VS Imperial Guard   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=Jm487vZc2qc"
+    },
+    "N-RWS7c4Tpo": {
+      "title": "Castellan Creed boss fight (Fall of Cadia 75) #tacticus #warhammer40k #achievement #subscribe",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=N-RWS7c4Tpo"
     }
   }
 }

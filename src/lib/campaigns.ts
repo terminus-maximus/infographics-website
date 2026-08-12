@@ -7,7 +7,7 @@ import { resolve } from "node:path";
 import characterSource from "../data/campaigns/characters.json";
 import characterRankEnergySource from "../data/campaigns/character_rank_energy.json";
 import rankSource from "../data/campaigns/ranks.json";
-import replaySource from "../data/campaigns/indomitus_replays.json";
+import replaySource from "../data/campaigns/indomitus.json";
 import indomitusMirrorReplaySource from "../data/campaigns/indomitus-mirror.json";
 import fallOfCadiaReplaySource from "../data/campaigns/fall-of-cadia.json";
 import fallOfCadiaMirrorReplaySource from "../data/campaigns/fall-of-cadia-mirror.json";

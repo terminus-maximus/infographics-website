@@ -1,7 +1,7 @@
 {
   "id": "fall_of_cadia_mirror",
   "name": "Fall Of Cadia Mirror",
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-12",
   "modes": [
     {
       "id": "normal",
@@ -103,6 +103,34 @@
               "timestamp": "24:46",
               "timestampSeconds": 1486,
               "notes": "Process 1.72 formal QC; native adjacent frames; all gates source-specific"
+            },
+            {
+              "videoId": "rgdVUGK5ePw",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -225,6 +253,34 @@
               "timestamp": "0:18",
               "timestampSeconds": 18,
               "notes": "Process 1.72 formal QC; native adjacent frames; all gates source-specific"
+            },
+            {
+              "videoId": "W917w86BcuY",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -281,6 +337,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "q3Y95-F5wMc",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -398,6 +482,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "I3iThX2YR2Q",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -525,6 +637,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "jfy0qeePHV8",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -614,6 +754,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "KsJ8jx9oLok",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -708,6 +876,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "Gtsg_tKf2DM",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -853,6 +1049,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "HIRXeH-0bGg",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -919,6 +1143,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "_CkB9EaejbA",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -1046,6 +1298,34 @@
               "timestamp": "0:00",
               "timestampSeconds": 0,
               "notes": "Campaign Replay Research 1.71 recovery pass 2; source-specific evidence; conservative unverified start"
+            },
+            {
+              "videoId": "nTy3_h_SodU",
+              "roster": [
+                {
+                  "characterId": "astraBullgryn",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraPrimarisPsy",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72 abbreviation review; source-specific native evidence; conservative unverified start"
             }
           ]
         },
@@ -2520,6 +2800,56 @@
       "title": "Cleared!! FOC Mirror Elite 40 1st try using Gold 1 Thaddeus, Tyrith, Isabella & Silver 3 Sibyl / Kut",
       "creator": "Puzzlelator",
       "url": "https://www.youtube.com/watch?v=MYPbkkTiePU"
+    },
+    "rgdVUGK5ePw": {
+      "title": "Fall Of Cadia Mirror Stage 60   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=rgdVUGK5ePw"
+    },
+    "W917w86BcuY": {
+      "title": "Fall Of Cadia Mirror Stage 61   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=W917w86BcuY"
+    },
+    "q3Y95-F5wMc": {
+      "title": "Fall Of Cadia Mirror Stage 62   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=q3Y95-F5wMc"
+    },
+    "I3iThX2YR2Q": {
+      "title": "Fall Of Cadia Mirror Stage 64   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=I3iThX2YR2Q"
+    },
+    "jfy0qeePHV8": {
+      "title": "Fall Of Cadia Mirror Stage 66   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=jfy0qeePHV8"
+    },
+    "KsJ8jx9oLok": {
+      "title": "Fall Of Cadia Mirror Stage 67   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=KsJ8jx9oLok"
+    },
+    "Gtsg_tKf2DM": {
+      "title": "Fall Of Cadia Mirror Stage 68   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=Gtsg_tKf2DM"
+    },
+    "HIRXeH-0bGg": {
+      "title": "Fall Of Cadia Mirror Stage 70   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=HIRXeH-0bGg"
+    },
+    "_CkB9EaejbA": {
+      "title": "Fall Of Cadia Mirror Stage 71   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=_CkB9EaejbA"
+    },
+    "nTy3_h_SodU": {
+      "title": "Fall Of Cadia Mirror Stage 73   3 Stars Clear   Imperial Guard VS Chaos   Warhammer  Tacticus",
+      "creator": "DePattotertjes",
+      "url": "https://www.youtube.com/watch?v=nTy3_h_SodU"
     }
   }
 }
