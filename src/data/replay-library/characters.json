@@ -99,6 +99,15 @@
     "Forcasmo":"X"
   },
   {
+    "hero_name":"Baldr",
+    "Laviscus":"X",
+    "Neuro":null,
+    "AdMech":null,
+    "Battlesuits":null,
+    "Custodes":"X",
+    "Forcasmo":null
+  },
+  {
     "hero_name":"Boss",
     "Laviscus":"X",
     "Neuro":null,
@@ -213,6 +222,15 @@
     "AdMech":null,
     "Battlesuits":null,
     "Custodes":null,
+    "Forcasmo":null
+  },
+  {
+    "hero_name":"Nico",
+    "Laviscus":"X",
+    "Neuro":null,
+    "AdMech":null,
+    "Battlesuits":null,
+    "Custodes":"X",
     "Forcasmo":null
   },
   {
