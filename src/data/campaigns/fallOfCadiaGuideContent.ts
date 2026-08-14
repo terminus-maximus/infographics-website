@@ -29,36 +29,36 @@ const targetsFor = (terminusName: string) => {
 export const overviewContent = {
   timing: {
     paragraphs: [
-      "Fall of Cadia is a medium-high early priority once Angrax, Archimatos, and Haarken are unlocked. It opens Chaos upgrade nodes, the three characters required for Fall of Cadia Mirror, and one of the game’s best mission-farming stages.",
+      "Fall of Cadia becomes a strong early priority once Angrax, Archimatos, and Haarken are unlocked. It opens Chaos upgrade nodes, the three heroes required for Fall of Cadia Mirror, and one of the game’s best mission-farming stages.",
       "Advance through Normal even when a battle awards only one or two medals. Boss nodes for Kut, Sibyll, Thaddeus, Celestine, and Creed are more valuable than forcing every third medal as soon as it becomes available.",
       "Return for all 225 Normal medals when Elite farming becomes the next useful account goal. Test Elite immediately after it unlocks, then stop at an efficient material or shard breakpoint if full completion would demand excessive campaign-only investment.",
     ],
-    callout: "Advance first, collect missing medals later, and invest when the next farming node or campaign unlock justifies the cost.",
+    callout: "Clear first. Medal later. Invest when the next farming node or campaign unlock justifies the cost.",
   },
   progression: {
     introduction: "Use Fall of Cadia as an account-building loop rather than a single uninterrupted project.",
     steps: [
       "Unlock Angrax, Archimatos, and Haarken through normal progression.",
       "Push Normal and open useful Chaos material and boss-shard nodes.",
-      "Invest first in Angrax, then Archimatos, then Haarken.",
+      "Build the Required Carry first: Angrax, then Archimatos, then Haarken.",
       "Add Abraxas for offensive summon pressure and Rotbone for medal protection.",
       "Return for all 225 medals when Elite becomes a useful objective.",
       "Attempt Elite immediately and farm the efficient nodes you can reach.",
       "Strengthen the required trio for restricted three-character stages.",
-      "Pursue all 120 Elite medals only when the late nodes justify the investment.",
+      "Pursue all 120 Elite medals only when the late nodes justify the investment. Recommended Investment targets are practical, repeatable goals—not minimum clears that may require perfect crits, blocks, enemy movement, or repeated restarts.",
     ],
     paragraphs: [
       "Fall of Cadia 40 is unusually valuable for kill, damage, ability, and Angrax-passive missions because its Vox-Casters can continually call Guardsmen. Avoid killing or frightening away the Vox-Casters when using the stage for farming.",
       "Restricted Elite stages prevent optional carries from replacing investment in the Black Legion trio. Abraxas and Rotbone are the best general open-stage pair, but Angrax, Archimatos, and Haarken still need enough durability to survive on their own.",
     ],
-    callout: "The efficient five-character team is Angrax, Archimatos, Haarken, Abraxas, and Rotbone.",
+    callout: "Required Carry: Angrax. Best Support: Abraxas for offense, with Rotbone beside him when three-medal survival is the problem.",
   },
   normalInvestment: investmentRows.map((row) => ({ characterId: row.characterId, rankId: row.normal.rankId, abilityIconName: row.abilityIconName, active: row.normal.active, passive: row.normal.passive })),
   eliteInvestment: investmentRows.map((row) => ({ characterId: row.characterId, rankId: row.elite.rankId, abilityIconName: row.abilityIconName, active: row.elite.active, passive: row.elite.passive })),
   strategyTips: [
-    ["Deploy for Survival", "Inspect ranges and elevation before starting. Keep Archimatos outside clean mortar and lascannon attacks, put Angrax on the dangerous approach, and save Haarken’s mobility for a priority backliner."],
+    ["Let Angrax Take First Contact", "Inspect ranges and elevation before starting. Keep Archimatos outside clean mortar and lascannon attacks, put Angrax on the dangerous approach, and save Haarken’s mobility for a priority backliner."],
     ["Force Heavy Weapons to Move", "Stationary lascannons are most dangerous. Engage them, block their preferred firing hex with a summon, or deny elevation before trading damage with ordinary Guardsmen."],
-    ["Summon With a Purpose", "Bloodletters and Screamers should engage a priority target, absorb attacks, block routes, or occupy high ground. Their deaths do not reduce the campaign medal rating."],
+    ["Use Summons as Geometry", "Bloodletters and Screamers should engage a priority target, absorb attacks, block routes, or occupy high ground. Their deaths do not reduce the campaign medal rating."],
     ["Protect the Weak Link", "The AI often prefers an available kill. A tank or summon must block the route, occupy the firing hex, or offer an attractive alternative—not merely stand closer."],
     ["Keep Rotbone Adjacent", "Rotbone’s resurrection requires adjacency when lethal damage is received. Place him beside the hero most likely to die while avoiding clustered area damage and Valkyrie markers."],
     ["Use Haarken After Contact", "Let tanks and summons absorb the opening, then send Haarken to finish a weakened mortar, lascannon, Vox-Caster, or boss. Do not use him as the primary tank."],
@@ -72,11 +72,11 @@ export const requiredHeroContent: HeroGuide[] = [
     role: "Terminator tank, deep-strike controller, and reaction attacker.",
     ...targetsFor("Angrax"),
     paragraphs: [
-      "Angrax is the best long-term investment among the required trio. Terminator Armour blunts the first qualifying attack each turn, while Hateful Assault punishes adjacent enemies that move away and excels beside reinforcement or wave-entry hexes.",
+      "Angrax is the Required Carry and the best long-term investment among the required trio. Terminator Armour blunts the first qualifying attack each turn, while Hateful Assault punishes adjacent enemies that move away and excels beside reinforcement or wave-entry hexes.",
       "Use him to force lascannons to move, occupy dangerous elevation, and draw attacks away from Archimatos. His post-2025 damage improvements make him a real contributor rather than only a shield.",
       "Prioritize rank and defensive equipment. His passive has the strongest long-term badge value, especially for Onslaught, Survival, Legendary Events, and other wave modes.",
     ],
-    callout: "Highest required-hero priority: make Angrax the target the enemy wants to attack.",
+    callout: "Required Carry: make Angrax the target the enemy wants to attack.",
     featured: true,
   },
   {
@@ -88,7 +88,7 @@ export const requiredHeroContent: HeroGuide[] = [
       "Place summons where they change targeting or movement. Low-level Bloodletters can disappear before contributing, so the active is the main campaign badge priority even though Archimatos’s own defensive gear remains essential.",
       "Silver I is a practical Normal target and Gold I is the initial Elite target. Protect him from concentrated mortar and lascannon fire; he remains an attractive AI target despite his rework.",
     ],
-    callout: "Best tactical force multiplier: level the active and leave room for useful Bloodletter placements.",
+    callout: "Archimatos summons: level the active and leave room for useful Bloodletter placements.",
   },
   {
     heading: "Haarken Worldclaimer",
@@ -99,20 +99,20 @@ export const requiredHeroContent: HeroGuide[] = [
       "Do not overextend him on turn one. He remains less durable than Angrax and performs poorly when sent alone into full-health Elite enemies.",
       "He is third in required-character investment priority. Build enough rank and defensive equipment to survive restricted stages, then raise him further only when those stages or a broader roster role demand it.",
     ],
-    callout: "Keep him safe through the opening exchange, then use his mobility to finish the real threat.",
+    callout: "Haarken finishes: keep him safe through the opening exchange, then send him after the real threat.",
   },
 ];
 
 export const primarySupportingHeroes: HeroGuide[] = [
   {
-    characterId: "thousInfernalMaster", heading: "Abrax", role: "Premier offensive carry and summon engine.", featured: true,
-    paragraphs: ["Abraxas is the strongest offensive support for unrestricted stages. Psychic damage from Archimatos and Abraxas can rapidly fill the field with Screamers that absorb attacks, block routes, and overwhelm priority targets.", "Give his active open adjacent hexes; narrow corridors sharply reduce its ceiling. Silver I–II is useful for Normal, while Gold I–II with an active around 35 or higher is the practical Elite target.", "The investment compounds because Abraxas is required for Saim-Hann Mirror and remains valuable in psychic teams, Tournament Arena, Guild War, and events."],
-    callout: "Best unrestricted-stage offensive carry and the first optional hero to build.",
+    characterId: "thousInfernalMaster", heading: "Abrax", role: "Best Support, offensive summon engine, and board control.", featured: true,
+    paragraphs: ["Abraxas is the Best Support for unrestricted stages. Psychic damage from Archimatos and Abraxas can rapidly fill the field with Screamers that absorb attacks, block routes, and overwhelm priority targets.", "Give his active open adjacent hexes; narrow corridors sharply reduce its ceiling. Silver I–II is useful for Normal, while Gold I–II with an active around 35 or higher is the practical Elite target.", "The investment compounds because Abraxas is required for Saim-Hann Mirror and remains valuable in psychic teams, Tournament Arena, Guild War, and events."],
+    callout: "Best Support: build Abraxas first for unrestricted-stage offense and board control.",
   },
   {
     characterId: "deathRotbone", heading: "Rotbone", role: "Chaos healer, resurrection support, and medal protector.", featured: true,
     paragraphs: ["Rotbone has the greatest effect on three-medal reliability. Keep him adjacent to Archimatos or Haarken when a lethal hit is likely so his passive can revive them.", "Silver I is already useful in Normal. For Elite, Gold I–II with the passive near 35 is an excellent target; health and armor help him remain present to heal and resurrect the team.", "He is also one of the best Chaos investments for Legendary Events, Survival, Onslaught, and Guild War."],
-    callout: "Best survival support: convert fragile wins into reliable three-medal clears.",
+    callout: "Best survival support: use Rotbone when the problem is keeping three medals, not dealing damage.",
   },
 ];
 
@@ -131,7 +131,7 @@ export const difficultStageGroups = [
       { number: 26, title: "Required-Trio Check", why: "Limited supporting slots expose weak required heroes and unstable Battle Fatigue outcomes.", strategy: ["Protect Archimatos from the opening attack.", "Let Angrax absorb the first high-value hit.", "Use Haarken only after a safe finishing target appears.", "Restart when flee behavior produces an unrecoverable opening."], closing: "Bronze clears are challenge minima; consistent progress depends on summon levels, defensive gear, and careful deployment." },
       { number: 45, title: "Thaddeus Noble", why: "Mortar pressure reaches protected backliners while lascannons punish an exposed opening.", strategy: ["Advance or deep strike Angrax toward the central threat.", "Use Bloodletters to absorb fire and engage heavy weapons.", "Send Haarken toward reachable artillery rather than directly at Thaddeus.", "Do not leave a stationary lascannon on elevation."], closing: "Remove the firing lanes before committing to the boss." },
       { number: 60, title: "Celestine", why: "Celestine’s durability and Geminae create misleading burst opportunities.", strategy: ["Control the escorts before committing every active.", "Preserve summons or burst for the decisive Celestine turn.", "Avoid clustering where supporting fire can reach several heroes.", "Keep the weakest required hero outside the easiest kill route."], closing: "Treat Celestine as a sequence, not a single burst target." },
-      { number: 61, title: "Mandatory Survival", why: "Premium supports cannot compensate when an underbuilt Haarken or Archimatos is exposed.", strategy: ["Move the best defensive gear to the vulnerable hero.", "Use Angrax to draw the first attack.", "Accept a slower clear rather than exposing Haarken.", "Use summons to block attacks instead of maximizing damage."], closing: "This stage checks the mandatory roster, not the strength of optional supports." },
+      { number: 61, title: "Mandatory Survival", why: "Premium supports cannot compensate when an underbuilt Haarken or Archimatos is exposed.", strategy: ["Move the best defensive gear to the vulnerable hero.", "Use Angrax to draw the first attack.", "Accept a slower clear rather than exposing Haarken.", "Use summons to block attacks instead of maximizing damage."], closing: "This stage checks the required roster, not the strength of optional supports." },
       { number: 69, title: "Mandatory Survival", why: "Another restricted deployment makes weak required heroes the AI’s easiest targets.", strategy: ["Deploy for safe attack routes rather than opening damage.", "Force heavy weapons to move before exposing Archimatos.", "Preserve Haarken for cleanup.", "Hide damaged heroes during the final turns."], closing: "Survival and target control matter more than finishing quickly." },
       { number: 75, title: "Creed", why: "Vox reinforcements, heavy weapons, and the boss create competing priorities while every hero must survive.", strategy: ["Establish a safe side of the map.", "Remove lascannons and Vox-Casters that threaten the backline.", "Use summons to isolate firing lanes.", "Collapse on Creed only after the crossfire is controlled."], closing: "Do not chase Creed through an active firing lane." },
     ],
@@ -139,9 +139,9 @@ export const difficultStageGroups = [
   {
     id: "difficult-elite-stages", modeId: "elite", title: "Elite", stages: [
       { number: 26, title: "Required Trio Only", why: "The restriction removes both Rotbone’s healing and Abraxas’s summon carry.", strategy: ["Enter with Gold I Archimatos and Angrax and Haarken near Gold I.", "Use Bloodletters to create the missing fourth and fifth bodies.", "Protect Haarken until a safe finisher opens.", "Restart an opening that exposes Archimatos to lethal fire."], closing: "Optional heroes cannot solve this stage; invest in the required trio and Archimatos’s active." },
-      { number: 33, title: "Final-Chapter Stat Check", why: "A final-chapter stat spike combines with another three-character restriction.", strategy: ["Treat Gold I as a challenge baseline, not a guarantee.", "Move the best defensive equipment onto the likely target.", "Use Angrax to deny elevation and firing lanes.", "Restart if the opening mortar or lascannon attack creates an unrecoverable death."], closing: "Gold II Archimatos and Angrax substantially reduce the stage’s variance." },
+      { number: 33, title: "Final-Chapter Stat Check", why: "A final-chapter stat spike combines with another three-character restriction.", strategy: ["Treat Gold I as a challenge baseline, not a guaranteed clear.", "Move the best defensive equipment onto the likely target.", "Use Angrax to deny elevation and firing lanes.", "Restart if the opening mortar or lascannon attack creates an unrecoverable death."], closing: "Gold II Archimatos and Angrax make the stage much less dependent on a favorable opening." },
       { number: 35, title: "Competing Firing Lanes", why: "Dense late-Elite threats often make this one of the final missing-medal stages.", strategy: ["Use Abraxas and Rotbone as the safest general pairing.", "Place Abraxas where several summon hexes remain free.", "Keep Rotbone adjacent to the hero at one-shot risk.", "Without Abraxas, use Maladus or Toth to block approaches while Bloodletters absorb attacks."], closing: "Control both damage and survival; an extra weak support only gives the AI an easier kill." },
-      { number: 40, title: "Creed", why: "The final boss combines mortars, lascannons, reinforcements, and intense survival pressure.", strategy: ["Lure or engage the lascannon before committing to Creed.", "Use Haarken to reach mortars after the opening exchange.", "Isolate Creed with summons and a durable frontliner.", "Preserve Rotbone adjacency and keep Archimatos from becoming the easiest target."], closing: "Remove the crossfire, isolate Creed, and finish with the mandatory trio protected." },
+      { number: 40, title: "Creed", why: "The final boss combines mortars, lascannons, reinforcements, and intense survival pressure.", strategy: ["Lure or engage the lascannon before committing to Creed.", "Use Haarken to reach mortars after the opening exchange.", "Isolate Creed with summons and a durable frontliner.", "Preserve Rotbone adjacency and keep Archimatos from becoming the easiest target."], closing: "Remove the crossfire, isolate Creed, and finish with the required trio protected." },
     ],
   },
 ];

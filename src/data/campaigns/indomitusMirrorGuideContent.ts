@@ -16,18 +16,18 @@ const investmentRows = recommendationRows.map((recommendation) => ({
 export const overviewContent = {
   timing: {
     paragraphs: [
-      "Indomitus Mirror is one of the highest-value early campaigns because Mirror nodes generally offer better material drop rates than their Normal counterparts. Push it whenever the next group of nodes gives your account useful upgrades.",
+      "Indomitus Mirror is one of the highest-value early campaigns because Mirror nodes generally offer better material drop rates than their Normal counterparts. It is also a more expensive campaign than Indomitus: expect the practical Normal and Elite investment targets to rise accordingly.",
       "Progress as far as your current Necrons can comfortably take you, then return after account-wide upgrades. Opening a valuable farming node is usually more important than forcing three medals immediately.",
       "All Normal medals eventually unlock Indomitus Mirror Elite, where the campaign adds excellent Elite material nodes and the long-term goal of farming Marneus Calgar shards.",
     ],
-    callout: "Push for farming nodes first, clean up medals later, and build toward Elite when its next unlock is worth the investment.",
+    callout: "Clear first. Medal later. Push for farming nodes, then build toward Elite when its next unlock is worth the investment.",
   },
   progression: {
-    introduction: "Treat Indomitus Mirror as a repeatable account-building loop.",
+    introduction: "Use Indomitus Mirror as an account-building loop, not a one-time completion project.",
     steps: [
       "Advance until the next battle becomes expensive.",
       "Farm the newly opened Mirror upgrade nodes.",
-      "Put the majority of early resources into Aleph-Null.",
+      "Build the Required Carry first: put the majority of early resources into Aleph-Null.",
       "Raise Imospekh and Makhotep enough to survive and contribute.",
       "Return for missing medals after the roster improves.",
       "Unlock Elite and test the opening stages immediately.",
@@ -36,9 +36,9 @@ export const overviewContent = {
     ],
     paragraphs: [
       "The campaign is Necron-restricted. Aleph-Null, Imospekh, and Makhotep are required, while Anuphet, Thothmek, and Thutmose can fill the remaining deployment slots when the map allows them.",
-      "Elite magnifies uneven investment. One strong carry can win the battle, but three medals still require every deployed Necron to survive burst turns and remain within repair range.",
+      "Elite rewards concentrated investment. Aleph-Null can carry the battle, but three medals still require every deployed Necron to survive the burst turns. Recommended Investment targets are practical, repeatable goals—not minimum clears that may rely on exact crits, blocks, enemy movement, or many attempts.",
     ],
-    callout: "Build Aleph-Null first. Scarabs, repairs, Living Metal, and strong survivability make Aleph the campaign centerpiece.",
+    callout: "Required Carry: build Aleph-Null first. Scarabs, repairs, Living Metal, and strong survivability drive the campaign.",
   },
   normalInvestment: investmentRows.map((row) => ({
     characterId: row.characterId,
@@ -55,7 +55,7 @@ export const overviewContent = {
     passive: row.elite.passive,
   })),
   strategyTips: [
-    ["Upgrade Aleph-Null First", "Aleph should receive the majority of early gear and ability investment. Scarabs absorb attacks, block routes, and preserve medals while Fabricator Claw Array repairs keep the formation intact."],
+    ["Build the Required Carry First", "Aleph-Null should receive the majority of early gear and ability investment. Scarabs absorb attacks, block routes, and preserve medals while Fabricator Claw Array repairs keep the formation intact."],
     ["Use Summons as Geometry", "Scarabs and Necron Warriors do not need to survive to create value. Place them where they consume enemy attacks, block an approach, or protect a fragile required hero."],
     ["Stay Inside Repair Range", "Keep a compact formation without clustering into area damage. Aleph-Null should be able to reach the forward unit, and Makhotep should remain close enough to support damaged Mechanical allies."],
     ["Claim High Ground, Then Set the Lane", "When the map allows it, move Imospekh onto a safe High Ground hex one turn before enemies advance. The elevation boosts his Overwatch on the following turn; then use terrain and summons to force enemies through that stronger firing lane."],
@@ -106,11 +106,11 @@ export const requiredHeroContent: HeroGuide[] = [
     role: "Primary carry, Mechanical healer, durable anchor, and Scarab summoner.",
     ...targetsFor("Aleph"),
     paragraphs: [
-      "Aleph-Null should receive the overwhelming majority of early campaign investment. Scarab Swarms absorb attacks, block movement, occupy firing lanes, and preserve medals for weaker required heroes.",
+      "Aleph-Null is the Required Carry and should receive the overwhelming majority of early campaign investment. Scarab Swarms absorb attacks, block movement, occupy firing lanes, and preserve medals for weaker required heroes.",
       "Living Metal, strong defensive stats, and Fabricator Claw Array repairs make Aleph the team’s natural anchor. End turns where Aleph can repair another Necron or remain available to receive the first enemy attacks.",
       "Invest in gear first, then the active, then the passive. The active should remain near the highest practical level allowed by rarity because stronger Scarabs improve both damage and board control.",
     ],
-    callout: "Best overall campaign investment: Aleph-Null’s gear, rank, and Scarab active.",
+    callout: "Required Carry: prioritize Aleph-Null’s gear, rank, and Scarab active.",
     featured: true,
   },
 ];
@@ -121,11 +121,11 @@ export const supportingHeroes: HeroGuide[] = [
     heading: "Anuphet",
     role: "Durable summoner, revival safety net, and Elite board control.",
     paragraphs: [
-      "Anuphet is the highest-value optional investment for serious Elite progression. His reworked active can revive a defeated Necron while still creating powerful Warrior summons, making mistakes and burst casualties much less punishing.",
+      "Anuphet is the Best Support for serious Elite progression. His reworked active can revive a defeated Necron while still creating powerful Warrior summons, making mistakes and burst casualties much less punishing.",
       "Delay the active until it creates a meaningful numerical swing. Warriors are most valuable when they replace lost board control, surround an isolated target, or absorb the next wave of attacks.",
       "Combined with Living Metal, Scarabs, Makhotep’s support, and Aleph-Null’s repairs, Anuphet gives Necron teams exceptional staying power in long Elite battles.",
     ],
-    callout: "Top optional Elite choice: revival plus durable Warrior board presence.",
+    callout: "Best Support: revival plus durable Warrior board presence.",
     featured: true,
   },
   {
@@ -133,7 +133,7 @@ export const supportingHeroes: HeroGuide[] = [
     heading: "Thothmek",
     role: "Defensive support, Suppression, and adjacent Mechanical protection.",
     paragraphs: [
-      "Thothmek is excellent for reliable three-medal clears. Suppression reduces enemy pressure, first-hit damage reduction blunts burst turns, and adjacent Mechanical protection helps keep the required trio intact.",
+      "Thothmek is the best defensive alternative when reliable three-medal clears matter more than another summon engine. Suppression reduces enemy pressure, first-hit damage reduction blunts burst turns, and adjacent Mechanical protection helps keep the required trio intact.",
       "Place Thothmek where the defensive effect covers the hero most likely to be attacked without creating an area-damage cluster. The value comes from making enemy turns predictable, not from chasing damage.",
       "Thothmek pairs especially well with Aleph-Null and Anuphet when the map permits a full roster, giving the team multiple layers of sustain and board control.",
     ],
@@ -170,12 +170,12 @@ export const difficultStageGroups = [
     modeId: "elite",
     title: "Elite",
     stages: [
-      { number: 24, title: "Weak-Link Survival", why: "This widely reported progression wall exposes uneven investment: total damage is irrelevant when the weakest required Necron dies early.", strategy: ["Make Aleph-Null or another durable unit the best opening target.", "Avoid entering overlapping attack ranges on turn one.", "Use Scarabs primarily to redirect attacks and restrict movement.", "Cover an approach with Imospekh without exposing him to every ranged enemy.", "Improve the armor or defensive item of the character that repeatedly dies first.", "Delay Anuphet’s Warriors until they create a meaningful numerical swing."], closing: "Deny the clean opening volley and use summons as protective geometry." },
+      { number: 24, title: "Weak-Link Survival", why: "This progression wall exposes the weak link: total damage does not matter if the weakest required Necron dies early.", strategy: ["Make Aleph-Null or another durable unit the best opening target.", "Avoid entering overlapping attack ranges on turn one.", "Use Scarabs primarily to redirect attacks and restrict movement.", "Cover an approach with Imospekh without exposing him to every ranged enemy.", "Improve the armor or defensive item of the character that repeatedly dies first.", "Delay Anuphet’s Warriors until they create a meaningful numerical swing."], closing: "Deny the clean opening volley and use summons as protective geometry." },
       { number: 25, title: "Cautious Reconnaissance", why: "The first battle after a major checkpoint punishes players who assume the next chapter begins gently.", strategy: ["Recheck movement and attack ranges instead of relying on the Normal map.", "Advance with one repairable anchor while the rest stay outside concentrated fire.", "Target enemies by projected next-turn damage.", "Keep a ranged finisher ready for low-health threats.", "Use terrain so only one or two enemies can reach the anchor."], closing: "Force the enemy to reveal its approach, then collapse on the first separated unit." },
       { number: 30, title: "Fight One Flank", why: "Overlapping enemy ranges make a central advance produce more damage than Aleph-Null can repair.", strategy: ["Choose one flank during deployment and commit the roster to it.", "Reveal the first attack with the toughest Necron.", "Kill high-damage ranged enemies before durable blockers when access permits.", "Use summons to delay the opposite side.", "Rotate injured units backward and preserve Imospekh’s strongest Overwatch lane."], closing: "Create local superiority while summons and terrain postpone the rest of the enemy formation." },
       { number: 31, title: "Ability Economy", why: "Spending actives like this is the chapter-ending battle can leave the roster exposed during the final wave.", strategy: ["Use basic attacks for guaranteed kills and save actives for consequential thresholds.", "Summon only when the units alter targeting, movement, or numbers.", "Keep retreat hexes open behind forward units.", "Repair before attacking when a damaged hero cannot survive another activation.", "Regroup instead of chasing the final targets into exposed terrain."], closing: "Let positioning do work that would otherwise require raw statistics or early abilities." },
       { number: 32, title: "Chapter Boss Priority", why: "The decisive turns require choosing between support threats and the main target without splitting damage inefficiently.", strategy: ["Determine whether the boss can be removed in one concentrated turn.", "Redirect the first major activation into a summon.", "Remove healers, summoners, multi-attack units, and back-line threats first.", "Keep Aleph-Null within repair range of the intended tank.", "Time Anuphet’s Warriors for the transition from support clearance to boss focus."], closing: "Clear whatever amplifies the enemy’s next turn, then synchronize healing and burst damage on the boss." },
-      { number: 37, title: "Defensive Optimization", why: "Late Elite exposes the difference between fast favorable clears and a roster durable enough to survive unfavorable targeting.", strategy: ["Move the best defensive items to the two likely targets.", "Stay within a compact repair radius until ranged threats are gone.", "Use summons to deny access to fragile units.", "Move an injured damage dealer completely out of combat when necessary.", "Change deployment or the first target when the same enemy activation repeatedly ends the run."], closing: "Reduce variance through defense, compact positioning, and predictable enemy targeting." },
+      { number: 37, title: "Defensive Optimization", why: "Late Elite exposes the difference between a lucky clear and a roster durable enough to survive poor targeting.", strategy: ["Move the best defensive items to the two likely targets.", "Stay within a compact repair radius until ranged threats are gone.", "Use summons to deny access to fragile units.", "Move an injured damage dealer completely out of combat when necessary.", "Change deployment or the first target when the same enemy activation repeatedly ends the run."], closing: "Reduce the need for lucky targeting through defense, compact positioning, and better control of enemy routes." },
       { number: 39, title: "Three-Star Discipline", why: "The final pre-boss mission is often lost after the battle is effectively won because a damaged required hero remains exposed during cleanup.", strategy: ["Keep an exit route toward Aleph-Null.", "Save summons, repositioning, or burst tools that can protect a unit.", "Remove enemies that can reach past the tank.", "Repair to a safe threshold before the final enemy group.", "Reposition the damaged roster before chasing the last kill."], closing: "Knowing when to stop advancing prevents avoidable two-star completions." },
       { number: 40, title: "Final Boss Sequence", why: "Maximum campaign stats combine with a boss-priority problem, and the wrong order of summons, repairs, and burst abilities can cost the third medal.", strategy: ["Choose the boss tank before the first move and preserve Aleph-Null’s repair path.", "Separate support clearance from the boss commitment.", "Block access to the back line with Scarabs or Warriors.", "Remove healers, summoners, multi-attackers, and tank-bypass threats first.", "Preserve one burst active for the isolated boss.", "Confirm that no surviving enemy can retaliate before the final hit."], closing: "Absorb the opening, remove support threats, isolate the boss, and finish with repair and burst resources available." },
     ],
