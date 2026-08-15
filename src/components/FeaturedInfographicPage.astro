@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import CampaignGuideGrid from "./campaign/CampaignGuideGrid.astro";
 import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
 import { marked } from "marked";
 import { graphics } from "../data/graphics";
@@ -15,12 +16,17 @@ const {
   lastUpdated,
   basicsTitle,
   basicsContent,
+  showCampaignGuides = false,
   resources = []
 } = Astro.props;
 
 const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
 
-const relatedGuides = graphics.filter((g) => g.href !== Astro.url.pathname);
+const relatedGuides = graphics.filter(
+  (guide) =>
+    guide.href !== Astro.url.pathname &&
+    (!showCampaignGuides || guide.category !== "campaign"),
+);
 const displayImageSrc =
   webImageSrc ||
   imageSrc.replace(/^\/images\//, "/images/web/").replace(/\.[^.]+$/, ".webp");
@@ -82,6 +88,13 @@ const displayImageSrc =
     <section class="content-section">
       <h2>{basicsTitle || `${title} Basics`}</h2>
       <div class="markdown-content" set:html={basicsHtml} />
+    </section>
+  )}
+
+  {showCampaignGuides && (
+    <section class="content-section" aria-labelledby="campaign-guides-heading">
+      <h2 id="campaign-guides-heading">Campaign Guides</h2>
+      <CampaignGuideGrid />
     </section>
   )}
 

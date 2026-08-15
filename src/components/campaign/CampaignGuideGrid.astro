@@ -1,0 +1,28 @@
+---
+import CampaignCard from "./CampaignCard.astro";
+import { graphics } from "../../data/graphics";
+
+const campaignGuides = graphics.filter(
+  (guide) => guide.category === "campaign" && guide.href !== "/campaigns/",
+);
+---
+
+<div class="campaign-guide-grid">
+  {campaignGuides.map((guide) => <CampaignCard {...guide} />)}
+</div>
+
+<style>
+  .campaign-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    justify-content: start;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .campaign-guide-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

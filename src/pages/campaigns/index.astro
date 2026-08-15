@@ -1,5 +1,6 @@
 ---
 import CampaignCard from "../../components/campaign/CampaignCard.astro";
+import CampaignGuideGrid from "../../components/campaign/CampaignGuideGrid.astro";
 import CampaignHero from "../../components/campaign/CampaignHero.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
@@ -7,9 +8,6 @@ import Layout from "../../layouts/Layout.astro";
 import { campaignLanding } from "../../data/campaigns/campaignCatalog";
 import { graphics } from "../../data/graphics";
 
-const campaignGuides = graphics.filter(
-  (guide) => guide.category === "campaign" && guide.href !== "/campaigns/",
-);
 const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysander", "/lre/uthar"].includes(guide.href));
 ---
 
@@ -31,9 +29,7 @@ const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysa
 
     <section class="content-section" aria-labelledby="campaign-guides-heading">
       <h2 id="campaign-guides-heading">Campaign Guides</h2>
-      <div class="card-grid">
-        {campaignGuides.map((guide) => <CampaignCard {...guide} />)}
-      </div>
+      <CampaignGuideGrid />
     </section>
 
     <section class="content-section" aria-labelledby="campaign-basics-heading">
