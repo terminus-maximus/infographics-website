@@ -84,7 +84,7 @@ const tocGroups = [
                   const equipment = getOctariusEquipmentRecommendation(row.abilityIconName)[mode];
                   return (
                     <tr>
-                      <td><img class="table-hero" src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></td>
+                      <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
                       <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
                       <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
                       <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
@@ -197,7 +197,8 @@ const tocGroups = [
   a { color: #d4af37; font-weight: 700; text-decoration: none; }
   a:hover, a:focus-visible { color: #f5d76e; text-decoration: underline; outline: none; }
   .overview-grid { display: grid; gap: 1rem; }
-  .overview-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; padding: 1.15rem; border: 1px solid #333; border-radius: 9px; background: #121212; }
+  .overview-card { display: grid; min-width: 0; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; padding: 1.15rem; border: 1px solid #333; border-radius: 9px; background: #121212; }
+  .overview-card > div { min-width: 0; }
   .section-icon { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid #5b4b1c; border-radius: 50%; background: rgba(212,175,55,.08); color: #d4af37; font-weight: 800; }
   .content-callout { margin: 0.25rem 0 0.8rem; padding: 0.75rem 0.85rem; border-left: 3px solid #d4af37; border-radius: 0 7px 7px 0; background: rgba(212,175,55,.08); color: #f5d76e; font-weight: 800; }
   .copy-stack { display: grid; gap: 0.7rem; }
@@ -225,15 +226,34 @@ const tocGroups = [
   .boss-card > img { border: 1px solid #444; border-radius: 50%; object-fit: cover; }
   .appearance-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.7rem; }
   .appearance-list span { padding: 0.2rem 0.5rem; border: 1px solid #4b421f; border-radius: 999px; color: #d8c575; font-size: 0.72rem; font-weight: 800; }
-  .table-scroll { overflow-x: auto; }
-  table { width: 100%; min-width: 680px; border-collapse: collapse; color: #d5d5d5; font-size: 0.82rem; }
-  th, td { padding: 0.65rem; border: 1px solid #333; text-align: center; }
-  thead th { background: #181818; color: #d4af37; }
-  .table-hero { width: 2.65rem; height: 2.65rem; border: 1px solid #444; border-radius: 50%; object-fit: cover; }
-  .table-rank-icon { width: 2.65rem; height: 2.65rem; object-fit: contain; }
-  .table-ability, .table-equipment { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; }
-  .table-ability img { border: 1px solid #444; border-radius: 7px; }
+  .table-scroll { width: 100%; margin: 0.55rem 0 0.9rem; overflow-x: auto; border: 1px solid #333; border-radius: 8px; }
+  .table-scroll:focus-visible { border-color: #d4af37; outline: none; }
+  table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; background: #151515; color: #d5d5d5; font-size: 0.78rem; line-height: 1.45; }
+  th, td { padding: 0.65rem 0.7rem; border-bottom: 1px solid #303030; text-align: left; vertical-align: top; }
+  thead th { background: #252525; color: #d4af37; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .table-hero, .table-ability, .table-equipment { display: flex; align-items: center; }
+  .table-hero { min-width: 0; }
+  .table-hero img { width: 2.65rem; height: 2.65rem; flex: 0 0 auto; border: 1px solid #444; border-radius: 50%; object-fit: cover; }
+  .table-rank-icon { display: block; width: 2.65rem; height: 2.65rem; object-fit: contain; }
+  .table-ability { gap: 0.2rem; }
+  .table-equipment { gap: 0.15rem; }
+  .table-ability img { display: block; width: 2.4rem; height: 2.4rem; border: 1px solid #444; border-radius: 7px; object-fit: cover; }
+  .table-ability strong, .table-equipment strong { color: #f5f5f5; font-size: 0.8rem; }
   .replay-gap { margin-top: 1rem; padding: 0.75rem 0.85rem; border-left: 3px solid #666; background: #121212; }
   @media (max-width: 900px) { .toc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tip-list { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .guide-panel { margin-bottom: 2rem; padding: 1rem; } .toc-grid { grid-template-columns: 1fr; } .overview-card { grid-template-columns: 1fr; padding: 0.9rem; } .stage-card, .boss-card { grid-template-columns: 1fr; } summary { align-items: flex-start; } }
+  @media (max-width: 700px) {
+    .guide-panel { margin-bottom: 2rem; padding: 1rem; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .overview-card { grid-template-columns: 1fr; padding: 0.9rem; }
+    .stage-card, .boss-card { grid-template-columns: 1fr; }
+    summary { align-items: flex-start; }
+    th, td { padding: 0.5rem 0.25rem; }
+    thead th { font-size: 0.61rem; letter-spacing: 0; }
+    th:nth-child(1), td:nth-child(1), th:nth-child(2), td:nth-child(2) { width: 18%; }
+    th:nth-child(3), td:nth-child(3), th:nth-child(4), td:nth-child(4) { width: 32%; }
+    .table-hero img, .table-rank-icon { width: 2.35rem; height: 2.35rem; }
+    .table-ability img { width: 2.1rem; height: 2.1rem; }
+    .table-ability strong { font-size: 0.72rem; }
+  }
 </style>
