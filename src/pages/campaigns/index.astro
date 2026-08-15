@@ -2,6 +2,7 @@
 import CampaignCard from "../../components/campaign/CampaignCard.astro";
 import CampaignGuideGrid from "../../components/campaign/CampaignGuideGrid.astro";
 import CampaignHero from "../../components/campaign/CampaignHero.astro";
+import RecommendedInvestmentGrid from "../../components/campaign/RecommendedInvestmentGrid.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -89,6 +90,11 @@ const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysa
           and reach Elite Campaigns with the smallest roster investment possible.
         </p>
       </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="recommended-investment-heading">
+      <h2 id="recommended-investment-heading">Recommended Investment</h2>
+      <RecommendedInvestmentGrid />
     </section>
 
     <section class="content-section related-section" aria-labelledby="related-guides-heading">

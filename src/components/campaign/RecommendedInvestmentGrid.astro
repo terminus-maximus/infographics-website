@@ -1,0 +1,221 @@
+---
+import { characterReferences, rankReferences } from "../../lib/campaigns";
+import {
+  getRequiredRecommendationCampaigns,
+  type RequiredRecommendation,
+} from "../../data/campaigns/requiredRecommendations";
+import {
+  getEquipmentRecommendationsForCampaign,
+  type EquipmentRecommendation,
+} from "../../data/campaigns/equipmentRecommendations";
+import EquipmentBadge from "./EquipmentBadge.astro";
+
+type InvestmentRow = RequiredRecommendation & { equipment: EquipmentRecommendation };
+
+const campaigns = getRequiredRecommendationCampaigns().map((campaign) => {
+  const equipmentByHero = Object.fromEntries(
+    getEquipmentRecommendationsForCampaign(campaign.url).map((recommendation) => [
+      recommendation.terminusName,
+      recommendation,
+    ]),
+  );
+
+  return {
+    ...campaign,
+    rows: campaign.recommendations.map((recommendation): InvestmentRow => {
+      const equipment = equipmentByHero[recommendation.terminusName];
+      if (!equipment) {
+        throw new Error(
+          `Missing equipment recommendation for ${recommendation.terminusName} at ${campaign.url}.`,
+        );
+      }
+      return { ...recommendation, equipment };
+    }),
+  };
+});
+---
+
+<div class="investment-groups">
+  {campaigns.map((campaign) => (
+    <section class="campaign-investment" aria-labelledby={`investment-${campaign.url.split("/").at(-1)}`}>
+      <h3 id={`investment-${campaign.url.split("/").at(-1)}`}>
+        <a href={`${campaign.url}/`}>{campaign.name}</a>
+      </h3>
+
+      <div class="table-scroll" tabindex="0" aria-label={`${campaign.name} recommended investment table`}>
+        <table>
+          <thead>
+            <tr>
+              <th class="icon-column" scope="col" aria-label="Hero icon"></th>
+              <th scope="col"><span>Normal</span><span>Rank</span></th>
+              <th scope="col"><span>Elite</span><span>Rank</span></th>
+              <th scope="col"><span>Elite</span><span>Active</span></th>
+              <th scope="col"><span>Elite</span><span>Passive</span></th>
+              <th scope="col"><span>Elite</span><span>Weapon</span></th>
+              <th scope="col"><span>Elite</span><span>Defense</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            {campaign.rows.map((row) => {
+              const character = characterReferences[row.characterId];
+              const normalRank = rankReferences[row.normal.rankId];
+              const eliteRank = rankReferences[row.elite.rankId];
+
+              return (
+                <tr>
+                  <td class="hero-icon-cell">
+                    <img src={character.portrait} alt={`${row.terminusName} portrait`} width="52" height="52" loading="lazy" />
+                  </td>
+                  <td>
+                    <span class="rank-target" title={normalRank.name} aria-label={normalRank.name}>
+                      <img src={normalRank.badge} alt="" width="42" height="42" loading="lazy" />
+                    </span>
+                  </td>
+                  <td>
+                    <span class="rank-target" title={eliteRank.name} aria-label={eliteRank.name}>
+                      <img src={eliteRank.badge} alt="" width="42" height="42" loading="lazy" />
+                    </span>
+                  </td>
+                  <td class="ability-target">{row.elite.active}</td>
+                  <td class="ability-target">{row.elite.passive}</td>
+                  {(["weapon", "defense"] as const).map((slot) => {
+                    const equipment = row.equipment.elite[slot];
+                    return (
+                      <td>
+                        <span class="equipment-target">
+                          <EquipmentBadge equipment={equipment} size={42} />
+                          <strong>{equipment.rank}</strong>
+                        </span>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  ))}
+</div>
+
+<style>
+  .investment-groups {
+    display: grid;
+    gap: 1.75rem;
+  }
+
+  .campaign-investment h3 {
+    margin: 0 0 0.65rem;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+  }
+
+  .campaign-investment h3 a {
+    color: inherit;
+    text-decoration-color: #66551f;
+    text-underline-offset: 0.2em;
+  }
+
+  .campaign-investment h3 a:hover,
+  .campaign-investment h3 a:focus-visible {
+    color: #f5d76e;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #121212;
+  }
+
+  .table-scroll:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    color: #cccccc;
+    font-size: 0.84rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.7rem;
+    border-bottom: 1px solid #2b2b2b;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  thead th {
+    color: #d4af37;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    line-height: 1.25;
+  }
+
+  thead th > span {
+    display: block;
+  }
+
+  tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+
+  tbody tr:hover {
+    background: rgba(212, 175, 55, 0.045);
+  }
+
+  .icon-column {
+    width: 4.5rem;
+  }
+
+  .hero-icon-cell img {
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: 0 auto;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: #1e1e1e;
+    object-fit: cover;
+  }
+
+  .rank-target,
+  .equipment-target {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .rank-target img {
+    display: block;
+    width: 2.625rem;
+    height: 2.625rem;
+    object-fit: contain;
+  }
+
+  .ability-target,
+  .equipment-target strong {
+    color: #f5f5f5;
+    font-weight: 800;
+  }
+
+  @media (max-width: 700px) {
+    .investment-groups {
+      gap: 1.5rem;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 0.6rem;
+    }
+  }
+</style>

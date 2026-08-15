@@ -22,6 +22,12 @@ export type RequiredRecommendation = {
   elite: { rankId: string; active: string; passive: string };
 };
 
+export type RequiredRecommendationCampaign = {
+  name: string;
+  url: string;
+  recommendations: RequiredRecommendation[];
+};
+
 const characterIdByShortName = Object.fromEntries(
   Object.entries(characterSource.characters).map(([characterId, character]) => [character.shortName, characterId]),
 ) as Record<string, string>;
@@ -47,3 +53,16 @@ export const getRequiredRecommendationsForCampaign = (campaignUrl: string): Requ
         passive: row.Passive_Elite,
       },
     }));
+
+export const getRequiredRecommendationCampaigns = (): RequiredRecommendationCampaign[] => {
+  const campaigns = new Map<string, { name: string; url: string }>();
+
+  (requiredRecommendationsSource as RequiredRecommendationRow[]).forEach((row) => {
+    if (!campaigns.has(row.URL)) campaigns.set(row.URL, { name: row.Campaign, url: row.URL });
+  });
+
+  return [...campaigns.values()].map((campaign) => ({
+    ...campaign,
+    recommendations: getRequiredRecommendationsForCampaign(campaign.url),
+  }));
+};
