@@ -1,0 +1,2246 @@
+{
+  "id": "octarius",
+  "name": "Octarius",
+  "updatedAt": "2026-08-15",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "wHPqvoAcAHQ",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:32",
+              "timestampSeconds": 32,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "HY4o_BdSX-s",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:35",
+              "timestampSeconds": 35,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "HY4o_BdSX-s",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:40",
+              "timestampSeconds": 160,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "HY4o_BdSX-s",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "7:45",
+              "timestampSeconds": 465,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "HY4o_BdSX-s",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "10:20",
+              "timestampSeconds": 620,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "HY4o_BdSX-s",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:00",
+              "timestampSeconds": 780,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "CFsLdGnzct4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "CFsLdGnzct4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:20",
+              "timestampSeconds": 260,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "CFsLdGnzct4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:30",
+              "timestampSeconds": 390,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "CFsLdGnzct4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "11:15",
+              "timestampSeconds": 675,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "CFsLdGnzct4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "15:50",
+              "timestampSeconds": 950,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "vsoXW4fS8m0",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:55",
+              "timestampSeconds": 55,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "vsoXW4fS8m0",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "6:35",
+              "timestampSeconds": 395,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "vsoXW4fS8m0",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "12:25",
+              "timestampSeconds": 745,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "vsoXW4fS8m0",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "16:10",
+              "timestampSeconds": 970,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "V3lSa2A5BLY",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "RyfaJyjs9IA",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "ic5i5Yu70bY",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "-Ay1-lTjdoo",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "Bo17MLhHt_8",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:24",
+              "timestampSeconds": 144,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "yvWC4Ho7M20",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "evidence": [
+            {
+              "videoId": "819KGzLqymU",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "Bo17MLhHt_8",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "4:30",
+              "timestampSeconds": 270,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "SQoN5ufjukw",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "XJO_zjKbelI",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:08",
+              "timestampSeconds": 8,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "IrmZTRdBMsU",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "DKZHdWZFL6g",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "1:44",
+              "timestampSeconds": 104,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "WJLS9eomqlM",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "Dd2x5aJdqUg",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "AJG8RG1_6qw",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "gMd4Mkw1onQ",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "nguIcHDeLQ4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "26upd3FpSfc",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "HESzrTp-dG8",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "JlnnIY3XGK0",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "2tAnNyhGQV8",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "j1cqoYsuG80",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "VBL5K9d0YrE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "0XgJiG2BlPA",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "U2ATMIr-biw",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "jzwhjIH7s9I",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksRuntherd",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "zey7myGEicU",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "hKkMU3Je7zQ",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "akaCNtO2NDY",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "7frRkh0on6o",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "uSLUrfagqMo",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "evidence": [
+            {
+              "videoId": "pt5w7UOA5fs",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 32,
+          "evidence": [
+            {
+              "videoId": "VCTtHNtWoNk",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:17",
+              "timestampSeconds": 17,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "evidence": [
+            {
+              "videoId": "u-2UJA6dOww",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:13",
+              "timestampSeconds": 13,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "3:45",
+              "timestampSeconds": 225,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "5:35",
+              "timestampSeconds": 335,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            },
+            {
+              "videoId": "bMUbM62AHBA",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Iron1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:12",
+              "timestampSeconds": 12,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "0F2vumFVNzA",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            },
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "8:50",
+              "timestampSeconds": 530,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "13:50",
+              "timestampSeconds": 830,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "17:50",
+              "timestampSeconds": 1070,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            },
+            {
+              "videoId": "g4V_OZ3Vus4",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "21:45",
+              "timestampSeconds": 1305,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "1VV1BpqAVPE",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "25:15",
+              "timestampSeconds": 1515,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            },
+            {
+              "videoId": "WNQUj1F3v5A",
+              "roster": [
+                {
+                  "characterId": "orksWarboss",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksBigMek",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksKillaKan",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "orksNob",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; source-specific native stage/start/Victory evidence; three-pass collection"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "wHPqvoAcAHQ": {
+      "title": "Brother Jaeger boss fight (Octarius 60) #tacticus #warhammer40k #achievement #subscribe",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=wHPqvoAcAHQ"
+    },
+    "HY4o_BdSX-s": {
+      "title": "Octarius 61-65 | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=HY4o_BdSX-s"
+    },
+    "CFsLdGnzct4": {
+      "title": "Octarius 65-70 | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=CFsLdGnzct4"
+    },
+    "vsoXW4fS8m0": {
+      "title": "Octarius 71-75 (Attempt One) | Warhammer 40,000: Tacticus",
+      "creator": "LordBuzzKillington",
+      "url": "https://www.youtube.com/watch?v=vsoXW4fS8m0"
+    },
+    "V3lSa2A5BLY": {
+      "title": "Octarius 75 B2 units #tacticus #gameplay",
+      "creator": "ElieR",
+      "url": "https://www.youtube.com/watch?v=V3lSa2A5BLY"
+    },
+    "RyfaJyjs9IA": {
+      "title": "Octarius Elite Stage 1 | 3 Stars Clear | Orcs VS Black Templar! | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=RyfaJyjs9IA"
+    },
+    "ic5i5Yu70bY": {
+      "title": "Octarius Elite Stage 2 | 3 Stars Clear | Orcs VS Black Templar! | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=ic5i5Yu70bY"
+    },
+    "-Ay1-lTjdoo": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 3 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=-Ay1-lTjdoo"
+    },
+    "Bo17MLhHt_8": {
+      "title": "Warhammer: Tacticus - Octarius Elite Battle Campaign (1-8) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=Bo17MLhHt_8"
+    },
+    "yvWC4Ho7M20": {
+      "title": "Octarius Elite Stage 5 | 3 Stars Clear | Orcs VS Black Templar! | Warhammer: Tacticus",
+      "creator": "StoryTeller",
+      "url": "https://www.youtube.com/watch?v=yvWC4Ho7M20"
+    },
+    "819KGzLqymU": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 6 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=819KGzLqymU"
+    },
+    "SQoN5ufjukw": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 8 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=SQoN5ufjukw"
+    },
+    "XJO_zjKbelI": {
+      "title": "warhammer 40.000 Tacticus octarius Elite Mission 9 ( 3 Stars )",
+      "creator": "rancidbob",
+      "url": "https://www.youtube.com/watch?v=XJO_zjKbelI"
+    },
+    "IrmZTRdBMsU": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 10 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=IrmZTRdBMsU"
+    },
+    "DKZHdWZFL6g": {
+      "title": "Warhammer: Tacticus - Octarius Elite Battle Campaign (9-16) Missions 100%",
+      "creator": "AlterVillain",
+      "url": "https://www.youtube.com/watch?v=DKZHdWZFL6g"
+    },
+    "WJLS9eomqlM": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 12 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=WJLS9eomqlM"
+    },
+    "Dd2x5aJdqUg": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 13 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Dd2x5aJdqUg"
+    },
+    "AJG8RG1_6qw": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 14 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=AJG8RG1_6qw"
+    },
+    "gMd4Mkw1onQ": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 15 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=gMd4Mkw1onQ"
+    },
+    "nguIcHDeLQ4": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 16 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nguIcHDeLQ4"
+    },
+    "26upd3FpSfc": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 17 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=26upd3FpSfc"
+    },
+    "HESzrTp-dG8": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 18 - warhammer 40k",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=HESzrTp-dG8"
+    },
+    "JlnnIY3XGK0": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 19 - warhammer 40k",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=JlnnIY3XGK0"
+    },
+    "2tAnNyhGQV8": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 20 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=2tAnNyhGQV8"
+    },
+    "j1cqoYsuG80": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 21 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=j1cqoYsuG80"
+    },
+    "VBL5K9d0YrE": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 22 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=VBL5K9d0YrE"
+    },
+    "0XgJiG2BlPA": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 23 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=0XgJiG2BlPA"
+    },
+    "U2ATMIr-biw": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 24 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=U2ATMIr-biw"
+    },
+    "jzwhjIH7s9I": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 25 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=jzwhjIH7s9I"
+    },
+    "zey7myGEicU": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 26 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=zey7myGEicU"
+    },
+    "hKkMU3Je7zQ": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 27 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=hKkMU3Je7zQ"
+    },
+    "akaCNtO2NDY": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 28 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=akaCNtO2NDY"
+    },
+    "7frRkh0on6o": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 29 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=7frRkh0on6o"
+    },
+    "uSLUrfagqMo": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 30 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=uSLUrfagqMo"
+    },
+    "pt5w7UOA5fs": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 31 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=pt5w7UOA5fs"
+    },
+    "VCTtHNtWoNk": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 32 Jeager - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=VCTtHNtWoNk"
+    },
+    "u-2UJA6dOww": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 33 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=u-2UJA6dOww"
+    },
+    "1VV1BpqAVPE": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Octarius Zone 5 (Helbrecht)",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=1VV1BpqAVPE"
+    },
+    "bMUbM62AHBA": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 35 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=bMUbM62AHBA"
+    },
+    "0F2vumFVNzA": {
+      "title": "TACTICUS - Octarius Elite: BATTLE 36 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=0F2vumFVNzA"
+    },
+    "g4V_OZ3Vus4": {
+      "title": "octarius elite 38 3 medal",
+      "creator": "feedmesoon",
+      "url": "https://www.youtube.com/watch?v=g4V_OZ3Vus4"
+    },
+    "WNQUj1F3v5A": {
+      "title": "WH40k Tacticus - Octarius Elite 40 3* - Slaying Helbrecht",
+      "creator": "KaiserArctan - Tacticus",
+      "url": "https://www.youtube.com/watch?v=WNQUj1F3v5A"
+    }
+  }
+}

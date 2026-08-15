@@ -101,6 +101,15 @@ export const graphics: Graphic[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/fall-of-cadia-mirror")
     },
     {
+      title: "Octarius Campaign Guide",
+      href: "/campaigns/octarius/",
+      description: "Ork teams, investment targets, difficult stages, and replay evidence for Octarius.",
+      image: "/images/octarius.png",
+      thumbnail: "/images/thumbnails/octarius-thumb.png",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/octarius")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

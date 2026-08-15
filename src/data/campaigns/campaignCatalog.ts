@@ -50,3 +50,14 @@ export const fallOfCadiaMirrorPage = {
   featuredWebImage: "/images/web/fall-of-cadia-mirror.webp",
   featuredImageAlt: "Tacticus Fall of Cadia Mirror Campaign Guide infographic",
 };
+
+export const octariusPage = {
+  title: "Tacticus Octarius Campaign Guide",
+  subtitle:
+    "Beat every Octarius Normal and Elite stage with recommended Ork teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Octarius campaign guide with Normal and Elite Ork teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/octarius.png",
+  featuredWebImage: "/images/web/octarius.webp",
+  featuredImageAlt: "Tacticus Octarius Campaign Guide infographic",
+};

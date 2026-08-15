@@ -142,5 +142,41 @@
     "Passive_Normal": "17",
     "Active_Elite": "35",
     "Passive_Elite": "26"
+  },
+  {
+    "Campaign": "Octarius",
+    "URL": "/campaigns/octarius",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Boss",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": "26",
+    "Passive_Normal": "8+",
+    "Active_Elite": "35",
+    "Passive_Elite": "8+"
+  },
+  {
+    "Campaign": "Octarius",
+    "URL": "/campaigns/octarius",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Gibba",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "17",
+    "Passive_Normal": "8+",
+    "Active_Elite": "26+",
+    "Passive_Elite": "17+"
+  },
+  {
+    "Campaign": "Octarius",
+    "URL": "/campaigns/octarius",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Snappa",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "1",
+    "Passive_Normal": "1",
+    "Active_Elite": "1",
+    "Passive_Elite": "8+"
   }
 ]

@@ -11,6 +11,7 @@ import replaySource from "../data/campaigns/indomitus.json";
 import indomitusMirrorReplaySource from "../data/campaigns/indomitus-mirror.json";
 import fallOfCadiaReplaySource from "../data/campaigns/fall-of-cadia.json";
 import fallOfCadiaMirrorReplaySource from "../data/campaigns/fall-of-cadia-mirror.json";
+import octariusReplaySource from "../data/campaigns/octarius.json";
 
 declare const process: { cwd: () => string };
 
@@ -377,6 +378,7 @@ export const indomitusCampaign = validateCampaignGuide(replaySource);
 export const indomitusMirrorCampaign = validateCampaignGuide(indomitusMirrorReplaySource);
 export const fallOfCadiaCampaign = validateCampaignGuide(fallOfCadiaReplaySource);
 export const fallOfCadiaMirrorCampaign = validateCampaignGuide(fallOfCadiaMirrorReplaySource);
+export const octariusCampaign = validateCampaignGuide(octariusReplaySource);
 
 const allEvidence = indomitusCampaign.modes.flatMap((mode) => mode.stages.flatMap((stage) => stage.evidence));
 export const campaignAudit = {
