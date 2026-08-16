@@ -160,7 +160,7 @@ export const graphics: Graphic[] = [
     {
       title: "Farsight LRE",
       href: "/lre/farsight",
-      description: "Be ready for the Farsight Legendary on Nov 15th",
+      description: "Be ready for the Tau Legendary on Nov 15th",
       image: "/images/lre.png",
       thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
