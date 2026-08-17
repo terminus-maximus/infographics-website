@@ -208,5 +208,47 @@
     "Elite_1_Rank": 1,
     "Elite_2_Icon": "Snappa-2-Rare-Plated-Greaves.webp",
     "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Godswyl",
+    "Normal_1_Icon": "Godswyl-1-Rare-Combat-Knife.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Godswyl-2-Rare-Sanctified-MK-X-Pauldron.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Godswyl-1-Rare-Combat-Knife.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Godswyl-2-Rare-Sanctified-MK-X-Pauldron.webp",
+    "Elite_2_Rank": 5
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Burchard",
+    "Normal_1_Icon": "Burchard-1-Rare-Sanctified-Bolt-Pistol.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Burchard-2-Rare-Plated-Greaves.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Burchard-1-Epic-Bolt-Pistol.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Burchard-2-Epic-Plated-Greaves.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Thoread",
+    "Normal_1_Icon": "Thoread-1-Uncommon-Bolt-Pistol.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Thoread-2-Uncommon-MK-X-Pauldron.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Thoread-1-Uncommon-Bolt-Pistol.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Thoread-2-Uncommon-MK-X-Pauldron.webp",
+    "Elite_2_Rank": 1
   }
 ]

@@ -1,0 +1,134 @@
+---
+import CampaignHero from "../../../components/campaign/CampaignHero.astro";
+import CampaignCard from "../../../components/campaign/CampaignCard.astro";
+import OctariusMirrorGuideContent from "../../../components/campaign/OctariusMirrorGuideContent.astro";
+import RankBadge from "../../../components/campaign/RankBadge.astro";
+import StageEvidenceTable from "../../../components/campaign/StageEvidenceTable.astro";
+import Footer from "../../../components/Footer.astro";
+import Header from "../../../components/Header.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { octariusMirrorPage } from "../../../data/campaigns/campaignCatalog";
+import { graphics } from "../../../data/graphics";
+import { characterReferences, octariusMirrorCampaign, rankReferences } from "../../../lib/campaigns";
+
+const allEvidence = octariusMirrorCampaign.modes.flatMap((mode) =>
+  mode.stages.flatMap((stage) =>
+    stage.evidence.map((evidence) => ({ modeId: mode.id, stageNumber: stage.number, evidence })),
+  ),
+);
+const characterStatistics = new Map<string, { eliteStages: Set<number>; normalStages: Set<number>; highestRankId: string }>();
+allEvidence.forEach(({ modeId, stageNumber, evidence }) => {
+  evidence.roster.forEach(({ characterId, rankId }) => {
+    const current = characterStatistics.get(characterId);
+    const eliteStages = new Set(current?.eliteStages || []);
+    const normalStages = new Set(current?.normalStages || []);
+    if (modeId === "elite") eliteStages.add(stageNumber);
+    if (modeId === "normal") normalStages.add(stageNumber);
+    characterStatistics.set(characterId, {
+      eliteStages,
+      normalStages,
+      highestRankId: !current || rankReferences[rankId].sort > rankReferences[current.highestRankId].sort ? rankId : current.highestRankId,
+    });
+  });
+});
+
+const requiredCharacterIds = ["templSwordBrother", "templAggressor", "templAncient"];
+const requiredCharacterIdSet = new Set(requiredCharacterIds);
+const supportingCharacterIds = [...characterStatistics.keys()]
+  .filter((characterId) => !requiredCharacterIdSet.has(characterId))
+  .sort((left, right) => {
+    const leftStatistics = characterStatistics.get(left)!;
+    const rightStatistics = characterStatistics.get(right)!;
+    const stageDifference = rightStatistics.eliteStages.size + rightStatistics.normalStages.size - leftStatistics.eliteStages.size - leftStatistics.normalStages.size;
+    return stageDifference || characterReferences[left].shortName.localeCompare(characterReferences[right].shortName);
+  });
+const statisticCharacterIds = [...requiredCharacterIds, ...supportingCharacterIds];
+const rankMap = Object.fromEntries(Object.values(rankReferences).map((rank) => [rank.id, { name: rank.name, sort: rank.sort, badge: rank.badge }]));
+const relatedGuides = graphics.filter((guide) => ["/campaigns/", "/beginner-guide", "/elite-campaigns"].includes(guide.href));
+---
+
+<Layout title={octariusMirrorPage.title} description={octariusMirrorPage.description} image={octariusMirrorPage.featuredWebImage} url="https://terminusmaximus.com/campaigns/octarius-mirror/">
+  <Header />
+  <main>
+    <CampaignHero title={octariusMirrorPage.title} subtitle={octariusMirrorPage.subtitle} updatedAt={octariusMirrorCampaign.updatedAt} backHref="/campaigns/" backLabel="All Campaign Guides" />
+
+    <section class="featured-section" aria-labelledby="featured-infographic-heading">
+      <h2 id="featured-infographic-heading">Featured Infographic</h2>
+      <a class="image-link" href={octariusMirrorPage.featuredImage} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title="Octarius Mirror Campaign Guide" data-ga4-link-source="image">
+        <img class="infographic" src={octariusMirrorPage.featuredWebImage} alt={octariusMirrorPage.featuredImageAlt} loading="lazy" />
+      </a>
+      <p class="caption"><a href={octariusMirrorPage.featuredImage} target="_blank" rel="noopener noreferrer">CLICK FULL-SIZE INFOGRAPHIC</a></p>
+    </section>
+
+    <OctariusMirrorGuideContent characters={characterReferences} modes={octariusMirrorCampaign.modes} videos={octariusMirrorCampaign.videos} ranks={rankReferences} />
+
+    <StageEvidenceTable modes={octariusMirrorCampaign.modes} videos={octariusMirrorCampaign.videos} characters={characterReferences} ranks={rankReferences} requiredCharacterIds={requiredCharacterIds} campaignName="Octarius Mirror">
+      <div class="filter-introduction" slot="filter-introduction">
+        <p class="filter-callout"><strong>Stuck on a specific stage?</strong> Select the difficulty and stage number to compare team compositions, hero ranks, and successful strategies.</p>
+        <p>Every recommendation on this page is supported by campaign research, documented clears, or the Terminus Maximus Campaign Replay Library. Use the filters below to find successful Octarius Mirror runs for any available Normal or Elite stage.</p>
+        <p>Compare teams carefully. A low-rank required trio may depend on stronger equipment, Isabella, a heavily developed Imperial carry, favorable enemy movement, or exact turn-by-turn positioning. The most useful replay is the one whose full five-hero roster and investment most closely resemble your own.</p>
+      </div>
+    </StageEvidenceTable>
+
+    <section class="statistics-section" id="campaign-replay-statistics" aria-labelledby="campaign-statistics-heading" data-campaign-statistics data-rank-map={JSON.stringify(rankMap)}>
+      <h2 id="campaign-statistics-heading">Campaign Replay Statistics</h2>
+      <p class="statistics-note">These ranks change as you apply Filters</p>
+      <div class="statistics-grid" data-statistics-grid>
+        {statisticCharacterIds.map((characterId) => {
+          const character = characterReferences[characterId];
+          const statistics = characterStatistics.get(characterId)!;
+          const rank = rankReferences[statistics.highestRankId];
+          const isSupporting = !requiredCharacterIdSet.has(characterId);
+          return (
+            <article class:list={["stat-card", "character-stat", { "supporting-stat": isSupporting }]} data-character-stat data-character-id={characterId} data-character-name={character.shortName} data-stat-group={isSupporting ? "supporting" : "required"} data-supporting-stat-trigger={isSupporting ? characterId : undefined} role={isSupporting ? "button" : undefined} tabindex={isSupporting ? 0 : undefined} aria-pressed={isSupporting ? "false" : undefined} aria-label={isSupporting ? `Require ${character.shortName} in Supporting Heroes` : undefined}>
+              <img src={character.portrait} alt={`${character.name} portrait`} width="58" height="58" loading="lazy" />
+              <div class="character-summary"><strong>{character.shortName}</strong><small data-stage-counts><span data-elite-stage-count>Elite: {statistics.eliteStages.size} {statistics.eliteStages.size === 1 ? "stage" : "stages"}</span><span data-normal-stage-count>Normal: {statistics.normalStages.size} {statistics.normalStages.size === 1 ? "stage" : "stages"}</span></small></div>
+              <div class="rank-summary"><span>Max Rank</span><RankBadge rank={rank} /></div>
+            </article>
+          );
+        })}
+      </div>
+      <p class="statistics-empty" data-statistics-empty hidden>No character rank observations match these filters.</p>
+    </section>
+
+    <section class="related-section" id="related-guides" aria-labelledby="related-guides-heading">
+      <h2 id="related-guides-heading">Related Guides</h2>
+      <div class="related-grid">{relatedGuides.map((guide) => <CampaignCard {...guide} />)}</div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) { margin: 0; overflow-x: hidden; background: #121212; color: #f5f5f5; font-family: "Lexend", sans-serif; }
+  main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  .featured-section, .statistics-section, .related-section { margin-bottom: 3rem; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; }
+  .statistics-section, .related-section { scroll-margin-top: 6rem; }
+  h2 { margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #333; color: #d4af37; }
+  .image-link { display: block; }
+  .infographic { display: block; width: 100%; max-width: 700px; height: auto; margin: 0 auto; border-radius: 8px; }
+  .caption { margin: 1rem 0 0; text-align: center; }
+  .caption a, .related-section a { color: #d4af37; font-weight: 700; text-decoration: none; }
+  .caption a:hover, .caption a:focus-visible, .related-section a:hover, .related-section a:focus-visible { color: #f5d76e; text-decoration: underline; outline: none; }
+  .statistics-note { color: #ccc; line-height: 1.7; }
+  .filter-introduction { display: grid; gap: 0.7rem; margin: 0 0 1rem; color: #ccc; line-height: 1.7; }
+  .filter-introduction p { margin: 0; }
+  .filter-callout { padding: 0.75rem 0.9rem; border-left: 3px solid #d4af37; border-radius: 0 7px 7px 0; background: rgba(212,175,55,.08); color: #f5d76e; }
+  .statistics-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .stat-card { display: flex; min-height: 7rem; flex-direction: column; justify-content: center; align-items: center; gap: 0.35rem; padding: 1rem; border: 1px solid #333; border-radius: 10px; background: #121212; text-align: center; }
+  .stat-card[hidden], .statistics-empty[hidden] { display: none; }
+  .character-stat { display: grid; grid-template-columns: auto 1fr auto; text-align: left; }
+  .character-stat > img { width: 3.6rem; height: 3.6rem; border: 1px solid #333; border-radius: 50%; object-fit: cover; }
+  .character-stat span, .character-stat strong, .character-stat small { display: block; }
+  .character-stat strong { color: #d4af37; font-size: 1.4rem; }
+  .character-stat small { margin-top: 0.2rem; color: #999; font-size: 0.7rem; }
+  .supporting-stat { cursor: pointer; transition: border-color .2s ease, background-color .2s ease, transform .2s ease; }
+  .supporting-stat:hover, .supporting-stat:focus-visible, .supporting-stat[aria-pressed="true"] { border-color: #d4af37; background: #181818; outline: none; }
+  .supporting-stat:hover, .supporting-stat:focus-visible { transform: translateY(-2px); }
+  .rank-summary { display: flex; align-items: center; flex-direction: column; gap: 0.15rem; text-align: center; }
+  .rank-summary > span { color: #999; font-size: 0.75rem; line-height: 1.2; }
+  .statistics-empty { margin: 0; padding: 1rem; border: 1px solid #333; border-radius: 8px; color: #ccc; text-align: center; }
+  .related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  @media (max-width: 900px) { .statistics-grid, .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 700px) { main { padding: 1.25rem; } .featured-section, .statistics-section, .related-section { margin-bottom: 2rem; padding: 1rem; } .statistics-grid, .related-grid { grid-template-columns: 1fr; } }
+</style>

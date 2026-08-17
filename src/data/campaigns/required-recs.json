@@ -178,5 +178,41 @@
     "Passive_Normal": "1",
     "Active_Elite": "1",
     "Passive_Elite": "8+"
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Godswyl",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Silver 1",
+    "Active_Normal": "8+",
+    "Passive_Normal": "17+",
+    "Active_Elite": "17+",
+    "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Burchard",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 1",
+    "Active_Normal": "26",
+    "Passive_Normal": "26",
+    "Active_Elite": "26+",
+    "Passive_Elite": "26+"
+  },
+  {
+    "Campaign": "Octarius Mirror",
+    "URL": "/campaigns/octarius-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Thoread",
+    "Rank_Normal": "Bronze 2",
+    "Rank_Elite": "Bronze 2",
+    "Active_Normal": "9+",
+    "Passive_Normal": "17",
+    "Active_Elite": "17",
+    "Passive_Elite": "17"
   }
 ]

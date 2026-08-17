@@ -91,3 +91,4 @@ export const getIndomitusMirrorEquipmentRecommendation = equipmentRecommendation
 export const getFallOfCadiaEquipmentRecommendation = equipmentRecommendationGetter("/campaigns/fall-of-cadia");
 export const getFallOfCadiaMirrorEquipmentRecommendation = equipmentRecommendationGetter("/campaigns/fall-of-cadia-mirror");
 export const getOctariusEquipmentRecommendation = equipmentRecommendationGetter("/campaigns/octarius");
+export const getOctariusMirrorEquipmentRecommendation = equipmentRecommendationGetter("/campaigns/octarius-mirror");

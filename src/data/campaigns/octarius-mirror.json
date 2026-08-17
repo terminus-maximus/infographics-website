@@ -1,0 +1,2681 @@
+{
+  "id": "octarius_mirror",
+  "name": "Octarius Mirror",
+  "updatedAt": "2026-08-17",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "MV6QEVmm3qU",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "QZoenG8Lkuw",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "10:37",
+              "timestampSeconds": 637,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "CBJcjSj5AZQ",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "QupbNgYSGcs",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:44",
+              "timestampSeconds": 44,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "wSaHFAcY_Sw",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review; exact-stage context with conservative unverified start"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:42",
+              "timestampSeconds": 102,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "miZ8CVTXN7A",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:13",
+              "timestampSeconds": 133,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "VHbaobtywAM",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:02",
+              "timestampSeconds": 182,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "qMbp9KKJHGs",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:50",
+              "timestampSeconds": 230,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "_VsPjrgNUAM",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:39",
+              "timestampSeconds": 279,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "vMkokcPcex0",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:17",
+              "timestampSeconds": 317,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "nN0c6sAxMcY",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "6:05",
+              "timestampSeconds": 365,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "5x2jQQpi9fE",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:12",
+              "timestampSeconds": 432,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "1Gu4T3pfEMI",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:28",
+              "timestampSeconds": 508,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:57",
+              "timestampSeconds": 537,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "-0f97OAWRGc",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "9:47",
+              "timestampSeconds": 587,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "L4gZ-4Uwcs0",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "10:47",
+              "timestampSeconds": 647,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "435XApjekr8",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "TikLwvadZPs",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review; exact-stage context with conservative unverified start"
+            },
+            {
+              "videoId": "w_9s7W9A1ko",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "12:03",
+              "timestampSeconds": 723,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "UQhXrIoS9ZE",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            },
+            {
+              "videoId": "HGPiunemC7Q",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:15",
+              "timestampSeconds": 15,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "SSVoLk12gng",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            },
+            {
+              "videoId": "HGPiunemC7Q",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Stone1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "2:59",
+              "timestampSeconds": 179,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "TFRh3pg3WaI",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "eiMekR-SSZc",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "7JP6_cSEKn0",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "evidence": [
+            {
+              "videoId": "i-nCC57b09U",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "afjm2USjLVc",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "S9Q9MetUAps",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "FyTmctKalIw",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "5iHj2Wt9EQQ",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "Ryg0WDeYf8M",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "rzSUHq8CVzU",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "V643SC2eEuQ",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "1KrSmCvvg0M",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "1ILFN6LP--g",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "U4NgCQ9E1g8",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "pE9fMRoGYQo",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "-7U5VFz2aHA",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review; exact-stage title with conservative unverified start"
+            },
+            {
+              "videoId": "qW728j_iA6U",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "sTQh2JJphCg",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "4LHcJYlKdf8",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "CwOGKF-gBF4",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "eHu6wHLwSmY",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraYarrick",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "TRsoee4pXVE",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "l3y90iS3PxA",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "NRW3_w8XnNQ",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "2QtDTr9_ncM",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "yeK3C87wlrs",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "-BVDykt9iZM",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "qCHWBRHjlbo",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "wX1IbEXRYY8",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptCelestine",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review; exact-stage title with conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "FsbEmho4gKc",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraCalgar",
+                  "rankId": "Diamond3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review; exact-stage context with conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "ziHzjM7PKVo",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review; exact-stage title with conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "evidence": [
+            {
+              "videoId": "UhoJMsZ1O1Q",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review; exact-stage title with conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "wmwd1QxCwn4",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "adeptHospitaller",
+                  "rankId": "Gold2",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "astraOrdnance",
+                  "rankId": "Diamond1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; six evidence/recovery rounds; source-specific three-frame settled Victory review; exact-stage context with conservative unverified start"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "O32AqI8JeD4",
+              "roster": [
+                {
+                  "characterId": "templSwordBrother",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAggressor",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "templAncient",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "ultraCalgar",
+                  "rankId": "Diamond3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "ultraInceptorSgt",
+                  "rankId": "Diamond3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Campaign Replay Research 1.72; five discovery/recovery rounds; source-specific settled Victory roster review; exact-stage title with conservative unverified start"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "MV6QEVmm3qU": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 60 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=MV6QEVmm3qU"
+    },
+    "CBJcjSj5AZQ": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 61 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=CBJcjSj5AZQ"
+    },
+    "VHbaobtywAM": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 65 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=VHbaobtywAM"
+    },
+    "qMbp9KKJHGs": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 66 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qMbp9KKJHGs"
+    },
+    "_VsPjrgNUAM": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 67 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=_VsPjrgNUAM"
+    },
+    "vMkokcPcex0": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 68 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=vMkokcPcex0"
+    },
+    "5x2jQQpi9fE": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 70 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=5x2jQQpi9fE"
+    },
+    "1Gu4T3pfEMI": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 71 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1Gu4T3pfEMI"
+    },
+    "L4gZ-4Uwcs0": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 74 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=L4gZ-4Uwcs0"
+    },
+    "435XApjekr8": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 75 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=435XApjekr8"
+    },
+    "SSVoLk12gng": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 2 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=SSVoLk12gng"
+    },
+    "eiMekR-SSZc": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 4 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=eiMekR-SSZc"
+    },
+    "S9Q9MetUAps": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 8 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=S9Q9MetUAps"
+    },
+    "FyTmctKalIw": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 9 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=FyTmctKalIw"
+    },
+    "5iHj2Wt9EQQ": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 10 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=5iHj2Wt9EQQ"
+    },
+    "Ryg0WDeYf8M": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 11 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Ryg0WDeYf8M"
+    },
+    "rzSUHq8CVzU": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 12 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=rzSUHq8CVzU"
+    },
+    "V643SC2eEuQ": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 13 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=V643SC2eEuQ"
+    },
+    "pE9fMRoGYQo": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 17 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=pE9fMRoGYQo"
+    },
+    "-7U5VFz2aHA": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Octarius 18",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=-7U5VFz2aHA"
+    },
+    "TRsoee4pXVE": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 23 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=TRsoee4pXVE"
+    },
+    "2QtDTr9_ncM": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 26 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=2QtDTr9_ncM"
+    },
+    "qCHWBRHjlbo": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 29 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qCHWBRHjlbo"
+    },
+    "wX1IbEXRYY8": {
+      "title": "Octarius mirror elite 34, 3 stars #tacticus #snowprintstudios #warhammer40k and #showyourstrat",
+      "creator": "92kalvo",
+      "url": "https://www.youtube.com/watch?v=wX1IbEXRYY8"
+    },
+    "ziHzjM7PKVo": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Octarius 36",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=ziHzjM7PKVo"
+    },
+    "UhoJMsZ1O1Q": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Octarius 38",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=UhoJMsZ1O1Q"
+    },
+    "O32AqI8JeD4": {
+      "title": "Octarius Mirror Elite 40",
+      "creator": "DocFloyd",
+      "url": "https://www.youtube.com/watch?v=O32AqI8JeD4"
+    },
+    "QupbNgYSGcs": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 62 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=QupbNgYSGcs"
+    },
+    "wSaHFAcY_Sw": {
+      "title": "Tacticus Octarius Mirror Stage 63 ☆☆☆",
+      "creator": "Aric Ward",
+      "url": "https://www.youtube.com/watch?v=wSaHFAcY_Sw"
+    },
+    "miZ8CVTXN7A": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 64 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=miZ8CVTXN7A"
+    },
+    "nN0c6sAxMcY": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 69 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nN0c6sAxMcY"
+    },
+    "-0f97OAWRGc": {
+      "title": "TACTICUS - Octarius MIRROR: BATTLE 73 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=-0f97OAWRGc"
+    },
+    "TikLwvadZPs": {
+      "title": "Boss Gulgortz boss fight (Octarius Mirror 75) #tacticus #warhammer40k #achievement #subscribe, 39 views - play Short",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=TikLwvadZPs"
+    },
+    "UQhXrIoS9ZE": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 1 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=UQhXrIoS9ZE"
+    },
+    "TFRh3pg3WaI": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 3 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=TFRh3pg3WaI"
+    },
+    "7JP6_cSEKn0": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 5 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=7JP6_cSEKn0"
+    },
+    "i-nCC57b09U": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 6 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=i-nCC57b09U"
+    },
+    "afjm2USjLVc": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 7 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=afjm2USjLVc"
+    },
+    "1KrSmCvvg0M": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 14 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1KrSmCvvg0M"
+    },
+    "1ILFN6LP--g": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 15 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1ILFN6LP--g"
+    },
+    "U4NgCQ9E1g8": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 16 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=U4NgCQ9E1g8"
+    },
+    "qW728j_iA6U": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 18 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qW728j_iA6U"
+    },
+    "sTQh2JJphCg": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 19 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=sTQh2JJphCg"
+    },
+    "4LHcJYlKdf8": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 20 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=4LHcJYlKdf8"
+    },
+    "CwOGKF-gBF4": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 21 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=CwOGKF-gBF4"
+    },
+    "eHu6wHLwSmY": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 22 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=eHu6wHLwSmY"
+    },
+    "l3y90iS3PxA": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 24 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=l3y90iS3PxA"
+    },
+    "NRW3_w8XnNQ": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 25 - warhammer 40k",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=NRW3_w8XnNQ"
+    },
+    "yeK3C87wlrs": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 27 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=yeK3C87wlrs"
+    },
+    "-BVDykt9iZM": {
+      "title": "TACTICUS - Octarius Elite MIRROR: BATTLE 28 - warhammer 40k walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=-BVDykt9iZM"
+    },
+    "FsbEmho4gKc": {
+      "title": "Octarius Mirror Elite 35, 815 views - play Short",
+      "creator": "DocFloyd",
+      "url": "https://www.youtube.com/watch?v=FsbEmho4gKc"
+    },
+    "wmwd1QxCwn4": {
+      "title": "WH40k Tacticus - Campaign Elite Mirror Octarius 39",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=wmwd1QxCwn4"
+    },
+    "HGPiunemC7Q": {
+      "title": "Warhammer 40,000: Tacticus - Gameplay Part 84 - Octarius Mirror Elite 1~4",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=HGPiunemC7Q"
+    },
+    "QZoenG8Lkuw": {
+      "title": "Warhammer Tacticus - Octarius Mirror Campain ep.4 - level 46-60",
+      "creator": "Sneakyy Tacticus",
+      "url": "https://www.youtube.com/watch?v=QZoenG8Lkuw"
+    },
+    "w_9s7W9A1ko": {
+      "title": "Warhammer Tacticus - Octarius Mirror Campain ep.5 - level 61-75",
+      "creator": "Sneakyy Tacticus",
+      "url": "https://www.youtube.com/watch?v=w_9s7W9A1ko"
+    }
+  }
+}

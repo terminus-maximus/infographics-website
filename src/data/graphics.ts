@@ -110,6 +110,15 @@ export const graphics: Graphic[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/octarius")
     },
     {
+      title: "Octarius Mirror Guide",
+      href: "/campaigns/octarius-mirror/",
+      description: "Imperial teams, investment targets, difficult stages, and replay evidence for Octarius Mirror.",
+      image: "/images/octarius-mirror.png",
+      thumbnail: "/images/thumbnails/octarius-mirror-thumb.png",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/octarius-mirror")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

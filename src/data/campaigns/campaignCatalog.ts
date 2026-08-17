@@ -61,3 +61,14 @@ export const octariusPage = {
   featuredWebImage: "/images/web/octarius.webp",
   featuredImageAlt: "Tacticus Octarius Campaign Guide infographic",
 };
+
+export const octariusMirrorPage = {
+  title: "Tacticus Octarius Mirror Campaign Guide",
+  subtitle:
+    "Beat every Octarius Mirror Normal and Elite stage with recommended Imperial teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Octarius Mirror campaign guide with Normal and Elite teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/octarius-mirror.png",
+  featuredWebImage: "/images/web/octarius-mirror.webp",
+  featuredImageAlt: "Tacticus Octarius Mirror Campaign Guide infographic",
+};
