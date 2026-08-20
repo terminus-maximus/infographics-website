@@ -1,13 +1,10 @@
 ---
 import type { CampaignMode, CampaignVideo, CharacterReference, RankReference } from "../../lib/campaigns";
+import * as defaultGuideContent from "../../data/campaigns/indomitusMirrorGuideContent";
 import {
-  bossContent,
-  difficultStageGroups,
-  overviewContent,
-  requiredHeroContent,
-  supportingHeroes,
-} from "../../data/campaigns/indomitusMirrorGuideContent";
-import { getIndomitusMirrorEquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
+  getIndomitusMirrorEquipmentRecommendation,
+  type EquipmentRecommendation,
+} from "../../data/campaigns/equipmentRecommendations";
 import EquipmentBadge from "./EquipmentBadge.astro";
 import HeroGuideCard from "./HeroGuideCard.astro";
 import StageReplayPreview from "./StageReplayPreview.astro";
@@ -17,9 +14,25 @@ interface Props {
   modes: CampaignMode[];
   videos: Record<string, CampaignVideo>;
   ranks: Record<string, RankReference>;
+  content?: typeof defaultGuideContent;
+  equipmentRecommendation?: (terminusName: string) => EquipmentRecommendation;
+  requiredHeroesIntroduction?: string;
+  supportingHeroesIntroduction?: string;
+  bossesIntroduction?: string;
 }
 
-const { characters, modes, videos, ranks } = Astro.props;
+const {
+  characters,
+  modes,
+  videos,
+  ranks,
+  content = defaultGuideContent,
+  equipmentRecommendation = getIndomitusMirrorEquipmentRecommendation,
+  requiredHeroesIntroduction = "Makhotep, Imospekh, and Aleph-Null are required throughout Indomitus Mirror. Every recommendation below is loaded from the campaign recommendation JSON, so rank, ability, and equipment targets stay synchronized as those files change.",
+  supportingHeroesIntroduction = "Elite can open a full five-Necron roster, making Anuphet, Thothmek, and Thutmose substantially more valuable. All three are shown together because they form one clear class of optional Necron support.",
+  bossesIntroduction = "The five Indomitus Mirror bosses appear at Normal Stages 15, 30, 45, 60, and 75. Their Elite chapter encounters occur at Stages 8, 16, 24, 32, and 40.",
+} = Astro.props;
+const { bossContent, difficultStageGroups, overviewContent, requiredHeroContent, supportingHeroes } = content;
 
 const findMode = (modeId: string) => modes.find((mode) => mode.id === modeId)!;
 const findStage = (modeId: string, stageNumber: number) =>
@@ -104,15 +117,15 @@ const tocGroups = [
             <tbody>{overviewContent.normalInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
-              const equipment = getIndomitusMirrorEquipmentRecommendation(row.abilityIconName).normal;
+              const equipment = equipmentRecommendation(row.abilityIconName).normal;
               return (
                 <tr>
-                  <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
-                  <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
-                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
-                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
-                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
-                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
+                  <td data-label="Hero"><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
+                  <td data-label="Rank"><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
+                  <td data-label="Active"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
+                  <td data-label="Passive"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                  <td data-label="Weapon"><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
+                  <td data-label="Defense"><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
                 </tr>
               );
             })}</tbody>
@@ -126,15 +139,15 @@ const tocGroups = [
             <tbody>{overviewContent.eliteInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
-              const equipment = getIndomitusMirrorEquipmentRecommendation(row.abilityIconName).elite;
+              const equipment = equipmentRecommendation(row.abilityIconName).elite;
               return (
                 <tr>
-                  <td><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
-                  <td><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
-                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
-                  <td><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
-                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
-                  <td><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
+                  <td data-label="Hero"><span class="table-hero"><img src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></span></td>
+                  <td data-label="Rank"><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
+                  <td data-label="Active"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
+                  <td data-label="Passive"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                  <td data-label="Weapon"><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
+                  <td data-label="Defense"><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
                 </tr>
               );
             })}</tbody>
@@ -162,14 +175,14 @@ const tocGroups = [
 
 <section class="guide-panel" id="required-heroes" aria-labelledby="required-heroes-heading">
   <h2 id="required-heroes-heading">Required Heroes</h2>
-  <p class="section-intro">Makhotep, Imospekh, and Aleph-Null are required throughout Indomitus Mirror. Every recommendation below is loaded from the campaign recommendation JSON, so rank, ability, and equipment targets stay synchronized as those files change.</p>
+  <p class="section-intro">{requiredHeroesIntroduction}</p>
   <div class="hero-grid required-grid">
     {requiredHeroContent.map((guide) => (
       <HeroGuideCard
         guide={guide}
         character={characters[guide.characterId]}
         ranks={ranks}
-        equipment={guide.abilityTargets ? getIndomitusMirrorEquipmentRecommendation(guide.abilityTargets.iconName) : undefined}
+        equipment={guide.abilityTargets ? equipmentRecommendation(guide.abilityTargets.iconName) : undefined}
       />
     ))}
   </div>
@@ -177,7 +190,7 @@ const tocGroups = [
 
 <section class="guide-panel" id="supporting-heroes" aria-labelledby="supporting-heroes-heading">
   <h2 id="supporting-heroes-heading">Supporting Heroes</h2>
-  <p class="section-intro">Elite can open a full five-Necron roster, making Anuphet, Thothmek, and Thutmose substantially more valuable. All three are shown together because they form one clear class of optional Necron support.</p>
+  <p class="section-intro">{supportingHeroesIntroduction}</p>
   <div class="hero-grid">
     {supportingHeroes.map((guide) => (
       <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} />
@@ -221,7 +234,7 @@ const tocGroups = [
     <details class="guide-disclosure" id="campaign-bosses">
       <summary>Bosses</summary>
       <div class="disclosure-content boss-content">
-        <p class="boss-intro">The five Indomitus Mirror bosses appear at Normal Stages 15, 30, 45, 60, and 75. Their Elite chapter encounters occur at Stages 8, 16, 24, 32, and 40.</p>
+        <p class="boss-intro">{bossesIntroduction}</p>
         <div class="boss-grid">
         {bossContent.map((boss) => {
           const character = characters[boss.characterId];
@@ -682,28 +695,67 @@ const tocGroups = [
       height: 1.75rem;
     }
 
-    th,
-    td {
-      padding: 0.5rem 0.25rem;
+    .table-scroll {
+      overflow: visible;
+      border: 0;
     }
 
-    th {
+    table,
+    tbody {
+      display: block;
+      width: 100%;
+      background: transparent;
+    }
+
+    thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    tbody {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    tr {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.35rem;
+      padding: 0.65rem;
+      border: 1px solid #303030;
+      border-radius: 8px;
+      background: #151515;
+    }
+
+    td,
+    tbody tr:last-child td {
+      display: grid;
+      min-width: 0;
+      justify-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.1rem;
+      border: 0;
+      text-align: center;
+    }
+
+    td::before {
+      color: #d4af37;
+      content: attr(data-label);
       font-size: 0.61rem;
-      letter-spacing: 0;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
-    th:nth-child(1),
-    td:nth-child(1),
-    th:nth-child(2),
-    td:nth-child(2) {
-      width: 18%;
-    }
-
-    th:nth-child(3),
-    td:nth-child(3),
-    th:nth-child(4),
-    td:nth-child(4) {
-      width: 32%;
+    .table-hero,
+    .table-ability,
+    .table-equipment {
+      justify-content: center;
     }
 
     .table-hero img,
@@ -739,4 +791,3 @@ const tocGroups = [
     }
   }
 </style>
-

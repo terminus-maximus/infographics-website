@@ -220,12 +220,12 @@
     "URL": "/campaigns/saim-hann",
     "Reference": "required_hero_1_terminus_name",
     "terminus_name": "Calandis",
-    "Rank_Normal": "Bronze 1",
+    "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 1",
-    "Active_Normal": null,
-    "Passive_Normal": null,
-    "Active_Elite": null,
-    "Passive_Elite": null
+    "Active_Normal": "8+",
+    "Passive_Normal": "17+",
+    "Active_Elite": "17+",
+    "Passive_Elite": "26+"
   },
   {
     "Campaign": "Saim-Hann",
@@ -234,10 +234,10 @@
     "terminus_name": "Aethana",
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 2",
-    "Active_Normal": null,
-    "Passive_Normal": null,
-    "Active_Elite": null,
-    "Passive_Elite": null
+    "Active_Normal": "1",
+    "Passive_Normal": "26",
+    "Active_Elite": "1",
+    "Passive_Elite": "35+"
   },
   {
     "Campaign": "Saim-Hann",
@@ -246,9 +246,9 @@
     "terminus_name": "Eldy",
     "Rank_Normal": "Silver 1",
     "Rank_Elite": "Gold 2",
-    "Active_Normal": null,
-    "Passive_Normal": null,
-    "Active_Elite": null,
-    "Passive_Elite": null
+    "Active_Normal": "1",
+    "Passive_Normal": "26",
+    "Active_Elite": "1",
+    "Passive_Elite": "35+"
   }
 ]

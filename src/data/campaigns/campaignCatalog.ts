@@ -72,3 +72,14 @@ export const octariusMirrorPage = {
   featuredWebImage: "/images/web/octarius-mirror.webp",
   featuredImageAlt: "Tacticus Octarius Mirror Campaign Guide infographic",
 };
+
+export const saimHannPage = {
+  title: "Tacticus Saim-Hann Campaign Guide",
+  subtitle:
+    "Beat every Saim-Hann Normal and Elite stage with recommended Aeldari teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Saim-Hann campaign guide with Normal and Elite Aeldari teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/saim-hann.png",
+  featuredWebImage: "/images/web/saim-hann.webp",
+  featuredImageAlt: "Tacticus Saim-Hann Campaign Guide infographic",
+};

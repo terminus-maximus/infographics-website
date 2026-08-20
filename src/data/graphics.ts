@@ -119,6 +119,15 @@ export const graphics: Graphic[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/octarius-mirror")
     },
     {
+      title: "Saim-Hann Campaign Guide",
+      href: "/campaigns/saim-hann/",
+      description: "Aeldari teams, investment targets, difficult stages, and replay evidence for Saim-Hann.",
+      image: "/images/saim-hann.png",
+      thumbnail: "/images/thumbnails/saim-hann-thumb.png",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/saim-hann")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,
