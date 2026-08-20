@@ -5,8 +5,7 @@ import Footer from "../../components/Footer.astro";
 import ReplayLibraryFilters from "../../components/replay-library/ReplayLibraryFilters.astro";
 import ReplayStatistics from "../../components/replay-library/ReplayStatistics.astro";
 import ReplayResultsTable from "../../components/replay-library/ReplayResultsTable.astro";
-import RequiredHeroIcons from "../../components/campaign/RequiredHeroIcons.astro";
-import { graphics } from "../../data/graphics";
+import RecommendationSections from "../../components/RecommendationSections.astro";
 import replayRows from "../../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
 import bossRows from "../../data/replay-library/bosses.json";
 import characterRows from "../../data/replay-library/characters.json";
@@ -30,7 +29,6 @@ const teamIconMap = Object.fromEntries(
   teamArchetypeRows.map((team) => [team.team_archetype, team.team_icon])
 );
 
-const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pathname);
 ---
 
 <Layout
@@ -149,33 +147,7 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
     </section>
 
 
-    <section class="content-section">
-      <h2>Related Guides</h2>
-
-      <div class="card-grid">
-        {relatedGuides.map((graphic) => (
-          <a class="card related-guide-card" href={graphic.href}>
-            <div class="card-image-wrap">
-              <img
-                src={graphic.thumbnail}
-                alt={`${graphic.title} preview`}
-                class="card-image"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card-title-row">
-              <h3>{graphic.title}</h3>
-            </div>
-            {graphic.requiredHeroes?.length ? (
-              <RequiredHeroIcons heroes={graphic.requiredHeroes} />
-            ) : (
-              <p>{graphic.description}</p>
-            )}
-          </a>
-        ))}
-      </div>
-    </section>
+    <RecommendationSections />
   </main>
 
   <script define:vars={{ replayLibraryData, teamIconMap }}>
@@ -902,13 +874,6 @@ const relatedGuides = graphics.filter((graphic) => graphic.href !== Astro.url.pa
       Object.keys(heroMenus).forEach(closeHeroMenu);
       closeAllChoiceMenus();
     });
-
-    const relatedCards = Array.from(document.querySelectorAll(".related-guide-card"));
-    relatedCards
-      .sort(() => Math.random() - 0.5)
-      .forEach((card, index) => {
-        card.style.display = index < 3 ? "block" : "none";
-      });
 
     readFiltersFromUrl();
     render();

@@ -3,8 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
-import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
-import { graphics } from "../data/graphics";
+import RecommendationSections from "./RecommendationSections.astro";
 import replayCsv from "../data/GR-replays-v2.csv?raw";
 import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
 import bossRows from "../data/replay-library/bosses.json";
@@ -28,31 +27,6 @@ const {
   seasonNumber,
   guides = []
 } = Astro.props;
-
-const archiveGuide = {
-  title: "Guild Raid Archive",
-  href: "/guild-raid/archive",
-  description: "Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives.",
-  thumbnail: "/images/web/guild-raid-s101-mythic.webp"
-};
-
-const relatedGuides = [
-  archiveGuide,
-  ...graphics.filter(
-    (g) =>
-      g.href !== Astro.url.pathname &&
-      g.href !== "/guild-raid/archive"
-  )
-];
-
-const sortedRelatedGuides = relatedGuides.sort((a, b) => {
-  const priority = {
-    "/guild-raid/boss-meta/": 1,
-    "/guild-raid/archive": 2
-  };
-
-  return (priority[a.href] || 99) - (priority[b.href] || 99);
-});
 
 const pageImage = guides[0]?.webImageSrc || guides[0]?.imageSrc;
 
@@ -268,61 +242,7 @@ const guideReplaySections = guides.map((guide) => {
     </div>
   </section>
 
-<section class="content-section">
-  <h2>Related Guides</h2>
-
-  <div class="card-grid">
-    {sortedRelatedGuides.map((graphic) => (
-        <a
-          class={`card related-guide-card ${
-            graphic.href === "/guild-raid/boss-meta/" ||
-            graphic.href === "/guild-raid/archive"
-              ? "forced-related-card"
-              : ""
-          }`}
-          href={graphic.href}
-        >
-        <div class="card-image-wrap">
-          <img
-            src={graphic.thumbnail}
-            alt={`${graphic.title} preview`}
-            class="card-image"
-            loading="lazy"
-          />
-        </div>
-
-        <h3>{graphic.title}</h3>
-        {graphic.requiredHeroes?.length ? (
-          <RequiredHeroIcons heroes={graphic.requiredHeroes} />
-        ) : (
-          <p>{graphic.description}</p>
-        )}
-      </a>
-    ))}
-  </div>
-</section>
-
-<script>
-  const cards = Array.from(document.querySelectorAll(".related-guide-card"));
-
-  const forcedCards = cards.filter((card) =>
-    card.classList.contains("forced-related-card")
-  );
-
-  const randomCards = cards.filter(
-    (card) => !card.classList.contains("forced-related-card")
-  );
-
-  randomCards
-    .sort(() => Math.random() - 0.5)
-    .forEach((card, index) => {
-      card.style.display = index < 3 ? "block" : "none";
-    });
-
-  forcedCards.forEach((card) => {
-    card.style.display = "block";
-  });
-</script>
+<RecommendationSections />
 
   </main>
 

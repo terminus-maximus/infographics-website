@@ -2,11 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import RequiredHeroIcons from "../../components/campaign/RequiredHeroIcons.astro";
+import RecommendationSections from "../../components/RecommendationSections.astro";
 import { graphics } from "../../data/graphics";
 
 const eventGuides = graphics.filter((graphic) => graphic.category === "event");
-const relatedPages = graphics.filter((graphic) => graphic.category !== "event");
 
 const basics = [
   {
@@ -82,44 +81,8 @@ const basics = [
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Related Pages</h2>
-
-      <div class="card-grid">
-        {relatedPages.map((graphic) => (
-          <a class="card related-page-card" href={graphic.href}>
-            <div class="card-image-wrap">
-              <img
-                src={graphic.thumbnail}
-                alt={`${graphic.title} preview`}
-                class="card-image"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card-title-row">
-              <h3>{graphic.title}</h3>
-            </div>
-            {graphic.requiredHeroes?.length ? (
-              <RequiredHeroIcons heroes={graphic.requiredHeroes} />
-            ) : (
-              <p>{graphic.description}</p>
-            )}
-          </a>
-        ))}
-      </div>
-    </section>
+    <RecommendationSections />
   </main>
-
-  <script>
-    const cards = Array.from(document.querySelectorAll(".related-page-card"));
-
-    cards
-      .sort(() => Math.random() - 0.5)
-      .forEach((card, index) => {
-        card.style.display = index < 5 ? "block" : "none";
-      });
-  </script>
 
   <Footer />
 </Layout>

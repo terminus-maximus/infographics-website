@@ -3,8 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import BossMetaResults from "../../components/replay-library/BossMetaResults.astro";
-import RequiredHeroIcons from "../../components/campaign/RequiredHeroIcons.astro";
-import { graphics } from "../../data/graphics";
+import RecommendationSections from "../../components/RecommendationSections.astro";
 
 const title = "Guild Raid Boss Meta Guide";
 const description =
@@ -14,21 +13,6 @@ const imageSrc = "/images/boss-meta.png";
 const webImageSrc = "/images/web/boss-meta.webp";
 const imageAlt = "Guild Raid Boss Meta Infographic";
 
-const archiveGuide = {
-  title: "Guild Raid Archive",
-  href: "/guild-raid/archive",
-  description: "Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives.",
-  thumbnail: "/images/web/guild-raid-s101-mythic.webp"
-};
-
-const relatedGuides = [
-  archiveGuide,
-  ...graphics.filter(
-    (g) =>
-      g.href !== Astro.url.pathname &&
-      g.href !== "/guild-raid/archive"
-  )
-];
 ---
 
 <Layout
@@ -220,51 +204,8 @@ const relatedGuides = [
     </p>
   </section>
 
-  <section class="content-section">
-    <h2>Related Guides</h2>
-
-    <div class="card-grid">
-      {relatedGuides.map((graphic, index) => (
-        <a
-          class={`card related-guide-card ${index === 0 ? "forced-related-card" : ""}`}
-          href={graphic.href}
-        >
-          <div class="card-image-wrap">
-            <img
-              src={graphic.thumbnail}
-              alt={`${graphic.title} preview`}
-              class="card-image"
-              loading="lazy"
-            />
-          </div>
-
-          <h3>{graphic.title}</h3>
-          {graphic.requiredHeroes?.length ? (
-            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
-          ) : (
-            <p>{graphic.description}</p>
-          )}
-        </a>
-      ))}
-    </div>
-  </section>
+  <RecommendationSections />
   </main>
-
-  <script>
-  const cards = Array.from(document.querySelectorAll(".related-guide-card"));
-  const forcedCard = document.querySelector(".forced-related-card");
-  const randomCards = cards.filter((card) => card !== forcedCard);
-
-  randomCards
-    .sort(() => Math.random() - 0.5)
-    .forEach((card, index) => {
-      card.style.display = index < 2 ? "block" : "none";
-    });
-
-  if (forcedCard) {
-    forcedCard.style.display = "block";
-  }
-  </script>
 
   <Footer />
 </Layout>

@@ -1,0 +1,178 @@
+---
+import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
+import {
+  getMoreToExploreCandidates,
+  getRelatedGuides,
+} from "../data/recommendations";
+
+interface Props {
+  pathname?: string;
+}
+
+const pathname = Astro.props.pathname || Astro.url.pathname;
+const relatedGuides = getRelatedGuides(pathname);
+const moreToExplore = getMoreToExploreCandidates(pathname, relatedGuides);
+const moreToExploreCount = relatedGuides.length ? 3 : 6;
+---
+
+{relatedGuides.length === 3 && (
+  <section id="related-guides" class="recommendation-section" data-recommendation-section="related-guides">
+    <h2>Related Guides</h2>
+    <div class="recommendation-grid">
+      {relatedGuides.map((graphic) => (
+        <a class="recommendation-card" href={graphic.href} data-recommendation-route={graphic.href}>
+          <div class="recommendation-image-wrap">
+            <img src={graphic.recommendationImage} alt={`${graphic.title} preview`} loading="lazy" />
+          </div>
+          <h3>{graphic.title}</h3>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+{moreToExplore.length >= moreToExploreCount && (
+  <section
+    class="recommendation-section"
+    data-recommendation-section="more-to-explore"
+    data-card-count={moreToExploreCount}
+  >
+    <h2>More to Explore</h2>
+    <div class="recommendation-grid">
+      {moreToExplore.map((graphic) => (
+        <a
+          class="recommendation-card more-to-explore-card"
+          href={graphic.href}
+          data-category={graphic.category}
+          data-recommendation-route={graphic.href}
+          hidden
+        >
+          <div class="recommendation-image-wrap">
+            <img src={graphic.recommendationImage} alt={`${graphic.title} preview`} loading="lazy" />
+          </div>
+          <h3>{graphic.title}</h3>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<script>
+  const shuffle = (items: HTMLElement[]): HTMLElement[] => {
+    for (let index = items.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [items[index], items[swapIndex]] = [items[swapIndex], items[index]];
+    }
+    return items;
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-recommendation-section="more-to-explore"]').forEach((section) => {
+    const cardCount = Number(section.dataset.cardCount || 0);
+    const cards = shuffle(Array.from(section.querySelectorAll<HTMLElement>(".more-to-explore-card")));
+    const categoryCounts = new Map();
+    const selected = [];
+
+    for (const card of cards) {
+      const category = card.dataset.category || "uncategorized";
+      const categoryCount = categoryCounts.get(category) || 0;
+      if (categoryCount >= 2) continue;
+
+      selected.push(card);
+      categoryCounts.set(category, categoryCount + 1);
+      if (selected.length === cardCount) break;
+    }
+
+    selected.forEach((card) => {
+      card.hidden = false;
+    });
+  });
+</script>
+
+<style>
+  .recommendation-section {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    margin-top: 4rem;
+    padding: 1.5rem;
+  }
+
+  .recommendation-section h2 {
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .recommendation-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    justify-content: start;
+  }
+
+  .recommendation-card {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 12px;
+    color: inherit;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .recommendation-card:hover,
+  .recommendation-card:focus-visible {
+    border-color: #d4af37;
+    outline: none;
+    transform: translateY(-3px);
+  }
+
+  .recommendation-image-wrap {
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    height: 120px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .recommendation-image-wrap img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    width: 100%;
+  }
+
+  .recommendation-card h3 {
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+  }
+
+  .recommendation-card p {
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 700px) {
+    .recommendation-section { padding: 1rem; }
+    .recommendation-grid { gap: 1rem; grid-template-columns: 1fr; }
+    .recommendation-card { padding: 1rem; }
+    .recommendation-image-wrap { height: 110px; }
+  }
+</style>

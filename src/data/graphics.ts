@@ -13,6 +13,7 @@ export interface Graphic {
   description: string;
   image: string;
   thumbnail: string;
+  recommendationImage: string;
   category: string;
   requiredHeroes?: RequiredHeroIcon[];
 }
@@ -39,7 +40,7 @@ const getRequiredHeroes = (campaignUrl: string): RequiredHeroIcon[] =>
       };
     });
 
-export const graphics: Graphic[] = [
+const graphicDefinitions: Omit<Graphic, "recommendationImage">[] = [
     {
       title: "Beginner Guide",
       href: "/beginner-guide",
@@ -55,14 +56,6 @@ export const graphics: Graphic[] = [
       image: "/images/elite-campaigns.png",
       thumbnail: "/images/thumbnails/elite-campaigns-thumb.png",
       category: "start"
-    },
-    {
-      title: "Campaign Guides",
-      href: "/campaigns/",
-      description: "Replay-backed teams and character ranks for Normal and Elite Campaign stages.",
-      image: "/images/CampaignGuideBanner.png",
-      thumbnail: "/images/thumbnails/CampaignGuideBanner-thumb.png",
-      category: "campaign"
     },
     {
       title: "Indomitus Campaign Guide",
@@ -81,6 +74,14 @@ export const graphics: Graphic[] = [
       thumbnail: "/images/thumbnails/indomitus-mirror-thumb.png",
       category: "campaign",
       requiredHeroes: getRequiredHeroes("/campaigns/indomitus-mirror")
+    },
+    {
+      title: "Explore All Campaign Guides",
+      href: "/campaigns/",
+      description: "Indomitus, Fall of Cadia, Octarius, and Saim-Hann. Normal, Elite, and Mirror.",
+      image: "/images/CampaignGuideBanner.png",
+      thumbnail: "/images/thumbnails/CampaignGuideBanner-thumb.png",
+      category: "campaign"
     },
     {
       title: "Fall of Cadia Campaign Guide",
@@ -155,7 +156,7 @@ export const graphics: Graphic[] = [
       title: "Guild Raid Archive",
       href: "/guild-raid/archive",
       description: "Browse past Guild Raid seasons and infographic archives.",
-      image: "/images/guild-raid-archive.png",
+      image: currentGuildRaidSeason.image,
       thumbnail: "/images/thumbnails/guild-raid-s97-mythic-thumb.png",
       category: "raid"
     },
@@ -176,10 +177,18 @@ export const graphics: Graphic[] = [
       category: "legendary"
     },
     {
+      title: "Lucius LRE",
+      href: "/lre/lucius",
+      description: "Plan teams and requirements for the Lucius Legendary Release Event.",
+      image: "/images/lucius-lre.png",
+      thumbnail: "/images/thumbnails/lucius-lre-thumb.png",
+      category: "legendary"
+    },
+    {
       title: "Farsight LRE",
       href: "/lre/farsight",
       description: "Be ready for the Tau Legendary on Nov 15th",
-      image: "/images/lre.png",
+      image: "/images/farsight-lre.png",
       thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
     },
@@ -216,3 +225,10 @@ export const graphics: Graphic[] = [
       category: "about"
     },
   ];
+
+export const graphics: Graphic[] = graphicDefinitions.map((graphic) => ({
+  ...graphic,
+  recommendationImage: graphic.image
+    .replace(/^\/images\//, "/images/web/")
+    .replace(/\.[^.]+$/, ".webp"),
+}));

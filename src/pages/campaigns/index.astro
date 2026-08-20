@@ -1,15 +1,12 @@
 ---
-import CampaignCard from "../../components/campaign/CampaignCard.astro";
 import CampaignGuideGrid from "../../components/campaign/CampaignGuideGrid.astro";
 import CampaignHero from "../../components/campaign/CampaignHero.astro";
 import RecommendedInvestmentGrid from "../../components/campaign/RecommendedInvestmentGrid.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
+import RecommendationSections from "../../components/RecommendationSections.astro";
 import { campaignLanding } from "../../data/campaigns/campaignCatalog";
-import { graphics } from "../../data/graphics";
-
-const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysander", "/lre/uthar"].includes(guide.href));
 ---
 
 <Layout
@@ -97,19 +94,7 @@ const relatedGuides = graphics.filter((guide) => ["/elite-campaigns", "/lre/lysa
       <RecommendedInvestmentGrid />
     </section>
 
-    <section class="content-section related-section" aria-labelledby="related-guides-heading">
-      <h2 id="related-guides-heading">Related Guides</h2>
-      <div class="card-grid related-grid">
-        {relatedGuides.map((guide) => (
-          <CampaignCard
-            title={guide.title}
-            description={guide.description}
-            href={guide.href}
-            thumbnail={guide.thumbnail}
-          />
-        ))}
-      </div>
-    </section>
+    <RecommendationSections />
   </main>
 
   <Footer />

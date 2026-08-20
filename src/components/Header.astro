@@ -2,11 +2,11 @@
 import { currentGuildRaidSeason } from "../data/guildRaid";
 ---
 
-<header class="site-header">
-  <a class="logo" href="/">Terminus Maximus</a>
+<header class="site-header" data-ga4-nav-location="header">
+  <a class="logo" href="/" data-ga4-nav-section="brand">Terminus Maximus</a>
 
-  <nav class="nav-links">
-    <a href="/">Home</a>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <a href="/" data-ga4-nav-section="home">Home</a>
 
     <div class="dropdown">
       <button
@@ -19,36 +19,12 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
       </button>
 
       <div class="dropdown-menu" id="graphics-menu">
-        <a href="/beginner-guide">Beginner Guide</a>
-        <a href="/elite-campaigns">Elite Campaigns</a>
+        <a href="/beginner-guide" data-ga4-nav-section="graphics">Beginner Guide</a>
+        <a href="/elite-campaigns" data-ga4-nav-section="campaigns">Elite Campaigns</a>
+        <a href="/campaigns/" data-ga4-nav-section="campaigns">Campaign Guides</a>
         <div class="submenu">
           <div class="submenu-header">
-            <a class="submenu-link" href="/campaigns">Campaign Guides</a>
-            <button
-              class="submenu-button"
-              type="button"
-              aria-label="Open Campaign Guides menu"
-              aria-expanded="false"
-              aria-controls="campaign-guides-menu"
-            >
-              <span class="submenu-arrow" aria-hidden="true">▾</span>
-            </button>
-          </div>
-
-          <div class="submenu-menu" id="campaign-guides-menu">
-            <a href="/campaigns/indomitus/">Indomitus</a>
-            <a href="/campaigns/indomitus-mirror/">Indomitus Mirror</a>
-            <a href="/campaigns/fall-of-cadia/">Fall of Cadia</a>
-            <a href="/campaigns/fall-of-cadia-mirror/">Fall of Cadia Mirror</a>
-            <a href="/campaigns/octarius/">Octarius</a>
-            <a href="/campaigns/octarius-mirror/">Octarius Mirror</a>
-            <a href="/campaigns/saim-hann/">Saim-Hann</a>
-            <span class="submenu-coming-soon">More Soon!</span>
-          </div>
-        </div>
-        <div class="submenu">
-          <div class="submenu-header">
-            <a class="submenu-link" href="/guild-raid">Guild Raid</a>
+            <a class="submenu-link" href="/guild-raid" data-ga4-nav-section="guild_raid">Guild Raid</a>
             <button
               class="submenu-button"
               type="button"
@@ -61,15 +37,14 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
           </div>
 
           <div class="submenu-menu" id="guild-raid-menu">
-            <a href={currentGuildRaidSeason.href}>Current Season</a>
-            <a href="/guild-raid/boss-meta/">Boss Meta Guide</a>
-            <a href="/replay-library">Replay Library</a>
-            <a href="/guild-raid/archive">Season Archive</a>
+            <a href={currentGuildRaidSeason.href} data-ga4-nav-section="guild_raid">Current Season</a>
+            <a href="/guild-raid/boss-meta/" data-ga4-nav-section="guild_raid">Boss Meta Guide</a>
+            <a href="/replay-library" data-ga4-nav-section="guild_raid">Replay Library</a>
           </div>
         </div>
         <div class="submenu">
           <div class="submenu-header">
-            <a class="submenu-link" href="/events">Events</a>
+            <a class="submenu-link" href="/events" data-ga4-nav-section="game_events">Events</a>
             <button
               class="submenu-button"
               type="button"
@@ -82,14 +57,14 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
           </div>
 
           <div class="submenu-menu" id="events-menu">
-            <a href="/campaign-event">Campaign Event</a>
-            <a href="/hre">HRE</a>
-            <a href="/incursion-mow">Incursion</a>
+            <a href="/campaign-event" data-ga4-nav-section="game_events">Campaign Event</a>
+            <a href="/hre" data-ga4-nav-section="game_events">HRE</a>
+            <a href="/incursion-mow" data-ga4-nav-section="game_events">Incursion</a>
           </div>
         </div>
         <div class="submenu">
           <div class="submenu-header">
-            <a class="submenu-link" href="/lre">LRE</a>
+            <a class="submenu-link" href="/lre" data-ga4-nav-section="legendary">LRE</a>
             <button
               class="submenu-button"
               type="button"
@@ -102,15 +77,15 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
           </div>
 
           <div class="submenu-menu" id="lre-menu">
-            <a href="/lre/lysander">Lysander</a>
-            <a href="/lre/uthar">Uthar</a>
-            <a href="/lre/farsight">Farsight</a>
+            <a href="/lre/lysander" data-ga4-nav-section="legendary">Lysander</a>
+            <a href="/lre/uthar" data-ga4-nav-section="legendary">Uthar</a>
+            <a href="/lre/farsight" data-ga4-nav-section="legendary">Farsight</a>
           </div>
         </div>
       </div>
     </div>
 
-    <a class="replay-library-link" href="/replay-library">
+    <a class="replay-library-link" href="/replay-library" data-ga4-nav-section="replay_library">
       Replay<br />Library
     </a>
   </nav>
@@ -332,14 +307,6 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
     font-size: 0.95rem;
   }
 
-  .submenu-coming-soon {
-    display: block;
-    padding: 0.75rem 1rem 0.75rem 1.75rem;
-    color: #888;
-    font-size: 0.9rem;
-    font-style: italic;
-    white-space: nowrap;
-  }
   @media (max-width: 700px) {
   .site-header {
     padding: 1rem 1.25rem;

@@ -3,9 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import CampaignGuideGrid from "./campaign/CampaignGuideGrid.astro";
-import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
+import RecommendationSections from "./RecommendationSections.astro";
 import { marked } from "marked";
-import { graphics } from "../data/graphics";
 
 const {
   title,
@@ -22,11 +21,6 @@ const {
 
 const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
 
-const relatedGuides = graphics.filter(
-  (guide) =>
-    guide.href !== Astro.url.pathname &&
-    (!showCampaignGuides || guide.category !== "campaign"),
-);
 const displayImageSrc =
   webImageSrc ||
   imageSrc.replace(/^\/images\//, "/images/web/").replace(/\.[^.]+$/, ".webp");
@@ -114,44 +108,8 @@ const displayImageSrc =
     </section>
   )}
 
-  <section class="content-section">
-    <h2>Related Guides</h2>
-
-    <div class="card-grid">
-      {relatedGuides.map((graphic) => (
-        <a class="card related-guide-card" href={graphic.href}>
-          <div class="card-image-wrap">
-            <img
-              src={graphic.thumbnail}
-              alt={`${graphic.title} preview`}
-              class="card-image"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="card-title-row">
-            <h3>{graphic.title}</h3>
-          </div>
-          {graphic.requiredHeroes?.length ? (
-            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
-          ) : (
-            <p>{graphic.description}</p>
-          )}
-        </a>
-      ))}
-    </div>
-  </section>
+  <RecommendationSections />
   </main>
-
-  <script>
-  const cards = Array.from(document.querySelectorAll(".related-guide-card"));
-
-  cards
-    .sort(() => Math.random() - 0.5)
-    .forEach((card, index) => {
-      card.style.display = index < 3 ? "block" : "none";
-    });
-  </script>
 
   <Footer />
 </Layout>

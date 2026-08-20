@@ -6,8 +6,18 @@ import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
 import { graphics } from "../data/graphics";
 
 const startHere = graphics.filter((g) => g.category === "start");
-const campaignGuides = graphics.filter((g) => g.category === "campaign");
-const guildRaids = graphics.filter((g) => g.category === "raid");
+const campaignGuides = graphics.filter(
+  (g) =>
+    g.category === "campaign" &&
+    [
+      "/campaigns/indomitus/",
+      "/campaigns/indomitus-mirror/",
+      "/campaigns/",
+    ].includes(g.href),
+);
+const guildRaids = graphics.filter(
+  (g) => g.category === "raid" && g.href !== "/guild-raid/archive",
+);
 const legendaryGuides = graphics.filter((g) => g.category === "legendary");
 const gameEvents = graphics.filter((g) => g.category === "event");
 const aboutPages = graphics.filter((g) => g.category === "about");

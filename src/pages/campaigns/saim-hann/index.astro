@@ -1,6 +1,6 @@
 ---
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
-import CampaignCard from "../../../components/campaign/CampaignCard.astro";
+import RecommendationSections from "../../../components/RecommendationSections.astro";
 import SaimHannGuideContent from "../../../components/campaign/IndomitusMirrorGuideContent.astro";
 import RankBadge from "../../../components/campaign/RankBadge.astro";
 import StageEvidenceTable from "../../../components/campaign/StageEvidenceTable.astro";
@@ -10,7 +10,6 @@ import Layout from "../../../layouts/Layout.astro";
 import { saimHannPage } from "../../../data/campaigns/campaignCatalog";
 import * as saimHannGuideContent from "../../../data/campaigns/saimHannGuideContent";
 import { getSaimHannEquipmentRecommendation } from "../../../data/campaigns/equipmentRecommendations";
-import { graphics } from "../../../data/graphics";
 import {
   characterReferences,
   saimHannCampaign,
@@ -60,7 +59,6 @@ const statisticCharacterIds = [...requiredCharacterIds, ...supportingCharacterId
 const rankMap = Object.fromEntries(
   Object.values(rankReferences).map((rank) => [rank.id, { name: rank.name, sort: rank.sort, badge: rank.badge }]),
 );
-const relatedGuides = graphics.filter((guide) => ["/campaigns/", "/beginner-guide", "/elite-campaigns"].includes(guide.href));
 ---
 
 <Layout
@@ -175,12 +173,7 @@ const relatedGuides = graphics.filter((guide) => ["/campaigns/", "/beginner-guid
       <p class="statistics-empty" data-statistics-empty hidden>No character rank observations match these filters.</p>
     </section>
 
-    <section class="related-section" id="related-guides" aria-labelledby="related-guides-heading">
-      <h2 id="related-guides-heading">Related Guides</h2>
-      <div class="related-grid">
-        {relatedGuides.map((guide) => <CampaignCard {...guide} />)}
-      </div>
-    </section>
+    <RecommendationSections />
   </main>
 
   <Footer />

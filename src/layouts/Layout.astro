@@ -44,6 +44,24 @@ const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 
 				if (!(target instanceof Element)) return;
 
+				const navigationLink = target.closest("a[href]");
+				const navigationContainer = navigationLink?.closest("[data-ga4-nav-location]");
+
+				if (
+					navigationLink instanceof HTMLAnchorElement &&
+					navigationContainer instanceof HTMLElement &&
+					typeof gtag === "function"
+				) {
+					const navigationParameters = {
+						nav_location: navigationContainer.dataset.ga4NavLocation || "unknown",
+						nav_section: navigationLink.dataset.ga4NavSection || "other",
+						destination: new URL(navigationLink.href, window.location.href).pathname,
+						link_text: navigationLink.textContent.trim().replace(/\s+/g, " ")
+					};
+
+					gtag("event", "nav_click", navigationParameters);
+				}
+
 				const infographicLink = target.closest("[data-ga4-infographic-open]");
 
 				if (infographicLink && typeof gtag === "function") {
