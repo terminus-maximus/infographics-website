@@ -695,67 +695,28 @@ const tocGroups = [
       height: 1.75rem;
     }
 
-    .table-scroll {
-      overflow: visible;
-      border: 0;
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
     }
 
-    table,
-    tbody {
-      display: block;
-      width: 100%;
-      background: transparent;
-    }
-
-    thead {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      white-space: nowrap;
-    }
-
-    tbody {
-      display: grid;
-      gap: 0.65rem;
-    }
-
-    tr {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.35rem;
-      padding: 0.65rem;
-      border: 1px solid #303030;
-      border-radius: 8px;
-      background: #151515;
-    }
-
-    td,
-    tbody tr:last-child td {
-      display: grid;
-      min-width: 0;
-      justify-items: center;
-      gap: 0.25rem;
-      padding: 0.25rem 0.1rem;
-      border: 0;
-      text-align: center;
-    }
-
-    td::before {
-      color: #d4af37;
-      content: attr(data-label);
+    th {
       font-size: 0.61rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      letter-spacing: 0;
     }
 
-    .table-hero,
-    .table-ability,
-    .table-equipment {
-      justify-content: center;
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 18%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 32%;
     }
 
     .table-hero img,

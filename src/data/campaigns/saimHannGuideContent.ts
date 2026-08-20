@@ -22,7 +22,7 @@ export const overviewContent = {
       "Elite repeatedly restricts deployment to Calandis, Aethana, and Eldryon. Supporting Aeldari help on open stages, but they cannot replace investment in the required trio through the final trio-only gate at Elite 36.",
       "Push when the next Elite material or boss-shard node solves an account bottleneck. If the final chapter asks for upgrades that would produce more value elsewhere, farm the nodes already opened and return later.",
     ],
-    callout: "Build toward Elite 36 first. Treat Elite 37–40 as a separate late-game decision where an already-developed support can save resources.",
+    callout: "Normal is a manageable single-faction campaign, comparable to Indomitus Mirror or Octarius. Elite is widely recognized as the game’s hardest and most investment-heavy Elite campaign.",
   },
   progression: {
     introduction: "Use Saim-Hann as an account-building route, with Eldryon receiving the highest-value long-term investment.",
