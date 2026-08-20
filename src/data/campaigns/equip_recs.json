@@ -250,5 +250,47 @@
     "Elite_1_Rank": 1,
     "Elite_2_Icon": "Thoread-2-Uncommon-MK-X-Pauldron.webp",
     "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Saim-Hann",
+    "URL": "/campaigns/saim-hann",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Calandis",
+    "Normal_1_Icon": "Calandis-1-Rare-Wraithbone-Shuriken-Pistol.webp",
+    "Normal_1_Rank": 7,
+    "Normal_2_Icon": "Calandis-2-Rare-Wraithbone-Shuriken-Pistol.webp",
+    "Normal_2_Rank": 7,
+    "Elite_1_Icon": "Calandis-1-Epic-Mind-Linked-Shuriken-Pistol.webp",
+    "Elite_1_Rank": 9,
+    "Elite_2_Icon": "Calandis-2-Epic-Mind-Linked-Shuriken-Pistol.webp",
+    "Elite_2_Rank": 9
+  },
+  {
+    "Campaign": "Saim-Hann",
+    "URL": "/campaigns/saim-hann",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Aethana",
+    "Normal_1_Icon": "Aethana-1-Rare-Wraithbone-Shuriken-Pistol.webp",
+    "Normal_1_Rank": 7,
+    "Normal_2_Icon": "Aethana-2-Rare-Force-Field.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Aethana-1-Epic-Mind-Linked-Shuriken-Pistol.webp",
+    "Elite_1_Rank": 9,
+    "Elite_2_Icon": "Aethana-2-Epic-Force-Field.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Saim-Hann",
+    "URL": "/campaigns/saim-hann",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Eldy",
+    "Normal_1_Icon": "Eldy-1-Rare-Wraithbone-Shuriken-Pistol.webp",
+    "Normal_1_Rank": 7,
+    "Normal_2_Icon": "Eldy-2-Rare-Force-Field.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Eldy-1-Epic-Mind-Linked-Shuriken-Pistol.webp",
+    "Elite_1_Rank": 9,
+    "Elite_2_Icon": "Eldy-2-Epic-Force-Field.webp",
+    "Elite_2_Rank": 1
   }
 ]

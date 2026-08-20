@@ -1,0 +1,1764 @@
+{
+  "id": "saim_hann",
+  "name": "Saim Hann",
+  "updatedAt": "2026-08-19",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "_ULcrzB7m5M",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "KhJaog7ZT5o",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "1kVpFeSTNIc",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "OcWHcQJdzsc",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "EB55ULalaxQ",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "nCxoYLNsBDA",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Iron2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "g0nZBxqSoCQ",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "W59GpfNUFm0",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "Nfj2KtCaZUA",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "__QCA55ZXEA",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription; portrait-to-rank mapping remediated from native Victory frame"
+            },
+            {
+              "videoId": "Wit5uwnZiP0",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; required-hero deployment/map matched to the confirmed stage 75 battlefield; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            },
+            {
+              "videoId": "uAu1efq9ivk",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Silver1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Silver1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "U7fVtYwi7mI",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "GPniFAAoDAg",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "eIbMm25jscc",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "1OXeJlhGBt0",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "usq_XW_MmFk",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "ZjcmZlXOcnY",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native numbered stage screen; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            },
+            {
+              "videoId": "X2JpdDqOlvM",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "5CO2xtb5hs8",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "UtffhYRb7YY",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "9JuRUnagFvQ",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "etPHL0eC1g4",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "hX-bbq_rX9I",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "ry13KB9ToMw",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "EConzomzz_4",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:10",
+              "timestampSeconds": 10,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "IJYCNypuIj0",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "ysoC-wAx6oE",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "vIAa8tEdzUo",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "CSBfQvgOBks",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "iJqNcRo_Zlk",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "XfZ8_oxi7a0",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "ZX85vBib1dY",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "xC0Y0-I7-Ow",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "Iw61QTmW4dE",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "91w2vf7VPHs",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver2",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "WkIfc4pfhHQ",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:03",
+              "timestampSeconds": 3,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "xM1FnALsTqA",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "NGdgMqgPj9o",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:09",
+              "timestampSeconds": 9,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "EuNAj6zr7Sw",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "Q7U9o66DsQ8",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:09",
+              "timestampSeconds": 9,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "YQCdCQX2qIg",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            },
+            {
+              "videoId": "H0thn62l3X4",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:12",
+              "timestampSeconds": 12,
+              "notes": "Process 1.72; creator-channel-mined direct stage upload; native gameplay and settled populated Victory triplet; portrait-mapped ranks"
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "evidence": [
+            {
+              "videoId": "p8srAsa9Ugg",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarMauganRa",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:02",
+              "timestampSeconds": 2,
+              "notes": "Process 1.72; direct native stage screen; three adjacent settled populated Victory frames; source-specific visual rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "aOZuuiDxCXI",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 34 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "Wrpb_iq8ucs",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 35 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "o_ywtCgotOQ",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 36 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "evidence": [
+            {
+              "videoId": "dytrsIJNm1s",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 37 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "qV2uh5bukbc",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 39 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "ORj6os5jV6w",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Gold3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 40 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            },
+            {
+              "videoId": "wwwHDUqQsbk",
+              "roster": [
+                {
+                  "characterId": "eldarRanger",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarAutarch",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarFarseer",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "eldarJainZar",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:01",
+              "timestampSeconds": 1,
+              "notes": "Process 1.72; battlefield matched to ordered compilation chapter Stage 40 and its exact stage panel; three adjacent source-native settled populated Victory frames; source-specific portrait-to-rank transcription"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "KhJaog7ZT5o": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 62 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=KhJaog7ZT5o"
+    },
+    "OcWHcQJdzsc": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 68 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=OcWHcQJdzsc"
+    },
+    "EB55ULalaxQ": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 69 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=EB55ULalaxQ"
+    },
+    "nCxoYLNsBDA": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 70 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=nCxoYLNsBDA"
+    },
+    "g0nZBxqSoCQ": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 71 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=g0nZBxqSoCQ"
+    },
+    "Nfj2KtCaZUA": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 74 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Nfj2KtCaZUA"
+    },
+    "__QCA55ZXEA": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 75 - warhammer 40k - walkthrough - completed",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=__QCA55ZXEA"
+    },
+    "U7fVtYwi7mI": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 3 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=U7fVtYwi7mI"
+    },
+    "GPniFAAoDAg": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 4 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=GPniFAAoDAg"
+    },
+    "eIbMm25jscc": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 5 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=eIbMm25jscc"
+    },
+    "usq_XW_MmFk": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 8 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=usq_XW_MmFk"
+    },
+    "5CO2xtb5hs8": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 12 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=5CO2xtb5hs8"
+    },
+    "UtffhYRb7YY": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 13 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=UtffhYRb7YY"
+    },
+    "etPHL0eC1g4": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 14 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=etPHL0eC1g4"
+    },
+    "ry13KB9ToMw": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 15 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ry13KB9ToMw"
+    },
+    "IJYCNypuIj0": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 16 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=IJYCNypuIj0"
+    },
+    "ysoC-wAx6oE": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 17 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ysoC-wAx6oE"
+    },
+    "vIAa8tEdzUo": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 18 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=vIAa8tEdzUo"
+    },
+    "CSBfQvgOBks": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 19 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=CSBfQvgOBks"
+    },
+    "iJqNcRo_Zlk": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 20 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=iJqNcRo_Zlk"
+    },
+    "XfZ8_oxi7a0": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 21 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=XfZ8_oxi7a0"
+    },
+    "xC0Y0-I7-Ow": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 23 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=xC0Y0-I7-Ow"
+    },
+    "Iw61QTmW4dE": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 24 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Iw61QTmW4dE"
+    },
+    "91w2vf7VPHs": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 25 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=91w2vf7VPHs"
+    },
+    "WkIfc4pfhHQ": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 26 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=WkIfc4pfhHQ"
+    },
+    "xM1FnALsTqA": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 27 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=xM1FnALsTqA"
+    },
+    "EuNAj6zr7Sw": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 29 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=EuNAj6zr7Sw"
+    },
+    "YQCdCQX2qIg": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 30 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=YQCdCQX2qIg"
+    },
+    "p8srAsa9Ugg": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 31 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=p8srAsa9Ugg"
+    },
+    "_ULcrzB7m5M": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 60 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=_ULcrzB7m5M"
+    },
+    "1kVpFeSTNIc": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 64 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1kVpFeSTNIc"
+    },
+    "W59GpfNUFm0": {
+      "title": "TACTICUS - Saim-Hann: BATTLE 73 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=W59GpfNUFm0"
+    },
+    "Wit5uwnZiP0": {
+      "title": "Saim-Hann 3* level 75",
+      "creator": "Bigbob",
+      "url": "https://www.youtube.com/watch?v=Wit5uwnZiP0"
+    },
+    "uAu1efq9ivk": {
+      "title": "Warhammer Tacticus: Saim Hann 75 3 Emblem, Base units",
+      "creator": "Gwynevere Solaira",
+      "url": "https://www.youtube.com/watch?v=uAu1efq9ivk"
+    },
+    "1OXeJlhGBt0": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 7 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=1OXeJlhGBt0"
+    },
+    "ZjcmZlXOcnY": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 11 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ZjcmZlXOcnY"
+    },
+    "aOZuuiDxCXI": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 34 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=aOZuuiDxCXI"
+    },
+    "Wrpb_iq8ucs": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 35 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Wrpb_iq8ucs"
+    },
+    "o_ywtCgotOQ": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 36 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=o_ywtCgotOQ"
+    },
+    "dytrsIJNm1s": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 37 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=dytrsIJNm1s"
+    },
+    "qV2uh5bukbc": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 39 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=qV2uh5bukbc"
+    },
+    "ORj6os5jV6w": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 40 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=ORj6os5jV6w"
+    },
+    "wwwHDUqQsbk": {
+      "title": "TACTICUS - Saim-Hann Elite : BATTLE 40 - warhammer 40k - walkthrough #games",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=wwwHDUqQsbk"
+    },
+    "X2JpdDqOlvM": {
+      "title": "Saim Hann Elite 11 - G1 Eldryon, Aethana, S2 Calandis",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=X2JpdDqOlvM"
+    },
+    "9JuRUnagFvQ": {
+      "title": "Saim Hann Elite 13 - G1 Eldryon, Aethana, S2 Calandis",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=9JuRUnagFvQ"
+    },
+    "hX-bbq_rX9I": {
+      "title": "Saim Hann Elite 14 2* - G1 Eldryon, Aethana, S2 Calandis",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=hX-bbq_rX9I"
+    },
+    "EConzomzz_4": {
+      "title": "Saim Hann Elite 15 - G1 Eldryon, Aethana, S2 Calandis",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=EConzomzz_4"
+    },
+    "ZX85vBib1dY": {
+      "title": "Tacticus: Saim-Hann Elite 21 (No Sound)",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=ZX85vBib1dY"
+    },
+    "NGdgMqgPj9o": {
+      "title": "Saim-Hann Elite 28 - G1 Eldryon (10/35), Aethana (1/35), S2 Calandis (24/23)",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=NGdgMqgPj9o"
+    },
+    "Q7U9o66DsQ8": {
+      "title": "Saim-Hann Elite 29 - G1 Eldryon (10/35), Aethana (1/35), S2 Calandis (24/23)",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=Q7U9o66DsQ8"
+    },
+    "H0thn62l3X4": {
+      "title": "Saim-Hann Elite 30 - G1 Eldryon (10/35), Aethana (1/35), S2 Calandis (24/23)",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=H0thn62l3X4"
+    }
+  }
+}
