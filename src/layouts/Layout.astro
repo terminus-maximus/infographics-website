@@ -1,4 +1,6 @@
 ---
+import ReferralSupportWidget from "../components/ReferralSupportWidget.astro";
+
 const {
 	title = "Terminus Maximus Infographics",
 	description = "Tacticus infographics, strategy guides, Guild Raid resources, and Legendary Event planning.",
@@ -100,6 +102,7 @@ const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 	</head>
 	<body>
 		<slot />
+		<ReferralSupportWidget />
 	</body>
 </html>
 
