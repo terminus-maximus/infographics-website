@@ -3,10 +3,10 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
-import { graphics } from "../../data/graphics";
+import { discoveryGraphics } from "../../data/graphics";
 import { currentGuildRaidSeason } from "../../data/guildRaid";
 
-const guildRaidArchive = graphics.find(
+const guildRaidArchive = discoveryGraphics.find(
   (graphic) => graphic.href === "/guild-raid/archive",
 )!;
 

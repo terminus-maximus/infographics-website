@@ -7,6 +7,8 @@ export interface RequiredHeroIcon {
   portrait: string;
 }
 
+export type ContentLifecycle = "active" | "retired";
+
 export interface Graphic {
   title: string;
   href: string;
@@ -15,6 +17,7 @@ export interface Graphic {
   thumbnail: string;
   recommendationImage: string;
   category: string;
+  lifecycle: ContentLifecycle;
   requiredHeroes?: RequiredHeroIcon[];
 }
 
@@ -40,7 +43,11 @@ const getRequiredHeroes = (campaignUrl: string): RequiredHeroIcon[] =>
       };
     });
 
-const graphicDefinitions: Omit<Graphic, "recommendationImage">[] = [
+type GraphicDefinition = Omit<Graphic, "recommendationImage" | "lifecycle"> & {
+  lifecycle?: ContentLifecycle;
+};
+
+const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Beginner Guide",
       href: "/beginner-guide",
@@ -182,7 +189,8 @@ const graphicDefinitions: Omit<Graphic, "recommendationImage">[] = [
       description: "Plan teams and requirements for the Lucius Legendary Release Event.",
       image: "/images/lucius-lre.png",
       thumbnail: "/images/thumbnails/lucius-lre-thumb.png",
-      category: "legendary"
+      category: "legendary",
+      lifecycle: "retired"
     },
     {
       title: "Farsight LRE",
@@ -228,7 +236,12 @@ const graphicDefinitions: Omit<Graphic, "recommendationImage">[] = [
 
 export const graphics: Graphic[] = graphicDefinitions.map((graphic) => ({
   ...graphic,
+  lifecycle: graphic.lifecycle ?? "active",
   recommendationImage: graphic.image
     .replace(/^\/images\//, "/images/web/")
     .replace(/\.[^.]+$/, ".webp"),
 }));
+
+export const discoveryGraphics: Graphic[] = graphics.filter(
+  (graphic) => graphic.lifecycle === "active",
+);

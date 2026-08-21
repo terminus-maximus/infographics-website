@@ -1,8 +1,8 @@
 ---
 import CampaignCard from "./CampaignCard.astro";
-import { graphics } from "../../data/graphics";
+import { discoveryGraphics } from "../../data/graphics";
 
-const campaignGuides = graphics.filter(
+const campaignGuides = discoveryGraphics.filter(
   (guide) => guide.category === "campaign" && guide.href !== "/campaigns/",
 );
 ---

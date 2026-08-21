@@ -1,4 +1,4 @@
-import { graphics, type Graphic } from "./graphics";
+import { discoveryGraphics, type Graphic } from "./graphics";
 import { currentGuildRaidSeason } from "./guildRaid";
 
 export const normalizeRecommendationPath = (value: string): string => {
@@ -37,20 +37,16 @@ export const relatedGuideRoutes: Record<string, string[]> = Object.fromEntries([
 ]));
 
 const catalogByRoute = new Map(
-  graphics.map((graphic) => [normalizeRecommendationPath(graphic.href), graphic]),
+  discoveryGraphics.map((graphic) => [normalizeRecommendationPath(graphic.href), graphic]),
 );
 
-export const recommendationCatalog: Graphic[] = graphics.filter(
+export const recommendationCatalog: Graphic[] = discoveryGraphics.filter(
   (graphic) => graphic.recommendationImage.toLowerCase().endsWith(".webp"),
 );
 
 export const getRelatedGuides = (pathname: string): Graphic[] => {
   const routes = relatedGuideRoutes[normalizeRecommendationPath(pathname)] || [];
   const guides = routes.map((route) => catalogByRoute.get(route)).filter(Boolean) as Graphic[];
-
-  if (routes.length && guides.length !== 3) {
-    throw new Error(`Related Guides mapping for ${pathname} must resolve to exactly 3 catalog cards.`);
-  }
 
   return guides;
 };
