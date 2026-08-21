@@ -6,19 +6,22 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
   <a class="logo" href="/" data-ga4-nav-section="brand">Terminus Maximus</a>
 
   <nav class="nav-links" aria-label="Primary navigation">
-    <a href="/" data-ga4-nav-section="home">Home</a>
-
     <div class="dropdown">
       <button
         class="dropdown-button"
         type="button"
         aria-expanded="false"
-        aria-controls="graphics-menu"
+        aria-controls="explore-menu"
       >
-        Graphics
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span>Explore</span>
       </button>
 
-      <div class="dropdown-menu" id="graphics-menu">
+      <div class="dropdown-menu" id="explore-menu">
         <a href="/beginner-guide" data-ga4-nav-section="graphics">Beginner Guide</a>
         <a href="/elite-campaigns" data-ga4-nav-section="campaigns">Elite Campaigns</a>
         <a href="/campaigns/" data-ga4-nav-section="campaigns">Campaign Guides</a>
@@ -84,6 +87,10 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
         </div>
       </div>
     </div>
+
+    <a class="campaign-guides-link" href="/campaigns" data-ga4-nav-section="campaigns">
+      Campaign Guides
+    </a>
 
     <a class="replay-library-link" href="/replay-library" data-ga4-nav-section="replay_library">
       Replay<br />Library
@@ -185,6 +192,7 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
   }
 
   .dropdown-button,
+  .campaign-guides-link,
   .replay-library-link {
     display: flex;
     align-items: center;
@@ -195,6 +203,22 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
     text-align: center;
   }
 
+  .menu-icon {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-right: 0.45rem;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 0.9rem;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+  }
+
+  .campaign-guides-link,
   .replay-library-link {
     font-size: 0.9rem !important;
     line-height: 1.05;
@@ -319,7 +343,7 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
 
   .nav-links {
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .nav-links > a,
@@ -329,11 +353,13 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
   }
 
   .dropdown-button,
+  .campaign-guides-link,
   .replay-library-link {
     width: 6.5rem;
     height: 3rem;
   }
 
+  .campaign-guides-link,
   .replay-library-link {
     font-size: 0.8rem !important;
   }
