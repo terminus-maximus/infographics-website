@@ -1,0 +1,2121 @@
+{
+  "id": "saim_hann_mirror",
+  "name": "Saim Hann Mirror",
+  "updatedAt": "2026-08-23",
+  "modes": [
+    {
+      "id": "normal",
+      "name": "Normal",
+      "stages": [
+        {
+          "number": 60,
+          "evidence": [
+            {
+              "videoId": "Z_3kqqGU7gs",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Bronze3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackHaarken",
+                  "rankId": "Silver1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:26",
+              "timestampSeconds": 26,
+              "notes": "Process 1.72 required-hero-focused promotion; exact Normal 60 and settled native Victory triplet; Yaz, Abrax, and Toth ranks exact; Haarken and Archi identities exact; both supporting ranks unresolved and intentionally blank/unknown"
+            },
+            {
+              "videoId": "z5TNpUUutWk",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "evidence": [
+            {
+              "videoId": "HBd70hzMUvs",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 62,
+          "evidence": [
+            {
+              "videoId": "B-OZhYFTfr0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "evidence": [
+            {
+              "videoId": "3oXEsCargPg",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 64,
+          "evidence": [
+            {
+              "videoId": "RPNbH8nan2M",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "evidence": [
+            {
+              "videoId": "Sex-BKsZzRc",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackObliterator",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 66,
+          "evidence": [
+            {
+              "videoId": "L8xu7qaqtK0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 67,
+          "evidence": [
+            {
+              "videoId": "TapWv0qWOjg",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "evidence": [
+            {
+              "videoId": "n419LiIUOuI",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 69,
+          "evidence": [
+            {
+              "videoId": "RlMkb3rh_oI",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathBlightbringer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "evidence": [
+            {
+              "videoId": "lJ2XyHrNW1k",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathBlightbringer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 71,
+          "evidence": [
+            {
+              "videoId": "r-l64H9MkdQ",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathBlightbringer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 72,
+          "evidence": [
+            {
+              "videoId": "uXHA4CtOa9Y",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathBlightbringer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 73,
+          "evidence": [
+            {
+              "videoId": "G48FfuTVYhY",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "evidence": [
+            {
+              "videoId": "0SyDRZSGuco",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Iron3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Silver3",
+                  "role": "required"
+                },
+                {
+                  "characterId": "deathBlightbringer",
+                  "rankId": "Bronze1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 75,
+          "evidence": [
+            {
+              "videoId": "lXbNh2VLYHM",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "blackTerminator",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "stages": [
+        {
+          "number": 1,
+          "evidence": [
+            {
+              "videoId": "23mVMJjhmag",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            },
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:38",
+              "timestampSeconds": 38,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:50",
+              "timestampSeconds": 110,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:56",
+              "timestampSeconds": 176,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:00",
+              "timestampSeconds": 240,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:30",
+              "timestampSeconds": 330,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "6:16",
+              "timestampSeconds": 376,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:28",
+              "timestampSeconds": 448,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "evidence": [
+            {
+              "videoId": "vn8qSaI2cB8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:36",
+              "timestampSeconds": 516,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:36",
+              "timestampSeconds": 36,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:40",
+              "timestampSeconds": 100,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "evidence": [
+            {
+              "videoId": "CpD46p_ufZA",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Iron1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Silver2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Iron1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            },
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:46",
+              "timestampSeconds": 166,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:42",
+              "timestampSeconds": 222,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:44",
+              "timestampSeconds": 284,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:56",
+              "timestampSeconds": 356,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:16",
+              "timestampSeconds": 436,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "evidence": [
+            {
+              "videoId": "eWdJw8TV6Ms",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:08",
+              "timestampSeconds": 488,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:42",
+              "timestampSeconds": 42,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "1:56",
+              "timestampSeconds": 116,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:52",
+              "timestampSeconds": 172,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:50",
+              "timestampSeconds": 230,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:46",
+              "timestampSeconds": 286,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:40",
+              "timestampSeconds": 340,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "6:52",
+              "timestampSeconds": 412,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "evidence": [
+            {
+              "videoId": "7lb1ghltjT8",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:56",
+              "timestampSeconds": 476,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:36",
+              "timestampSeconds": 36,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 26,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:12",
+              "timestampSeconds": 132,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 27,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "3:42",
+              "timestampSeconds": 222,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            },
+            {
+              "videoId": "YIFrcnYP6WI",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldTerminator",
+                  "rankId": "Bronze3",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Silver3",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 28,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "7:20",
+              "timestampSeconds": 440,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 29,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:50",
+              "timestampSeconds": 530,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 30,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "11:12",
+              "timestampSeconds": 672,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 31,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "13:10",
+              "timestampSeconds": 790,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 32,
+          "evidence": [
+            {
+              "videoId": "DCGA2fVuxnw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "16:08",
+              "timestampSeconds": 968,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            },
+            {
+              "videoId": "iaeXoSEFRDw",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Stone1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "deathRotbone",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:26",
+              "timestampSeconds": 26,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "2:24",
+              "timestampSeconds": 144,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 35,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "4:10",
+              "timestampSeconds": 250,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 36,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "5:46",
+              "timestampSeconds": 346,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 37,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "8:02",
+              "timestampSeconds": 482,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "10:24",
+              "timestampSeconds": 624,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            },
+            {
+              "videoId": "larlKsmcQ8Y",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Bronze2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Iron2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            },
+            {
+              "videoId": "loE6-C-qMIU",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Stone2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Stone2",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            },
+            {
+              "videoId": "pr4psAMLZqQ",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Bronze1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "evidence": [
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "11:52",
+              "timestampSeconds": 712,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        },
+        {
+          "number": 40,
+          "evidence": [
+            {
+              "videoId": "BK-t21IXfOk",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                },
+                {
+                  "characterId": "worldKharn",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                },
+                {
+                  "characterId": "blackPossession",
+                  "rankId": "Gold1",
+                  "role": "optional"
+                }
+              ],
+              "timestamp": "0:00",
+              "timestampSeconds": 0,
+              "notes": "Process 1.72; known-creator upload inventory; exact title stage; three adjacent settled populated native Victory frames; portrait-bound exact-rank normalization; conservative unverified replay start"
+            },
+            {
+              "videoId": "G8dyqpkmJJ0",
+              "roster": [
+                {
+                  "characterId": "thousTzaangor",
+                  "rankId": "Gold2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousInfernalMaster",
+                  "rankId": "Diamond2",
+                  "role": "required"
+                },
+                {
+                  "characterId": "thousTerminator",
+                  "rankId": "Gold1",
+                  "role": "required"
+                }
+              ],
+              "timestamp": "13:48",
+              "timestampSeconds": 828,
+              "notes": "Process 1.72 recovered promotion; exact stage and settled native Victory triplet; all three required ranks exact via same-video collection-to-Victory limited reuse; no supporting heroes deployed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "videos": {
+    "Z_3kqqGU7gs": {
+      "title": "Jain Zar boss fight (Saim-Hann mirror 60) #tacticus #warhammer40k #achievement #subscribe",
+      "creator": "AureLuck",
+      "url": "https://www.youtube.com/watch?v=Z_3kqqGU7gs"
+    },
+    "z5TNpUUutWk": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 60 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=z5TNpUUutWk"
+    },
+    "HBd70hzMUvs": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 61 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=HBd70hzMUvs"
+    },
+    "B-OZhYFTfr0": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 62 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=B-OZhYFTfr0"
+    },
+    "3oXEsCargPg": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 63 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=3oXEsCargPg"
+    },
+    "RPNbH8nan2M": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 64 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=RPNbH8nan2M"
+    },
+    "Sex-BKsZzRc": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 65 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=Sex-BKsZzRc"
+    },
+    "L8xu7qaqtK0": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 66 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=L8xu7qaqtK0"
+    },
+    "TapWv0qWOjg": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 67 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=TapWv0qWOjg"
+    },
+    "n419LiIUOuI": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 68 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=n419LiIUOuI"
+    },
+    "RlMkb3rh_oI": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 69 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=RlMkb3rh_oI"
+    },
+    "lJ2XyHrNW1k": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 70 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lJ2XyHrNW1k"
+    },
+    "r-l64H9MkdQ": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 71 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=r-l64H9MkdQ"
+    },
+    "uXHA4CtOa9Y": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 72 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=uXHA4CtOa9Y"
+    },
+    "G48FfuTVYhY": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 73 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=G48FfuTVYhY"
+    },
+    "0SyDRZSGuco": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 74 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=0SyDRZSGuco"
+    },
+    "lXbNh2VLYHM": {
+      "title": "TACTICUS - Saim-Hann MIRROR: BATTLE 75 - warhammer 40k - walkthrough",
+      "creator": "SpockeTheChange",
+      "url": "https://www.youtube.com/watch?v=lXbNh2VLYHM"
+    },
+    "23mVMJjhmag": {
+      "title": "Saim-Hann Mirror Elite 1: S2 35/26 Abraxas, Iron 1 Bozos",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=23mVMJjhmag"
+    },
+    "vn8qSaI2cB8": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Mirror Saim-Hann Zone 1",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=vn8qSaI2cB8"
+    },
+    "eWdJw8TV6Ms": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Mirror Saim-Hann Zone 2",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=eWdJw8TV6Ms"
+    },
+    "CpD46p_ufZA": {
+      "title": "Saim-Hann Mirror Elite 11 - S2 Abraxas",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=CpD46p_ufZA"
+    },
+    "7lb1ghltjT8": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Mirror Saim-Hann Zone 3",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=7lb1ghltjT8"
+    },
+    "DCGA2fVuxnw": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Mirror Saim-Hann Zone 4",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=DCGA2fVuxnw"
+    },
+    "YIFrcnYP6WI": {
+      "title": "Saim Hann Mirror Elite 27 Clear (For Reddit)",
+      "creator": "PsykerTimmy",
+      "url": "https://www.youtube.com/watch?v=YIFrcnYP6WI"
+    },
+    "iaeXoSEFRDw": {
+      "title": "Saim-Hann Mirror Elite 32 - G1 Abraxas, Rotbone, and Kharn, Stone 1 Bozos",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=iaeXoSEFRDw"
+    },
+    "G8dyqpkmJJ0": {
+      "title": "WH40k Tacticus - Campaign Long Play: Elite Mirror Saim-Hann Zone 5",
+      "creator": "Caoryn",
+      "url": "https://www.youtube.com/watch?v=G8dyqpkmJJ0"
+    },
+    "larlKsmcQ8Y": {
+      "title": "Saim-hann mirror elite 38, Abraxas gold 1 41/41, Yazaghor bronze 2, Toth iron 2",
+      "creator": "Hringabrynja",
+      "url": "https://www.youtube.com/watch?v=larlKsmcQ8Y"
+    },
+    "loE6-C-qMIU": {
+      "title": "Saim-Hann Mirror Elite 38 - G1 38/38 Abraxas, Rare stone 2 26/1 bozos",
+      "creator": "cpunerd (kharnage)",
+      "url": "https://www.youtube.com/watch?v=loE6-C-qMIU"
+    },
+    "pr4psAMLZqQ": {
+      "title": "Saim Hann Mirror Elite Battle 38 Playthrough",
+      "creator": "Unappreciator",
+      "url": "https://www.youtube.com/watch?v=pr4psAMLZqQ"
+    },
+    "BK-t21IXfOk": {
+      "title": "Saim hann mirror elite 40 3*",
+      "creator": "Bigbob",
+      "url": "https://www.youtube.com/watch?v=BK-t21IXfOk"
+    }
+  }
+}

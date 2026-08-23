@@ -83,3 +83,14 @@ export const saimHannPage = {
   featuredWebImage: "/images/web/saim-hann.webp",
   featuredImageAlt: "Tacticus Saim-Hann Campaign Guide infographic",
 };
+
+export const saimHannMirrorPage = {
+  title: "Tacticus Saim-Hann Mirror Campaign Guide",
+  subtitle:
+    "Beat every Saim-Hann Mirror Normal and Elite stage with recommended Chaos teams, investment targets, and replay-backed strategies.",
+  description:
+    "Tacticus Saim-Hann Mirror campaign guide with Normal and Elite teams, required and supporting hero recommendations, difficult-stage strategies, and replay evidence.",
+  featuredImage: "/images/saim-hann-mirror.png",
+  featuredWebImage: "/images/web/saim-hann-mirror.webp",
+  featuredImageAlt: "Tacticus Saim-Hann Mirror Campaign Guide infographic",
+};

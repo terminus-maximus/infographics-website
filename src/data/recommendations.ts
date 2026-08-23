@@ -16,6 +16,7 @@ const campaignRoutes = [
   "/campaigns/octarius",
   "/campaigns/octarius-mirror",
   "/campaigns/saim-hann",
+  "/campaigns/saim-hann-mirror",
 ];
 
 const guildRaidRoutes = {

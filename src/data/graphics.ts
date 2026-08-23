@@ -136,6 +136,15 @@ const graphicDefinitions: GraphicDefinition[] = [
       requiredHeroes: getRequiredHeroes("/campaigns/saim-hann")
     },
     {
+      title: "Saim-Hann Mirror Guide",
+      href: "/campaigns/saim-hann-mirror/",
+      description: "Chaos teams, investment targets, difficult stages, and replay evidence for Saim-Hann Mirror.",
+      image: "/images/saim-hann-mirror.png",
+      thumbnail: "/images/thumbnails/saim-hann-mirror-thumb.png",
+      category: "campaign",
+      requiredHeroes: getRequiredHeroes("/campaigns/saim-hann-mirror")
+    },
+    {
       title: "Current Season",
       href: currentGuildRaidSeason.href,
       description: currentGuildRaidSeason.description,

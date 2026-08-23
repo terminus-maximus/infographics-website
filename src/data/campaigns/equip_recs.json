@@ -312,13 +312,13 @@
     "URL": "/campaigns/saim-hann-mirror",
     "Reference": "required_hero_2_terminus_name",
     "terminus_name": "Abrax",
-    "Normal_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
+    "Normal_1_Icon": "Abrax-1-Rare-Ceremonial-Knife.webp",
     "Normal_1_Rank": 1,
-    "Normal_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
-    "Normal_2_Rank": 1,
-    "Elite_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
+    "Normal_2_Icon": "Abrax-2-Rare-Force-Field.webp",
+    "Normal_2_Rank": 7,
+    "Elite_1_Icon": "Abrax-1-Legendary-Grand-Ceremonial-Knife.webp",
     "Elite_1_Rank": 1,
-    "Elite_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
+    "Elite_2_Icon": "Abrax-2-Legendary-Force-Field.webp",
     "Elite_2_Rank": 1
   },
   {
@@ -326,13 +326,13 @@
     "URL": "/campaigns/saim-hann-mirror",
     "Reference": "required_hero_3_terminus_name",
     "terminus_name": "Toth",
-    "Normal_1_Icon": "Abrax-1-Uncommon-Ceremonial-Knife.webp",
+    "Normal_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
     "Normal_1_Rank": 1,
-    "Normal_2_Icon": "Abrax-2-Uncommon-Force-Field.webp",
+    "Normal_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
     "Normal_2_Rank": 1,
-    "Elite_1_Icon": "Abrax-1-Uncommon-Ceremonial-Knife.webp",
+    "Elite_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
     "Elite_1_Rank": 1,
-    "Elite_2_Icon": "Abrax-2-Uncommon-Force-Field.webp",
+    "Elite_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
     "Elite_2_Rank": 1
   }
 ]

@@ -1,0 +1,179 @@
+---
+import type { CampaignMode, CampaignVideo, CharacterReference, RankReference } from "../../lib/campaigns";
+import {
+  alsoGoodSupportingHero,
+  bestSupportingHero,
+  bossContent,
+  difficultStageGroups,
+  otherSupportingHeroes,
+  overviewContent,
+  requiredHeroContent,
+} from "../../data/campaigns/saimHannMirrorGuideContent";
+import { getSaimHannMirrorEquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
+import EquipmentBadge from "./EquipmentBadge.astro";
+import HeroGuideCard from "./HeroGuideCard.astro";
+import StageReplayPreview from "./StageReplayPreview.astro";
+
+interface Props {
+  characters: Record<string, CharacterReference>;
+  modes: CampaignMode[];
+  videos: Record<string, CampaignVideo>;
+  ranks: Record<string, RankReference>;
+}
+
+const { characters, modes, videos, ranks } = Astro.props;
+const findMode = (modeId: string) => modes.find((mode) => mode.id === modeId)!;
+const findStage = (modeId: string, stageNumber: number) =>
+  findMode(modeId).stages.find((stage) => stage.number === stageNumber);
+
+const tocGroups = [
+  { title: "Guide", links: [["Overview", "#overview"], ["Required Heroes", "#required-heroes"], ["Supporting Heroes", "#supporting-heroes"], ["Difficult Stages", "#difficult-stages"]] },
+  { title: "Supporting Heroes", links: [["Best — Rotbone", "#best-supporting-hero"], ["Also Good — Archimatos", "#also-good-supporting-hero"], ["Other Options", "#other-supporting-heroes"]] },
+  { title: "Difficult Stages", links: [["Normal", "#difficult-normal-stages"], ["Elite", "#difficult-elite-stages"], ["Bosses", "#campaign-bosses"]] },
+  { title: "Replay Data", links: [["Replay Filters", "#campaign-replay-filters"], ["Campaign Replays", "#campaign-replays"], ["Replay Statistics", "#campaign-replay-statistics"], ["Related Guides", "#related-guides"]] },
+];
+---
+
+<nav class="table-of-contents guide-panel" aria-labelledby="table-of-contents-heading">
+  <h2 id="table-of-contents-heading">Table of Contents</h2>
+  <div class="toc-grid">
+    {tocGroups.map((group) => <div class="toc-group"><h3>{group.title}</h3><ul>{group.links.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></div>)}
+  </div>
+</nav>
+
+<section class="guide-panel" id="overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading">Overview</h2>
+  <div class="overview-grid">
+    <article class="overview-card"><span class="section-icon" aria-hidden="true">◷</span><div><h3>Timing</h3><p class="content-callout">{overviewContent.timing.callout}</p><div class="copy-stack">{overviewContent.timing.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div></div></article>
+    <article class="overview-card"><span class="section-icon" aria-hidden="true">↗</span><div><h3>Progression</h3><p class="content-callout">{overviewContent.progression.callout}</p><p>{overviewContent.progression.introduction}</p><ol>{overviewContent.progression.steps.map((step) => <li>{step}</li>)}</ol><div class="copy-stack">{overviewContent.progression.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div></div></article>
+
+    <article class="overview-card investment-card">
+      <span class="section-icon" aria-hidden="true">◆</span>
+      <div>
+        <h3>Recommended Investment</h3>
+        {(["normal", "elite"] as const).map((mode) => (
+          <>
+            <h4>{mode === "normal" ? "Normal" : "Elite"} Investment</h4>
+            <div class="table-scroll" tabindex="0" aria-label={`${mode} investment recommendations`}>
+              <table>
+                <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
+                <tbody>{overviewContent[mode === "normal" ? "normalInvestment" : "eliteInvestment"].map((row) => {
+                  const character = characters[row.characterId];
+                  const rank = ranks[row.rankId];
+                  const equipment = getSaimHannMirrorEquipmentRecommendation(row.abilityIconName)[mode];
+                  return <tr>
+                    <td data-label="Hero"><img class="table-hero" src={character.portrait} alt={character.name} title={character.name} width="42" height="42" loading="lazy" /></td>
+                    <td data-label="Rank"><img class="table-rank-icon" src={rank.badge} alt={`${rank.name} rank`} title={rank.name} width="42" height="42" loading="lazy" /></td>
+                    <td data-label="Active"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Active.webp`} alt={`${character.shortName} active ability`} width="38" height="38" loading="lazy" /><strong>{row.active}</strong></span></td>
+                    <td data-label="Passive"><span class="table-ability"><img src={`/images/abilities/${row.abilityIconName}-Passive.webp`} alt={`${character.shortName} passive ability`} width="38" height="38" loading="lazy" /><strong>{row.passive}</strong></span></td>
+                    <td data-label="Weapon"><span class="table-equipment"><EquipmentBadge equipment={equipment.weapon} size={42} /><strong>{equipment.weapon.rank}</strong></span></td>
+                    <td data-label="Defense"><span class="table-equipment"><EquipmentBadge equipment={equipment.defense} size={42} /><strong>{equipment.defense.rank}</strong></span></td>
+                  </tr>;
+                })}</tbody>
+              </table>
+            </div>
+          </>
+        ))}
+      </div>
+    </article>
+
+    <article class="overview-card"><span class="section-icon" aria-hidden="true">✦</span><div><h3>Strategy &amp; Tips</h3><div class="tip-list">{overviewContent.strategyTips.map(([title, copy]) => <section class="tip-card"><h4>{title}</h4><p>{copy}</p></section>)}</div></div></article>
+  </div>
+</section>
+
+<section class="guide-panel" id="required-heroes" aria-labelledby="required-heroes-heading">
+  <h2 id="required-heroes-heading">Required Heroes</h2>
+  <p class="section-intro">Yazaghor, Abraxas, and Toth are mandatory throughout Saim-Hann Mirror. Elite 1–2, 11, 17, 28, and 38 restrict deployment to this trio, so optional Chaos heroes cannot eliminate their survival requirements.</p>
+  <div class="hero-grid required-grid">{requiredHeroContent.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} equipment={getSaimHannMirrorEquipmentRecommendation(guide.abilityTargets!.iconName)} />)}</div>
+</section>
+
+<section class="guide-panel" id="supporting-heroes" aria-labelledby="supporting-heroes-heading">
+  <h2 id="supporting-heroes-heading">Supporting Heroes</h2>
+  <p class="section-intro">Use Rotbone for three-medal survival and Archimatos for accessible psychic summon pressure. Both are fully displayed because they form the strongest general-purpose pair for unrestricted stages.</p>
+  <section class="support-bucket" id="best-supporting-hero" aria-labelledby="best-supporting-hero-heading"><h3 id="best-supporting-hero-heading" class="bucket-heading">Best</h3><HeroGuideCard guide={bestSupportingHero} character={characters[bestSupportingHero.characterId]} ranks={ranks} /></section>
+  <section class="support-bucket" id="also-good-supporting-hero" aria-labelledby="also-good-supporting-hero-heading"><h3 id="also-good-supporting-hero-heading" class="bucket-heading">Also Good</h3><HeroGuideCard guide={alsoGoodSupportingHero} character={characters[alsoGoodSupportingHero.characterId]} ranks={ranks} /></section>
+  <details class="guide-disclosure" id="other-supporting-heroes">
+    <summary><span>Other Options</span><span class="summary-portraits" aria-hidden="true">{otherSupportingHeroes.map((guide) => <img src={characters[guide.characterId].portrait} alt="" width="34" height="34" loading="lazy" />)}</span></summary>
+    <div class="disclosure-content hero-grid">{otherSupportingHeroes.map((guide) => <HeroGuideCard guide={guide} character={characters[guide.characterId]} ranks={ranks} />)}</div>
+  </details>
+</section>
+
+<section class="guide-panel" id="difficult-stages" aria-labelledby="difficult-stages-heading">
+  <h2 id="difficult-stages-heading">Difficult Stages</h2>
+  <p class="section-intro">Deployment restrictions define the campaign's true investment floor. Replay ranks vary widely, so treat low-investment clears as proof of possibility rather than a repeatable baseline.</p>
+  <div class="disclosure-stack">
+    {difficultStageGroups.map((group) => <details class="guide-disclosure" id={group.id}><summary>{group.title}</summary><div class="disclosure-content stage-grid">{group.stages.map((stage) => {
+      const replayStage = findStage(group.modeId, stage.number);
+      return <article class="stage-card"><span class="stage-number">{stage.number}</span><div><h3>{group.title} {stage.number} — {stage.title}</h3><h4>Why players struggle</h4><p>{stage.why}</p><h4>Strategy</h4><ul>{stage.strategy.map((item) => <li>{item}</li>)}</ul><h4>Closing note</h4><p>{stage.closing}</p>{replayStage ? <StageReplayPreview mode={findMode(group.modeId)} stage={replayStage} videos={videos} characters={characters} ranks={ranks} /> : <p class="replay-gap">No dedicated replay row is available for this stage yet. Use the campaign filters and formation principles above.</p>}</div></article>;
+    })}</div></details>)}
+    <details class="guide-disclosure" id="campaign-bosses"><summary>Bosses</summary><div class="disclosure-content boss-content"><p class="boss-intro">Saim-Hann Mirror bosses appear at Normal 15, 30, 45, 60, and 75, with their Elite encounters at 8, 16, 24, 32, and 40.</p><div class="boss-grid">{bossContent.map((boss) => { const character = characters[boss.characterId]; return <article class="boss-card"><img src={character.portrait} alt={`${character.name} portrait`} width="64" height="64" loading="lazy" /><div><h3>{boss.heading}</h3><div class="appearance-list">{boss.appearances.map((appearance) => <span>{appearance}</span>)}</div><div class="copy-stack">{boss.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div></div></article>; })}</div></div></details>
+  </div>
+</section>
+
+<style>
+  .guide-panel { margin-bottom: 3rem; padding: 1.5rem; scroll-margin-top: 6rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; }
+  h2 { margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #333; color: #d4af37; }
+  h3 { margin: 0 0 0.35rem; color: #f5f5f5; font-size: 1rem; line-height: 1.3; }
+  h4 { margin: 1rem 0 0.4rem; color: #d4af37; font-size: 0.88rem; line-height: 1.35; }
+  p { margin: 0; color: #bdbdbd; font-size: 0.92rem; line-height: 1.65; }
+  ol, ul { margin: 0.7rem 0; padding-left: 1.35rem; color: #c7c7c7; font-size: 0.9rem; line-height: 1.65; }
+  li + li { margin-top: 0.3rem; }
+  .section-intro { margin: -0.15rem 0 1.25rem; }
+  .toc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .toc-group { min-width: 0; padding: 1rem; border: 1px solid #333; border-radius: 8px; background: #121212; }
+  .toc-group ul { margin: 0.5rem 0 0; padding: 0; list-style: none; }
+  .toc-group li + li { margin-top: 0.35rem; }
+  a { color: #d4af37; font-weight: 700; text-decoration: none; }
+  a:hover, a:focus-visible { color: #f5d76e; text-decoration: underline; outline: none; }
+  .overview-grid, .hero-grid, .stage-grid, .boss-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .overview-card, .stage-card, .boss-card { display: grid; min-width: 0; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; padding: 1rem; border: 1px solid #333; border-radius: 9px; background: #121212; }
+  .overview-card > div, .stage-card > div, .boss-card > div { min-width: 0; }
+  .section-icon, .stage-number { display: grid; width: 2.6rem; height: 2.6rem; flex: 0 0 auto; place-items: center; border: 1px solid #5b4b1c; border-radius: 50%; background: rgba(212,175,55,.09); color: #f5d76e; font-weight: 800; }
+  .content-callout { margin: .7rem 0 1rem; padding: .8rem .9rem; border-left: 3px solid #d4af37; border-radius: 0 7px 7px 0; background: rgba(212,175,55,.08); color: #f5d76e; font-weight: 800; }
+  .copy-stack, .tip-list, .disclosure-stack { display: grid; gap: .8rem; }
+  .tip-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tip-card { min-width: 0; padding: .85rem; border: 1px solid #2f2f2f; border-radius: 7px; background: #181818; }
+  .tip-card h4 { margin-top: 0; }
+  .support-bucket { margin-bottom: 1.25rem; scroll-margin-top: 6rem; }
+  .bucket-heading { margin-bottom: .65rem; color: #d4af37; font-size: 1.08rem; }
+  .guide-disclosure { scroll-margin-top: 6rem; border: 1px solid #333; border-radius: 9px; background: #121212; overflow: clip; }
+  summary { display: flex; min-width: 0; min-height: 3.5rem; align-items: center; gap: 1rem; padding: .85rem 1rem; color: #d4af37; cursor: pointer; font-weight: 800; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { color: #f59e0b; content: "+"; font-size: 1.35rem; line-height: 1; }
+  .guide-disclosure[open] summary::after { content: "−"; }
+  summary:hover, summary:focus-visible { color: #f5d76e; outline: none; }
+  .summary-portraits { display: flex; min-width: 0; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
+  .summary-portraits img { width: 2.1rem; height: 2.1rem; margin-left: -.25rem; border: 1px solid #444; border-radius: 50%; background: #1e1e1e; object-fit: cover; }
+  .disclosure-content { padding: 1rem; border-top: 1px solid #292929; }
+  .boss-card > img { border: 1px solid #444; border-radius: 50%; object-fit: cover; }
+  .boss-intro { margin-bottom: 1rem; }
+  .appearance-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 .7rem; }
+  .appearance-list span { padding: .2rem .5rem; border: 1px solid #4b421f; border-radius: 999px; color: #d8c575; font-size: .72rem; font-weight: 800; }
+  .replay-gap { margin-top: 1rem; padding: .75rem .85rem; border-left: 3px solid #666; background: #121212; }
+  .table-scroll { width: 100%; min-width: 0; margin: .55rem 0 .9rem; overflow-x: auto; border: 1px solid #333; border-radius: 8px; }
+  .table-scroll:focus-visible { border-color: #d4af37; outline: none; }
+  table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; background: #151515; color: #d5d5d5; font-size: .78rem; }
+  th, td { padding: .65rem .4rem; border-bottom: 1px solid #303030; text-align: center; vertical-align: middle; }
+  th { background: #252525; color: #d4af37; font-size: .68rem; text-transform: uppercase; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .table-hero, .table-rank-icon { display: block; width: 2.65rem; height: 2.65rem; margin: 0 auto; object-fit: contain; }
+  .table-hero { border: 1px solid #444; border-radius: 50%; object-fit: cover; }
+  .table-ability, .table-equipment { display: inline-flex; align-items: center; justify-content: center; gap: .25rem; }
+  .table-ability img { width: 2.4rem; height: 2.4rem; border: 1px solid #444; border-radius: 7px; object-fit: cover; }
+  .table-ability strong, .table-equipment strong { color: #f5f5f5; font-size: .78rem; }
+  @media (max-width: 900px) { .toc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tip-list { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) {
+    .guide-panel { margin-bottom: 2rem; padding: 1rem; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .overview-card, .stage-card, .boss-card { grid-template-columns: 1fr; padding: .9rem; }
+    summary { align-items: flex-start; }
+    .summary-portraits img { width: 1.75rem; height: 1.75rem; }
+    .table-scroll { overflow: visible; border: 0; }
+    table, tbody { display: block; width: 100%; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-bottom: .8rem; padding: .8rem; border: 1px solid #333; border-radius: 8px; background: #151515; }
+    td { display: grid; min-width: 0; grid-template-columns: 1fr; gap: .35rem; justify-items: center; padding: 0; border: 0; }
+    td::before { color: #d4af37; content: attr(data-label); font-size: .63rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+    .table-ability, .table-equipment { min-width: 0; }
+  }
+</style>
