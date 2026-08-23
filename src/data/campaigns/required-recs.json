@@ -250,5 +250,41 @@
     "Passive_Normal": "26",
     "Active_Elite": "1",
     "Passive_Elite": "35+"
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Yaz",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Bronze 1",
+    "Active_Normal": "1",
+    "Passive_Normal": "1",
+    "Active_Elite": "1",
+    "Passive_Elite": "1"
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Abrax",
+    "Rank_Normal": "Silver 1",
+    "Rank_Elite": "Gold 2",
+    "Active_Normal": "26",
+    "Passive_Normal": "26",
+    "Active_Elite": "35+",
+    "Passive_Elite": "35+"
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Toth",
+    "Rank_Normal": "Bronze 1",
+    "Rank_Elite": "Bronze 1",
+    "Active_Normal": "8+",
+    "Passive_Normal": "17",
+    "Active_Elite": "8+",
+    "Passive_Elite": "17"
   }
 ]

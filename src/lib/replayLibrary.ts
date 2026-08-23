@@ -8,6 +8,7 @@ type ReplayRecord = {
   damage_final?: string | number;
   published_at?: string;
   review_status?: string;
+  agent_review?: "LEGACY_REVIEW" | "STRONG_RESULT" | "NEED_HUMAN";
   map?: string | null;
   team_archetype?: string;
   hero_1?: string;

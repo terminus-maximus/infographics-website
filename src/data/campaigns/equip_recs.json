@@ -292,5 +292,47 @@
     "Elite_1_Rank": 9,
     "Elite_2_Icon": "Eldy-2-Epic-Force-Field.webp",
     "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_1_terminus_name",
+    "terminus_name": "Yaz",
+    "Normal_1_Icon": "Yaz-1-Uncommon-Ceremonial-Knife.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Yaz-2-Uncommon-Plated-Greaves.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Yaz-1-Uncommon-Ceremonial-Knife.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Yaz-2-Uncommon-Plated-Greaves.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_2_terminus_name",
+    "terminus_name": "Abrax",
+    "Normal_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Toth-1-Uncommon-Twisted-Bolt-Pistol.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Toth-2-Uncommon-Force-Field.webp",
+    "Elite_2_Rank": 1
+  },
+  {
+    "Campaign": "Saim-Hann Mirror",
+    "URL": "/campaigns/saim-hann-mirror",
+    "Reference": "required_hero_3_terminus_name",
+    "terminus_name": "Toth",
+    "Normal_1_Icon": "Abrax-1-Uncommon-Ceremonial-Knife.webp",
+    "Normal_1_Rank": 1,
+    "Normal_2_Icon": "Abrax-2-Uncommon-Force-Field.webp",
+    "Normal_2_Rank": 1,
+    "Elite_1_Icon": "Abrax-1-Uncommon-Ceremonial-Knife.webp",
+    "Elite_1_Rank": 1,
+    "Elite_2_Icon": "Abrax-2-Uncommon-Force-Field.webp",
+    "Elite_2_Rank": 1
   }
 ]
