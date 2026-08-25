@@ -60058,5 +60058,33 @@
     "hero_4":null,
     "hero_5":null,
     "MoW":null
+  },
+  {
+    "creator":"Machiep",
+    "video_id":"y0hgJZB5F04",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=y0hgJZB5F04",
+    "published_at":"8\/23\/2026 11:33 PM",
+    "title":"M3 Mortarion - 747k Admech w\/A0 + Helbrecht (S107) #tacticus",
+    "tier_guess":"M3",
+    "tier_final":"M3",
+    "boss_guess":"Mortarion",
+    "boss_final":"Mortarion",
+    "damage_guess":747000.0,
+    "damage_final":"747000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"8\/25\/2026 2:32 AM",
+    "notes":null,
+    "map":"Mortarion_01",
+    "team_archetype":"AdMech",
+    "team_key":"Aleph",
+    "Team (no MoW)":"Aleph",
+    "Team":"Aleph, Biovore",
+    "hero_1":"Aleph",
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
