@@ -1,4 +1,4 @@
-export const currentGuildRaidSeasonNumber = "107";
+export const currentGuildRaidSeasonNumber = "108";
 
 export const currentGuildRaidSeason = {
   seasonNumber: currentGuildRaidSeasonNumber,
