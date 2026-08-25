@@ -29,7 +29,7 @@ const targetsFor = (terminusName: string) => {
 export const overviewContent = {
   timing: {
     paragraphs: [
-      "Octarius is a medium-priority campaign overall, but it becomes high priority when its Black Templar shard farms or upgrade nodes solve a current account bottleneck. Push Normal while inexpensive Ork upgrades keep opening useful stages, then pause when the next milestone demands several ranks without an immediate payoff.",
+      "Octarius is a medium-priority campaign overall, but it becomes high priority when its upgrade nodes solve a current account bottleneck. Push Normal while inexpensive Ork upgrades keep opening useful stages, then pause when the next milestone demands several ranks without an immediate payoff.",
       "Do not let Octarius's old reputation dictate current investment. Boss Gulgortz, Snotflogga, Snappawrecka, and Gibbascrapz have all changed substantially since the oldest guides and completion videos were published.",
       "All 225 Normal medals unlock Octarius Elite. Make that medal cleanup when Elite nodes are useful to your account, then progress only as far as the next farming unlock justifies the cost.",
     ],
@@ -42,7 +42,7 @@ export const overviewContent = {
       "Keep Gibbascrapz close enough to repair and protect the formation.",
       "Raise Snappawrecka only as much as survival and specific damage checks require.",
       "Unlock Snotflogga and use him as the default fourth or fifth Ork.",
-      "Open Black Templar shard farms and useful Normal material nodes.",
+      "Open Black Templar shard farms for Octarius Mirror.",
       "Return for all 225 medals when Octarius Elite is the next valuable goal.",
       "Test Elite immediately, prioritizing efficient material and boss-shard nodes.",
       "Escalate Boss and Snot before spreading resources evenly across all five Orks.",
@@ -99,7 +99,7 @@ export const requiredHeroContent: HeroGuide[] = [
       "Summon the Grot Tank where it can immediately attack a priority target. Even when it does not secure a kill, the extra body can absorb pressure and reshape the enemy's approach.",
       "Keep Gibba near the minimum rank that survives, then add investment when his own durability becomes the reason a restricted-trio stage fails.",
     ],
-    callout: "Build for survival, repairs, the armor field, and a consequential Grot Tank placement.",
+    callout: "Build for survival, repairs, the armor field, and a distracting Grot Tank placement.",
   },
   {
     heading: "Snappawrecka",
@@ -110,7 +110,7 @@ export const requiredHeroContent: HeroGuide[] = [
       "Repair Snappa before a normal attack when practical to restore his stronger full-health effect and build extra hits for his active. Treat the self-damaging active as a finisher, not a button that must be pressed every battle.",
       "Add rank only when Snappa repeatedly dies on a compulsory stage or when a specific damage threshold is blocking progress.",
     ],
-    callout: "Keep Snappa near the survival minimum and spend his self-damaging active only when the burst matters.",
+    callout: "Keep Snappa near the survival minimum and avoid using his Active.",
   },
 ];
 
@@ -135,7 +135,7 @@ export const optionalSupportingHero: HeroGuide = {
     "Tanksmasha offers four movement, a straight-line charge, displacement, Suppression, and damage reduction after moving. He can be useful when already developed for other modes.",
     "Octarius evidence does not justify building him ahead of Snotflogga, and restricted-trio stages remove him entirely. Treat Tanksmasha as a roster luxury rather than the solution to campaign progression.",
   ],
-  callout: "Optional: use Tank if already developed; do not build him primarily for Octarius.",
+  callout: "Optional: use Tank if you love Orks, but do not build him primarily for Octarius.",
 };
 
 export const difficultStageGroups = [

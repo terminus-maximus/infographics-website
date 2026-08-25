@@ -36,8 +36,7 @@ export const overviewContent = {
       "Upgrade the hero that actual attempts identify as the bottleneck instead of leveling the trio evenly.",
     ],
     paragraphs: [
-      "Eligible support factions are Adepta Sororitas, Adeptus Custodes, Adeptus Mechanicus, Astra Militarum, Black Templars, Blood Angels, Dark Angels, Space Wolves, and Ultramarines. Use the campaign's eligible Imperial factions rather than assuming every Imperial release is allowed.",
-      "Normal 20–21, 37, 56, and 63 are notable required-trio checks. Elite currently permits five heroes on every stage, creating two support slots throughout the entire mode.",
+      "Eligible support factions are all Imperial factions: Adepta Sororitas, Adeptus Custodes, Adeptus Mechanicus, Astra Militarum, Black Templars, Blood Angels, Dark Angels, Space Wolves, and Ultramarines.",
     ],
   },
   normalInvestment: investmentRows.map((row) => ({ characterId: row.characterId, rankId: row.normal.rankId, abilityIconName: row.abilityIconName, active: row.normal.active, passive: row.normal.passive })),

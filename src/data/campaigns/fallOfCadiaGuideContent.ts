@@ -48,10 +48,10 @@ export const overviewContent = {
       "Pursue all 120 Elite medals only when the late nodes justify the investment. Recommended Investment targets are practical, repeatable goals—not minimum clears that may require perfect crits, blocks, enemy movement, or repeated restarts.",
     ],
     paragraphs: [
-      "Fall of Cadia 40 is unusually valuable for kill, damage, ability, and Angrax-passive missions because its Vox-Casters can continually call Guardsmen. Avoid killing or frightening away the Vox-Casters when using the stage for farming.",
+      "Fall of Cadia 40 is unusually valuable for kill, damage, ability, and Angrax-passive missions because its Vox-Casters can continually call Guardsmen.",
       "Restricted Elite stages prevent optional carries from replacing investment in the Black Legion trio. Abraxas and Rotbone are the best general open-stage pair, but Angrax, Archimatos, and Haarken still need enough durability to survive on their own.",
     ],
-    callout: "Required Carry: Angrax. Best Support: Abraxas for offense, with Rotbone beside him when three-medal survival is the problem.",
+    callout: "Required Carry: Angrax & Archimatos. True MVP: Abraxas, if available.",
   },
   normalInvestment: investmentRows.map((row) => ({ characterId: row.characterId, rankId: row.normal.rankId, abilityIconName: row.abilityIconName, active: row.normal.active, passive: row.normal.passive })),
   eliteInvestment: investmentRows.map((row) => ({ characterId: row.characterId, rankId: row.elite.rankId, abilityIconName: row.abilityIconName, active: row.elite.active, passive: row.elite.passive })),

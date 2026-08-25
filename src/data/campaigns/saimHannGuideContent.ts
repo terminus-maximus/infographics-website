@@ -139,10 +139,10 @@ export const supportingHeroes: HeroGuide[] = [
     heading: "New — Lhykhis",
     role: "New mobile, high-pierce support with promising but unproven campaign value.",
     paragraphs: [
-      "Lhykhis is now available through Crusade rather than merely announced. Her movement, multi-hit eligibility, and Molecular damage appear well matched to Saim-Hann’s armored and mobile enemies.",
+      "Lhykhis is now available through Crusade Shop. Her movement, multi-hit eligibility, and Molecular damage appear well matched to Saim-Hann’s armored and mobile enemies.",
       "Campaign evidence is still too new to show that she lowers reliable minimum ranks or displaces Maugan Ra. She may become excellent on unrestricted Elite stages, but she cannot change the required-trio floor at Elite 36 and earlier gates.",
     ],
-    callout: "New: mechanically promising, but wait for more campaign clears before treating her as the best support.",
+    callout: "New: mechanically promising, but very few players have tried her in Saim-Hann yet.",
   },
   {
     characterId: "eldarJainZar",

@@ -49,7 +49,7 @@ export const overviewContent = {
       "Add shared-account Imperial supports for the remaining Elite stages.",
     ],
     paragraphs: [
-      "The current documented support list is Adepta Sororitas, Adeptus Custodes, Adeptus Mechanicus, Astra Militarum, Black Templars, Blood Angels, Dark Angels, Space Wolves, and Ultramarines. Do not assume every Imperial faction is eligible.",
+      "The current documented support list is Adepta Sororitas, Adeptus Custodes, Adeptus Mechanicus, Astra Militarum, Black Templars, Blood Angels, Dark Angels, Space Wolves, and Ultramarines.",
       "Normal mixes three-, four-, and five-character deployments. Elite 2, 12, 29, and 36 allow only Kut, Sibyll, and Thaddeus, so no support hero can replace investment in the required trio.",
     ],
   },
@@ -98,7 +98,7 @@ export const requiredHeroContent: HeroGuide[] = [
       "Suppressive Fire makes him the campaign's best answer to Elite Havocs: Barrage the Overwatch threat or its protected cluster before exposing vulnerable allies to the lane.",
       "If damage is the bottleneck, invest in Thaddeus first. On late trio-only stages, a stronger Thaddeus can compensate for more modest Kut and Sibyll investment more effectively than equal promotions across all three.",
     ],
-    callout: "Required Carry: Thaddeus. Preserve his firing lanes and invest where the damage bottleneck actually is.",
+    callout: "Required Carry: Chaddeus. Preserve his firing lanes and invest where the damage bottleneck actually is.",
     featured: true,
   },
 ];

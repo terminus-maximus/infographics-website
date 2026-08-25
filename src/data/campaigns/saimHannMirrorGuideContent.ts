@@ -33,7 +33,7 @@ export const overviewContent = {
       "Progress Elite while existing Chaos supports can carry unrestricted stages. Stop when the next required-trio gate demands disproportionate Toth or Yazaghor investment, then return as Abraxas and the wider Chaos roster grow naturally.",
       "Elite becomes most valuable for rare and legendary materials, character shards, and a wider selection of efficient farms. Full completion is a mid-to-late-game efficiency project rather than an urgent early-account requirement.",
     ],
-    callout: "Complete Normal for efficient Mirror farming. Push Elite to useful nodes, but do not equalize the required trio simply because all three must deploy.",
+    callout: "Complete Normal for efficient Mirror farming. Push Elite to useful nodes, but do not over-invest until you truly need to progress.",
   },
   progression: {
     introduction: "Treat Saim-Hann Mirror as an Abraxas campaign on restricted stages and a shared Chaos campaign everywhere else.",
@@ -74,7 +74,7 @@ export const overviewContent = {
     ["Let Toth Hold the Line", "Use Toth's durability, Suppressive Fire, and Time Flux to protect Yazaghor and Abraxas. His passive is the important medal-preservation investment when restricted stages become lethal."],
     ["Control Wraithguard", "Suppress Elite Wraithguard with Toth or Volk to remove Overwatch, or engage them with an expendable summon. Avoid lining required heroes up for Wraithcannon splash."],
     ["Remove the Warlock System", "Warlocks improve nearby Aeldari survival and accuracy. Prioritize them when their support is making Guardians or other threats harder to remove."],
-    ["Protect Medals, Not Summons", "Summons are successful when they absorb attacks or block dangerous routes. Keep Rotbone adjacent to the required hero most likely to die on open-deployment stages."],
+    ["Sacrifice the Summons", "Summons are successful when they absorb attacks or block dangerous routes. Keep Rotbone adjacent to the required hero most likely to die on open-deployment stages."],
   ] as Array<[string, string]>,
 };
 
@@ -99,7 +99,7 @@ export const requiredHeroContent: HeroGuide[] = [
       "Ability level matters independently of character rank because the active directly controls summon health and damage. Prioritize Malefic Maelstrom and plan the turn around open hexes, available Psychic attacks, and the Yazaghor swap.",
       "Abraxas remains the safest long-term investment of the required trio. His summon engine supports other Chaos teams and game modes, while excess Yazaghor or Toth ranks are more campaign-specific.",
     ],
-    callout: "Required Carry: fund Malefic Maelstrom and treat open adjacent hexes as a limited resource.",
+    callout: "Required Carry: fund his Abilities heavily and treat open adjacent hexes as a limited resource.",
     featured: true,
   },
   {
@@ -131,13 +131,13 @@ export const bestSupportingHero: HeroGuide = {
 export const alsoGoodSupportingHero: HeroGuide = {
   characterId: "blackPossession",
   heading: "Archimatos",
-  role: "Also Good — accessible Psyker, summon support, and Fall of Cadia crossover.",
+  role: "Also Good —accessible Psyker, summon support, and Fall of Cadia crossover.",
   paragraphs: [
     "Archimatos is the most efficient offensive support for many accounts. His Psychic attacks can feed Malefic Maelstrom, while Bloodletters add damage, block routes, and draw attacks away from the required trio.",
     "Sequence his Psychic attack while Abraxas's active is live, and place Bloodletters where they preserve useful summon hexes rather than crowding the second Abraxas position.",
     "Because Archimatos is required for Fall of Cadia, every useful campaign rank advances two Chaos campaigns. That makes him a better dedicated project than a luxury Legendary support.",
   ],
-  callout: "Also Good: the strongest accessible offensive crossover and Abraxas summon partner.",
+  callout: "Psychic Friend: the strongest accessible offensive crossover and Abraxas summon partner.",
   featured: true,
 };
 
