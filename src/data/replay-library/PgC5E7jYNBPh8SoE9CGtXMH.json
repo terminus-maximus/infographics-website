@@ -60954,5 +60954,33 @@
     "hero_4":null,
     "hero_5":null,
     "MoW":null
+  },
+  {
+    "creator":"nazlurf",
+    "video_id":"aaQHdbpZeNs",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=aaQHdbpZeNs",
+    "published_at":"8\/29\/2026 5:10 AM",
+    "title":"Admech vs L5 Hive Tyrant 1,57M",
+    "tier_guess":"L5",
+    "tier_final":"L5",
+    "boss_guess":"Hive Tyrant",
+    "boss_final":"Hive Tyrant",
+    "damage_guess":1570000.0,
+    "damage_final":"1570000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"8\/29\/2026 8:15 AM",
+    "notes":null,
+    "map":"Hive Tyrant_02",
+    "team_archetype":"AdMech",
+    "team_key":null,
+    "Team (no MoW)":null,
+    "Team":null,
+    "hero_1":null,
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":null
   }
 ]
