@@ -187,7 +187,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Uthar LRE",
       href: "/lre/uthar",
-      description: "Be ready for the Votann Legendary on Oct 3rd",
+      description: "Be ready for the Votann Legendary on Oct 4th",
       image: "/images/uthar-lre.png",
       thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
       category: "legendary"
