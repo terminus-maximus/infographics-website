@@ -61682,5 +61682,33 @@
     "hero_4":null,
     "hero_5":null,
     "MoW":"Biovore"
+  },
+  {
+    "creator":"UltraBrother",
+    "video_id":"i7lRCvYbo6w",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=i7lRCvYbo6w",
+    "published_at":"9\/2\/2026 8:46 AM",
+    "title":"Tacticus: M2 Rogal Dorn 1.01m Lavistodes #warhammer #warhammer40k #warhammer40ktacticus #gameplay",
+    "tier_guess":"M2",
+    "tier_final":"M2",
+    "boss_guess":"Dorn",
+    "boss_final":"Dorn",
+    "damage_guess":1010000.0,
+    "damage_final":"1010000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"9\/3\/2026 2:31 AM",
+    "notes":null,
+    "map":"Dorn_03",
+    "team_archetype":"Laviscus",
+    "team_key":null,
+    "Team (no MoW)":null,
+    "Team":"Biovore",
+    "hero_1":null,
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
