@@ -61710,5 +61710,33 @@
     "hero_4":null,
     "hero_5":null,
     "MoW":"Biovore"
+  },
+  {
+    "creator":"zelots1991",
+    "video_id":"XTFVPkocqIU",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=XTFVPkocqIU",
+    "published_at":"9\/4\/2026 12:53 AM",
+    "title":"M2 Dorn S108 - 1.2 mill Lavistodes w\/ Dante & Kharn. Credit@YBK247 #tacticus",
+    "tier_guess":"M2",
+    "tier_final":"M2",
+    "boss_guess":"Dorn",
+    "boss_final":"Dorn",
+    "damage_guess":1200000.0,
+    "damage_final":"1200000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"9\/4\/2026 8:02 AM",
+    "notes":null,
+    "map":"Dorn_03",
+    "team_archetype":"Laviscus",
+    "team_key":null,
+    "Team (no MoW)":null,
+    "Team":"Biovore",
+    "hero_1":null,
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
