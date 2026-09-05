@@ -177,19 +177,27 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "raid"
     },
     {
-      title: "Lysander LRE",
-      href: "/lre/lysander",
-      description: "Unlock the 1st Captain on Aug 29th",
-      image: "/images/lysander-lre.png",
-      thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
+      title: "Uthar LRE",
+      href: "/lre/uthar",
+      description: "Be ready for the Votann Legendary on Oct 4",
+      image: "/images/uthar-lre.png",
+      thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
       category: "legendary"
     },
     {
-      title: "Uthar LRE",
-      href: "/lre/uthar",
-      description: "Be ready for the Votann Legendary on Oct 4th",
-      image: "/images/uthar-lre.png",
-      thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
+      title: "Farsight LRE",
+      href: "/lre/farsight",
+      description: "Be ready for the Tau Legendary on either Nov 8 or Dec 13",
+      image: "/images/farsight-lre.png",
+      thumbnail: "/images/thumbnails/lre-thumb.png",
+      category: "legendary"
+    },
+    {
+      title: "Lysander LRE",
+      href: "/lre/lysander",
+      description: "Be ready for the First Captain on either Dec 13 or Jan 17",
+      image: "/images/lysander-lre.png",
+      thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
       category: "legendary"
     },
     {
@@ -202,17 +210,9 @@ const graphicDefinitions: GraphicDefinition[] = [
       lifecycle: "retired"
     },
     {
-      title: "Farsight LRE",
-      href: "/lre/farsight",
-      description: "Be ready for the Tau Legendary on Nov 15th",
-      image: "/images/farsight-lre.png",
-      thumbnail: "/images/thumbnails/lre-thumb.png",
-      category: "legendary"
-    },
-    {
       title: "Campaign Event",
       href: "/campaign-event",
-      description: "Next CE begins Aug 6",
+      description: "Next CE begins Sept 10",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
       category: "event"
@@ -220,7 +220,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Hero Release Events",
       href: "/hre",
-      description: "Next HRE begins Aug 9",
+      description: "Next HRE begins Sept 13",
       image: "/images/hre.png",
       thumbnail: "/images/thumbnails/hre-thumb.png",
       category: "event"
@@ -228,7 +228,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Incursion / MoW",
       href: "/incursion-mow",
-      description: "Next Incursion begins Aug 24",
+      description: "Next Incursion begins Sept 28",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
       category: "event"

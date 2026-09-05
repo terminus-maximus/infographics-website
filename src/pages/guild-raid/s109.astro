@@ -1,0 +1,43 @@
+---
+import GuildRaidPage from "../../components/GuildRaidPage.astro";
+
+const seasonNumber = "109";
+const seasonTitle = `Guild Raid Season ${seasonNumber}`;
+const imagePrefix = `/images/guild-raid-s${seasonNumber}`;
+const webImagePrefix = `/images/web/guild-raid-s${seasonNumber}`;
+
+const guides = [
+  {
+    title: "Mythic Bosses",
+    imageSrc: `${imagePrefix}-mythic.png`,
+    webImageSrc: `${webImagePrefix}-mythic.webp`,
+    imageAlt: `${seasonTitle} Mythic Bosses Infographic`
+  },
+  {
+    title: "Legendary Bosses",
+    imageSrc: `${imagePrefix}-legendary.png`,
+    webImageSrc: `${webImagePrefix}-legendary.webp`,
+    imageAlt: `${seasonTitle} Legendary Bosses Infographic`
+  },
+  {
+    title: "Epic Bosses",
+    imageSrc: `${imagePrefix}-epic.png`,
+    webImageSrc: `${webImagePrefix}-epic.webp`,
+    imageAlt: `${seasonTitle} Epic Bosses Infographic`
+  },
+  {
+    title: "Coming Soon",
+    imageSrc: `${imagePrefix}-coming-soon.png`,
+    webImageSrc: `${webImagePrefix}-coming-soon.webp`,
+    imageAlt: `${seasonTitle} Coming Soon Infographic`
+  }
+];
+---
+
+<GuildRaidPage
+  title={seasonTitle}
+  description={`Boss lineups, maps, and recommended teams for Guild Raid Season ${seasonNumber}.`}
+  sectionTitle={`Season ${seasonNumber} Infographics`}
+  seasonNumber={seasonNumber}
+  guides={guides}
+/>
