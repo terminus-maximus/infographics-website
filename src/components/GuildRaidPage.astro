@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
+import ReplayIcon from "./replay-library/ReplayIcon.astro";
 import RecommendationSections from "./RecommendationSections.astro";
 import replayCsv from "../data/GR-replays-v2.csv?raw";
 import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
@@ -159,16 +160,22 @@ const guideReplaySections = guides.map((guide) => {
   const isLegendary = guide.title.includes("Legendary");
   const replays = isMythic ? mythicReplays : isLegendary ? legendaryReplays : [];
 
-  return {
-    guide,
-    replays,
-    replayHeading: isMythic ? "Mythic Replays" : isLegendary ? "Legendary Replays" : "",
-    replayDescription: isMythic
-      ? "Recommended Mythic runs for this season, pulled from the analyzed Replay Library dataset."
-      : isLegendary
-        ? "Recommended Legendary runs for this season, pulled from the analyzed Replay Library dataset."
-        : ""
-    };
+  const groups = new Map();
+  for (const replay of replays) {
+    const key = `${replay.tier}:${replay.boss}`;
+    if (!groups.has(key)) {
+      groups.set(key, {
+        tier: replay.tier,
+        boss: replay.boss,
+        bossName: replay.bossLongName || replay.boss,
+        headingId: `season-${seasonNumber}-${isMythic ? "mythic" : "legendary"}-replays-${groups.size + 1}`,
+        replays: []
+      });
+    }
+    groups.get(key).replays.push(replay);
+  }
+
+  return { guide, replayGroups: [...groups.values()] };
 });
 
 ---
@@ -185,7 +192,7 @@ const guideReplaySections = guides.map((guide) => {
     <h2>{sectionTitle}</h2>
 
     <div class="guide-grid">
-      {guideReplaySections.map(({ guide, replays, replayHeading, replayDescription }) => (
+      {guideReplaySections.map(({ guide, replayGroups }) => (
         <article class="guide-card">
           <h3>{guide.title}</h3>
 
@@ -220,21 +227,27 @@ const guideReplaySections = guides.map((guide) => {
             </a>
           </p>
 
-          {replays.length > 0 && (
+          {replayGroups.map((group) => (
             <div class="guide-replay-box">
-              <h4 id={`season-${seasonNumber}-${replayHeading.toLowerCase().replaceAll(" ", "-")}`}>{replayHeading}</h4>
-              <p>{replayDescription}</p>
+              <h4 id={group.headingId}>
+                <span>{group.tier}</span>
+                <span aria-hidden="true"><ReplayIcon type="bosses" value={group.boss} title={group.bossName} /></span>
+                <span class="replay-boss-name">{group.bossName}</span>
+              </h4>
               <CuratedReplayTable
-                replays={replays}
+                replays={group.replays}
                 teamIconMap={teamIconMap}
-                labelledBy={`season-${seasonNumber}-${replayHeading.toLowerCase().replaceAll(" ", "-")}`}
+                labelledBy={group.headingId}
+                showTierDividers={false}
               />
-              <p class="replay-library-cta">
-                <a class="replay-library-cta-link" href="/replay-library/"><strong>Need a different replay?</strong></a>
-                <span> Search 1,000+ analyzed replays in the </span>
-                <a class="replay-library-cta-link" href="/replay-library/">Replay Library</a><span>.</span>
-              </p>
             </div>
+          ))}
+          {replayGroups.length > 0 && (
+            <p class="replay-library-cta">
+              <a class="replay-library-cta-link" href="/replay-library/"><strong>Need a different replay?</strong></a>
+              <span> Search 1,000+ analyzed replays in the </span>
+              <a class="replay-library-cta-link" href="/replay-library/">Replay Library</a><span>.</span>
+            </p>
           )}
 
         </article>
@@ -434,11 +447,18 @@ const guideReplaySections = guides.map((guide) => {
   padding: 1rem;
 }
 
+.replay-boss-name {
+  color: #ffffff;
+}
+
 .guide-replay-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   color: #f5d76e;
   font-size: 1.1rem;
   line-height: 1.35;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
 }
 
 .guide-replay-box p {
@@ -448,7 +468,7 @@ const guideReplaySections = guides.map((guide) => {
   max-width: 760px;
 }
 
-.guide-replay-box .replay-library-cta {
+.replay-library-cta {
   color: #ffffff;
   line-height: 1.5;
   margin: 1rem auto 0;
