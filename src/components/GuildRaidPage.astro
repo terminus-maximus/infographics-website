@@ -115,7 +115,7 @@ function createMinimalReplay(row) {
     bossLongName: replay.boss_final || replay.boss_guess || "Replay",
     team: replay.team_archetype || "",
     map: replay.map || "",
-    tier: row.TIER || row.Tier || replay.tier_final || "",
+    tier: replay.tier_final || "",
     damage,
     damageLabel: damage > 0 ? formatReplayDamage(damage) : "-",
     heroes: [replay.hero_1, replay.hero_2, replay.hero_3, replay.hero_4, replay.hero_5].filter(Boolean),
@@ -138,7 +138,7 @@ const seasonReplayRefs = parseCsv(replayCsv)
 const seasonReplays = seasonReplayRefs
   .map((row) => {
     const videoId = row.video_id?.trim();
-    const tier = row.TIER || row.Tier;
+    const seasonTier = row.TIER || row.Tier;
     const replay = replayByVideoId[videoId] || createMinimalReplay(row);
 
     if (!replay) {
@@ -148,13 +148,14 @@ const seasonReplays = seasonReplayRefs
 
     return {
       ...replay,
-      tier: tier || replay.tier
+      seasonTier,
+      tier: replay.tier || "Unknown"
     };
   })
   .filter((replay) => Boolean(replay));
 
-const mythicReplays = seasonReplays.filter((replay) => replay.tier.startsWith("M"));
-const legendaryReplays = seasonReplays.filter((replay) => replay.tier.startsWith("L"));
+const mythicReplays = seasonReplays.filter((replay) => replay.seasonTier.startsWith("M"));
+const legendaryReplays = seasonReplays.filter((replay) => replay.seasonTier.startsWith("L"));
 const guideReplaySections = guides.map((guide) => {
   const isMythic = guide.title.includes("Mythic");
   const isLegendary = guide.title.includes("Legendary");
@@ -162,10 +163,10 @@ const guideReplaySections = guides.map((guide) => {
 
   const groups = new Map();
   for (const replay of replays) {
-    const key = `${replay.tier}:${replay.boss}`;
+    const key = `${replay.seasonTier}:${replay.boss}`;
     if (!groups.has(key)) {
       groups.set(key, {
-        tier: replay.tier,
+        tier: replay.seasonTier,
         boss: replay.boss,
         bossName: replay.bossLongName || replay.boss,
         headingId: `season-${seasonNumber}-${isMythic ? "mythic" : "legendary"}-replays-${groups.size + 1}`,
@@ -227,6 +228,9 @@ const guideReplaySections = guides.map((guide) => {
             </a>
           </p>
 
+          {replayGroups.length > 0 && (
+            <p class="replay-tier-note">Box headings show this season’s boss tiers. The Replay Tier column shows the tier recorded in each video, which may differ.</p>
+          )}
           {replayGroups.map((group) => (
             <div class="guide-replay-box">
               <h4 id={group.headingId}>
@@ -239,6 +243,7 @@ const guideReplaySections = guides.map((guide) => {
                 teamIconMap={teamIconMap}
                 labelledBy={group.headingId}
                 showTierDividers={false}
+                tierColumnLabel="Replay Tier"
               />
             </div>
           ))}
@@ -433,6 +438,12 @@ const guideReplaySections = guides.map((guide) => {
   color: #cccccc;
   line-height: 1.5;
   margin-bottom: 0;
+}
+
+.replay-tier-note {
+  color: #cccccc;
+  line-height: 1.6;
+  margin: 1.5rem 0 0;
 }
 
 .guide-replay-box {

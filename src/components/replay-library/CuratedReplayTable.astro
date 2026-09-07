@@ -8,6 +8,7 @@ interface Props {
   labelledBy?: string;
   sortable?: boolean;
   showTierDividers?: boolean;
+  tierColumnLabel?: string;
 }
 
 const {
@@ -15,7 +16,8 @@ const {
   teamIconMap = {},
   labelledBy,
   sortable = false,
-  showTierDividers = true
+  showTierDividers = true,
+  tierColumnLabel = "Tier"
 } = Astro.props;
 
 const getTeamIcon = (team: string) => teamIconMap[team] || team;
@@ -37,7 +39,7 @@ const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damag
           {sortable ? <button class="sort-button" type="button" data-curated-sort-key="damage" data-column-index="2" data-sort-direction="desc">Damage</button> : "Damage"}
         </th>
         <th data-curated-sort-header={sortable ? "tier" : undefined} aria-sort={sortable ? "none" : undefined}>
-          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="tier" data-column-index="3">Tier</button> : "Tier"}
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="tier" data-column-index="3">{tierColumnLabel}</button> : tierColumnLabel}
         </th>
         <th data-curated-sort-header={sortable ? "map" : undefined} aria-sort={sortable ? "none" : undefined}>
           {sortable ? <button class="sort-button" type="button" data-curated-sort-key="map" data-column-index="4">Map</button> : "Map"}
@@ -78,7 +80,7 @@ const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damag
               {replay.damageLabel}
             </a>
           </td>
-          <td data-label="Tier" data-sort-value={tierSortRank[replay.tier] ?? 99}>
+          <td data-label={tierColumnLabel} data-sort-value={tierSortRank[replay.tier] ?? 99}>
             <a class="replay-cell-link tier-cell" href={replay.videoUrl} target="_blank" rel="noopener noreferrer">
               {replay.tier}
             </a>
