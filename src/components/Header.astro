@@ -22,9 +22,46 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
       </button>
 
       <div class="dropdown-menu" id="explore-menu">
-        <a href="/beginner-guide" data-ga4-nav-section="graphics">Beginner Guide</a>
-        <a href="/elite-campaigns" data-ga4-nav-section="campaigns">Elite Campaigns</a>
-        <a href="/campaigns/" data-ga4-nav-section="campaigns">Campaign Guides</a>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/beginner-guide" data-ga4-nav-section="graphics">Start Here</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Start Here menu"
+              aria-expanded="false"
+              aria-controls="start-here-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="start-here-menu">
+            <a href="/beginner-guide" data-ga4-nav-section="graphics">Beginner Guide</a>
+            <a href="/elite-campaigns" data-ga4-nav-section="campaigns">Elite Campaigns</a>
+            <a href="/campaigns/" data-ga4-nav-section="campaigns">Campaign Guides</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/campaigns/" data-ga4-nav-section="campaigns">Campaign Guides</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Campaign Guides menu"
+              aria-expanded="false"
+              aria-controls="campaign-guides-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="campaign-guides-menu">
+            <a href="/campaigns/indomitus/" data-ga4-nav-section="campaigns">Indomitus</a>
+            <a href="/campaigns/indomitus-mirror/" data-ga4-nav-section="campaigns">Indomitus Mirror</a>
+            <a href="/campaigns/" data-ga4-nav-section="campaigns">Explore All Guides</a>
+          </div>
+        </div>
         <div class="submenu">
           <div class="submenu-header">
             <a class="submenu-link" href="/guild-raid" data-ga4-nav-section="guild_raid">Guild Raid</a>
@@ -43,6 +80,24 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
             <a href={currentGuildRaidSeason.href} data-ga4-nav-section="guild_raid">Current Season</a>
             <a href="/guild-raid/boss-meta/" data-ga4-nav-section="guild_raid">Boss Meta Guide</a>
             <a href="/replay-library" data-ga4-nav-section="guild_raid">Replay Library</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
+            <a class="submenu-link" href="/guild-wars/" data-ga4-nav-section="guild_wars">Guild Wars</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Guild Wars menu"
+              aria-expanded="false"
+              aria-controls="guild-wars-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="guild-wars-menu">
+            <a href="/guild-wars/attack/" data-ga4-nav-section="guild_wars">Attackers</a>
           </div>
         </div>
         <div class="submenu">

@@ -1,0 +1,29 @@
+{
+  "edition": "September 2026",
+  "title": "GW Top 10 Attackers",
+  "description": "Explore ten Guild Wars attacker cores, their recorded results, and the flex characters and Machines of War seen alongside them.",
+  "landingIntro": "Guides to Guild Wars - both Attack and Defense, and Counters",
+  "cardDescription": "Guild War Top 10 Attackers based on meta performance",
+  "infographic": {
+    "png": "/images/guild-wars-attack.png",
+    "webp": "/images/web/guild-wars-attack.webp",
+    "thumbnail": "/images/thumbnails/guild-wars-attack-thumb.png",
+    "width": 700,
+    "height": 394,
+    "thumbnailWidth": 600,
+    "thumbnailHeight": 337
+  },
+  "methodology": "",
+  "teams": [
+    { "id": "c_genesBiophagus_genesKelermorph_genesPrimus", "title": "Genestealers", "anchor": "genestealers", "core": ["genesBiophagus", "genesKelermorph", "genesPrimus"], "tips": "" },
+    { "id": "c_deathTyphus_thousAhriman_thousTerminator", "title": "Z’Kar Psykers", "anchor": "zkar-psykers", "core": ["deathTyphus", "thousTerminator", "thousAhriman"], "tips": "" },
+    { "id": "c_spaceBlackmane_tauAunShi", "title": "Double Howl", "anchor": "double-howl", "core": ["spaceBlackmane", "tauAunShi"], "tips": "" },
+    { "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick", "title": "Imperials", "anchor": "imperials", "core": ["adeptCelestine", "adeptHospitaller", "astraDreir", "astraYarrick"], "tips": "" },
+    { "id": "c_bloodDante_bloodIntercessor_bloodMephiston_bloodSanguinary", "title": "Blood Angels", "anchor": "blood-angels", "core": ["bloodDante", "bloodIntercessor", "bloodMephiston", "bloodSanguinary"], "tips": "" },
+    { "id": "c_tauCrisis_tauFarsight_tauShadowsun", "title": "Tau Team", "anchor": "tau-team", "core": ["tauCrisis", "tauFarsight", "tauShadowsun"], "tips": "" },
+    { "id": "c_blackPossession_thousInfernalMaster_thousTzaangor", "title": "Yaz Abrax", "anchor": "yaz-abrax", "core": ["thousInfernalMaster", "thousTzaangor", "blackPossession"], "tips": "" },
+    { "id": "c_orksNob_orksRuntherd_orksWarboss", "title": "WAAAGH", "anchor": "waaagh", "core": ["orksWarboss", "orksRuntherd", "orksNob"], "tips": "" },
+    { "id": "c_blackAbaddon_deathBlightlord_deathRotbone", "title": "Death Guard", "anchor": "death-guard", "core": ["deathBlightlord", "deathRotbone", "blackAbaddon"], "tips": "" },
+    { "id": "c_admecManipulus_admecMarshall_admecRuststalker", "title": "AdMech", "anchor": "admech", "core": ["admecRuststalker", "admecMarshall", "admecManipulus"], "tips": "" }
+  ]
+}

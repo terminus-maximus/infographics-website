@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import editorial from '../../data/guild-wars/editorial.json';
+import '../../styles/guild-wars.css';
+
+const guides = [{ title: editorial.title, description: editorial.cardDescription, href: '/guild-wars/attack/', image: editorial.infographic }];
+---
+<Layout title="Guild Wars | Terminus Maximus Infographics" description="Guild Wars guides for attacker teams, observed lineups, and recorded results." image={editorial.infographic.webp} url="/guild-wars/">
+  <Header />
+  <main class="gw-guide">
+    <section class="hero"><h1>Guild Wars</h1><p>{editorial.landingIntro}</p></section>
+    <section aria-labelledby="guides-heading">
+      <h2 id="guides-heading">Guild Wars Guides</h2>
+      <div class="card-grid">
+        {guides.map(guide => <a class="card" href={guide.href}>
+          <div class="card-image-wrap"><img src={guide.image.thumbnail} width={guide.image.thumbnailWidth} height={guide.image.thumbnailHeight} alt={`${guide.title} preview`} /></div>
+          <h3>{guide.title}</h3><p>{guide.description}</p>
+        </a>)}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+<style>
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 320px)); gap: 1.5rem; margin-bottom: 4rem; }
+  .card { background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: border-color .2s ease; }
+  .card:hover { border-color: #d4af37; }
+  .card-image-wrap { height: 120px; border: 1px solid #333; border-radius: 8px; background: #121212; overflow: hidden; }
+  .card img { width: 100%; height: 100%; object-fit: contain; object-position: top; display: block; }
+  .card h3 { margin: 1rem 0 .5rem; }
+  .card p { margin-bottom: 0; }
+  @media(max-width:700px) { .card-grid { grid-template-columns: minmax(0, 1fr); } .card { padding: 1rem; } }
+</style>

@@ -1,6 +1,7 @@
 import { currentGuildRaidSeason } from "./guildRaid";
 import characterSource from "./campaigns/characters.json";
 import requiredRecommendations from "./campaigns/required-recs.json";
+import guildWars from "./guild-wars/editorial.json";
 
 export interface RequiredHeroIcon {
   name: string;
@@ -159,6 +160,14 @@ const graphicDefinitions: GraphicDefinition[] = [
       image: "/images/boss-meta.png",
       thumbnail: "/images/thumbnails/boss-meta-thumb.png",
       category: "raid"
+    },
+    {
+      title: guildWars.title,
+      href: "/guild-wars/attack/",
+      description: guildWars.cardDescription,
+      image: guildWars.infographic.png,
+      thumbnail: guildWars.infographic.thumbnail,
+      category: "guild-war"
     },
     {
       title: "Replay Library",

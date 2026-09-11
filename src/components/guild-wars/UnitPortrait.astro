@@ -1,0 +1,22 @@
+---
+import { units } from '../../lib/guildWars';
+interface Props { id: string; core?: boolean; compact?: boolean }
+const { id, core = false, compact = false } = Astro.props;
+const unit = units[id];
+if (!unit) throw new Error(`Missing Guild Wars identity: ${id}`);
+---
+<span class:list={['unit', { core, compact }]} data-unit-id={id}>
+  {unit.image ? <img src={unit.image} alt="" width="64" height="64" loading="lazy" /> :
+    <span class="empty-support" role="img" aria-label={unit.name}><span aria-hidden="true">−</span></span>}
+  <span class="unit-name">{unit.name}</span>
+</span>
+<style>
+  .unit { display: inline-flex; flex-direction: column; align-items: center; gap: .45rem; width: 98px; text-align: center; vertical-align: top; }
+  img, .empty-support { display: block; width: 64px; height: 64px; object-fit: contain; background: #121212; border: 1px solid #454545; border-radius: 10px; }
+  .core img { border-color: rgba(212,175,55,.65); }
+  .unit-name { font-size: .875rem; line-height: 1.4; color: #eee; overflow-wrap: anywhere; }
+  .empty-support { display: flex; justify-content: center; align-items: center; border: 2px dashed #888; border-radius: 50%; color: #ccc; font-size: 1.6rem; }
+  .compact { flex-direction: row; width: auto; text-align: left; gap: .4rem; }
+  .compact img, .compact .empty-support { height: 32px; width: 32px; flex: 0 0 32px; border-radius: 6px; }
+  .compact .empty-support { border-radius: 50%; font-size: 1.2rem; }
+</style>

@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import RecommendationSections from '../../components/RecommendationSections.astro';
+import TeamSection from '../../components/guild-wars/TeamSection.astro';
+import editorial from '../../data/guild-wars/editorial.json';
+import { teams, units, scope, number } from '../../lib/guildWars';
+import '../../styles/guild-wars.css';
+const { title, description, infographic } = editorial;
+const span = (values: number[]) => values.join('–');
+---
+<Layout title={`${title} | Terminus Maximus Infographics`} description={description} image={infographic.webp} url="/guild-wars/attack/">
+  <Header />
+  <main class="gw-guide">
+    <section class="hero"><h1>{title}</h1><p>{description}</p></section>
+    <section class="panel" aria-labelledby="infographic-title">
+      <h2 id="infographic-title">Featured Infographic</h2>
+      <a class="image-link" href={infographic.png} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="image">
+        <img class="infographic" src={infographic.webp} alt="Guild Wars Top 10 Attackers infographic: ten core teams with popular flex characters and Machines of War" width={infographic.width} height={infographic.height} fetchpriority="high" />
+      </a>
+      <p class="caption"><a href={infographic.png} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="caption">VIEW FULL-SIZE INFOGRAPHIC</a> <span aria-hidden="true"> · </span> <a href={infographic.png} download data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="download">Download PNG</a></p>
+    </section>
+    <p class="scope">{editorial.edition} edition · Seasons {scope.seasons[0]}–{scope.seasons.at(-1)} · Battlefield tiers {span(scope.tiers)}<br />{number(scope.wars)} recorded wars · {number(scope.eligibleAttacks)} eligible non-cleanup attacks.<br />Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Detailed results below use the source counts.</p>
+    <details class="metrics-explained">
+      <summary>Metrics Explained</summary>
+      <div class="disclosure-body">
+        <dl class="definitions">
+          <div><dt>Clear</dt><dd>All five defenders defeated. Includes Perfect clears and clears with deaths.</dd></div>
+          <div><dt>Clear rate</dt><dd>Clears / eligible attempts containing the whole core, including failures.</dd></div>
+          <div><dt>Perfect</dt><dd>A clear with all five attacking characters surviving in the recorded final state.</dd></div>
+          <div><dt>Perfect share of wins</dt><dd>Perfect clears / all clears.</dd></div>
+          <div><dt>Meds Up</dt><dd>At least one recorded Defender Health (Medicae) buff.</dd></div>
+          <div><dt>Meds Up clear rate</dt><dd>Meds Up clears / Meds Up attempts, including failures.</dd></div>
+          <div><dt>Perfect share of Meds Up wins</dt><dd>Perfect Meds Up clears / all Meds Up clears.</dd></div>
+          <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core.</dd></div>
+        </dl>
+        <p>No MoW deployed is our display label for attacks with no MoW recorded. A recorded support category does not establish that its abilities were activated.</p>
+        <p>Results describe observed complete lineups and matchups, not guaranteed performance for arbitrary flex choices. An em dash means no eligible denominator.</p>
+      </div>
+    </details>
+    <nav class="panel team-jump-nav" id="team-jump-nav" aria-labelledby="team-list-title">
+      <h2 id="team-list-title">Explore the teams</h2>
+      <ol>{teams.map(team => <li><a href={`#${team.anchor}`}><img src={units[team.core[0]].image!} alt="" width="40" height="40" loading="lazy" /><span>{team.title}</span></a></li>)}</ol>
+    </nav>
+    <p class="usage-note">Flex options are ranked by observed usage, including failures. These are popular choices, not a guarantee that every combination works together. Shares can add up to more than 100% because teams have multiple flex slots.</p>
+    {teams.map((team, index) => <TeamSection team={team} index={index} />)}
+    <section class="panel" id="methodology"><h2>Methodology</h2><p class:list={[{ placeholder: !editorial.methodology }]}>{editorial.methodology || 'Methodology notes coming soon.'}</p></section>
+    <RecommendationSections />
+  </main>
+  <Footer />
+</Layout>
+<style>
+  .metrics-explained { margin-bottom: 2rem; }
+  .definitions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.25rem 2rem; margin: 0; }
+  .definitions dt { font-weight: 500; color: #eee; }
+  .definitions dd { margin: .3rem 0 0; line-height: 1.6; color: #bbb; }
+  .team-jump-nav { margin-top: 2rem; scroll-margin-top: 1rem; }
+  .team-jump-nav ol { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: .6rem; padding: 0; margin: 0; list-style: none; }
+  .team-jump-nav a { display: flex; align-items: center; gap: .6rem; background: #121212; border: 1px solid #444; border-radius: 8px; padding: .85rem .65rem; text-decoration: none; font-size: .875rem; min-height: 100%; }
+  .team-jump-nav img { width: 40px; height: 40px; flex-shrink: 0; object-fit: contain; border: 1px solid rgba(212,175,55,.65); border-radius: 8px; }
+  .team-jump-nav a:hover { border-color: #d4af37; }
+  .usage-note { font-size: .95rem; margin: 0 0 2rem; }
+  #methodology p { white-space: pre-line; }
+  @media(max-width:1000px) { .team-jump-nav ol { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+  @media(max-width:700px) { .definitions { grid-template-columns: minmax(0,1fr); } .team-jump-nav ol { grid-template-columns: repeat(2,minmax(0,1fr)); } .team-jump-nav a { flex-direction: column; text-align: center; } .caption { font-size: .875rem; line-height: 1.8; } }
+</style>

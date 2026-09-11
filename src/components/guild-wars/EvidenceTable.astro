@@ -1,0 +1,35 @@
+---
+import UnitPortrait from './UnitPortrait.astro';
+import { number, percent, type EvidenceSet } from '../../lib/guildWars';
+interface Props { evidence: EvidenceSet; caption: string; core: string[]; kind?: 'team' | 'mow' | 'team-mow' }
+const { evidence, caption, core, kind = 'team' } = Astro.props;
+const rows = evidence.rows.slice(0, 5);
+---
+<p class="table-intro">{evidence.total > rows.length ? `Top ${rows.length} of ${number(evidence.total)} observed combinations` : `${number(evidence.total)} observed ${kind === 'mow' ? 'support categories' : 'combinations'}`}. Ranked by attacks, then clear rate.</p>
+<p class="table-hint">Scroll across to see all results.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label={`${caption}, horizontally scrollable`}>
+  <table>
+    <caption>{caption}</caption>
+    <thead><tr><th scope="col">{kind === 'mow' ? 'Machine of War' : 'Full team (core + flex)'}</th>{kind === 'team-mow' && <th scope="col">Machine of War</th>}<th scope="col">Attempts</th><th scope="col">Usage</th><th scope="col">Clears</th><th scope="col">Clear rate</th><th scope="col">Perfects</th><th scope="col">Failures</th></tr></thead>
+    <tbody>{rows.map(row => <tr>
+      <th scope="row">{kind === 'mow' ? <UnitPortrait id={row.unit!} compact /> : <div class="lineup">{[...core, ...(row.team || []).filter(id => !core.includes(id))].map(id => <UnitPortrait id={id} compact core={core.includes(id)} />)}</div>}</th>
+      {kind === 'team-mow' && <td><UnitPortrait id={row.mow!} compact /></td>}
+      <td>{number(row.attempts)}</td><td>{percent(row.share)}</td><td>{number(row.clears)}</td><td>{percent(row.clearRate)}</td><td>{number(row.perfect)}</td><td>{number(row.failures)}</td>
+    </tr>)}</tbody>
+  </table>
+</div>
+<style>
+  .table-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+  table { width: 100%; border-collapse: collapse; text-align: left; font-size: .875rem; font-variant-numeric: tabular-nums; }
+  caption { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .table-intro { font-size: .875rem; margin: 0 0 .85rem; }
+  .table-hint { display: none; font-size: .875rem; }
+  th, td { padding: .7rem .8rem; border-bottom: 1px solid #333; vertical-align: middle; }
+  th { font-weight: 500; }
+  thead th { color: #d4af37; background: #202020; white-space: nowrap; }
+  td { white-space: nowrap; }
+  tbody tr:nth-child(even) { background: #1b1b1b; }
+  .lineup { display: grid; grid-template-columns: repeat(2, minmax(130px,1fr)); gap: .35rem .75rem; min-width: 290px; }
+  td :global(.unit) { min-width: 160px; }
+  @media(max-width: 900px) { .table-hint { display: block; } }
+</style>

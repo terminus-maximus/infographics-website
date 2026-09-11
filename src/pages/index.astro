@@ -18,6 +18,7 @@ const campaignGuides = discoveryGraphics.filter(
 const guildRaids = discoveryGraphics.filter(
   (g) => g.category === "raid" && g.href !== "/guild-raid/archive",
 );
+const guildWars = discoveryGraphics.filter((g) => g.category === "guild-war");
 const legendaryGuides = discoveryGraphics.filter((g) => g.category === "legendary");
 const gameEvents = discoveryGraphics.filter((g) => g.category === "event");
 const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
@@ -42,54 +43,6 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
 <section class="content-section">
   <header class="content-section-heading">
-    <a href="/guild-raid/s109">
-      <h2>New: Guild Raid Guide Season 109</h2>
-      <p>M3 Lion is coming on Sept 9, are you ready?</p>
-    </a>
-  </header>
-
-  <a href="/guild-raid/s109" class="image-link">
-    <img
-      src="/images/web/guild-raid-s109-mythic.webp"
-      alt="Guild Raid Guide Season 109"
-      class="infographic"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/guild-raid/s109" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
-    <a href="/campaign-event">
-      <h2>New: Campaign Event Guide</h2>
-      <p>Choose your path for the next Campaign Event on Sep 10</p>
-    </a>
-  </header>
-
-  <a href="/campaign-event" class="image-link">
-    <img
-      src="/images/web/campaign-event.webp"
-      alt="Campaign Event Guide"
-      class="infographic"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/campaign-event" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
     <a href="/hre">
       <h2>New: Nubari HRE Guide</h2>
       <p>Complete these missions to help unlock Nubari on Sep 13</p>
@@ -107,6 +60,32 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
   <p class="caption">
     <a href="/hre" class="caption-link">
+      LEARN MORE
+    </a>
+  </p>
+</section>
+
+<section class="content-section">
+  <header class="content-section-heading">
+    <a href="/guild-wars/attack/">
+      <h2>New: Guild War Top 10 Attack Teams</h2>
+      <p>Get ready for Season 27 Guild Wars, beginning Sept 19th</p>
+    </a>
+  </header>
+
+  <a href="/guild-wars/attack/" class="image-link">
+    <img
+      src="/images/web/guild-wars-attack.webp"
+      alt="Guild War Top 10 Attack Teams"
+      width="700"
+      height="394"
+      class="infographic"
+      loading="lazy"
+    />
+  </a>
+
+  <p class="caption">
+    <a href="/guild-wars/attack/" class="caption-link">
       LEARN MORE
     </a>
   </p>
@@ -233,6 +212,30 @@ This entire block is commented out.
 
     <div class="card-grid">
       {guildRaids.map((graphic) => (
+        <a class="card" href={graphic.href}>
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-title-row">
+            <h3>{graphic.title}</h3>
+          </div>
+          <p>{graphic.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Guild Wars</h2>
+
+    <div class="card-grid">
+      {guildWars.map((graphic) => (
         <a class="card" href={graphic.href}>
           <div class="card-image-wrap">
             <img

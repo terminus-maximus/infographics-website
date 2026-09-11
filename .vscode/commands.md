@@ -4,6 +4,7 @@ Starting ASTRO
 cd /Users/danfoster01/Documents/Websites/terminusmaximus
 npm run dev
 
+
 http://localhost:4321
 
 
@@ -21,7 +22,7 @@ git switch main
 git pull --ff-only
 
 git add .
-git commit -m "Copy Edits, Lucius RIP"
+git commit -m "Replay JSON"
 git push origin main
 
 
