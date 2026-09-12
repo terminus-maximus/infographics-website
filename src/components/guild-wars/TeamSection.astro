@@ -11,28 +11,32 @@ const stats = [
   { label: 'Meds Up clear rate', ...team.metrics.meds_up, detail: 'Meds Up clears / attempts' },
   { label: 'Perfect share of Meds Up wins', ...team.metrics.perfect_meds_up, detail: 'Perfect Meds Up clears / Meds Up clears' },
 ];
-const mowOptions = team.mows.rows.map(row => ({ unit: row.unit!, attempts: row.attempts, share: row.share }));
+const flexOptions = team.flex.filter(option => option.share !== null && option.share >= .038).slice(0, 5);
+const mowOptions = team.mows.rows
+  .filter(row => row.share !== null && row.share >= .1)
+  .slice(0, 3)
+  .map(row => ({ unit: row.unit!, attempts: row.attempts, share: row.share }));
 ---
 <section class="panel team-section" id={team.anchor} aria-labelledby={`${team.anchor}-title`} data-core-id={team.id}>
   <header class="team-header"><h2 id={`${team.anchor}-title`}><span class="team-number">{String(index + 1).padStart(2, '0')}</span>{team.title}</h2><a class="back-link" href="#team-jump-nav">↑ Team list</a></header>
-  <h3 class="core-label">Core team <span>All {team.core.length} characters included in every result below</span></h3>
+  <h3 class="core-label">Core team</h3>
   <div class="core-lineup">{team.core.map(id => <UnitPortrait id={id} core />)}</div>
   <dl class="rate-grid">{stats.map(stat => <div><dt>{stat.label}</dt><dd><strong>{percent(stat.rate)}</strong><span>{ratio(stat.numerator, stat.denominator)}</span><small>{stat.detail}</small></dd></div>)}</dl>
   <div class="options-grid">
-    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3><UsageOptions options={team.flex.slice(0, 5)} /></section>
-    <section aria-labelledby={`${team.anchor}-mow`}><h3 id={`${team.anchor}-mow`}>Machines of War</h3><UsageOptions options={mowOptions.slice(0, 3)} /></section>
+    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3><UsageOptions options={flexOptions} /></section>
+    <section aria-labelledby={`${team.anchor}-mow`}><h3 id={`${team.anchor}-mow`}>Machines of War</h3><UsageOptions options={mowOptions} /></section>
   </div>
   <div class="evidence">
-    <details><summary>Observed flex combinations &amp; full teams</summary><div class="disclosure-body"><p>Actual five-character lineups, with all Machines of War combined. Gold portrait borders identify the core.</p><EvidenceTable evidence={team.combinations} core={team.core} caption={`${team.title} full teams`} /></div></details>
-    <details><summary>Exact full team + Machine of War</summary><div class="disclosure-body"><p>Each row preserves an observed five-character lineup and its recorded support category.</p><EvidenceTable evidence={team.teamMows} core={team.core} caption={`${team.title} exact full teams with support`} kind="team-mow" /></div></details>
-    <details><summary>Map &amp; Medicae context</summary><div class="disclosure-body">
+    <details><summary>Heroes exactly</summary><div class="disclosure-body"><EvidenceTable evidence={team.combinations} core={team.core} caption={`${team.title} full teams`} /></div></details>
+    <details><summary>Complete Team exactly</summary><div class="disclosure-body"><EvidenceTable evidence={team.teamMows} core={team.core} caption={`${team.title} exact full teams with support`} kind="team-mow" /></div></details>
+    <details><summary>Hard Maps</summary><div class="disclosure-body">
       <div class="context-scroll" role="region" tabindex="0" aria-label={`${team.title} map and Medicae results, horizontally scrollable`}>
-        <table><caption>Recorded map × Medicae results</caption><thead><tr><th scope="col">Map</th><th scope="col">Medicae</th><th scope="col">Attempts</th><th scope="col">Clears</th><th scope="col">Failures</th><th scope="col">Perfects</th><th scope="col">Clears with deaths</th><th scope="col">Clear rate</th></tr></thead>
-        <tbody>{team.contexts.map(row => <tr><th scope="row">{mapLabels[row.map]}</th><td>{medicaeLabels[row.medicae]}</td><td>{number(row.attempts)}</td><td>{number(row.clears)}</td><td>{number(row.failures)}</td><td>{number(row.perfect)}</td><td>{number(row.withDeaths)}</td><td>{percent(row.clearRate)}</td></tr>)}</tbody></table>
+        <table><caption>Recorded map × Medicae results</caption><thead><tr><th scope="col">Clear rate</th><th scope="col">Map</th><th scope="col">Medicae</th><th scope="col">Attempts</th><th scope="col">Clears</th><th scope="col">Failures</th><th scope="col">Perfects</th><th scope="col">Clears with deaths</th></tr></thead>
+        <tbody>{team.contexts.map(row => <tr><td>{percent(row.clearRate)}</td><th scope="row">{mapLabels[row.map]}</th><td>{medicaeLabels[row.medicae]}</td><td>{number(row.attempts)}</td><td>{number(row.clears)}</td><td>{number(row.failures)}</td><td>{number(row.perfect)}</td><td>{number(row.withDeaths)}</td></tr>)}</tbody></table>
       </div>
     </div></details>
+    <details class="team-tips"><summary id={`${team.anchor}-tips`}>Team Tips</summary><div class="disclosure-body"><p class:list={[{ placeholder: !team.tips }]}>{team.tips || 'Team use tips coming soon.'}</p></div></details>
   </div>
-  <section class="team-tips" aria-labelledby={`${team.anchor}-tips`}><h3 id={`${team.anchor}-tips`}>Team Use Tips</h3><p class:list={[{ placeholder: !team.tips }]}>{team.tips || 'Team use tips coming soon.'}</p></section>
 </section>
 <style>
   .team-section { scroll-margin-top: 1rem; }
@@ -41,7 +45,6 @@ const mowOptions = team.mows.rows.map(row => ({ unit: row.unit!, attempts: row.a
   .team-number { color: #aaa; font-size: .875rem; font-weight: 400; }
   .back-link { flex-shrink: 0; font-size: .875rem; text-decoration: none; }
   .core-label { margin-top: 0; font-size: .95rem; }
-  .core-label span { color: #aaa; font-weight: 400; display: block; font-size: .875rem; margin-top: .4rem; }
   .core-lineup { display: flex; flex-wrap: wrap; gap: .6rem; padding-bottom: 1.2rem; border-bottom: 1px solid #333; }
   dt { color: #bbb; font-size: .875rem; line-height: 1.45; }
   dd { margin: .35rem 0 0; font-variant-numeric: tabular-nums; }
@@ -53,7 +56,6 @@ const mowOptions = team.mows.rows.map(row => ({ unit: row.unit!, attempts: row.a
   .rate-grid span { font-size: .95rem; }
   .rate-grid small { font-size: .8rem; color: #aaa; line-height: 1.5; }
   .options-grid { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,3fr); gap: 1.5rem; margin-bottom: 1.5rem; }
-  .team-tips { border-top: 1px solid #333; margin-top: 1.5rem; }
   .team-tips p { white-space: pre-line; margin-bottom: 0; }
   .context-scroll { max-width: 100%; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: .875rem; text-align: left; font-variant-numeric: tabular-nums; }

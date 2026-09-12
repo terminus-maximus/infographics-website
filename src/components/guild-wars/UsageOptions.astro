@@ -13,7 +13,8 @@ const { options, compact = false } = Astro.props;
 <style>
   .usage-options { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; margin: 0; list-style: none; }
   li { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: .6rem; background: #161616; border: 1px solid #333; border-radius: 8px; padding: .85rem .4rem; width: 118px; }
-  .usage { display: flex; flex-direction: column; gap: .2rem; text-align: center; font-size: .875rem; color: #aaa; }
+  li :global(.unit-name) { font-size: .8rem; }
+  .usage { display: flex; flex-direction: column; gap: .2rem; text-align: center; font-size: .75rem; color: #aaa; }
   .usage strong { color: #f5d76e; font-weight: 500; font-size: 1rem; }
   .compact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .compact li { width: auto; flex-direction: row; padding: .6rem; gap: .8rem; }

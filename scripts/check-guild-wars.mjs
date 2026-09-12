@@ -27,7 +27,8 @@ assert(landing.includes('href="/guild-wars/attack/"'));
 assert(landing.includes('Guides to Guild Wars - both Attack and Defense, and Counters'));
 assert(landing.includes('Guild War Top 10 Attackers based on meta performance'));
 assert(!page.includes('class="outcomes"'));
-assert(!/More individual flex options|Machine of War results|No recorded buff|is provisional/.test(page));
+assert(!/More individual flex options|No recorded buff|is provisional/.test(page));
+assert(!/<summary[^>]*>Machine of War results/.test(page));
 assert(page.includes('No Meds Buff'));
 for (const [html, route] of [[landing, '/guild-wars/'], [page, '/guild-wars/attack/']]) {
   assert(html.includes(`rel="canonical" href="https://terminusmaximus.com${route}"`));
@@ -45,7 +46,14 @@ assert(!page.includes('id="report-data"'));
 for (const path of Object.values(editorial.infographic).filter(v => typeof v === 'string')) assert(existsSync(resolve(root, `public${path}`)));
 assert.equal(all(page, /data-ga4-infographic-open/g).length, 4); // Three links + shared analytics listener.
 assert.equal(all(page, /Team use tips coming soon\./g).length, 10);
-assert(page.includes('Methodology notes coming soon.'));
+const methods = page.match(/<details class="methods-definitions"[^>]*>([\s\S]*?)<\/details>/)?.[1];
+assert(methods, 'Missing Methods & Definitions disclosure');
+assert(strip(methods).startsWith('Methods &amp; Definitions'));
+assert.deepEqual(all(methods, /<h2[^>]*>(.*?)<\/h2>/g).map(([, heading]) => heading), ['Data Source', 'Metrics Explained', 'Methodology Notes', 'Methodology Explained']);
+assert(methods.includes('Coming soon'));
+assert(methods.includes('https://www.tacticus.xyz/'));
+assert.equal(all(page, /Shares can add up to more than 100%/g).length, 1);
+assert(!/class="scope"|class="usage-note"|Methodology notes coming soon\.|All \d characters included in every result below/.test(page));
 
 for (const [index, meta] of editorial.teams.entries()) {
   const t = data.teams[index];
@@ -53,7 +61,7 @@ for (const [index, meta] of editorial.teams.entries()) {
   assert.deepEqual([...t.core].sort(), [...meta.core].sort());
   const start = page.indexOf(`id="${meta.anchor}"`);
   assert(start > 0 && page.includes(`href="#${meta.anchor}"`));
-  const end = index < 9 ? page.indexOf(`id="${editorial.teams[index + 1].anchor}"`) : page.indexOf('id="methodology"');
+  const end = index < 9 ? page.indexOf(`id="${editorial.teams[index + 1].anchor}"`) : page.indexOf('</main>');
   const section = page.slice(start, end);
   const bodyText = strip(section);
   assert(bodyText.includes(meta.title));
@@ -70,6 +78,17 @@ for (const [index, meta] of editorial.teams.entries()) {
   }
   for (const row of t.flex) assert.equal(row.share, row.attempts / t.attempts);
   assert.equal(t.flex.reduce((n,r) => n + r.attempts,0), (5-t.core.length)*t.attempts);
+  const usageLists = all(section, /<ul class="usage-options"[^>]*>([\s\S]*?)<\/ul>/g);
+  assert.equal(usageLists.length, 2);
+  for (const [listIndex, candidates, minimum, limit] of [[0, t.flex, .038, 5], [1, t.mows.rows, .1, 3]]) {
+    const displayed = all(usageLists[listIndex][1], /data-unit-id="([^"]+)"/g).map(([, id]) => id);
+    const eligible = candidates.filter(row => row.share !== null && row.share >= minimum).slice(0, limit);
+    assert.deepEqual(displayed, eligible.map(row => row.unit), `${meta.title} usage cutoff/order differs`);
+    for (const row of eligible) {
+      assert(strip(usageLists[listIndex][1]).includes(`${row.attempts.toLocaleString('en-US')} attacks`));
+      assert(strip(usageLists[listIndex][1]).includes(percent(row.share)));
+    }
+  }
   const tables = all(section, /<tbody\b[^>]*>([\s\S]*?)<\/tbody>/g);
   assert.equal(tables.length, 3);
   for (const [tableIndex, key] of ['combinations', 'teamMows'].entries()) {
@@ -119,4 +138,4 @@ if (process.argv[2]) {
   }
   console.log('Accepted report reconciled; changed-core rejection and exact co-occurrence checks passed.');
 }
-console.log('Guild Wars checks passed: updated copy, removed sections, 10 cores, 30 rendered tables, five-row lineup limits, counts, denominators, assets, and labels.');
+console.log('Guild Wars checks passed: methods disclosure, flex/MoW cutoffs, 10 cores, 30 rendered tables, five-row lineup limits, counts, denominators, assets, and labels.');

@@ -5,7 +5,7 @@ interface Props { evidence: EvidenceSet; caption: string; core: string[]; kind?:
 const { evidence, caption, core, kind = 'team' } = Astro.props;
 const rows = evidence.rows.slice(0, 5);
 ---
-<p class="table-intro">{evidence.total > rows.length ? `Top ${rows.length} of ${number(evidence.total)} observed combinations` : `${number(evidence.total)} observed ${kind === 'mow' ? 'support categories' : 'combinations'}`}. Ranked by attacks, then clear rate.</p>
+<p class="table-intro">{evidence.total > rows.length ? `Top ${rows.length} of ${number(evidence.total)} observed combinations` : `${number(evidence.total)} observed ${kind === 'mow' ? 'support categories' : 'combinations'}`}.</p>
 <p class="table-hint">Scroll across to see all results.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label={`${caption}, horizontally scrollable`}>
   <table>
