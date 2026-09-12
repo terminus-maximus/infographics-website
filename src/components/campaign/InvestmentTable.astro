@@ -1,0 +1,147 @@
+---
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<div class="investment-table">
+  <p class="scroll-hint">Scroll sideways to see all recommendations.</p>
+  <div class="table-scroll" role="region" tabindex="0" aria-label={label}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .investment-table {
+    min-width: 0;
+    container-type: inline-size;
+    margin: 0.55rem 0 0.9rem;
+  }
+
+  .scroll-hint {
+    display: none;
+    margin: 0 0 0.5rem;
+    color: #bdbdbd;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .table-scroll {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #151515;
+  }
+
+  .table-scroll:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+  }
+
+  /* Keep columns readable; only this region may grow beyond the card. */
+  .investment-table :global(table) {
+    width: 100%;
+    min-width: 38rem;
+    border-spacing: 0;
+    color: #ccc;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .investment-table :global(th),
+  .investment-table :global(td) {
+    padding: 0.65rem 0.5rem;
+    border-bottom: 1px solid #303030;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .investment-table :global(thead th) {
+    background: #252525;
+    color: #d4af37;
+    font-size: 0.875rem;
+    font-weight: 800;
+  }
+
+  .investment-table :global(thead th > span) {
+    display: block;
+  }
+
+  .investment-table :global(tbody tr:last-child > *) {
+    border-bottom: 0;
+  }
+
+  /* Keep the hero visible while comparing the columns to the right. */
+  .investment-table :global(tr > :first-child) {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 4.5rem;
+    border-right: 1px solid #333;
+    background: #151515;
+  }
+
+  .investment-table :global(thead tr > :first-child) {
+    background: #252525;
+  }
+
+  .investment-table :global(img.table-hero),
+  .investment-table :global(.table-hero img),
+  .investment-table :global(.hero-icon-cell img) {
+    display: block;
+    width: 2.65rem;
+    height: 2.65rem;
+    margin: 0 auto;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: #1e1e1e;
+    object-fit: cover;
+  }
+
+  .investment-table :global(.table-rank-icon),
+  .investment-table :global(.rank-target img) {
+    display: block;
+    width: 2.65rem;
+    height: 2.65rem;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .investment-table :global(.table-ability),
+  .investment-table :global(.table-equipment),
+  .investment-table :global(.equipment-target) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .investment-table :global(.table-ability img) {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid #444;
+    border-radius: 7px;
+    object-fit: cover;
+  }
+
+  .investment-table :global(strong),
+  .investment-table :global(.ability-target) {
+    color: #f5f5f5;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  @container (max-width: 38rem) {
+    .scroll-hint {
+      display: block;
+    }
+  }
+</style>

@@ -6,6 +6,7 @@ import {
   type EquipmentRecommendation,
 } from "../../data/campaigns/equipmentRecommendations";
 import EquipmentBadge from "./EquipmentBadge.astro";
+import InvestmentTable from "./InvestmentTable.astro";
 import HeroGuideCard from "./HeroGuideCard.astro";
 import StageReplayPreview from "./StageReplayPreview.astro";
 
@@ -111,9 +112,9 @@ const tocGroups = [
         <h3>Recommended Investment</h3>
 
         <h4>Normal Investment</h4>
-        <div class="table-scroll" tabindex="0" aria-label="Normal investment recommendations">
+        <InvestmentTable label="Normal investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
+            <thead><tr><th scope="col">Hero</th><th scope="col">Rank</th><th scope="col">Active</th><th scope="col">Passive</th><th scope="col">Weapon</th><th scope="col">Defense</th></tr></thead>
             <tbody>{overviewContent.normalInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
@@ -130,12 +131,12 @@ const tocGroups = [
               );
             })}</tbody>
           </table>
-        </div>
+        </InvestmentTable>
 
         <h4>Elite Investment</h4>
-        <div class="table-scroll" tabindex="0" aria-label="Elite investment recommendations">
+        <InvestmentTable label="Elite investment recommendations">
           <table>
-            <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
+            <thead><tr><th scope="col">Hero</th><th scope="col">Rank</th><th scope="col">Active</th><th scope="col">Passive</th><th scope="col">Weapon</th><th scope="col">Defense</th></tr></thead>
             <tbody>{overviewContent.eliteInvestment.map((row) => {
               const character = characters[row.characterId];
               const rank = ranks[row.rankId];
@@ -152,7 +153,7 @@ const tocGroups = [
               );
             })}</tbody>
           </table>
-        </div>
+        </InvestmentTable>
       </div>
     </article>
 
@@ -413,107 +414,6 @@ const tocGroups = [
     font-weight: 800;
   }
 
-  .table-scroll {
-    width: 100%;
-    margin: 0.55rem 0 0.9rem;
-    overflow-x: auto;
-    border: 1px solid #333;
-    border-radius: 8px;
-  }
-
-  .table-scroll:focus-visible {
-    border-color: #d4af37;
-    outline: none;
-  }
-
-  table {
-    width: 100%;
-    min-width: 0;
-    table-layout: fixed;
-    border-collapse: collapse;
-    background: #151515;
-    font-size: 0.78rem;
-    line-height: 1.45;
-  }
-
-  th,
-  td {
-    padding: 0.65rem 0.7rem;
-    border-bottom: 1px solid #303030;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  th {
-    background: #252525;
-    color: #d4af37;
-    font-size: 0.7rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-
-  td {
-    color: #ccc;
-  }
-
-  .table-hero,
-  .table-ability,
-  .table-equipment {
-    display: flex;
-    align-items: center;
-  }
-
-  .table-hero {
-    min-width: 0;
-  }
-
-  .table-hero img {
-    width: 2.65rem;
-    height: 2.65rem;
-    flex: 0 0 auto;
-    border: 1px solid #444;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .table-rank-icon {
-    display: block;
-    width: 2.65rem;
-    height: 2.65rem;
-    object-fit: contain;
-  }
-
-  .table-ability {
-    gap: 0.2rem;
-  }
-
-  .table-equipment {
-    gap: 0.15rem;
-  }
-
-  .table-equipment strong {
-    color: #f5f5f5;
-    font-size: 0.8rem;
-  }
-
-  .table-ability img {
-    display: block;
-    width: 2.4rem;
-    height: 2.4rem;
-    border: 1px solid #444;
-    border-radius: 7px;
-    object-fit: cover;
-  }
-
-  .table-ability strong {
-    color: #f5f5f5;
-    font-size: 0.8rem;
-  }
-
-  tbody tr:last-child td {
-    border-bottom: 0;
-  }
-
   .tip-list {
     margin-top: 0.75rem;
   }
@@ -693,45 +593,6 @@ const tocGroups = [
     .summary-portraits img {
       width: 1.75rem;
       height: 1.75rem;
-    }
-
-    th,
-    td {
-      padding: 0.5rem 0.25rem;
-    }
-
-    th {
-      font-size: 0.61rem;
-      letter-spacing: 0;
-    }
-
-    th:nth-child(1),
-    td:nth-child(1),
-    th:nth-child(2),
-    td:nth-child(2) {
-      width: 18%;
-    }
-
-    th:nth-child(3),
-    td:nth-child(3),
-    th:nth-child(4),
-    td:nth-child(4) {
-      width: 32%;
-    }
-
-    .table-hero img,
-    .table-rank-icon {
-      width: 2.35rem;
-      height: 2.35rem;
-    }
-
-    .table-ability img {
-      width: 2.1rem;
-      height: 2.1rem;
-    }
-
-    .table-ability strong {
-      font-size: 0.72rem;
     }
 
     .toc-group,

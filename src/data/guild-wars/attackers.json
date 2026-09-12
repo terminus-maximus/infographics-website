@@ -340,7 +340,7 @@
       "image": "/images/guild-wars/ui_image_RoundPortrait_death_crawler_01.png"
     },
     "mow:necro_reanimator_01": {
-      "name": "Thothmek",
+      "name": "Reanimator",
       "kind": "machine_of_war",
       "image": "/images/replay-library/mow/Reanimator.webp"
     },
@@ -642,551 +642,357 @@
   },
   "teams": [
     {
-      "id": "c_genesBiophagus_genesKelermorph_genesPrimus",
+      "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
       "core": [
         "genesBiophagus",
         "genesKelermorph",
+        "genesPatriarch",
         "genesPrimus"
       ],
-      "attempts": 4229,
-      "clears": 4010,
-      "failures": 219,
-      "perfect": 2808,
-      "withDeaths": 1202,
+      "attempts": 3033,
+      "clears": 2886,
+      "failures": 147,
+      "perfect": 2024,
+      "withDeaths": 862,
       "wars": 141,
-      "clearRate": 0.9482147079687869,
+      "clearRate": 0.9515331355093967,
       "interval": [
-        0.9411199804918716,
-        0.9544958928832216
+        0.9433027854797555,
+        0.9586211500106552
       ],
-      "perfectPerAttempt": 0.6639867580988413,
+      "perfectPerAttempt": 0.6673260797889878,
       "metrics": {
         "perfect": {
-          "numerator": 2808,
-          "denominator": 4010,
-          "rate": 0.7002493765586035
+          "numerator": 2024,
+          "denominator": 2886,
+          "rate": 0.7013167013167013
         },
         "meds_up": {
-          "numerator": 2525,
-          "denominator": 2692,
-          "rate": 0.937964338781575
+          "numerator": 1846,
+          "denominator": 1965,
+          "rate": 0.9394402035623409
         },
         "perfect_meds_up": {
-          "numerator": 1705,
-          "denominator": 2525,
-          "rate": 0.6752475247524753
+          "numerator": 1237,
+          "denominator": 1846,
+          "rate": 0.6700975081256771
         }
       },
       "contexts": [
         {
           "map": "hard",
           "medicae": "down_provisional",
-          "attempts": 236,
-          "clears": 223,
-          "failures": 13,
-          "perfect": 148,
-          "withDeaths": 75,
-          "wars": 111,
-          "clearRate": 0.9449152542372882
+          "attempts": 157,
+          "clears": 149,
+          "failures": 8,
+          "perfect": 100,
+          "withDeaths": 49,
+          "wars": 89,
+          "clearRate": 0.9490445859872612
         },
         {
           "map": "hard",
           "medicae": "up",
-          "attempts": 395,
-          "clears": 356,
-          "failures": 39,
-          "perfect": 214,
-          "withDeaths": 142,
-          "wars": 128,
-          "clearRate": 0.9012658227848102
+          "attempts": 273,
+          "clears": 248,
+          "failures": 25,
+          "perfect": 150,
+          "withDeaths": 98,
+          "wars": 115,
+          "clearRate": 0.9084249084249084
         },
         {
           "map": "normal",
           "medicae": "down_provisional",
-          "attempts": 1301,
-          "clears": 1262,
-          "failures": 39,
-          "perfect": 955,
-          "withDeaths": 307,
-          "wars": 141,
-          "clearRate": 0.9700230591852421
+          "attempts": 911,
+          "clears": 891,
+          "failures": 20,
+          "perfect": 687,
+          "withDeaths": 204,
+          "wars": 140,
+          "clearRate": 0.9780461031833151
         },
         {
           "map": "normal",
           "medicae": "up",
-          "attempts": 2297,
-          "clears": 2169,
-          "failures": 128,
-          "perfect": 1491,
-          "withDeaths": 678,
+          "attempts": 1692,
+          "clears": 1598,
+          "failures": 94,
+          "perfect": 1087,
+          "withDeaths": 511,
           "wars": 141,
-          "clearRate": 0.9442751414888986
+          "clearRate": 0.9444444444444444
         }
       ],
       "flex": [
         {
-          "unit": "genesPatriarch",
-          "attempts": 3033,
-          "share": 0.7171908252541972
-        },
-        {
           "unit": "genesMagus",
-          "attempts": 2983,
-          "share": 0.7053676992196737
+          "attempts": 2244,
+          "share": 0.7398615232443125
         },
         {
           "unit": "tyranWingedPrime",
-          "attempts": 899,
-          "share": 0.21257980610073304
+          "attempts": 484,
+          "share": 0.15957797560171447
         },
         {
           "unit": "emperLucius",
-          "attempts": 146,
-          "share": 0.0345235280208087
+          "attempts": 50,
+          "share": 0.016485328058028353
         },
         {
           "unit": "astraYarrick",
-          "attempts": 140,
-          "share": 0.03310475289666588
+          "attempts": 37,
+          "share": 0.012199142762940983
         },
         {
           "unit": "astraDreir",
-          "attempts": 133,
-          "share": 0.03144951525183259
-        },
-        {
-          "unit": "tyranNeurothrope",
-          "attempts": 105,
-          "share": 0.024828564672499408
-        },
-        {
-          "unit": "astraOrdnance",
-          "attempts": 99,
-          "share": 0.023409789548356586
-        },
-        {
-          "unit": "tyranTyrantGuard",
-          "attempts": 71,
-          "share": 0.01678883896902341
-        },
-        {
-          "unit": "tyranParasite",
-          "attempts": 64,
-          "share": 0.015133601324190116
-        },
-        {
-          "unit": "eldarRanger",
-          "attempts": 49,
-          "share": 0.011586663513833058
+          "attempts": 31,
+          "share": 0.01022090339597758
         },
         {
           "unit": "tauCrisis",
-          "attempts": 49,
-          "share": 0.011586663513833058
-        },
-        {
-          "unit": "tauMarksman",
-          "attempts": 47,
-          "share": 0.011113738472452117
-        },
-        {
-          "unit": "tauAunShi",
-          "attempts": 36,
-          "share": 0.00851265074485694
+          "attempts": 22,
+          "share": 0.007253544345532476
         },
         {
           "unit": "spaceWulfen",
-          "attempts": 35,
-          "share": 0.00827618822416647
+          "attempts": 18,
+          "share": 0.005934718100890208
         },
         {
           "unit": "tyranDeathleaper",
-          "attempts": 32,
-          "share": 0.007566800662095058
+          "attempts": 13,
+          "share": 0.004286185295087373
         },
         {
-          "unit": "adeptCelestine",
-          "attempts": 31,
-          "share": 0.007330338141404587
+          "unit": "eldarRanger",
+          "attempts": 10,
+          "share": 0.003297065611605671
         },
         {
-          "unit": "bloodIntercessor",
-          "attempts": 25,
-          "share": 0.005911563017261764
+          "unit": "tyranTyrantGuard",
+          "attempts": 10,
+          "share": 0.003297065611605671
         },
         {
-          "unit": "orksWarboss",
-          "attempts": 25,
-          "share": 0.005911563017261764
+          "unit": "tauMarksman",
+          "attempts": 10,
+          "share": 0.003297065611605671
         },
         {
-          "unit": "darkaHellblaster",
-          "attempts": 25,
-          "share": 0.005911563017261764
-        },
-        {
-          "unit": "orksRuntherd",
-          "attempts": 23,
-          "share": 0.005438637975880823
-        },
-        {
-          "unit": "blackPossession",
-          "attempts": 20,
-          "share": 0.004729250413809411
+          "unit": "tyranNeurothrope",
+          "attempts": 8,
+          "share": 0.002637652489284537
         },
         {
           "unit": "blackObliterator",
-          "attempts": 20,
-          "share": 0.004729250413809411
+          "attempts": 8,
+          "share": 0.002637652489284537
         },
         {
           "unit": "astraPrimarisPsy",
-          "attempts": 17,
-          "share": 0.0040198628517379995
+          "attempts": 7,
+          "share": 0.0023079459281239697
         },
         {
-          "unit": "bloodMephiston",
-          "attempts": 17,
-          "share": 0.0040198628517379995
+          "unit": "astraOrdnance",
+          "attempts": 6,
+          "share": 0.0019782393669634025
         },
         {
-          "unit": "ultraTitus",
-          "attempts": 16,
-          "share": 0.003783400331047529
+          "unit": "tauAunShi",
+          "attempts": 6,
+          "share": 0.0019782393669634025
+        },
+        {
+          "unit": "blackPossession",
+          "attempts": 5,
+          "share": 0.0016485328058028356
+        },
+        {
+          "unit": "orksWarboss",
+          "attempts": 5,
+          "share": 0.0016485328058028356
         },
         {
           "unit": "templAggressor",
-          "attempts": 14,
-          "share": 0.003310475289666588
+          "attempts": 4,
+          "share": 0.0013188262446422684
         },
         {
-          "unit": "emperNoiseMarine",
-          "attempts": 13,
-          "share": 0.0030740127689761173
-        },
-        {
-          "unit": "ultraInceptorSgt",
-          "attempts": 13,
-          "share": 0.0030740127689761173
-        },
-        {
-          "unit": "bloodDeathCompany",
-          "attempts": 11,
-          "share": 0.002601087727595176
-        },
-        {
-          "unit": "bloodTerminator",
-          "attempts": 10,
-          "share": 0.0023646252069047056
-        },
-        {
-          "unit": "adeptRetributor",
-          "attempts": 10,
-          "share": 0.0023646252069047056
-        },
-        {
-          "unit": "necroPlasmancer",
-          "attempts": 9,
-          "share": 0.002128162686214235
-        },
-        {
-          "unit": "necroSpyder",
-          "attempts": 9,
-          "share": 0.002128162686214235
-        },
-        {
-          "unit": "astraCreed",
-          "attempts": 9,
-          "share": 0.002128162686214235
-        },
-        {
-          "unit": "spaceWolfPriest",
-          "attempts": 9,
-          "share": 0.002128162686214235
-        },
-        {
-          "unit": "templChampion",
-          "attempts": 9,
-          "share": 0.002128162686214235
-        },
-        {
-          "unit": "darkaTerminator",
-          "attempts": 8,
-          "share": 0.0018917001655237645
+          "unit": "bloodMephiston",
+          "attempts": 3,
+          "share": 0.0009891196834817012
         },
         {
           "unit": "deathTyphus",
-          "attempts": 8,
-          "share": 0.0018917001655237645
-        },
-        {
-          "unit": "eldarMauganRa",
-          "attempts": 8,
-          "share": 0.0018917001655237645
-        },
-        {
-          "unit": "deathBlightbringer",
-          "attempts": 8,
-          "share": 0.0018917001655237645
-        },
-        {
-          "unit": "necroOverlord",
-          "attempts": 8,
-          "share": 0.0018917001655237645
-        },
-        {
-          "unit": "admecDestroyer",
-          "attempts": 7,
-          "share": 0.001655237644833294
-        },
-        {
-          "unit": "blackTerminator",
-          "attempts": 7,
-          "share": 0.001655237644833294
-        },
-        {
-          "unit": "ultraCalgar",
-          "attempts": 7,
-          "share": 0.001655237644833294
-        },
-        {
-          "unit": "necroDestroyer",
-          "attempts": 7,
-          "share": 0.001655237644833294
-        },
-        {
-          "unit": "custoBladeChampion",
-          "attempts": 6,
-          "share": 0.0014187751241428233
-        },
-        {
-          "unit": "custoKyrus",
-          "attempts": 6,
-          "share": 0.0014187751241428233
-        },
-        {
-          "unit": "emperExultant",
-          "attempts": 6,
-          "share": 0.0014187751241428233
-        },
-        {
-          "unit": "adeptCanoness",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "blackHaarken",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "eldarFarseer",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "thousTerminator",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "custoAtlacoya",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "eldarJainZar",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "spaceRockfist",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "thousInfernalMaster",
-          "attempts": 5,
-          "share": 0.0011823126034523528
-        },
-        {
-          "unit": "astarCyrus",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "darkaCompanion",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "eldarAutarch",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "orksNob",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "ultraTigurius",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "worldKharn",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "admecMarshall",
-          "attempts": 4,
-          "share": 0.0009458500827618822
-        },
-        {
-          "unit": "custoVexilusPraetor",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "tauShadowsun",
+          "unit": "necroSpyder",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "templHelbrecht",
+          "unit": "tyranParasite",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "ultraEliminatorSgt",
+          "unit": "ultraInceptorSgt",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "worldExecutions",
+          "unit": "ultraTitus",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
           "unit": "worldTerminator",
           "attempts": 3,
-          "share": 0.0007093875620714117
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "adeptHospitaller",
-          "attempts": 2,
-          "share": 0.0004729250413809411
+          "unit": "adeptRetributor",
+          "attempts": 3,
+          "share": 0.0009891196834817012
         },
         {
-          "unit": "admecManipulus",
+          "unit": "adeptCelestine",
           "attempts": 2,
-          "share": 0.0004729250413809411
+          "share": 0.0006594131223211342
+        },
+        {
+          "unit": "bloodTerminator",
+          "attempts": 2,
+          "share": 0.0006594131223211342
+        },
+        {
+          "unit": "darkaHellblaster",
+          "attempts": 2,
+          "share": 0.0006594131223211342
+        },
+        {
+          "unit": "eldarMauganRa",
+          "attempts": 2,
+          "share": 0.0006594131223211342
+        },
+        {
+          "unit": "emperExultant",
+          "attempts": 2,
+          "share": 0.0006594131223211342
+        },
+        {
+          "unit": "adeptCanoness",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "admecDestroyer",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "astarCyrus",
+          "attempts": 1,
+          "share": 0.0003297065611605671
         },
         {
           "unit": "astraBullgryn",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "bloodSanguinary",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "custoTrajann",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "deathBlightlord",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "thousAhriman",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "worldEightbound",
-          "attempts": 2,
-          "share": 0.0004729250413809411
-        },
-        {
-          "unit": "admecDominus",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "admecRuststalker",
+          "unit": "astraCreed",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "darkaAzrael",
+          "unit": "blackHaarken",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "deathPutrifier",
+          "unit": "blackTerminator",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "emperFlawlessBlade",
+          "unit": "bloodDeathCompany",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "orksBigMek",
+          "unit": "bloodIntercessor",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "spaceStormcaller",
+          "unit": "eldarAutarch",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "tauFarsight",
+          "unit": "eldarJainZar",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "templAncient",
+          "unit": "emperNoiseMarine",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "templSwordBrother",
+          "unit": "necroDestroyer",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "orksNob",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "orksRuntherd",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "tauShadowsun",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "templChampion",
+          "attempts": 1,
+          "share": 0.0003297065611605671
+        },
+        {
+          "unit": "templHelbrecht",
+          "attempts": 1,
+          "share": 0.0003297065611605671
         },
         {
           "unit": "thousSorcerer",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
-          "unit": "blackAbaddon",
+          "unit": "thousTerminator",
           "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         },
         {
           "unit": "necroChronomancer",
           "attempts": 1,
-          "share": 0.00023646252069047056
-        },
-        {
-          "unit": "necroWarden",
-          "attempts": 1,
-          "share": 0.00023646252069047056
+          "share": 0.0003297065611605671
         }
       ],
       "combinations": {
-        "total": 314,
+        "total": 53,
         "rows": [
           {
             "attempts": 2244,
@@ -1196,7 +1002,7 @@
             "withDeaths": 644,
             "wars": 141,
             "clearRate": 0.9500891265597148,
-            "share": 0.5306218964294159,
+            "share": 0.7398615232443125,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1213,115 +1019,13 @@
             "withDeaths": 123,
             "wars": 118,
             "clearRate": 0.9669421487603306,
-            "share": 0.11444786001418775,
+            "share": 0.15957797560171447,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus",
               "tyranWingedPrime"
-            ]
-          },
-          {
-            "attempts": 198,
-            "clears": 193,
-            "failures": 5,
-            "perfect": 133,
-            "withDeaths": 60,
-            "wars": 101,
-            "clearRate": 0.9747474747474747,
-            "share": 0.04681957909671317,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranWingedPrime"
-            ]
-          },
-          {
-            "attempts": 73,
-            "clears": 70,
-            "failures": 3,
-            "perfect": 53,
-            "withDeaths": 17,
-            "wars": 50,
-            "clearRate": 0.958904109589041,
-            "share": 0.01726176401040435,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus",
-              "tyranNeurothrope",
-              "tyranWingedPrime"
-            ]
-          },
-          {
-            "attempts": 69,
-            "clears": 66,
-            "failures": 3,
-            "perfect": 45,
-            "withDeaths": 21,
-            "wars": 40,
-            "clearRate": 0.9565217391304348,
-            "share": 0.016315913927642468,
-            "team": [
-              "astraOrdnance",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 66,
-            "clears": 64,
-            "failures": 2,
-            "perfect": 46,
-            "withDeaths": 18,
-            "wars": 55,
-            "clearRate": 0.9696969696969697,
-            "share": 0.015606526365571057,
-            "team": [
-              "emperLucius",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 55,
-            "clears": 52,
-            "failures": 3,
-            "perfect": 40,
-            "withDeaths": 12,
-            "wars": 41,
-            "clearRate": 0.9454545454545454,
-            "share": 0.013005438637975882,
-            "team": [
-              "astraYarrick",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 50,
-            "clears": 47,
-            "failures": 3,
-            "perfect": 34,
-            "withDeaths": 13,
-            "wars": 34,
-            "clearRate": 0.94,
-            "share": 0.011823126034523528,
-            "team": [
-              "astraDreir",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
             ]
           },
           {
@@ -1332,47 +1036,13 @@
             "withDeaths": 18,
             "wars": 33,
             "clearRate": 0.88,
-            "share": 0.011823126034523528,
+            "share": 0.016485328058028353,
             "team": [
               "emperLucius",
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 41,
-            "clears": 38,
-            "failures": 3,
-            "perfect": 27,
-            "withDeaths": 11,
-            "wars": 36,
-            "clearRate": 0.926829268292683,
-            "share": 0.009694963348309294,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus",
-              "tyranParasite",
-              "tyranWingedPrime"
-            ]
-          },
-          {
-            "attempts": 39,
-            "clears": 32,
-            "failures": 7,
-            "perfect": 24,
-            "withDeaths": 8,
-            "wars": 30,
-            "clearRate": 0.8205128205128205,
-            "share": 0.009222038306928353,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus",
-              "tyranTyrantGuard",
-              "tyranWingedPrime"
             ]
           },
           {
@@ -1383,7 +1053,7 @@
             "withDeaths": 13,
             "wars": 36,
             "clearRate": 0.9459459459459459,
-            "share": 0.008749113265547412,
+            "share": 0.012199142762940983,
             "team": [
               "astraYarrick",
               "genesBiophagus",
@@ -1400,30 +1070,13 @@
             "withDeaths": 9,
             "wars": 24,
             "clearRate": 0.967741935483871,
-            "share": 0.007330338141404587,
+            "share": 0.01022090339597758,
             "team": [
               "astraDreir",
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 24,
-            "clears": 23,
-            "failures": 1,
-            "perfect": 15,
-            "withDeaths": 8,
-            "wars": 23,
-            "clearRate": 0.9583333333333334,
-            "share": 0.005675100496571293,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tauAunShi"
             ]
           },
           {
@@ -1434,47 +1087,13 @@
             "withDeaths": 9,
             "wars": 13,
             "clearRate": 0.9545454545454546,
-            "share": 0.005202175455190352,
+            "share": 0.007253544345532476,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus",
               "tauCrisis"
-            ]
-          },
-          {
-            "attempts": 19,
-            "clears": 18,
-            "failures": 1,
-            "perfect": 14,
-            "withDeaths": 4,
-            "wars": 17,
-            "clearRate": 0.9473684210526315,
-            "share": 0.004492787893118941,
-            "team": [
-              "astraDreir",
-              "astraYarrick",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 18,
-            "clears": 18,
-            "failures": 0,
-            "perfect": 11,
-            "withDeaths": 7,
-            "wars": 17,
-            "clearRate": 1,
-            "share": 0.00425632537242847,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranTyrantGuard"
             ]
           },
           {
@@ -1485,115 +1104,13 @@
             "withDeaths": 5,
             "wars": 17,
             "clearRate": 0.9444444444444444,
-            "share": 0.00425632537242847,
+            "share": 0.005934718100890208,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus",
               "spaceWulfen"
-            ]
-          },
-          {
-            "attempts": 18,
-            "clears": 14,
-            "failures": 4,
-            "perfect": 9,
-            "withDeaths": 5,
-            "wars": 16,
-            "clearRate": 0.7777777777777778,
-            "share": 0.00425632537242847,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranNeurothrope"
-            ]
-          },
-          {
-            "attempts": 16,
-            "clears": 15,
-            "failures": 1,
-            "perfect": 10,
-            "withDeaths": 5,
-            "wars": 15,
-            "clearRate": 0.9375,
-            "share": 0.003783400331047529,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tauCrisis"
-            ]
-          },
-          {
-            "attempts": 16,
-            "clears": 14,
-            "failures": 2,
-            "perfect": 7,
-            "withDeaths": 7,
-            "wars": 15,
-            "clearRate": 0.875,
-            "share": 0.003783400331047529,
-            "team": [
-              "eldarRanger",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
-            ]
-          },
-          {
-            "attempts": 15,
-            "clears": 14,
-            "failures": 1,
-            "perfect": 10,
-            "withDeaths": 4,
-            "wars": 14,
-            "clearRate": 0.9333333333333333,
-            "share": 0.0035469378103570584,
-            "team": [
-              "emperLucius",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus",
-              "tyranWingedPrime"
-            ]
-          },
-          {
-            "attempts": 15,
-            "clears": 13,
-            "failures": 2,
-            "perfect": 10,
-            "withDeaths": 3,
-            "wars": 13,
-            "clearRate": 0.8666666666666667,
-            "share": 0.0035469378103570584,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tauMarksman"
-            ]
-          },
-          {
-            "attempts": 13,
-            "clears": 13,
-            "failures": 0,
-            "perfect": 9,
-            "withDeaths": 4,
-            "wars": 13,
-            "clearRate": 1,
-            "share": 0.0030740127689761173,
-            "team": [
-              "adeptCelestine",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
             ]
           },
           {
@@ -1604,13 +1121,302 @@
             "withDeaths": 7,
             "wars": 13,
             "clearRate": 0.8461538461538461,
-            "share": 0.0030740127689761173,
+            "share": 0.004286185295087373,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
               "genesPatriarch",
               "genesPrimus",
               "tyranDeathleaper"
+            ]
+          },
+          {
+            "attempts": 10,
+            "clears": 10,
+            "failures": 0,
+            "perfect": 9,
+            "withDeaths": 1,
+            "wars": 10,
+            "clearRate": 1,
+            "share": 0.003297065611605671,
+            "team": [
+              "eldarRanger",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 10,
+            "clears": 10,
+            "failures": 0,
+            "perfect": 8,
+            "withDeaths": 2,
+            "wars": 9,
+            "clearRate": 1,
+            "share": 0.003297065611605671,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranTyrantGuard"
+            ]
+          },
+          {
+            "attempts": 10,
+            "clears": 9,
+            "failures": 1,
+            "perfect": 8,
+            "withDeaths": 1,
+            "wars": 10,
+            "clearRate": 0.9,
+            "share": 0.003297065611605671,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tauMarksman"
+            ]
+          },
+          {
+            "attempts": 8,
+            "clears": 8,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 6,
+            "wars": 8,
+            "clearRate": 1,
+            "share": 0.002637652489284537,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranNeurothrope"
+            ]
+          },
+          {
+            "attempts": 8,
+            "clears": 7,
+            "failures": 1,
+            "perfect": 6,
+            "withDeaths": 1,
+            "wars": 8,
+            "clearRate": 0.875,
+            "share": 0.002637652489284537,
+            "team": [
+              "blackObliterator",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 7,
+            "clears": 7,
+            "failures": 0,
+            "perfect": 6,
+            "withDeaths": 1,
+            "wars": 7,
+            "clearRate": 1,
+            "share": 0.0023079459281239697,
+            "team": [
+              "astraPrimarisPsy",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 6,
+            "clears": 5,
+            "failures": 1,
+            "perfect": 3,
+            "withDeaths": 2,
+            "wars": 6,
+            "clearRate": 0.8333333333333334,
+            "share": 0.0019782393669634025,
+            "team": [
+              "astraOrdnance",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 6,
+            "clears": 5,
+            "failures": 1,
+            "perfect": 4,
+            "withDeaths": 1,
+            "wars": 6,
+            "clearRate": 0.8333333333333334,
+            "share": 0.0019782393669634025,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tauAunShi"
+            ]
+          },
+          {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 5,
+            "wars": 5,
+            "clearRate": 1,
+            "share": 0.0016485328058028356,
+            "team": [
+              "blackPossession",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 4,
+            "withDeaths": 1,
+            "wars": 5,
+            "clearRate": 1,
+            "share": 0.0016485328058028356,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "orksWarboss"
+            ]
+          },
+          {
+            "attempts": 4,
+            "clears": 4,
+            "failures": 0,
+            "perfect": 3,
+            "withDeaths": 1,
+            "wars": 4,
+            "clearRate": 1,
+            "share": 0.0013188262446422684,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "templAggressor"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 1,
+            "withDeaths": 2,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "bloodMephiston",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 1,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "deathTyphus",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 1,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "necroSpyder"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 1,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranParasite"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 3,
+            "withDeaths": 0,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "ultraInceptorSgt"
+            ]
+          },
+          {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 3,
+            "withDeaths": 0,
+            "wars": 3,
+            "clearRate": 1,
+            "share": 0.0009891196834817012,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "ultraTitus"
             ]
           }
         ]
@@ -1619,141 +1425,141 @@
         "total": 12,
         "rows": [
           {
-            "attempts": 1065,
-            "clears": 1028,
-            "failures": 37,
-            "perfect": 754,
-            "withDeaths": 274,
-            "wars": 141,
-            "clearRate": 0.9652582159624413,
-            "share": 0.2518325845353511,
+            "attempts": 763,
+            "clears": 741,
+            "failures": 22,
+            "perfect": 545,
+            "withDeaths": 196,
+            "wars": 139,
+            "clearRate": 0.9711664482306684,
+            "share": 0.25156610616551267,
             "unit": "mow:tyran_biovore_01"
           },
           {
-            "attempts": 798,
-            "clears": 758,
-            "failures": 40,
-            "perfect": 529,
-            "withDeaths": 229,
-            "wars": 138,
-            "clearRate": 0.949874686716792,
-            "share": 0.1886970915109955,
+            "attempts": 548,
+            "clears": 522,
+            "failures": 26,
+            "perfect": 361,
+            "withDeaths": 161,
+            "wars": 133,
+            "clearRate": 0.9525547445255474,
+            "share": 0.18067919551599076,
             "unit": "mow:astra_ordnancebattery_01"
           },
           {
-            "attempts": 541,
-            "clears": 509,
-            "failures": 32,
-            "perfect": 345,
-            "withDeaths": 164,
-            "wars": 134,
-            "clearRate": 0.9408502772643254,
-            "share": 0.12792622369354456,
+            "attempts": 381,
+            "clears": 360,
+            "failures": 21,
+            "perfect": 241,
+            "withDeaths": 119,
+            "wars": 124,
+            "clearRate": 0.9448818897637795,
+            "share": 0.12561819980217606,
             "unit": "mow:black_forgefiend_01"
           },
           {
-            "attempts": 428,
-            "clears": 398,
-            "failures": 30,
-            "perfect": 269,
-            "withDeaths": 129,
-            "wars": 132,
-            "clearRate": 0.9299065420560748,
-            "share": 0.1012059588555214,
+            "attempts": 330,
+            "clears": 308,
+            "failures": 22,
+            "perfect": 214,
+            "withDeaths": 94,
+            "wars": 126,
+            "clearRate": 0.9333333333333333,
+            "share": 0.10880316518298715,
             "unit": "missing_unknown"
           },
           {
-            "attempts": 327,
-            "clears": 307,
-            "failures": 20,
-            "perfect": 215,
-            "withDeaths": 92,
-            "wars": 117,
-            "clearRate": 0.9388379204892966,
-            "share": 0.07732324426578387,
+            "attempts": 250,
+            "clears": 234,
+            "failures": 16,
+            "perfect": 165,
+            "withDeaths": 69,
+            "wars": 103,
+            "clearRate": 0.936,
+            "share": 0.08242664029014177,
             "unit": "mow:tauta_broadside_01"
           },
           {
-            "attempts": 256,
-            "clears": 241,
-            "failures": 15,
-            "perfect": 165,
-            "withDeaths": 76,
-            "wars": 114,
-            "clearRate": 0.94140625,
-            "share": 0.06053440529676046,
+            "attempts": 181,
+            "clears": 170,
+            "failures": 11,
+            "perfect": 116,
+            "withDeaths": 54,
+            "wars": 94,
+            "clearRate": 0.9392265193370166,
+            "share": 0.05967688757006264,
             "unit": "mow:darka_stormspeeder_01"
           },
           {
-            "attempts": 218,
-            "clears": 210,
-            "failures": 8,
-            "perfect": 136,
-            "withDeaths": 74,
-            "wars": 107,
-            "clearRate": 0.963302752293578,
-            "share": 0.05154882951052258,
+            "attempts": 155,
+            "clears": 150,
+            "failures": 5,
+            "perfect": 94,
+            "withDeaths": 56,
+            "wars": 90,
+            "clearRate": 0.967741935483871,
+            "share": 0.0511045169798879,
             "unit": "mow:orkss_rukkatrukk_01"
           },
           {
-            "attempts": 192,
-            "clears": 181,
-            "failures": 11,
-            "perfect": 122,
-            "withDeaths": 59,
-            "wars": 102,
-            "clearRate": 0.9427083333333334,
-            "share": 0.04540080397257035,
-            "unit": "mow:adept_exorcist_01"
-          },
-          {
-            "attempts": 188,
-            "clears": 178,
-            "failures": 10,
-            "perfect": 137,
-            "withDeaths": 41,
-            "wars": 106,
-            "clearRate": 0.9468085106382979,
-            "share": 0.04445495388980847,
+            "attempts": 139,
+            "clears": 134,
+            "failures": 5,
+            "perfect": 104,
+            "withDeaths": 30,
+            "wars": 92,
+            "clearRate": 0.9640287769784173,
+            "share": 0.04582921200131883,
             "unit": "mow:ultra_dreadnought_01"
           },
           {
-            "attempts": 116,
-            "clears": 105,
-            "failures": 11,
-            "perfect": 65,
-            "withDeaths": 40,
-            "wars": 78,
-            "clearRate": 0.9051724137931034,
-            "share": 0.027429652400094585,
+            "attempts": 137,
+            "clears": 127,
+            "failures": 10,
+            "perfect": 84,
+            "withDeaths": 43,
+            "wars": 85,
+            "clearRate": 0.927007299270073,
+            "share": 0.04516979887899769,
+            "unit": "mow:adept_exorcist_01"
+          },
+          {
+            "attempts": 73,
+            "clears": 67,
+            "failures": 6,
+            "perfect": 43,
+            "withDeaths": 24,
+            "wars": 58,
+            "clearRate": 0.9178082191780822,
+            "share": 0.024068578964721397,
             "unit": "mow:death_crawler_01"
           },
           {
-            "attempts": 88,
-            "clears": 84,
-            "failures": 4,
-            "perfect": 61,
-            "withDeaths": 23,
-            "wars": 63,
-            "clearRate": 0.9545454545454546,
-            "share": 0.02080870182076141,
+            "attempts": 67,
+            "clears": 65,
+            "failures": 2,
+            "perfect": 50,
+            "withDeaths": 15,
+            "wars": 51,
+            "clearRate": 0.9701492537313433,
+            "share": 0.022090339597757996,
             "unit": "mow:thous_daemonprince_01"
           },
           {
-            "attempts": 12,
-            "clears": 11,
+            "attempts": 9,
+            "clears": 8,
             "failures": 1,
-            "perfect": 10,
+            "perfect": 7,
             "withDeaths": 1,
-            "wars": 12,
-            "clearRate": 0.9166666666666666,
-            "share": 0.0028375502482856467,
+            "wars": 9,
+            "clearRate": 0.8888888888888888,
+            "share": 0.002967359050445104,
             "unit": "mow:necro_reanimator_01"
           }
         ]
       },
       "teamMows": {
-        "total": 673,
+        "total": 169,
         "rows": [
           {
             "attempts": 557,
@@ -1763,7 +1569,7 @@
             "withDeaths": 148,
             "wars": 135,
             "clearRate": 0.9676840215439856,
-            "share": 0.1317096240245921,
+            "share": 0.18364655456643586,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1781,7 +1587,7 @@
             "withDeaths": 120,
             "wars": 127,
             "clearRate": 0.9548693586698337,
-            "share": 0.0995507212106881,
+            "share": 0.13880646224859874,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1799,7 +1605,7 @@
             "withDeaths": 78,
             "wars": 117,
             "clearRate": 0.9501915708812261,
-            "share": 0.06171671790021282,
+            "share": 0.08605341246290801,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1817,7 +1623,7 @@
             "withDeaths": 75,
             "wars": 113,
             "clearRate": 0.9302325581395349,
-            "share": 0.0610073303381414,
+            "share": 0.08506429277942631,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1835,7 +1641,7 @@
             "withDeaths": 55,
             "wars": 95,
             "clearRate": 0.9333333333333333,
-            "share": 0.046110191534641756,
+            "share": 0.06429277942631058,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1853,7 +1659,7 @@
             "withDeaths": 33,
             "wars": 81,
             "clearRate": 0.9871794871794872,
-            "share": 0.03688815322771341,
+            "share": 0.051434223541048464,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1871,7 +1677,7 @@
             "withDeaths": 44,
             "wars": 84,
             "clearRate": 0.9432624113475178,
-            "share": 0.03334121541735635,
+            "share": 0.04648862512363996,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1889,7 +1695,7 @@
             "withDeaths": 40,
             "wars": 68,
             "clearRate": 0.9705882352941176,
-            "share": 0.024119177110428,
+            "share": 0.033630069238377844,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1907,7 +1713,7 @@
             "withDeaths": 28,
             "wars": 74,
             "clearRate": 0.9183673469387755,
-            "share": 0.023173327027666116,
+            "share": 0.03231124299373558,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1925,7 +1731,7 @@
             "withDeaths": 23,
             "wars": 65,
             "clearRate": 0.9565217391304348,
-            "share": 0.02175455190352329,
+            "share": 0.030333003626772173,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1943,7 +1749,7 @@
             "withDeaths": 25,
             "wars": 54,
             "clearRate": 0.9651162790697675,
-            "share": 0.02033577677938047,
+            "share": 0.02835476425980877,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1961,7 +1767,7 @@
             "withDeaths": 21,
             "wars": 41,
             "clearRate": 0.9682539682539683,
-            "share": 0.014897138803499646,
+            "share": 0.020771513353115726,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1979,7 +1785,7 @@
             "withDeaths": 13,
             "wars": 42,
             "clearRate": 0.9642857142857143,
-            "share": 0.013241901158666351,
+            "share": 0.018463567424991757,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -1997,7 +1803,7 @@
             "withDeaths": 20,
             "wars": 49,
             "clearRate": 0.9107142857142857,
-            "share": 0.013241901158666351,
+            "share": 0.018463567424991757,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -2008,60 +1814,6 @@
             "mow": "mow:death_crawler_01"
           },
           {
-            "attempts": 48,
-            "clears": 48,
-            "failures": 0,
-            "perfect": 32,
-            "withDeaths": 16,
-            "wars": 38,
-            "clearRate": 1,
-            "share": 0.011350200993142587,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranWingedPrime"
-            ],
-            "mow": "mow:tyran_biovore_01"
-          },
-          {
-            "attempts": 47,
-            "clears": 44,
-            "failures": 3,
-            "perfect": 34,
-            "withDeaths": 10,
-            "wars": 41,
-            "clearRate": 0.9361702127659575,
-            "share": 0.011113738472452117,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranWingedPrime"
-            ],
-            "mow": "mow:astra_ordnancebattery_01"
-          },
-          {
-            "attempts": 47,
-            "clears": 44,
-            "failures": 3,
-            "perfect": 32,
-            "withDeaths": 12,
-            "wars": 39,
-            "clearRate": 0.9361702127659575,
-            "share": 0.011113738472452117,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesPrimus",
-              "tyranNeurothrope",
-              "tyranWingedPrime"
-            ],
-            "mow": "mow:tyran_biovore_01"
-          },
-          {
             "attempts": 45,
             "clears": 42,
             "failures": 3,
@@ -2069,7 +1821,7 @@
             "withDeaths": 12,
             "wars": 35,
             "clearRate": 0.9333333333333333,
-            "share": 0.010640813431071176,
+            "share": 0.01483679525222552,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -2080,42 +1832,6 @@
             "mow": "missing_unknown"
           },
           {
-            "attempts": 43,
-            "clears": 40,
-            "failures": 3,
-            "perfect": 31,
-            "withDeaths": 9,
-            "wars": 34,
-            "clearRate": 0.9302325581395349,
-            "share": 0.010167888389690235,
-            "team": [
-              "astraYarrick",
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus"
-            ],
-            "mow": "mow:astra_ordnancebattery_01"
-          },
-          {
-            "attempts": 34,
-            "clears": 34,
-            "failures": 0,
-            "perfect": 24,
-            "withDeaths": 10,
-            "wars": 27,
-            "clearRate": 1,
-            "share": 0.008039725703475999,
-            "team": [
-              "genesBiophagus",
-              "genesKelermorph",
-              "genesMagus",
-              "genesPrimus",
-              "tyranWingedPrime"
-            ],
-            "mow": "mow:black_forgefiend_01"
-          },
-          {
             "attempts": 30,
             "clears": 27,
             "failures": 3,
@@ -2123,7 +1839,7 @@
             "withDeaths": 6,
             "wars": 26,
             "clearRate": 0.9,
-            "share": 0.007093875620714117,
+            "share": 0.009891196834817012,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -2141,7 +1857,7 @@
             "withDeaths": 5,
             "wars": 25,
             "clearRate": 0.9615384615384616,
-            "share": 0.0061480255379522345,
+            "share": 0.008572370590174745,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -2159,7 +1875,7 @@
             "withDeaths": 9,
             "wars": 21,
             "clearRate": 0.92,
-            "share": 0.005911563017261764,
+            "share": 0.008242664029014177,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
@@ -2170,38 +1886,128 @@
             "mow": "mow:adept_exorcist_01"
           },
           {
-            "attempts": 24,
-            "clears": 22,
+            "attempts": 21,
+            "clears": 19,
             "failures": 2,
-            "perfect": 16,
-            "withDeaths": 6,
-            "wars": 23,
-            "clearRate": 0.9166666666666666,
-            "share": 0.005675100496571293,
+            "perfect": 9,
+            "withDeaths": 10,
+            "wars": 11,
+            "clearRate": 0.9047619047619048,
+            "share": 0.006923837784371909,
             "team": [
+              "emperLucius",
               "genesBiophagus",
               "genesKelermorph",
-              "genesPrimus",
-              "tyranParasite",
-              "tyranWingedPrime"
+              "genesPatriarch",
+              "genesPrimus"
             ],
-            "mow": "mow:tyran_biovore_01"
+            "mow": "mow:black_forgefiend_01"
           },
           {
-            "attempts": 24,
-            "clears": 21,
-            "failures": 3,
-            "perfect": 16,
-            "withDeaths": 5,
-            "wars": 21,
-            "clearRate": 0.875,
-            "share": 0.005675100496571293,
+            "attempts": 19,
+            "clears": 19,
+            "failures": 0,
+            "perfect": 15,
+            "withDeaths": 4,
+            "wars": 18,
+            "clearRate": 1,
+            "share": 0.006264424662050775,
             "team": [
               "genesBiophagus",
               "genesKelermorph",
+              "genesPatriarch",
               "genesPrimus",
-              "tyranTyrantGuard",
               "tyranWingedPrime"
+            ],
+            "mow": "mow:darka_stormspeeder_01"
+          },
+          {
+            "attempts": 14,
+            "clears": 13,
+            "failures": 1,
+            "perfect": 7,
+            "withDeaths": 6,
+            "wars": 14,
+            "clearRate": 0.9285714285714286,
+            "share": 0.004615891856247939,
+            "team": [
+              "astraYarrick",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ],
+            "mow": "mow:astra_ordnancebattery_01"
+          },
+          {
+            "attempts": 12,
+            "clears": 12,
+            "failures": 0,
+            "perfect": 9,
+            "withDeaths": 3,
+            "wars": 11,
+            "clearRate": 1,
+            "share": 0.003956478733926805,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:death_crawler_01"
+          },
+          {
+            "attempts": 12,
+            "clears": 12,
+            "failures": 0,
+            "perfect": 9,
+            "withDeaths": 3,
+            "wars": 12,
+            "clearRate": 1,
+            "share": 0.003956478733926805,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:ultra_dreadnought_01"
+          },
+          {
+            "attempts": 9,
+            "clears": 9,
+            "failures": 0,
+            "perfect": 8,
+            "withDeaths": 1,
+            "wars": 9,
+            "clearRate": 1,
+            "share": 0.002967359050445104,
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:thous_daemonprince_01"
+          },
+          {
+            "attempts": 8,
+            "clears": 7,
+            "failures": 1,
+            "perfect": 7,
+            "withDeaths": 0,
+            "wars": 8,
+            "clearRate": 0.875,
+            "share": 0.002637652489284537,
+            "team": [
+              "emperLucius",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
             ],
             "mow": "mow:tyran_biovore_01"
           }
@@ -6293,312 +6099,92 @@
       }
     },
     {
-      "id": "c_bloodDante_bloodIntercessor_bloodMephiston_bloodSanguinary",
+      "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
       "core": [
         "bloodDante",
+        "bloodDeathCompany",
         "bloodIntercessor",
         "bloodMephiston",
         "bloodSanguinary"
       ],
-      "attempts": 2414,
-      "clears": 2100,
-      "failures": 314,
-      "perfect": 1116,
-      "withDeaths": 984,
+      "attempts": 2115,
+      "clears": 1839,
+      "failures": 276,
+      "perfect": 982,
+      "withDeaths": 857,
       "wars": 141,
-      "clearRate": 0.8699254349627175,
+      "clearRate": 0.8695035460992908,
       "interval": [
-        0.8559165953617401,
-        0.8827588018543883
+        0.8544752016733431,
+        0.8831920709266255
       ],
-      "perfectPerAttempt": 0.4623032311516156,
+      "perfectPerAttempt": 0.46430260047281324,
       "metrics": {
         "perfect": {
-          "numerator": 1116,
-          "denominator": 2100,
-          "rate": 0.5314285714285715
+          "numerator": 982,
+          "denominator": 1839,
+          "rate": 0.5339858618814574
         },
         "meds_up": {
-          "numerator": 1301,
-          "denominator": 1547,
-          "rate": 0.8409825468648998
+          "numerator": 1134,
+          "denominator": 1348,
+          "rate": 0.841246290801187
         },
         "perfect_meds_up": {
-          "numerator": 628,
-          "denominator": 1301,
-          "rate": 0.4827056110684089
+          "numerator": 548,
+          "denominator": 1134,
+          "rate": 0.48324514991181655
         }
       },
       "contexts": [
         {
           "map": "hard",
           "medicae": "down_provisional",
-          "attempts": 168,
-          "clears": 146,
-          "failures": 22,
-          "perfect": 87,
-          "withDeaths": 59,
-          "wars": 85,
-          "clearRate": 0.8690476190476191
+          "attempts": 145,
+          "clears": 127,
+          "failures": 18,
+          "perfect": 74,
+          "withDeaths": 53,
+          "wars": 75,
+          "clearRate": 0.8758620689655172
         },
         {
           "map": "hard",
           "medicae": "up",
-          "attempts": 268,
-          "clears": 203,
-          "failures": 65,
-          "perfect": 80,
-          "withDeaths": 123,
-          "wars": 97,
-          "clearRate": 0.7574626865671642
+          "attempts": 222,
+          "clears": 172,
+          "failures": 50,
+          "perfect": 67,
+          "withDeaths": 105,
+          "wars": 89,
+          "clearRate": 0.7747747747747747
         },
         {
           "map": "normal",
           "medicae": "down_provisional",
-          "attempts": 699,
-          "clears": 653,
-          "failures": 46,
-          "perfect": 401,
-          "withDeaths": 252,
-          "wars": 133,
-          "clearRate": 0.9341917024320457
+          "attempts": 622,
+          "clears": 578,
+          "failures": 44,
+          "perfect": 360,
+          "withDeaths": 218,
+          "wars": 129,
+          "clearRate": 0.9292604501607717
         },
         {
           "map": "normal",
           "medicae": "up",
-          "attempts": 1279,
-          "clears": 1098,
-          "failures": 181,
-          "perfect": 548,
-          "withDeaths": 550,
-          "wars": 141,
-          "clearRate": 0.8584831899921814
+          "attempts": 1126,
+          "clears": 962,
+          "failures": 164,
+          "perfect": 481,
+          "withDeaths": 481,
+          "wars": 139,
+          "clearRate": 0.8543516873889876
         }
       ],
-      "flex": [
-        {
-          "unit": "bloodDeathCompany",
-          "attempts": 2115,
-          "share": 0.876139188069594
-        },
-        {
-          "unit": "bloodTerminator",
-          "attempts": 95,
-          "share": 0.03935376967688484
-        },
-        {
-          "unit": "blackHaarken",
-          "attempts": 29,
-          "share": 0.012013256006628004
-        },
-        {
-          "unit": "custoBladeChampion",
-          "attempts": 27,
-          "share": 0.011184755592377795
-        },
-        {
-          "unit": "worldKharn",
-          "attempts": 18,
-          "share": 0.007456503728251864
-        },
-        {
-          "unit": "adeptCelestine",
-          "attempts": 16,
-          "share": 0.006628003314001657
-        },
-        {
-          "unit": "templChampion",
-          "attempts": 15,
-          "share": 0.006213753106876553
-        },
-        {
-          "unit": "templAncient",
-          "attempts": 10,
-          "share": 0.004142502071251036
-        },
-        {
-          "unit": "spaceBlackmane",
-          "attempts": 9,
-          "share": 0.003728251864125932
-        },
-        {
-          "unit": "ultraInceptorSgt",
-          "attempts": 9,
-          "share": 0.003728251864125932
-        },
-        {
-          "unit": "ultraTigurius",
-          "attempts": 7,
-          "share": 0.002899751449875725
-        },
-        {
-          "unit": "templSwordBrother",
-          "attempts": 7,
-          "share": 0.002899751449875725
-        },
-        {
-          "unit": "darkaAsmodai",
-          "attempts": 4,
-          "share": 0.0016570008285004142
-        },
-        {
-          "unit": "eldarAutarch",
-          "attempts": 4,
-          "share": 0.0016570008285004142
-        },
-        {
-          "unit": "emperLucius",
-          "attempts": 4,
-          "share": 0.0016570008285004142
-        },
-        {
-          "unit": "astraDreir",
-          "attempts": 3,
-          "share": 0.0012427506213753107
-        },
-        {
-          "unit": "orksRuntherd",
-          "attempts": 3,
-          "share": 0.0012427506213753107
-        },
-        {
-          "unit": "worldExecutions",
-          "attempts": 3,
-          "share": 0.0012427506213753107
-        },
-        {
-          "unit": "astraOrdnance",
-          "attempts": 3,
-          "share": 0.0012427506213753107
-        },
-        {
-          "unit": "custoAtlacoya",
-          "attempts": 3,
-          "share": 0.0012427506213753107
-        },
-        {
-          "unit": "eldarFarseer",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "eldarRanger",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "necroPlasmancer",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "tyranParasite",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "blackAbaddon",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "worldTerminator",
-          "attempts": 2,
-          "share": 0.0008285004142502071
-        },
-        {
-          "unit": "adeptCanoness",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "adeptRetributor",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "admecDestroyer",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "custoKyrus",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "darkaAzrael",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "darkaHellblaster",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "eldarMauganRa",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "genesKelermorph",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "spaceWulfen",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "templAggressor",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "templHelbrecht",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "tyranDeathleaper",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "tyranNeurothrope",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "astraBullgryn",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "astraYarrick",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "custoVexilusPraetor",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "darkaTerminator",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        },
-        {
-          "unit": "emperFlawlessBlade",
-          "attempts": 1,
-          "share": 0.00041425020712510354
-        }
-      ],
+      "flex": [],
       "combinations": {
-        "total": 44,
+        "total": 1,
         "rows": [
           {
             "attempts": 2115,
@@ -6608,418 +6194,10 @@
             "withDeaths": 857,
             "wars": 141,
             "clearRate": 0.8695035460992908,
-            "share": 0.876139188069594,
+            "share": 1,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ]
-          },
-          {
-            "attempts": 95,
-            "clears": 84,
-            "failures": 11,
-            "perfect": 47,
-            "withDeaths": 37,
-            "wars": 49,
-            "clearRate": 0.8842105263157894,
-            "share": 0.03935376967688484,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ]
-          },
-          {
-            "attempts": 29,
-            "clears": 26,
-            "failures": 3,
-            "perfect": 12,
-            "withDeaths": 14,
-            "wars": 24,
-            "clearRate": 0.896551724137931,
-            "share": 0.012013256006628004,
-            "team": [
-              "blackHaarken",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ]
-          },
-          {
-            "attempts": 27,
-            "clears": 24,
-            "failures": 3,
-            "perfect": 10,
-            "withDeaths": 14,
-            "wars": 26,
-            "clearRate": 0.8888888888888888,
-            "share": 0.011184755592377795,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "custoBladeChampion"
-            ]
-          },
-          {
-            "attempts": 18,
-            "clears": 17,
-            "failures": 1,
-            "perfect": 6,
-            "withDeaths": 11,
-            "wars": 15,
-            "clearRate": 0.9444444444444444,
-            "share": 0.007456503728251864,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "worldKharn"
-            ]
-          },
-          {
-            "attempts": 16,
-            "clears": 15,
-            "failures": 1,
-            "perfect": 8,
-            "withDeaths": 7,
-            "wars": 15,
-            "clearRate": 0.9375,
-            "share": 0.006628003314001657,
-            "team": [
-              "adeptCelestine",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ]
-          },
-          {
-            "attempts": 15,
-            "clears": 13,
-            "failures": 2,
-            "perfect": 6,
-            "withDeaths": 7,
-            "wars": 10,
-            "clearRate": 0.8666666666666667,
-            "share": 0.006213753106876553,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "templChampion"
-            ]
-          },
-          {
-            "attempts": 10,
-            "clears": 9,
-            "failures": 1,
-            "perfect": 4,
-            "withDeaths": 5,
-            "wars": 10,
-            "clearRate": 0.9,
-            "share": 0.004142502071251036,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "templAncient"
-            ]
-          },
-          {
-            "attempts": 9,
-            "clears": 8,
-            "failures": 1,
-            "perfect": 6,
-            "withDeaths": 2,
-            "wars": 9,
-            "clearRate": 0.8888888888888888,
-            "share": 0.003728251864125932,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "spaceBlackmane"
-            ]
-          },
-          {
-            "attempts": 9,
-            "clears": 8,
-            "failures": 1,
-            "perfect": 4,
-            "withDeaths": 4,
-            "wars": 8,
-            "clearRate": 0.8888888888888888,
-            "share": 0.003728251864125932,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "ultraInceptorSgt"
-            ]
-          },
-          {
-            "attempts": 7,
-            "clears": 6,
-            "failures": 1,
-            "perfect": 2,
-            "withDeaths": 4,
-            "wars": 7,
-            "clearRate": 0.8571428571428571,
-            "share": 0.002899751449875725,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "ultraTigurius"
-            ]
-          },
-          {
-            "attempts": 7,
-            "clears": 4,
-            "failures": 3,
-            "perfect": 2,
-            "withDeaths": 2,
-            "wars": 7,
-            "clearRate": 0.5714285714285714,
-            "share": 0.002899751449875725,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "templSwordBrother"
-            ]
-          },
-          {
-            "attempts": 4,
-            "clears": 4,
-            "failures": 0,
-            "perfect": 4,
-            "withDeaths": 0,
-            "wars": 4,
-            "clearRate": 1,
-            "share": 0.0016570008285004142,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "darkaAsmodai"
-            ]
-          },
-          {
-            "attempts": 4,
-            "clears": 4,
-            "failures": 0,
-            "perfect": 2,
-            "withDeaths": 2,
-            "wars": 4,
-            "clearRate": 1,
-            "share": 0.0016570008285004142,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "eldarAutarch"
-            ]
-          },
-          {
-            "attempts": 4,
-            "clears": 3,
-            "failures": 1,
-            "perfect": 3,
-            "withDeaths": 0,
-            "wars": 4,
-            "clearRate": 0.75,
-            "share": 0.0016570008285004142,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "emperLucius"
-            ]
-          },
-          {
-            "attempts": 3,
-            "clears": 3,
-            "failures": 0,
-            "perfect": 2,
-            "withDeaths": 1,
-            "wars": 3,
-            "clearRate": 1,
-            "share": 0.0012427506213753107,
-            "team": [
-              "astraDreir",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ]
-          },
-          {
-            "attempts": 3,
-            "clears": 3,
-            "failures": 0,
-            "perfect": 2,
-            "withDeaths": 1,
-            "wars": 3,
-            "clearRate": 1,
-            "share": 0.0012427506213753107,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "orksRuntherd"
-            ]
-          },
-          {
-            "attempts": 3,
-            "clears": 3,
-            "failures": 0,
-            "perfect": 2,
-            "withDeaths": 1,
-            "wars": 3,
-            "clearRate": 1,
-            "share": 0.0012427506213753107,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "worldExecutions"
-            ]
-          },
-          {
-            "attempts": 3,
-            "clears": 2,
-            "failures": 1,
-            "perfect": 1,
-            "withDeaths": 1,
-            "wars": 3,
-            "clearRate": 0.6666666666666666,
-            "share": 0.0012427506213753107,
-            "team": [
-              "astraOrdnance",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ]
-          },
-          {
-            "attempts": 3,
-            "clears": 2,
-            "failures": 1,
-            "perfect": 1,
-            "withDeaths": 1,
-            "wars": 3,
-            "clearRate": 0.6666666666666666,
-            "share": 0.0012427506213753107,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "custoAtlacoya"
-            ]
-          },
-          {
-            "attempts": 2,
-            "clears": 2,
-            "failures": 0,
-            "perfect": 1,
-            "withDeaths": 1,
-            "wars": 2,
-            "clearRate": 1,
-            "share": 0.0008285004142502071,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "eldarFarseer"
-            ]
-          },
-          {
-            "attempts": 2,
-            "clears": 2,
-            "failures": 0,
-            "perfect": 1,
-            "withDeaths": 1,
-            "wars": 2,
-            "clearRate": 1,
-            "share": 0.0008285004142502071,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "eldarRanger"
-            ]
-          },
-          {
-            "attempts": 2,
-            "clears": 2,
-            "failures": 0,
-            "perfect": 0,
-            "withDeaths": 2,
-            "wars": 2,
-            "clearRate": 1,
-            "share": 0.0008285004142502071,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "necroPlasmancer"
-            ]
-          },
-          {
-            "attempts": 2,
-            "clears": 2,
-            "failures": 0,
-            "perfect": 1,
-            "withDeaths": 1,
-            "wars": 2,
-            "clearRate": 1,
-            "share": 0.0008285004142502071,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "tyranParasite"
-            ]
-          },
-          {
-            "attempts": 2,
-            "clears": 1,
-            "failures": 1,
-            "perfect": 0,
-            "withDeaths": 1,
-            "wars": 2,
-            "clearRate": 0.5,
-            "share": 0.0008285004142502071,
-            "team": [
-              "blackAbaddon",
-              "bloodDante",
               "bloodIntercessor",
               "bloodMephiston",
               "bloodSanguinary"
@@ -7031,141 +6209,141 @@
         "total": 12,
         "rows": [
           {
-            "attempts": 479,
-            "clears": 401,
-            "failures": 78,
-            "perfect": 224,
-            "withDeaths": 177,
-            "wars": 118,
-            "clearRate": 0.837160751565762,
-            "share": 0.1984258492129246,
+            "attempts": 433,
+            "clears": 366,
+            "failures": 67,
+            "perfect": 206,
+            "withDeaths": 160,
+            "wars": 116,
+            "clearRate": 0.8452655889145496,
+            "share": 0.20472813238770685,
             "unit": "missing_unknown"
           },
           {
-            "attempts": 337,
-            "clears": 303,
-            "failures": 34,
-            "perfect": 137,
-            "withDeaths": 166,
-            "wars": 121,
-            "clearRate": 0.8991097922848664,
-            "share": 0.1396023198011599,
+            "attempts": 299,
+            "clears": 268,
+            "failures": 31,
+            "perfect": 119,
+            "withDeaths": 149,
+            "wars": 113,
+            "clearRate": 0.8963210702341137,
+            "share": 0.141371158392435,
             "unit": "mow:astra_ordnancebattery_01"
           },
           {
-            "attempts": 290,
-            "clears": 250,
-            "failures": 40,
-            "perfect": 130,
-            "withDeaths": 120,
-            "wars": 100,
-            "clearRate": 0.8620689655172413,
-            "share": 0.12013256006628004,
+            "attempts": 259,
+            "clears": 224,
+            "failures": 35,
+            "perfect": 121,
+            "withDeaths": 103,
+            "wars": 93,
+            "clearRate": 0.8648648648648649,
+            "share": 0.12245862884160756,
             "unit": "mow:adept_exorcist_01"
           },
           {
-            "attempts": 250,
-            "clears": 226,
-            "failures": 24,
-            "perfect": 126,
-            "withDeaths": 100,
-            "wars": 108,
-            "clearRate": 0.904,
-            "share": 0.1035625517812759,
+            "attempts": 215,
+            "clears": 195,
+            "failures": 20,
+            "perfect": 108,
+            "withDeaths": 87,
+            "wars": 101,
+            "clearRate": 0.9069767441860465,
+            "share": 0.1016548463356974,
             "unit": "mow:tyran_biovore_01"
           },
           {
-            "attempts": 224,
-            "clears": 188,
-            "failures": 36,
-            "perfect": 98,
-            "withDeaths": 90,
-            "wars": 100,
-            "clearRate": 0.8392857142857143,
-            "share": 0.0927920463960232,
-            "unit": "mow:ultra_dreadnought_01"
-          },
-          {
-            "attempts": 219,
-            "clears": 188,
+            "attempts": 192,
+            "clears": 161,
             "failures": 31,
-            "perfect": 99,
-            "withDeaths": 89,
-            "wars": 98,
-            "clearRate": 0.8584474885844748,
-            "share": 0.09072079536039768,
+            "perfect": 88,
+            "withDeaths": 73,
+            "wars": 92,
+            "clearRate": 0.8385416666666666,
+            "share": 0.09078014184397164,
             "unit": "mow:black_forgefiend_01"
           },
           {
             "attempts": 176,
-            "clears": 155,
-            "failures": 21,
-            "perfect": 93,
-            "withDeaths": 62,
-            "wars": 76,
-            "clearRate": 0.8806818181818182,
-            "share": 0.07290803645401822,
+            "clears": 150,
+            "failures": 26,
+            "perfect": 75,
+            "withDeaths": 75,
+            "wars": 89,
+            "clearRate": 0.8522727272727273,
+            "share": 0.08321513002364066,
+            "unit": "mow:ultra_dreadnought_01"
+          },
+          {
+            "attempts": 155,
+            "clears": 136,
+            "failures": 19,
+            "perfect": 78,
+            "withDeaths": 58,
+            "wars": 71,
+            "clearRate": 0.8774193548387097,
+            "share": 0.07328605200945626,
             "unit": "mow:tauta_broadside_01"
           },
           {
-            "attempts": 171,
-            "clears": 147,
-            "failures": 24,
-            "perfect": 77,
-            "withDeaths": 70,
-            "wars": 95,
-            "clearRate": 0.8596491228070176,
-            "share": 0.07083678541839271,
+            "attempts": 155,
+            "clears": 132,
+            "failures": 23,
+            "perfect": 74,
+            "withDeaths": 58,
+            "wars": 89,
+            "clearRate": 0.8516129032258064,
+            "share": 0.07328605200945626,
             "unit": "mow:darka_stormspeeder_01"
           },
           {
-            "attempts": 124,
-            "clears": 111,
-            "failures": 13,
-            "perfect": 62,
-            "withDeaths": 49,
-            "wars": 59,
-            "clearRate": 0.8951612903225806,
-            "share": 0.05136702568351284,
+            "attempts": 110,
+            "clears": 98,
+            "failures": 12,
+            "perfect": 55,
+            "withDeaths": 43,
+            "wars": 55,
+            "clearRate": 0.8909090909090909,
+            "share": 0.05200945626477541,
             "unit": "mow:orkss_rukkatrukk_01"
           },
           {
-            "attempts": 106,
-            "clears": 96,
+            "attempts": 88,
+            "clears": 78,
             "failures": 10,
-            "perfect": 50,
-            "withDeaths": 46,
-            "wars": 61,
-            "clearRate": 0.9056603773584906,
-            "share": 0.043910521955260975,
+            "perfect": 42,
+            "withDeaths": 36,
+            "wars": 49,
+            "clearRate": 0.8863636363636364,
+            "share": 0.04160756501182033,
             "unit": "mow:thous_daemonprince_01"
           },
           {
-            "attempts": 33,
-            "clears": 30,
-            "failures": 3,
-            "perfect": 17,
+            "attempts": 29,
+            "clears": 27,
+            "failures": 2,
+            "perfect": 14,
             "withDeaths": 13,
-            "wars": 31,
-            "clearRate": 0.9090909090909091,
-            "share": 0.013670256835128418,
+            "wars": 27,
+            "clearRate": 0.9310344827586207,
+            "share": 0.013711583924349883,
             "unit": "mow:death_crawler_01"
           },
           {
-            "attempts": 5,
-            "clears": 5,
+            "attempts": 4,
+            "clears": 4,
             "failures": 0,
-            "perfect": 3,
+            "perfect": 2,
             "withDeaths": 2,
-            "wars": 5,
+            "wars": 4,
             "clearRate": 1,
-            "share": 0.002071251035625518,
+            "share": 0.0018912529550827422,
             "unit": "mow:necro_reanimator_01"
           }
         ]
       },
       "teamMows": {
-        "total": 136,
+        "total": 12,
         "rows": [
           {
             "attempts": 433,
@@ -7175,7 +6353,7 @@
             "withDeaths": 160,
             "wars": 116,
             "clearRate": 0.8452655889145496,
-            "share": 0.17937033968516986,
+            "share": 0.20472813238770685,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7193,7 +6371,7 @@
             "withDeaths": 149,
             "wars": 113,
             "clearRate": 0.8963210702341137,
-            "share": 0.12386081193040596,
+            "share": 0.141371158392435,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7211,7 +6389,7 @@
             "withDeaths": 103,
             "wars": 93,
             "clearRate": 0.8648648648648649,
-            "share": 0.10729080364540182,
+            "share": 0.12245862884160756,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7229,7 +6407,7 @@
             "withDeaths": 87,
             "wars": 101,
             "clearRate": 0.9069767441860465,
-            "share": 0.08906379453189726,
+            "share": 0.1016548463356974,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7247,7 +6425,7 @@
             "withDeaths": 73,
             "wars": 92,
             "clearRate": 0.8385416666666666,
-            "share": 0.07953603976801989,
+            "share": 0.09078014184397164,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7265,7 +6443,7 @@
             "withDeaths": 75,
             "wars": 89,
             "clearRate": 0.8522727272727273,
-            "share": 0.07290803645401822,
+            "share": 0.08321513002364066,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7283,7 +6461,7 @@
             "withDeaths": 58,
             "wars": 71,
             "clearRate": 0.8774193548387097,
-            "share": 0.06420878210439106,
+            "share": 0.07328605200945626,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7301,7 +6479,7 @@
             "withDeaths": 58,
             "wars": 89,
             "clearRate": 0.8516129032258064,
-            "share": 0.06420878210439106,
+            "share": 0.07328605200945626,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7319,7 +6497,7 @@
             "withDeaths": 43,
             "wars": 55,
             "clearRate": 0.8909090909090909,
-            "share": 0.045567522783761395,
+            "share": 0.05200945626477541,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7337,7 +6515,7 @@
             "withDeaths": 36,
             "wars": 49,
             "clearRate": 0.8863636363636364,
-            "share": 0.03645401822700911,
+            "share": 0.04160756501182033,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7355,7 +6533,7 @@
             "withDeaths": 13,
             "wars": 27,
             "clearRate": 0.9310344827586207,
-            "share": 0.012013256006628004,
+            "share": 0.013711583924349883,
             "team": [
               "bloodDante",
               "bloodDeathCompany",
@@ -7366,258 +6544,1590 @@
             "mow": "mow:death_crawler_01"
           },
           {
-            "attempts": 22,
-            "clears": 18,
-            "failures": 4,
-            "perfect": 12,
-            "withDeaths": 6,
-            "wars": 18,
-            "clearRate": 0.8181818181818182,
-            "share": 0.009113504556752278,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:ultra_dreadnought_01"
-          },
-          {
-            "attempts": 14,
-            "clears": 13,
-            "failures": 1,
-            "perfect": 6,
-            "withDeaths": 7,
-            "wars": 12,
-            "clearRate": 0.9285714285714286,
-            "share": 0.00579950289975145,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:astra_ordnancebattery_01"
-          },
-          {
-            "attempts": 12,
-            "clears": 12,
-            "failures": 0,
-            "perfect": 6,
-            "withDeaths": 6,
-            "wars": 12,
-            "clearRate": 1,
-            "share": 0.004971002485501243,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "custoBladeChampion"
-            ],
-            "mow": "mow:thous_daemonprince_01"
-          },
-          {
-            "attempts": 11,
-            "clears": 8,
-            "failures": 3,
-            "perfect": 5,
-            "withDeaths": 3,
-            "wars": 10,
-            "clearRate": 0.7272727272727273,
-            "share": 0.004556752278376139,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "missing_unknown"
-          },
-          {
-            "attempts": 10,
-            "clears": 10,
-            "failures": 0,
-            "perfect": 5,
-            "withDeaths": 5,
-            "wars": 9,
-            "clearRate": 1,
-            "share": 0.004142502071251036,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:black_forgefiend_01"
-          },
-          {
-            "attempts": 10,
-            "clears": 10,
-            "failures": 0,
-            "perfect": 4,
-            "withDeaths": 6,
-            "wars": 10,
-            "clearRate": 1,
-            "share": 0.004142502071251036,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "worldKharn"
-            ],
-            "mow": "missing_unknown"
-          },
-          {
-            "attempts": 10,
-            "clears": 8,
-            "failures": 2,
-            "perfect": 4,
-            "withDeaths": 4,
-            "wars": 10,
-            "clearRate": 0.8,
-            "share": 0.004142502071251036,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:adept_exorcist_01"
-          },
-          {
-            "attempts": 8,
-            "clears": 8,
-            "failures": 0,
-            "perfect": 3,
-            "withDeaths": 5,
-            "wars": 8,
-            "clearRate": 1,
-            "share": 0.0033140016570008283,
-            "team": [
-              "blackHaarken",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ],
-            "mow": "mow:black_forgefiend_01"
-          },
-          {
-            "attempts": 7,
-            "clears": 7,
-            "failures": 0,
-            "perfect": 4,
-            "withDeaths": 3,
-            "wars": 7,
-            "clearRate": 1,
-            "share": 0.002899751449875725,
-            "team": [
-              "adeptCelestine",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ],
-            "mow": "mow:astra_ordnancebattery_01"
-          },
-          {
-            "attempts": 7,
-            "clears": 7,
-            "failures": 0,
-            "perfect": 1,
-            "withDeaths": 6,
-            "wars": 6,
-            "clearRate": 1,
-            "share": 0.002899751449875725,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:darka_stormspeeder_01"
-          },
-          {
-            "attempts": 7,
-            "clears": 6,
-            "failures": 1,
-            "perfect": 4,
-            "withDeaths": 2,
-            "wars": 6,
-            "clearRate": 0.8571428571428571,
-            "share": 0.002899751449875725,
-            "team": [
-              "blackHaarken",
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary"
-            ],
-            "mow": "mow:tyran_biovore_01"
-          },
-          {
-            "attempts": 6,
-            "clears": 6,
+            "attempts": 4,
+            "clears": 4,
             "failures": 0,
             "perfect": 2,
-            "withDeaths": 4,
-            "wars": 6,
+            "withDeaths": 2,
+            "wars": 4,
             "clearRate": 1,
-            "share": 0.0024855012427506215,
+            "share": 0.0018912529550827422,
             "team": [
               "bloodDante",
+              "bloodDeathCompany",
               "bloodIntercessor",
               "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
+              "bloodSanguinary"
             ],
-            "mow": "mow:thous_daemonprince_01"
-          },
-          {
-            "attempts": 6,
-            "clears": 6,
-            "failures": 0,
-            "perfect": 5,
-            "withDeaths": 1,
-            "wars": 6,
-            "clearRate": 1,
-            "share": 0.0024855012427506215,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:tyran_biovore_01"
-          },
-          {
-            "attempts": 6,
-            "clears": 5,
-            "failures": 1,
-            "perfect": 4,
-            "withDeaths": 1,
-            "wars": 6,
-            "clearRate": 0.8333333333333334,
-            "share": 0.0024855012427506215,
-            "team": [
-              "bloodDante",
-              "bloodIntercessor",
-              "bloodMephiston",
-              "bloodSanguinary",
-              "bloodTerminator"
-            ],
-            "mow": "mow:tauta_broadside_01"
+            "mow": "mow:necro_reanimator_01"
           }
         ]
+      },
+      "flexAnalysis": {
+        "mode": "any_four_of_five",
+        "minimumCoreMembers": 4,
+        "attempts": 2930,
+        "clears": 2510,
+        "failures": 420,
+        "perfect": 1289,
+        "withDeaths": 1221,
+        "wars": 141,
+        "clearRate": 0.856655290102389,
+        "completeCoreAttempts": 2115,
+        "replacementAttempts": 815,
+        "metrics": {
+          "perfect": {
+            "numerator": 1289,
+            "denominator": 2510,
+            "rate": 0.5135458167330678
+          },
+          "meds_up": {
+            "numerator": 1530,
+            "denominator": 1854,
+            "rate": 0.8252427184466019
+          },
+          "perfect_meds_up": {
+            "numerator": 714,
+            "denominator": 1530,
+            "rate": 0.4666666666666667
+          }
+        },
+        "contexts": [
+          {
+            "map": "hard",
+            "medicae": "down_provisional",
+            "attempts": 212,
+            "clears": 183,
+            "failures": 29,
+            "perfect": 101,
+            "withDeaths": 82,
+            "wars": 91,
+            "clearRate": 0.8632075471698113
+          },
+          {
+            "map": "hard",
+            "medicae": "up",
+            "attempts": 320,
+            "clears": 239,
+            "failures": 81,
+            "perfect": 89,
+            "withDeaths": 150,
+            "wars": 107,
+            "clearRate": 0.746875
+          },
+          {
+            "map": "normal",
+            "medicae": "down_provisional",
+            "attempts": 864,
+            "clears": 797,
+            "failures": 67,
+            "perfect": 474,
+            "withDeaths": 323,
+            "wars": 136,
+            "clearRate": 0.9224537037037037
+          },
+          {
+            "map": "normal",
+            "medicae": "up",
+            "attempts": 1534,
+            "clears": 1291,
+            "failures": 243,
+            "perfect": 625,
+            "withDeaths": 666,
+            "wars": 141,
+            "clearRate": 0.8415906127770535
+          }
+        ],
+        "flex": [
+          {
+            "unit": "bloodTerminator",
+            "attempts": 236,
+            "share": 0.08054607508532423
+          },
+          {
+            "unit": "templSwordBrother",
+            "attempts": 56,
+            "share": 0.01911262798634812
+          },
+          {
+            "unit": "adeptCelestine",
+            "attempts": 52,
+            "share": 0.017747440273037544
+          },
+          {
+            "unit": "custoBladeChampion",
+            "attempts": 49,
+            "share": 0.016723549488054608
+          },
+          {
+            "unit": "templChampion",
+            "attempts": 41,
+            "share": 0.013993174061433447
+          },
+          {
+            "unit": "blackHaarken",
+            "attempts": 38,
+            "share": 0.012969283276450512
+          },
+          {
+            "unit": "astraDreir",
+            "attempts": 31,
+            "share": 0.010580204778156996
+          },
+          {
+            "unit": "worldKharn",
+            "attempts": 27,
+            "share": 0.009215017064846417
+          },
+          {
+            "unit": "eldarAutarch",
+            "attempts": 19,
+            "share": 0.006484641638225256
+          },
+          {
+            "unit": "spaceBlackmane",
+            "attempts": 18,
+            "share": 0.0061433447098976105
+          },
+          {
+            "unit": "ultraInceptorSgt",
+            "attempts": 16,
+            "share": 0.005460750853242321
+          },
+          {
+            "unit": "ultraTitus",
+            "attempts": 16,
+            "share": 0.005460750853242321
+          },
+          {
+            "unit": "adeptHospitaller",
+            "attempts": 15,
+            "share": 0.005119453924914676
+          },
+          {
+            "unit": "astraOrdnance",
+            "attempts": 14,
+            "share": 0.00477815699658703
+          },
+          {
+            "unit": "darkaHellblaster",
+            "attempts": 12,
+            "share": 0.004095563139931741
+          },
+          {
+            "unit": "emperLucius",
+            "attempts": 12,
+            "share": 0.004095563139931741
+          },
+          {
+            "unit": "templAncient",
+            "attempts": 10,
+            "share": 0.0034129692832764505
+          },
+          {
+            "unit": "worldExecutions",
+            "attempts": 8,
+            "share": 0.0027303754266211604
+          },
+          {
+            "unit": "ultraTigurius",
+            "attempts": 8,
+            "share": 0.0027303754266211604
+          },
+          {
+            "unit": "spaceWolfPriest",
+            "attempts": 7,
+            "share": 0.002389078498293515
+          },
+          {
+            "unit": "darkaTerminator",
+            "attempts": 7,
+            "share": 0.002389078498293515
+          },
+          {
+            "unit": "eldarFarseer",
+            "attempts": 6,
+            "share": 0.0020477815699658703
+          },
+          {
+            "unit": "custoAtlacoya",
+            "attempts": 6,
+            "share": 0.0020477815699658703
+          },
+          {
+            "unit": "spaceWulfen",
+            "attempts": 6,
+            "share": 0.0020477815699658703
+          },
+          {
+            "unit": "custoKyrus",
+            "attempts": 5,
+            "share": 0.0017064846416382253
+          },
+          {
+            "unit": "blackPossession",
+            "attempts": 5,
+            "share": 0.0017064846416382253
+          },
+          {
+            "unit": "custoVexilusPraetor",
+            "attempts": 5,
+            "share": 0.0017064846416382253
+          },
+          {
+            "unit": "worldTerminator",
+            "attempts": 5,
+            "share": 0.0017064846416382253
+          },
+          {
+            "unit": "darkaAsmodai",
+            "attempts": 4,
+            "share": 0.0013651877133105802
+          },
+          {
+            "unit": "eldarRanger",
+            "attempts": 4,
+            "share": 0.0013651877133105802
+          },
+          {
+            "unit": "necroPlasmancer",
+            "attempts": 4,
+            "share": 0.0013651877133105802
+          },
+          {
+            "unit": "tauCrisis",
+            "attempts": 4,
+            "share": 0.0013651877133105802
+          },
+          {
+            "unit": "ultraApothecary",
+            "attempts": 4,
+            "share": 0.0013651877133105802
+          },
+          {
+            "unit": "astarCyrus",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "custoTrajann",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "orksNob",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "orksRuntherd",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "ultraCalgar",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "astraYarrick",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "blackAbaddon",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "darkaCompanion",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "orksWarboss",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "templAggressor",
+            "attempts": 3,
+            "share": 0.0010238907849829352
+          },
+          {
+            "unit": "adeptCanoness",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "adeptRetributor",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "admecDestroyer",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "astraPrimarisPsy",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "eldarJainZar",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "genesKelermorph",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "tauMarksman",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "templHelbrecht",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "tyranDeathleaper",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "tyranParasite",
+            "attempts": 2,
+            "share": 0.0006825938566552901
+          },
+          {
+            "unit": "adeptMorvenn",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "astraCreed",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "blackTerminator",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "darkaAzrael",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "eldarMauganRa",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "genesPatriarch",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "spaceRockfist",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "tyranNeurothrope",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "astraBullgryn",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "emperFlawlessBlade",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "orksKillaKan",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "spaceHound",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "thousSorcerer",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "worldEightbound",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          },
+          {
+            "unit": "worldJakhal",
+            "attempts": 1,
+            "share": 0.00034129692832764505
+          }
+        ],
+        "combinations": {
+          "total": 179,
+          "rows": [
+            {
+              "attempts": 2115,
+              "clears": 1839,
+              "failures": 276,
+              "perfect": 982,
+              "withDeaths": 857,
+              "wars": 141,
+              "clearRate": 0.8695035460992908,
+              "share": 0.7218430034129693,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": []
+            },
+            {
+              "attempts": 95,
+              "clears": 84,
+              "failures": 11,
+              "perfect": 47,
+              "withDeaths": 37,
+              "wars": 49,
+              "clearRate": 0.8842105263157894,
+              "share": 0.032423208191126277,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 47,
+              "clears": 37,
+              "failures": 10,
+              "perfect": 16,
+              "withDeaths": 21,
+              "wars": 35,
+              "clearRate": 0.7872340425531915,
+              "share": 0.016040955631399317,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ]
+            },
+            {
+              "attempts": 39,
+              "clears": 25,
+              "failures": 14,
+              "perfect": 7,
+              "withDeaths": 18,
+              "wars": 32,
+              "clearRate": 0.6410256410256411,
+              "share": 0.013310580204778157,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ]
+            },
+            {
+              "attempts": 31,
+              "clears": 25,
+              "failures": 6,
+              "perfect": 16,
+              "withDeaths": 9,
+              "wars": 25,
+              "clearRate": 0.8064516129032258,
+              "share": 0.010580204778156996,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodSanguinary"
+              ]
+            },
+            {
+              "attempts": 29,
+              "clears": 26,
+              "failures": 3,
+              "perfect": 12,
+              "withDeaths": 14,
+              "wars": 24,
+              "clearRate": 0.896551724137931,
+              "share": 0.009897610921501706,
+              "team": [
+                "blackHaarken",
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 27,
+              "clears": 24,
+              "failures": 3,
+              "perfect": 10,
+              "withDeaths": 14,
+              "wars": 26,
+              "clearRate": 0.8888888888888888,
+              "share": 0.009215017064846417,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "custoBladeChampion"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 24,
+              "clears": 19,
+              "failures": 5,
+              "perfect": 7,
+              "withDeaths": 12,
+              "wars": 19,
+              "clearRate": 0.7916666666666666,
+              "share": 0.008191126279863481,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodMephiston"
+              ]
+            },
+            {
+              "attempts": 24,
+              "clears": 18,
+              "failures": 6,
+              "perfect": 9,
+              "withDeaths": 9,
+              "wars": 21,
+              "clearRate": 0.75,
+              "share": 0.008191126279863481,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "templSwordBrother"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ]
+            },
+            {
+              "attempts": 19,
+              "clears": 15,
+              "failures": 4,
+              "perfect": 8,
+              "withDeaths": 7,
+              "wars": 18,
+              "clearRate": 0.7894736842105263,
+              "share": 0.006484641638225256,
+              "team": [
+                "astraDreir",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ]
+            },
+            {
+              "attempts": 19,
+              "clears": 14,
+              "failures": 5,
+              "perfect": 6,
+              "withDeaths": 8,
+              "wars": 14,
+              "clearRate": 0.7368421052631579,
+              "share": 0.006484641638225256,
+              "team": [
+                "adeptCelestine",
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodMephiston"
+              ]
+            },
+            {
+              "attempts": 18,
+              "clears": 17,
+              "failures": 1,
+              "perfect": 6,
+              "withDeaths": 11,
+              "wars": 15,
+              "clearRate": 0.9444444444444444,
+              "share": 0.0061433447098976105,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "worldKharn"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 16,
+              "clears": 15,
+              "failures": 1,
+              "perfect": 8,
+              "withDeaths": 7,
+              "wars": 15,
+              "clearRate": 0.9375,
+              "share": 0.005460750853242321,
+              "team": [
+                "adeptCelestine",
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 15,
+              "clears": 13,
+              "failures": 2,
+              "perfect": 6,
+              "withDeaths": 7,
+              "wars": 10,
+              "clearRate": 0.8666666666666667,
+              "share": 0.005119453924914676,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "templChampion"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 13,
+              "clears": 12,
+              "failures": 1,
+              "perfect": 3,
+              "withDeaths": 9,
+              "wars": 13,
+              "clearRate": 0.9230769230769231,
+              "share": 0.004436860068259386,
+              "team": [
+                "adeptHospitaller",
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston"
+              ],
+              "omittedCore": [
+                "bloodSanguinary"
+              ]
+            },
+            {
+              "attempts": 13,
+              "clears": 12,
+              "failures": 1,
+              "perfect": 6,
+              "withDeaths": 6,
+              "wars": 12,
+              "clearRate": 0.9230769230769231,
+              "share": 0.004436860068259386,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "custoBladeChampion"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ]
+            },
+            {
+              "attempts": 11,
+              "clears": 8,
+              "failures": 3,
+              "perfect": 2,
+              "withDeaths": 6,
+              "wars": 10,
+              "clearRate": 0.7272727272727273,
+              "share": 0.0037542662116040954,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodSanguinary",
+                "templChampion"
+              ],
+              "omittedCore": [
+                "bloodMephiston"
+              ]
+            },
+            {
+              "attempts": 10,
+              "clears": 9,
+              "failures": 1,
+              "perfect": 5,
+              "withDeaths": 4,
+              "wars": 9,
+              "clearRate": 0.9,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "templSwordBrother"
+              ],
+              "omittedCore": [
+                "bloodSanguinary"
+              ]
+            },
+            {
+              "attempts": 10,
+              "clears": 9,
+              "failures": 1,
+              "perfect": 4,
+              "withDeaths": 5,
+              "wars": 10,
+              "clearRate": 0.9,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "templAncient"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 10,
+              "clears": 7,
+              "failures": 3,
+              "perfect": 2,
+              "withDeaths": 5,
+              "wars": 10,
+              "clearRate": 0.7,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodSanguinary",
+                "templSwordBrother"
+              ],
+              "omittedCore": [
+                "bloodMephiston"
+              ]
+            },
+            {
+              "attempts": 9,
+              "clears": 8,
+              "failures": 1,
+              "perfect": 6,
+              "withDeaths": 2,
+              "wars": 9,
+              "clearRate": 0.8888888888888888,
+              "share": 0.0030716723549488053,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "spaceBlackmane"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 9,
+              "clears": 8,
+              "failures": 1,
+              "perfect": 4,
+              "withDeaths": 4,
+              "wars": 8,
+              "clearRate": 0.8888888888888888,
+              "share": 0.0030716723549488053,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "ultraInceptorSgt"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ]
+            },
+            {
+              "attempts": 7,
+              "clears": 7,
+              "failures": 0,
+              "perfect": 3,
+              "withDeaths": 4,
+              "wars": 7,
+              "clearRate": 1,
+              "share": 0.002389078498293515,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "ultraTitus"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ]
+            },
+            {
+              "attempts": 7,
+              "clears": 6,
+              "failures": 1,
+              "perfect": 2,
+              "withDeaths": 4,
+              "wars": 7,
+              "clearRate": 0.8571428571428571,
+              "share": 0.002389078498293515,
+              "team": [
+                "adeptCelestine",
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ]
+            },
+            {
+              "attempts": 7,
+              "clears": 6,
+              "failures": 1,
+              "perfect": 4,
+              "withDeaths": 2,
+              "wars": 7,
+              "clearRate": 0.8571428571428571,
+              "share": 0.002389078498293515,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "templChampion"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ]
+            }
+          ]
+        },
+        "mows": {
+          "total": 12,
+          "rows": [
+            {
+              "attempts": 558,
+              "clears": 455,
+              "failures": 103,
+              "perfect": 245,
+              "withDeaths": 210,
+              "wars": 127,
+              "clearRate": 0.8154121863799283,
+              "share": 0.19044368600682593,
+              "unit": "missing_unknown"
+            },
+            {
+              "attempts": 426,
+              "clears": 380,
+              "failures": 46,
+              "perfect": 170,
+              "withDeaths": 210,
+              "wars": 131,
+              "clearRate": 0.892018779342723,
+              "share": 0.1453924914675768,
+              "unit": "mow:astra_ordnancebattery_01"
+            },
+            {
+              "attempts": 339,
+              "clears": 292,
+              "failures": 47,
+              "perfect": 145,
+              "withDeaths": 147,
+              "wars": 112,
+              "clearRate": 0.8613569321533924,
+              "share": 0.11569965870307167,
+              "unit": "mow:adept_exorcist_01"
+            },
+            {
+              "attempts": 308,
+              "clears": 275,
+              "failures": 33,
+              "perfect": 151,
+              "withDeaths": 124,
+              "wars": 116,
+              "clearRate": 0.8928571428571429,
+              "share": 0.10511945392491467,
+              "unit": "mow:tyran_biovore_01"
+            },
+            {
+              "attempts": 289,
+              "clears": 237,
+              "failures": 52,
+              "perfect": 118,
+              "withDeaths": 119,
+              "wars": 113,
+              "clearRate": 0.8200692041522492,
+              "share": 0.09863481228668942,
+              "unit": "mow:ultra_dreadnought_01"
+            },
+            {
+              "attempts": 274,
+              "clears": 231,
+              "failures": 43,
+              "perfect": 117,
+              "withDeaths": 114,
+              "wars": 110,
+              "clearRate": 0.843065693430657,
+              "share": 0.09351535836177474,
+              "unit": "mow:black_forgefiend_01"
+            },
+            {
+              "attempts": 215,
+              "clears": 183,
+              "failures": 32,
+              "perfect": 90,
+              "withDeaths": 93,
+              "wars": 106,
+              "clearRate": 0.8511627906976744,
+              "share": 0.07337883959044368,
+              "unit": "mow:darka_stormspeeder_01"
+            },
+            {
+              "attempts": 205,
+              "clears": 176,
+              "failures": 29,
+              "perfect": 104,
+              "withDeaths": 72,
+              "wars": 85,
+              "clearRate": 0.8585365853658536,
+              "share": 0.06996587030716724,
+              "unit": "mow:tauta_broadside_01"
+            },
+            {
+              "attempts": 144,
+              "clears": 127,
+              "failures": 17,
+              "perfect": 70,
+              "withDeaths": 57,
+              "wars": 67,
+              "clearRate": 0.8819444444444444,
+              "share": 0.049146757679180884,
+              "unit": "mow:orkss_rukkatrukk_01"
+            },
+            {
+              "attempts": 120,
+              "clears": 108,
+              "failures": 12,
+              "perfect": 55,
+              "withDeaths": 53,
+              "wars": 67,
+              "clearRate": 0.9,
+              "share": 0.040955631399317405,
+              "unit": "mow:thous_daemonprince_01"
+            },
+            {
+              "attempts": 47,
+              "clears": 41,
+              "failures": 6,
+              "perfect": 21,
+              "withDeaths": 20,
+              "wars": 43,
+              "clearRate": 0.8723404255319149,
+              "share": 0.016040955631399317,
+              "unit": "mow:death_crawler_01"
+            },
+            {
+              "attempts": 5,
+              "clears": 5,
+              "failures": 0,
+              "perfect": 3,
+              "withDeaths": 2,
+              "wars": 5,
+              "clearRate": 1,
+              "share": 0.0017064846416382253,
+              "unit": "mow:necro_reanimator_01"
+            }
+          ]
+        },
+        "teamMows": {
+          "total": 449,
+          "rows": [
+            {
+              "attempts": 433,
+              "clears": 366,
+              "failures": 67,
+              "perfect": 206,
+              "withDeaths": 160,
+              "wars": 116,
+              "clearRate": 0.8452655889145496,
+              "share": 0.1477815699658703,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "missing_unknown"
+            },
+            {
+              "attempts": 299,
+              "clears": 268,
+              "failures": 31,
+              "perfect": 119,
+              "withDeaths": 149,
+              "wars": 113,
+              "clearRate": 0.8963210702341137,
+              "share": 0.10204778156996587,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:astra_ordnancebattery_01"
+            },
+            {
+              "attempts": 259,
+              "clears": 224,
+              "failures": 35,
+              "perfect": 121,
+              "withDeaths": 103,
+              "wars": 93,
+              "clearRate": 0.8648648648648649,
+              "share": 0.08839590443686007,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:adept_exorcist_01"
+            },
+            {
+              "attempts": 215,
+              "clears": 195,
+              "failures": 20,
+              "perfect": 108,
+              "withDeaths": 87,
+              "wars": 101,
+              "clearRate": 0.9069767441860465,
+              "share": 0.07337883959044368,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:tyran_biovore_01"
+            },
+            {
+              "attempts": 192,
+              "clears": 161,
+              "failures": 31,
+              "perfect": 88,
+              "withDeaths": 73,
+              "wars": 92,
+              "clearRate": 0.8385416666666666,
+              "share": 0.06552901023890785,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:black_forgefiend_01"
+            },
+            {
+              "attempts": 176,
+              "clears": 150,
+              "failures": 26,
+              "perfect": 75,
+              "withDeaths": 75,
+              "wars": 89,
+              "clearRate": 0.8522727272727273,
+              "share": 0.060068259385665526,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:ultra_dreadnought_01"
+            },
+            {
+              "attempts": 155,
+              "clears": 136,
+              "failures": 19,
+              "perfect": 78,
+              "withDeaths": 58,
+              "wars": 71,
+              "clearRate": 0.8774193548387097,
+              "share": 0.052901023890784986,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:tauta_broadside_01"
+            },
+            {
+              "attempts": 155,
+              "clears": 132,
+              "failures": 23,
+              "perfect": 74,
+              "withDeaths": 58,
+              "wars": 89,
+              "clearRate": 0.8516129032258064,
+              "share": 0.052901023890784986,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:darka_stormspeeder_01"
+            },
+            {
+              "attempts": 110,
+              "clears": 98,
+              "failures": 12,
+              "perfect": 55,
+              "withDeaths": 43,
+              "wars": 55,
+              "clearRate": 0.8909090909090909,
+              "share": 0.03754266211604096,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:orkss_rukkatrukk_01"
+            },
+            {
+              "attempts": 88,
+              "clears": 78,
+              "failures": 10,
+              "perfect": 42,
+              "withDeaths": 36,
+              "wars": 49,
+              "clearRate": 0.8863636363636364,
+              "share": 0.030034129692832763,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:thous_daemonprince_01"
+            },
+            {
+              "attempts": 29,
+              "clears": 27,
+              "failures": 2,
+              "perfect": 14,
+              "withDeaths": 13,
+              "wars": 27,
+              "clearRate": 0.9310344827586207,
+              "share": 0.009897610921501706,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [],
+              "mow": "mow:death_crawler_01"
+            },
+            {
+              "attempts": 22,
+              "clears": 18,
+              "failures": 4,
+              "perfect": 12,
+              "withDeaths": 6,
+              "wars": 18,
+              "clearRate": 0.8181818181818182,
+              "share": 0.007508532423208191,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:ultra_dreadnought_01"
+            },
+            {
+              "attempts": 14,
+              "clears": 13,
+              "failures": 1,
+              "perfect": 6,
+              "withDeaths": 7,
+              "wars": 12,
+              "clearRate": 0.9285714285714286,
+              "share": 0.00477815699658703,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:astra_ordnancebattery_01"
+            },
+            {
+              "attempts": 12,
+              "clears": 12,
+              "failures": 0,
+              "perfect": 6,
+              "withDeaths": 6,
+              "wars": 12,
+              "clearRate": 1,
+              "share": 0.004095563139931741,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "custoBladeChampion"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:thous_daemonprince_01"
+            },
+            {
+              "attempts": 11,
+              "clears": 8,
+              "failures": 3,
+              "perfect": 5,
+              "withDeaths": 3,
+              "wars": 10,
+              "clearRate": 0.7272727272727273,
+              "share": 0.0037542662116040954,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "missing_unknown"
+            },
+            {
+              "attempts": 11,
+              "clears": 6,
+              "failures": 5,
+              "perfect": 1,
+              "withDeaths": 5,
+              "wars": 10,
+              "clearRate": 0.5454545454545454,
+              "share": 0.0037542662116040954,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ],
+              "mow": "mow:black_forgefiend_01"
+            },
+            {
+              "attempts": 10,
+              "clears": 10,
+              "failures": 0,
+              "perfect": 5,
+              "withDeaths": 5,
+              "wars": 9,
+              "clearRate": 1,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:black_forgefiend_01"
+            },
+            {
+              "attempts": 10,
+              "clears": 10,
+              "failures": 0,
+              "perfect": 4,
+              "withDeaths": 6,
+              "wars": 10,
+              "clearRate": 1,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "worldKharn"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "missing_unknown"
+            },
+            {
+              "attempts": 10,
+              "clears": 8,
+              "failures": 2,
+              "perfect": 4,
+              "withDeaths": 4,
+              "wars": 10,
+              "clearRate": 0.8,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:adept_exorcist_01"
+            },
+            {
+              "attempts": 10,
+              "clears": 8,
+              "failures": 2,
+              "perfect": 2,
+              "withDeaths": 6,
+              "wars": 10,
+              "clearRate": 0.8,
+              "share": 0.0034129692832764505,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ],
+              "mow": "mow:ultra_dreadnought_01"
+            },
+            {
+              "attempts": 9,
+              "clears": 8,
+              "failures": 1,
+              "perfect": 5,
+              "withDeaths": 3,
+              "wars": 8,
+              "clearRate": 0.8888888888888888,
+              "share": 0.0030716723549488053,
+              "team": [
+                "adeptCelestine",
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodMephiston"
+              ],
+              "mow": "mow:astra_ordnancebattery_01"
+            },
+            {
+              "attempts": 8,
+              "clears": 8,
+              "failures": 0,
+              "perfect": 3,
+              "withDeaths": 5,
+              "wars": 8,
+              "clearRate": 1,
+              "share": 0.0027303754266211604,
+              "team": [
+                "blackHaarken",
+                "bloodDante",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary"
+              ],
+              "omittedCore": [
+                "bloodDeathCompany"
+              ],
+              "mow": "mow:black_forgefiend_01"
+            },
+            {
+              "attempts": 8,
+              "clears": 7,
+              "failures": 1,
+              "perfect": 5,
+              "withDeaths": 2,
+              "wars": 7,
+              "clearRate": 0.875,
+              "share": 0.0027303754266211604,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ],
+              "mow": "mow:tyran_biovore_01"
+            },
+            {
+              "attempts": 8,
+              "clears": 6,
+              "failures": 2,
+              "perfect": 1,
+              "withDeaths": 5,
+              "wars": 8,
+              "clearRate": 0.75,
+              "share": 0.0027303754266211604,
+              "team": [
+                "bloodDante",
+                "bloodDeathCompany",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodIntercessor"
+              ],
+              "mow": "mow:astra_ordnancebattery_01"
+            },
+            {
+              "attempts": 8,
+              "clears": 6,
+              "failures": 2,
+              "perfect": 3,
+              "withDeaths": 3,
+              "wars": 8,
+              "clearRate": 0.75,
+              "share": 0.0027303754266211604,
+              "team": [
+                "bloodDeathCompany",
+                "bloodIntercessor",
+                "bloodMephiston",
+                "bloodSanguinary",
+                "bloodTerminator"
+              ],
+              "omittedCore": [
+                "bloodDante"
+              ],
+              "mow": "mow:astra_ordnancebattery_01"
+            }
+          ]
+        }
       }
     },
     {

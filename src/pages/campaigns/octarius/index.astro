@@ -1,4 +1,5 @@
 ---
+import "../../../styles/campaign-layout.css";
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
 import RecommendationSections from "../../../components/RecommendationSections.astro";
 import OctariusGuideContent from "../../../components/campaign/OctariusGuideContent.astro";
@@ -47,7 +48,7 @@ const rankMap = Object.fromEntries(Object.values(rankReferences).map((rank) => [
 
 <Layout title={octariusPage.title} description={octariusPage.description} image={octariusPage.featuredWebImage} url="https://terminusmaximus.com/campaigns/octarius/">
   <Header />
-  <main>
+  <main class="campaign-page">
     <CampaignHero title={octariusPage.title} subtitle={octariusPage.subtitle} updatedAt={octariusCampaign.updatedAt} backHref="/campaigns/" backLabel="All Campaign Guides" />
 
     <section class="featured-section" aria-labelledby="featured-infographic-heading">

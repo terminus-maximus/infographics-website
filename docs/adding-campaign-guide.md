@@ -41,6 +41,12 @@ Use the same campaign URL in `required-recs.json`, `equip_recs.json`, and the we
 
 There is currently no separate campaign registry. The explicit entries above keep the two campaign-specific pages and their editorial content easy to follow.
 
+## Responsive campaign layout
+
+- Import `src/styles/campaign-layout.css` in each campaign route and use `class="campaign-page"` on its `<main>`. The shared grid rules let overview cards shrink to the available width.
+- Wrap recommendation tables in `InvestmentTable.astro`, passing a descriptive `label`. It owns table spacing, readable column sizes, keyboard-accessible horizontal scrolling, and the sticky hero column on every campaign page, including the landing page.
+- Keep table styling in that shared component. Avoid page-specific table minimum widths, mobile font reductions, or percentage column widths; a wide table should scroll inside its card without widening the page.
+
 ## Images and assets
 
 Add:

@@ -27,6 +27,8 @@ const guildRaidRoutes = {
 };
 
 export const relatedGuideRoutes: Record<string, string[]> = Object.fromEntries([
+  ["/beginner-guide", ["/campaigns", ...campaignRoutes]],
+  ["/elite-campaigns", ["/campaigns", ...campaignRoutes]],
   ...campaignRoutes.map((route) => [route, campaignCompanions]),
   [guildRaidRoutes.currentSeason, [guildRaidRoutes.bossMeta, guildRaidRoutes.replayLibrary, guildRaidRoutes.archive]],
   [guildRaidRoutes.bossMeta, [guildRaidRoutes.currentSeason, guildRaidRoutes.replayLibrary, guildRaidRoutes.archive]],

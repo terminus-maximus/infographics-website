@@ -9,6 +9,7 @@ import {
   type EquipmentRecommendation,
 } from "../../data/campaigns/equipmentRecommendations";
 import EquipmentBadge from "./EquipmentBadge.astro";
+import InvestmentTable from "./InvestmentTable.astro";
 
 type InvestmentRow = RequiredRecommendation & { equipment: EquipmentRecommendation };
 
@@ -42,7 +43,7 @@ const campaigns = getRequiredRecommendationCampaigns().map((campaign) => {
         <a href={`${campaign.url}/`}>{campaign.name}</a>
       </h3>
 
-      <div class="table-scroll" tabindex="0" aria-label={`${campaign.name} recommended investment table`}>
+      <InvestmentTable label={`${campaign.name} recommended investment table`}>
         <table>
           <thead>
             <tr>
@@ -94,7 +95,7 @@ const campaigns = getRequiredRecommendationCampaigns().map((campaign) => {
             })}
           </tbody>
         </table>
-      </div>
+      </InvestmentTable>
     </section>
   ))}
 </div>
@@ -122,100 +123,9 @@ const campaigns = getRequiredRecommendationCampaigns().map((campaign) => {
     color: #f5d76e;
   }
 
-  .table-scroll {
-    overflow-x: auto;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background: #121212;
-  }
-
-  .table-scroll:focus-visible {
-    outline: 2px solid #d4af37;
-    outline-offset: 2px;
-  }
-
-  table {
-    width: 100%;
-    min-width: 620px;
-    border-collapse: collapse;
-    color: #cccccc;
-    font-size: 0.84rem;
-  }
-
-  th,
-  td {
-    padding: 0.6rem 0.7rem;
-    border-bottom: 1px solid #2b2b2b;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  thead th {
-    color: #d4af37;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.035em;
-    text-transform: uppercase;
-    line-height: 1.25;
-  }
-
-  thead th > span {
-    display: block;
-  }
-
-  tbody tr:last-child > * {
-    border-bottom: 0;
-  }
-
-  tbody tr:hover {
-    background: rgba(212, 175, 55, 0.045);
-  }
-
-  .icon-column {
-    width: 4.5rem;
-  }
-
-  .hero-icon-cell img {
-    display: block;
-    width: 3.25rem;
-    height: 3.25rem;
-    margin: 0 auto;
-    border: 1px solid #444;
-    border-radius: 50%;
-    background: #1e1e1e;
-    object-fit: cover;
-  }
-
-  .rank-target,
-  .equipment-target {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.35rem;
-    white-space: nowrap;
-  }
-
-  .rank-target img {
-    display: block;
-    width: 2.625rem;
-    height: 2.625rem;
-    object-fit: contain;
-  }
-
-  .ability-target,
-  .equipment-target strong {
-    color: #f5f5f5;
-    font-weight: 800;
-  }
-
   @media (max-width: 700px) {
     .investment-groups {
       gap: 1.5rem;
-    }
-
-    th,
-    td {
-      padding: 0.5rem 0.6rem;
     }
   }
 </style>

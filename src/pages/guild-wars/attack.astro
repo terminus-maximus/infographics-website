@@ -8,13 +8,17 @@ import FloatingTeamList from '../../components/guild-wars/FloatingTeamList.astro
 import editorial from '../../data/guild-wars/editorial.json';
 import { teams, units, scope, number } from '../../lib/guildWars';
 import '../../styles/guild-wars.css';
-const { title, description, infographic } = editorial;
+const { title, description, lastUpdated, infographic } = editorial;
 const span = (values: number[]) => values.join('–');
 ---
 <Layout title={`${title} | Terminus Maximus Infographics`} description={description} image={infographic.webp} url="/guild-wars/attack/">
   <Header />
   <main class="gw-guide">
-    <section class="hero"><h1>{title}</h1><p>{description}</p></section>
+    <section class="hero">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p class="last-updated">Last Updated: {lastUpdated}</p>
+    </section>
     <section class="panel" aria-labelledby="infographic-title">
       <h2 id="infographic-title">Featured Infographic</h2>
       <a class="image-link" href={infographic.png} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="image">
@@ -27,7 +31,17 @@ const span = (values: number[]) => values.join('–');
       <div class="disclosure-body">
         <p class="methods-overview">See where the Guild Wars attack data comes from, what each metric means, and how to interpret the team results and popular options.</p>
         <details class="methods-section">
-          <summary id="data-source-title">Data Source</summary>
+          <summary id="criteria-title">Criteria</summary>
+          <div class="disclosure-body">
+            <ul class="methodology-notes">
+              <li><strong>10 distinct team cores.</strong> Strong performance and breadth of evidence shaped the 2-5 character cores, with no repeated core heroes.</li>
+              <li><strong>Clear Rate shaped the original selection.</strong> Defeating all five defenders counted as a win, with or without attacker losses. Perfect wins tracked clears with zero losses, and results were checked across multiple wars. Genestealers and Blood Angels now use the requested fixed rosters.</li>
+              <li><strong>Complete battle records.</strong> Cleanup attacks and incomplete records were excluded; both wins and failures counted.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="methods-section">
+          <summary id="data-source-title">Data Sources</summary>
           <div class="disclosure-body">
             <p>Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Detailed results use the source counts.</p>
             <dl class="source-facts">
@@ -50,7 +64,7 @@ const span = (values: number[]) => values.join('–');
               <div><dt>Meds Up</dt><dd>At least one recorded Defender Health (Medicae) buff.</dd></div>
               <div><dt>Meds Up clear rate</dt><dd>Meds Up clears / Meds Up attempts, including failures.</dd></div>
               <div><dt>Perfect share of Meds Up wins</dt><dd>Perfect Meds Up clears / all Meds Up clears.</dd></div>
-              <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core.</dd></div>
+              <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core. Blood Angels flex usage uses its separately labelled pool with at least four of its five core heroes.</dd></div>
             </dl>
           </div>
         </details>
@@ -58,7 +72,7 @@ const span = (values: number[]) => values.join('–');
           <summary id="methodology-title">Methodology</summary>
           <div class="disclosure-body">
             <ul class="methodology-notes">
-              <li><strong>Core teams:</strong> Every result includes all heroes in the listed core. Eligible attacks exclude cleanups and include failures.</li>
+              <li><strong>Core teams:</strong> Main metrics, Machines of War, and main exact-lineup tables include all heroes in the listed core. Eligible attacks exclude cleanups and include failures. Blood Angels also has separate flex evidence for at least four of its five core heroes, counting each attack once.</li>
               <li><strong>Popular flex:</strong> Up to five heroes are shown, ranked by observed usage, with at least 3.8% occurrence. Shares can add up to more than 100% because teams have multiple flex slots.</li>
               <li><strong>Machines of War:</strong> Up to three options are shown, ranked by observed usage, with at least 10% occurrence. Recorded support does not establish that its abilities were activated.</li>
               <li><strong>No MoW deployed:</strong> This is the display label for attacks with no Machine of War recorded.</li>

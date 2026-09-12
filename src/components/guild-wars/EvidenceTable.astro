@@ -1,6 +1,6 @@
 ---
 import UnitPortrait from './UnitPortrait.astro';
-import { number, percent, type EvidenceSet } from '../../lib/guildWars';
+import { number, percent, units, type EvidenceSet } from '../../lib/guildWars';
 interface Props { evidence: EvidenceSet; caption: string; core: string[]; kind?: 'team' | 'mow' | 'team-mow' }
 const { evidence, caption, core, kind = 'team' } = Astro.props;
 const rows = evidence.rows.slice(0, 5);
@@ -12,7 +12,7 @@ const rows = evidence.rows.slice(0, 5);
     <caption>{caption}</caption>
     <thead><tr><th scope="col">{kind === 'mow' ? 'Machine of War' : 'Full team (core + flex)'}</th>{kind === 'team-mow' && <th scope="col">Machine of War</th>}<th scope="col">Attempts</th><th scope="col">Usage</th><th scope="col">Clears</th><th scope="col">Clear rate</th><th scope="col">Perfects</th><th scope="col">Failures</th></tr></thead>
     <tbody>{rows.map(row => <tr>
-      <th scope="row">{kind === 'mow' ? <UnitPortrait id={row.unit!} compact /> : <div class="lineup">{[...core, ...(row.team || []).filter(id => !core.includes(id))].map(id => <UnitPortrait id={id} compact core={core.includes(id)} />)}</div>}</th>
+      <th scope="row">{kind === 'mow' ? <UnitPortrait id={row.unit!} compact /> : <><div class="lineup">{[...core.filter(id => row.team?.includes(id)), ...(row.team || []).filter(id => !core.includes(id))].map(id => <UnitPortrait id={id} compact core={core.includes(id)} />)}</div>{row.omittedCore && <p class="omitted-core">{row.omittedCore.length ? `Replaces ${row.omittedCore.map(id => units[id].name).join(', ')}` : 'All five core heroes'}</p>}</>}</th>
       {kind === 'team-mow' && <td><UnitPortrait id={row.mow!} compact /></td>}
       <td>{number(row.attempts)}</td><td>{percent(row.share)}</td><td>{number(row.clears)}</td><td>{percent(row.clearRate)}</td><td>{number(row.perfect)}</td><td>{number(row.failures)}</td>
     </tr>)}</tbody>

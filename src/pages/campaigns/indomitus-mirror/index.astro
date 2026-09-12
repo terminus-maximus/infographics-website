@@ -1,4 +1,5 @@
 ---
+import "../../../styles/campaign-layout.css";
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
 import RecommendationSections from "../../../components/RecommendationSections.astro";
 import IndomitusMirrorGuideContent from "../../../components/campaign/IndomitusMirrorGuideContent.astro";
@@ -67,7 +68,7 @@ const rankMap = Object.fromEntries(
 >
   <Header />
 
-  <main>
+  <main class="campaign-page">
     <CampaignHero
       title={indomitusMirrorPage.title}
       subtitle={indomitusMirrorPage.subtitle}

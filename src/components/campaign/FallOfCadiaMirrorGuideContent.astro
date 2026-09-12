@@ -10,6 +10,7 @@ import {
 } from "../../data/campaigns/fallOfCadiaMirrorGuideContent";
 import { getFallOfCadiaMirrorEquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
 import EquipmentBadge from "./EquipmentBadge.astro";
+import InvestmentTable from "./InvestmentTable.astro";
 import HeroGuideCard from "./HeroGuideCard.astro";
 import StageReplayPreview from "./StageReplayPreview.astro";
 
@@ -75,9 +76,9 @@ const tocGroups = [
         {(["normal", "elite"] as const).map((mode) => (
           <>
             <h4>{mode === "normal" ? "Normal" : "Elite"} Investment</h4>
-            <div class="table-scroll" tabindex="0" aria-label={`${mode} investment recommendations`}>
+            <InvestmentTable label={`${mode} investment recommendations`}>
               <table>
-                <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
+                <thead><tr><th scope="col">Hero</th><th scope="col">Rank</th><th scope="col">Active</th><th scope="col">Passive</th><th scope="col">Weapon</th><th scope="col">Defense</th></tr></thead>
                 <tbody>{overviewContent[mode === "normal" ? "normalInvestment" : "eliteInvestment"].map((row) => {
                   const character = characters[row.characterId];
                   const rank = ranks[row.rankId];
@@ -94,7 +95,7 @@ const tocGroups = [
                   );
                 })}</tbody>
               </table>
-            </div>
+            </InvestmentTable>
           </>
         ))}
       </div>
@@ -233,15 +234,6 @@ const tocGroups = [
   .boss-card > img { border: 1px solid #444; border-radius: 50%; object-fit: cover; }
   .appearance-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.7rem; }
   .appearance-list span { padding: 0.2rem 0.5rem; border: 1px solid #4b421f; border-radius: 999px; color: #d8c575; font-size: 0.72rem; font-weight: 800; }
-  .table-scroll { overflow-x: auto; }
-  table { width: 100%; min-width: 680px; border-collapse: collapse; color: #d5d5d5; font-size: 0.82rem; }
-  th, td { padding: 0.65rem; border: 1px solid #333; text-align: center; }
-  thead th { background: #181818; color: #d4af37; }
-  tbody th { color: #f5d76e; text-align: left; }
-  .table-hero { width: 2.65rem; height: 2.65rem; border: 1px solid #444; border-radius: 50%; object-fit: cover; }
-  .table-rank-icon { width: 2.65rem; height: 2.65rem; object-fit: contain; }
-  .table-ability, .table-equipment { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; }
-  .table-ability img { border: 1px solid #444; border-radius: 7px; }
   .replay-gap { margin-top: 1rem; padding: 0.75rem 0.85rem; border-left: 3px solid #666; background: #121212; }
   @media (max-width: 900px) { .toc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tip-list { grid-template-columns: 1fr; } }
   @media (max-width: 700px) { .guide-panel { margin-bottom: 2rem; padding: 1rem; } .toc-grid { grid-template-columns: 1fr; } .overview-card { grid-template-columns: 1fr; padding: 0.9rem; } .stage-card { grid-template-columns: 1fr; } .boss-card { grid-template-columns: 1fr; } summary { align-items: flex-start; } }

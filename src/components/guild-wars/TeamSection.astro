@@ -2,16 +2,19 @@
 import UnitPortrait from './UnitPortrait.astro';
 import UsageOptions from './UsageOptions.astro';
 import EvidenceTable from './EvidenceTable.astro';
+import { marked } from 'marked';
 import { number, percent, ratio, medicaeLabels, mapLabels, type GuideTeam } from '../../lib/guildWars';
 interface Props { team: GuideTeam; index: number }
 const { team, index } = Astro.props;
+const tipsHtml = team.tips ? marked.parse(team.tips) : '';
 const stats = [
   { label: 'Clear rate', numerator: team.clears, denominator: team.attempts, rate: team.clearRate, detail: 'clears / attempts' },
   { label: 'Perfect share of wins', ...team.metrics.perfect, detail: 'Perfect clears / clears' },
   { label: 'Meds Up clear rate', ...team.metrics.meds_up, detail: 'Meds Up clears / attempts' },
   { label: 'Perfect share of Meds Up wins', ...team.metrics.perfect_meds_up, detail: 'Perfect Meds Up clears / Meds Up clears' },
 ];
-const flexOptions = team.flex.filter(option => option.share !== null && option.share >= .038).slice(0, 5);
+const flexCohort = team.flexAnalysis;
+const flexOptions = (flexCohort?.flex || team.flex).filter(option => option.share !== null && option.share >= .038).slice(0, 5);
 const mowOptions = team.mows.rows
   .filter(row => row.share !== null && row.share >= .1)
   .slice(0, 3)
@@ -23,10 +26,11 @@ const mowOptions = team.mows.rows
   <div class="core-lineup">{team.core.map(id => <UnitPortrait id={id} core />)}</div>
   <dl class="rate-grid">{stats.map(stat => <div><dt>{stat.label}</dt><dd><strong>{percent(stat.rate)}</strong><span>{ratio(stat.numerator, stat.denominator)}</span><small>{stat.detail}</small></dd></div>)}</dl>
   <div class="options-grid">
-    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3><UsageOptions options={flexOptions} /></section>
+    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3>{flexCohort && <p>Uses at least four of these five core heroes. Usage is out of {number(flexCohort.attempts)} distinct attacks, including {number(flexCohort.completeCoreAttempts)} with all five and {number(flexCohort.replacementAttempts)} with a replacement. Each attack counts once.</p>}<UsageOptions options={flexOptions} /></section>
     <section aria-labelledby={`${team.anchor}-mow`}><h3 id={`${team.anchor}-mow`}>Machines of War</h3><UsageOptions options={mowOptions} /></section>
   </div>
   <div class="evidence">
+    {flexCohort && <p>The main metrics, Machines of War, and the next three tables use all five core heroes. Four-of-five flex results follow separately.</p>}
     <details><summary>Heroes exactly</summary><div class="disclosure-body"><EvidenceTable evidence={team.combinations} core={team.core} caption={`${team.title} full teams`} /></div></details>
     <details><summary>Complete Team exactly</summary><div class="disclosure-body"><EvidenceTable evidence={team.teamMows} core={team.core} caption={`${team.title} exact full teams with support`} kind="team-mow" /></div></details>
     <details><summary>Hard Maps</summary><div class="disclosure-body">
@@ -35,7 +39,22 @@ const mowOptions = team.mows.rows
         <tbody>{team.contexts.map(row => <tr><td>{percent(row.clearRate)}</td><th scope="row">{mapLabels[row.map]}</th><td>{medicaeLabels[row.medicae]}</td><td>{number(row.attempts)}</td><td>{number(row.clears)}</td><td>{number(row.failures)}</td><td>{number(row.perfect)}</td><td>{number(row.withDeaths)}</td></tr>)}</tbody></table>
       </div>
     </div></details>
-    <details class="team-tips"><summary id={`${team.anchor}-tips`}>Team Tips</summary><div class="disclosure-body"><p class:list={[{ placeholder: !team.tips }]}>{team.tips || 'Team use tips coming soon.'}</p></div></details>
+    {flexCohort && <details class="flex-analysis"><summary>Flex combinations — any four of five</summary><div class="disclosure-body">
+      <p>{ratio(flexCohort.clears, flexCohort.attempts)} clears ({percent(flexCohort.clearRate)}), including {number(flexCohort.failures)} failures. Usage below divides by these {number(flexCohort.attempts)} distinct attacks. Each lineup shows the core hero it replaces; the full core appears once.</p>
+      <EvidenceTable evidence={flexCohort.combinations} core={team.core} caption={`${team.title} four-of-five flex teams`} />
+      <h4>Flex team and Machine of War</h4>
+      <EvidenceTable evidence={flexCohort.teamMows} core={team.core} caption={`${team.title} four-of-five flex teams with support`} kind="team-mow" />
+      <h4>Machines of War with four-of-five teams</h4>
+      <UsageOptions options={flexCohort.mows.rows.filter(row => row.share !== null && row.share >= .1).slice(0,3).map(row => ({ unit: row.unit!, attempts: row.attempts, share: row.share }))} />
+      <p>Perfect share of wins: {ratio(flexCohort.metrics.perfect.numerator, flexCohort.metrics.perfect.denominator)} ({percent(flexCohort.metrics.perfect.rate)}). Meds Up clear rate: {ratio(flexCohort.metrics.meds_up.numerator, flexCohort.metrics.meds_up.denominator)} ({percent(flexCohort.metrics.meds_up.rate)}). Perfect share of Meds Up wins: {ratio(flexCohort.metrics.perfect_meds_up.numerator, flexCohort.metrics.perfect_meds_up.denominator)} ({percent(flexCohort.metrics.perfect_meds_up.rate)}).</p>
+      <div class="context-scroll" role="region" tabindex="0" aria-label="Blood Angels flex map and Medicae results, horizontally scrollable"><table><caption>Four-of-five flex map × Medicae results</caption><thead><tr><th scope="col">Clear rate</th><th scope="col">Map</th><th scope="col">Medicae</th><th scope="col">Attempts</th><th scope="col">Clears</th><th scope="col">Failures</th><th scope="col">Perfects</th><th scope="col">Clears with deaths</th></tr></thead><tbody>{flexCohort.contexts.map(row => <tr><td>{percent(row.clearRate)}</td><th scope="row">{mapLabels[row.map]}</th><td>{medicaeLabels[row.medicae]}</td><td>{number(row.attempts)}</td><td>{number(row.clears)}</td><td>{number(row.failures)}</td><td>{number(row.perfect)}</td><td>{number(row.withDeaths)}</td></tr>)}</tbody></table></div>
+    </div></details>}
+    <details class="team-tips">
+      <summary id={`${team.anchor}-tips`}>Team Tips</summary>
+      <div class="disclosure-body">
+        {tipsHtml ? <div class="team-tips-content" set:html={tipsHtml} /> : <p class="placeholder">Team use tips coming soon.</p>}
+      </div>
+    </details>
   </div>
 </section>
 <style>
@@ -55,7 +74,11 @@ const mowOptions = team.mows.rows
   .rate-grid span { font-size: .95rem; }
   .rate-grid small { font-size: .8rem; color: #aaa; line-height: 1.5; }
   .options-grid { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,3fr); gap: 1.5rem; margin-bottom: 1.5rem; }
-  .team-tips p { white-space: pre-line; margin-bottom: 0; }
+  .team-tips-content { color: #ccc; font-size: .875rem; line-height: 1.65; }
+  .team-tips-content :global(ul) { display: grid; gap: .75rem; padding-left: 1.25rem; margin: 0; }
+  .team-tips-content :global(li::marker) { color: #d4af37; }
+  .team-tips-content :global(p) { margin: 1rem 0 0; font-size: .8rem; }
+  .team-tips-content :global(:first-child) { margin-top: 0; }
   .context-scroll { max-width: 100%; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: .875rem; text-align: left; font-variant-numeric: tabular-nums; }
   caption { text-align: left; color: #bbb; margin-bottom: .85rem; }

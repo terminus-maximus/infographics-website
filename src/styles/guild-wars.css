@@ -6,6 +6,7 @@ body { background: #121212; color: #f5f5f5; font-family: 'Lexend', sans-serif; m
 .gw-guide .hero { text-align: center; margin: 1.5rem 0 2.5rem; }
 .gw-guide h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 1rem; }
 .gw-guide .hero p { font-size: 1.1rem; max-width: 760px; margin: 0 auto; }
+.gw-guide .hero .last-updated { margin-top: 1rem; font-size: .95rem; color: #d4af37; }
 .gw-guide p { color: #ccc; line-height: 1.65; }
 .gw-guide h2 { color: #d4af37; border-bottom: 1px solid #333; padding-bottom: .6rem; margin: 0 0 1rem; }
 .gw-guide h3 { font-size: 1.1rem; margin: 1.5rem 0 1rem; }

@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
-import CampaignGuideGrid from "./campaign/CampaignGuideGrid.astro";
 import RecommendationSections from "./RecommendationSections.astro";
 import { marked } from "marked";
 
@@ -15,7 +14,6 @@ const {
   lastUpdated,
   basicsTitle,
   basicsContent,
-  showCampaignGuides = false,
   resources = []
 } = Astro.props;
 
@@ -82,13 +80,6 @@ const displayImageSrc =
     <section class="content-section">
       <h2>{basicsTitle || `${title} Basics`}</h2>
       <div class="markdown-content" set:html={basicsHtml} />
-    </section>
-  )}
-
-  {showCampaignGuides && (
-    <section class="content-section" aria-labelledby="campaign-guides-heading">
-      <h2 id="campaign-guides-heading">Campaign Guides</h2>
-      <CampaignGuideGrid />
     </section>
   )}
 

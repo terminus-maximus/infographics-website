@@ -1,0 +1,11 @@
+/* Wide investment tables must never establish the width of adjacent cards. */
+main.campaign-page .overview-grid,
+main.campaign-page .investment-groups {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+main.campaign-page .overview-grid > *,
+main.campaign-page .overview-card > div,
+main.campaign-page .investment-groups > * {
+  min-width: 0;
+}

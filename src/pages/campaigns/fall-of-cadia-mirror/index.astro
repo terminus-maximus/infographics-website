@@ -1,4 +1,5 @@
 ---
+import "../../../styles/campaign-layout.css";
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
 import RecommendationSections from "../../../components/RecommendationSections.astro";
 import FallOfCadiaMirrorGuideContent from "../../../components/campaign/FallOfCadiaMirrorGuideContent.astro";
@@ -47,7 +48,7 @@ const rankMap = Object.fromEntries(Object.values(rankReferences).map((rank) => [
 
 <Layout title={fallOfCadiaMirrorPage.title} description={fallOfCadiaMirrorPage.description} image={fallOfCadiaMirrorPage.featuredWebImage} url="https://terminusmaximus.com/campaigns/fall-of-cadia-mirror/">
   <Header />
-  <main>
+  <main class="campaign-page">
     <CampaignHero title={fallOfCadiaMirrorPage.title} subtitle={fallOfCadiaMirrorPage.subtitle} updatedAt={fallOfCadiaMirrorCampaign.updatedAt} backHref="/campaigns/" backLabel="All Campaign Guides" />
 
     <section class="featured-section" aria-labelledby="featured-infographic-heading">

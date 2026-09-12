@@ -1,4 +1,5 @@
 ---
+import "../../../styles/campaign-layout.css";
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
 import RecommendationSections from "../../../components/RecommendationSections.astro";
 import SaimHannMirrorGuideContent from "../../../components/campaign/SaimHannMirrorGuideContent.astro";
@@ -47,7 +48,7 @@ const rankMap = Object.fromEntries(Object.values(rankReferences).map((rank) => [
 
 <Layout title={saimHannMirrorPage.title} description={saimHannMirrorPage.description} image={saimHannMirrorPage.featuredWebImage} url="https://terminusmaximus.com/campaigns/saim-hann-mirror/">
   <Header />
-  <main>
+  <main class="campaign-page">
     <CampaignHero title={saimHannMirrorPage.title} subtitle={saimHannMirrorPage.subtitle} updatedAt={saimHannMirrorCampaign.updatedAt} backHref="/campaigns/" backLabel="All Campaign Guides" />
 
     <section class="featured-section" aria-labelledby="featured-infographic-heading">

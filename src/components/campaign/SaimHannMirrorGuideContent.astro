@@ -11,6 +11,7 @@ import {
 } from "../../data/campaigns/saimHannMirrorGuideContent";
 import { getSaimHannMirrorEquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
 import EquipmentBadge from "./EquipmentBadge.astro";
+import InvestmentTable from "./InvestmentTable.astro";
 import HeroGuideCard from "./HeroGuideCard.astro";
 import StageReplayPreview from "./StageReplayPreview.astro";
 
@@ -54,9 +55,9 @@ const tocGroups = [
         {(["normal", "elite"] as const).map((mode) => (
           <>
             <h4>{mode === "normal" ? "Normal" : "Elite"} Investment</h4>
-            <div class="table-scroll" tabindex="0" aria-label={`${mode} investment recommendations`}>
+            <InvestmentTable label={`${mode} investment recommendations`}>
               <table>
-                <thead><tr><th>Hero</th><th>Rank</th><th>Active</th><th>Passive</th><th>Weapon</th><th>Defense</th></tr></thead>
+                <thead><tr><th scope="col">Hero</th><th scope="col">Rank</th><th scope="col">Active</th><th scope="col">Passive</th><th scope="col">Weapon</th><th scope="col">Defense</th></tr></thead>
                 <tbody>{overviewContent[mode === "normal" ? "normalInvestment" : "eliteInvestment"].map((row) => {
                   const character = characters[row.characterId];
                   const rank = ranks[row.rankId];
@@ -71,7 +72,7 @@ const tocGroups = [
                   </tr>;
                 })}</tbody>
               </table>
-            </div>
+            </InvestmentTable>
           </>
         ))}
       </div>
@@ -150,17 +151,6 @@ const tocGroups = [
   .appearance-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 .7rem; }
   .appearance-list span { padding: .2rem .5rem; border: 1px solid #4b421f; border-radius: 999px; color: #d8c575; font-size: .72rem; font-weight: 800; }
   .replay-gap { margin-top: 1rem; padding: .75rem .85rem; border-left: 3px solid #666; background: #121212; }
-  .table-scroll { width: 100%; min-width: 0; margin: .55rem 0 .9rem; overflow-x: auto; border: 1px solid #333; border-radius: 8px; }
-  .table-scroll:focus-visible { border-color: #d4af37; outline: none; }
-  table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; background: #151515; color: #d5d5d5; font-size: .78rem; }
-  th, td { padding: .65rem .4rem; border-bottom: 1px solid #303030; text-align: center; vertical-align: middle; }
-  th { background: #252525; color: #d4af37; font-size: .68rem; text-transform: uppercase; }
-  tbody tr:last-child td { border-bottom: 0; }
-  .table-hero, .table-rank-icon { display: block; width: 2.65rem; height: 2.65rem; margin: 0 auto; object-fit: contain; }
-  .table-hero { border: 1px solid #444; border-radius: 50%; object-fit: cover; }
-  .table-ability, .table-equipment { display: inline-flex; align-items: center; justify-content: center; gap: .25rem; }
-  .table-ability img { width: 2.4rem; height: 2.4rem; border: 1px solid #444; border-radius: 7px; object-fit: cover; }
-  .table-ability strong, .table-equipment strong { color: #f5f5f5; font-size: .78rem; }
   @media (max-width: 900px) { .toc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tip-list { grid-template-columns: 1fr; } }
   @media (max-width: 700px) {
     .guide-panel { margin-bottom: 2rem; padding: 1rem; }
@@ -168,12 +158,5 @@ const tocGroups = [
     .overview-card, .stage-card, .boss-card { grid-template-columns: 1fr; padding: .9rem; }
     summary { align-items: flex-start; }
     .summary-portraits img { width: 1.75rem; height: 1.75rem; }
-    .table-scroll { overflow: visible; border: 0; }
-    table, tbody { display: block; width: 100%; }
-    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-bottom: .8rem; padding: .8rem; border: 1px solid #333; border-radius: 8px; background: #151515; }
-    td { display: grid; min-width: 0; grid-template-columns: 1fr; gap: .35rem; justify-items: center; padding: 0; border: 0; }
-    td::before { color: #d4af37; content: attr(data-label); font-size: .63rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
-    .table-ability, .table-equipment { min-width: 0; }
   }
 </style>

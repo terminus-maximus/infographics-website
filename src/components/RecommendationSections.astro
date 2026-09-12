@@ -15,7 +15,7 @@ const moreToExplore = getMoreToExploreCandidates(pathname, relatedGuides);
 const moreToExploreCount = relatedGuides.length ? 3 : 6;
 ---
 
-{relatedGuides.length === 3 && (
+{relatedGuides.length > 0 && (
   <section id="related-guides" class="recommendation-section" data-recommendation-section="related-guides">
     <h2>Related Guides</h2>
     <div class="recommendation-grid">

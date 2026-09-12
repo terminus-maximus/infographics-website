@@ -18,6 +18,8 @@ const localMows = {
 };
 // The source's short_name is Nauseous; use the requested, registry-grounded surname.
 const characterNames = { deathRotbone: 'Rotbone' };
+// Tacticus.xyz labels the Reanimator portrait as Thothmek; correct only this MoW ID.
+const mowNames = { 'mow:necro_reanimator_01': 'Reanimator' };
 // Repair UTF-8 bytes misread as Mac Roman in four registry labels; IDs stay untouched.
 const repairName = name => name.replaceAll('√¢', 'â').replaceAll('√Ç', 'Â').replaceAll('√õ', 'Û');
 export const fraction = (n, d) => d ? n / d : null;
@@ -63,6 +65,8 @@ export function normalizeReport(report, mapping = editorial) {
   const added = [...cards.keys()].filter(id => !expected.includes(id));
   assert(!missing.length && !added.length, `Editorial mapping required. Missing cores: ${missing.join(', ') || 'none'}; added cores: ${added.join(', ') || 'none'}`);
   assert.equal(new Set(mapping.teams.map(t => t.anchor)).size, expected.length, 'Duplicate section anchors');
+  const coreHeroes = mapping.teams.flatMap(t => t.core);
+  assert.equal(new Set(coreHeroes).size, coreHeroes.length, 'Repeated core heroes');
   const usedUnits = new Set();
   const teams = mapping.teams.map(meta => {
     const card = cards.get(meta.id);
@@ -102,20 +106,26 @@ export function normalizeReport(report, mapping = editorial) {
     });
     assert.equal(new Set(flex.map(r => r.unit)).size, flex.length);
     assert.equal(sum(flex, 'attempts'), (5 - card.core.length) * base.attempts, 'Flex slot totals');
-    const evidence = (rows, kind) => {
+    const evidence = (rows, kind, cohort = base, minimumCoreMembers = card.core.length) => {
+      assert.equal(new Set(rows.map(keyFor)).size, rows.length, `Duplicate ${kind} categories`);
       const normalized = [...rows].sort(usageOrder).map(row => {
-        const result = { ...stats(row), share: fraction(row.attacks, base.attempts) };
+        const result = { ...stats(row), share: fraction(row.attacks, cohort.attempts) };
         if (kind !== 'mows') {
           assert.equal(new Set(row.team).size, 5, 'An observed lineup must contain five distinct characters');
-          assert(card.core.every(id => row.team.includes(id)), 'Observed lineup does not contain its core');
+          assert(card.core.filter(id => row.team.includes(id)).length >= minimumCoreMembers, 'Observed lineup does not contain its required core members');
           if (row.flex) assert.deepEqual([...row.flex].sort(), row.team.filter(id => !card.core.includes(id)).sort());
           result.team = [...row.team].sort();
+          if (minimumCoreMembers < card.core.length) {
+            result.omittedCore = card.core.filter(id => !row.team.includes(id)).sort();
+            assert.deepEqual(row.omitted_core, result.omittedCore, 'Incorrect omitted core hero');
+            assert.deepEqual(row.present_core, card.core.filter(id => row.team.includes(id)).sort(), 'Incorrect present core heroes');
+          }
         }
         if (kind === 'mows') result.unit = row.unit;
         if (kind === 'exact') result.mow = row.mow;
         return result;
       });
-      for (const key of ['attempts', 'clears', 'failures', 'perfect', 'withDeaths']) assert.equal(sum(normalized, key), base[key], `${kind} partition: ${meta.id} ${key}`);
+      for (const key of ['attempts', 'clears', 'failures', 'perfect', 'withDeaths']) assert.equal(sum(normalized, key), cohort[key], `${kind} partition: ${meta.id} ${key}`);
       const shown = normalized.slice(0, 25);
       for (const row of shown) for (const id of [...(row.team || []), row.unit, row.mow].filter(Boolean)) usedUnits.add(id);
       return { total: normalized.length, rows: shown };
@@ -124,9 +134,61 @@ export function normalizeReport(report, mapping = editorial) {
     const combinations = evidence(card.variants, 'variants');
     const mows = evidence(card.mows, 'mows');
     const teamMows = evidence(card.exact, 'exact');
+    let flexAnalysis;
+    if (card.flex_analysis) {
+      const source = card.flex_analysis;
+      assert.equal(meta.anchor, 'blood-angels', 'Four-of-five flex is specific to Blood Angels');
+      assert.equal(card.core.length, 5);
+      assert.equal(source.mode, 'any_four_of_five');
+      assert.equal(source.minimum_core_members, 4);
+      assert.deepEqual(source.core, [...card.core].sort());
+      const cohort = stats(source);
+      assert.equal(source.complete_core_attacks, base.attempts);
+      assert.equal(source.replacement_attacks + base.attempts, cohort.attempts);
+      const fullLineups = source.variants.filter(row => card.core.every(id => row.team.includes(id)));
+      assert.equal(fullLineups.length, 1, 'Complete core must be counted once in the flex cohort');
+      assert.deepEqual(stats(fullLineups[0]), base, 'Complete-core results differ inside flex cohort');
+      const flexMetrics = Object.fromEntries(['perfect', 'meds_up', 'perfect_meds_up'].map(key => {
+        const numerator = source.win_profile.counts[key], denominator = source.win_profile.denominators[key];
+        const rate = source.win_profile.rates[key];
+        assert(numerator >= 0 && numerator <= denominator);
+        checkRate(rate, numerator, denominator, `Blood Angels flex ${key}`);
+        return [key, { numerator, denominator, rate }];
+      }));
+      assert.equal(source.win_profile.wins, cohort.clears);
+      assert.equal(flexMetrics.perfect.numerator, cohort.perfect);
+      assert.equal(flexMetrics.perfect.denominator, cohort.clears);
+      assert.equal(flexMetrics.perfect_meds_up.denominator, flexMetrics.meds_up.numerator);
+      assert.equal(source.win_profile.meds_up_failures, flexMetrics.meds_up.denominator - flexMetrics.meds_up.numerator);
+      const flexContexts = source.contexts.map(row => {
+        assert(['hard','normal','unknown'].includes(row.map_class));
+        assert(['up','down_provisional','unknown'].includes(row.medicae));
+        return { map: row.map_class, medicae: row.medicae, ...stats(row) };
+      });
+      for (const key of ['attempts','clears','failures','perfect','withDeaths']) assert.equal(sum(flexContexts,key),cohort[key]);
+      const medsUp = flexContexts.filter(row => row.medicae === 'up');
+      assert.equal(sum(medsUp,'attempts'), flexMetrics.meds_up.denominator);
+      assert.equal(sum(medsUp,'clears'), flexMetrics.meds_up.numerator);
+      assert.equal(sum(medsUp,'perfect'), flexMetrics.perfect_meds_up.numerator);
+      const flexRows = [...source.individual_flex].sort(usageOrder).map(row => {
+        stats(row);
+        assert(!card.core.includes(row.unit), 'Named Blood Angels hero cannot be a replacement');
+        const containing = source.variants.filter(v => v.team.includes(row.unit));
+        for (const key of ['attacks','clears','failures']) assert.equal(sum(containing,key),row[key], 'Replacement evidence differs from actual lineups');
+        usedUnits.add(row.unit);
+        return { unit: row.unit, attempts: row.attacks, share: fraction(row.attacks,cohort.attempts) };
+      });
+      assert.equal(new Set(flexRows.map(row => row.unit)).size,flexRows.length);
+      assert.equal(sum(flexRows,'attempts'),source.replacement_attacks,'Replacement slot totals');
+      flexAnalysis = { mode: source.mode, minimumCoreMembers: 4, ...cohort,
+        completeCoreAttempts: base.attempts, replacementAttempts: source.replacement_attacks,
+        metrics: flexMetrics, contexts: flexContexts, flex: flexRows,
+        combinations: evidence(source.variants,'variants',cohort,4),
+        mows: evidence(source.mows,'mows',cohort,4), teamMows: evidence(source.exact,'exact',cohort,4) };
+    }
     card.core.forEach(id => usedUnits.add(id));
     assert(card.interval === null || (card.interval.length === 2 && card.interval.every(n => Number.isFinite(n) && n >= 0 && n <= 1)));
-    return { id: card.core_id, core: [...card.core], ...base, interval: card.interval, perfectPerAttempt: card.perfect_rate, metrics, contexts, flex, combinations, mows, teamMows };
+    return { id: card.core_id, core: [...card.core], ...base, interval: card.interval, perfectPerAttempt: card.perfect_rate, metrics, contexts, flex, combinations, mows, teamMows, ...(flexAnalysis ? { flexAnalysis } : {}) };
   });
   const units = Object.fromEntries([...usedUnits].sort().map(id => {
     if (id === 'missing_unknown') return [id, { name: 'No MoW deployed', kind: 'no_support', image: null }];
@@ -137,7 +199,7 @@ export function normalizeReport(report, mapping = editorial) {
     let image = localCharacters[id] ? `/images/heroes/${localCharacters[id].portrait}` : localMows[id] ? `/images/replay-library/mow/${localMows[id]}.webp` : null;
     if (image && !existsSync(resolve(root, `public${image}`))) image = null;
     if (!image) image = `/images/guild-wars/${basename(unit.image)}`;
-    return [id, { name: repairName(characterNames[id] || unit.short_name || unit.name), kind: unit.kind, image }];
+    return [id, { name: repairName(mowNames[id] || characterNames[id] || unit.short_name || unit.name), kind: unit.kind, image }];
   }));
   const scopeRows = report.audit.by_season_tier;
   assert.equal(sum(scopeRows, 'eligible'), report.discovery.eligible);
