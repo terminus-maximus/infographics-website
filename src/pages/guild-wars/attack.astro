@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import RecommendationSections from '../../components/RecommendationSections.astro';
 import TeamSection from '../../components/guild-wars/TeamSection.astro';
+import FloatingTeamList from '../../components/guild-wars/FloatingTeamList.astro';
 import editorial from '../../data/guild-wars/editorial.json';
 import { teams, units, scope, number } from '../../lib/guildWars';
 import '../../styles/guild-wars.css';
@@ -24,49 +25,52 @@ const span = (values: number[]) => values.join('–');
     <details class="methods-definitions">
       <summary>Methods &amp; Definitions</summary>
       <div class="disclosure-body">
-        <section class="methods-section" aria-labelledby="data-source-title">
-          <h2 id="data-source-title">Data Source</h2>
-          <p>Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Detailed results use the source counts.</p>
-          <dl class="source-facts">
-            <div><dt>Edition</dt><dd>{editorial.edition}</dd></div>
-            <div><dt>Seasons</dt><dd>{scope.seasons[0]}–{scope.seasons.at(-1)}</dd></div>
-            <div><dt>Battlefield tiers</dt><dd>{span(scope.tiers)}</dd></div>
-            <div><dt>Recorded wars</dt><dd>{number(scope.wars)}</dd></div>
-            <div><dt>Eligible non-cleanup attacks</dt><dd>{number(scope.eligibleAttacks)}</dd></div>
-          </dl>
-        </section>
-        <section class="methods-section" aria-labelledby="metrics-explained-title">
-          <h2 id="metrics-explained-title">Metrics Explained</h2>
-          <dl class="definitions">
-            <div><dt>Clear</dt><dd>All five defenders defeated. Includes Perfect clears and clears with deaths.</dd></div>
-            <div><dt>Clear rate</dt><dd>Clears / eligible attempts containing the whole core, including failures.</dd></div>
-            <div><dt>Perfect</dt><dd>A clear with all five attacking characters surviving in the recorded final state.</dd></div>
-            <div><dt>Perfect share of wins</dt><dd>Perfect clears / all clears.</dd></div>
-            <div><dt>Meds Up</dt><dd>At least one recorded Defender Health (Medicae) buff.</dd></div>
-            <div><dt>Meds Up clear rate</dt><dd>Meds Up clears / Meds Up attempts, including failures.</dd></div>
-            <div><dt>Perfect share of Meds Up wins</dt><dd>Perfect Meds Up clears / all Meds Up clears.</dd></div>
-            <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core.</dd></div>
-          </dl>
-        </section>
-        <section class="methods-section" aria-labelledby="methodology-notes-title">
-          <h2 id="methodology-notes-title">Methodology Notes</h2>
-          <ul class="methodology-notes">
-            <li><strong>Core teams:</strong> Every result includes all heroes in the listed core. Eligible attacks exclude cleanups and include failures.</li>
-            <li><strong>Popular flex:</strong> Up to five heroes are shown, ranked by observed usage, with at least 3.8% occurrence. Shares can add up to more than 100% because teams have multiple flex slots.</li>
-            <li><strong>Machines of War:</strong> Up to three options are shown, ranked by observed usage, with at least 10% occurrence. Recorded support does not establish that its abilities were activated.</li>
-            <li><strong>No MoW deployed:</strong> This is the display label for attacks with no Machine of War recorded.</li>
-            <li><strong>Observed lineups:</strong> “Heroes exactly” shows actual five-hero teams with all Machines of War combined. “Complete Team exactly” preserves each lineup and its recorded support category.</li>
-            <li><strong>Evidence tables:</strong> The five most-used combinations are shown, ranked by attacks, then clear rate. Gold portrait borders identify the core heroes.</li>
-            <li><strong>Interpreting results:</strong> These results describe observed complete lineups and matchups. Popular flex choices do not guarantee that every combination works together.</li>
-          </ul>
-        </section>
-        <section class="methods-section" id="methodology" aria-labelledby="methodology-explained-title">
-          <h2 id="methodology-explained-title">Methodology Explained</h2>
-          <p class:list={[{ placeholder: !editorial.methodology }]}>{editorial.methodology || 'Coming soon'}</p>
-        </section>
+        <p class="methods-overview">See where the Guild Wars attack data comes from, what each metric means, and how to interpret the team results and popular options.</p>
+        <details class="methods-section">
+          <summary id="data-source-title">Data Source</summary>
+          <div class="disclosure-body">
+            <p>Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Detailed results use the source counts.</p>
+            <dl class="source-facts">
+              <div><dt>Edition</dt><dd>{editorial.edition}</dd></div>
+              <div><dt>Seasons</dt><dd>{scope.seasons[0]}–{scope.seasons.at(-1)}</dd></div>
+              <div><dt>Battlefield tiers</dt><dd>{span(scope.tiers)}</dd></div>
+              <div><dt>Recorded wars</dt><dd>{number(scope.wars)}</dd></div>
+              <div><dt>Eligible non-cleanup attacks</dt><dd>{number(scope.eligibleAttacks)}</dd></div>
+            </dl>
+          </div>
+        </details>
+        <details class="methods-section">
+          <summary id="metrics-explained-title">Metrics Explained</summary>
+          <div class="disclosure-body">
+            <dl class="definitions">
+              <div><dt>Clear</dt><dd>All five defenders defeated. Includes Perfect clears and clears with deaths.</dd></div>
+              <div><dt>Clear rate</dt><dd>Clears / eligible attempts containing the whole core, including failures.</dd></div>
+              <div><dt>Perfect</dt><dd>A clear with all five attacking characters surviving in the recorded final state.</dd></div>
+              <div><dt>Perfect share of wins</dt><dd>Perfect clears / all clears.</dd></div>
+              <div><dt>Meds Up</dt><dd>At least one recorded Defender Health (Medicae) buff.</dd></div>
+              <div><dt>Meds Up clear rate</dt><dd>Meds Up clears / Meds Up attempts, including failures.</dd></div>
+              <div><dt>Perfect share of Meds Up wins</dt><dd>Perfect Meds Up clears / all Meds Up clears.</dd></div>
+              <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core.</dd></div>
+            </dl>
+          </div>
+        </details>
+        <details class="methods-section" id="methodology">
+          <summary id="methodology-title">Methodology</summary>
+          <div class="disclosure-body">
+            <ul class="methodology-notes">
+              <li><strong>Core teams:</strong> Every result includes all heroes in the listed core. Eligible attacks exclude cleanups and include failures.</li>
+              <li><strong>Popular flex:</strong> Up to five heroes are shown, ranked by observed usage, with at least 3.8% occurrence. Shares can add up to more than 100% because teams have multiple flex slots.</li>
+              <li><strong>Machines of War:</strong> Up to three options are shown, ranked by observed usage, with at least 10% occurrence. Recorded support does not establish that its abilities were activated.</li>
+              <li><strong>No MoW deployed:</strong> This is the display label for attacks with no Machine of War recorded.</li>
+              <li><strong>Observed lineups:</strong> “Heroes exactly” shows actual five-hero teams with all Machines of War combined. “Complete Team exactly” preserves each lineup and its recorded support category.</li>
+              <li><strong>Evidence tables:</strong> The five most-used combinations are shown, ranked by attacks, then clear rate. Gold portrait borders identify the core heroes.</li>
+              <li><strong>Interpreting results:</strong> These results describe observed complete lineups and matchups. Popular flex choices do not guarantee that every combination works together.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </details>
-    <nav class="panel team-jump-nav" id="team-jump-nav" aria-labelledby="team-list-title">
+    <nav class="panel team-jump-nav" id="team-jump-nav" aria-labelledby="team-list-title" tabindex="-1">
       <h2 id="team-list-title">Explore the teams</h2>
       <ol>{teams.map(team => <li><a href={`#${team.anchor}`}><img src={units[team.core[0]].image!} alt="" width="40" height="40" loading="lazy" /><span>{team.title}</span></a></li>)}</ol>
     </nav>
@@ -74,13 +78,14 @@ const span = (values: number[]) => values.join('–');
     <RecommendationSections />
   </main>
   <Footer />
+  <FloatingTeamList slot="floating-widgets" />
 </Layout>
 <style>
   .methods-definitions { margin-bottom: 2rem; }
   .methods-definitions > summary { color: #f5d76e; }
   .methods-definitions > .disclosure-body { padding: 1.5rem; }
-  .methods-section + .methods-section { margin-top: 2rem; }
-  .methods-section h2 { font-size: 1.1rem; }
+  .methods-overview { margin-bottom: 1.25rem; font-size: .9rem; }
+  .methods-section > summary { font-size: .95rem; }
   .methods-section p { font-size: .9rem; }
   .source-facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem 1.5rem; margin: 1.25rem 0 0; }
   .source-facts dt { color: #aaa; font-size: .8rem; line-height: 1.5; }
@@ -97,7 +102,6 @@ const span = (values: number[]) => values.join('–');
   .team-jump-nav a { display: flex; align-items: center; gap: .6rem; background: #121212; border: 1px solid #444; border-radius: 8px; padding: .85rem .65rem; text-decoration: none; font-size: .875rem; min-height: 100%; }
   .team-jump-nav img { width: 40px; height: 40px; flex-shrink: 0; object-fit: contain; border: 1px solid rgba(212,175,55,.65); border-radius: 8px; }
   .team-jump-nav a:hover { border-color: #d4af37; }
-  #methodology p { white-space: pre-line; }
   @media(max-width:1000px) { .team-jump-nav ol { grid-template-columns: repeat(3,minmax(0,1fr)); } }
   @media(max-width:700px) { .methods-definitions > .disclosure-body { padding: 1rem; } .source-facts { grid-template-columns: repeat(2,minmax(0,1fr)); } .definitions { grid-template-columns: minmax(0,1fr); } .team-jump-nav ol { grid-template-columns: repeat(2,minmax(0,1fr)); } .team-jump-nav a { flex-direction: column; text-align: center; } .caption { font-size: .875rem; line-height: 1.8; } }
 </style>

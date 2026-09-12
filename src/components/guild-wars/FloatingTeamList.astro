@@ -1,0 +1,58 @@
+<a class="floating-team-list" href="#team-jump-nav" aria-label="Back to team list" data-floating-team-list hidden>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M5 11l7-7 7 7M12 4v16" />
+  </svg>
+  <span>Team list</span>
+</a>
+
+<script>
+  const link = document.querySelector<HTMLAnchorElement>('[data-floating-team-list]');
+  const teamList = document.getElementById('team-jump-nav');
+
+  if (link && teamList) {
+    const updateVisibility = () => {
+      link.hidden = teamList.getBoundingClientRect().bottom > 0;
+    };
+
+    // Observe layout changes as well as scrolling, including nested methods menus.
+    const observer = new IntersectionObserver(updateVisibility);
+    observer.observe(teamList);
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    window.addEventListener('resize', updateVisibility);
+    window.addEventListener('pageshow', updateVisibility);
+    updateVisibility();
+
+    link.addEventListener('click', () => {
+      // Keep native anchor navigation and place keyboard focus back at the list.
+      teamList.focus({ preventScroll: true });
+    });
+  }
+</script>
+
+<style>
+  .floating-team-list {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 48px;
+    padding: .5rem .9rem;
+    border: 2px solid #f5d76e;
+    border-radius: 12px;
+    background: #d4af37;
+    color: #121212;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .5);
+    font: 600 .9rem/1.2 'Lexend', sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .floating-team-list[hidden] { display: none; }
+  .floating-team-list svg { flex-shrink: 0; }
+  .floating-team-list:hover { background: #f5d76e; }
+  .floating-team-list:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  @media (max-width: 480px) {
+    .floating-team-list { min-height: 44px; padding: .4rem .65rem; font-size: .8rem; }
+    .floating-team-list svg { width: 24px; height: 24px; }
+  }
+</style>

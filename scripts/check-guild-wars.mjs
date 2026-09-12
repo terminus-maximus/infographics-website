@@ -46,11 +46,11 @@ assert(!page.includes('id="report-data"'));
 for (const path of Object.values(editorial.infographic).filter(v => typeof v === 'string')) assert(existsSync(resolve(root, `public${path}`)));
 assert.equal(all(page, /data-ga4-infographic-open/g).length, 4); // Three links + shared analytics listener.
 assert.equal(all(page, /Team use tips coming soon\./g).length, 10);
-const methods = page.match(/<details class="methods-definitions"[^>]*>([\s\S]*?)<\/details>/)?.[1];
+const methods = page.slice(page.indexOf('<details class="methods-definitions"'), page.indexOf('<nav class="panel team-jump-nav"'));
 assert(methods, 'Missing Methods & Definitions disclosure');
 assert(strip(methods).startsWith('Methods &amp; Definitions'));
-assert.deepEqual(all(methods, /<h2[^>]*>(.*?)<\/h2>/g).map(([, heading]) => heading), ['Data Source', 'Metrics Explained', 'Methodology Notes', 'Methodology Explained']);
-assert(methods.includes('Coming soon'));
+assert.deepEqual(all(methods, /<details class="methods-section"[^>]*>\s*<summary[^>]*>(.*?)<\/summary>/g).map(([, heading]) => heading), ['Data Source', 'Metrics Explained', 'Methodology']);
+assert(!/Methodology Notes|Methodology Explained|Coming soon/.test(methods));
 assert(methods.includes('https://www.tacticus.xyz/'));
 assert.equal(all(page, /Shares can add up to more than 100%/g).length, 1);
 assert(!/class="scope"|class="usage-note"|Methodology notes coming soon\.|All \d characters included in every result below/.test(page));

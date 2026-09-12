@@ -120,11 +120,37 @@ const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 	</head>
 	<body>
 		<slot />
-		<ReferralSupportWidget />
+		<div class="floating-widgets">
+			<slot name="floating-widgets" />
+			<ReferralSupportWidget />
+		</div>
 	</body>
 </html>
 
 <style>
+	.floating-widgets {
+		position: fixed;
+		right: max(1rem, env(safe-area-inset-right));
+		bottom: max(1rem, env(safe-area-inset-bottom));
+		z-index: 900;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: .75rem;
+		max-width: calc(100vw - 2rem);
+		pointer-events: none;
+	}
+	.floating-widgets > :global(*) { pointer-events: auto; }
+	:global(.floating-widgets:has(> [data-floating-team-list]:not([hidden]))) {
+		--floating-widget-reserve: 5rem;
+	}
+	@media (max-width: 480px) {
+		.floating-widgets {
+			right: max(.75rem, env(safe-area-inset-right));
+			bottom: max(.75rem, env(safe-area-inset-bottom));
+			max-width: calc(100vw - 1.5rem);
+		}
+	}
 	html,
 	body {
 		margin: 0;

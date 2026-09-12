@@ -190,10 +190,6 @@
 
 <style>
   .referral-widget {
-    position: fixed;
-    right: max(1rem, env(safe-area-inset-right));
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    z-index: 900;
     max-width: calc(100vw - 2rem);
     color: #f5f5f5;
     font-family: 'Lexend', sans-serif;
@@ -257,6 +253,9 @@
   .referral-card {
     box-sizing: border-box;
     width: min(22rem, calc(100vw - 2rem));
+    max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom) - var(--floating-widget-reserve, 0px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 1rem;
   }
 
@@ -384,8 +383,6 @@
 
   @media (max-width: 480px) {
     .referral-widget {
-      right: max(0.75rem, env(safe-area-inset-right));
-      bottom: max(0.75rem, env(safe-area-inset-bottom));
       max-width: calc(100vw - 1.5rem);
     }
 
