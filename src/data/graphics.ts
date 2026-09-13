@@ -2,6 +2,7 @@ import { currentGuildRaidSeason } from "./guildRaid";
 import characterSource from "./campaigns/characters.json";
 import requiredRecommendations from "./campaigns/required-recs.json";
 import guildWars from "./guild-wars/editorial.json";
+import guildWarsDefend from "./guild-wars/defend-editorial.json";
 
 export interface RequiredHeroIcon {
   name: string;
@@ -167,6 +168,14 @@ const graphicDefinitions: GraphicDefinition[] = [
       description: guildWars.cardDescription,
       image: guildWars.infographic.png,
       thumbnail: guildWars.infographic.thumbnail,
+      category: "guild-war"
+    },
+    {
+      title: guildWarsDefend.title,
+      href: "/guild-wars/defend/",
+      description: guildWarsDefend.cardDescription,
+      image: guildWarsDefend.infographic.png,
+      thumbnail: guildWarsDefend.infographic.thumbnail,
       category: "guild-war"
     },
     {

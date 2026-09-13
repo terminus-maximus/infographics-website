@@ -1,13 +1,13 @@
 ---
 import UnitPortrait from './UnitPortrait.astro';
-import { number, percent, type Usage } from '../../lib/guildWars';
-interface Props { options: Usage[]; compact?: boolean }
-const { options, compact = false } = Astro.props;
+import { number, percent, type Usage, type Unit } from '../../lib/guildWars';
+interface Props { options: Usage[]; compact?: boolean; registry?: Record<string, Unit>; countLabel?: string }
+const { options, compact = false, registry, countLabel = 'attacks' } = Astro.props;
 ---
 <ul class:list={['usage-options', { compact }]}>
   {options.map(option => <li>
-    <UnitPortrait id={option.unit} compact={compact} />
-    <span class="usage"><strong>{percent(option.share)}</strong><span>{number(option.attempts)} attacks</span></span>
+    <UnitPortrait id={option.unit} compact={compact} registry={registry} />
+    <span class="usage"><strong>{percent(option.share)}</strong><span>{number(option.attempts)} {countLabel}</span></span>
   </li>)}
 </ul>
 <style>

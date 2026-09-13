@@ -1,8 +1,8 @@
 ---
-import { units } from '../../lib/guildWars';
-interface Props { id: string; core?: boolean; compact?: boolean }
-const { id, core = false, compact = false } = Astro.props;
-const unit = units[id];
+import { units, type Unit } from '../../lib/guildWars';
+interface Props { id: string; core?: boolean; compact?: boolean; registry?: Record<string, Unit> }
+const { id, core = false, compact = false, registry = units } = Astro.props;
+const unit = registry[id];
 if (!unit) throw new Error(`Missing Guild Wars identity: ${id}`);
 ---
 <span class:list={['unit', { core, compact }]} data-unit-id={id}>

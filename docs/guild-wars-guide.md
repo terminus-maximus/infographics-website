@@ -4,16 +4,16 @@ The local dataset builds independently of the analysis project. Normal `npm run 
 
 ## Files
 
-- `src/pages/guild-wars/index.astro`: one-card landing page, following the LRE guide layout.
+- `src/pages/guild-wars/index.astro`: paired Attack and Defend landing cards, following the LRE guide layout.
 - `src/pages/guild-wars/attack.astro`: infographic, Methods & Definitions disclosure with an overview sentence and four nested disclosures (Criteria, Data Sources, Metrics Explained, and Methodology), jump links, teams, and existing Explore recommendations. Criteria explains the core selection and eligible records. Repeated explanations live in Methodology; the separate methodology placeholder is removed. Each team jump link uses the first character portrait from its editorial core order.
 - `src/components/guild-wars/`: portraits, usage options, evidence tables, team sections, and a floating Team list link that appears after scrolling past the list. The shared layout stacks it above the referral widget whenever that widget is visible, including its expanded state; hidden or dismissed referral widgets leave no empty space. On short screens, referral instructions scroll within the available height.
 - `src/data/guild-wars/editorial.json`: public titles, landing introduction, card description, stable anchors, ordered canonical core IDs, edition, infographic paths/dimensions, and ten independent tips. Tips use Markdown for bullet lists and community-discussion links, and empty tips show a coming-soon placeholder. The legacy methodology field is no longer displayed; methodology bullets live in the page.
 - `src/data/guild-wars/attackers.json`: sanitized generated statistics and identity/portrait references.
 - `scripts/import-guild-wars.mjs`: explicit, read-only source adaptation; validates before writing the website dataset and required portraits.
 - `scripts/check-guild-wars.mjs`: focused checks against the built pages, optionally with full source reconciliation.
-- `src/components/Header.astro`: Explore has six expandable groups: Start Here, Campaign Guides, Guild Raid, Guild Wars, Events, and LRE. Guild Wars links to its landing page with an Attackers child link.
+- `src/components/Header.astro`: Explore has six expandable groups: Start Here, Campaign Guides, Guild Raid, Guild Wars, Events, and LRE. Guild Wars links to its landing page with Attackers first and Defenders second.
 - `src/pages/index.astro`: the Guild Wars card section sits between Guild Raids and Legendary Guides and uses active `guild-war` entries from the shared discovery catalog.
-- `src/data/graphics.ts`: discovery/recommendation registration. The Attackers card is eligible for More to Explore on other pages via its WebP recommendation image. This repository has no sitemap generator or sitemap file to extend.
+- `src/data/graphics.ts`: discovery/recommendation registration. Attack and Defend are eligible for More to Explore on other pages via their WebP recommendation images. Their catalog order also puts Defend second in the home-page Guild Wars section. This repository has no sitemap generator or sitemap file to extend.
 
 ## Import a future accepted report
 
@@ -73,3 +73,32 @@ The independent research check reconstructed outcomes from raw canonical unit de
 The full build and source reconciliation check cover 33 rendered tables, all ten anchors, actual five-hero co-occurrence, support, omitted heroes, counts, usage, metrics, private-field exclusion, and every portrait reference. Existing editorial tips and unrelated edits were retained; Lucien’s tip now calls him a core hero.
 
 The existing infographic and both derivatives still show the older rosters. Required master-artwork changes are documented in `docs/guild-wars-infographic-updates.md`; source details also live in the V4 report’s `INFOGRAPHIC_UPDATES.md`. Local import/build does not deploy or rewrite the artwork.
+
+## September 13, 2026 Defend page
+
+`src/pages/guild-wars/defend.astro` pairs with Attack, using the same site shell, guide styles, portraits, usage cards, floating team-list control, infographic actions and nested Methods & Definitions format. `DefendTeamSection.astro` renders the full five-hero teams, three headline metrics, MoW usage, Counters, Battlefield Tiers and the Team Tips placeholder. `defend-editorial.json` keeps the accepted team IDs, community names, hero order, stable anchors and supplied infographic paths separate from the generated `defenders.json`. `guildWarsDefend.ts` resolves counter names, hero presentation and links from the existing Attack editorial metadata.
+
+Accepted sources:
+
+- `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/defender_core_discovery/2026-09-12-v4-full-teams/index.html`
+- The same folder's `CONTEXT_AND_REFRESH_GUIDE.md` (V4.5 presentation, V4.2 analytics).
+- The same folder's `extraction/exports/attacks.jsonl.gz`, needed for the joint Battlefield × Medicae counts missing from the report's marginal context tables.
+
+The explicit importer reads the saved report and all 190,656 normalized battle records. It reconciles exact-defense overall, Meds Up and Battlefield metrics, all 100 counter matchups, support labels and complete MoW occurrence frequencies before writing the sanitized local dataset. It calculates the 50 Battlefield-specific Meds Up subsets directly from the exact-defense records. Normal site builds read only local website data. No research script, discovery, extraction or live collection runs from the website.
+
+```sh
+node scripts/import-guild-wars-defend.mjs '/path/to/accepted-report/index.html'
+npm run build
+node scripts/check-guild-wars.mjs
+node scripts/check-guild-wars-defend.mjs '/path/to/accepted-report/index.html'
+```
+
+The importer also accepts the full `exports/report_data.json` at its normal location; the frozen extraction remains required. Omitting the optional report argument to the checker validates local data and built pages only. An optional second importer argument writes another JSON file inside the website. Missing or changed accepted hero memberships stop import for editorial mapping; data refreshes do not redefine teams. Source files remain read-only.
+
+Defense metrics use the exact five heroes and their modal recorded MoW; ten teams total 3,494 eligible attempts across S24–26 / BF1–5. Team order is descending unrounded failure rate, then attempts and stable ID. The third headline metric is the most common Battlefield's share of that exact-defense sample. Battlefield rows always run BF1 through BF5, including zeros; their display order does not change the most-common-tier headline. Joint Meds Up counts sum back to each team's overall Meds Up sample.
+
+Counters require every named Attack hero and at least three of the target defender heroes, with arbitrary other heroes and MoWs. They use BF1–5, independently of the Attack page's BF4–5 aggregate rates. As requested for this website, counter order is **total clears descending**, then attempts, wars and core ID, with support labels retained. This overrides the source report's support-first sort. All 100 cells remain visible, including low support and no data. The four displayed percentages use clears/attempts, Meds Up clears/Meds Up attempts, Perfect/attempts and Perfect/clears respectively. Zero denominators display an em dash, consistent with Attack; zero observed rates display 0.0%.
+
+MoW usage includes every recorded exact-five appearance, including excluded outcomes and unknown MoWs in the denominator. Only Machines at or above 5% unrounded occurrence share appear; shares are not renormalized to the displayed options. The selected Machine is named beside the defense metrics. The canonical `mow:death_crawler_01` displays as PBC throughout Defend. No fourth headline box, popular flex, exact-lineup tables or Hard Maps disclosure appears on Defend.
+
+Verification: all 44 static pages build; existing Attack regression checks pass; Defend checks reconcile source data and every displayed counter/Battlefield rate, anchor, cutoff, image and all four navigation placements. Chrome review covers 1280px desktop and 390px/320px mobile, keyboard disclosures and horizontal table scrolling, counter-to-Attack links, landing navigation and the floating team list, with no page overflow or JavaScript errors. The repository-wide Astro check still reports the same 60 existing errors outside the changed Guild Wars files. The supplied master, WebP and thumbnail are used as provided. This change does not push or deploy.

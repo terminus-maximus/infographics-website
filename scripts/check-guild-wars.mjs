@@ -23,7 +23,7 @@ assert.equal(data.teams.length, 10);
 assert.equal(new Set(data.teams.flatMap(t => t.core)).size, 33);
 assert.equal(new Set(data.teams.flatMap(t => t.core)).size, data.teams.flatMap(t => t.core).length, 'Repeated core heroes');
 assert.equal(all(page, /class="panel team-section"/g).length, 10);
-assert.equal(all(landing, /class="card"/g).length, 1);
+assert.equal(all(landing, /class="card"/g).length, 2);
 assert(landing.includes('href="/guild-wars/attack/"'));
 assert(landing.includes('Guides to Guild Wars - both Attack and Defense, and Counters'));
 assert(landing.includes('Guild War Top 10 Attackers based on meta performance'));

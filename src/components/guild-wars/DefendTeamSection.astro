@@ -1,0 +1,106 @@
+---
+import UnitPortrait from './UnitPortrait.astro';
+import UsageOptions from './UsageOptions.astro';
+import { units, number, percent, ratio, type DefendTeam } from '../../lib/guildWarsDefend';
+interface Props { team: DefendTeam; index: number }
+const { team, index } = Astro.props;
+const stats = [
+  { label: 'Failure Rate', rate: team.failureRate, numerator: team.failures, denominator: team.attempts, detail: 'failures / attempts' },
+  { label: 'Meds Up Failure', rate: team.medsUp.failureRate, numerator: team.medsUp.failures, denominator: team.medsUp.attempts, detail: 'Meds Up failures / Meds Up attempts' },
+  { label: 'Most common Battlefield', rate: team.commonTier.share, numerator: team.commonTier.attempts, denominator: team.attempts, detail: 'tier attempts / all team attempts', prefix: `BF${team.commonTier.tier} ` },
+];
+const mowOptions = team.mows.filter(option => option.share !== null && option.share >= .05);
+---
+<section class="panel team-section defend-team" id={team.anchor} aria-labelledby={`${team.anchor}-title`} data-defender-id={team.id}>
+  <header class="team-header"><h2 id={`${team.anchor}-title`}><span class="team-number">{String(index + 1).padStart(2, '0')}</span>{team.title}</h2></header>
+  <h3 class="core-label">Defend team</h3>
+  <div class="core-lineup">{team.heroes.map(id => <UnitPortrait id={id} core registry={units} />)}</div>
+  <dl class="rate-grid">{stats.map(stat => <div><dt>{stat.label}</dt><dd><strong>{stat.prefix}{percent(stat.rate)}</strong><span>{ratio(stat.numerator, stat.denominator)}</span><small>{stat.detail}</small></dd></div>)}</dl>
+  <p class="cohort-note">Defense metrics and Battlefield results use these five heroes with <strong>{units[team.mow].name}</strong>, their most common recorded Machine of War.</p>
+  <section class="mow-options" aria-labelledby={`${team.anchor}-mow`}>
+    <h3 id={`${team.anchor}-mow`}>Machines of War</h3>
+    <UsageOptions options={mowOptions} registry={units} countLabel="occurrences" />
+    <p class="cohort-note">Share of {number(team.mowOccurrences)} recorded appearances of these five heroes. Machines with at least 5% usage are shown.</p>
+  </section>
+  <div class="evidence">
+    <details class="counters"><summary>Counters</summary><div class="disclosure-body">
+      <p>Attack teams ranked by total clears, highest first. These results cover defenses sharing <strong>at least three of these five heroes</strong>, with any Machine of War. Select a team name to explore it on the <a href="/guild-wars/attack/">attack page</a>.</p>
+      <p class="scroll-hint">Scroll the table sideways to compare all four metrics →</p>
+      <div class="context-scroll" role="region" tabindex="0" aria-label={`${team.title} counters, horizontally scrollable`}>
+        <table class="counter-table"><caption>{team.title}: most common counters</caption>
+          <thead><tr><th scope="col">Attack team · clears ↓</th><th scope="col">Clear Rate</th><th scope="col">Meds Up<br />Clear Rate</th><th scope="col">Perfect share<br />of Attempts</th><th scope="col">Perfect share<br />of Clears</th></tr></thead>
+          <tbody>{team.counters.map(counter => <tr data-counter-id={counter.id}>
+            <th scope="row" class="counter-team">
+              <a href={counter.href}>{counter.title}</a>
+              <div class="counter-portraits" aria-label="Required attack heroes">{counter.heroes.map(id => <img src={units[id].image!} alt={units[id].name} title={units[id].name} width="32" height="32" loading="lazy" />)}</div>
+              <span class="counter-count">{number(counter.clears)} clears <span aria-hidden="true">·</span> {number(counter.wars)} wars</span>
+              <span class:list={['evidence-label', { 'low-support': counter.evidence !== 'Supported' }]}>{counter.evidence}</span>
+            </th>
+            <td><strong>{percent(counter.clearRate)}</strong><small>{ratio(counter.clears, counter.attempts)}</small></td>
+            <td><strong>{percent(counter.medsUp.clearRate)}</strong><small>{ratio(counter.medsUp.clears, counter.medsUp.attempts)}</small></td>
+            <td><strong>{percent(counter.perfectPerAttempt)}</strong><small>{ratio(counter.perfect, counter.attempts)}</small></td>
+            <td><strong>{percent(counter.perfectPerClear)}</strong><small>{ratio(counter.perfect, counter.clears)}</small></td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+      <p class="table-note">Supported means at least 30 attempts across 10 wars; smaller samples stay visible.</p>
+    </div></details>
+    <details class="battlefield-tiers"><summary>Battlefield Tiers</summary><div class="disclosure-body">
+      <p>Where this team appears across its {number(team.attempts)} eligible attempts, listed from BF1 to BF5. Results use all five heroes with {units[team.mow].name}.</p>
+      <p class="scroll-hint">Scroll the table sideways to see both failure rates →</p>
+      <div class="context-scroll" role="region" tabindex="0" aria-label={`${team.title} Battlefield results, horizontally scrollable`}>
+        <table class="battlefield-table"><caption>{team.title}: Battlefield composition and failure rates</caption>
+          <thead><tr><th scope="col">Battlefield</th><th scope="col">Share of attacks</th><th scope="col">Failure Rate</th><th scope="col">Meds Up Failure Rate</th></tr></thead>
+          <tbody>{team.tiers.map(tier => <tr data-tier={tier.tier}>
+            <th scope="row">BF{tier.tier}</th>
+            <td><strong>{percent(tier.share)}</strong><small>{ratio(tier.attempts, team.attempts)} attempts</small><span class="share-bar" aria-hidden="true"><span style={`width: ${(tier.share ?? 0) * 100}%`}></span></span></td>
+            <td><strong>{percent(tier.failureRate)}</strong><small>{ratio(tier.failures, tier.attempts)} failures / attempts</small></td>
+            <td><strong>{percent(tier.medsUp.failureRate)}</strong><small>{ratio(tier.medsUp.failures, tier.medsUp.attempts)} failures / Meds Up attempts</small></td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+      <p class="table-note">Shares describe this team's sample, not its share of all teams in a Battlefield or a recommendation of its best tier. Meds Up rates use only the recorded Medicae Up attempts in that tier.</p>
+    </div></details>
+    <details class="team-tips"><summary id={`${team.anchor}-tips`}>Team Tips</summary><div class="disclosure-body"><p class="placeholder">Team Tips coming soon</p></div></details>
+  </div>
+</section>
+<style>
+  .team-section { scroll-margin-top: 1rem; }
+  .team-header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #333; margin-bottom: 1.25rem; }
+  .team-header h2 { border: 0; margin: 0; display: flex; align-items: baseline; gap: .8rem; }
+  .team-number { color: #aaa; font-size: .875rem; font-weight: 400; }
+  .core-label { margin-top: 0; font-size: .95rem; }
+  .core-lineup { display: flex; flex-wrap: wrap; gap: .6rem; padding-bottom: 1.2rem; border-bottom: 1px solid #333; }
+  dt { color: #bbb; font-size: .875rem; line-height: 1.45; }
+  dd { margin: .35rem 0 0; font-variant-numeric: tabular-nums; }
+  .rate-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .75rem; margin-bottom: 0; }
+  .rate-grid > div { background: #121212; border: 1px solid #333; border-top: 2px solid #b69537; border-radius: 8px; padding: 1rem; }
+  .rate-grid dt { min-height: 2.9em; }
+  .rate-grid dd { display: flex; flex-direction: column; gap: .35rem; }
+  .rate-grid strong { font-size: 1.8rem; color: #f5d76e; }
+  .rate-grid span { font-size: .95rem; }
+  .rate-grid small { font-size: .8rem; color: #aaa; line-height: 1.5; }
+  .cohort-note, .table-note { font-size: .8rem; }
+  .scroll-hint { display: none; font-size: .75rem; }
+  .mow-options { margin-bottom: 1.5rem; }
+  .evidence .disclosure-body > p:first-child { font-size: .875rem; }
+  .context-scroll { max-width: 100%; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .875rem; text-align: left; font-variant-numeric: tabular-nums; }
+  caption { text-align: left; color: #bbb; margin-bottom: .85rem; }
+  th, td { border-bottom: 1px solid #333; padding: .85rem .75rem; }
+  th { font-weight: 500; } thead th { color: #d4af37; background: #202020; white-space: nowrap; }
+  td { white-space: nowrap; }
+  td strong { color: #f5d76e; font-size: 1.1rem; font-weight: 500; }
+  td small { display: block; color: #aaa; font-size: .75rem; margin-top: .35rem; }
+  .counter-team { min-width: 210px; }
+  .counter-team a { font-size: .95rem; }
+  .counter-portraits { display: flex; gap: .25rem; margin: .65rem 0 .45rem; }
+  .counter-portraits img { object-fit: contain; border: 1px solid rgba(212,175,55,.65); border-radius: 6px; }
+  .counter-count { display: block; color: #ccc; font-size: .75rem; font-weight: 400; }
+  .evidence-label { display: inline-block; color: #bbcdb3; border: 1px solid #4d6248; border-radius: 4px; padding: .15rem .35rem; font-size: .65rem; margin-top: .4rem; }
+  .evidence-label.low-support { color: #d6c89a; border-color: #6c5b35; }
+  .share-bar { display: block; height: 5px; background: #333; margin-top: .6rem; border-radius: 3px; overflow: hidden; }
+  .share-bar > span { display: block; height: 100%; background: #d4af37; }
+  @media(max-width: 700px) { .scroll-hint { display: block; } .rate-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .rate-grid > div { padding: .75rem; } .rate-grid > div:last-child { grid-column: 1 / -1; } .rate-grid dt { min-height: 2.9em; } .rate-grid > div:last-child dt { min-height: 0; } .team-header h2 { font-size: 1.35rem; } .core-lineup { gap: .5rem; } .core-lineup :global(.unit) { width: 76px; } }
+  @media(max-width: 360px) { .rate-grid { grid-template-columns: minmax(0,1fr); } .team-number { display: none; } }
+</style>

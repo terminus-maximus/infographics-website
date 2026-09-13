@@ -1,0 +1,5105 @@
+{
+  "schemaVersion": 1,
+  "scope": {
+    "seasons": [
+      24,
+      25,
+      26
+    ],
+    "tiers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "wars": 395,
+    "records": 190656,
+    "eligibleAttacks": 135754,
+    "exactDefenseAttempts": 3494
+  },
+  "units": {
+    "adeptCelestine": {
+      "name": "Celestine",
+      "image": "/images/heroes/Cele.webp",
+      "kind": "character"
+    },
+    "adeptHospitaller": {
+      "name": "Isabella",
+      "image": "/images/heroes/Isa.webp",
+      "kind": "character"
+    },
+    "admecDestroyer": {
+      "name": "Sy-gex",
+      "image": "/images/heroes/Sygex.webp",
+      "kind": "character"
+    },
+    "admecDominus": {
+      "name": "Vitruvius",
+      "image": "/images/heroes/Vitru.webp",
+      "kind": "character"
+    },
+    "admecManipulus": {
+      "name": "Actus",
+      "image": "/images/heroes/Actus.webp",
+      "kind": "character"
+    },
+    "admecMarshall": {
+      "name": "Tan Gi'da",
+      "image": "/images/heroes/Tan.webp",
+      "kind": "character"
+    },
+    "admecRuststalker": {
+      "name": "Exitor-Rho",
+      "image": "/images/heroes/Rho.webp",
+      "kind": "character"
+    },
+    "astraDreir": {
+      "name": "Dreir",
+      "image": "/images/heroes/Dreir.webp",
+      "kind": "character"
+    },
+    "astraYarrick": {
+      "name": "Yarrick",
+      "image": "/images/heroes/Yarrick.webp",
+      "kind": "character"
+    },
+    "blackAbaddon": {
+      "name": "Abaddon",
+      "image": "/images/heroes/Abaddon.webp",
+      "kind": "character"
+    },
+    "blackHaarken": {
+      "name": "Haarken",
+      "image": "/images/heroes/Haarken.webp",
+      "kind": "character"
+    },
+    "blackObliterator": {
+      "name": "Volk",
+      "image": "/images/heroes/Volk.webp",
+      "kind": "character"
+    },
+    "blackPossession": {
+      "name": "Archimatos",
+      "image": "/images/heroes/Archi.webp",
+      "kind": "character"
+    },
+    "blackTerminator": {
+      "name": "Angrax",
+      "image": "/images/heroes/Angrax.webp",
+      "kind": "character"
+    },
+    "bloodDante": {
+      "name": "Dante",
+      "image": "/images/heroes/Dante.webp",
+      "kind": "character"
+    },
+    "bloodDeathCompany": {
+      "name": "Lucien",
+      "image": "/images/heroes/Lucien.webp",
+      "kind": "character"
+    },
+    "bloodIntercessor": {
+      "name": "Mataneo",
+      "image": "/images/heroes/Mataneo.webp",
+      "kind": "character"
+    },
+    "bloodMephiston": {
+      "name": "Mephiston",
+      "image": "/images/heroes/Meph.webp",
+      "kind": "character"
+    },
+    "bloodSanguinary": {
+      "name": "Nicodemus",
+      "image": "/images/heroes/Nico.webp",
+      "kind": "character"
+    },
+    "custoBladeChampion": {
+      "name": "Kariyan",
+      "image": "/images/heroes/Kari.webp",
+      "kind": "character"
+    },
+    "custoTrajann": {
+      "name": "Trajann",
+      "image": "/images/heroes/Traj.webp",
+      "kind": "character"
+    },
+    "darkaAsmodai": {
+      "name": "Asmodai",
+      "image": "/images/heroes/Asmo.webp",
+      "kind": "character"
+    },
+    "darkaAzrael": {
+      "name": "Azrael",
+      "image": "/images/heroes/Azrael.webp",
+      "kind": "character"
+    },
+    "darkaCompanion": {
+      "name": "Forcas",
+      "image": "/images/heroes/Forcas.webp",
+      "kind": "character"
+    },
+    "darkaHellblaster": {
+      "name": "Sarquael",
+      "image": "/images/heroes/Sarq.webp",
+      "kind": "character"
+    },
+    "darkaTerminator": {
+      "name": "Baraqiel",
+      "image": "/images/heroes/Barq.webp",
+      "kind": "character"
+    },
+    "deathBlightbringer": {
+      "name": "Corrodius",
+      "image": "/images/heroes/Corro.webp",
+      "kind": "character"
+    },
+    "deathBlightlord": {
+      "name": "Maladus",
+      "image": "/images/heroes/Maladus.webp",
+      "kind": "character"
+    },
+    "deathRotbone": {
+      "name": "Rotbone",
+      "image": "/images/heroes/Rotbone.webp",
+      "kind": "character"
+    },
+    "deathTyphus": {
+      "name": "Typhus",
+      "image": "/images/heroes/Typhus.webp",
+      "kind": "character"
+    },
+    "genesBiophagus": {
+      "name": "Hollan",
+      "image": "/images/heroes/Hollan.webp",
+      "kind": "character"
+    },
+    "genesKelermorph": {
+      "name": "Judh",
+      "image": "/images/heroes/Judh.webp",
+      "kind": "character"
+    },
+    "genesPatriarch": {
+      "name": "The Patermine",
+      "image": "/images/heroes/Pater.webp",
+      "kind": "character"
+    },
+    "genesPrimus": {
+      "name": "Isaak",
+      "image": "/images/heroes/Isaak.webp",
+      "kind": "character"
+    },
+    "mow:astra_ordnancebattery_01": {
+      "name": "Malleus Rocket Launcher",
+      "image": "/images/guild-wars/ui_image_RoundPortrait_astra_ordnancebattery_01.png",
+      "kind": "machine_of_war"
+    },
+    "mow:black_forgefiend_01": {
+      "name": "Forgefiend",
+      "image": "/images/replay-library/mow/FF.webp",
+      "kind": "machine_of_war"
+    },
+    "mow:darka_stormspeeder_01": {
+      "name": "Storm Speeder",
+      "image": "/images/guild-wars/ui_image_RoundPortrait_darka_stormspeeder_01.png",
+      "kind": "machine_of_war"
+    },
+    "mow:death_crawler_01": {
+      "name": "PBC",
+      "image": "/images/guild-wars/ui_image_RoundPortrait_death_crawler_01.png",
+      "kind": "machine_of_war"
+    },
+    "mow:necro_reanimator_01": {
+      "name": "Reanimator",
+      "image": "/images/replay-library/mow/Reanimator.webp",
+      "kind": "machine_of_war"
+    },
+    "mow:orkss_rukkatrukk_01": {
+      "name": "Rukkatrukk",
+      "image": "/images/guild-wars/ui_image_RoundPortrait_orkss_rukkatrukk_01.png",
+      "kind": "machine_of_war"
+    },
+    "mow:tyran_biovore_01": {
+      "name": "Biovore",
+      "image": "/images/replay-library/mow/Biovore.webp",
+      "kind": "machine_of_war"
+    },
+    "mow:ultra_dreadnought_01": {
+      "name": "Galatian",
+      "image": "/images/replay-library/mow/Galatian.webp",
+      "kind": "machine_of_war"
+    },
+    "necroChronomancer": {
+      "name": "Thothmek",
+      "image": "/images/heroes/Thoth.webp",
+      "kind": "character"
+    },
+    "necroDestroyer": {
+      "name": "Imospekh",
+      "image": "/images/heroes/Imo.webp",
+      "kind": "character"
+    },
+    "necroOverlord": {
+      "name": "Anuphet",
+      "image": "/images/heroes/Anu.webp",
+      "kind": "character"
+    },
+    "necroPlasmancer": {
+      "name": "Thutmose",
+      "image": "/images/heroes/Thut.webp",
+      "kind": "character"
+    },
+    "necroSpyder": {
+      "name": "Aleph-Null",
+      "image": "/images/heroes/Aleph.webp",
+      "kind": "character"
+    },
+    "orksBigMek": {
+      "name": "Gibbascrapz",
+      "image": "/images/heroes/Gibba.webp",
+      "kind": "character"
+    },
+    "orksKillaKan": {
+      "name": "Snappawrecka",
+      "image": "/images/heroes/Snappa.webp",
+      "kind": "character"
+    },
+    "orksNob": {
+      "name": "Tanksmasha",
+      "image": "/images/heroes/Tank.webp",
+      "kind": "character"
+    },
+    "orksRuntherd": {
+      "name": "Snotflogga",
+      "image": "/images/heroes/Snot.webp",
+      "kind": "character"
+    },
+    "orksWarboss": {
+      "name": "Gulgortz",
+      "image": "/images/heroes/Boss.webp",
+      "kind": "character"
+    },
+    "spaceBlackmane": {
+      "name": "Ragnar",
+      "image": "/images/heroes/Rag.webp",
+      "kind": "character"
+    },
+    "tauAunShi": {
+      "name": "Aun'Shi",
+      "image": "/images/heroes/Aunshi.webp",
+      "kind": "character"
+    },
+    "tauCrisis": {
+      "name": "Re'vas",
+      "image": "/images/heroes/Revas.webp",
+      "kind": "character"
+    },
+    "tauFarsight": {
+      "name": "Farsight",
+      "image": "/images/heroes/Farsight.webp",
+      "kind": "character"
+    },
+    "tauShadowsun": {
+      "name": "Shadowsun",
+      "image": "/images/heroes/SS.webp",
+      "kind": "character"
+    },
+    "thousAhriman": {
+      "name": "Ahriman",
+      "image": "/images/heroes/Ahri.webp",
+      "kind": "character"
+    },
+    "thousInfernalMaster": {
+      "name": "Abraxas",
+      "image": "/images/heroes/Abrax.webp",
+      "kind": "character"
+    },
+    "thousTerminator": {
+      "name": "Toth",
+      "image": "/images/heroes/Toth.webp",
+      "kind": "character"
+    },
+    "thousTzaangor": {
+      "name": "Yazaghor",
+      "image": "/images/heroes/Yaz.webp",
+      "kind": "character"
+    },
+    "tyranDeathleaper": {
+      "name": "Deathleaper",
+      "image": "/images/heroes/DL.webp",
+      "kind": "character"
+    },
+    "tyranNeurothrope": {
+      "name": "Neurothrope",
+      "image": "/images/heroes/Neuro.webp",
+      "kind": "character"
+    },
+    "tyranParasite": {
+      "name": "Parasite of Mortrex",
+      "image": "/images/heroes/Parasite.webp",
+      "kind": "character"
+    },
+    "tyranTyrantGuard": {
+      "name": "Tyrant Guard",
+      "image": "/images/heroes/TG.webp",
+      "kind": "character"
+    },
+    "tyranWingedPrime": {
+      "name": "Winged Prime",
+      "image": "/images/heroes/Winged.webp",
+      "kind": "character"
+    },
+    "ultraApothecary": {
+      "name": "Incisus",
+      "image": "/images/heroes/Incisus.webp",
+      "kind": "character"
+    },
+    "ultraCalgar": {
+      "name": "Calgar",
+      "image": "/images/heroes/Calgar.webp",
+      "kind": "character"
+    },
+    "ultraInceptorSgt": {
+      "name": "Bellator",
+      "image": "/images/heroes/Bella.webp",
+      "kind": "character"
+    },
+    "ultraTigurius": {
+      "name": "Tigurius",
+      "image": "/images/heroes/Tiggy.webp",
+      "kind": "character"
+    },
+    "ultraTitus": {
+      "name": "Titus",
+      "image": "/images/heroes/Titus.webp",
+      "kind": "character"
+    },
+    "worldKharn": {
+      "name": "Khârn",
+      "image": "/images/heroes/Kharn.webp",
+      "kind": "character"
+    }
+  },
+  "teams": [
+    {
+      "id": "D1",
+      "heroes": [
+        "deathBlightlord",
+        "deathBlightbringer",
+        "deathRotbone",
+        "deathTyphus",
+        "thousTerminator"
+      ],
+      "mow": "mow:death_crawler_01",
+      "attempts": 200,
+      "clears": 105,
+      "failures": 95,
+      "perfect": 45,
+      "withDeaths": 60,
+      "wars": 108,
+      "failureRate": 0.475,
+      "clearRate": 0.525,
+      "perfectPerAttempt": 0.225,
+      "perfectPerClear": 0.42857142857142855,
+      "medsUp": {
+        "attempts": 133,
+        "clears": 58,
+        "failures": 75,
+        "perfect": 22,
+        "withDeaths": 36,
+        "wars": 81,
+        "failureRate": 0.5639097744360902,
+        "clearRate": 0.43609022556390975,
+        "perfectPerAttempt": 0.16541353383458646,
+        "perfectPerClear": 0.3793103448275862
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 24,
+          "clears": 8,
+          "failures": 16,
+          "perfect": 3,
+          "withDeaths": 5,
+          "wars": 19,
+          "failureRate": 0.6666666666666666,
+          "clearRate": 0.3333333333333333,
+          "perfectPerAttempt": 0.125,
+          "perfectPerClear": 0.375,
+          "share": 0.12,
+          "medsUp": {
+            "attempts": 15,
+            "clears": 3,
+            "failures": 12,
+            "perfect": 0,
+            "withDeaths": 3,
+            "wars": 13,
+            "failureRate": 0.8,
+            "clearRate": 0.2,
+            "perfectPerAttempt": 0,
+            "perfectPerClear": 0
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 19,
+          "clears": 9,
+          "failures": 10,
+          "perfect": 4,
+          "withDeaths": 5,
+          "wars": 12,
+          "failureRate": 0.5263157894736842,
+          "clearRate": 0.47368421052631576,
+          "perfectPerAttempt": 0.21052631578947367,
+          "perfectPerClear": 0.4444444444444444,
+          "share": 0.095,
+          "medsUp": {
+            "attempts": 12,
+            "clears": 4,
+            "failures": 8,
+            "perfect": 1,
+            "withDeaths": 3,
+            "wars": 9,
+            "failureRate": 0.6666666666666666,
+            "clearRate": 0.3333333333333333,
+            "perfectPerAttempt": 0.08333333333333333,
+            "perfectPerClear": 0.25
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 37,
+          "clears": 17,
+          "failures": 20,
+          "perfect": 3,
+          "withDeaths": 14,
+          "wars": 17,
+          "failureRate": 0.5405405405405406,
+          "clearRate": 0.4594594594594595,
+          "perfectPerAttempt": 0.08108108108108109,
+          "perfectPerClear": 0.17647058823529413,
+          "share": 0.185,
+          "medsUp": {
+            "attempts": 32,
+            "clears": 14,
+            "failures": 18,
+            "perfect": 2,
+            "withDeaths": 12,
+            "wars": 16,
+            "failureRate": 0.5625,
+            "clearRate": 0.4375,
+            "perfectPerAttempt": 0.0625,
+            "perfectPerClear": 0.14285714285714285
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 83,
+          "clears": 49,
+          "failures": 34,
+          "perfect": 20,
+          "withDeaths": 29,
+          "wars": 39,
+          "failureRate": 0.40963855421686746,
+          "clearRate": 0.5903614457831325,
+          "perfectPerAttempt": 0.24096385542168675,
+          "perfectPerClear": 0.40816326530612246,
+          "share": 0.415,
+          "medsUp": {
+            "attempts": 52,
+            "clears": 27,
+            "failures": 25,
+            "perfect": 12,
+            "withDeaths": 15,
+            "wars": 29,
+            "failureRate": 0.4807692307692308,
+            "clearRate": 0.5192307692307693,
+            "perfectPerAttempt": 0.23076923076923078,
+            "perfectPerClear": 0.4444444444444444
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 37,
+          "clears": 22,
+          "failures": 15,
+          "perfect": 15,
+          "withDeaths": 7,
+          "wars": 21,
+          "failureRate": 0.40540540540540543,
+          "clearRate": 0.5945945945945946,
+          "perfectPerAttempt": 0.40540540540540543,
+          "perfectPerClear": 0.6818181818181818,
+          "share": 0.185,
+          "medsUp": {
+            "attempts": 22,
+            "clears": 10,
+            "failures": 12,
+            "perfect": 7,
+            "withDeaths": 3,
+            "wars": 14,
+            "failureRate": 0.5454545454545454,
+            "clearRate": 0.45454545454545453,
+            "perfectPerAttempt": 0.3181818181818182,
+            "perfectPerClear": 0.7
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 969,
+          "clears": 789,
+          "failures": 180,
+          "perfect": 315,
+          "withDeaths": 474,
+          "wars": 271,
+          "failureRate": 0.18575851393188855,
+          "clearRate": 0.8142414860681114,
+          "perfectPerAttempt": 0.32507739938080493,
+          "perfectPerClear": 0.39923954372623577,
+          "medsUp": {
+            "attempts": 627,
+            "clears": 480,
+            "failures": 147,
+            "perfect": 164,
+            "withDeaths": 316,
+            "wars": 226,
+            "failureRate": 0.23444976076555024,
+            "clearRate": 0.7655502392344498,
+            "perfectPerAttempt": 0.26156299840510366,
+            "perfectPerClear": 0.3416666666666667
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 698,
+          "clears": 592,
+          "failures": 106,
+          "perfect": 301,
+          "withDeaths": 291,
+          "wars": 198,
+          "failureRate": 0.1518624641833811,
+          "clearRate": 0.8481375358166189,
+          "perfectPerAttempt": 0.43123209169054444,
+          "perfectPerClear": 0.5084459459459459,
+          "medsUp": {
+            "attempts": 463,
+            "clears": 374,
+            "failures": 89,
+            "perfect": 173,
+            "withDeaths": 201,
+            "wars": 163,
+            "failureRate": 0.19222462203023757,
+            "clearRate": 0.8077753779697624,
+            "perfectPerAttempt": 0.37365010799136067,
+            "perfectPerClear": 0.4625668449197861
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 611,
+          "clears": 430,
+          "failures": 181,
+          "perfect": 153,
+          "withDeaths": 277,
+          "wars": 257,
+          "failureRate": 0.29623567921440264,
+          "clearRate": 0.7037643207855974,
+          "perfectPerAttempt": 0.25040916530278234,
+          "perfectPerClear": 0.3558139534883721,
+          "medsUp": {
+            "attempts": 365,
+            "clears": 234,
+            "failures": 131,
+            "perfect": 75,
+            "withDeaths": 159,
+            "wars": 221,
+            "failureRate": 0.3589041095890411,
+            "clearRate": 0.6410958904109589,
+            "perfectPerAttempt": 0.2054794520547945,
+            "perfectPerClear": 0.32051282051282054
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 331,
+          "clears": 302,
+          "failures": 29,
+          "perfect": 178,
+          "withDeaths": 124,
+          "wars": 188,
+          "failureRate": 0.08761329305135952,
+          "clearRate": 0.9123867069486404,
+          "perfectPerAttempt": 0.5377643504531722,
+          "perfectPerClear": 0.5894039735099338,
+          "medsUp": {
+            "attempts": 204,
+            "clears": 180,
+            "failures": 24,
+            "perfect": 93,
+            "withDeaths": 87,
+            "wars": 136,
+            "failureRate": 0.11764705882352941,
+            "clearRate": 0.8823529411764706,
+            "perfectPerAttempt": 0.45588235294117646,
+            "perfectPerClear": 0.5166666666666667
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 318,
+          "clears": 239,
+          "failures": 79,
+          "perfect": 98,
+          "withDeaths": 141,
+          "wars": 149,
+          "failureRate": 0.24842767295597484,
+          "clearRate": 0.7515723270440252,
+          "perfectPerAttempt": 0.3081761006289308,
+          "perfectPerClear": 0.4100418410041841,
+          "medsUp": {
+            "attempts": 183,
+            "clears": 125,
+            "failures": 58,
+            "perfect": 52,
+            "withDeaths": 73,
+            "wars": 109,
+            "failureRate": 0.31693989071038253,
+            "clearRate": 0.6830601092896175,
+            "perfectPerAttempt": 0.28415300546448086,
+            "perfectPerClear": 0.416
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 210,
+          "clears": 158,
+          "failures": 52,
+          "perfect": 65,
+          "withDeaths": 93,
+          "wars": 107,
+          "failureRate": 0.24761904761904763,
+          "clearRate": 0.7523809523809524,
+          "perfectPerAttempt": 0.30952380952380953,
+          "perfectPerClear": 0.41139240506329117,
+          "medsUp": {
+            "attempts": 143,
+            "clears": 101,
+            "failures": 42,
+            "perfect": 40,
+            "withDeaths": 61,
+            "wars": 87,
+            "failureRate": 0.2937062937062937,
+            "clearRate": 0.7062937062937062,
+            "perfectPerAttempt": 0.27972027972027974,
+            "perfectPerClear": 0.39603960396039606
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 196,
+          "clears": 129,
+          "failures": 67,
+          "perfect": 47,
+          "withDeaths": 82,
+          "wars": 146,
+          "failureRate": 0.34183673469387754,
+          "clearRate": 0.6581632653061225,
+          "perfectPerAttempt": 0.23979591836734693,
+          "perfectPerClear": 0.3643410852713178,
+          "medsUp": {
+            "attempts": 127,
+            "clears": 77,
+            "failures": 50,
+            "perfect": 28,
+            "withDeaths": 49,
+            "wars": 104,
+            "failureRate": 0.3937007874015748,
+            "clearRate": 0.6062992125984252,
+            "perfectPerAttempt": 0.2204724409448819,
+            "perfectPerClear": 0.36363636363636365
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 89,
+          "clears": 77,
+          "failures": 12,
+          "perfect": 29,
+          "withDeaths": 48,
+          "wars": 67,
+          "failureRate": 0.1348314606741573,
+          "clearRate": 0.8651685393258427,
+          "perfectPerAttempt": 0.3258426966292135,
+          "perfectPerClear": 0.37662337662337664,
+          "medsUp": {
+            "attempts": 51,
+            "clears": 40,
+            "failures": 11,
+            "perfect": 12,
+            "withDeaths": 28,
+            "wars": 44,
+            "failureRate": 0.21568627450980393,
+            "clearRate": 0.7843137254901961,
+            "perfectPerAttempt": 0.23529411764705882,
+            "perfectPerClear": 0.3
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 44,
+          "clears": 30,
+          "failures": 14,
+          "perfect": 13,
+          "withDeaths": 17,
+          "wars": 39,
+          "failureRate": 0.3181818181818182,
+          "clearRate": 0.6818181818181818,
+          "perfectPerAttempt": 0.29545454545454547,
+          "perfectPerClear": 0.43333333333333335,
+          "medsUp": {
+            "attempts": 27,
+            "clears": 16,
+            "failures": 11,
+            "perfect": 7,
+            "withDeaths": 9,
+            "wars": 26,
+            "failureRate": 0.4074074074074074,
+            "clearRate": 0.5925925925925926,
+            "perfectPerAttempt": 0.25925925925925924,
+            "perfectPerClear": 0.4375
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 35,
+          "clears": 28,
+          "failures": 7,
+          "perfect": 17,
+          "withDeaths": 11,
+          "wars": 26,
+          "failureRate": 0.2,
+          "clearRate": 0.8,
+          "perfectPerAttempt": 0.4857142857142857,
+          "perfectPerClear": 0.6071428571428571,
+          "medsUp": {
+            "attempts": 21,
+            "clears": 14,
+            "failures": 7,
+            "perfect": 8,
+            "withDeaths": 6,
+            "wars": 19,
+            "failureRate": 0.3333333333333333,
+            "clearRate": 0.6666666666666666,
+            "perfectPerAttempt": 0.38095238095238093,
+            "perfectPerClear": 0.5714285714285714
+          },
+          "evidence": "Supported"
+        }
+      ],
+      "mowOccurrences": 369,
+      "unknownMows": 0,
+      "mows": [
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 316,
+          "share": 0.8563685636856369
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 36,
+          "share": 0.0975609756097561
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 6,
+          "share": 0.016260162601626018
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 6,
+          "share": 0.016260162601626018
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 5,
+          "share": 0.013550135501355014
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "heroes": [
+        "necroSpyder",
+        "necroDestroyer",
+        "necroOverlord",
+        "necroPlasmancer",
+        "necroChronomancer"
+      ],
+      "mow": "mow:necro_reanimator_01",
+      "attempts": 121,
+      "clears": 65,
+      "failures": 56,
+      "perfect": 24,
+      "withDeaths": 41,
+      "wars": 73,
+      "failureRate": 0.4628099173553719,
+      "clearRate": 0.5371900826446281,
+      "perfectPerAttempt": 0.19834710743801653,
+      "perfectPerClear": 0.36923076923076925,
+      "medsUp": {
+        "attempts": 82,
+        "clears": 38,
+        "failures": 44,
+        "perfect": 11,
+        "withDeaths": 27,
+        "wars": 55,
+        "failureRate": 0.5365853658536586,
+        "clearRate": 0.4634146341463415,
+        "perfectPerAttempt": 0.13414634146341464,
+        "perfectPerClear": 0.2894736842105263
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 16,
+          "clears": 5,
+          "failures": 11,
+          "perfect": 3,
+          "withDeaths": 2,
+          "wars": 14,
+          "failureRate": 0.6875,
+          "clearRate": 0.3125,
+          "perfectPerAttempt": 0.1875,
+          "perfectPerClear": 0.6,
+          "share": 0.1322314049586777,
+          "medsUp": {
+            "attempts": 11,
+            "clears": 2,
+            "failures": 9,
+            "perfect": 1,
+            "withDeaths": 1,
+            "wars": 9,
+            "failureRate": 0.8181818181818182,
+            "clearRate": 0.18181818181818182,
+            "perfectPerAttempt": 0.09090909090909091,
+            "perfectPerClear": 0.5
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 56,
+          "clears": 26,
+          "failures": 30,
+          "perfect": 9,
+          "withDeaths": 17,
+          "wars": 25,
+          "failureRate": 0.5357142857142857,
+          "clearRate": 0.4642857142857143,
+          "perfectPerAttempt": 0.16071428571428573,
+          "perfectPerClear": 0.34615384615384615,
+          "share": 0.4628099173553719,
+          "medsUp": {
+            "attempts": 35,
+            "clears": 13,
+            "failures": 22,
+            "perfect": 2,
+            "withDeaths": 11,
+            "wars": 21,
+            "failureRate": 0.6285714285714286,
+            "clearRate": 0.37142857142857144,
+            "perfectPerAttempt": 0.05714285714285714,
+            "perfectPerClear": 0.15384615384615385
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 26,
+          "clears": 16,
+          "failures": 10,
+          "perfect": 4,
+          "withDeaths": 12,
+          "wars": 19,
+          "failureRate": 0.38461538461538464,
+          "clearRate": 0.6153846153846154,
+          "perfectPerAttempt": 0.15384615384615385,
+          "perfectPerClear": 0.25,
+          "share": 0.21487603305785125,
+          "medsUp": {
+            "attempts": 21,
+            "clears": 13,
+            "failures": 8,
+            "perfect": 4,
+            "withDeaths": 9,
+            "wars": 16,
+            "failureRate": 0.38095238095238093,
+            "clearRate": 0.6190476190476191,
+            "perfectPerAttempt": 0.19047619047619047,
+            "perfectPerClear": 0.3076923076923077
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 9,
+          "clears": 9,
+          "failures": 0,
+          "perfect": 4,
+          "withDeaths": 5,
+          "wars": 9,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.4444444444444444,
+          "perfectPerClear": 0.4444444444444444,
+          "share": 0.0743801652892562,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 3,
+            "wars": 5,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.4,
+            "perfectPerClear": 0.4
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 14,
+          "clears": 9,
+          "failures": 5,
+          "perfect": 4,
+          "withDeaths": 5,
+          "wars": 6,
+          "failureRate": 0.35714285714285715,
+          "clearRate": 0.6428571428571429,
+          "perfectPerAttempt": 0.2857142857142857,
+          "perfectPerClear": 0.4444444444444444,
+          "share": 0.11570247933884298,
+          "medsUp": {
+            "attempts": 10,
+            "clears": 5,
+            "failures": 5,
+            "perfect": 2,
+            "withDeaths": 3,
+            "wars": 4,
+            "failureRate": 0.5,
+            "clearRate": 0.5,
+            "perfectPerAttempt": 0.2,
+            "perfectPerClear": 0.4
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 177,
+          "clears": 149,
+          "failures": 28,
+          "perfect": 72,
+          "withDeaths": 77,
+          "wars": 133,
+          "failureRate": 0.15819209039548024,
+          "clearRate": 0.8418079096045198,
+          "perfectPerAttempt": 0.4067796610169492,
+          "perfectPerClear": 0.48322147651006714,
+          "medsUp": {
+            "attempts": 117,
+            "clears": 94,
+            "failures": 23,
+            "perfect": 36,
+            "withDeaths": 58,
+            "wars": 95,
+            "failureRate": 0.19658119658119658,
+            "clearRate": 0.8034188034188035,
+            "perfectPerAttempt": 0.3076923076923077,
+            "perfectPerClear": 0.3829787234042553
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 157,
+          "clears": 123,
+          "failures": 34,
+          "perfect": 52,
+          "withDeaths": 71,
+          "wars": 115,
+          "failureRate": 0.21656050955414013,
+          "clearRate": 0.7834394904458599,
+          "perfectPerAttempt": 0.33121019108280253,
+          "perfectPerClear": 0.42276422764227645,
+          "medsUp": {
+            "attempts": 117,
+            "clears": 88,
+            "failures": 29,
+            "perfect": 34,
+            "withDeaths": 54,
+            "wars": 97,
+            "failureRate": 0.24786324786324787,
+            "clearRate": 0.7521367521367521,
+            "perfectPerAttempt": 0.2905982905982906,
+            "perfectPerClear": 0.38636363636363635
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 95,
+          "clears": 92,
+          "failures": 3,
+          "perfect": 67,
+          "withDeaths": 25,
+          "wars": 85,
+          "failureRate": 0.031578947368421054,
+          "clearRate": 0.968421052631579,
+          "perfectPerAttempt": 0.7052631578947368,
+          "perfectPerClear": 0.7282608695652174,
+          "medsUp": {
+            "attempts": 60,
+            "clears": 57,
+            "failures": 3,
+            "perfect": 37,
+            "withDeaths": 20,
+            "wars": 58,
+            "failureRate": 0.05,
+            "clearRate": 0.95,
+            "perfectPerAttempt": 0.6166666666666667,
+            "perfectPerClear": 0.6491228070175439
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 91,
+          "clears": 75,
+          "failures": 16,
+          "perfect": 43,
+          "withDeaths": 32,
+          "wars": 80,
+          "failureRate": 0.17582417582417584,
+          "clearRate": 0.8241758241758241,
+          "perfectPerAttempt": 0.4725274725274725,
+          "perfectPerClear": 0.5733333333333334,
+          "medsUp": {
+            "attempts": 60,
+            "clears": 47,
+            "failures": 13,
+            "perfect": 25,
+            "withDeaths": 22,
+            "wars": 57,
+            "failureRate": 0.21666666666666667,
+            "clearRate": 0.7833333333333333,
+            "perfectPerAttempt": 0.4166666666666667,
+            "perfectPerClear": 0.5319148936170213
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 43,
+          "clears": 40,
+          "failures": 3,
+          "perfect": 26,
+          "withDeaths": 14,
+          "wars": 40,
+          "failureRate": 0.06976744186046512,
+          "clearRate": 0.9302325581395349,
+          "perfectPerAttempt": 0.6046511627906976,
+          "perfectPerClear": 0.65,
+          "medsUp": {
+            "attempts": 24,
+            "clears": 21,
+            "failures": 3,
+            "perfect": 12,
+            "withDeaths": 9,
+            "wars": 22,
+            "failureRate": 0.125,
+            "clearRate": 0.875,
+            "perfectPerAttempt": 0.5,
+            "perfectPerClear": 0.5714285714285714
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 34,
+          "clears": 31,
+          "failures": 3,
+          "perfect": 17,
+          "withDeaths": 14,
+          "wars": 31,
+          "failureRate": 0.08823529411764706,
+          "clearRate": 0.9117647058823529,
+          "perfectPerAttempt": 0.5,
+          "perfectPerClear": 0.5483870967741935,
+          "medsUp": {
+            "attempts": 25,
+            "clears": 22,
+            "failures": 3,
+            "perfect": 11,
+            "withDeaths": 11,
+            "wars": 23,
+            "failureRate": 0.12,
+            "clearRate": 0.88,
+            "perfectPerAttempt": 0.44,
+            "perfectPerClear": 0.5
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 23,
+          "clears": 22,
+          "failures": 1,
+          "perfect": 14,
+          "withDeaths": 8,
+          "wars": 22,
+          "failureRate": 0.043478260869565216,
+          "clearRate": 0.9565217391304348,
+          "perfectPerAttempt": 0.6086956521739131,
+          "perfectPerClear": 0.6363636363636364,
+          "medsUp": {
+            "attempts": 15,
+            "clears": 15,
+            "failures": 0,
+            "perfect": 10,
+            "withDeaths": 5,
+            "wars": 15,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.6666666666666666,
+            "perfectPerClear": 0.6666666666666666
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 16,
+          "clears": 16,
+          "failures": 0,
+          "perfect": 6,
+          "withDeaths": 10,
+          "wars": 15,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.375,
+          "perfectPerClear": 0.375,
+          "medsUp": {
+            "attempts": 11,
+            "clears": 11,
+            "failures": 0,
+            "perfect": 5,
+            "withDeaths": 6,
+            "wars": 11,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.45454545454545453,
+            "perfectPerClear": 0.45454545454545453
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 15,
+          "clears": 13,
+          "failures": 2,
+          "perfect": 6,
+          "withDeaths": 7,
+          "wars": 14,
+          "failureRate": 0.13333333333333333,
+          "clearRate": 0.8666666666666667,
+          "perfectPerAttempt": 0.4,
+          "perfectPerClear": 0.46153846153846156,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 8,
+            "failures": 1,
+            "perfect": 4,
+            "withDeaths": 4,
+            "wars": 9,
+            "failureRate": 0.1111111111111111,
+            "clearRate": 0.8888888888888888,
+            "perfectPerAttempt": 0.4444444444444444,
+            "perfectPerClear": 0.5
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 3,
+          "clears": 3,
+          "failures": 0,
+          "perfect": 2,
+          "withDeaths": 1,
+          "wars": 3,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.6666666666666666,
+          "perfectPerClear": 0.6666666666666666,
+          "medsUp": {
+            "attempts": 2,
+            "clears": 2,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 0,
+            "wars": 2,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 1,
+            "perfectPerClear": 1
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 274,
+      "unknownMows": 1,
+      "mows": [
+        {
+          "unit": "mow:necro_reanimator_01",
+          "attempts": 194,
+          "share": 0.708029197080292
+        },
+        {
+          "unit": "mow:darka_stormspeeder_01",
+          "attempts": 27,
+          "share": 0.09854014598540146
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 18,
+          "share": 0.06569343065693431
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 14,
+          "share": 0.051094890510948905
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 7,
+          "share": 0.025547445255474453
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 5,
+          "share": 0.01824817518248175
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 5,
+          "share": 0.01824817518248175
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 3,
+          "share": 0.010948905109489052
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "heroes": [
+        "blackAbaddon",
+        "blackHaarken",
+        "blackObliterator",
+        "blackPossession",
+        "blackTerminator"
+      ],
+      "mow": "mow:black_forgefiend_01",
+      "attempts": 231,
+      "clears": 131,
+      "failures": 100,
+      "perfect": 39,
+      "withDeaths": 92,
+      "wars": 134,
+      "failureRate": 0.4329004329004329,
+      "clearRate": 0.5670995670995671,
+      "perfectPerAttempt": 0.16883116883116883,
+      "perfectPerClear": 0.29770992366412213,
+      "medsUp": {
+        "attempts": 162,
+        "clears": 81,
+        "failures": 81,
+        "perfect": 22,
+        "withDeaths": 59,
+        "wars": 97,
+        "failureRate": 0.5,
+        "clearRate": 0.5,
+        "perfectPerAttempt": 0.13580246913580246,
+        "perfectPerClear": 0.2716049382716049
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 43,
+          "clears": 25,
+          "failures": 18,
+          "perfect": 9,
+          "withDeaths": 16,
+          "wars": 26,
+          "failureRate": 0.4186046511627907,
+          "clearRate": 0.5813953488372093,
+          "perfectPerAttempt": 0.20930232558139536,
+          "perfectPerClear": 0.36,
+          "share": 0.18614718614718614,
+          "medsUp": {
+            "attempts": 31,
+            "clears": 16,
+            "failures": 15,
+            "perfect": 7,
+            "withDeaths": 9,
+            "wars": 20,
+            "failureRate": 0.4838709677419355,
+            "clearRate": 0.5161290322580645,
+            "perfectPerAttempt": 0.22580645161290322,
+            "perfectPerClear": 0.4375
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 65,
+          "clears": 39,
+          "failures": 26,
+          "perfect": 10,
+          "withDeaths": 29,
+          "wars": 40,
+          "failureRate": 0.4,
+          "clearRate": 0.6,
+          "perfectPerAttempt": 0.15384615384615385,
+          "perfectPerClear": 0.2564102564102564,
+          "share": 0.2813852813852814,
+          "medsUp": {
+            "attempts": 43,
+            "clears": 24,
+            "failures": 19,
+            "perfect": 4,
+            "withDeaths": 20,
+            "wars": 27,
+            "failureRate": 0.4418604651162791,
+            "clearRate": 0.5581395348837209,
+            "perfectPerAttempt": 0.09302325581395349,
+            "perfectPerClear": 0.16666666666666666
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 90,
+          "clears": 48,
+          "failures": 42,
+          "perfect": 13,
+          "withDeaths": 35,
+          "wars": 49,
+          "failureRate": 0.4666666666666667,
+          "clearRate": 0.5333333333333333,
+          "perfectPerAttempt": 0.14444444444444443,
+          "perfectPerClear": 0.2708333333333333,
+          "share": 0.38961038961038963,
+          "medsUp": {
+            "attempts": 66,
+            "clears": 32,
+            "failures": 34,
+            "perfect": 7,
+            "withDeaths": 25,
+            "wars": 37,
+            "failureRate": 0.5151515151515151,
+            "clearRate": 0.48484848484848486,
+            "perfectPerAttempt": 0.10606060606060606,
+            "perfectPerClear": 0.21875
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 25,
+          "clears": 13,
+          "failures": 12,
+          "perfect": 5,
+          "withDeaths": 8,
+          "wars": 17,
+          "failureRate": 0.48,
+          "clearRate": 0.52,
+          "perfectPerAttempt": 0.2,
+          "perfectPerClear": 0.38461538461538464,
+          "share": 0.10822510822510822,
+          "medsUp": {
+            "attempts": 16,
+            "clears": 5,
+            "failures": 11,
+            "perfect": 3,
+            "withDeaths": 2,
+            "wars": 11,
+            "failureRate": 0.6875,
+            "clearRate": 0.3125,
+            "perfectPerAttempt": 0.1875,
+            "perfectPerClear": 0.6
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 8,
+          "clears": 6,
+          "failures": 2,
+          "perfect": 2,
+          "withDeaths": 4,
+          "wars": 2,
+          "failureRate": 0.25,
+          "clearRate": 0.75,
+          "perfectPerAttempt": 0.25,
+          "perfectPerClear": 0.3333333333333333,
+          "share": 0.03463203463203463,
+          "medsUp": {
+            "attempts": 6,
+            "clears": 4,
+            "failures": 2,
+            "perfect": 1,
+            "withDeaths": 3,
+            "wars": 2,
+            "failureRate": 0.3333333333333333,
+            "clearRate": 0.6666666666666666,
+            "perfectPerAttempt": 0.16666666666666666,
+            "perfectPerClear": 0.25
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 139,
+          "clears": 126,
+          "failures": 13,
+          "perfect": 54,
+          "withDeaths": 72,
+          "wars": 115,
+          "failureRate": 0.09352517985611511,
+          "clearRate": 0.9064748201438849,
+          "perfectPerAttempt": 0.38848920863309355,
+          "perfectPerClear": 0.42857142857142855,
+          "medsUp": {
+            "attempts": 98,
+            "clears": 86,
+            "failures": 12,
+            "perfect": 37,
+            "withDeaths": 49,
+            "wars": 88,
+            "failureRate": 0.12244897959183673,
+            "clearRate": 0.8775510204081632,
+            "perfectPerAttempt": 0.37755102040816324,
+            "perfectPerClear": 0.43023255813953487
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 143,
+          "clears": 96,
+          "failures": 47,
+          "perfect": 34,
+          "withDeaths": 62,
+          "wars": 116,
+          "failureRate": 0.32867132867132864,
+          "clearRate": 0.6713286713286714,
+          "perfectPerAttempt": 0.23776223776223776,
+          "perfectPerClear": 0.3541666666666667,
+          "medsUp": {
+            "attempts": 98,
+            "clears": 63,
+            "failures": 35,
+            "perfect": 17,
+            "withDeaths": 46,
+            "wars": 86,
+            "failureRate": 0.35714285714285715,
+            "clearRate": 0.6428571428571429,
+            "perfectPerAttempt": 0.17346938775510204,
+            "perfectPerClear": 0.2698412698412698
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 119,
+          "clears": 96,
+          "failures": 23,
+          "perfect": 49,
+          "withDeaths": 47,
+          "wars": 102,
+          "failureRate": 0.19327731092436976,
+          "clearRate": 0.8067226890756303,
+          "perfectPerAttempt": 0.4117647058823529,
+          "perfectPerClear": 0.5104166666666666,
+          "medsUp": {
+            "attempts": 76,
+            "clears": 58,
+            "failures": 18,
+            "perfect": 26,
+            "withDeaths": 32,
+            "wars": 69,
+            "failureRate": 0.23684210526315788,
+            "clearRate": 0.7631578947368421,
+            "perfectPerAttempt": 0.34210526315789475,
+            "perfectPerClear": 0.4482758620689655
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 90,
+          "clears": 79,
+          "failures": 11,
+          "perfect": 46,
+          "withDeaths": 33,
+          "wars": 75,
+          "failureRate": 0.12222222222222222,
+          "clearRate": 0.8777777777777778,
+          "perfectPerAttempt": 0.5111111111111111,
+          "perfectPerClear": 0.5822784810126582,
+          "medsUp": {
+            "attempts": 68,
+            "clears": 58,
+            "failures": 10,
+            "perfect": 30,
+            "withDeaths": 28,
+            "wars": 61,
+            "failureRate": 0.14705882352941177,
+            "clearRate": 0.8529411764705882,
+            "perfectPerAttempt": 0.4411764705882353,
+            "perfectPerClear": 0.5172413793103449
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 75,
+          "clears": 73,
+          "failures": 2,
+          "perfect": 54,
+          "withDeaths": 19,
+          "wars": 68,
+          "failureRate": 0.02666666666666667,
+          "clearRate": 0.9733333333333334,
+          "perfectPerAttempt": 0.72,
+          "perfectPerClear": 0.7397260273972602,
+          "medsUp": {
+            "attempts": 55,
+            "clears": 53,
+            "failures": 2,
+            "perfect": 38,
+            "withDeaths": 15,
+            "wars": 51,
+            "failureRate": 0.03636363636363636,
+            "clearRate": 0.9636363636363636,
+            "perfectPerAttempt": 0.6909090909090909,
+            "perfectPerClear": 0.7169811320754716
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 38,
+          "clears": 32,
+          "failures": 6,
+          "perfect": 14,
+          "withDeaths": 18,
+          "wars": 38,
+          "failureRate": 0.15789473684210525,
+          "clearRate": 0.8421052631578947,
+          "perfectPerAttempt": 0.3684210526315789,
+          "perfectPerClear": 0.4375,
+          "medsUp": {
+            "attempts": 32,
+            "clears": 26,
+            "failures": 6,
+            "perfect": 11,
+            "withDeaths": 15,
+            "wars": 32,
+            "failureRate": 0.1875,
+            "clearRate": 0.8125,
+            "perfectPerAttempt": 0.34375,
+            "perfectPerClear": 0.4230769230769231
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 34,
+          "clears": 30,
+          "failures": 4,
+          "perfect": 12,
+          "withDeaths": 18,
+          "wars": 30,
+          "failureRate": 0.11764705882352941,
+          "clearRate": 0.8823529411764706,
+          "perfectPerAttempt": 0.35294117647058826,
+          "perfectPerClear": 0.4,
+          "medsUp": {
+            "attempts": 21,
+            "clears": 19,
+            "failures": 2,
+            "perfect": 6,
+            "withDeaths": 13,
+            "wars": 20,
+            "failureRate": 0.09523809523809523,
+            "clearRate": 0.9047619047619048,
+            "perfectPerAttempt": 0.2857142857142857,
+            "perfectPerClear": 0.3157894736842105
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 10,
+          "clears": 10,
+          "failures": 0,
+          "perfect": 3,
+          "withDeaths": 7,
+          "wars": 9,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.3,
+          "perfectPerClear": 0.3,
+          "medsUp": {
+            "attempts": 8,
+            "clears": 8,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 6,
+            "wars": 7,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.25,
+            "perfectPerClear": 0.25
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 9,
+          "clears": 9,
+          "failures": 0,
+          "perfect": 5,
+          "withDeaths": 4,
+          "wars": 8,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.5555555555555556,
+          "perfectPerClear": 0.5555555555555556,
+          "medsUp": {
+            "attempts": 3,
+            "clears": 3,
+            "failures": 0,
+            "perfect": 1,
+            "withDeaths": 2,
+            "wars": 3,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.3333333333333333,
+            "perfectPerClear": 0.3333333333333333
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 8,
+          "clears": 8,
+          "failures": 0,
+          "perfect": 1,
+          "withDeaths": 7,
+          "wars": 8,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.125,
+          "perfectPerClear": 0.125,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 5,
+            "wars": 5,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0,
+            "perfectPerClear": 0
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 412,
+      "unknownMows": 2,
+      "mows": [
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 368,
+          "share": 0.8932038834951457
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 15,
+          "share": 0.03640776699029126
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 12,
+          "share": 0.02912621359223301
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 7,
+          "share": 0.01699029126213592
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 4,
+          "share": 0.009708737864077669
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 2,
+          "share": 0.0048543689320388345
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 1,
+          "share": 0.0024271844660194173
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 1,
+          "share": 0.0024271844660194173
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "heroes": [
+        "orksWarboss",
+        "orksRuntherd",
+        "orksBigMek",
+        "orksKillaKan",
+        "orksNob"
+      ],
+      "mow": "mow:orkss_rukkatrukk_01",
+      "attempts": 1384,
+      "clears": 905,
+      "failures": 479,
+      "perfect": 362,
+      "withDeaths": 543,
+      "wars": 331,
+      "failureRate": 0.34609826589595377,
+      "clearRate": 0.6539017341040463,
+      "perfectPerAttempt": 0.2615606936416185,
+      "perfectPerClear": 0.4,
+      "medsUp": {
+        "attempts": 904,
+        "clears": 517,
+        "failures": 387,
+        "perfect": 184,
+        "withDeaths": 333,
+        "wars": 296,
+        "failureRate": 0.4280973451327434,
+        "clearRate": 0.5719026548672567,
+        "perfectPerAttempt": 0.20353982300884957,
+        "perfectPerClear": 0.35589941972920697
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 220,
+          "clears": 137,
+          "failures": 83,
+          "perfect": 58,
+          "withDeaths": 79,
+          "wars": 59,
+          "failureRate": 0.37727272727272726,
+          "clearRate": 0.6227272727272727,
+          "perfectPerAttempt": 0.2636363636363636,
+          "perfectPerClear": 0.4233576642335766,
+          "share": 0.15895953757225434,
+          "medsUp": {
+            "attempts": 154,
+            "clears": 78,
+            "failures": 76,
+            "perfect": 27,
+            "withDeaths": 51,
+            "wars": 57,
+            "failureRate": 0.4935064935064935,
+            "clearRate": 0.5064935064935064,
+            "perfectPerAttempt": 0.17532467532467533,
+            "perfectPerClear": 0.34615384615384615
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 543,
+          "clears": 328,
+          "failures": 215,
+          "perfect": 113,
+          "withDeaths": 215,
+          "wars": 97,
+          "failureRate": 0.39594843462246776,
+          "clearRate": 0.6040515653775322,
+          "perfectPerAttempt": 0.20810313075506445,
+          "perfectPerClear": 0.3445121951219512,
+          "share": 0.39234104046242774,
+          "medsUp": {
+            "attempts": 357,
+            "clears": 189,
+            "failures": 168,
+            "perfect": 57,
+            "withDeaths": 132,
+            "wars": 89,
+            "failureRate": 0.47058823529411764,
+            "clearRate": 0.5294117647058824,
+            "perfectPerAttempt": 0.15966386554621848,
+            "perfectPerClear": 0.30158730158730157
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 375,
+          "clears": 250,
+          "failures": 125,
+          "perfect": 95,
+          "withDeaths": 155,
+          "wars": 92,
+          "failureRate": 0.3333333333333333,
+          "clearRate": 0.6666666666666666,
+          "perfectPerAttempt": 0.25333333333333335,
+          "perfectPerClear": 0.38,
+          "share": 0.2709537572254335,
+          "medsUp": {
+            "attempts": 236,
+            "clears": 138,
+            "failures": 98,
+            "perfect": 46,
+            "withDeaths": 92,
+            "wars": 84,
+            "failureRate": 0.4152542372881356,
+            "clearRate": 0.5847457627118644,
+            "perfectPerAttempt": 0.19491525423728814,
+            "perfectPerClear": 0.3333333333333333
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 175,
+          "clears": 127,
+          "failures": 48,
+          "perfect": 62,
+          "withDeaths": 65,
+          "wars": 58,
+          "failureRate": 0.2742857142857143,
+          "clearRate": 0.7257142857142858,
+          "perfectPerAttempt": 0.35428571428571426,
+          "perfectPerClear": 0.4881889763779528,
+          "share": 0.12644508670520233,
+          "medsUp": {
+            "attempts": 108,
+            "clears": 71,
+            "failures": 37,
+            "perfect": 31,
+            "withDeaths": 40,
+            "wars": 47,
+            "failureRate": 0.3425925925925926,
+            "clearRate": 0.6574074074074074,
+            "perfectPerAttempt": 0.28703703703703703,
+            "perfectPerClear": 0.43661971830985913
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 71,
+          "clears": 63,
+          "failures": 8,
+          "perfect": 34,
+          "withDeaths": 29,
+          "wars": 25,
+          "failureRate": 0.11267605633802817,
+          "clearRate": 0.8873239436619719,
+          "perfectPerAttempt": 0.4788732394366197,
+          "perfectPerClear": 0.5396825396825397,
+          "share": 0.05130057803468208,
+          "medsUp": {
+            "attempts": 49,
+            "clears": 41,
+            "failures": 8,
+            "perfect": 23,
+            "withDeaths": 18,
+            "wars": 19,
+            "failureRate": 0.16326530612244897,
+            "clearRate": 0.8367346938775511,
+            "perfectPerAttempt": 0.46938775510204084,
+            "perfectPerClear": 0.5609756097560976
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 182,
+          "clears": 139,
+          "failures": 43,
+          "perfect": 77,
+          "withDeaths": 62,
+          "wars": 132,
+          "failureRate": 0.23626373626373626,
+          "clearRate": 0.7637362637362637,
+          "perfectPerAttempt": 0.4230769230769231,
+          "perfectPerClear": 0.5539568345323741,
+          "medsUp": {
+            "attempts": 121,
+            "clears": 83,
+            "failures": 38,
+            "perfect": 43,
+            "withDeaths": 40,
+            "wars": 89,
+            "failureRate": 0.3140495867768595,
+            "clearRate": 0.6859504132231405,
+            "perfectPerAttempt": 0.35537190082644626,
+            "perfectPerClear": 0.5180722891566265
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 183,
+          "clears": 137,
+          "failures": 46,
+          "perfect": 63,
+          "withDeaths": 74,
+          "wars": 149,
+          "failureRate": 0.25136612021857924,
+          "clearRate": 0.7486338797814208,
+          "perfectPerAttempt": 0.3442622950819672,
+          "perfectPerClear": 0.45985401459854014,
+          "medsUp": {
+            "attempts": 110,
+            "clears": 76,
+            "failures": 34,
+            "perfect": 32,
+            "withDeaths": 44,
+            "wars": 98,
+            "failureRate": 0.3090909090909091,
+            "clearRate": 0.6909090909090909,
+            "perfectPerAttempt": 0.2909090909090909,
+            "perfectPerClear": 0.42105263157894735
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 94,
+          "clears": 83,
+          "failures": 11,
+          "perfect": 59,
+          "withDeaths": 24,
+          "wars": 82,
+          "failureRate": 0.11702127659574468,
+          "clearRate": 0.8829787234042553,
+          "perfectPerAttempt": 0.6276595744680851,
+          "perfectPerClear": 0.7108433734939759,
+          "medsUp": {
+            "attempts": 65,
+            "clears": 57,
+            "failures": 8,
+            "perfect": 44,
+            "withDeaths": 13,
+            "wars": 61,
+            "failureRate": 0.12307692307692308,
+            "clearRate": 0.8769230769230769,
+            "perfectPerAttempt": 0.676923076923077,
+            "perfectPerClear": 0.7719298245614035
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 95,
+          "clears": 75,
+          "failures": 20,
+          "perfect": 42,
+          "withDeaths": 33,
+          "wars": 85,
+          "failureRate": 0.21052631578947367,
+          "clearRate": 0.7894736842105263,
+          "perfectPerAttempt": 0.4421052631578947,
+          "perfectPerClear": 0.56,
+          "medsUp": {
+            "attempts": 59,
+            "clears": 48,
+            "failures": 11,
+            "perfect": 26,
+            "withDeaths": 22,
+            "wars": 56,
+            "failureRate": 0.1864406779661017,
+            "clearRate": 0.8135593220338984,
+            "perfectPerAttempt": 0.4406779661016949,
+            "perfectPerClear": 0.5416666666666666
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 66,
+          "clears": 57,
+          "failures": 9,
+          "perfect": 40,
+          "withDeaths": 17,
+          "wars": 59,
+          "failureRate": 0.13636363636363635,
+          "clearRate": 0.8636363636363636,
+          "perfectPerAttempt": 0.6060606060606061,
+          "perfectPerClear": 0.7017543859649122,
+          "medsUp": {
+            "attempts": 38,
+            "clears": 30,
+            "failures": 8,
+            "perfect": 19,
+            "withDeaths": 11,
+            "wars": 35,
+            "failureRate": 0.21052631578947367,
+            "clearRate": 0.7894736842105263,
+            "perfectPerAttempt": 0.5,
+            "perfectPerClear": 0.6333333333333333
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 49,
+          "clears": 45,
+          "failures": 4,
+          "perfect": 20,
+          "withDeaths": 25,
+          "wars": 43,
+          "failureRate": 0.08163265306122448,
+          "clearRate": 0.9183673469387755,
+          "perfectPerAttempt": 0.40816326530612246,
+          "perfectPerClear": 0.4444444444444444,
+          "medsUp": {
+            "attempts": 35,
+            "clears": 32,
+            "failures": 3,
+            "perfect": 17,
+            "withDeaths": 15,
+            "wars": 31,
+            "failureRate": 0.08571428571428572,
+            "clearRate": 0.9142857142857143,
+            "perfectPerAttempt": 0.4857142857142857,
+            "perfectPerClear": 0.53125
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 46,
+          "clears": 40,
+          "failures": 6,
+          "perfect": 20,
+          "withDeaths": 20,
+          "wars": 42,
+          "failureRate": 0.13043478260869565,
+          "clearRate": 0.8695652173913043,
+          "perfectPerAttempt": 0.43478260869565216,
+          "perfectPerClear": 0.5,
+          "medsUp": {
+            "attempts": 29,
+            "clears": 25,
+            "failures": 4,
+            "perfect": 14,
+            "withDeaths": 11,
+            "wars": 28,
+            "failureRate": 0.13793103448275862,
+            "clearRate": 0.8620689655172413,
+            "perfectPerAttempt": 0.4827586206896552,
+            "perfectPerClear": 0.56
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 28,
+          "clears": 25,
+          "failures": 3,
+          "perfect": 15,
+          "withDeaths": 10,
+          "wars": 22,
+          "failureRate": 0.10714285714285714,
+          "clearRate": 0.8928571428571429,
+          "perfectPerAttempt": 0.5357142857142857,
+          "perfectPerClear": 0.6,
+          "medsUp": {
+            "attempts": 21,
+            "clears": 18,
+            "failures": 3,
+            "perfect": 11,
+            "withDeaths": 7,
+            "wars": 17,
+            "failureRate": 0.14285714285714285,
+            "clearRate": 0.8571428571428571,
+            "perfectPerAttempt": 0.5238095238095238,
+            "perfectPerClear": 0.6111111111111112
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 7,
+          "clears": 7,
+          "failures": 0,
+          "perfect": 4,
+          "withDeaths": 3,
+          "wars": 7,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.5714285714285714,
+          "perfectPerClear": 0.5714285714285714,
+          "medsUp": {
+            "attempts": 4,
+            "clears": 4,
+            "failures": 0,
+            "perfect": 3,
+            "withDeaths": 1,
+            "wars": 4,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.75,
+            "perfectPerClear": 0.75
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 3,
+          "clears": 1,
+          "failures": 2,
+          "perfect": 0,
+          "withDeaths": 1,
+          "wars": 3,
+          "failureRate": 0.6666666666666666,
+          "clearRate": 0.3333333333333333,
+          "perfectPerAttempt": 0,
+          "perfectPerClear": 0,
+          "medsUp": {
+            "attempts": 2,
+            "clears": 0,
+            "failures": 2,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 2,
+            "failureRate": 1,
+            "clearRate": 0,
+            "perfectPerAttempt": 0,
+            "perfectPerClear": null
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 3159,
+      "unknownMows": 54,
+      "mows": [
+        {
+          "unit": "mow:orkss_rukkatrukk_01",
+          "attempts": 1921,
+          "share": 0.6081038303260525
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 438,
+          "share": 0.13865147198480532
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 200,
+          "share": 0.06331117442228554
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 197,
+          "share": 0.06236150680595125
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 162,
+          "share": 0.05128205128205128
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 80,
+          "share": 0.025324469768914212
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 47,
+          "share": 0.014878125989237101
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 37,
+          "share": 0.011712567268122824
+        },
+        {
+          "unit": "mow:darka_stormspeeder_01",
+          "attempts": 14,
+          "share": 0.004431782209559987
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 8,
+          "share": 0.0025324469768914213
+        },
+        {
+          "unit": "mow:necro_reanimator_01",
+          "attempts": 1,
+          "share": 0.00031655587211142766
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "heroes": [
+        "adeptCelestine",
+        "tauCrisis",
+        "genesPrimus",
+        "bloodMephiston",
+        "genesKelermorph"
+      ],
+      "mow": "mow:tyran_biovore_01",
+      "attempts": 822,
+      "clears": 572,
+      "failures": 250,
+      "perfect": 277,
+      "withDeaths": 295,
+      "wars": 114,
+      "failureRate": 0.30413625304136255,
+      "clearRate": 0.6958637469586375,
+      "perfectPerAttempt": 0.33698296836982966,
+      "perfectPerClear": 0.48426573426573427,
+      "medsUp": {
+        "attempts": 471,
+        "clears": 303,
+        "failures": 168,
+        "perfect": 140,
+        "withDeaths": 163,
+        "wars": 98,
+        "failureRate": 0.35668789808917195,
+        "clearRate": 0.643312101910828,
+        "perfectPerAttempt": 0.29723991507430997,
+        "perfectPerClear": 0.46204620462046203
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 20,
+          "clears": 13,
+          "failures": 7,
+          "perfect": 6,
+          "withDeaths": 7,
+          "wars": 2,
+          "failureRate": 0.35,
+          "clearRate": 0.65,
+          "perfectPerAttempt": 0.3,
+          "perfectPerClear": 0.46153846153846156,
+          "share": 0.024330900243309004,
+          "medsUp": {
+            "attempts": 10,
+            "clears": 5,
+            "failures": 5,
+            "perfect": 3,
+            "withDeaths": 2,
+            "wars": 2,
+            "failureRate": 0.5,
+            "clearRate": 0.5,
+            "perfectPerAttempt": 0.3,
+            "perfectPerClear": 0.6
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 37,
+          "clears": 15,
+          "failures": 22,
+          "perfect": 5,
+          "withDeaths": 10,
+          "wars": 21,
+          "failureRate": 0.5945945945945946,
+          "clearRate": 0.40540540540540543,
+          "perfectPerAttempt": 0.13513513513513514,
+          "perfectPerClear": 0.3333333333333333,
+          "share": 0.045012165450121655,
+          "medsUp": {
+            "attempts": 20,
+            "clears": 6,
+            "failures": 14,
+            "perfect": 2,
+            "withDeaths": 4,
+            "wars": 12,
+            "failureRate": 0.7,
+            "clearRate": 0.3,
+            "perfectPerAttempt": 0.1,
+            "perfectPerClear": 0.3333333333333333
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 32,
+          "clears": 13,
+          "failures": 19,
+          "perfect": 2,
+          "withDeaths": 11,
+          "wars": 13,
+          "failureRate": 0.59375,
+          "clearRate": 0.40625,
+          "perfectPerAttempt": 0.0625,
+          "perfectPerClear": 0.15384615384615385,
+          "share": 0.038929440389294405,
+          "medsUp": {
+            "attempts": 26,
+            "clears": 9,
+            "failures": 17,
+            "perfect": 1,
+            "withDeaths": 8,
+            "wars": 11,
+            "failureRate": 0.6538461538461539,
+            "clearRate": 0.34615384615384615,
+            "perfectPerAttempt": 0.038461538461538464,
+            "perfectPerClear": 0.1111111111111111
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 135,
+          "clears": 80,
+          "failures": 55,
+          "perfect": 29,
+          "withDeaths": 51,
+          "wars": 30,
+          "failureRate": 0.4074074074074074,
+          "clearRate": 0.5925925925925926,
+          "perfectPerAttempt": 0.21481481481481482,
+          "perfectPerClear": 0.3625,
+          "share": 0.16423357664233576,
+          "medsUp": {
+            "attempts": 82,
+            "clears": 45,
+            "failures": 37,
+            "perfect": 16,
+            "withDeaths": 29,
+            "wars": 26,
+            "failureRate": 0.45121951219512196,
+            "clearRate": 0.5487804878048781,
+            "perfectPerAttempt": 0.1951219512195122,
+            "perfectPerClear": 0.35555555555555557
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 598,
+          "clears": 451,
+          "failures": 147,
+          "perfect": 235,
+          "withDeaths": 216,
+          "wars": 48,
+          "failureRate": 0.24581939799331104,
+          "clearRate": 0.754180602006689,
+          "perfectPerAttempt": 0.39297658862876256,
+          "perfectPerClear": 0.5210643015521065,
+          "share": 0.7274939172749392,
+          "medsUp": {
+            "attempts": 333,
+            "clears": 238,
+            "failures": 95,
+            "perfect": 118,
+            "withDeaths": 120,
+            "wars": 47,
+            "failureRate": 0.2852852852852853,
+            "clearRate": 0.7147147147147147,
+            "perfectPerAttempt": 0.35435435435435436,
+            "perfectPerClear": 0.4957983193277311
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 399,
+          "clears": 359,
+          "failures": 40,
+          "perfect": 224,
+          "withDeaths": 135,
+          "wars": 116,
+          "failureRate": 0.10025062656641603,
+          "clearRate": 0.899749373433584,
+          "perfectPerAttempt": 0.5614035087719298,
+          "perfectPerClear": 0.6239554317548747,
+          "medsUp": {
+            "attempts": 246,
+            "clears": 214,
+            "failures": 32,
+            "perfect": 127,
+            "withDeaths": 87,
+            "wars": 91,
+            "failureRate": 0.13008130081300814,
+            "clearRate": 0.8699186991869918,
+            "perfectPerAttempt": 0.516260162601626,
+            "perfectPerClear": 0.5934579439252337
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 172,
+          "clears": 114,
+          "failures": 58,
+          "perfect": 54,
+          "withDeaths": 60,
+          "wars": 81,
+          "failureRate": 0.3372093023255814,
+          "clearRate": 0.6627906976744186,
+          "perfectPerAttempt": 0.313953488372093,
+          "perfectPerClear": 0.47368421052631576,
+          "medsUp": {
+            "attempts": 107,
+            "clears": 67,
+            "failures": 40,
+            "perfect": 28,
+            "withDeaths": 39,
+            "wars": 62,
+            "failureRate": 0.37383177570093457,
+            "clearRate": 0.6261682242990654,
+            "perfectPerAttempt": 0.2616822429906542,
+            "perfectPerClear": 0.417910447761194
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 140,
+          "clears": 104,
+          "failures": 36,
+          "perfect": 48,
+          "withDeaths": 56,
+          "wars": 80,
+          "failureRate": 0.2571428571428571,
+          "clearRate": 0.7428571428571429,
+          "perfectPerAttempt": 0.34285714285714286,
+          "perfectPerClear": 0.46153846153846156,
+          "medsUp": {
+            "attempts": 84,
+            "clears": 59,
+            "failures": 25,
+            "perfect": 24,
+            "withDeaths": 35,
+            "wars": 62,
+            "failureRate": 0.2976190476190476,
+            "clearRate": 0.7023809523809523,
+            "perfectPerAttempt": 0.2857142857142857,
+            "perfectPerClear": 0.4067796610169492
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 145,
+          "clears": 71,
+          "failures": 74,
+          "perfect": 26,
+          "withDeaths": 45,
+          "wars": 86,
+          "failureRate": 0.5103448275862069,
+          "clearRate": 0.4896551724137931,
+          "perfectPerAttempt": 0.1793103448275862,
+          "perfectPerClear": 0.36619718309859156,
+          "medsUp": {
+            "attempts": 89,
+            "clears": 38,
+            "failures": 51,
+            "perfect": 11,
+            "withDeaths": 27,
+            "wars": 68,
+            "failureRate": 0.5730337078651685,
+            "clearRate": 0.42696629213483145,
+            "perfectPerAttempt": 0.12359550561797752,
+            "perfectPerClear": 0.2894736842105263
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 83,
+          "clears": 50,
+          "failures": 33,
+          "perfect": 19,
+          "withDeaths": 31,
+          "wars": 54,
+          "failureRate": 0.39759036144578314,
+          "clearRate": 0.6024096385542169,
+          "perfectPerAttempt": 0.2289156626506024,
+          "perfectPerClear": 0.38,
+          "medsUp": {
+            "attempts": 50,
+            "clears": 27,
+            "failures": 23,
+            "perfect": 11,
+            "withDeaths": 16,
+            "wars": 39,
+            "failureRate": 0.46,
+            "clearRate": 0.54,
+            "perfectPerAttempt": 0.22,
+            "perfectPerClear": 0.4074074074074074
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 60,
+          "clears": 49,
+          "failures": 11,
+          "perfect": 29,
+          "withDeaths": 20,
+          "wars": 44,
+          "failureRate": 0.18333333333333332,
+          "clearRate": 0.8166666666666667,
+          "perfectPerAttempt": 0.48333333333333334,
+          "perfectPerClear": 0.5918367346938775,
+          "medsUp": {
+            "attempts": 39,
+            "clears": 32,
+            "failures": 7,
+            "perfect": 16,
+            "withDeaths": 16,
+            "wars": 32,
+            "failureRate": 0.1794871794871795,
+            "clearRate": 0.8205128205128205,
+            "perfectPerAttempt": 0.41025641025641024,
+            "perfectPerClear": 0.5
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 88,
+          "clears": 47,
+          "failures": 41,
+          "perfect": 12,
+          "withDeaths": 35,
+          "wars": 59,
+          "failureRate": 0.4659090909090909,
+          "clearRate": 0.5340909090909091,
+          "perfectPerAttempt": 0.13636363636363635,
+          "perfectPerClear": 0.2553191489361702,
+          "medsUp": {
+            "attempts": 52,
+            "clears": 24,
+            "failures": 28,
+            "perfect": 5,
+            "withDeaths": 19,
+            "wars": 40,
+            "failureRate": 0.5384615384615384,
+            "clearRate": 0.46153846153846156,
+            "perfectPerAttempt": 0.09615384615384616,
+            "perfectPerClear": 0.20833333333333334
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 64,
+          "clears": 35,
+          "failures": 29,
+          "perfect": 7,
+          "withDeaths": 28,
+          "wars": 40,
+          "failureRate": 0.453125,
+          "clearRate": 0.546875,
+          "perfectPerAttempt": 0.109375,
+          "perfectPerClear": 0.2,
+          "medsUp": {
+            "attempts": 48,
+            "clears": 26,
+            "failures": 22,
+            "perfect": 7,
+            "withDeaths": 19,
+            "wars": 34,
+            "failureRate": 0.4583333333333333,
+            "clearRate": 0.5416666666666666,
+            "perfectPerAttempt": 0.14583333333333334,
+            "perfectPerClear": 0.2692307692307692
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 44,
+          "clears": 35,
+          "failures": 9,
+          "perfect": 22,
+          "withDeaths": 13,
+          "wars": 26,
+          "failureRate": 0.20454545454545456,
+          "clearRate": 0.7954545454545454,
+          "perfectPerAttempt": 0.5,
+          "perfectPerClear": 0.6285714285714286,
+          "medsUp": {
+            "attempts": 25,
+            "clears": 18,
+            "failures": 7,
+            "perfect": 12,
+            "withDeaths": 6,
+            "wars": 18,
+            "failureRate": 0.28,
+            "clearRate": 0.72,
+            "perfectPerAttempt": 0.48,
+            "perfectPerClear": 0.6666666666666666
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 18,
+          "clears": 17,
+          "failures": 1,
+          "perfect": 7,
+          "withDeaths": 10,
+          "wars": 16,
+          "failureRate": 0.05555555555555555,
+          "clearRate": 0.9444444444444444,
+          "perfectPerAttempt": 0.3888888888888889,
+          "perfectPerClear": 0.4117647058823529,
+          "medsUp": {
+            "attempts": 10,
+            "clears": 9,
+            "failures": 1,
+            "perfect": 4,
+            "withDeaths": 5,
+            "wars": 9,
+            "failureRate": 0.1,
+            "clearRate": 0.9,
+            "perfectPerAttempt": 0.4,
+            "perfectPerClear": 0.4444444444444444
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 2219,
+      "unknownMows": 0,
+      "mows": [
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 1125,
+          "share": 0.5069851284362326
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 685,
+          "share": 0.30869761153672826
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 155,
+          "share": 0.06985128436232538
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 127,
+          "share": 0.05723298783235692
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 34,
+          "share": 0.015322217214961695
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 28,
+          "share": 0.012618296529968454
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 27,
+          "share": 0.01216764308246958
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 17,
+          "share": 0.0076611086074808476
+        },
+        {
+          "unit": "mow:darka_stormspeeder_01",
+          "attempts": 15,
+          "share": 0.0067598017124831005
+        },
+        {
+          "unit": "mow:necro_reanimator_01",
+          "attempts": 6,
+          "share": 0.0027039206849932404
+        }
+      ]
+    },
+    {
+      "id": "D6",
+      "heroes": [
+        "darkaCompanion",
+        "darkaAzrael",
+        "darkaAsmodai",
+        "darkaHellblaster",
+        "darkaTerminator"
+      ],
+      "mow": "mow:darka_stormspeeder_01",
+      "attempts": 154,
+      "clears": 109,
+      "failures": 45,
+      "perfect": 28,
+      "withDeaths": 81,
+      "wars": 99,
+      "failureRate": 0.2922077922077922,
+      "clearRate": 0.7077922077922078,
+      "perfectPerAttempt": 0.18181818181818182,
+      "perfectPerClear": 0.25688073394495414,
+      "medsUp": {
+        "attempts": 98,
+        "clears": 61,
+        "failures": 37,
+        "perfect": 15,
+        "withDeaths": 46,
+        "wars": 64,
+        "failureRate": 0.37755102040816324,
+        "clearRate": 0.6224489795918368,
+        "perfectPerAttempt": 0.15306122448979592,
+        "perfectPerClear": 0.2459016393442623
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 28,
+          "clears": 22,
+          "failures": 6,
+          "perfect": 5,
+          "withDeaths": 17,
+          "wars": 16,
+          "failureRate": 0.21428571428571427,
+          "clearRate": 0.7857142857142857,
+          "perfectPerAttempt": 0.17857142857142858,
+          "perfectPerClear": 0.22727272727272727,
+          "share": 0.18181818181818182,
+          "medsUp": {
+            "attempts": 17,
+            "clears": 11,
+            "failures": 6,
+            "perfect": 1,
+            "withDeaths": 10,
+            "wars": 11,
+            "failureRate": 0.35294117647058826,
+            "clearRate": 0.6470588235294118,
+            "perfectPerAttempt": 0.058823529411764705,
+            "perfectPerClear": 0.09090909090909091
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 55,
+          "clears": 34,
+          "failures": 21,
+          "perfect": 11,
+          "withDeaths": 23,
+          "wars": 35,
+          "failureRate": 0.38181818181818183,
+          "clearRate": 0.6181818181818182,
+          "perfectPerAttempt": 0.2,
+          "perfectPerClear": 0.3235294117647059,
+          "share": 0.35714285714285715,
+          "medsUp": {
+            "attempts": 39,
+            "clears": 23,
+            "failures": 16,
+            "perfect": 7,
+            "withDeaths": 16,
+            "wars": 26,
+            "failureRate": 0.41025641025641024,
+            "clearRate": 0.5897435897435898,
+            "perfectPerAttempt": 0.1794871794871795,
+            "perfectPerClear": 0.30434782608695654
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 47,
+          "clears": 34,
+          "failures": 13,
+          "perfect": 8,
+          "withDeaths": 26,
+          "wars": 28,
+          "failureRate": 0.2765957446808511,
+          "clearRate": 0.723404255319149,
+          "perfectPerAttempt": 0.1702127659574468,
+          "perfectPerClear": 0.23529411764705882,
+          "share": 0.3051948051948052,
+          "medsUp": {
+            "attempts": 29,
+            "clears": 18,
+            "failures": 11,
+            "perfect": 3,
+            "withDeaths": 15,
+            "wars": 16,
+            "failureRate": 0.3793103448275862,
+            "clearRate": 0.6206896551724138,
+            "perfectPerAttempt": 0.10344827586206896,
+            "perfectPerClear": 0.16666666666666666
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 17,
+          "clears": 14,
+          "failures": 3,
+          "perfect": 2,
+          "withDeaths": 12,
+          "wars": 15,
+          "failureRate": 0.17647058823529413,
+          "clearRate": 0.8235294117647058,
+          "perfectPerAttempt": 0.11764705882352941,
+          "perfectPerClear": 0.14285714285714285,
+          "share": 0.11038961038961038,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 7,
+            "failures": 2,
+            "perfect": 2,
+            "withDeaths": 5,
+            "wars": 8,
+            "failureRate": 0.2222222222222222,
+            "clearRate": 0.7777777777777778,
+            "perfectPerAttempt": 0.2222222222222222,
+            "perfectPerClear": 0.2857142857142857
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 7,
+          "clears": 5,
+          "failures": 2,
+          "perfect": 2,
+          "withDeaths": 3,
+          "wars": 5,
+          "failureRate": 0.2857142857142857,
+          "clearRate": 0.7142857142857143,
+          "perfectPerAttempt": 0.2857142857142857,
+          "perfectPerClear": 0.4,
+          "share": 0.045454545454545456,
+          "medsUp": {
+            "attempts": 4,
+            "clears": 2,
+            "failures": 2,
+            "perfect": 2,
+            "withDeaths": 0,
+            "wars": 3,
+            "failureRate": 0.5,
+            "clearRate": 0.5,
+            "perfectPerAttempt": 0.5,
+            "perfectPerClear": 1
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 67,
+          "clears": 45,
+          "failures": 22,
+          "perfect": 18,
+          "withDeaths": 27,
+          "wars": 64,
+          "failureRate": 0.3283582089552239,
+          "clearRate": 0.6716417910447762,
+          "perfectPerAttempt": 0.26865671641791045,
+          "perfectPerClear": 0.4,
+          "medsUp": {
+            "attempts": 44,
+            "clears": 26,
+            "failures": 18,
+            "perfect": 7,
+            "withDeaths": 19,
+            "wars": 44,
+            "failureRate": 0.4090909090909091,
+            "clearRate": 0.5909090909090909,
+            "perfectPerAttempt": 0.1590909090909091,
+            "perfectPerClear": 0.2692307692307692
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 30,
+          "clears": 30,
+          "failures": 0,
+          "perfect": 18,
+          "withDeaths": 12,
+          "wars": 29,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.6,
+          "perfectPerClear": 0.6,
+          "medsUp": {
+            "attempts": 17,
+            "clears": 17,
+            "failures": 0,
+            "perfect": 12,
+            "withDeaths": 5,
+            "wars": 17,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.7058823529411765,
+            "perfectPerClear": 0.7058823529411765
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 35,
+          "clears": 26,
+          "failures": 9,
+          "perfect": 12,
+          "withDeaths": 14,
+          "wars": 31,
+          "failureRate": 0.2571428571428571,
+          "clearRate": 0.7428571428571429,
+          "perfectPerAttempt": 0.34285714285714286,
+          "perfectPerClear": 0.46153846153846156,
+          "medsUp": {
+            "attempts": 23,
+            "clears": 14,
+            "failures": 9,
+            "perfect": 7,
+            "withDeaths": 7,
+            "wars": 21,
+            "failureRate": 0.391304347826087,
+            "clearRate": 0.6086956521739131,
+            "perfectPerAttempt": 0.30434782608695654,
+            "perfectPerClear": 0.5
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 29,
+          "clears": 20,
+          "failures": 9,
+          "perfect": 8,
+          "withDeaths": 12,
+          "wars": 28,
+          "failureRate": 0.3103448275862069,
+          "clearRate": 0.6896551724137931,
+          "perfectPerAttempt": 0.27586206896551724,
+          "perfectPerClear": 0.4,
+          "medsUp": {
+            "attempts": 16,
+            "clears": 10,
+            "failures": 6,
+            "perfect": 3,
+            "withDeaths": 7,
+            "wars": 16,
+            "failureRate": 0.375,
+            "clearRate": 0.625,
+            "perfectPerAttempt": 0.1875,
+            "perfectPerClear": 0.3
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 21,
+          "clears": 17,
+          "failures": 4,
+          "perfect": 2,
+          "withDeaths": 15,
+          "wars": 21,
+          "failureRate": 0.19047619047619047,
+          "clearRate": 0.8095238095238095,
+          "perfectPerAttempt": 0.09523809523809523,
+          "perfectPerClear": 0.11764705882352941,
+          "medsUp": {
+            "attempts": 12,
+            "clears": 10,
+            "failures": 2,
+            "perfect": 1,
+            "withDeaths": 9,
+            "wars": 12,
+            "failureRate": 0.16666666666666666,
+            "clearRate": 0.8333333333333334,
+            "perfectPerAttempt": 0.08333333333333333,
+            "perfectPerClear": 0.1
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 19,
+          "clears": 17,
+          "failures": 2,
+          "perfect": 6,
+          "withDeaths": 11,
+          "wars": 16,
+          "failureRate": 0.10526315789473684,
+          "clearRate": 0.8947368421052632,
+          "perfectPerAttempt": 0.3157894736842105,
+          "perfectPerClear": 0.35294117647058826,
+          "medsUp": {
+            "attempts": 14,
+            "clears": 13,
+            "failures": 1,
+            "perfect": 3,
+            "withDeaths": 10,
+            "wars": 14,
+            "failureRate": 0.07142857142857142,
+            "clearRate": 0.9285714285714286,
+            "perfectPerAttempt": 0.21428571428571427,
+            "perfectPerClear": 0.23076923076923078
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 20,
+          "clears": 16,
+          "failures": 4,
+          "perfect": 4,
+          "withDeaths": 12,
+          "wars": 18,
+          "failureRate": 0.2,
+          "clearRate": 0.8,
+          "perfectPerAttempt": 0.2,
+          "perfectPerClear": 0.25,
+          "medsUp": {
+            "attempts": 10,
+            "clears": 7,
+            "failures": 3,
+            "perfect": 1,
+            "withDeaths": 6,
+            "wars": 8,
+            "failureRate": 0.3,
+            "clearRate": 0.7,
+            "perfectPerAttempt": 0.1,
+            "perfectPerClear": 0.14285714285714285
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 6,
+          "clears": 4,
+          "failures": 2,
+          "perfect": 4,
+          "withDeaths": 0,
+          "wars": 6,
+          "failureRate": 0.3333333333333333,
+          "clearRate": 0.6666666666666666,
+          "perfectPerAttempt": 0.6666666666666666,
+          "perfectPerClear": 1,
+          "medsUp": {
+            "attempts": 4,
+            "clears": 2,
+            "failures": 2,
+            "perfect": 2,
+            "withDeaths": 0,
+            "wars": 4,
+            "failureRate": 0.5,
+            "clearRate": 0.5,
+            "perfectPerAttempt": 0.5,
+            "perfectPerClear": 1
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 6,
+          "clears": 4,
+          "failures": 2,
+          "perfect": 3,
+          "withDeaths": 1,
+          "wars": 6,
+          "failureRate": 0.3333333333333333,
+          "clearRate": 0.6666666666666666,
+          "perfectPerAttempt": 0.5,
+          "perfectPerClear": 0.75,
+          "medsUp": {
+            "attempts": 3,
+            "clears": 1,
+            "failures": 2,
+            "perfect": 1,
+            "withDeaths": 0,
+            "wars": 3,
+            "failureRate": 0.6666666666666666,
+            "clearRate": 0.3333333333333333,
+            "perfectPerAttempt": 0.3333333333333333,
+            "perfectPerClear": 1
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 1,
+          "clears": 1,
+          "failures": 0,
+          "perfect": 0,
+          "withDeaths": 1,
+          "wars": 1,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0,
+          "perfectPerClear": 0,
+          "medsUp": {
+            "attempts": 1,
+            "clears": 1,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 1,
+            "wars": 1,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0,
+            "perfectPerClear": 0
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 301,
+      "unknownMows": 1,
+      "mows": [
+        {
+          "unit": "mow:darka_stormspeeder_01",
+          "attempts": 205,
+          "share": 0.6810631229235881
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 29,
+          "share": 0.09634551495016612
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 25,
+          "share": 0.08305647840531562
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 18,
+          "share": 0.059800664451827246
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 12,
+          "share": 0.03986710963455149
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 8,
+          "share": 0.026578073089700997
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 3,
+          "share": 0.009966777408637873
+        }
+      ]
+    },
+    {
+      "id": "D7",
+      "heroes": [
+        "tyranDeathleaper",
+        "tyranNeurothrope",
+        "tyranParasite",
+        "tyranTyrantGuard",
+        "tyranWingedPrime"
+      ],
+      "mow": "mow:tyran_biovore_01",
+      "attempts": 195,
+      "clears": 153,
+      "failures": 42,
+      "perfect": 79,
+      "withDeaths": 74,
+      "wars": 121,
+      "failureRate": 0.2153846153846154,
+      "clearRate": 0.7846153846153846,
+      "perfectPerAttempt": 0.40512820512820513,
+      "perfectPerClear": 0.5163398692810458,
+      "medsUp": {
+        "attempts": 133,
+        "clears": 99,
+        "failures": 34,
+        "perfect": 41,
+        "withDeaths": 58,
+        "wars": 89,
+        "failureRate": 0.2556390977443609,
+        "clearRate": 0.7443609022556391,
+        "perfectPerAttempt": 0.3082706766917293,
+        "perfectPerClear": 0.41414141414141414
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 16,
+          "clears": 15,
+          "failures": 1,
+          "perfect": 11,
+          "withDeaths": 4,
+          "wars": 13,
+          "failureRate": 0.0625,
+          "clearRate": 0.9375,
+          "perfectPerAttempt": 0.6875,
+          "perfectPerClear": 0.7333333333333333,
+          "share": 0.08205128205128205,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 8,
+            "failures": 1,
+            "perfect": 6,
+            "withDeaths": 2,
+            "wars": 9,
+            "failureRate": 0.1111111111111111,
+            "clearRate": 0.8888888888888888,
+            "perfectPerAttempt": 0.6666666666666666,
+            "perfectPerClear": 0.75
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 76,
+          "clears": 56,
+          "failures": 20,
+          "perfect": 26,
+          "withDeaths": 30,
+          "wars": 49,
+          "failureRate": 0.2631578947368421,
+          "clearRate": 0.7368421052631579,
+          "perfectPerAttempt": 0.34210526315789475,
+          "perfectPerClear": 0.4642857142857143,
+          "share": 0.38974358974358975,
+          "medsUp": {
+            "attempts": 53,
+            "clears": 36,
+            "failures": 17,
+            "perfect": 12,
+            "withDeaths": 24,
+            "wars": 38,
+            "failureRate": 0.32075471698113206,
+            "clearRate": 0.6792452830188679,
+            "perfectPerAttempt": 0.22641509433962265,
+            "perfectPerClear": 0.3333333333333333
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 61,
+          "clears": 46,
+          "failures": 15,
+          "perfect": 22,
+          "withDeaths": 24,
+          "wars": 35,
+          "failureRate": 0.2459016393442623,
+          "clearRate": 0.7540983606557377,
+          "perfectPerAttempt": 0.36065573770491804,
+          "perfectPerClear": 0.4782608695652174,
+          "share": 0.3128205128205128,
+          "medsUp": {
+            "attempts": 43,
+            "clears": 32,
+            "failures": 11,
+            "perfect": 12,
+            "withDeaths": 20,
+            "wars": 25,
+            "failureRate": 0.2558139534883721,
+            "clearRate": 0.7441860465116279,
+            "perfectPerAttempt": 0.27906976744186046,
+            "perfectPerClear": 0.375
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 26,
+          "clears": 22,
+          "failures": 4,
+          "perfect": 9,
+          "withDeaths": 13,
+          "wars": 15,
+          "failureRate": 0.15384615384615385,
+          "clearRate": 0.8461538461538461,
+          "perfectPerAttempt": 0.34615384615384615,
+          "perfectPerClear": 0.4090909090909091,
+          "share": 0.13333333333333333,
+          "medsUp": {
+            "attempts": 17,
+            "clears": 14,
+            "failures": 3,
+            "perfect": 4,
+            "withDeaths": 10,
+            "wars": 11,
+            "failureRate": 0.17647058823529413,
+            "clearRate": 0.8235294117647058,
+            "perfectPerAttempt": 0.23529411764705882,
+            "perfectPerClear": 0.2857142857142857
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 16,
+          "clears": 14,
+          "failures": 2,
+          "perfect": 11,
+          "withDeaths": 3,
+          "wars": 9,
+          "failureRate": 0.125,
+          "clearRate": 0.875,
+          "perfectPerAttempt": 0.6875,
+          "perfectPerClear": 0.7857142857142857,
+          "share": 0.08205128205128205,
+          "medsUp": {
+            "attempts": 11,
+            "clears": 9,
+            "failures": 2,
+            "perfect": 7,
+            "withDeaths": 2,
+            "wars": 6,
+            "failureRate": 0.18181818181818182,
+            "clearRate": 0.8181818181818182,
+            "perfectPerAttempt": 0.6363636363636364,
+            "perfectPerClear": 0.7777777777777778
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 42,
+          "clears": 41,
+          "failures": 1,
+          "perfect": 33,
+          "withDeaths": 8,
+          "wars": 39,
+          "failureRate": 0.023809523809523808,
+          "clearRate": 0.9761904761904762,
+          "perfectPerAttempt": 0.7857142857142857,
+          "perfectPerClear": 0.8048780487804879,
+          "medsUp": {
+            "attempts": 24,
+            "clears": 23,
+            "failures": 1,
+            "perfect": 18,
+            "withDeaths": 5,
+            "wars": 23,
+            "failureRate": 0.041666666666666664,
+            "clearRate": 0.9583333333333334,
+            "perfectPerAttempt": 0.75,
+            "perfectPerClear": 0.782608695652174
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 37,
+          "clears": 36,
+          "failures": 1,
+          "perfect": 25,
+          "withDeaths": 11,
+          "wars": 35,
+          "failureRate": 0.02702702702702703,
+          "clearRate": 0.972972972972973,
+          "perfectPerAttempt": 0.6756756756756757,
+          "perfectPerClear": 0.6944444444444444,
+          "medsUp": {
+            "attempts": 28,
+            "clears": 27,
+            "failures": 1,
+            "perfect": 20,
+            "withDeaths": 7,
+            "wars": 27,
+            "failureRate": 0.03571428571428571,
+            "clearRate": 0.9642857142857143,
+            "perfectPerAttempt": 0.7142857142857143,
+            "perfectPerClear": 0.7407407407407407
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 37,
+          "clears": 33,
+          "failures": 4,
+          "perfect": 14,
+          "withDeaths": 19,
+          "wars": 34,
+          "failureRate": 0.10810810810810811,
+          "clearRate": 0.8918918918918919,
+          "perfectPerAttempt": 0.3783783783783784,
+          "perfectPerClear": 0.42424242424242425,
+          "medsUp": {
+            "attempts": 19,
+            "clears": 17,
+            "failures": 2,
+            "perfect": 7,
+            "withDeaths": 10,
+            "wars": 18,
+            "failureRate": 0.10526315789473684,
+            "clearRate": 0.8947368421052632,
+            "perfectPerAttempt": 0.3684210526315789,
+            "perfectPerClear": 0.4117647058823529
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 22,
+          "clears": 21,
+          "failures": 1,
+          "perfect": 15,
+          "withDeaths": 6,
+          "wars": 21,
+          "failureRate": 0.045454545454545456,
+          "clearRate": 0.9545454545454546,
+          "perfectPerAttempt": 0.6818181818181818,
+          "perfectPerClear": 0.7142857142857143,
+          "medsUp": {
+            "attempts": 12,
+            "clears": 11,
+            "failures": 1,
+            "perfect": 7,
+            "withDeaths": 4,
+            "wars": 12,
+            "failureRate": 0.08333333333333333,
+            "clearRate": 0.9166666666666666,
+            "perfectPerAttempt": 0.5833333333333334,
+            "perfectPerClear": 0.6363636363636364
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 16,
+          "clears": 16,
+          "failures": 0,
+          "perfect": 12,
+          "withDeaths": 4,
+          "wars": 14,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.75,
+          "perfectPerClear": 0.75,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 9,
+            "failures": 0,
+            "perfect": 5,
+            "withDeaths": 4,
+            "wars": 8,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.5555555555555556,
+            "perfectPerClear": 0.5555555555555556
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 15,
+          "clears": 15,
+          "failures": 0,
+          "perfect": 9,
+          "withDeaths": 6,
+          "wars": 14,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.6,
+          "perfectPerClear": 0.6,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 9,
+            "failures": 0,
+            "perfect": 5,
+            "withDeaths": 4,
+            "wars": 8,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.5555555555555556,
+            "perfectPerClear": 0.5555555555555556
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 10,
+          "clears": 8,
+          "failures": 2,
+          "perfect": 4,
+          "withDeaths": 4,
+          "wars": 9,
+          "failureRate": 0.2,
+          "clearRate": 0.8,
+          "perfectPerAttempt": 0.4,
+          "perfectPerClear": 0.5,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 3,
+            "failures": 2,
+            "perfect": 1,
+            "withDeaths": 2,
+            "wars": 5,
+            "failureRate": 0.4,
+            "clearRate": 0.6,
+            "perfectPerAttempt": 0.2,
+            "perfectPerClear": 0.3333333333333333
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 3,
+          "clears": 3,
+          "failures": 0,
+          "perfect": 3,
+          "withDeaths": 0,
+          "wars": 3,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 1,
+          "perfectPerClear": 1,
+          "medsUp": {
+            "attempts": 2,
+            "clears": 2,
+            "failures": 0,
+            "perfect": 2,
+            "withDeaths": 0,
+            "wars": 2,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 1,
+            "perfectPerClear": 1
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 2,
+          "clears": 2,
+          "failures": 0,
+          "perfect": 2,
+          "withDeaths": 0,
+          "wars": 2,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 1,
+          "perfectPerClear": 1,
+          "medsUp": {
+            "attempts": 0,
+            "clears": 0,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 0,
+            "failureRate": null,
+            "clearRate": null,
+            "perfectPerAttempt": null,
+            "perfectPerClear": null
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 0,
+          "clears": 0,
+          "failures": 0,
+          "perfect": 0,
+          "withDeaths": 0,
+          "wars": 0,
+          "failureRate": null,
+          "clearRate": null,
+          "perfectPerAttempt": null,
+          "perfectPerClear": null,
+          "medsUp": {
+            "attempts": 0,
+            "clears": 0,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 0,
+            "failureRate": null,
+            "clearRate": null,
+            "perfectPerAttempt": null,
+            "perfectPerClear": null
+          },
+          "evidence": "No data"
+        }
+      ],
+      "mowOccurrences": 292,
+      "unknownMows": 1,
+      "mows": [
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 242,
+          "share": 0.8287671232876712
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 22,
+          "share": 0.07534246575342465
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 13,
+          "share": 0.04452054794520548
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 6,
+          "share": 0.02054794520547945
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 4,
+          "share": 0.0136986301369863
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 2,
+          "share": 0.00684931506849315
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 1,
+          "share": 0.003424657534246575
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 1,
+          "share": 0.003424657534246575
+        }
+      ]
+    },
+    {
+      "id": "D8",
+      "heroes": [
+        "ultraCalgar",
+        "ultraTitus",
+        "ultraInceptorSgt",
+        "ultraTigurius",
+        "ultraApothecary"
+      ],
+      "mow": "mow:ultra_dreadnought_01",
+      "attempts": 123,
+      "clears": 97,
+      "failures": 26,
+      "perfect": 37,
+      "withDeaths": 60,
+      "wars": 82,
+      "failureRate": 0.21138211382113822,
+      "clearRate": 0.7886178861788617,
+      "perfectPerAttempt": 0.3008130081300813,
+      "perfectPerClear": 0.38144329896907214,
+      "medsUp": {
+        "attempts": 86,
+        "clears": 68,
+        "failures": 18,
+        "perfect": 24,
+        "withDeaths": 44,
+        "wars": 61,
+        "failureRate": 0.20930232558139536,
+        "clearRate": 0.7906976744186046,
+        "perfectPerAttempt": 0.27906976744186046,
+        "perfectPerClear": 0.35294117647058826
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 33,
+          "clears": 23,
+          "failures": 10,
+          "perfect": 7,
+          "withDeaths": 16,
+          "wars": 26,
+          "failureRate": 0.30303030303030304,
+          "clearRate": 0.696969696969697,
+          "perfectPerAttempt": 0.21212121212121213,
+          "perfectPerClear": 0.30434782608695654,
+          "share": 0.2682926829268293,
+          "medsUp": {
+            "attempts": 21,
+            "clears": 16,
+            "failures": 5,
+            "perfect": 4,
+            "withDeaths": 12,
+            "wars": 17,
+            "failureRate": 0.23809523809523808,
+            "clearRate": 0.7619047619047619,
+            "perfectPerAttempt": 0.19047619047619047,
+            "perfectPerClear": 0.25
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 46,
+          "clears": 37,
+          "failures": 9,
+          "perfect": 19,
+          "withDeaths": 18,
+          "wars": 30,
+          "failureRate": 0.1956521739130435,
+          "clearRate": 0.8043478260869565,
+          "perfectPerAttempt": 0.41304347826086957,
+          "perfectPerClear": 0.5135135135135135,
+          "share": 0.37398373983739835,
+          "medsUp": {
+            "attempts": 36,
+            "clears": 28,
+            "failures": 8,
+            "perfect": 14,
+            "withDeaths": 14,
+            "wars": 26,
+            "failureRate": 0.2222222222222222,
+            "clearRate": 0.7777777777777778,
+            "perfectPerAttempt": 0.3888888888888889,
+            "perfectPerClear": 0.5
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 29,
+          "clears": 24,
+          "failures": 5,
+          "perfect": 3,
+          "withDeaths": 21,
+          "wars": 17,
+          "failureRate": 0.1724137931034483,
+          "clearRate": 0.8275862068965517,
+          "perfectPerAttempt": 0.10344827586206896,
+          "perfectPerClear": 0.125,
+          "share": 0.23577235772357724,
+          "medsUp": {
+            "attempts": 18,
+            "clears": 15,
+            "failures": 3,
+            "perfect": 1,
+            "withDeaths": 14,
+            "wars": 11,
+            "failureRate": 0.16666666666666666,
+            "clearRate": 0.8333333333333334,
+            "perfectPerAttempt": 0.05555555555555555,
+            "perfectPerClear": 0.06666666666666667
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 15,
+          "clears": 13,
+          "failures": 2,
+          "perfect": 8,
+          "withDeaths": 5,
+          "wars": 9,
+          "failureRate": 0.13333333333333333,
+          "clearRate": 0.8666666666666667,
+          "perfectPerAttempt": 0.5333333333333333,
+          "perfectPerClear": 0.6153846153846154,
+          "share": 0.12195121951219512,
+          "medsUp": {
+            "attempts": 11,
+            "clears": 9,
+            "failures": 2,
+            "perfect": 5,
+            "withDeaths": 4,
+            "wars": 7,
+            "failureRate": 0.18181818181818182,
+            "clearRate": 0.8181818181818182,
+            "perfectPerAttempt": 0.45454545454545453,
+            "perfectPerClear": 0.5555555555555556
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 0,
+          "clears": 0,
+          "failures": 0,
+          "perfect": 0,
+          "withDeaths": 0,
+          "wars": 0,
+          "failureRate": null,
+          "clearRate": null,
+          "perfectPerAttempt": null,
+          "perfectPerClear": null,
+          "share": 0,
+          "medsUp": {
+            "attempts": 0,
+            "clears": 0,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 0,
+            "failureRate": null,
+            "clearRate": null,
+            "perfectPerAttempt": null,
+            "perfectPerClear": null
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 109,
+          "clears": 83,
+          "failures": 26,
+          "perfect": 40,
+          "withDeaths": 43,
+          "wars": 94,
+          "failureRate": 0.23853211009174313,
+          "clearRate": 0.7614678899082569,
+          "perfectPerAttempt": 0.3669724770642202,
+          "perfectPerClear": 0.4819277108433735,
+          "medsUp": {
+            "attempts": 76,
+            "clears": 61,
+            "failures": 15,
+            "perfect": 27,
+            "withDeaths": 34,
+            "wars": 68,
+            "failureRate": 0.19736842105263158,
+            "clearRate": 0.8026315789473685,
+            "perfectPerAttempt": 0.35526315789473684,
+            "perfectPerClear": 0.4426229508196721
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 105,
+          "clears": 80,
+          "failures": 25,
+          "perfect": 36,
+          "withDeaths": 44,
+          "wars": 85,
+          "failureRate": 0.23809523809523808,
+          "clearRate": 0.7619047619047619,
+          "perfectPerAttempt": 0.34285714285714286,
+          "perfectPerClear": 0.45,
+          "medsUp": {
+            "attempts": 65,
+            "clears": 47,
+            "failures": 18,
+            "perfect": 19,
+            "withDeaths": 28,
+            "wars": 56,
+            "failureRate": 0.27692307692307694,
+            "clearRate": 0.7230769230769231,
+            "perfectPerAttempt": 0.2923076923076923,
+            "perfectPerClear": 0.40425531914893614
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 76,
+          "clears": 62,
+          "failures": 14,
+          "perfect": 23,
+          "withDeaths": 39,
+          "wars": 66,
+          "failureRate": 0.18421052631578946,
+          "clearRate": 0.8157894736842105,
+          "perfectPerAttempt": 0.3026315789473684,
+          "perfectPerClear": 0.3709677419354839,
+          "medsUp": {
+            "attempts": 51,
+            "clears": 37,
+            "failures": 14,
+            "perfect": 9,
+            "withDeaths": 28,
+            "wars": 46,
+            "failureRate": 0.27450980392156865,
+            "clearRate": 0.7254901960784313,
+            "perfectPerAttempt": 0.17647058823529413,
+            "perfectPerClear": 0.24324324324324326
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 54,
+          "clears": 52,
+          "failures": 2,
+          "perfect": 31,
+          "withDeaths": 21,
+          "wars": 49,
+          "failureRate": 0.037037037037037035,
+          "clearRate": 0.9629629629629629,
+          "perfectPerAttempt": 0.5740740740740741,
+          "perfectPerClear": 0.5961538461538461,
+          "medsUp": {
+            "attempts": 37,
+            "clears": 35,
+            "failures": 2,
+            "perfect": 18,
+            "withDeaths": 17,
+            "wars": 34,
+            "failureRate": 0.05405405405405406,
+            "clearRate": 0.9459459459459459,
+            "perfectPerAttempt": 0.4864864864864865,
+            "perfectPerClear": 0.5142857142857142
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 46,
+          "clears": 40,
+          "failures": 6,
+          "perfect": 22,
+          "withDeaths": 18,
+          "wars": 45,
+          "failureRate": 0.13043478260869565,
+          "clearRate": 0.8695652173913043,
+          "perfectPerAttempt": 0.4782608695652174,
+          "perfectPerClear": 0.55,
+          "medsUp": {
+            "attempts": 27,
+            "clears": 24,
+            "failures": 3,
+            "perfect": 12,
+            "withDeaths": 12,
+            "wars": 27,
+            "failureRate": 0.1111111111111111,
+            "clearRate": 0.8888888888888888,
+            "perfectPerAttempt": 0.4444444444444444,
+            "perfectPerClear": 0.5
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 25,
+          "clears": 20,
+          "failures": 5,
+          "perfect": 12,
+          "withDeaths": 8,
+          "wars": 23,
+          "failureRate": 0.2,
+          "clearRate": 0.8,
+          "perfectPerAttempt": 0.48,
+          "perfectPerClear": 0.6,
+          "medsUp": {
+            "attempts": 19,
+            "clears": 14,
+            "failures": 5,
+            "perfect": 8,
+            "withDeaths": 6,
+            "wars": 17,
+            "failureRate": 0.2631578947368421,
+            "clearRate": 0.7368421052631579,
+            "perfectPerAttempt": 0.42105263157894735,
+            "perfectPerClear": 0.5714285714285714
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 23,
+          "clears": 19,
+          "failures": 4,
+          "perfect": 10,
+          "withDeaths": 9,
+          "wars": 23,
+          "failureRate": 0.17391304347826086,
+          "clearRate": 0.8260869565217391,
+          "perfectPerAttempt": 0.43478260869565216,
+          "perfectPerClear": 0.5263157894736842,
+          "medsUp": {
+            "attempts": 17,
+            "clears": 13,
+            "failures": 4,
+            "perfect": 6,
+            "withDeaths": 7,
+            "wars": 17,
+            "failureRate": 0.23529411764705882,
+            "clearRate": 0.7647058823529411,
+            "perfectPerAttempt": 0.35294117647058826,
+            "perfectPerClear": 0.46153846153846156
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 14,
+          "clears": 14,
+          "failures": 0,
+          "perfect": 8,
+          "withDeaths": 6,
+          "wars": 14,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.5714285714285714,
+          "perfectPerClear": 0.5714285714285714,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 3,
+            "withDeaths": 2,
+            "wars": 5,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.6,
+            "perfectPerClear": 0.6
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 4,
+          "clears": 3,
+          "failures": 1,
+          "perfect": 3,
+          "withDeaths": 0,
+          "wars": 4,
+          "failureRate": 0.25,
+          "clearRate": 0.75,
+          "perfectPerAttempt": 0.75,
+          "perfectPerClear": 1,
+          "medsUp": {
+            "attempts": 2,
+            "clears": 1,
+            "failures": 1,
+            "perfect": 1,
+            "withDeaths": 0,
+            "wars": 2,
+            "failureRate": 0.5,
+            "clearRate": 0.5,
+            "perfectPerAttempt": 0.5,
+            "perfectPerClear": 1
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 1,
+          "clears": 1,
+          "failures": 0,
+          "perfect": 0,
+          "withDeaths": 1,
+          "wars": 1,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0,
+          "perfectPerClear": 0,
+          "medsUp": {
+            "attempts": 0,
+            "clears": 0,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 0,
+            "failureRate": null,
+            "clearRate": null,
+            "perfectPerAttempt": null,
+            "perfectPerClear": null
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 233,
+      "unknownMows": 0,
+      "mows": [
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 153,
+          "share": 0.6566523605150214
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 30,
+          "share": 0.12875536480686695
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 26,
+          "share": 0.11158798283261803
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 18,
+          "share": 0.07725321888412018
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 3,
+          "share": 0.012875536480686695
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 3,
+          "share": 0.012875536480686695
+        }
+      ]
+    },
+    {
+      "id": "D9",
+      "heroes": [
+        "custoBladeChampion",
+        "custoTrajann",
+        "bloodDante",
+        "worldKharn",
+        "spaceBlackmane"
+      ],
+      "mow": "mow:black_forgefiend_01",
+      "attempts": 128,
+      "clears": 104,
+      "failures": 24,
+      "perfect": 44,
+      "withDeaths": 60,
+      "wars": 82,
+      "failureRate": 0.1875,
+      "clearRate": 0.8125,
+      "perfectPerAttempt": 0.34375,
+      "perfectPerClear": 0.4230769230769231,
+      "medsUp": {
+        "attempts": 75,
+        "clears": 57,
+        "failures": 18,
+        "perfect": 26,
+        "withDeaths": 31,
+        "wars": 52,
+        "failureRate": 0.24,
+        "clearRate": 0.76,
+        "perfectPerAttempt": 0.3466666666666667,
+        "perfectPerClear": 0.45614035087719296
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 1,
+          "clears": 1,
+          "failures": 0,
+          "perfect": 0,
+          "withDeaths": 1,
+          "wars": 1,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0,
+          "perfectPerClear": 0,
+          "share": 0.0078125,
+          "medsUp": {
+            "attempts": 0,
+            "clears": 0,
+            "failures": 0,
+            "perfect": 0,
+            "withDeaths": 0,
+            "wars": 0,
+            "failureRate": null,
+            "clearRate": null,
+            "perfectPerAttempt": null,
+            "perfectPerClear": null
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 26,
+          "clears": 17,
+          "failures": 9,
+          "perfect": 3,
+          "withDeaths": 14,
+          "wars": 18,
+          "failureRate": 0.34615384615384615,
+          "clearRate": 0.6538461538461539,
+          "perfectPerAttempt": 0.11538461538461539,
+          "perfectPerClear": 0.17647058823529413,
+          "share": 0.203125,
+          "medsUp": {
+            "attempts": 16,
+            "clears": 9,
+            "failures": 7,
+            "perfect": 2,
+            "withDeaths": 7,
+            "wars": 12,
+            "failureRate": 0.4375,
+            "clearRate": 0.5625,
+            "perfectPerAttempt": 0.125,
+            "perfectPerClear": 0.2222222222222222
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 23,
+          "clears": 19,
+          "failures": 4,
+          "perfect": 6,
+          "withDeaths": 13,
+          "wars": 18,
+          "failureRate": 0.17391304347826086,
+          "clearRate": 0.8260869565217391,
+          "perfectPerAttempt": 0.2608695652173913,
+          "perfectPerClear": 0.3157894736842105,
+          "share": 0.1796875,
+          "medsUp": {
+            "attempts": 13,
+            "clears": 10,
+            "failures": 3,
+            "perfect": 3,
+            "withDeaths": 7,
+            "wars": 11,
+            "failureRate": 0.23076923076923078,
+            "clearRate": 0.7692307692307693,
+            "perfectPerAttempt": 0.23076923076923078,
+            "perfectPerClear": 0.3
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 46,
+          "clears": 38,
+          "failures": 8,
+          "perfect": 16,
+          "withDeaths": 22,
+          "wars": 24,
+          "failureRate": 0.17391304347826086,
+          "clearRate": 0.8260869565217391,
+          "perfectPerAttempt": 0.34782608695652173,
+          "perfectPerClear": 0.42105263157894735,
+          "share": 0.359375,
+          "medsUp": {
+            "attempts": 30,
+            "clears": 24,
+            "failures": 6,
+            "perfect": 11,
+            "withDeaths": 13,
+            "wars": 16,
+            "failureRate": 0.2,
+            "clearRate": 0.8,
+            "perfectPerAttempt": 0.36666666666666664,
+            "perfectPerClear": 0.4583333333333333
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 32,
+          "clears": 29,
+          "failures": 3,
+          "perfect": 19,
+          "withDeaths": 10,
+          "wars": 21,
+          "failureRate": 0.09375,
+          "clearRate": 0.90625,
+          "perfectPerAttempt": 0.59375,
+          "perfectPerClear": 0.6551724137931034,
+          "share": 0.25,
+          "medsUp": {
+            "attempts": 16,
+            "clears": 14,
+            "failures": 2,
+            "perfect": 10,
+            "withDeaths": 4,
+            "wars": 13,
+            "failureRate": 0.125,
+            "clearRate": 0.875,
+            "perfectPerAttempt": 0.625,
+            "perfectPerClear": 0.7142857142857143
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 505,
+          "clears": 473,
+          "failures": 32,
+          "perfect": 261,
+          "withDeaths": 212,
+          "wars": 170,
+          "failureRate": 0.06336633663366337,
+          "clearRate": 0.9366336633663367,
+          "perfectPerAttempt": 0.5168316831683168,
+          "perfectPerClear": 0.5517970401691332,
+          "medsUp": {
+            "attempts": 340,
+            "clears": 314,
+            "failures": 26,
+            "perfect": 162,
+            "withDeaths": 152,
+            "wars": 138,
+            "failureRate": 0.07647058823529412,
+            "clearRate": 0.9235294117647059,
+            "perfectPerAttempt": 0.4764705882352941,
+            "perfectPerClear": 0.5159235668789809
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 331,
+          "clears": 251,
+          "failures": 80,
+          "perfect": 90,
+          "withDeaths": 161,
+          "wars": 187,
+          "failureRate": 0.24169184290030213,
+          "clearRate": 0.7583081570996979,
+          "perfectPerAttempt": 0.2719033232628399,
+          "perfectPerClear": 0.35856573705179284,
+          "medsUp": {
+            "attempts": 184,
+            "clears": 123,
+            "failures": 61,
+            "perfect": 43,
+            "withDeaths": 80,
+            "wars": 133,
+            "failureRate": 0.33152173913043476,
+            "clearRate": 0.6684782608695652,
+            "perfectPerAttempt": 0.23369565217391305,
+            "perfectPerClear": 0.34959349593495936
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 185,
+          "clears": 164,
+          "failures": 21,
+          "perfect": 84,
+          "withDeaths": 80,
+          "wars": 128,
+          "failureRate": 0.11351351351351352,
+          "clearRate": 0.8864864864864865,
+          "perfectPerAttempt": 0.4540540540540541,
+          "perfectPerClear": 0.5121951219512195,
+          "medsUp": {
+            "attempts": 121,
+            "clears": 107,
+            "failures": 14,
+            "perfect": 46,
+            "withDeaths": 61,
+            "wars": 94,
+            "failureRate": 0.11570247933884298,
+            "clearRate": 0.8842975206611571,
+            "perfectPerAttempt": 0.38016528925619836,
+            "perfectPerClear": 0.42990654205607476
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 164,
+          "clears": 164,
+          "failures": 0,
+          "perfect": 114,
+          "withDeaths": 50,
+          "wars": 117,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.6951219512195121,
+          "perfectPerClear": 0.6951219512195121,
+          "medsUp": {
+            "attempts": 117,
+            "clears": 117,
+            "failures": 0,
+            "perfect": 79,
+            "withDeaths": 38,
+            "wars": 89,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.6752136752136753,
+            "perfectPerClear": 0.6752136752136753
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 166,
+          "clears": 143,
+          "failures": 23,
+          "perfect": 48,
+          "withDeaths": 95,
+          "wars": 118,
+          "failureRate": 0.13855421686746988,
+          "clearRate": 0.8614457831325302,
+          "perfectPerAttempt": 0.2891566265060241,
+          "perfectPerClear": 0.3356643356643357,
+          "medsUp": {
+            "attempts": 93,
+            "clears": 77,
+            "failures": 16,
+            "perfect": 27,
+            "withDeaths": 50,
+            "wars": 78,
+            "failureRate": 0.17204301075268819,
+            "clearRate": 0.8279569892473119,
+            "perfectPerAttempt": 0.2903225806451613,
+            "perfectPerClear": 0.35064935064935066
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 124,
+          "clears": 103,
+          "failures": 21,
+          "perfect": 43,
+          "withDeaths": 60,
+          "wars": 98,
+          "failureRate": 0.1693548387096774,
+          "clearRate": 0.8306451612903226,
+          "perfectPerAttempt": 0.3467741935483871,
+          "perfectPerClear": 0.4174757281553398,
+          "medsUp": {
+            "attempts": 89,
+            "clears": 70,
+            "failures": 19,
+            "perfect": 26,
+            "withDeaths": 44,
+            "wars": 75,
+            "failureRate": 0.21348314606741572,
+            "clearRate": 0.7865168539325843,
+            "perfectPerAttempt": 0.29213483146067415,
+            "perfectPerClear": 0.37142857142857144
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 94,
+          "clears": 83,
+          "failures": 11,
+          "perfect": 28,
+          "withDeaths": 55,
+          "wars": 79,
+          "failureRate": 0.11702127659574468,
+          "clearRate": 0.8829787234042553,
+          "perfectPerAttempt": 0.2978723404255319,
+          "perfectPerClear": 0.3373493975903614,
+          "medsUp": {
+            "attempts": 61,
+            "clears": 50,
+            "failures": 11,
+            "perfect": 14,
+            "withDeaths": 36,
+            "wars": 53,
+            "failureRate": 0.18032786885245902,
+            "clearRate": 0.819672131147541,
+            "perfectPerAttempt": 0.22950819672131148,
+            "perfectPerClear": 0.28
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 86,
+          "clears": 74,
+          "failures": 12,
+          "perfect": 41,
+          "withDeaths": 33,
+          "wars": 67,
+          "failureRate": 0.13953488372093023,
+          "clearRate": 0.8604651162790697,
+          "perfectPerAttempt": 0.47674418604651164,
+          "perfectPerClear": 0.5540540540540541,
+          "medsUp": {
+            "attempts": 58,
+            "clears": 47,
+            "failures": 11,
+            "perfect": 28,
+            "withDeaths": 19,
+            "wars": 46,
+            "failureRate": 0.1896551724137931,
+            "clearRate": 0.8103448275862069,
+            "perfectPerAttempt": 0.4827586206896552,
+            "perfectPerClear": 0.5957446808510638
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 15,
+          "clears": 15,
+          "failures": 0,
+          "perfect": 11,
+          "withDeaths": 4,
+          "wars": 15,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.7333333333333333,
+          "perfectPerClear": 0.7333333333333333,
+          "medsUp": {
+            "attempts": 9,
+            "clears": 9,
+            "failures": 0,
+            "perfect": 6,
+            "withDeaths": 3,
+            "wars": 9,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.6666666666666666,
+            "perfectPerClear": 0.6666666666666666
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 7,
+          "clears": 6,
+          "failures": 1,
+          "perfect": 2,
+          "withDeaths": 4,
+          "wars": 6,
+          "failureRate": 0.14285714285714285,
+          "clearRate": 0.8571428571428571,
+          "perfectPerAttempt": 0.2857142857142857,
+          "perfectPerClear": 0.3333333333333333,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 4,
+            "failures": 1,
+            "perfect": 1,
+            "withDeaths": 3,
+            "wars": 4,
+            "failureRate": 0.2,
+            "clearRate": 0.8,
+            "perfectPerAttempt": 0.2,
+            "perfectPerClear": 0.25
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 327,
+      "unknownMows": 0,
+      "mows": [
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 154,
+          "share": 0.4709480122324159
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 74,
+          "share": 0.22629969418960244
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 73,
+          "share": 0.22324159021406728
+        },
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 14,
+          "share": 0.04281345565749235
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 5,
+          "share": 0.01529051987767584
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 3,
+          "share": 0.009174311926605505
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 2,
+          "share": 0.0061162079510703364
+        },
+        {
+          "unit": "mow:orkss_rukkatrukk_01",
+          "attempts": 2,
+          "share": 0.0061162079510703364
+        }
+      ]
+    },
+    {
+      "id": "D10",
+      "heroes": [
+        "admecRuststalker",
+        "admecMarshall",
+        "admecManipulus",
+        "admecDominus",
+        "admecDestroyer"
+      ],
+      "mow": "mow:ultra_dreadnought_01",
+      "attempts": 136,
+      "clears": 115,
+      "failures": 21,
+      "perfect": 51,
+      "withDeaths": 64,
+      "wars": 100,
+      "failureRate": 0.15441176470588236,
+      "clearRate": 0.8455882352941176,
+      "perfectPerAttempt": 0.375,
+      "perfectPerClear": 0.4434782608695652,
+      "medsUp": {
+        "attempts": 89,
+        "clears": 71,
+        "failures": 18,
+        "perfect": 34,
+        "withDeaths": 37,
+        "wars": 69,
+        "failureRate": 0.20224719101123595,
+        "clearRate": 0.797752808988764,
+        "perfectPerAttempt": 0.38202247191011235,
+        "perfectPerClear": 0.4788732394366197
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "attempts": 9,
+          "clears": 7,
+          "failures": 2,
+          "perfect": 2,
+          "withDeaths": 5,
+          "wars": 9,
+          "failureRate": 0.2222222222222222,
+          "clearRate": 0.7777777777777778,
+          "perfectPerAttempt": 0.2222222222222222,
+          "perfectPerClear": 0.2857142857142857,
+          "share": 0.0661764705882353,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 3,
+            "failures": 2,
+            "perfect": 2,
+            "withDeaths": 1,
+            "wars": 5,
+            "failureRate": 0.4,
+            "clearRate": 0.6,
+            "perfectPerAttempt": 0.4,
+            "perfectPerClear": 0.6666666666666666
+          }
+        },
+        {
+          "tier": 2,
+          "attempts": 33,
+          "clears": 25,
+          "failures": 8,
+          "perfect": 7,
+          "withDeaths": 18,
+          "wars": 24,
+          "failureRate": 0.24242424242424243,
+          "clearRate": 0.7575757575757576,
+          "perfectPerAttempt": 0.21212121212121213,
+          "perfectPerClear": 0.28,
+          "share": 0.2426470588235294,
+          "medsUp": {
+            "attempts": 28,
+            "clears": 20,
+            "failures": 8,
+            "perfect": 7,
+            "withDeaths": 13,
+            "wars": 22,
+            "failureRate": 0.2857142857142857,
+            "clearRate": 0.7142857142857143,
+            "perfectPerAttempt": 0.25,
+            "perfectPerClear": 0.35
+          }
+        },
+        {
+          "tier": 3,
+          "attempts": 35,
+          "clears": 29,
+          "failures": 6,
+          "perfect": 12,
+          "withDeaths": 17,
+          "wars": 25,
+          "failureRate": 0.17142857142857143,
+          "clearRate": 0.8285714285714286,
+          "perfectPerAttempt": 0.34285714285714286,
+          "perfectPerClear": 0.41379310344827586,
+          "share": 0.25735294117647056,
+          "medsUp": {
+            "attempts": 20,
+            "clears": 17,
+            "failures": 3,
+            "perfect": 6,
+            "withDeaths": 11,
+            "wars": 15,
+            "failureRate": 0.15,
+            "clearRate": 0.85,
+            "perfectPerAttempt": 0.3,
+            "perfectPerClear": 0.35294117647058826
+          }
+        },
+        {
+          "tier": 4,
+          "attempts": 51,
+          "clears": 46,
+          "failures": 5,
+          "perfect": 25,
+          "withDeaths": 21,
+          "wars": 37,
+          "failureRate": 0.09803921568627451,
+          "clearRate": 0.9019607843137255,
+          "perfectPerAttempt": 0.49019607843137253,
+          "perfectPerClear": 0.5434782608695652,
+          "share": 0.375,
+          "medsUp": {
+            "attempts": 31,
+            "clears": 26,
+            "failures": 5,
+            "perfect": 15,
+            "withDeaths": 11,
+            "wars": 24,
+            "failureRate": 0.16129032258064516,
+            "clearRate": 0.8387096774193549,
+            "perfectPerAttempt": 0.4838709677419355,
+            "perfectPerClear": 0.5769230769230769
+          }
+        },
+        {
+          "tier": 5,
+          "attempts": 8,
+          "clears": 8,
+          "failures": 0,
+          "perfect": 5,
+          "withDeaths": 3,
+          "wars": 5,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.625,
+          "perfectPerClear": 0.625,
+          "share": 0.058823529411764705,
+          "medsUp": {
+            "attempts": 5,
+            "clears": 5,
+            "failures": 0,
+            "perfect": 4,
+            "withDeaths": 1,
+            "wars": 3,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.8,
+            "perfectPerClear": 0.8
+          }
+        }
+      ],
+      "counters": [
+        {
+          "id": "c_admecManipulus_admecMarshall_admecRuststalker",
+          "attempts": 487,
+          "clears": 424,
+          "failures": 63,
+          "perfect": 214,
+          "withDeaths": 210,
+          "wars": 242,
+          "failureRate": 0.1293634496919918,
+          "clearRate": 0.8706365503080082,
+          "perfectPerAttempt": 0.4394250513347023,
+          "perfectPerClear": 0.5047169811320755,
+          "medsUp": {
+            "attempts": 295,
+            "clears": 242,
+            "failures": 53,
+            "perfect": 111,
+            "withDeaths": 131,
+            "wars": 192,
+            "failureRate": 0.17966101694915254,
+            "clearRate": 0.8203389830508474,
+            "perfectPerAttempt": 0.376271186440678,
+            "perfectPerClear": 0.45867768595041325
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_genesBiophagus_genesKelermorph_genesPatriarch_genesPrimus",
+          "attempts": 187,
+          "clears": 186,
+          "failures": 1,
+          "perfect": 148,
+          "withDeaths": 38,
+          "wars": 135,
+          "failureRate": 0.0053475935828877,
+          "clearRate": 0.9946524064171123,
+          "perfectPerAttempt": 0.7914438502673797,
+          "perfectPerClear": 0.7956989247311828,
+          "medsUp": {
+            "attempts": 132,
+            "clears": 131,
+            "failures": 1,
+            "perfect": 99,
+            "withDeaths": 32,
+            "wars": 105,
+            "failureRate": 0.007575757575757576,
+            "clearRate": 0.9924242424242424,
+            "perfectPerAttempt": 0.75,
+            "perfectPerClear": 0.7557251908396947
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_orksNob_orksRuntherd_orksWarboss",
+          "attempts": 208,
+          "clears": 184,
+          "failures": 24,
+          "perfect": 109,
+          "withDeaths": 75,
+          "wars": 149,
+          "failureRate": 0.11538461538461539,
+          "clearRate": 0.8846153846153846,
+          "perfectPerAttempt": 0.5240384615384616,
+          "perfectPerClear": 0.592391304347826,
+          "medsUp": {
+            "attempts": 137,
+            "clears": 116,
+            "failures": 21,
+            "perfect": 61,
+            "withDeaths": 55,
+            "wars": 111,
+            "failureRate": 0.15328467153284672,
+            "clearRate": 0.8467153284671532,
+            "perfectPerAttempt": 0.44525547445255476,
+            "perfectPerClear": 0.5258620689655172
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackPossession_thousInfernalMaster_thousTzaangor",
+          "attempts": 159,
+          "clears": 147,
+          "failures": 12,
+          "perfect": 94,
+          "withDeaths": 53,
+          "wars": 126,
+          "failureRate": 0.07547169811320754,
+          "clearRate": 0.9245283018867925,
+          "perfectPerAttempt": 0.5911949685534591,
+          "perfectPerClear": 0.6394557823129252,
+          "medsUp": {
+            "attempts": 98,
+            "clears": 89,
+            "failures": 9,
+            "perfect": 52,
+            "withDeaths": 37,
+            "wars": 85,
+            "failureRate": 0.09183673469387756,
+            "clearRate": 0.9081632653061225,
+            "perfectPerAttempt": 0.5306122448979592,
+            "perfectPerClear": 0.5842696629213483
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+          "attempts": 113,
+          "clears": 110,
+          "failures": 3,
+          "perfect": 70,
+          "withDeaths": 40,
+          "wars": 92,
+          "failureRate": 0.02654867256637168,
+          "clearRate": 0.9734513274336283,
+          "perfectPerAttempt": 0.6194690265486725,
+          "perfectPerClear": 0.6363636363636364,
+          "medsUp": {
+            "attempts": 74,
+            "clears": 72,
+            "failures": 2,
+            "perfect": 45,
+            "withDeaths": 27,
+            "wars": 65,
+            "failureRate": 0.02702702702702703,
+            "clearRate": 0.972972972972973,
+            "perfectPerAttempt": 0.6081081081081081,
+            "perfectPerClear": 0.625
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+          "attempts": 108,
+          "clears": 98,
+          "failures": 10,
+          "perfect": 51,
+          "withDeaths": 47,
+          "wars": 87,
+          "failureRate": 0.09259259259259259,
+          "clearRate": 0.9074074074074074,
+          "perfectPerAttempt": 0.4722222222222222,
+          "perfectPerClear": 0.5204081632653061,
+          "medsUp": {
+            "attempts": 59,
+            "clears": 50,
+            "failures": 9,
+            "perfect": 26,
+            "withDeaths": 24,
+            "wars": 56,
+            "failureRate": 0.15254237288135594,
+            "clearRate": 0.847457627118644,
+            "perfectPerAttempt": 0.4406779661016949,
+            "perfectPerClear": 0.52
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_spaceBlackmane_tauAunShi",
+          "attempts": 99,
+          "clears": 95,
+          "failures": 4,
+          "perfect": 67,
+          "withDeaths": 28,
+          "wars": 77,
+          "failureRate": 0.04040404040404041,
+          "clearRate": 0.9595959595959596,
+          "perfectPerAttempt": 0.6767676767676768,
+          "perfectPerClear": 0.7052631578947368,
+          "medsUp": {
+            "attempts": 59,
+            "clears": 56,
+            "failures": 3,
+            "perfect": 38,
+            "withDeaths": 18,
+            "wars": 48,
+            "failureRate": 0.05084745762711865,
+            "clearRate": 0.9491525423728814,
+            "perfectPerAttempt": 0.6440677966101694,
+            "perfectPerClear": 0.6785714285714286
+          },
+          "evidence": "Supported"
+        },
+        {
+          "id": "c_tauCrisis_tauFarsight_tauShadowsun",
+          "attempts": 25,
+          "clears": 22,
+          "failures": 3,
+          "perfect": 15,
+          "withDeaths": 7,
+          "wars": 23,
+          "failureRate": 0.12,
+          "clearRate": 0.88,
+          "perfectPerAttempt": 0.6,
+          "perfectPerClear": 0.6818181818181818,
+          "medsUp": {
+            "attempts": 19,
+            "clears": 16,
+            "failures": 3,
+            "perfect": 12,
+            "withDeaths": 4,
+            "wars": 17,
+            "failureRate": 0.15789473684210525,
+            "clearRate": 0.8421052631578947,
+            "perfectPerAttempt": 0.631578947368421,
+            "perfectPerClear": 0.75
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+          "attempts": 16,
+          "clears": 15,
+          "failures": 1,
+          "perfect": 9,
+          "withDeaths": 6,
+          "wars": 14,
+          "failureRate": 0.0625,
+          "clearRate": 0.9375,
+          "perfectPerAttempt": 0.5625,
+          "perfectPerClear": 0.6,
+          "medsUp": {
+            "attempts": 12,
+            "clears": 11,
+            "failures": 1,
+            "perfect": 7,
+            "withDeaths": 4,
+            "wars": 11,
+            "failureRate": 0.08333333333333333,
+            "clearRate": 0.9166666666666666,
+            "perfectPerAttempt": 0.5833333333333334,
+            "perfectPerClear": 0.6363636363636364
+          },
+          "evidence": "Low support"
+        },
+        {
+          "id": "c_deathTyphus_thousAhriman_thousTerminator",
+          "attempts": 9,
+          "clears": 9,
+          "failures": 0,
+          "perfect": 7,
+          "withDeaths": 2,
+          "wars": 8,
+          "failureRate": 0,
+          "clearRate": 1,
+          "perfectPerAttempt": 0.7777777777777778,
+          "perfectPerClear": 0.7777777777777778,
+          "medsUp": {
+            "attempts": 6,
+            "clears": 6,
+            "failures": 0,
+            "perfect": 4,
+            "withDeaths": 2,
+            "wars": 6,
+            "failureRate": 0,
+            "clearRate": 1,
+            "perfectPerAttempt": 0.6666666666666666,
+            "perfectPerClear": 0.6666666666666666
+          },
+          "evidence": "Low support"
+        }
+      ],
+      "mowOccurrences": 337,
+      "unknownMows": 3,
+      "mows": [
+        {
+          "unit": "mow:ultra_dreadnought_01",
+          "attempts": 162,
+          "share": 0.4807121661721068
+        },
+        {
+          "unit": "mow:black_forgefiend_01",
+          "attempts": 52,
+          "share": 0.1543026706231454
+        },
+        {
+          "unit": "mow:astra_ordnancebattery_01",
+          "attempts": 39,
+          "share": 0.11572700296735905
+        },
+        {
+          "unit": "mow:death_crawler_01",
+          "attempts": 28,
+          "share": 0.0830860534124629
+        },
+        {
+          "unit": "mow:tyran_biovore_01",
+          "attempts": 22,
+          "share": 0.06528189910979229
+        },
+        {
+          "unit": "mow:necro_reanimator_01",
+          "attempts": 14,
+          "share": 0.04154302670623145
+        },
+        {
+          "unit": "mow:tauta_broadside_01",
+          "attempts": 8,
+          "share": 0.02373887240356083
+        },
+        {
+          "unit": "mow:darka_stormspeeder_01",
+          "attempts": 5,
+          "share": 0.01483679525222552
+        },
+        {
+          "unit": "mow:adept_exorcist_01",
+          "attempts": 2,
+          "share": 0.005934718100890208
+        },
+        {
+          "unit": "mow:orkss_rukkatrukk_01",
+          "attempts": 1,
+          "share": 0.002967359050445104
+        },
+        {
+          "unit": "mow:thous_daemonprince_01",
+          "attempts": 1,
+          "share": 0.002967359050445104
+        }
+      ]
+    }
+  ]
+}

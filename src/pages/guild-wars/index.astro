@@ -3,11 +3,15 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import editorial from '../../data/guild-wars/editorial.json';
+import defendEditorial from '../../data/guild-wars/defend-editorial.json';
 import '../../styles/guild-wars.css';
 
-const guides = [{ title: editorial.title, description: editorial.cardDescription, href: '/guild-wars/attack/', image: editorial.infographic }];
+const guides = [
+  { title: editorial.title, description: editorial.cardDescription, href: '/guild-wars/attack/', image: editorial.infographic },
+  { title: defendEditorial.title, description: defendEditorial.cardDescription, href: '/guild-wars/defend/', image: defendEditorial.infographic },
+];
 ---
-<Layout title="Guild Wars | Terminus Maximus Infographics" description="Guild Wars guides for attacker teams, observed lineups, and recorded results." image={editorial.infographic.webp} url="/guild-wars/">
+<Layout title="Guild Wars | Terminus Maximus Infographics" description="Guild Wars guides for attack and defend teams, recorded results, and their most common counters." image={editorial.infographic.webp} url="/guild-wars/">
   <Header />
   <main class="gw-guide">
     <section class="hero"><h1>Guild Wars</h1><p>{editorial.landingIntro}</p></section>

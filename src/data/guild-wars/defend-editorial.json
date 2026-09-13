@@ -1,0 +1,140 @@
+{
+  "edition": "September 2026",
+  "lastUpdated": "Sept 2026",
+  "title": "Guild War Top 10 Defend Teams",
+  "description": "Explore ten Guild War defend teams and their most common counters.",
+  "cardDescription": "Guild War Top 10 Defend Teams and their most common counters",
+  "captureDate": "September 6, 2026",
+  "extractionDate": "September 12, 2026",
+  "infographic": {
+    "png": "/images/guild-wars-defend.png",
+    "webp": "/images/web/guild-wars-defend.webp",
+    "thumbnail": "/images/thumbnails/guild-wars-defend-thumb.png",
+    "width": 700,
+    "height": 393,
+    "thumbnailWidth": 600,
+    "thumbnailHeight": 337
+  },
+  "teams": [
+    {
+      "id": "D1",
+      "title": "Death Guard",
+      "anchor": "death-guard",
+      "heroes": [
+        "deathBlightlord",
+        "deathBlightbringer",
+        "deathRotbone",
+        "deathTyphus",
+        "thousTerminator"
+      ]
+    },
+    {
+      "id": "D2",
+      "title": "Necrons",
+      "anchor": "necrons",
+      "heroes": [
+        "necroSpyder",
+        "necroDestroyer",
+        "necroOverlord",
+        "necroPlasmancer",
+        "necroChronomancer"
+      ]
+    },
+    {
+      "id": "D3",
+      "title": "CRIMJ",
+      "anchor": "crimj",
+      "heroes": [
+        "adeptCelestine",
+        "tauCrisis",
+        "genesPrimus",
+        "bloodMephiston",
+        "genesKelermorph"
+      ]
+    },
+    {
+      "id": "D4",
+      "title": "Black Legion",
+      "anchor": "black-legion",
+      "heroes": [
+        "blackAbaddon",
+        "blackHaarken",
+        "blackObliterator",
+        "blackPossession",
+        "blackTerminator"
+      ]
+    },
+    {
+      "id": "D5",
+      "title": "Orks",
+      "anchor": "orks",
+      "heroes": [
+        "orksWarboss",
+        "orksRuntherd",
+        "orksBigMek",
+        "orksKillaKan",
+        "orksNob"
+      ]
+    },
+    {
+      "id": "D6",
+      "title": "Dark Angels",
+      "anchor": "dark-angels",
+      "heroes": [
+        "darkaCompanion",
+        "darkaAzrael",
+        "darkaAsmodai",
+        "darkaHellblaster",
+        "darkaTerminator"
+      ]
+    },
+    {
+      "id": "D7",
+      "title": "Tyranids",
+      "anchor": "tyranids",
+      "heroes": [
+        "tyranDeathleaper",
+        "tyranNeurothrope",
+        "tyranParasite",
+        "tyranTyrantGuard",
+        "tyranWingedPrime"
+      ]
+    },
+    {
+      "id": "D8",
+      "title": "Ultramarines",
+      "anchor": "ultramarines",
+      "heroes": [
+        "ultraCalgar",
+        "ultraTitus",
+        "ultraInceptorSgt",
+        "ultraTigurius",
+        "ultraApothecary"
+      ]
+    },
+    {
+      "id": "D9",
+      "title": "Custodes",
+      "anchor": "custodes",
+      "heroes": [
+        "custoBladeChampion",
+        "custoTrajann",
+        "bloodDante",
+        "worldKharn",
+        "spaceBlackmane"
+      ]
+    },
+    {
+      "id": "D10",
+      "title": "Mech",
+      "anchor": "mech",
+      "heroes": [
+        "admecRuststalker",
+        "admecMarshall",
+        "admecManipulus",
+        "admecDominus",
+        "admecDestroyer"
+      ]
+    }
+  ]
+}
