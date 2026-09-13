@@ -1,6 +1,6 @@
 {
   "status": "beta",
-  "exported_at": "2026-09-10T20:27:03",
+  "exported_at": "2026-09-13T16:41:48",
   "replays_filename": "PgC5E7jYNBPh8SoE9CGtXMH.json",
   "exports": [
     {
@@ -31,7 +31,7 @@
     {
       "source": "replays_master.csv",
       "output": "PgC5E7jYNBPh8SoE9CGtXMH.json",
-      "rows": 2300
+      "rows": 2311
     },
     {
       "source": "team_archetype.csv",
