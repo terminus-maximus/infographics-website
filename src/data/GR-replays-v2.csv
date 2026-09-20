@@ -108,7 +108,7 @@ SEASON,TIER,video_id,BOSS,TIER,MAP,Archetype,TEAM,DAMAGE,CREATOR,VALIDATE_LINK
 108,M1,YJWuFS-o0jI,Screamer,,,,"Farsight, Revas, Actus, Darkstrider, Eldy, PBC","950,000",JurassicKyle,https://www.youtube.com/watch?v=YJWuFS-o0jI
 108,L5,0dVILvgFqiw,Hive Tyrant,,,,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
 108,L5,D6T29ec9uWI,Hive Tyrant,,,,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
-108,L4,2Q-iQfjjOLw,Tervigon,,,,"Lav, Kari, Traj, Boss, Helb, Galatian","2,780,000",Painhawk,https://www.youtube.com/watch?v=2Q-iQfjjOLw
+108,L4,2Q-iQfjjOLw,Tervigon,,,,"Lav, Kari, Traj, Boss, Helb, PBC","2,780,000",Painhawk,https://www.youtube.com/watch?v=2Q-iQfjjOLw
 108,L4,NK5sd4-g5zg,Tervigon,,,,"Rho, Tan, Actus, Vit, Helb, Galatian","2,190,000",Machiep,https://www.youtube.com/watch?v=NK5sd4-g5zg
 108,L3,0dVILvgFqiw,Hive Tyrant,,,,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
 108,L3,D6T29ec9uWI,Hive Tyrant,,,,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
@@ -159,10 +159,10 @@ SEASON,TIER,video_id,BOSS,TIER,MAP,Archetype,TEAM,DAMAGE,CREATOR,VALIDATE_LINK
 110,L5,7wltu4R6hbE,Avatar,L5,Avatar_05,Laviscus,"Lav, Kari, Traj, Boss, Kharn, Biovore","2,000,000",Painhawk,https://www.youtube.com/watch?v=7wltu4R6hbE
 110,L5,x5xRU1vQUjA,Avatar,L5,Avatar_05,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,550,000",Un4given,https://www.youtube.com/watch?v=x5xRU1vQUjA
 110,L4,uzcIUocg55w,Dorn,L4,Dorn_06,Laviscus,"Lav, Kari, Traj, Boss, Vit, Biovore","1,520,000",Painhawk,https://www.youtube.com/watch?v=uzcIUocg55w
-110,L4,7ZtjxGwFdx8,Dorn,L1,Dorn_06,AdMech,"Rho, Tan, Actus, Vit, Sho, Biovore","1,300,000",Yagyuu,https://www.youtube.com/watch?v=7ZtjxGwFdx8
+110,L4,GAyVRZE-t-Y,Dorn,L2,Dorn_04,AdMech,"Rho, Tan, Actus, Vit, Traj, Reanimator","1,790,000",Yagyuu,https://www.youtube.com/watch?v=GAyVRZE-t-Y
+110,L3,XFta3pkqc_k,Riptide,L3,Riptide_02,AdMech,"Rho, Tan, Actus, Vit, Ammuk, Biovore","1,560,000",Yagyuu,https://www.youtube.com/watch?v=XFta3pkqc_k
 110,L3,3qgSv-Zn768,Riptide,L1,Riptide_03,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,210,000",Mawg,https://www.youtube.com/watch?v=3qgSv-Zn768
-110,L3,REGZiCh0NCk,Riptide,L1,Riptide_03,AdMech,"Rho, Tan, Actus, Vit, Traj, Galatian","1,360,000",Painhawk,https://www.youtube.com/watch?v=REGZiCh0NCk
-110,L2,jfX1FQLAM-E,Tervigon,L2,Tervigon_04,Laviscus,"Lav, Kari, Traj, Boss, Helb, PBC","2,400,000",Lyell,https://www.youtube.com/watch?v=jfX1FQLAM-E
-110,L2,NK5sd4-g5zg,Tervigon,L2,Tervigon_04,AdMech,"Rho, Tan, Actus, Vit, Helb, Galatian","2,190,000",Machiep,https://www.youtube.com/watch?v=NK5sd4-g5zg
+110,L2,iXK1z8rOT-c,Tervigon,L4,Tervigon_04,AdMech,"Rho, Tan, Anu, Vit, Helb, Reanimator","3,507,668",Yagyuu,https://www.youtube.com/watch?v=iXK1z8rOT-c
+110,L2,2Q-iQfjjOLw,Tervigon,L2,Tervigon_04,Laviscus,"Lav, Kari, Traj, Boss, Helb, PBC","2,780,000",Painhawk,https://www.youtube.com/watch?v=2Q-iQfjjOLw
 110,L1,QKB70NiN4LQ,Screamer,L2,Screamer_04,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,390,000",Painhawk,https://www.youtube.com/watch?v=QKB70NiN4LQ
-110,L1,Mw95t2KIuXY,Screamer,L2,Screamer_04,AdMech,"Rho, Tan, Actus, Vit, Traj, Galatian","1,940,000",Loknar,https://www.youtube.com/watch?v=Mw95t2KIuXY
+110,L1,oObsvio-hKE,Screamer,L2,Screamer_04,AdMech,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","1,880,000",Lyell,https://www.youtube.com/watch?v=oObsvio-hKE

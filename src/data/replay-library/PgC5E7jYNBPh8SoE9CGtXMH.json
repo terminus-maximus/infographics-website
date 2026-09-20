@@ -24428,20 +24428,20 @@
     "damage_guess":null,
     "damage_final":"2,780,000",
     "review_status":"VALID_REPLAY",
-    "agent_review":"LEGACY_REVIEW",
+    "agent_review":"HUMAN_REVIEWED",
     "discovered_at":"6\/23\/2026 4:28 PM",
     "notes":"app",
     "map":"Tervigon_04",
     "team_archetype":"Laviscus",
     "team_key":"Boss|Helb|Kari|Lav|Traj",
     "Team (no MoW)":"Lav, Kari, Traj, Boss, Helb",
-    "Team":"Lav, Kari, Traj, Boss, Helb, Galatian",
+    "Team":"Lav, Kari, Traj, Boss, Helb, PBC",
     "hero_1":"Lav",
     "hero_2":"Kari",
     "hero_3":"Traj",
     "hero_4":"Boss",
     "hero_5":"Helb",
-    "MoW":"Galatian"
+    "MoW":"PBC"
   },
   {
     "creator":"Machiep",
