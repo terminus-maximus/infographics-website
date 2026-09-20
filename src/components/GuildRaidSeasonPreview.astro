@@ -1,0 +1,87 @@
+---
+interface Props {
+  image: string;
+  webImage: string;
+  imageAlt: string;
+}
+
+const { image, webImage, imageAlt } = Astro.props;
+---
+
+<section class="season-preview">
+  <h1>Next Season</h1>
+  <a
+    href={image}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="image-link"
+    data-ga4-infographic-open
+    data-ga4-infographic-title={imageAlt}
+    data-ga4-link-source="image"
+  >
+    <img src={webImage} alt={imageAlt} class="infographic" />
+  </a>
+  <p class="caption">
+    <a
+      href={image}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-ga4-infographic-open
+      data-ga4-infographic-title={imageAlt}
+      data-ga4-link-source="caption"
+    >
+      CLICK FULL-SIZE INFOGRAPHIC
+    </a>
+  </p>
+</section>
+
+<style>
+  .season-preview {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .image-link {
+    display: block;
+  }
+
+  .infographic {
+    border-radius: 8px;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .caption {
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+
+  .caption a {
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .caption a:hover,
+  .caption a:focus-visible {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    .season-preview {
+      padding: 1.25rem;
+    }
+  }
+</style>

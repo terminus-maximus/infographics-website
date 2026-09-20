@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "check:guild-raid-next-season": "node scripts/check-guild-raid-next-season.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

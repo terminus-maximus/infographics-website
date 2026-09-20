@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
 import { discoveryGraphics } from "../../data/graphics";
 import { currentGuildRaidSeason } from "../../data/guildRaid";
+import { nextGuildRaidSeason } from "../../data/nextGuildRaidSeason";
 
 const guildRaidArchive = discoveryGraphics.find(
   (graphic) => graphic.href === "/guild-raid/archive",
@@ -17,6 +18,7 @@ const guildRaidGuides = [
     href: currentGuildRaidSeason.href,
     thumbnail: currentGuildRaidSeason.webImage,
   },
+  nextGuildRaidSeason,
   {
     title: "Boss Meta Guide",
     description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
@@ -52,7 +54,7 @@ const guildRaidGuides = [
 
       <div class="card-grid">
         {guildRaidGuides.map((guide) => (
-          <a class="card" href={guide.href}>
+          <a class:list={["card", { "next-season-card": guide === nextGuildRaidSeason }]} href={guide.href}>
             <div class="card-image-wrap">
               <img
                 src={guide.thumbnail}
@@ -281,6 +283,10 @@ const guildRaidGuides = [
     color: #cccccc;
     line-height: 1.5;
     margin-bottom: 0;
+  }
+
+  .next-season-card p {
+    color: #ffffff;
   }
 
   @media (max-width: 700px) {

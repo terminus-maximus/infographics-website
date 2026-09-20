@@ -1,140 +1,168 @@
-SEASON,TIER,video_id,BOSS,TEAM,DAMAGE,CREATOR,VALIDATE_LINK
-102,M2,sAST52AVT7Y,Avatar,Laviscus,"1,300,000",Painhawk,
-102,M2,UIGUORK0jTE,Avatar,Neuro,"1,100,000",Painhawk,
-102,M1,2HInUQkR18U,Dorn,AdMech,"1,200,000",UNDV jonowen,
-102,M1,rtEqdG50ss8,Dorn,Laviscus,"1,100,000",Kitty Bebop,
-102,L5,OYbjpaaxYHI,Cawl,Lav w Dante,"1,100,000",Painhawk,
-102,L5,W-pznfDfNSI,Cawl,Neuro,"930,000",Devastator490-HSS,
-102,L4,iI-LdaFFkjM,Ghaz,Lav w Dante,"1,400,000",Painhawk,
-102,L4,M2HfiWBEcFQ,Ghaz,Battlesuits,"1,060,000",Machieptube,
-102,L3,qNcWGRZkzCY,Screamer,Lav w PBC,"1,540,000",Painhawk,
-102,L3,84FOwvOZQgE,Screamer,TrajMECH,"1,360,000",Painhawk,
-102,L2,5frA--xoZO0,Riptide,TrajMECH,"1,060,000",Lyell,
-102,L2,CI2qj5-DFjg,Riptide,Lav w Dante,"963,000",UltraBrother40k,
-102,L1,Gou7JAUWJHY,Dorn,AdMech,"870,000",Devastator490-HSS,
-102,L1,z2ONkn-zO6s,Dorn,Laviscus,"861,000",UltraBrother40k,
-103,M2,-XMhSnr6ehE,Szarekh,Laviscus,"2,550,000",Painhawk,
-103,M2,mLAQMg-nEg8,Szarekh,AdMech,"1,300,000",Palaryel,
-103,M1,yl8OVWAapUc,Magnus,Custodes,"940,000",Nandi,
-103,M1,tBA8P89S6Dg,Magnus,Forcasmo,"987,000",Painhawk,
-103,L1,H6b3ofcOSTI,Screamer,Laviscus,"1,640,000",ge0desic,
-103,L1,_AQbP3kfQxw,Screamer,TrajMECH,"1,520,000",Machieptube,
-103,L2,DPCEmu_VMbs,Dorn,AdMech,"1,260,000",Loknar,
-103,L2,rtEqdG50ss8,Dorn,Laviscus,"1,100,000",Kitty Bebop,
-103,L3,D9RTevw5SEI,Riptide,TrajMECH,"1,010,000",Machieptube,
-103,L3,CI2qj5-DFjg,Riptide,Laviscus,"869,000",UltraBrother40k,
-103,L4,Zz5kvJevkNM,Lion,Neuro,"1,000,000",Nandi,
-103,L4,vSD_4HZtQUQ,Lion,Battlesuits,"1,252,841",TacticalRaven,
-103,L5,amLBjOxMw9M,Mortarion,Laviscus,"1,200,000",Don't Call Me Shirley,
-103,L5,RmTncdplo8Y,Mortarion,Neuro,"792,000",Painhawk,
-104,M2,dIiPcOWrTWk,Ghaz,Laviscus,"1,950,000",Painhawk,
-104,M2,SYyD93-Adts,Ghaz,Battlesuits,"1,120,000",Jurassic Kyle,
-104,M1,sL2nKJ7ZDhw,Cawl,Laviscus,"1,170,000",Hedonite,
-104,M1,B5I_AYTHRmQ,Cawl,Custodes,"1,090,000",MidnightHozz,
-104,L5,xsTygubUf3k,Avatar,Laviscus,"2,000,000",Painhawk,
-104,L5,4-vvT7quQIo,Avatar,Neuro,"1,400,000",Kolxer,
-104,L4,V_WB7KMyAjQ,Ghaz,Laviscus,"2,000,000",Painhawk,
-104,L4,UxfItyRwho4,Ghaz,Battlesuits,"1,900,000",Nandi,
-104,L3,DPCEmu_VMbs,Dorn,AdMech,"1,260,000",Loknar,
-104,L3,rtEqdG50ss8,Dorn,Laviscus,"1,100,000",Kitty Bebop,
-104,L2,jCF0izRvXC0,Screamer,TrajMech,"1,700,000",Painhawk,
-104,L2,JedfR5QadFc,Screamer,Laviscus,"2,500,000",Kitty Bebop,
-104,L1,78_c9nfzsWU,Riptide,TrajMech,"1,260,000",Painhawk,
-104,L1,GFCH8DAwOns,Riptide,Laviscus,"932,000",UltraBrother40k,
-105,M2,6AgE4JZw5aU,Magnus,"Kari, Traj, Kharn, Helb, Dante","812,000",Painhawk,https://www.youtube.com/watch?v=6AgE4JZw5aU
-105,M2,fjBrAtXrOZI,Magnus,"Kari, Traj, Kharn, Rag, Helb","785,000",GarviLoken,https://www.youtube.com/watch?v=fjBrAtXrOZI
-105,M1,0gQyyUSz0hA,Mortarion,"Lav, Kari, Traj, Boss, Atla","1,900,000",Blackmane Gaming,https://www.youtube.com/watch?v=0gQyyUSz0hA
-105,M1,0m5N-GCmpKE,Mortarion,"Neuro, Abrax, Ahri, Yaz, Rosie","950,000",Un4given,https://www.youtube.com/watch?v=0m5N-GCmpKE
-105,L5,GqGL_7orsNs,Lion,"Lav, Kari, Traj, Aesoth, Vit","1,560,000",Mawg,https://www.youtube.com/watch?v=GqGL_7orsNs
-105,L5,2YA89zo_u1Q,Lion,"Lav, Kari, Traj, Boss, Aesoth","1,400,000",Adeptus Gorditas,https://www.youtube.com/watch?v=2YA89zo_u1Q
-105,L4,CNEOWyf4kpA,Cawl,"Lav, Kari, Traj, Kharn, Dante","1,310,000",Ulf,https://www.youtube.com/watch?v=CNEOWyf4kpA
-105,L4,OtGeKDHCdy0,Cawl,"Neuro, Abrax, Ahri, Abaddon, Archi","960,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=OtGeKDHCdy0
-105,L3,XLcECO6lJA0,Avatar,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
-105,L3,LoL5L2SSLgA,Avatar,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
-105,L2,UqouUwUZC_M,Dorn,"Rho, Tan, Actus, Vit, Traj","1,580,000",Yagyuu,https://www.youtube.com/watch?v=UqouUwUZC_M
-105,L2,0OZSP8-gn7U,Dorn,"Lav, Kari, Traj, Boss, Vit","1,300,000",Don’t Call Me Shirley Tacticus Replays,https://www.youtube.com/watch?v=0OZSP8-gn7U
-105,L1,kX3ncIq8hIs,Screamer,"Rho, Tan, Actus, Vit, Traj","1,980,000",Machiep,https://www.youtube.com/watch?v=kX3ncIq8hIs
-105,L1,Y74uUgSfZrw,Screamer,"Lav, Kari, Traj, Boss, Vit","1,800,000",Painhawk,https://www.youtube.com/watch?v=Y74uUgSfZrw
-106,M2,mdGcowa65mQ,Mortarion,"Lav, Kari, Traj, Boss, Atla","1,710,000",HozzMidnight,https://www.youtube.com/watch?v=mdGcowa65mQ
-106,M2,Z2xM4hJ4udc,Mortarion,"Lav, Kari, Traj, Boss, Helb","950,000",Ulf,https://www.youtube.com/watch?v=Z2xM4hJ4udc
-106,M2,wfLVf7Zso7Y,Mortarion,"Neuro, Abrax, Ahri, Yaz, Rosie","1,250,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=wfLVf7Zso7Y
-106,M2,yDOfO0aEwXY,Mortarion,"Neuro, Abrax, Ahri, Eldy, Rosie","1,000,000",UNDV jonowen,https://www.youtube.com/watch?v=yDOfO0aEwXY
-106,M1,oDwQz8YlLWQ,Lion,"Lav, Kari, Traj, Aesoth, Vit","1,450,000",Prufrock,https://www.youtube.com/watch?v=oDwQz8YlLWQ
-106,M1,UekSS6iakNE,Lion,"Farsight, Revas, Actus, Darkstrider, Eldy","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
-106,L5,i7KSpAVjR8Y,Magnus,"Rag, Forcas, Asmo, Aunshi, Helb","1,200,000",Painhawk,https://www.youtube.com/watch?v=i7KSpAVjR8Y
-106,L5,doBjk8eUinI,Magnus,"Kari, Traj, Kharn, Rag, Helb","1,100,000",Ulf,https://www.youtube.com/watch?v=doBjk8eUinI
-106,L5,dgTNhzPZcXI,Magnus,"Rho, Tan, Actus, Helb, Sho","981,000",Yagyuu,https://www.youtube.com/watch?v=dgTNhzPZcXI
-106,L4,pS0D8UQ_kv4,Szarekh,"Lav, Kari, Traj, Boss, Aesoth","2,940,000",Mawg,https://www.youtube.com/watch?v=pS0D8UQ_kv4
-106,L4,LRtGzA-RRMM,Szarekh,"Rho, Tan, Actus, Vit, Sho","1,600,000",Un4given,https://www.youtube.com/watch?v=LRtGzA-RRMM
-106,L3,Hf5j6qg1jtU,Ghaz,"Lav, Kari, Traj, Kharn, Vit","1,670,000",Painhawk,https://www.youtube.com/watch?v=Hf5j6qg1jtU
-106,L3,i1YgoVnKY0c,Ghaz,"Farsight, Revas, Actus, Darkstrider, Eldy","1,300,000",Lyell,https://www.youtube.com/watch?v=i1YgoVnKY0c
-106,L2,XLcECO6lJA0,Avatar,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
-106,L2,LoL5L2SSLgA,Avatar,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
-106,L1,_RpiTVyoI98,Dorn,"Lav, Kari, Traj, Boss, Vit","1,500,000",Kyle UK 40k,https://www.youtube.com/watch?v=_RpiTVyoI98
-106,L1,MXPm2jXwR4c,Dorn,"Rho, Tan, Actus, Vit, Sho","1,300,000",Jordan,https://www.youtube.com/watch?v=MXPm2jXwR4c
-107,M3,w1aaDpkM9fA,Mortarion,"Lav, Kari, Traj, Boss, Atla","1,950,000",Mawg,https://www.youtube.com/watch?v=w1aaDpkM9fA
-107,M3,bMXdW1E-FdQ,Mortarion,"Lav, Kari, Traj, Boss, Helb","1,000,000",Ulf,https://www.youtube.com/watch?v=bMXdW1E-FdQ
-107,M3,wfLVf7Zso7Y,Mortarion,"Neuro, Abrax, Ahri, Yaz, Rosie","1,250,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=wfLVf7Zso7Y
-107,M3,v7Nxk_NLreA,Mortarion,"Neuro, Abrax, Ahri, Yaz, Rosie","870,000",UNDV jonowen,https://www.youtube.com/watch?v=v7Nxk_NLreA
-107,M3,v9wIWd9rKbE,Mortarion,"Rho, Tan, Actus, Helb, Aleph","1,000,000",Lyell,https://www.youtube.com/watch?v=v9wIWd9rKbE
-107,M3,ePf7Ak6aQBA,Mortarion,"Rho, Tan, Actus, Helb, Aleph","978,000",Yagyuu,https://www.youtube.com/watch?v=ePf7Ak6aQBA
-107,M2,BLZV104fRsw,Lion,"Lav, Kari, Traj, Aesoth, Vit","1,520,000",Jordan,https://www.youtube.com/watch?v=BLZV104fRsw
-107,M2,UekSS6iakNE,Lion,"Farsight, Revas, Actus, Darkstrider, Eldy","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
-107,M2,LFadN-J6CUE,Lion,"Neuro, Abrax, Ahri, Abaddon, Archi","1,000,000",Tactical Raven,https://www.youtube.com/watch?v=LFadN-J6CUE
-107,M1,ypQl0elyBNE,Szarekh,"Lav, Kari, Traj, Boss, Aesoth","2,700,000",Kitty Bebop,https://www.youtube.com/watch?v=ypQl0elyBNE
-107,M1,JBEzHf7ZKO8,Szarekh,"Rho, Tan, Actus, Vit, Boss","1,700,000",Un4given,https://www.youtube.com/watch?v=JBEzHf7ZKO8
-107,M1,tFaSYBcLato,Szarekh,"Farsight, Revas, Actus, Darkstrider, Eldy","1,300,000",JurassicKyle,https://www.youtube.com/watch?v=tFaSYBcLato
-107,L5,mnDoSbll_VM,Cawl,"Lav, Kari, Traj, Kharn, Dante","1,800,000",Kitty Bebop,https://www.youtube.com/watch?v=mnDoSbll_VM
-107,L5,Ew-FrA9wJpo,Cawl,"Neuro, Abrax, Ahri, Abaddon, Archi","1,450,000",Peste,https://www.youtube.com/watch?v=Ew-FrA9wJpo
-107,L4,XLcECO6lJA0,Avatar,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
-107,L4,LoL5L2SSLgA,Avatar,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
-107,L3,JlRWPKEdzac,Ghaz,"Lav, Kari, Traj, Aesoth, Vit","2,120,000",Don’t Call Me Shirley Tacticus Replays,https://www.youtube.com/watch?v=JlRWPKEdzac
-107,L3,z0KVejHSRCg,Ghaz,"Farsight, Revas, Actus, Darkstrider, Eldy","1,650,000",Adeptus Gorditas,https://www.youtube.com/watch?v=z0KVejHSRCg
-107,L2,-EMJ5hshW4k,Riptide,"Rho, Tan, Actus, Vit, Ammuk","1,740,000",Yagyuu,https://www.youtube.com/watch?v=-EMJ5hshW4k
-107,L2,Mrpiynu9dMM,Riptide,"Lav, Kari, Traj, Boss, Aesoth","1,470,000",Mawg,https://www.youtube.com/watch?v=Mrpiynu9dMM
-107,L1,JedfR5QadFc,Screamer,"Lav, Kari, Traj, Boss, Aesoth","2,500,000",Kitty Bebop,https://www.youtube.com/watch?v=JedfR5QadFc
-107,L1,JR_BIQyVoeM,Screamer,"Rho, Tan, Actus, Vit, Ammuk","2,160,000",Yagyuu,https://www.youtube.com/watch?v=JR_BIQyVoeM
-108,M3,AdOYEMc4DFQ,Riptide,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,090,000",Painhawk,https://www.youtube.com/watch?v=AdOYEMc4DFQ
-108,M3,d31DFuGWo1o,Riptide,"Neuro, Abrax, Ahri, Yaz, Archi, Zkar","784,000",Peste,https://www.youtube.com/watch?v=d31DFuGWo1o
-108,M3,szWcH09_2LU,Riptide,"Rho, Tan, Actus, Vit, Traj, Galatian","800,000",Prufrock,https://www.youtube.com/watch?v=szWcH09_2LU
-108,M3,etAslUFII0M,Riptide,"Rho, Tan, Actus, Vit, Traj, Galatian","1,370,000",Painhawk,https://www.youtube.com/watch?v=etAslUFII0M
-108,M3,LuHF1f-35nk,Riptide,"Kari, Traj, Kharn, Rag, Dante, Biovore","779,000",Ulf,https://www.youtube.com/watch?v=LuHF1f-35nk
-108,M3,s_obrhKXf_0,Riptide,"Kari, Traj, Kharn, Rag, Dante, Galatian","974,000",Kyle UK 40k,https://www.youtube.com/watch?v=s_obrhKXf_0
-108,M2,C9WE_nKePzY,Dorn,"Rho, Tan, Actus, Vit, Sho, Biovore","1,260,000",Prufrock,https://www.youtube.com/watch?v=C9WE_nKePzY
-108,M2,QKkrFZCqphc,Dorn,"Lav, Kari, Traj, Boss, Vit, Biovore","1,200,000",Un4given,https://www.youtube.com/watch?v=QKkrFZCqphc
-108,M2,7AjqewVvEHo,Dorn,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,320,000",Painhawk,https://www.youtube.com/watch?v=7AjqewVvEHo
-108,M1,Gf6pBl8OfQ8,Screamer,"Lav, Kari, Traj, Boss, Aesoth, PBC","1,780,000",Lyell,https://www.youtube.com/watch?v=Gf6pBl8OfQ8
-108,M1,CNLZt8TyNfQ,Screamer,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","2,550,000",Yagyuu,https://www.youtube.com/watch?v=CNLZt8TyNfQ
-108,M1,YJWuFS-o0jI,Screamer,"Farsight, Revas, Actus, Darkstrider, Eldy, PBC","950,000",JurassicKyle,https://www.youtube.com/watch?v=YJWuFS-o0jI
-108,L5,0dVILvgFqiw,Hive Tyrant,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
-108,L5,D6T29ec9uWI,Hive Tyrant,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
-108,L4,2Q-iQfjjOLw,Tervigon,"Lav, Kari, Traj, Boss, Helb, Galatian","2,780,000",Painhawk,https://www.youtube.com/watch?v=2Q-iQfjjOLw
-108,L4,NK5sd4-g5zg,Tervigon,"Rho, Tan, Actus, Vit, Helb, Galatian","2,190,000",Machiep,https://www.youtube.com/watch?v=NK5sd4-g5zg
-108,L3,0dVILvgFqiw,Hive Tyrant,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
-108,L3,D6T29ec9uWI,Hive Tyrant,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
-108,L2,vATL6B1RExA,Screamer,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","3,200,000",BuretRD,https://www.youtube.com/watch?v=vATL6B1RExA
-108,L2,UeLI_8LDGAs,Screamer,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,400,000",GarviLoken,https://www.youtube.com/watch?v=UeLI_8LDGAs
-108,L1,REGZiCh0NCk,Riptide,"Rho, Tan, Actus, Vit, Traj, Galatian","1,360,000",Painhawk,https://www.youtube.com/watch?v=REGZiCh0NCk
-108,L1,AdOYEMc4DFQ,Riptide,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,090,000",Painhawk,https://www.youtube.com/watch?v=AdOYEMc4DFQ
-109,M3,oDwQz8YlLWQ,Lion,"Lav, Kari, Traj, Aesoth, Vit, Biovore","1,450,000",Prufrock,https://www.youtube.com/watch?v=oDwQz8YlLWQ
-109,M3,fpYV8OhGXZQ,Lion,"Lav, Kari, Traj, Aesoth, Vit, Biovore","1,390,000",Adeptus Gorditas,https://www.youtube.com/watch?v=fpYV8OhGXZQ
-109,M3,Y_5rgN5eNqQ,Lion,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","989,000",Un4given,https://www.youtube.com/watch?v=Y_5rgN5eNqQ
-109,M3,hG12XkVlPyg,Lion,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,200,000",Un4given,https://www.youtube.com/watch?v=hG12XkVlPyg
-109,M3,UekSS6iakNE,Lion,"Farsight, Revas, Actus, Darkstrider, Eldy, Biovore","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
-109,M3,ZmytgDFSl3o,Lion,"Farsight, Revas, Actus, Darkstrider, Eldy, Biovore","782,000",Machiep,https://www.youtube.com/watch?v=ZmytgDFSl3o
-109,M2,CfzcAYz08WA,Szarekh,"Lav, Kari, Traj, Boss, Aesoth, Biovore","2,610,000",HozzMidnight,https://www.youtube.com/watch?v=CfzcAYz08WA
-109,M2,Z5VFRZVPLr4,Szarekh,"Lav, Kari, Traj, Boss, Vit, Biovore","2,200,000",Kitty Bebop,https://www.youtube.com/watch?v=Z5VFRZVPLr4
-109,M2,fH5nuZFBzoo,Szarekh,"Rho, Tan, Actus, Vit, Boss, Biovore","1,800,000",Painhawk,https://www.youtube.com/watch?v=fH5nuZFBzoo
-109,M1,0gQyyUSz0hA,Mortarion,"Lav, Kari, Traj, Boss, Atla, Biovore","1,900,000",Blackmane Gaming,https://www.youtube.com/watch?v=0gQyyUSz0hA
-109,M1,XvdTbyXnc8U,Mortarion,"Rho, Tan, Actus, Helb, Aleph, Reanimator","1,090,000",Yagyuu,https://www.youtube.com/watch?v=XvdTbyXnc8U
-109,M1,ndbqPq9NXTM,Mortarion,"Neuro, Abrax, Ahri, Yaz, Rosie, Zkar","1,000,000",Un4given,https://www.youtube.com/watch?v=ndbqPq9NXTM
-109,L5,isMvZ_huR1w,Ghaz,"Lav, Kari, Traj, Aesoth, Vit, Biovore","2,300,000",Kitty Bebop,https://www.youtube.com/watch?v=isMvZ_huR1w
-109,L5,a7NgeKIwGFY,Ghaz,"Farsight, Revas, Actus, Darkstrider, Eldy, PBC","2,120,000",JurassicKyle,https://www.youtube.com/watch?v=a7NgeKIwGFY
-109,L4,K-QO82aPIxo,Cawl,"Lav, Kari, Traj, Kharn, Dante, Biovore","1,240,000",Ulf,https://www.youtube.com/watch?v=K-QO82aPIxo
-109,L4,6lHOzCTbm4w,Cawl,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,100,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=6lHOzCTbm4w
-109,L3,CNLZt8TyNfQ,Screamer,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","2,550,000",Yagyuu,https://www.youtube.com/watch?v=CNLZt8TyNfQ
-109,L3,UeLI_8LDGAs,Screamer,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,400,000",GarviLoken,https://www.youtube.com/watch?v=UeLI_8LDGAs
-109,L2,GAyVRZE-t-Y,Dorn,"Rho, Tan, Actus, Vit, Traj, Reanimator","1,790,000",Yagyuu,https://www.youtube.com/watch?v=GAyVRZE-t-Y
-109,L2,Q8gU2_2L5AE,Dorn,"Lav, Kari, Traj, Boss, Vit, Biovore","1,740,000",Mawg,https://www.youtube.com/watch?v=Q8gU2_2L5AE
-109,L1,FSQwxqDFTv4,Hive Tyrant,"Lav, Kari, Traj, Boss, Atla, PBC","3,180,000",Lyell,https://www.youtube.com/watch?v=FSQwxqDFTv4
-109,L1,mwSg9PWKN6g,Hive Tyrant,"Lav, Kari, Traj, Boss, Kharn, FF","1,789,000",Unessentials,https://www.youtube.com/watch?v=mwSg9PWKN6g
+SEASON,TIER,video_id,BOSS,TIER,MAP,Archetype,TEAM,DAMAGE,CREATOR,VALIDATE_LINK
+102,M2,sAST52AVT7Y,Avatar,,,,Laviscus,"1,300,000",Painhawk,
+102,M2,UIGUORK0jTE,Avatar,,,,Neuro,"1,100,000",Painhawk,
+102,M1,2HInUQkR18U,Dorn,,,,AdMech,"1,200,000",UNDV jonowen,
+102,M1,rtEqdG50ss8,Dorn,,,,Laviscus,"1,100,000",Kitty Bebop,
+102,L5,OYbjpaaxYHI,Cawl,,,,Lav w Dante,"1,100,000",Painhawk,
+102,L5,W-pznfDfNSI,Cawl,,,,Neuro,"930,000",Devastator490-HSS,
+102,L4,iI-LdaFFkjM,Ghaz,,,,Lav w Dante,"1,400,000",Painhawk,
+102,L4,M2HfiWBEcFQ,Ghaz,,,,Battlesuits,"1,060,000",Machieptube,
+102,L3,qNcWGRZkzCY,Screamer,,,,Lav w PBC,"1,540,000",Painhawk,
+102,L3,84FOwvOZQgE,Screamer,,,,TrajMECH,"1,360,000",Painhawk,
+102,L2,5frA--xoZO0,Riptide,,,,TrajMECH,"1,060,000",Lyell,
+102,L2,CI2qj5-DFjg,Riptide,,,,Lav w Dante,"963,000",UltraBrother40k,
+102,L1,Gou7JAUWJHY,Dorn,,,,AdMech,"870,000",Devastator490-HSS,
+102,L1,z2ONkn-zO6s,Dorn,,,,Laviscus,"861,000",UltraBrother40k,
+103,M2,-XMhSnr6ehE,Szarekh,,,,Laviscus,"2,550,000",Painhawk,
+103,M2,mLAQMg-nEg8,Szarekh,,,,AdMech,"1,300,000",Palaryel,
+103,M1,yl8OVWAapUc,Magnus,,,,Custodes,"940,000",Nandi,
+103,M1,tBA8P89S6Dg,Magnus,,,,Forcasmo,"987,000",Painhawk,
+103,L1,H6b3ofcOSTI,Screamer,,,,Laviscus,"1,640,000",ge0desic,
+103,L1,_AQbP3kfQxw,Screamer,,,,TrajMECH,"1,520,000",Machieptube,
+103,L2,DPCEmu_VMbs,Dorn,,,,AdMech,"1,260,000",Loknar,
+103,L2,rtEqdG50ss8,Dorn,,,,Laviscus,"1,100,000",Kitty Bebop,
+103,L3,D9RTevw5SEI,Riptide,,,,TrajMECH,"1,010,000",Machieptube,
+103,L3,CI2qj5-DFjg,Riptide,,,,Laviscus,"869,000",UltraBrother40k,
+103,L4,Zz5kvJevkNM,Lion,,,,Neuro,"1,000,000",Nandi,
+103,L4,vSD_4HZtQUQ,Lion,,,,Battlesuits,"1,252,841",TacticalRaven,
+103,L5,amLBjOxMw9M,Mortarion,,,,Laviscus,"1,200,000",Don't Call Me Shirley,
+103,L5,RmTncdplo8Y,Mortarion,,,,Neuro,"792,000",Painhawk,
+104,M2,dIiPcOWrTWk,Ghaz,,,,Laviscus,"1,950,000",Painhawk,
+104,M2,SYyD93-Adts,Ghaz,,,,Battlesuits,"1,120,000",Jurassic Kyle,
+104,M1,sL2nKJ7ZDhw,Cawl,,,,Laviscus,"1,170,000",Hedonite,
+104,M1,B5I_AYTHRmQ,Cawl,,,,Custodes,"1,090,000",MidnightHozz,
+104,L5,xsTygubUf3k,Avatar,,,,Laviscus,"2,000,000",Painhawk,
+104,L5,4-vvT7quQIo,Avatar,,,,Neuro,"1,400,000",Kolxer,
+104,L4,V_WB7KMyAjQ,Ghaz,,,,Laviscus,"2,000,000",Painhawk,
+104,L4,UxfItyRwho4,Ghaz,,,,Battlesuits,"1,900,000",Nandi,
+104,L3,DPCEmu_VMbs,Dorn,,,,AdMech,"1,260,000",Loknar,
+104,L3,rtEqdG50ss8,Dorn,,,,Laviscus,"1,100,000",Kitty Bebop,
+104,L2,jCF0izRvXC0,Screamer,,,,TrajMech,"1,700,000",Painhawk,
+104,L2,JedfR5QadFc,Screamer,,,,Laviscus,"2,500,000",Kitty Bebop,
+104,L1,78_c9nfzsWU,Riptide,,,,TrajMech,"1,260,000",Painhawk,
+104,L1,GFCH8DAwOns,Riptide,,,,Laviscus,"932,000",UltraBrother40k,
+105,M2,6AgE4JZw5aU,Magnus,,,,"Kari, Traj, Kharn, Helb, Dante","812,000",Painhawk,https://www.youtube.com/watch?v=6AgE4JZw5aU
+105,M2,fjBrAtXrOZI,Magnus,,,,"Kari, Traj, Kharn, Rag, Helb","785,000",GarviLoken,https://www.youtube.com/watch?v=fjBrAtXrOZI
+105,M1,0gQyyUSz0hA,Mortarion,,,,"Lav, Kari, Traj, Boss, Atla","1,900,000",Blackmane Gaming,https://www.youtube.com/watch?v=0gQyyUSz0hA
+105,M1,0m5N-GCmpKE,Mortarion,,,,"Neuro, Abrax, Ahri, Yaz, Rosie","950,000",Un4given,https://www.youtube.com/watch?v=0m5N-GCmpKE
+105,L5,GqGL_7orsNs,Lion,,,,"Lav, Kari, Traj, Aesoth, Vit","1,560,000",Mawg,https://www.youtube.com/watch?v=GqGL_7orsNs
+105,L5,2YA89zo_u1Q,Lion,,,,"Lav, Kari, Traj, Boss, Aesoth","1,400,000",Adeptus Gorditas,https://www.youtube.com/watch?v=2YA89zo_u1Q
+105,L4,CNEOWyf4kpA,Cawl,,,,"Lav, Kari, Traj, Kharn, Dante","1,310,000",Ulf,https://www.youtube.com/watch?v=CNEOWyf4kpA
+105,L4,OtGeKDHCdy0,Cawl,,,,"Neuro, Abrax, Ahri, Abaddon, Archi","960,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=OtGeKDHCdy0
+105,L3,XLcECO6lJA0,Avatar,,,,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
+105,L3,LoL5L2SSLgA,Avatar,,,,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
+105,L2,UqouUwUZC_M,Dorn,,,,"Rho, Tan, Actus, Vit, Traj","1,580,000",Yagyuu,https://www.youtube.com/watch?v=UqouUwUZC_M
+105,L2,0OZSP8-gn7U,Dorn,,,,"Lav, Kari, Traj, Boss, Vit","1,300,000",Don’t Call Me Shirley Tacticus Replays,https://www.youtube.com/watch?v=0OZSP8-gn7U
+105,L1,kX3ncIq8hIs,Screamer,,,,"Rho, Tan, Actus, Vit, Traj","1,980,000",Machiep,https://www.youtube.com/watch?v=kX3ncIq8hIs
+105,L1,Y74uUgSfZrw,Screamer,,,,"Lav, Kari, Traj, Boss, Vit","1,800,000",Painhawk,https://www.youtube.com/watch?v=Y74uUgSfZrw
+106,M2,mdGcowa65mQ,Mortarion,,,,"Lav, Kari, Traj, Boss, Atla","1,710,000",HozzMidnight,https://www.youtube.com/watch?v=mdGcowa65mQ
+106,M2,Z2xM4hJ4udc,Mortarion,,,,"Lav, Kari, Traj, Boss, Helb","950,000",Ulf,https://www.youtube.com/watch?v=Z2xM4hJ4udc
+106,M2,wfLVf7Zso7Y,Mortarion,,,,"Neuro, Abrax, Ahri, Yaz, Rosie","1,250,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=wfLVf7Zso7Y
+106,M2,yDOfO0aEwXY,Mortarion,,,,"Neuro, Abrax, Ahri, Eldy, Rosie","1,000,000",UNDV jonowen,https://www.youtube.com/watch?v=yDOfO0aEwXY
+106,M1,oDwQz8YlLWQ,Lion,,,,"Lav, Kari, Traj, Aesoth, Vit","1,450,000",Prufrock,https://www.youtube.com/watch?v=oDwQz8YlLWQ
+106,M1,UekSS6iakNE,Lion,,,,"Farsight, Revas, Actus, Darkstrider, Eldy","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
+106,L5,i7KSpAVjR8Y,Magnus,,,,"Rag, Forcas, Asmo, Aunshi, Helb","1,200,000",Painhawk,https://www.youtube.com/watch?v=i7KSpAVjR8Y
+106,L5,doBjk8eUinI,Magnus,,,,"Kari, Traj, Kharn, Rag, Helb","1,100,000",Ulf,https://www.youtube.com/watch?v=doBjk8eUinI
+106,L5,dgTNhzPZcXI,Magnus,,,,"Rho, Tan, Actus, Helb, Sho","981,000",Yagyuu,https://www.youtube.com/watch?v=dgTNhzPZcXI
+106,L4,pS0D8UQ_kv4,Szarekh,,,,"Lav, Kari, Traj, Boss, Aesoth","2,940,000",Mawg,https://www.youtube.com/watch?v=pS0D8UQ_kv4
+106,L4,LRtGzA-RRMM,Szarekh,,,,"Rho, Tan, Actus, Vit, Sho","1,600,000",Un4given,https://www.youtube.com/watch?v=LRtGzA-RRMM
+106,L3,Hf5j6qg1jtU,Ghaz,,,,"Lav, Kari, Traj, Kharn, Vit","1,670,000",Painhawk,https://www.youtube.com/watch?v=Hf5j6qg1jtU
+106,L3,i1YgoVnKY0c,Ghaz,,,,"Farsight, Revas, Actus, Darkstrider, Eldy","1,300,000",Lyell,https://www.youtube.com/watch?v=i1YgoVnKY0c
+106,L2,XLcECO6lJA0,Avatar,,,,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
+106,L2,LoL5L2SSLgA,Avatar,,,,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
+106,L1,_RpiTVyoI98,Dorn,,,,"Lav, Kari, Traj, Boss, Vit","1,500,000",Kyle UK 40k,https://www.youtube.com/watch?v=_RpiTVyoI98
+106,L1,MXPm2jXwR4c,Dorn,,,,"Rho, Tan, Actus, Vit, Sho","1,300,000",Jordan,https://www.youtube.com/watch?v=MXPm2jXwR4c
+107,M3,w1aaDpkM9fA,Mortarion,,,,"Lav, Kari, Traj, Boss, Atla","1,950,000",Mawg,https://www.youtube.com/watch?v=w1aaDpkM9fA
+107,M3,bMXdW1E-FdQ,Mortarion,,,,"Lav, Kari, Traj, Boss, Helb","1,000,000",Ulf,https://www.youtube.com/watch?v=bMXdW1E-FdQ
+107,M3,wfLVf7Zso7Y,Mortarion,,,,"Neuro, Abrax, Ahri, Yaz, Rosie","1,250,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=wfLVf7Zso7Y
+107,M3,v7Nxk_NLreA,Mortarion,,,,"Neuro, Abrax, Ahri, Yaz, Rosie","870,000",UNDV jonowen,https://www.youtube.com/watch?v=v7Nxk_NLreA
+107,M3,v9wIWd9rKbE,Mortarion,,,,"Rho, Tan, Actus, Helb, Aleph","1,000,000",Lyell,https://www.youtube.com/watch?v=v9wIWd9rKbE
+107,M3,ePf7Ak6aQBA,Mortarion,,,,"Rho, Tan, Actus, Helb, Aleph","978,000",Yagyuu,https://www.youtube.com/watch?v=ePf7Ak6aQBA
+107,M2,BLZV104fRsw,Lion,,,,"Lav, Kari, Traj, Aesoth, Vit","1,520,000",Jordan,https://www.youtube.com/watch?v=BLZV104fRsw
+107,M2,UekSS6iakNE,Lion,,,,"Farsight, Revas, Actus, Darkstrider, Eldy","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
+107,M2,LFadN-J6CUE,Lion,,,,"Neuro, Abrax, Ahri, Abaddon, Archi","1,000,000",Tactical Raven,https://www.youtube.com/watch?v=LFadN-J6CUE
+107,M1,ypQl0elyBNE,Szarekh,,,,"Lav, Kari, Traj, Boss, Aesoth","2,700,000",Kitty Bebop,https://www.youtube.com/watch?v=ypQl0elyBNE
+107,M1,JBEzHf7ZKO8,Szarekh,,,,"Rho, Tan, Actus, Vit, Boss","1,700,000",Un4given,https://www.youtube.com/watch?v=JBEzHf7ZKO8
+107,M1,tFaSYBcLato,Szarekh,,,,"Farsight, Revas, Actus, Darkstrider, Eldy","1,300,000",JurassicKyle,https://www.youtube.com/watch?v=tFaSYBcLato
+107,L5,mnDoSbll_VM,Cawl,,,,"Lav, Kari, Traj, Kharn, Dante","1,800,000",Kitty Bebop,https://www.youtube.com/watch?v=mnDoSbll_VM
+107,L5,Ew-FrA9wJpo,Cawl,,,,"Neuro, Abrax, Ahri, Abaddon, Archi","1,450,000",Peste,https://www.youtube.com/watch?v=Ew-FrA9wJpo
+107,L4,XLcECO6lJA0,Avatar,,,,"Lav, Kari, Traj, Boss, Vit","2,100,000",Prufrock,https://www.youtube.com/watch?v=XLcECO6lJA0
+107,L4,LoL5L2SSLgA,Avatar,,,,"Rho, Tan, Actus, Vit, Boss","1,390,000",Yagyuu,https://www.youtube.com/watch?v=LoL5L2SSLgA
+107,L3,JlRWPKEdzac,Ghaz,,,,"Lav, Kari, Traj, Aesoth, Vit","2,120,000",Don’t Call Me Shirley Tacticus Replays,https://www.youtube.com/watch?v=JlRWPKEdzac
+107,L3,z0KVejHSRCg,Ghaz,,,,"Farsight, Revas, Actus, Darkstrider, Eldy","1,650,000",Adeptus Gorditas,https://www.youtube.com/watch?v=z0KVejHSRCg
+107,L2,-EMJ5hshW4k,Riptide,,,,"Rho, Tan, Actus, Vit, Ammuk","1,740,000",Yagyuu,https://www.youtube.com/watch?v=-EMJ5hshW4k
+107,L2,Mrpiynu9dMM,Riptide,,,,"Lav, Kari, Traj, Boss, Aesoth","1,470,000",Mawg,https://www.youtube.com/watch?v=Mrpiynu9dMM
+107,L1,JedfR5QadFc,Screamer,,,,"Lav, Kari, Traj, Boss, Aesoth","2,500,000",Kitty Bebop,https://www.youtube.com/watch?v=JedfR5QadFc
+107,L1,JR_BIQyVoeM,Screamer,,,,"Rho, Tan, Actus, Vit, Ammuk","2,160,000",Yagyuu,https://www.youtube.com/watch?v=JR_BIQyVoeM
+108,M3,AdOYEMc4DFQ,Riptide,,,,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,090,000",Painhawk,https://www.youtube.com/watch?v=AdOYEMc4DFQ
+108,M3,d31DFuGWo1o,Riptide,,,,"Neuro, Abrax, Ahri, Yaz, Archi, Zkar","784,000",Peste,https://www.youtube.com/watch?v=d31DFuGWo1o
+108,M3,szWcH09_2LU,Riptide,,,,"Rho, Tan, Actus, Vit, Traj, Galatian","800,000",Prufrock,https://www.youtube.com/watch?v=szWcH09_2LU
+108,M3,etAslUFII0M,Riptide,,,,"Rho, Tan, Actus, Vit, Traj, Galatian","1,370,000",Painhawk,https://www.youtube.com/watch?v=etAslUFII0M
+108,M3,LuHF1f-35nk,Riptide,,,,"Kari, Traj, Kharn, Rag, Dante, Biovore","779,000",Ulf,https://www.youtube.com/watch?v=LuHF1f-35nk
+108,M3,s_obrhKXf_0,Riptide,,,,"Kari, Traj, Kharn, Rag, Dante, Galatian","974,000",Kyle UK 40k,https://www.youtube.com/watch?v=s_obrhKXf_0
+108,M2,C9WE_nKePzY,Dorn,,,,"Rho, Tan, Actus, Vit, Sho, Biovore","1,260,000",Prufrock,https://www.youtube.com/watch?v=C9WE_nKePzY
+108,M2,QKkrFZCqphc,Dorn,,,,"Lav, Kari, Traj, Boss, Vit, Biovore","1,200,000",Un4given,https://www.youtube.com/watch?v=QKkrFZCqphc
+108,M2,7AjqewVvEHo,Dorn,,,,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,320,000",Painhawk,https://www.youtube.com/watch?v=7AjqewVvEHo
+108,M1,Gf6pBl8OfQ8,Screamer,,,,"Lav, Kari, Traj, Boss, Aesoth, PBC","1,780,000",Lyell,https://www.youtube.com/watch?v=Gf6pBl8OfQ8
+108,M1,CNLZt8TyNfQ,Screamer,,,,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","2,550,000",Yagyuu,https://www.youtube.com/watch?v=CNLZt8TyNfQ
+108,M1,YJWuFS-o0jI,Screamer,,,,"Farsight, Revas, Actus, Darkstrider, Eldy, PBC","950,000",JurassicKyle,https://www.youtube.com/watch?v=YJWuFS-o0jI
+108,L5,0dVILvgFqiw,Hive Tyrant,,,,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
+108,L5,D6T29ec9uWI,Hive Tyrant,,,,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
+108,L4,2Q-iQfjjOLw,Tervigon,,,,"Lav, Kari, Traj, Boss, Helb, Galatian","2,780,000",Painhawk,https://www.youtube.com/watch?v=2Q-iQfjjOLw
+108,L4,NK5sd4-g5zg,Tervigon,,,,"Rho, Tan, Actus, Vit, Helb, Galatian","2,190,000",Machiep,https://www.youtube.com/watch?v=NK5sd4-g5zg
+108,L3,0dVILvgFqiw,Hive Tyrant,,,,"Rho, Tan, Actus, Boss, Helb, Galatian","2,000,000",GarviLoken,https://www.youtube.com/watch?v=0dVILvgFqiw
+108,L3,D6T29ec9uWI,Hive Tyrant,,,,"Lav, Kari, Traj, Boss, Atla, Galatian","1,940,000",Painhawk,https://www.youtube.com/watch?v=D6T29ec9uWI
+108,L2,vATL6B1RExA,Screamer,,,,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","3,200,000",BuretRD,https://www.youtube.com/watch?v=vATL6B1RExA
+108,L2,UeLI_8LDGAs,Screamer,,,,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,400,000",GarviLoken,https://www.youtube.com/watch?v=UeLI_8LDGAs
+108,L1,REGZiCh0NCk,Riptide,,,,"Rho, Tan, Actus, Vit, Traj, Galatian","1,360,000",Painhawk,https://www.youtube.com/watch?v=REGZiCh0NCk
+108,L1,AdOYEMc4DFQ,Riptide,,,,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,090,000",Painhawk,https://www.youtube.com/watch?v=AdOYEMc4DFQ
+109,M3,oDwQz8YlLWQ,Lion,L5,Lion_02,Laviscus,"Lav, Kari, Traj, Aesoth, Vit, Biovore","1,450,000",Prufrock,https://www.youtube.com/watch?v=oDwQz8YlLWQ
+109,M3,fpYV8OhGXZQ,Lion,L5,Lion_02,Laviscus,"Lav, Kari, Traj, Aesoth, Vit, Biovore","1,390,000",Adeptus Gorditas,https://www.youtube.com/watch?v=fpYV8OhGXZQ
+109,M3,Y_5rgN5eNqQ,Lion,L5,Lion_02,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","989,000",Un4given,https://www.youtube.com/watch?v=Y_5rgN5eNqQ
+109,M3,hG12XkVlPyg,Lion,M2,Lion_01,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,200,000",Un4given,https://www.youtube.com/watch?v=hG12XkVlPyg
+109,M3,UekSS6iakNE,Lion,L5,Lion_02,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Eldy, Biovore","1,100,000",GarviLoken,https://www.youtube.com/watch?v=UekSS6iakNE
+109,M3,ZmytgDFSl3o,Lion,L5,Lion_02,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Eldy, Biovore","782,000",Machiep,https://www.youtube.com/watch?v=ZmytgDFSl3o
+109,M2,CfzcAYz08WA,Szarekh,M1,Szarekh_02,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, Biovore","2,610,000",HozzMidnight,https://www.youtube.com/watch?v=CfzcAYz08WA
+109,M2,Z5VFRZVPLr4,Szarekh,M1,Szarekh_02,Laviscus,"Lav, Kari, Traj, Boss, Vit, Biovore","2,200,000",Kitty Bebop,https://www.youtube.com/watch?v=Z5VFRZVPLr4
+109,M2,fH5nuZFBzoo,Szarekh,L5,Szarekh_02,AdMech,"Rho, Tan, Actus, Vit, Boss, Biovore","1,800,000",Painhawk,https://www.youtube.com/watch?v=fH5nuZFBzoo
+109,M1,0gQyyUSz0hA,Mortarion,L5,Mortarion_03,Laviscus,"Lav, Kari, Traj, Boss, Atla, Biovore","1,900,000",Blackmane Gaming,https://www.youtube.com/watch?v=0gQyyUSz0hA
+109,M1,XvdTbyXnc8U,Mortarion,M1,Mortarion_03,AdMech,"Rho, Tan, Actus, Helb, Aleph, Reanimator","1,090,000",Yagyuu,https://www.youtube.com/watch?v=XvdTbyXnc8U
+109,M1,ndbqPq9NXTM,Mortarion,M1,Mortarion_03,Neuro,"Neuro, Abrax, Ahri, Yaz, Rosie, Zkar","1,000,000",Un4given,https://www.youtube.com/watch?v=ndbqPq9NXTM
+109,L5,isMvZ_huR1w,Ghaz,L4,Ghaz_04,Laviscus,"Lav, Kari, Traj, Aesoth, Vit, Biovore","2,300,000",Kitty Bebop,https://www.youtube.com/watch?v=isMvZ_huR1w
+109,L5,a7NgeKIwGFY,Ghaz,L4,Ghaz_04,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Eldy, PBC","2,120,000",JurassicKyle,https://www.youtube.com/watch?v=a7NgeKIwGFY
+109,L4,K-QO82aPIxo,Cawl,L5,Cawl_02,Laviscus,"Lav, Kari, Traj, Kharn, Dante, Biovore","1,240,000",Ulf,https://www.youtube.com/watch?v=K-QO82aPIxo
+109,L4,6lHOzCTbm4w,Cawl,L1,Cawl_02,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,100,000",Stringer de Los Redimidos,https://www.youtube.com/watch?v=6lHOzCTbm4w
+109,L3,CNLZt8TyNfQ,Screamer,L1,Screamer_03,AdMech,"Rho, Tan, Actus, Vit, Ammuk, Reanimator","2,550,000",Yagyuu,https://www.youtube.com/watch?v=CNLZt8TyNfQ
+109,L3,UeLI_8LDGAs,Screamer,L1,Screamer_03,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,400,000",GarviLoken,https://www.youtube.com/watch?v=UeLI_8LDGAs
+109,L2,GAyVRZE-t-Y,Dorn,L2,Dorn_04,AdMech,"Rho, Tan, Actus, Vit, Traj, Reanimator","1,790,000",Yagyuu,https://www.youtube.com/watch?v=GAyVRZE-t-Y
+109,L2,Q8gU2_2L5AE,Dorn,L2,Dorn_04,Laviscus,"Lav, Kari, Traj, Boss, Vit, Biovore","1,740,000",Mawg,https://www.youtube.com/watch?v=Q8gU2_2L5AE
+109,L1,FSQwxqDFTv4,Hive Tyrant,L3,Hive Tyrant_01,Laviscus,"Lav, Kari, Traj, Boss, Atla, PBC","3,180,000",Lyell,https://www.youtube.com/watch?v=FSQwxqDFTv4
+109,L1,mwSg9PWKN6g,Hive Tyrant,L5,Hive Tyrant_02,Laviscus,"Lav, Kari, Traj, Boss, Kharn, FF","1,789,000",Unessentials,https://www.youtube.com/watch?v=mwSg9PWKN6g
+110,M3,V0ISjTBJmwo,Cawl,L5,Cawl_04,Laviscus,"Lav, Kari, Traj, Kharn, Dante, Biovore","1,370,000",Mawg,https://www.youtube.com/watch?v=V0ISjTBJmwo
+110,M3,XEvl4m0pjcY,Cawl,L5,Cawl_04,Laviscus,"Lav, Kari, Traj, Kharn, Dante, Biovore","1,200,000",Un4given,https://www.youtube.com/watch?v=XEvl4m0pjcY
+110,M3,xyNcQezVtB4,Cawl,L5,Cawl_04,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,190,000",Peste,https://www.youtube.com/watch?v=xyNcQezVtB4
+110,M3,q1i5HaBYBHI,Cawl,L5,Cawl_04,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,040,000",Peste,https://www.youtube.com/watch?v=q1i5HaBYBHI
+110,M3,5B0iKm2V8OE,Cawl,L4,Cawl_04,Custodes,"Kari, Traj, Kharn, Rag, Dante, FF","1,150,000",Blackmane Gaming,https://www.youtube.com/watch?v=5B0iKm2V8OE
+110,M3,iMI6EqDeldU,Cawl,L2,Cawl_04,Custodes,"Kari, Traj, Kharn, Rag, Dante, FF","1,000,000",zelots1991,https://www.youtube.com/watch?v=iMI6EqDeldU
+110,M2,5CRmIQul1DU,Ghaz,L5,Ghaz_04,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Lhykis, PBC","2,700,000",Lyell,https://www.youtube.com/watch?v=5CRmIQul1DU
+110,M2,PcDUGJTEgH4,Ghaz,L5,Ghaz_04,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Lhykis, PBC","2,580,000",JurassicKyle,https://www.youtube.com/watch?v=PcDUGJTEgH4
+110,M2,6sqZ2CSOF_s,Ghaz,M2,Ghaz_05,Laviscus,"Lav, Kari, Traj, Aesoth, Vit, Biovore","1,920,000",Kyle UK 40k,https://www.youtube.com/watch?v=6sqZ2CSOF_s
+110,M2,_McXHUisI4w,Ghaz,L3,Ghaz_02,Laviscus,"Lav, Kari, Traj, Aesoth, Vit, Biovore","2,100,000",Jordan,https://www.youtube.com/watch?v=_McXHUisI4w
+110,M2,qagxE9rG97A,Ghaz,M1,Ghaz_02,Custodes,"Kari, Traj, Kharn, Rag, Dante, FF","1,040,000",Dev,https://www.youtube.com/watch?v=qagxE9rG97A
+110,M2,dseC3klKtZ0,Ghaz,M1,Ghaz_02,Custodes,"Kari, Traj, Kharn, Rag, Dante, FF","949,000",Dev,https://www.youtube.com/watch?v=dseC3klKtZ0
+110,M1,8FDnsnu_gic,Screamer,M1,Screamer_03,AdMech,"Rho, Tan, Anu, Vit, Ammuk, Reanimator","2,100,000",BuretRD,https://www.youtube.com/watch?v=8FDnsnu_gic
+110,M1,n77jUc_PmpI,Screamer,L1,Screamer_01,AdMech,"Rho, Tan, Anu, Vit, Ammuk, Reanimator","2,350,000",Lyell,https://www.youtube.com/watch?v=n77jUc_PmpI
+110,M1,Dc9jbz4_Tpk,Screamer,L5,Screamer_01,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, PBC","1,950,000",Prufrock,https://www.youtube.com/watch?v=Dc9jbz4_Tpk
+110,M1,qNcWGRZkzCY,Screamer,L5,Screamer_01,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, PBC","1,530,000",Painhawk,https://www.youtube.com/watch?v=qNcWGRZkzCY
+110,M1,QdhDh0lHVFw,Screamer,L2,Screamer_03,Battlesuits,"Farsight, Revas, Actus, Anu, Lhykis, PBC","2,200,000",Lyell,https://www.youtube.com/watch?v=QdhDh0lHVFw
+110,M1,SX-aVBbYys0,Screamer,M1,Screamer_03,Battlesuits,"Farsight, Revas, Actus, Darkstrider, Lhykis, PBC","813,000",JurassicKyle,https://www.youtube.com/watch?v=SX-aVBbYys0
+110,L5,7wltu4R6hbE,Avatar,L5,Avatar_05,Laviscus,"Lav, Kari, Traj, Boss, Kharn, Biovore","2,000,000",Painhawk,https://www.youtube.com/watch?v=7wltu4R6hbE
+110,L5,x5xRU1vQUjA,Avatar,L5,Avatar_05,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,550,000",Un4given,https://www.youtube.com/watch?v=x5xRU1vQUjA
+110,L4,uzcIUocg55w,Dorn,L4,Dorn_06,Laviscus,"Lav, Kari, Traj, Boss, Vit, Biovore","1,520,000",Painhawk,https://www.youtube.com/watch?v=uzcIUocg55w
+110,L4,7ZtjxGwFdx8,Dorn,L1,Dorn_06,AdMech,"Rho, Tan, Actus, Vit, Sho, Biovore","1,300,000",Yagyuu,https://www.youtube.com/watch?v=7ZtjxGwFdx8
+110,L3,3qgSv-Zn768,Riptide,L1,Riptide_03,Neuro,"Neuro, Abrax, Ahri, Abaddon, Archi, Zkar","1,210,000",Mawg,https://www.youtube.com/watch?v=3qgSv-Zn768
+110,L3,REGZiCh0NCk,Riptide,L1,Riptide_03,AdMech,"Rho, Tan, Actus, Vit, Traj, Galatian","1,360,000",Painhawk,https://www.youtube.com/watch?v=REGZiCh0NCk
+110,L2,jfX1FQLAM-E,Tervigon,L2,Tervigon_04,Laviscus,"Lav, Kari, Traj, Boss, Helb, PBC","2,400,000",Lyell,https://www.youtube.com/watch?v=jfX1FQLAM-E
+110,L2,NK5sd4-g5zg,Tervigon,L2,Tervigon_04,AdMech,"Rho, Tan, Actus, Vit, Helb, Galatian","2,190,000",Machiep,https://www.youtube.com/watch?v=NK5sd4-g5zg
+110,L1,QKB70NiN4LQ,Screamer,L2,Screamer_04,Laviscus,"Lav, Kari, Traj, Boss, Aesoth, PBC","2,390,000",Painhawk,https://www.youtube.com/watch?v=QKB70NiN4LQ
+110,L1,Mw95t2KIuXY,Screamer,L2,Screamer_04,AdMech,"Rho, Tan, Actus, Vit, Traj, Galatian","1,940,000",Loknar,https://www.youtube.com/watch?v=Mw95t2KIuXY

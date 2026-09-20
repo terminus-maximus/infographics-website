@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import GuildRaidSeasonPreview from "../../components/GuildRaidSeasonPreview.astro";
+import { nextGuildRaidSeason } from "../../data/nextGuildRaidSeason";
+
+// Keep this stable URL useful even when the full next-season guide is ready.
+if (nextGuildRaidSeason.fullGuideHref) {
+  return Astro.redirect(nextGuildRaidSeason.fullGuideHref, 302);
+}
+---
+
+<Layout
+  title={`Next Season: Guild Raid Season ${nextGuildRaidSeason.seasonNumber} | Terminus Maximus Infographics`}
+  description={nextGuildRaidSeason.description}
+  image={nextGuildRaidSeason.webImage}
+>
+  <Header />
+  <main>
+    <GuildRaidSeasonPreview {...nextGuildRaidSeason} />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 1.25rem;
+    }
+  }
+</style>
