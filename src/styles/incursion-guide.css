@@ -1,0 +1,62 @@
+/* Use the same palette, panel hierarchy, and spacing as the Campaign Guides. */
+body:has(.incursion-guide) {
+  margin: 0;
+  background: #121212;
+  color: #f5f5f5;
+  font-family: "Lexend", sans-serif;
+}
+.incursion-guide {
+  --guide-ink: #f5f5f5;
+  --guide-muted: #cccccc;
+  --guide-accent: #d4af37;
+  --guide-accent-hover: #f5d76e;
+  --guide-accent-soft: rgba(212, 175, 55, .08);
+  --guide-border: #333333;
+  --guide-surface: #1e1e1e;
+  --guide-soft: #121212;
+  --hero-portrait-background: #121212;
+  --hero-portrait-border: #444444;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.incursion-guide *, .incursion-guide *::before, .incursion-guide *::after { box-sizing: border-box; }
+.incursion-guide :is(a, summary):focus-visible { outline: 3px solid #d4af37; outline-offset: 4px; border-radius: 3px; }
+.incursion-guide a:hover { color: var(--guide-accent-hover); }
+.incursion-guide .machine-meta { margin: 0 0 1rem; color: var(--guide-muted); font-size: .8rem; line-height: 1.8; }
+.incursion-guide .toc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.incursion-guide .toc-group { padding: 1rem; border: 1px solid var(--guide-border); border-radius: 9px; background: #151515; }
+.incursion-guide .toc-group h3 { margin: 0 0 .35rem; color: var(--guide-accent); font-size: 1rem; line-height: 1.3; }
+.incursion-guide .toc-group ul { display: grid; gap: .35rem; margin: 0; padding: 0; list-style: none; }
+.incursion-guide .toc-group a { display: inline-flex; align-items: center; gap: .4rem; color: #d5d5d5; font-size: .88rem; line-height: 1.4; text-decoration: none; }
+.incursion-guide .toc-group a::before { color: #f59e0b; content: "›"; font-weight: 800; }
+.incursion-guide .toc-group a:hover { color: var(--guide-accent-hover); text-decoration: underline; }
+.incursion-guide .guide-panel { padding: 1.5rem; margin-bottom: 3rem; border: 1px solid var(--guide-border); border-radius: 12px; background: var(--guide-surface); }
+.incursion-guide :is(section, article)[id] { scroll-margin-top: 6rem; }
+.incursion-guide h2 { margin: 0 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--guide-border); color: var(--guide-accent); font-size: clamp(1.25rem, 3vw, 1.5rem); line-height: 1.4; }
+.incursion-guide .section-intro { margin: 0 0 1.25rem; max-width: 980px; color: var(--guide-muted); font-size: .95rem; line-height: 1.8; }
+.incursion-guide .overview-headline { margin: 0 0 .6rem; color: var(--guide-ink); font-size: clamp(1.35rem, 4vw, 1.8rem); font-weight: 600; letter-spacing: -.025em; }
+.incursion-guide .overview-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.incursion-guide .overview-principles article { padding: 1.15rem; background: var(--guide-soft); border: 1px solid var(--guide-border); border-radius: 9px; }
+.incursion-guide .principle-number { color: var(--guide-accent); font-size: .75rem; font-weight: 600; }
+.incursion-guide :is(.overview-principles, .rules-grid) h3 { margin: .65rem 0 .4rem; font-size: 1rem; line-height: 1.45; }
+.incursion-guide :is(.overview-principles, .rules-grid) p { margin: 0; color: var(--guide-muted); font-size: .85rem; line-height: 1.75; }
+.incursion-guide .strategy-list { display: grid; gap: 1.5rem; }
+.incursion-guide .rules-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2rem; margin: 0; padding: 0 0 0 1.3rem; }
+.incursion-guide .rules-grid li { padding-left: .3rem; }
+.incursion-guide .rules-grid li::marker { color: var(--guide-accent); font-size: .85rem; font-weight: 600; }
+.incursion-guide .rules-grid h3 { margin-top: 0; }
+.incursion-guide .guide-next { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.25rem; margin: 1rem 0 2rem; }
+.incursion-guide .guide-next a { color: var(--guide-accent); font-size: .85rem; line-height: 1.7; text-underline-offset: .2em; }
+@media (max-width: 800px) {
+  .incursion-guide .overview-principles { grid-template-columns: minmax(0, 1fr); }
+  .incursion-guide .rules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .incursion-guide { padding: 1.25rem; }
+  .incursion-guide .guide-panel { padding: 1rem; margin-bottom: 2rem; }
+  .incursion-guide .toc-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .incursion-guide .rules-grid { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+}

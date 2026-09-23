@@ -1,0 +1,101 @@
+---
+import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
+import { incursionGuides } from "../../data/incursion";
+---
+
+<FeaturedInfographicPage
+  title="Incursion & Machine of War"
+  description="Machine of War recommendations and Incursion basics."
+  imageSrc="/images/incursion-mow.png"
+  imageAlt="Incursion and Machine of War Infographic"
+  lastUpdated="August 2026"
+  basicsTitle="Incursion & Machine of War Basics"
+  basicsContent={`
+## Event Timing
+
+Incursion events run for a limited time and focus on a single **Machine of War (MoW)**.
+
+## Choosing Your Machine of War
+
+At the start of the event, you must select one Machine of War to pursue.
+
+* Your choice is locked for the entire event.
+* You cannot switch to a different Machine of War until the next Incursion event.
+* Choosing carefully is important, especially for newer accounts with limited resources.
+
+## Event Progression
+
+Players battle through a series of stages that increase in difficulty.
+
+Progression follows the rarity system:
+
+* Common
+* Uncommon
+* Rare
+* Epic
+* Legendary
+* Mythic
+
+Higher difficulties offer greater rewards but require stronger rosters and more developed characters.
+
+## Event Rewards
+
+Incursion events are the primary way to unlock and improve Machines of War.
+
+Rewards include:
+
+* Machine of War shards used to unlock or ascend your chosen Machine of War
+* Badges
+* Orbs
+* Components
+* Other faction-specific upgrade materials
+
+## What to Expect
+
+Unlocking a Machine of War is achievable for most active players. Reaching higher ascension levels requires stronger rosters, efficient event progression, and participation across multiple Incursion cycles.
+
+Because your Machine of War choice is locked for the event, it is worth reviewing the strengths and long-term value of each option before committing.
+
+`}
+  resources={[
+    { title: "Reddit Discussion - July 2026", url: "https://www.reddit.com/r/WH40KTacticus/comments/1uz5c3s/infographic_incursion_mow_guide_choose_yours_on/" },
+    { title: "Reddit Discussion - June 2026", url: "https://www.reddit.com/r/WH40KTacticus/comments/1u0gkl6/infographic_incursion_mow_guide_choose_on_june_15/" },
+    { title: "Reddit Discussion - May 2026", url: "https://www.reddit.com/r/WH40KTacticus/comments/1t5t52f/infographic_incursion_mow_guide_choose_on_may_11/" },
+  ]}
+>
+  <section slot="guides" class="machine-guides" aria-labelledby="machine-guides-heading">
+    <h2 id="machine-guides-heading">Machine-Specific Guides</h2>
+    <div class="machine-guide-grid">
+      {incursionGuides.map((guide) => (
+        <a class:list={["machine-guide-link", { "has-thumbnail": !!guide.infographic?.thumbnailSrc }]} href={`/incursion-mow/${guide.slug}`}>
+          {guide.infographic?.thumbnailSrc ? (
+            <img class="guide-thumbnail" src={guide.infographic.thumbnailSrc} alt={`${guide.machine} Incursion guide preview`} loading="lazy" />
+          ) : (
+            <img src={guide.portrait} alt={`${guide.machine} Machine of War`} width="76" height="76" loading="lazy" />
+          )}
+          <div><h3>{guide.title} <span aria-hidden="true">→</span></h3><p>{guide.subtitle}</p></div>
+        </a>
+      ))}
+    </div>
+  </section>
+</FeaturedInfographicPage>
+
+<style>
+  .machine-guides { padding: 1.5rem; margin-bottom: 3rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; }
+  h2 { margin: 0 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid #333; color: #d4af37; }
+  .machine-guide-grid { display: grid; gap: 1rem; }
+  .machine-guide-link { display: flex; align-items: center; gap: 1.25rem; padding: 1rem; border: 1px solid #4e4425; border-radius: 9px; background: #121212; color: #f5f5f5; text-decoration: none; }
+  .machine-guide-link:hover { border-color: #d4af37; }
+  .machine-guide-link:focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }
+  img { object-fit: contain; flex-shrink: 0; }
+  .guide-thumbnail { width: 180px; height: auto; border-radius: 6px; }
+  h3 { margin: 0 0 .5rem; color: #d4af37; font-size: 1.15rem; line-height: 1.5; }
+  p { margin: 0; color: #ccc; font-size: .9rem; line-height: 1.7; }
+  @media (max-width: 600px) {
+    .machine-guides { padding: 1rem; }
+    .machine-guide-link { align-items: flex-start; gap: .8rem; }
+    img { width: 52px; height: 52px; }
+    .has-thumbnail { flex-direction: column; }
+    .guide-thumbnail { width: 100%; max-width: 280px; height: auto; }
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import type { InfographicAsset } from "../data/incursion/types";
+
+interface Props {
+  title: string;
+  asset?: InfographicAsset;
+}
+const { title, asset } = Astro.props;
+---
+
+<section class="featured-infographic" aria-labelledby="featured-infographic-heading">
+  <h2 id="featured-infographic-heading">Featured Infographic</h2>
+  {asset ? (
+    <>
+      <a class="image-link" href={asset.fullSizeSrc} target="_blank" rel="noopener noreferrer"
+        data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="image">
+        <img src={asset.src} alt={asset.alt} width={asset.width} height={asset.height} loading="lazy" />
+      </a>
+      <p class="caption"><a href={asset.fullSizeSrc} target="_blank" rel="noopener noreferrer"
+        data-ga4-infographic-open data-ga4-infographic-title={title} data-ga4-link-source="caption">CLICK FULL-SIZE INFOGRAPHIC</a></p>
+    </>
+  ) : (
+    <div class="infographic-placeholder">
+      <svg width="38" height="38" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="5" y="3" width="22" height="26" rx="3" /><path d="M10 10h12M10 15h5M10 20h12M10 24h8" />
+      </svg>
+      <h3>{title}</h3>
+      <span class="coming-soon">Coming Soon</span>
+      <p>The team recommendations and strategy guide are ready below.</p>
+    </div>
+  )}
+</section>
+
+<style>
+  .featured-infographic { margin-bottom: 3rem; padding: 1.5rem; border: 1px solid var(--guide-border, #333); border-radius: 12px; background: var(--guide-surface, #1e1e1e); }
+  h2 { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 1px solid var(--guide-border, #333); color: var(--guide-accent, #d4af37); font-size: 1.3rem; }
+  .image-link { display: block; }
+  img { display: block; width: 100%; max-width: 700px; height: auto; margin: auto; border-radius: 8px; }
+  .caption { margin: 1rem 0 0; text-align: center; }
+  a { color: var(--guide-accent, #d4af37); font-weight: 600; }
+  .infographic-placeholder { display: flex; min-height: 210px; padding: 1rem; flex-direction: column; align-items: center; justify-content: center; gap: .65rem; border: 1px dashed var(--guide-border, #666); border-radius: 8px; background: var(--guide-soft, #181818); text-align: center; }
+  svg { color: var(--guide-accent, #d4af37); }
+  h3 { margin: 0; font-size: 1.2rem; }
+  .coming-soon { padding: .3rem .8rem; border-radius: 20px; background: var(--guide-accent-soft, #353020); color: var(--guide-accent, #d4af37); font-size: .8rem; font-weight: 600; }
+  .infographic-placeholder p { margin: .1rem 0 0; color: var(--guide-muted, #ccc); font-size: .88rem; line-height: 1.6; }
+  @media (max-width: 700px) { .featured-infographic { padding: 1rem; margin-bottom: 2rem; } }
+</style>

@@ -1,0 +1,56 @@
+---
+import RankBadge from "../campaign/RankBadge.astro";
+import { rankReferences } from "../../lib/campaigns";
+import type { IncursionTierReward } from "../../data/incursion/types";
+
+interface Props { rows: IncursionTierReward[] }
+const { rows } = Astro.props;
+---
+
+<section class="guide-panel" id="tier-caps-rewards" aria-labelledby="tier-caps-rewards-heading">
+  <h2 id="tier-caps-rewards-heading">Tier Caps &amp; Shard Rewards</h2>
+  <p class="section-intro">Compare rank caps and shard rewards for initial clears and raids at each Incursion tier.</p>
+  <div class="rewards-table">
+    <table aria-labelledby="tier-caps-rewards-heading">
+      <colgroup><col class="tier-column" /><col class="cap-column" /><col /><col /></colgroup>
+      <thead>
+        <tr>
+          <th scope="col">Tier</th>
+          <th scope="col">Rank cap</th>
+          <th scope="col"><span>Shards</span><span class="reward-heading">Initial clear</span></th>
+          <th scope="col"><span>Shards</span><span class="reward-heading">Raid only</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <tr>
+            <th scope="row">{row.tier}</th>
+            <td class="tier-cap"><RankBadge rank={rankReferences[row.cap]} showLabel={false} /></td>
+            <td><span class="reward-amount">{row.initialClear}</span>{row.shardType && <> <span class="shard-type">{row.shardType}</span></>}</td>
+            <td><span class="reward-amount">{row.raidOnly}</span>{row.shardType && <> <span class="shard-type">{row.shardType}</span></>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .rewards-table { overflow: hidden; border: 1px solid var(--guide-border); border-radius: 8px; background: #151515; }
+  table { width: 100%; table-layout: fixed; border-spacing: 0; color: var(--guide-muted); font-size: .9rem; line-height: 1.5; }
+  .tier-column { width: 14%; }
+  .cap-column { width: 22%; }
+  th, td { padding: .55rem .5rem; border-bottom: 1px solid #303030; text-align: center; vertical-align: middle; }
+  thead th { padding-block: .85rem; background: #252525; color: var(--guide-accent); font-size: .85rem; font-weight: 700; }
+  .reward-heading { display: block; color: var(--guide-muted); font-weight: 400; }
+  tbody th, .reward-amount { color: var(--guide-ink); font-size: 1rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  tbody tr:nth-child(even) { background: #181818; }
+  tbody tr:last-child > * { border-bottom: 0; }
+  .shard-type { display: inline-block; color: var(--guide-accent); font-size: .8rem; }
+  @media (max-width: 480px) {
+    th, td { padding: .5rem .25rem; }
+    thead th { font-size: .75rem; }
+    .tier-cap :global(.rank-badge img) { width: 2.5rem; height: 2.5rem; }
+    .shard-type { display: block; font-size: .75rem; }
+  }
+</style>

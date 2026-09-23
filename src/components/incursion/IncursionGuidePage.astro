@@ -1,0 +1,80 @@
+---
+import "../../styles/campaign-layout.css";
+import "../../styles/incursion-guide.css";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../Header.astro";
+import Footer from "../Footer.astro";
+import CampaignHero from "../campaign/CampaignHero.astro";
+import FeaturedInfographic from "../FeaturedInfographic.astro";
+import StrategyCard from "./StrategyCard.astro";
+import PowerUpPriorities from "./PowerUpPriorities.astro";
+import ResearchEvidence from "./ResearchEvidence.astro";
+import TierCapsRewards from "./TierCapsRewards.astro";
+import type { IncursionGuide } from "../../data/incursion/types";
+
+interface Props { guide: IncursionGuide }
+const { guide } = Astro.props;
+const tocGroups = [
+  { title: "Guide", links: [{ label: "Overview", href: "#overview" }, { label: "Team Strategies", href: "#strategies" }, { label: "Power-Up Priorities", href: "#power-ups" }] },
+  { title: "Team Strategies", links: guide.strategies.map((strategy) => ({ label: strategy.name, href: `#${strategy.id}` })) },
+  { title: "Tips & Evidence", links: [{ label: "Rules for Success", href: "#rules" }, ...(guide.tierRewards?.length ? [{ label: "Tier Caps & Shard Rewards", href: "#tier-caps-rewards" }] : []), { label: "Creator Evidence", href: "#research" }] },
+];
+---
+<Layout title={guide.seoTitle} description={guide.description}
+  image={guide.infographic?.src} url={`https://terminusmaximus.com/incursion-mow/${guide.slug}`}>
+  <Header />
+  <main class="campaign-page incursion-guide" id="guide-content">
+    <CampaignHero title={guide.title} subtitle={guide.subtitle} updatedAt={guide.updatedAt}
+      updatedLabel="Research updated" backHref="/incursion-mow" backLabel="Incursion & Machine of War" />
+
+    <FeaturedInfographic title={`${guide.machine} Strategy Infographic`} asset={guide.infographic} />
+
+    <nav class="table-of-contents guide-panel" aria-labelledby="table-of-contents-heading">
+      <h2 id="table-of-contents-heading">Table of Contents</h2>
+      <div class="toc-grid">
+        {tocGroups.map((group) => (
+          <div class="toc-group">
+            <h3>{group.title}</h3>
+            <ul>{group.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </nav>
+
+    <section class="guide-panel" id="overview" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Overview</h2>
+      <p class="machine-meta">Machine: <strong>{guide.machine}</strong> · Eligible alliance: <strong>{guide.alliance}</strong></p>
+      <p class="overview-headline">{guide.overview.headline}</p>
+      <p class="section-intro">{guide.overview.text}</p>
+      <div class="overview-principles">
+        {guide.overview.principles.map((principle, index) => (
+          <article><span class="principle-number" aria-hidden="true">0{index + 1}</span><h3>{principle.title}</h3><p>{principle.text}</p></article>
+        ))}
+      </div>
+    </section>
+
+    <section class="guide-panel strategies-section" id="strategies" aria-labelledby="strategies-heading">
+      <h2 id="strategies-heading">Three Ways to Build for {guide.machine}</h2>
+      <p class="section-intro">Start with the path that fits your account, build around its core heroes, then use flex slots to adapt it.</p>
+      <div class="strategy-list">{guide.strategies.map((strategy, index) => <StrategyCard strategy={strategy} number={index + 1} />)}</div>
+    </section>
+
+    <PowerUpPriorities powerUps={guide.powerUps} />
+
+    <section class="guide-panel" id="rules" aria-labelledby="rules-heading">
+      <h2 id="rules-heading">Rules for Success</h2>
+      <ol class="rules-grid">
+        {guide.rules.map((rule) => <li><h3>{rule.title}</h3><p>{rule.text}</p></li>)}
+      </ol>
+    </section>
+
+    {guide.tierRewards?.length ? <TierCapsRewards rows={guide.tierRewards} /> : null}
+
+    <ResearchEvidence research={guide.research} />
+
+    <nav class="guide-next" aria-label="Related guides">
+      {guide.relatedGuides.map((link) => <a href={link.url}>{link.label}</a>)}
+    </nav>
+  </main>
+  <Footer />
+</Layout>

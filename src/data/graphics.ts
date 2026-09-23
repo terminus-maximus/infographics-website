@@ -3,6 +3,7 @@ import characterSource from "./campaigns/characters.json";
 import requiredRecommendations from "./campaigns/required-recs.json";
 import guildWars from "./guild-wars/editorial.json";
 import guildWarsDefend from "./guild-wars/defend-editorial.json";
+import { incursionGuides } from "./incursion";
 
 export interface RequiredHeroIcon {
   name: string;
@@ -251,6 +252,17 @@ const graphicDefinitions: GraphicDefinition[] = [
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
       category: "event"
     },
+    ...incursionGuides.flatMap((guide) => {
+      const infographic = guide.infographic;
+      return infographic ? [{
+        title: guide.title,
+        href: `/incursion-mow/${guide.slug}`,
+        description: guide.subtitle,
+        image: infographic.fullSizeSrc,
+        thumbnail: infographic.thumbnailSrc || infographic.src,
+        category: "event",
+      }] : [];
+    }),
     {
       title: "About Me",
       href: "/about",

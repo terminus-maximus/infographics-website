@@ -1,0 +1,42 @@
+---
+import type { IncursionGuide } from "../../data/incursion/types";
+interface Props { powerUps: IncursionGuide["powerUps"] }
+const { powerUps } = Astro.props;
+---
+<section class="guide-panel" id="power-ups" aria-labelledby="power-ups-heading">
+  <h2 id="power-ups-heading">Power-Up Priorities</h2>
+  <p class="section-intro">{powerUps.introduction}</p>
+  <div class="power-grid">
+    {powerUps.approaches.map((approach) => (
+      <article>
+        <h3><a href={`#${approach.strategyId}`}>{approach.heading}</a></h3>
+        <p class="focus">{approach.focus}</p>
+        <p>{approach.text}</p>
+        <a class="source-link" href={approach.link.url} target="_blank" rel="noopener noreferrer">{approach.link.label} <span aria-hidden="true">↗</span></a>
+      </article>
+    ))}
+  </div>
+  <details>
+    <summary>Compare Extra Hits, Regeneration, Lifesteal, and Havocs</summary>
+    <dl>
+      {powerUps.notes.map((note) => <div><dt>{note.name}</dt><dd>{note.text}</dd></div>)}
+    </dl>
+  </details>
+</section>
+<style>
+  .power-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  article { display: flex; flex-direction: column; padding: 1.15rem; border: 1px solid var(--guide-border); border-radius: 9px; background: var(--guide-soft); }
+  h3 { margin: 0 0 .8rem; font-size: 1rem; }
+  h3 a { color: var(--guide-ink); text-decoration: none; }
+  h3 a:hover { text-decoration: underline; }
+  p { margin: 0 0 1rem; color: var(--guide-muted); font-size: .85rem; line-height: 1.75; }
+  .focus { color: var(--guide-accent); font-weight: 600; }
+  .source-link { margin-top: auto; color: var(--guide-accent); font-size: .8rem; line-height: 1.6; text-underline-offset: .2em; }
+  details { margin-top: 1.25rem; font-size: .85rem; }
+  summary { padding: .5rem 0; color: var(--guide-accent); cursor: pointer; line-height: 1.6; }
+  dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1rem 0 0; }
+  dt { margin-bottom: .4rem; font-weight: 600; }
+  dd { margin: 0; color: var(--guide-muted); line-height: 1.7; }
+  @media (max-width: 800px) { .power-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 600px) { dl { grid-template-columns: minmax(0, 1fr); } }
+</style>

@@ -1,0 +1,13 @@
+---
+import IncursionGuidePage from "../../components/incursion/IncursionGuidePage.astro";
+import { incursionGuides } from "../../data/incursion";
+import type { IncursionGuide } from "../../data/incursion/types";
+
+export function getStaticPaths() {
+  return incursionGuides.map((guide) => ({ params: { machine: guide.slug }, props: { guide } }));
+}
+
+interface Props { guide: IncursionGuide }
+const { guide } = Astro.props;
+---
+<IncursionGuidePage guide={guide} />
