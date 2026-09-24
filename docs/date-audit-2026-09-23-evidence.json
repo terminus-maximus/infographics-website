@@ -1,0 +1,3323 @@
+{
+  "audit_date": "2026-09-23",
+  "source_revision": "4409764",
+  "scope": "All 47 built/live routes; 21 dated-guide PNGs and their WebPs.",
+  "pages": [
+    {
+      "route": "/about/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/beginner-guide/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: June 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: June 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaign-event/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 12, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 6, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 6, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 15, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 15, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 19, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 19, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 19, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 19, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "status": 200,
+      "local_update_labels": [
+        "Replay data updated: August 23, 2026"
+      ],
+      "live_update_labels": [
+        "Replay data updated: August 23, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/elite-campaigns/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: July 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: July 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/event-campaign/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": "0; url=/campaign-event"
+    },
+    {
+      "route": "/events/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/feedback/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/archive/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: July 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: July 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/next-season/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s097/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s098/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s099/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s100/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s101/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s102/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s103/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s104/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s105/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s106/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s107/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s108/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s109/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-raid/s110/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: Sept 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: Sept 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: Sept 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: Sept 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/guild-wars/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/hre/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "status": 200,
+      "local_update_labels": [
+        "Research updated: September 20, 2026"
+      ],
+      "live_update_labels": [
+        "Research updated: September 20, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/incursion-mow/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: August 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: August 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/lre/farsight/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: May 20, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: May 20, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/lre/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    },
+    {
+      "route": "/lre/lucius/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: June 23, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: June 23, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/lre/lysander/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: July 28, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: July 28, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/lre/uthar/",
+      "status": 200,
+      "local_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "live_update_labels": [
+        "Last Updated: Sept 6, 2026"
+      ],
+      "redirect": null
+    },
+    {
+      "route": "/replay-library/",
+      "status": 200,
+      "local_update_labels": [],
+      "live_update_labels": [],
+      "redirect": null
+    }
+  ],
+  "asset_hashes": [
+    {
+      "file": "public/images/beginner-guide.png",
+      "url": "https://terminusmaximus.com/images/beginner-guide.png",
+      "bytes": 7334020,
+      "local_sha256": "57e6c3f1ccd074bb4360f5a1e50260031c3e4418dfb75b2e4a07b12d42efe404",
+      "live_sha256": "57e6c3f1ccd074bb4360f5a1e50260031c3e4418dfb75b2e4a07b12d42efe404",
+      "match": true
+    },
+    {
+      "file": "public/images/elite-campaigns.png",
+      "url": "https://terminusmaximus.com/images/elite-campaigns.png",
+      "bytes": 7933109,
+      "local_sha256": "75049f3c0c205d7d7135b04a0e51fca2c387174dd91b0cb62e789378a221f29f",
+      "live_sha256": "75049f3c0c205d7d7135b04a0e51fca2c387174dd91b0cb62e789378a221f29f",
+      "match": true
+    },
+    {
+      "file": "public/images/boss-meta.png",
+      "url": "https://terminusmaximus.com/images/boss-meta.png",
+      "bytes": 8402548,
+      "local_sha256": "6e94bcb6bfc0c82c397a2d8abaf267dc521e8cd8e19c8d1616699e94161ab273",
+      "live_sha256": "6e94bcb6bfc0c82c397a2d8abaf267dc521e8cd8e19c8d1616699e94161ab273",
+      "match": true
+    },
+    {
+      "file": "public/images/campaign-event.png",
+      "url": "https://terminusmaximus.com/images/campaign-event.png",
+      "bytes": 9547207,
+      "local_sha256": "76a7ff28e6002ed6078ad3aee13d4e96ae1f47ed903e7848a5c8e6aaa35c2608",
+      "live_sha256": "76a7ff28e6002ed6078ad3aee13d4e96ae1f47ed903e7848a5c8e6aaa35c2608",
+      "match": true
+    },
+    {
+      "file": "public/images/hre.png",
+      "url": "https://terminusmaximus.com/images/hre.png",
+      "bytes": 8295625,
+      "local_sha256": "ef7f3b2209242e0415925910a7ff29875d0edb32d35192b16654caff3696742d",
+      "live_sha256": "ef7f3b2209242e0415925910a7ff29875d0edb32d35192b16654caff3696742d",
+      "match": true
+    },
+    {
+      "file": "public/images/incursion-mow.png",
+      "url": "https://terminusmaximus.com/images/incursion-mow.png",
+      "bytes": 9385014,
+      "local_sha256": "18c561a47d660b6ff10343ede5b91abe6a4f891014e82e53fff45c8a0374cb57",
+      "live_sha256": "18c561a47d660b6ff10343ede5b91abe6a4f891014e82e53fff45c8a0374cb57",
+      "match": true
+    },
+    {
+      "file": "public/images/farsight-lre.png",
+      "url": "https://terminusmaximus.com/images/farsight-lre.png",
+      "bytes": 7194134,
+      "local_sha256": "72ce7cb88d103cb88f9ca7607e8241064381e569d11696d7f3ee2492d7f96336",
+      "live_sha256": "72ce7cb88d103cb88f9ca7607e8241064381e569d11696d7f3ee2492d7f96336",
+      "match": true
+    },
+    {
+      "file": "public/images/lysander-lre.png",
+      "url": "https://terminusmaximus.com/images/lysander-lre.png",
+      "bytes": 7699697,
+      "local_sha256": "84d9d0ae5c541544fb73c4032edf716bbf95e754c206a2a515ad869ed1995470",
+      "live_sha256": "84d9d0ae5c541544fb73c4032edf716bbf95e754c206a2a515ad869ed1995470",
+      "match": true
+    },
+    {
+      "file": "public/images/lucius-lre.png",
+      "url": "https://terminusmaximus.com/images/lucius-lre.png",
+      "bytes": 7691496,
+      "local_sha256": "4d439450c8f60615899eb9008cd89ccb07ba1b9e6e486ac46c72746666085498",
+      "live_sha256": "4d439450c8f60615899eb9008cd89ccb07ba1b9e6e486ac46c72746666085498",
+      "match": true
+    },
+    {
+      "file": "public/images/uthar-lre.png",
+      "url": "https://terminusmaximus.com/images/uthar-lre.png",
+      "bytes": 7703759,
+      "local_sha256": "ec51237526cb831d2ef600828e083c3cfaac268d9a2f2d53443dddb5e27e4c59",
+      "live_sha256": "ec51237526cb831d2ef600828e083c3cfaac268d9a2f2d53443dddb5e27e4c59",
+      "match": true
+    },
+    {
+      "file": "public/images/guild-wars-attack.png",
+      "url": "https://terminusmaximus.com/images/guild-wars-attack.png",
+      "bytes": 8633747,
+      "local_sha256": "8170281a3af8a024e67e3cb463532105d1f7624c09d01f779ef166e9e0d6f3d8",
+      "live_sha256": "8170281a3af8a024e67e3cb463532105d1f7624c09d01f779ef166e9e0d6f3d8",
+      "match": true
+    },
+    {
+      "file": "public/images/guild-wars-defend.png",
+      "url": "https://terminusmaximus.com/images/guild-wars-defend.png",
+      "bytes": 9767080,
+      "local_sha256": "da46c1b01e0f13ebd75ab5d33d755a038ac8ed17163da66d4d1901dc38cde52f",
+      "live_sha256": "da46c1b01e0f13ebd75ab5d33d755a038ac8ed17163da66d4d1901dc38cde52f",
+      "match": true
+    },
+    {
+      "file": "public/images/mow-biovore.png",
+      "url": "https://terminusmaximus.com/images/mow-biovore.png",
+      "bytes": 6754309,
+      "local_sha256": "575fc8f776c18d59ec82defe39fad95f7ac30d64a7064f55be6240a1689244cd",
+      "live_sha256": "575fc8f776c18d59ec82defe39fad95f7ac30d64a7064f55be6240a1689244cd",
+      "match": true
+    },
+    {
+      "file": "public/images/indomitus.png",
+      "url": "https://terminusmaximus.com/images/indomitus.png",
+      "bytes": 8674211,
+      "local_sha256": "025184bb8cc558d5969460f3cb386ae9fb59b99e7db5dbbeae2d7c52b6b98af7",
+      "live_sha256": "025184bb8cc558d5969460f3cb386ae9fb59b99e7db5dbbeae2d7c52b6b98af7",
+      "match": true
+    },
+    {
+      "file": "public/images/indomitus-mirror.png",
+      "url": "https://terminusmaximus.com/images/indomitus-mirror.png",
+      "bytes": 7037498,
+      "local_sha256": "87d05c42c854c715fd418995fa1d3c16e64174333c263b95e69080593259da7d",
+      "live_sha256": "87d05c42c854c715fd418995fa1d3c16e64174333c263b95e69080593259da7d",
+      "match": true
+    },
+    {
+      "file": "public/images/fall-of-cadia.png",
+      "url": "https://terminusmaximus.com/images/fall-of-cadia.png",
+      "bytes": 6705625,
+      "local_sha256": "346e6f0a32078ee0676a613d926fd8754200e4603681188e026dad0a7c372fdd",
+      "live_sha256": "346e6f0a32078ee0676a613d926fd8754200e4603681188e026dad0a7c372fdd",
+      "match": true
+    },
+    {
+      "file": "public/images/fall-of-cadia-mirror.png",
+      "url": "https://terminusmaximus.com/images/fall-of-cadia-mirror.png",
+      "bytes": 9005758,
+      "local_sha256": "d19c2a7e7bfca72243606d7249e007ae72edf7df75d622476ae300b109092bdf",
+      "live_sha256": "d19c2a7e7bfca72243606d7249e007ae72edf7df75d622476ae300b109092bdf",
+      "match": true
+    },
+    {
+      "file": "public/images/octarius.png",
+      "url": "https://terminusmaximus.com/images/octarius.png",
+      "bytes": 7044160,
+      "local_sha256": "96ebe23f2cebdefe5338a46b8f6df72e60d4942e419ba4da26fbd01a6825fbe5",
+      "live_sha256": "96ebe23f2cebdefe5338a46b8f6df72e60d4942e419ba4da26fbd01a6825fbe5",
+      "match": true
+    },
+    {
+      "file": "public/images/octarius-mirror.png",
+      "url": "https://terminusmaximus.com/images/octarius-mirror.png",
+      "bytes": 6986960,
+      "local_sha256": "5cad8014d88182487895fb8d33b4c68b695e6a6cc3e11fb2920e9a09fa08d94e",
+      "live_sha256": "5cad8014d88182487895fb8d33b4c68b695e6a6cc3e11fb2920e9a09fa08d94e",
+      "match": true
+    },
+    {
+      "file": "public/images/saim-hann.png",
+      "url": "https://terminusmaximus.com/images/saim-hann.png",
+      "bytes": 9460236,
+      "local_sha256": "cf1464bd5a7eef6ee8585ccb6e3f6f494945d0522f88f933b820e9846852ee4b",
+      "live_sha256": "cf1464bd5a7eef6ee8585ccb6e3f6f494945d0522f88f933b820e9846852ee4b",
+      "match": true
+    },
+    {
+      "file": "public/images/saim-hann-mirror.png",
+      "url": "https://terminusmaximus.com/images/saim-hann-mirror.png",
+      "bytes": 6662981,
+      "local_sha256": "05071a2eb9a7b8460c81cf17fcb8c65b36fe420216e1cdc1e29707e1d773af05",
+      "live_sha256": "05071a2eb9a7b8460c81cf17fcb8c65b36fe420216e1cdc1e29707e1d773af05",
+      "match": true
+    },
+    {
+      "file": "public/images/web/beginner-guide.webp",
+      "url": "https://terminusmaximus.com/images/web/beginner-guide.webp",
+      "bytes": 55584,
+      "local_sha256": "e2868719d18b80ce9c3ad8fed1bf79ae20627a069dc560f2308435c5da3ac676",
+      "live_sha256": "e2868719d18b80ce9c3ad8fed1bf79ae20627a069dc560f2308435c5da3ac676",
+      "match": true
+    },
+    {
+      "file": "public/images/web/elite-campaigns.webp",
+      "url": "https://terminusmaximus.com/images/web/elite-campaigns.webp",
+      "bytes": 53690,
+      "local_sha256": "049d8325b228925c5b12f176898df48f10d33480eb7895d968bf942190a4b796",
+      "live_sha256": "049d8325b228925c5b12f176898df48f10d33480eb7895d968bf942190a4b796",
+      "match": true
+    },
+    {
+      "file": "public/images/web/boss-meta.webp",
+      "url": "https://terminusmaximus.com/images/web/boss-meta.webp",
+      "bytes": 59126,
+      "local_sha256": "0e896677d983f8f69c50c1a8da63ee915319cbef9365a40f5c3519764c6f495c",
+      "live_sha256": "0e896677d983f8f69c50c1a8da63ee915319cbef9365a40f5c3519764c6f495c",
+      "match": true
+    },
+    {
+      "file": "public/images/web/campaign-event.webp",
+      "url": "https://terminusmaximus.com/images/web/campaign-event.webp",
+      "bytes": 48322,
+      "local_sha256": "2e022eeb60d71773b99aceda1f22003ce3bfa17c4ead54c526647572cdaa8dc5",
+      "live_sha256": "2e022eeb60d71773b99aceda1f22003ce3bfa17c4ead54c526647572cdaa8dc5",
+      "match": true
+    },
+    {
+      "file": "public/images/web/hre.webp",
+      "url": "https://terminusmaximus.com/images/web/hre.webp",
+      "bytes": 41062,
+      "local_sha256": "e26d4e5be1cbbd0e822ddc29b1bcb137b6d4da39603ba32a8bc0531bfe9dc6c6",
+      "live_sha256": "e26d4e5be1cbbd0e822ddc29b1bcb137b6d4da39603ba32a8bc0531bfe9dc6c6",
+      "match": true
+    },
+    {
+      "file": "public/images/web/incursion-mow.webp",
+      "url": "https://terminusmaximus.com/images/web/incursion-mow.webp",
+      "bytes": 51738,
+      "local_sha256": "8cda88412bbdc1ff12d6581beed1871669ea76f0d0568638190433d919fcd954",
+      "live_sha256": "8cda88412bbdc1ff12d6581beed1871669ea76f0d0568638190433d919fcd954",
+      "match": true
+    },
+    {
+      "file": "public/images/web/farsight-lre.webp",
+      "url": "https://terminusmaximus.com/images/web/farsight-lre.webp",
+      "bytes": 52438,
+      "local_sha256": "5322adbebfa5b5dfe12828c6f4be2d25d2e6d7d4a5a7ff2bee76c753db6eff84",
+      "live_sha256": "5322adbebfa5b5dfe12828c6f4be2d25d2e6d7d4a5a7ff2bee76c753db6eff84",
+      "match": true
+    },
+    {
+      "file": "public/images/web/lysander-lre.webp",
+      "url": "https://terminusmaximus.com/images/web/lysander-lre.webp",
+      "bytes": 53872,
+      "local_sha256": "0f28fc1883f238bb59bff83eae3eff0b54c71a8f690dfea21abe6cd44916fc7d",
+      "live_sha256": "0f28fc1883f238bb59bff83eae3eff0b54c71a8f690dfea21abe6cd44916fc7d",
+      "match": true
+    },
+    {
+      "file": "public/images/web/lucius-lre.webp",
+      "url": "https://terminusmaximus.com/images/web/lucius-lre.webp",
+      "bytes": 54474,
+      "local_sha256": "a36f765eab5d0d5830b41f610e390752e277d77e253affe1599dd9ae31e7a6cf",
+      "live_sha256": "a36f765eab5d0d5830b41f610e390752e277d77e253affe1599dd9ae31e7a6cf",
+      "match": true
+    },
+    {
+      "file": "public/images/web/uthar-lre.webp",
+      "url": "https://terminusmaximus.com/images/web/uthar-lre.webp",
+      "bytes": 56036,
+      "local_sha256": "eb1540a9d171b9a3fecb76e9a0c088043a8193ded1e349beb8ac6cbb70287d1a",
+      "live_sha256": "eb1540a9d171b9a3fecb76e9a0c088043a8193ded1e349beb8ac6cbb70287d1a",
+      "match": true
+    },
+    {
+      "file": "public/images/web/guild-wars-attack.webp",
+      "url": "https://terminusmaximus.com/images/web/guild-wars-attack.webp",
+      "bytes": 49218,
+      "local_sha256": "1cf6466239d9e9dd822bee58bbad13788e5d0ec1cec8928b184aff6200c5cd0c",
+      "live_sha256": "1cf6466239d9e9dd822bee58bbad13788e5d0ec1cec8928b184aff6200c5cd0c",
+      "match": true
+    },
+    {
+      "file": "public/images/web/guild-wars-defend.webp",
+      "url": "https://terminusmaximus.com/images/web/guild-wars-defend.webp",
+      "bytes": 52036,
+      "local_sha256": "7852967eb305965c7e8424072b21cfb60c111fc6b9e794b5637677424f90d8df",
+      "live_sha256": "7852967eb305965c7e8424072b21cfb60c111fc6b9e794b5637677424f90d8df",
+      "match": true
+    },
+    {
+      "file": "public/images/web/mow-biovore.webp",
+      "url": "https://terminusmaximus.com/images/web/mow-biovore.webp",
+      "bytes": 42296,
+      "local_sha256": "dd7633c0e9c7eec02d7dcc51a7717b9bd25ec042e23ae0445b3d18245f49355a",
+      "live_sha256": "dd7633c0e9c7eec02d7dcc51a7717b9bd25ec042e23ae0445b3d18245f49355a",
+      "match": true
+    },
+    {
+      "file": "public/images/web/indomitus.webp",
+      "url": "https://terminusmaximus.com/images/web/indomitus.webp",
+      "bytes": 51750,
+      "local_sha256": "3a33f8f46ad9fa7f50e857f3a07cb660d7732c05c2b65ea5e4aa03205ec3bbb0",
+      "live_sha256": "3a33f8f46ad9fa7f50e857f3a07cb660d7732c05c2b65ea5e4aa03205ec3bbb0",
+      "match": true
+    },
+    {
+      "file": "public/images/web/indomitus-mirror.webp",
+      "url": "https://terminusmaximus.com/images/web/indomitus-mirror.webp",
+      "bytes": 50058,
+      "local_sha256": "33089ce5484b234986445f1875a473b26a42c6cb0d8e4f0a65ff53b46ed1e117",
+      "live_sha256": "33089ce5484b234986445f1875a473b26a42c6cb0d8e4f0a65ff53b46ed1e117",
+      "match": true
+    },
+    {
+      "file": "public/images/web/fall-of-cadia.webp",
+      "url": "https://terminusmaximus.com/images/web/fall-of-cadia.webp",
+      "bytes": 46860,
+      "local_sha256": "19605360607534036d98f0fba0b3b1196c311edd9aa4d02cbad72f59f6b1f076",
+      "live_sha256": "19605360607534036d98f0fba0b3b1196c311edd9aa4d02cbad72f59f6b1f076",
+      "match": true
+    },
+    {
+      "file": "public/images/web/fall-of-cadia-mirror.webp",
+      "url": "https://terminusmaximus.com/images/web/fall-of-cadia-mirror.webp",
+      "bytes": 51444,
+      "local_sha256": "68b15558fa1dd1eeec2ea6130f89a3bf6e44fde7668c2b177aa9c7aa0be7aa42",
+      "live_sha256": "68b15558fa1dd1eeec2ea6130f89a3bf6e44fde7668c2b177aa9c7aa0be7aa42",
+      "match": true
+    },
+    {
+      "file": "public/images/web/octarius.webp",
+      "url": "https://terminusmaximus.com/images/web/octarius.webp",
+      "bytes": 49824,
+      "local_sha256": "0b76cefe0ce8e955e873322f79b3e8fbf5e385849ffdd45bc78e41ab239406b6",
+      "live_sha256": "0b76cefe0ce8e955e873322f79b3e8fbf5e385849ffdd45bc78e41ab239406b6",
+      "match": true
+    },
+    {
+      "file": "public/images/web/octarius-mirror.webp",
+      "url": "https://terminusmaximus.com/images/web/octarius-mirror.webp",
+      "bytes": 52394,
+      "local_sha256": "4c5257a810276959eee13ec9b6a71f525180d05610d20db48ec060fe3d3da1e4",
+      "live_sha256": "4c5257a810276959eee13ec9b6a71f525180d05610d20db48ec060fe3d3da1e4",
+      "match": true
+    },
+    {
+      "file": "public/images/web/saim-hann.webp",
+      "url": "https://terminusmaximus.com/images/web/saim-hann.webp",
+      "bytes": 54262,
+      "local_sha256": "116b886b8650f5cdc599df3461ef7bdf2a685f0870950405fec5e1c488d03635",
+      "live_sha256": "116b886b8650f5cdc599df3461ef7bdf2a685f0870950405fec5e1c488d03635",
+      "match": true
+    },
+    {
+      "file": "public/images/web/saim-hann-mirror.webp",
+      "url": "https://terminusmaximus.com/images/web/saim-hann-mirror.webp",
+      "bytes": 50164,
+      "local_sha256": "6b3e1ac6b19e2ccdde0d90b25ef564a897deb1cb43e92aae5c27333606048a48",
+      "live_sha256": "6b3e1ac6b19e2ccdde0d90b25ef564a897deb1cb43e92aae5c27333606048a48",
+      "match": true
+    }
+  ],
+  "png_date_metadata": [
+    {
+      "file": "public/images/beginner-guide.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/elite-campaigns.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/boss-meta.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/campaign-event.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/hre.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/incursion-mow.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/farsight-lre.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/lysander-lre.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/lucius-lre.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/uthar-lre.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/guild-wars-attack.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/guild-wars-defend.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/mow-biovore.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/indomitus.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/indomitus-mirror.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/fall-of-cadia.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/fall-of-cadia-mirror.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/octarius.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/octarius-mirror.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/saim-hann.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    },
+    {
+      "file": "public/images/saim-hann-mirror.png",
+      "exif_dates": {},
+      "xmp_dates": [],
+      "text_date_fields": {}
+    }
+  ],
+  "png_git_evidence": [
+    {
+      "file": "public/images/CampaignGuideBanner.png",
+      "git": "f840e95 2026-08-01 Campaign Guide prototype"
+    },
+    {
+      "file": "public/images/ReplayLibraryBanner.png",
+      "git": "97960bc 2026-07-02 Refactor Terminus Maximus site content and layout"
+    },
+    {
+      "file": "public/images/TerminusMaximusInfographics.png",
+      "git": "0d136e4 2026-06-01 Add social sharing metadata"
+    },
+    {
+      "file": "public/images/beginner-guide.png",
+      "git": "e9d939e 2026-06-04 Beginner Guide Icon Fix"
+    },
+    {
+      "file": "public/images/boss-meta.png",
+      "git": "53cfa27 2026-07-14 Boss Meta QA fixes"
+    },
+    {
+      "file": "public/images/campaign-event.png",
+      "git": "87eaeae 2026-09-05 HP update Sep 5"
+    },
+    {
+      "file": "public/images/elite-campaigns.png",
+      "git": "2bf9344 2026-07-08 Elite Campaigns"
+    },
+    {
+      "file": "public/images/fall-of-cadia-mirror.png",
+      "git": "7f4614d 2026-08-10 FoC Mirror"
+    },
+    {
+      "file": "public/images/fall-of-cadia.png",
+      "git": "8c65762 2026-09-16 Campaign Guide error fixes"
+    },
+    {
+      "file": "public/images/farsight-lre.png",
+      "git": "6af06ae 2026-06-01 Thumbnails"
+    },
+    {
+      "file": "public/images/guild-wars-attack.png",
+      "git": "f5087d4 2026-09-12 GW Attack & CG width"
+    },
+    {
+      "file": "public/images/guild-wars-defend.png",
+      "git": "27e70d0 2026-09-13 GW Defenders"
+    },
+    {
+      "file": "public/images/hre.png",
+      "git": "87eaeae 2026-09-05 HP update Sep 5"
+    },
+    {
+      "file": "public/images/incursion-mow.png",
+      "git": "4409764 2026-09-23 MoW update and Biovore guide"
+    },
+    {
+      "file": "public/images/indomitus-mirror.png",
+      "git": "f785c0c 2026-08-05 Revised necron graphic"
+    },
+    {
+      "file": "public/images/indomitus.png",
+      "git": "8c28ff6 2026-08-04 Indomitus equipment"
+    },
+    {
+      "file": "public/images/lre.png",
+      "git": "7d601b2 2026-05-30 Add infographic pages and reusable layout"
+    },
+    {
+      "file": "public/images/lucius-lre.png",
+      "git": "323bc2d 2026-06-23 Refreshed Lucius graphic"
+    },
+    {
+      "file": "public/images/lysander-lre.png",
+      "git": "9e859ca 2026-07-26 revised s106 and lysander assets"
+    },
+    {
+      "file": "public/images/mow-biovore.png",
+      "git": "4409764 2026-09-23 MoW update and Biovore guide"
+    },
+    {
+      "file": "public/images/octarius-mirror.png",
+      "git": "f59ca5e 2026-08-17 Octarius Mirror page and references"
+    },
+    {
+      "file": "public/images/octarius.png",
+      "git": "b368e77 2026-08-15 Octarius campaign page"
+    },
+    {
+      "file": "public/images/saim-hann-mirror.png",
+      "git": "8c65762 2026-09-16 Campaign Guide error fixes"
+    },
+    {
+      "file": "public/images/saim-hann.png",
+      "git": "5f90041 2026-08-19 Saim-Hann and new Homepage"
+    },
+    {
+      "file": "public/images/terminus-maximus.png",
+      "git": "7d601b2 2026-05-30 Add infographic pages and reusable layout"
+    },
+    {
+      "file": "public/images/uthar-lre.png",
+      "git": "745f010 2026-09-09 Sekehtar Uthar LRE"
+    }
+  ],
+  "png_ocr_date_candidates": [
+    {
+      "file": "public/images/beginner-guide.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.05315440654754644,
+          "text": "June",
+          "w": 0.029796509515671508,
+          "x": 0.0007267449499133515,
+          "y": 0.932619689725645
+        },
+        {
+          "confidence": 1,
+          "h": 0.05495813369750979,
+          "text": "June",
+          "w": 0.02919839543788707,
+          "x": 0.0005659598275558494,
+          "y": 0.887040168854983
+        },
+        {
+          "confidence": 1,
+          "h": 0.056300663948059104,
+          "text": "June",
+          "w": 0.030234168557559747,
+          "x": -0.00045773045231957236,
+          "y": 0.8426451901376955
+        },
+        {
+          "confidence": 1,
+          "h": 0.09117912292480468,
+          "text": "June 2026",
+          "w": 0.05348837609384574,
+          "x": -0.0014375610205645737,
+          "y": 0.5409495803092121
+        },
+        {
+          "confidence": 1,
+          "h": 0.0933174610137939,
+          "text": "June 2026",
+          "w": 0.05232558263784029,
+          "x": 1.4929588098002262e-10,
+          "y": 0.49738271884049956
+        },
+        {
+          "confidence": 1,
+          "h": 0.09331744194030767,
+          "text": "June 2026",
+          "w": 0.05232557729512703,
+          "x": -0.0007267407653427604,
+          "y": 0.4520459397077653
+        },
+        {
+          "confidence": 1,
+          "h": 0.09095758438110346,
+          "text": "June 2026",
+          "w": 0.05322322257760526,
+          "x": -0.0012014581405509978,
+          "y": 0.4092274948385104
+        },
+        {
+          "confidence": 1,
+          "h": 0.0946127843856811,
+          "text": "June 2026",
+          "w": 0.05305232253729128,
+          "x": -0.0007267428551662406,
+          "y": 0.36266770624740463
+        },
+        {
+          "confidence": 1,
+          "h": 0.09331744670867914,
+          "text": "June 2026",
+          "w": 0.05232557729512703,
+          "x": -0.0007267423660791704,
+          "y": 0.3199215880720615
+        },
+        {
+          "confidence": 1,
+          "h": 0.09331745147705084,
+          "text": "June 2026",
+          "w": 0.05232558263784028,
+          "x": -0.0007267447463192799,
+          "y": 0.2758801343268027
+        },
+        {
+          "confidence": 1,
+          "h": 0.0920183181762696,
+          "text": "June 2026",
+          "w": 0.05159883472431942,
+          "x": -0.0007267430100376928,
+          "y": 0.2318405815790342
+        },
+        {
+          "confidence": 1,
+          "h": 0.0946127843856811,
+          "text": "June 2026",
+          "w": 0.05305232253729128,
+          "x": -0.0007267428551662406,
+          "y": 0.18650190313859627
+        },
+        {
+          "confidence": 1,
+          "h": 0.08843718528747557,
+          "text": "June 202",
+          "w": 0.04773380642845517,
+          "x": -0.0007664492553499195,
+          "y": 0.1498234749674071
+        },
+        {
+          "confidence": 1,
+          "h": 0.05908598423004141,
+          "text": "June",
+          "w": 0.031635928220775614,
+          "x": -0.0011427438069535065,
+          "y": 0.13274037383900994
+        },
+        {
+          "confidence": 1,
+          "h": 0.06052381515502925,
+          "text": "June",
+          "w": 0.0318741437767734,
+          "x": -0.0010430910585671257,
+          "y": 0.08686701697616328
+        },
+        {
+          "confidence": 1,
+          "h": 0.06128353595733649,
+          "text": "June",
+          "w": 0.03137407650132806,
+          "x": -0.0003899593728141429,
+          "y": 0.04117044127988745
+        },
+        {
+          "confidence": 1,
+          "h": 0.05574888229370123,
+          "text": "June",
+          "w": 0.03124999732864337,
+          "x": -0.000726743545129753,
+          "y": 0.0012706374277169363
+        }
+      ]
+    },
+    {
+      "file": "public/images/elite-campaigns.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.08791323833584042,
+          "text": "July 2026",
+          "w": 0.049418604465439366,
+          "x": 1.9023431470857336e-09,
+          "y": 0.8152165061432896
+        },
+        {
+          "confidence": 1,
+          "h": 0.07110714645859617,
+          "text": "July 20",
+          "w": 0.03997093035637376,
+          "x": 0.0007267437139024723,
+          "y": 0.7829218796963933
+        },
+        {
+          "confidence": 1,
+          "h": 0.08662124539013982,
+          "text": "July 202",
+          "w": 0.04869185538867596,
+          "x": 1.6872612163755083e-09,
+          "y": 0.5503586299169163
+        },
+        {
+          "confidence": 1,
+          "h": 0.09178239336665361,
+          "text": "July 2026",
+          "w": 0.05159883838555069,
+          "x": 3.9480699705077095e-10,
+          "y": -0.0026095425014098783
+        }
+      ]
+    },
+    {
+      "file": "public/images/boss-meta.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.09078437082588597,
+          "text": "July 2026",
+          "w": 0.049565016728028696,
+          "x": 0.003399252559989433,
+          "y": 0.766192582403245
+        },
+        {
+          "confidence": 1,
+          "h": 0.09220990395633943,
+          "text": "July 2026",
+          "w": 0.05379719615312825,
+          "x": 0.0023751399924509496,
+          "y": 0.7223220840424687
+        },
+        {
+          "confidence": 1,
+          "h": 0.04772740888419624,
+          "text": "2026",
+          "w": 0.026889534207922602,
+          "x": 0.02398255882562865,
+          "y": 0.7280692851792776
+        },
+        {
+          "confidence": 1,
+          "h": 0.08768867595902519,
+          "text": "July 2026",
+          "w": 0.049418599982010696,
+          "x": 0.003633722356441988,
+          "y": 0.6790938099630959
+        },
+        {
+          "confidence": 1,
+          "h": 0.08773737082768773,
+          "text": "July 2026",
+          "w": 0.05147628044487697,
+          "x": 0.0033074604290273093,
+          "y": 0.6352091105929151
+        },
+        {
+          "confidence": 1,
+          "h": 0.0889816190337196,
+          "text": "July 2026",
+          "w": 0.050145352646254436,
+          "x": 0.0036337179331496247,
+          "y": 0.5914628012009016
+        },
+        {
+          "confidence": 1,
+          "h": 0.0903179548763261,
+          "text": "July 2026",
+          "w": 0.052800001530105715,
+          "x": 0.0026471017404804866,
+          "y": 0.36716929393213205
+        },
+        {
+          "confidence": 1,
+          "h": 0.07577047312831531,
+          "text": "July 202",
+          "w": 0.0442088356969099,
+          "x": 0.0030657886725066804,
+          "y": 0.33789836523304595
+        },
+        {
+          "confidence": 1,
+          "h": 0.0545175981697561,
+          "text": "2026",
+          "w": 0.03199679039191672,
+          "x": 0.015206496992589271,
+          "y": 0.2047710621041
+        },
+        {
+          "confidence": 1,
+          "h": 0.08897733981612277,
+          "text": "July 2026-",
+          "w": 0.05014534736274022,
+          "x": 0.003633720591211116,
+          "y": 0.1468773113817946
+        },
+        {
+          "confidence": 1,
+          "h": 0.07480635414264292,
+          "text": "July 202",
+          "w": 0.04215116315931495,
+          "x": -0.0043604649815133,
+          "y": 0.13012259564989548
+        }
+      ]
+    },
+    {
+      "file": "public/images/campaign-event.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.07365867947838156,
+          "text": "Sept 10",
+          "w": 0.041424415182607484,
+          "x": 0.007267443396830179,
+          "y": 0.8165298318640624
+        },
+        {
+          "confidence": 1,
+          "h": 0.07556340302846032,
+          "text": "Sept 10",
+          "w": 0.04384200577147867,
+          "x": 0.006294006770327458,
+          "y": 0.7707620260511018
+        },
+        {
+          "confidence": 1,
+          "h": 0.07434964725232673,
+          "text": "Sept 10",
+          "w": 0.043116593486311,
+          "x": 0.006294007053602168,
+          "y": 0.7280481357524039
+        },
+        {
+          "confidence": 1,
+          "h": 0.07495185392066506,
+          "text": "Sept 10",
+          "w": 0.042151160716731806,
+          "x": 0.00654069843849228,
+          "y": 0.683454306082979
+        },
+        {
+          "confidence": 1,
+          "h": 0.07495185392066495,
+          "text": "Sept 10",
+          "w": 0.042151165175758426,
+          "x": 0.006540696637312745,
+          "y": 0.6395266574780208
+        },
+        {
+          "confidence": 1,
+          "h": 0.07753699732917263,
+          "text": "Sept 10",
+          "w": 0.043604647325953844,
+          "x": 0.00654069859467974,
+          "y": 0.4599395130277557
+        },
+        {
+          "confidence": 1,
+          "h": 0.07753700525993623,
+          "text": "Sept 10",
+          "w": 0.04360465178498046,
+          "x": 0.0058139533966227435,
+          "y": 0.4173038481602007
+        },
+        {
+          "confidence": 1,
+          "h": 0.07753699732917263,
+          "text": "Sept 10",
+          "w": 0.043604647325953844,
+          "x": 0.00654069859467974,
+          "y": 0.37208421587013285
+        },
+        {
+          "confidence": 1,
+          "h": 0.07712474037852457,
+          "text": "Sept 10",
+          "w": 0.04208448489181902,
+          "x": 0.006643377024207831,
+          "y": 0.32855471599800823
+        },
+        {
+          "confidence": 1,
+          "h": 0.07677716673535773,
+          "text": "Sept10",
+          "w": 0.04456741805664633,
+          "x": 0.005568595273133335,
+          "y": 0.15060698498554637
+        },
+        {
+          "confidence": 1,
+          "h": 0.005257941085434759,
+          "text": "Bottle Mark",
+          "w": 0.030523252236362375,
+          "x": 0.46075581726844655,
+          "y": 0.529625779589917
+        },
+        {
+          "confidence": 1,
+          "h": 0.012993762993763092,
+          "text": "Orbs of Decay",
+          "w": 0.03779069643003907,
+          "x": 0.841569768536434,
+          "y": 0.5400207902444891
+        },
+        {
+          "confidence": 1,
+          "h": 0.005243167807803095,
+          "text": "Bottle Mark",
+          "w": 0.03052325223636243,
+          "x": 0.9345930265707721,
+          "y": 0.532224532195714
+        }
+      ]
+    },
+    {
+      "file": "public/images/hre.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.07312910490707036,
+          "text": "Sept 13",
+          "w": 0.04239118928246075,
+          "x": 0.004112437639776818,
+          "y": 0.9037621219038101
+        },
+        {
+          "confidence": 1,
+          "h": 0.07312910490707036,
+          "text": "Sept 13",
+          "w": 0.04239118928246075,
+          "x": 0.004112437639776818,
+          "y": 0.8598344733249987
+        },
+        {
+          "confidence": 1,
+          "h": 0.07368856401585822,
+          "text": "Sept 13",
+          "w": 0.04369298445520926,
+          "x": 0.003950918462777479,
+          "y": 0.8152907126992237
+        },
+        {
+          "confidence": 1,
+          "h": 0.0742143496775679,
+          "text": "Sept 13",
+          "w": 0.04313022512897884,
+          "x": 0.00409756913317958,
+          "y": 0.7268884872039316
+        },
+        {
+          "confidence": 1,
+          "h": 0.07494573044116049,
+          "text": "Sept 13",
+          "w": 0.0421511652372438,
+          "x": 0.0043604637308570894,
+          "y": 0.6369457394729046
+        },
+        {
+          "confidence": 1,
+          "h": 0.07752970388449076,
+          "text": "Sept 13",
+          "w": 0.04360465180102011,
+          "x": 0.004360463808878444,
+          "y": 0.5930180951681625
+        },
+        {
+          "confidence": 1,
+          "h": 0.07498776531422813,
+          "text": "Sept 13",
+          "w": 0.044487989777855445,
+          "x": 0.0032281894746687204,
+          "y": 0.5491408042329307
+        },
+        {
+          "confidence": 1,
+          "h": 0.075633124247797,
+          "text": "Sept 13",
+          "w": 0.043799338580893105,
+          "x": 0.004112438156288884,
+          "y": 0.5046152255621452
+        },
+        {
+          "confidence": 1,
+          "h": 0.07550364415020316,
+          "text": "Sept 13",
+          "w": 0.04390380365385426,
+          "x": 0.003372337334892375,
+          "y": 0.46065804005966293
+        },
+        {
+          "confidence": 1,
+          "h": 0.07367965356627504,
+          "text": "Sept 13",
+          "w": 0.043935448717442066,
+          "x": 0.003909381358883086,
+          "y": 0.41753066453852483
+        },
+        {
+          "confidence": 1,
+          "h": 0.07484493377620471,
+          "text": "Sept 13",
+          "w": 0.04441571407180896,
+          "x": 0.003228189066494613,
+          "y": 0.3734302480769649
+        },
+        {
+          "confidence": 1,
+          "h": 0.07430034710654321,
+          "text": "Sept 13",
+          "w": 0.04317555324636775,
+          "x": 0.004052241511816635,
+          "y": 0.32886969512202713
+        },
+        {
+          "confidence": 1,
+          "h": 0.07433808332821445,
+          "text": "Sept 13",
+          "w": 0.04311926587880087,
+          "x": 0.004112438807029566,
+          "y": 0.28490146401196326
+        },
+        {
+          "confidence": 1,
+          "h": 0.07623771716282568,
+          "text": "Sept 13",
+          "w": 0.0428779062321432,
+          "x": 0.0036337209120395845,
+          "y": 0.2390129246404571
+        },
+        {
+          "confidence": 1,
+          "h": 0.07623771716282568,
+          "text": "Sept 13",
+          "w": 0.042877906232143194,
+          "x": -0.003633720432082356,
+          "y": 0.20542119263336878
+        },
+        {
+          "confidence": 1,
+          "h": 0.0749457304411606,
+          "text": "Sept 13",
+          "w": 0.04215116295025503,
+          "x": -0.0029069762082907825,
+          "y": 0.06330232993429397
+        }
+      ]
+    },
+    {
+      "file": "public/images/incursion-mow.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.07238717220000568,
+          "text": "pt 2020",
+          "w": 0.0406976732616956,
+          "x": 0.014534885552453237,
+          "y": 0.9405505985549859
+        },
+        {
+          "confidence": 1,
+          "h": 0.0828715698628486,
+          "text": "Sept 202",
+          "w": 0.048558459595667236,
+          "x": 0.003337049216357207,
+          "y": 0.7272980665952639
+        },
+        {
+          "confidence": 1,
+          "h": 0.07238717220000579,
+          "text": "Sept 20",
+          "w": 0.0406976732616956,
+          "x": 0.004360464441665117,
+          "y": 0.6924885858341556
+        },
+        {
+          "confidence": 1,
+          "h": 0.08937162890212935,
+          "text": "Sept 2026",
+          "w": 0.05369887609204811,
+          "x": 0.003267843031731966,
+          "y": 0.5877386714617432
+        },
+        {
+          "confidence": 1,
+          "h": 0.09306156786182262,
+          "text": "Sept 2026",
+          "w": 0.05232558055396043,
+          "x": 0.00363372090207735,
+          "y": 0.540032523942506
+        },
+        {
+          "confidence": 1,
+          "h": 0.09176956852780116,
+          "text": "Sept 2026",
+          "w": 0.05159883436961645,
+          "x": 0.0036337215287306894,
+          "y": 0.49739687052496073
+        },
+        {
+          "confidence": 1,
+          "h": 0.0784353183794625,
+          "text": "Sept 202",
+          "w": 0.04276722680200962,
+          "x": 0.00373639972604704,
+          "y": 0.4667895020964047
+        },
+        {
+          "confidence": 1,
+          "h": 0.016281744598839354,
+          "text": "Marines-only",
+          "w": 0.055462609400181107,
+          "x": 0.4461045704217108,
+          "y": 0.10676797729832
+        },
+        {
+          "confidence": 1,
+          "h": 0.015503875313931825,
+          "text": "Marines-only",
+          "w": 0.05377906840018565,
+          "x": 0.6758720931690932,
+          "y": 0.3410852715420005
+        }
+      ]
+    },
+    {
+      "file": "public/images/farsight-lre.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.07622739000902379,
+          "text": "June 21",
+          "w": 0.04288582912089529,
+          "x": 0.0036297599840067153,
+          "y": 0.8165374669889512
+        },
+        {
+          "confidence": 1,
+          "h": 0.07622739238430232,
+          "text": "June 21",
+          "w": 0.04288582912089529,
+          "x": 0.0036297599840067153,
+          "y": 0.7726098184101399
+        },
+        {
+          "confidence": 1,
+          "h": 0.07622739000902379,
+          "text": "June 21",
+          "w": 0.042885826447666656,
+          "x": 0.0036297611559152013,
+          "y": 0.728682168619412
+        },
+        {
+          "confidence": 1,
+          "h": 0.07622739000902368,
+          "text": "June 21",
+          "w": 0.04288582912089529,
+          "x": 0.003629759756945425,
+          "y": 0.684754522321041
+        },
+        {
+          "confidence": 1,
+          "h": 0.056847545010957345,
+          "text": "June",
+          "w": 0.03198409798935568,
+          "x": 0.003630043568112507,
+          "y": 0.6589147298126041
+        },
+        {
+          "confidence": 1,
+          "h": 0.05426356504447438,
+          "text": "June",
+          "w": 0.03053061011460751,
+          "x": 0.0043567875035369,
+          "y": 0.6162790694742373
+        },
+        {
+          "confidence": 1,
+          "h": 0.05584164307096673,
+          "text": "Juneperminus_ Maximus",
+          "w": 0.12376316126694442,
+          "x": 0.008612606647531825,
+          "y": 0.12065798958567875
+        }
+      ]
+    },
+    {
+      "file": "public/images/lysander-lre.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.0877919777732934,
+          "text": "August 29",
+          "w": 0.05139788537081628,
+          "x": -0.0016680344348963764,
+          "y": 0.809116423320839
+        },
+        {
+          "confidence": 1,
+          "h": 0.09153214064031512,
+          "text": "August 29",
+          "w": 0.05159883241395692,
+          "x": -0.0007267405821692426,
+          "y": 0.7641566093921377
+        },
+        {
+          "confidence": 1,
+          "h": 0.08916384707517733,
+          "text": "August 29",
+          "w": 0.05221679750946109,
+          "x": -0.0017617133584573177,
+          "y": 0.7201961427100708
+        },
+        {
+          "confidence": 1,
+          "h": 0.08916384238305275,
+          "text": "August 29",
+          "w": 0.05221679750946109,
+          "x": -0.0017617133584573177,
+          "y": 0.6763817097203801
+        },
+        {
+          "confidence": 1,
+          "h": 0.09062022154035021,
+          "text": "August 29",
+          "w": 0.05267701443085965,
+          "x": -0.0017017837333061202,
+          "y": 0.6311008114869197
+        },
+        {
+          "confidence": 1,
+          "h": 0.09203699916637842,
+          "text": "August 29",
+          "w": 0.05323239522763449,
+          "x": -0.002364609152758265,
+          "y": 0.5858649566748215
+        },
+        {
+          "confidence": 1,
+          "h": 0.08755012690507757,
+          "text": "August 29",
+          "w": 0.05241391928098472,
+          "x": -0.002152127850865692,
+          "y": 0.5439961939731577
+        },
+        {
+          "confidence": 1,
+          "h": 0.07172273211226987,
+          "text": "August",
+          "w": 0.04172508731453434,
+          "x": -0.0017617120047792802,
+          "y": 0.5159877691463425
+        },
+        {
+          "confidence": 1,
+          "h": 0.06704512498768789,
+          "text": "Augusi",
+          "w": 0.03779069632188528,
+          "x": -0.0014534884785579912,
+          "y": 0.47678671641060866
+        },
+        {
+          "confidence": 1,
+          "h": 0.06692421832207818,
+          "text": "Augus",
+          "w": 0.03589615058502388,
+          "x": -0.0010425019499000967,
+          "y": 0.16686672163070493
+        }
+      ]
+    },
+    {
+      "file": "public/images/lucius-lre.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.09025223620830136,
+          "text": "July 2026",
+          "w": 0.050872096211315436,
+          "x": 0.0007267421493579525,
+          "y": 0.8079666656673345
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966065,
+          "text": "July 2026",
+          "w": 0.05159883426647806,
+          "x": 1.1233254228516642e-09,
+          "y": 0.7628619319427516
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966065,
+          "text": "July 2026",
+          "w": 0.051598834266478065,
+          "x": 8.545417439778567e-10,
+          "y": 0.7190474999592295
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966065,
+          "text": "July 2026",
+          "w": 0.05159883426647806,
+          "x": 1.1523832227098836e-09,
+          "y": 0.6752330658545949
+        },
+        {
+          "confidence": 1,
+          "h": 0.09025551263540066,
+          "text": "July 2026",
+          "w": 0.05087209093875529,
+          "x": 0.0007267440344565714,
+          "y": 0.6314186371347899
+        },
+        {
+          "confidence": 1,
+          "h": 0.08896357998526172,
+          "text": "July 2026",
+          "w": 0.050145352883592675,
+          "x": 0.0007267432850070344,
+          "y": 0.5876058363649628
+        },
+        {
+          "confidence": 1,
+          "h": 0.09670540277211948,
+          "text": "July 2026",
+          "w": 0.054505812849929274,
+          "x": -0.0007267437932095956,
+          "y": 0.5399204935216293
+        },
+        {
+          "confidence": 1,
+          "h": 0.09025223620830147,
+          "text": "July 2026",
+          "w": 0.050872096211315436,
+          "x": 0.0007267421493579525,
+          "y": 0.4986883151518705
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966054,
+          "text": "July 2026",
+          "w": 0.05159883426647806,
+          "x": 1.1233254228516642e-09,
+          "y": 0.45358358142728783
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966065,
+          "text": "July 2026,",
+          "w": 0.05159883426647806,
+          "x": 9.427910830129012e-10,
+          "y": 0.4097691495961935
+        },
+        {
+          "confidence": 1,
+          "h": 0.08638625817796197,
+          "text": "Suly 2026",
+          "w": 0.04869186095558699,
+          "x": 0.0014534880307608966,
+          "y": 0.3234305815876243
+        },
+        {
+          "confidence": 1,
+          "h": 0.07092233201477427,
+          "text": "July 20",
+          "w": 0.039970927841513425,
+          "x": 0.0007267448202128951,
+          "y": 0.29636873163266764
+        },
+        {
+          "confidence": 1,
+          "h": 0.07865429275606317,
+          "text": "aly 2026",
+          "w": 0.044331395716690244,
+          "x": 0.006540697473152764,
+          "y": 0.23451306191115373
+        },
+        {
+          "confidence": 1,
+          "h": 0.09154417821966065,
+          "text": "July 2026",
+          "w": 0.05159883426647806,
+          "x": 1.1233254228516642e-09,
+          "y": 0.1443052309118238
+        },
+        {
+          "confidence": 1,
+          "h": 0.07402538463381902,
+          "text": "July 20",
+          "w": 0.04043477341151683,
+          "x": 0.0003021824187525398,
+          "y": 0.11799084652715763
+        },
+        {
+          "confidence": 1,
+          "h": 0.06932826129936731,
+          "text": "July 20",
+          "w": 0.0402715955838386,
+          "x": 0.00042003225199466453,
+          "y": -0.011248562440972387
+        }
+      ]
+    },
+    {
+      "file": "public/images/uthar-lre.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.07752972400834413,
+          "text": "October",
+          "w": 0.04360465263725977,
+          "x": -9.904010415724092e-10,
+          "y": 0.8229922439709769
+        },
+        {
+          "confidence": 1,
+          "h": 0.07882249766382676,
+          "text": "October",
+          "w": 0.04433139473447509,
+          "x": -0.0007267445834983826,
+          "y": 0.7777722143275021
+        },
+        {
+          "confidence": 1,
+          "h": 0.06331783445010641,
+          "text": "Octob",
+          "w": 0.0356104657920774,
+          "x": -3.9625510136915977e-10,
+          "y": 0.5271266128019407
+        },
+        {
+          "confidence": 1,
+          "h": 0.07753052265186033,
+          "text": "October",
+          "w": 0.04360465527901689,
+          "x": -0.0007267456847434267,
+          "y": 0.4689866749882735
+        },
+        {
+          "confidence": 1,
+          "h": 0.08011449616530841,
+          "text": "October",
+          "w": 0.04505814211520462,
+          "x": -0.0007267450996732478,
+          "y": 0.42247505031377985
+        },
+        {
+          "confidence": 1,
+          "h": 0.0788225070596329,
+          "text": "October",
+          "w": 0.044331400017989304,
+          "x": -0.0007267465427272541,
+          "y": 0.3798393918285381
+        },
+        {
+          "confidence": 1,
+          "h": 0.07882250705963278,
+          "text": "October",
+          "w": 0.044331400017989304,
+          "x": -2.705326769620641e-09,
+          "y": 0.3346197540450796
+        },
+        {
+          "confidence": 1,
+          "h": 0.0813034978406183,
+          "text": "October",
+          "w": 0.044315982723500257,
+          "x": -0.000718444936850103,
+          "y": 0.28948849298022616
+        },
+        {
+          "confidence": 1,
+          "h": 0.09044961036719712,
+          "text": "October 4",
+          "w": 0.050872089459955534,
+          "x": 5.717377547083506e-10,
+          "y": 0.23384496590031512
+        },
+        {
+          "confidence": 1,
+          "h": 0.07752971461253799,
+          "text": "October",
+          "w": 0.043604647353745564,
+          "x": 1.7157178429599066e-09,
+          "y": 0.20283721204670924
+        },
+        {
+          "confidence": 1,
+          "h": 0.07882249766382676,
+          "text": "October",
+          "w": 0.04433139473447509,
+          "x": -0.0007267445834983826,
+          "y": 0.15761717556781207
+        },
+        {
+          "confidence": 1,
+          "h": 0.063996521710175,
+          "text": "Octob",
+          "w": 0.03465335983318635,
+          "x": -0.0005100934254157901,
+          "y": 0.12848148038515916
+        }
+      ]
+    },
+    {
+      "file": "public/images/guild-wars-attack.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.09176143244465773,
+          "text": "Sept 2026",
+          "w": 0.0515988384516356,
+          "x": -0.001453489579436041,
+          "y": 0.8966257451861601
+        },
+        {
+          "confidence": 1,
+          "h": 0.09077027645953517,
+          "text": "Sept 2026",
+          "w": 0.052939004005708945,
+          "x": -0.0017163825880809947,
+          "y": 0.8540088866589937
+        },
+        {
+          "confidence": 1,
+          "h": 0.08950542998610911,
+          "text": "Sept 2026",
+          "w": 0.05196698223383544,
+          "x": -0.0017144787467924456,
+          "y": 0.8097899952478667
+        },
+        {
+          "confidence": 1,
+          "h": 0.09065974096209661,
+          "text": "Sept 2026",
+          "w": 0.05265235051010006,
+          "x": -0.001674163674754397,
+          "y": 0.764640139879722
+        },
+        {
+          "confidence": 1,
+          "h": 0.09176143244465773,
+          "text": "Sept 2026",
+          "w": 0.051598838451635605,
+          "x": -0.0021802331017941783,
+          "y": 0.7196231591959248
+        },
+        {
+          "confidence": 1,
+          "h": 0.09151688572504524,
+          "text": "Sept 2026",
+          "w": 0.05369146336119012,
+          "x": -0.002421154676033045,
+          "y": 0.6759186675328099
+        },
+        {
+          "confidence": 1,
+          "h": 0.08994660426104195,
+          "text": "Sept 2026",
+          "w": 0.05239225177534214,
+          "x": -0.0017015112065868038,
+          "y": 0.6317045026878323
+        },
+        {
+          "confidence": 1,
+          "h": 0.09176143244465784,
+          "text": "Sept 2026",
+          "w": 0.0515988384516356,
+          "x": -0.0014534890467516545,
+          "y": 0.5865482241953006
+        },
+        {
+          "confidence": 1,
+          "h": 0.0906558571423437,
+          "text": "Sept 2026",
+          "w": 0.05265447275415489,
+          "x": -0.002401968701999816,
+          "y": 0.5437118508687472
+        },
+        {
+          "confidence": 1,
+          "h": 0.09176143244465773,
+          "text": "Sept 2026",
+          "w": 0.051598838451635605,
+          "x": -0.0021802340006509746,
+          "y": 0.49740093856653245
+        },
+        {
+          "confidence": 1,
+          "h": 0.09119119784570084,
+          "text": "Sept 2026",
+          "w": 0.05285655215316181,
+          "x": -0.0019195212148575525,
+          "y": 0.45409710959995153
+        },
+        {
+          "confidence": 1,
+          "h": 0.0920753306197688,
+          "text": "Sept 2026",
+          "w": 0.05332831195173257,
+          "x": -0.0023912825701257016,
+          "y": 0.4092859812040407
+        },
+        {
+          "confidence": 1,
+          "h": 0.0943454124649411,
+          "text": "Sept 2026",
+          "w": 0.053052327953122515,
+          "x": -0.002180233820357128,
+          "y": 0.363034011831446
+        },
+        {
+          "confidence": 1,
+          "h": 0.06421332181107553,
+          "text": "Sept 2/",
+          "w": 0.037742516404120956,
+          "x": -0.001863034755963432,
+          "y": 0.3468817321032377
+        },
+        {
+          "confidence": 1,
+          "h": 0.0896237244827427,
+          "text": "Sept 2026",
+          "w": 0.05222156410532951,
+          "x": -0.001701510164217381,
+          "y": 0.23377192298675553
+        },
+        {
+          "confidence": 1,
+          "h": 0.09046944675467161,
+          "text": "Sept 2026",
+          "w": 0.05087209370089214,
+          "x": -0.007994185720998356,
+          "y": 0.19636734221215335
+        },
+        {
+          "confidence": 1,
+          "h": 0.09175941925221631,
+          "text": "Sept 2026",
+          "w": 0.05159883359524188,
+          "x": -0.001453487131496424,
+          "y": 0.1433967763328443
+        },
+        {
+          "confidence": 1,
+          "h": 0.09046944675467161,
+          "text": "Sept 2026",
+          "w": 0.05087209370089215,
+          "x": -0.007994185770646582,
+          "y": 0.11109602434950683
+        },
+        {
+          "confidence": 1,
+          "h": 0.09046944675467161,
+          "text": "Sept 2026",
+          "w": 0.05087209370089214,
+          "x": -0.007994186277250648,
+          "y": 0.05424848107903801
+        }
+      ]
+    },
+    {
+      "file": "public/images/guild-wars-defend.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.08960608654166247,
+          "text": "Sept 2026",
+          "w": 0.05244642315488873,
+          "x": 0.0004971515319275128,
+          "y": 0.89673519370323
+        },
+        {
+          "confidence": 1,
+          "h": 0.0930702678594002,
+          "text": "Sept 2026",
+          "w": 0.05232558279326467,
+          "x": -9.302756695612488e-10,
+          "y": 0.8513976833662559
+        },
+        {
+          "confidence": 1,
+          "h": 0.09307340356524318,
+          "text": "Sept 2026",
+          "w": 0.05232558279326468,
+          "x": -1.4027185102349903e-09,
+          "y": 0.806176477763082
+        },
+        {
+          "confidence": 1,
+          "h": 0.09177827475011802,
+          "text": "Sept 2026",
+          "w": 0.05159883903734611,
+          "x": 0.0007267424506798131,
+          "y": 0.763542388214836
+        },
+        {
+          "confidence": 1,
+          "h": 0.09589545652189946,
+          "text": "Sept 2026",
+          "w": 0.055656567197857484,
+          "x": 0.0005156928376656133,
+          "y": 0.7142599650328766
+        },
+        {
+          "confidence": 1,
+          "h": 0.09198434247425324,
+          "text": "Sept 2026",
+          "w": 0.05354437625769413,
+          "x": -0.0002453587120342647,
+          "y": 0.6742529530122239
+        },
+        {
+          "confidence": 1,
+          "h": 0.09209206754978683,
+          "text": "Sept 2026",
+          "w": 0.05332831180456912,
+          "x": -0.0001738061538453475,
+          "y": 0.6302095420063756
+        },
+        {
+          "confidence": 1,
+          "h": 0.0951882190560317,
+          "text": "Sept 2026",
+          "w": 0.052182097001509234,
+          "x": 0.00017074687214156456,
+          "y": 0.5843571918208631
+        },
+        {
+          "confidence": 1,
+          "h": 0.0930702678594002,
+          "text": "Sept 2026",
+          "w": 0.05232558510520241,
+          "x": -9.302756695612488e-10,
+          "y": 0.5413201639864109
+        },
+        {
+          "confidence": 1,
+          "h": 0.09086630285236319,
+          "text": "Sept 2026",
+          "w": 0.05260252981474905,
+          "x": -0.00017380866298753283,
+          "y": 0.40921308893970887
+        },
+        {
+          "confidence": 1,
+          "h": 0.09177828298031698,
+          "text": "Sept 2020",
+          "w": 0.05159884134928386,
+          "x": -4.1519766803117597e-10,
+          "y": 0.3643175757856222
+        },
+        {
+          "confidence": 1,
+          "h": 0.09042917228953873,
+          "text": "Sept 2026",
+          "w": 0.05302246556137547,
+          "x": -0.00024291362561708603,
+          "y": 0.3218131275182674
+        },
+        {
+          "confidence": 1,
+          "h": 0.0917782829803171,
+          "text": "Sept 2026",
+          "w": 0.05159884134928386,
+          "x": -5.617843397210505e-10,
+          "y": 0.2764622791407899
+        },
+        {
+          "confidence": 1,
+          "h": 0.09177827475011802,
+          "text": "Sept 2026",
+          "w": 0.05159883903734612,
+          "x": -1.5308922808220483e-09,
+          "y": 0.23253463667867535
+        },
+        {
+          "confidence": 1,
+          "h": 0.09177827475011802,
+          "text": "Sept 2026",
+          "w": 0.05159883903734611,
+          "x": -0.006540698679245424,
+          "y": 0.19765091481321517
+        },
+        {
+          "confidence": 1,
+          "h": 0.0917782829803171,
+          "text": "Sept 2026",
+          "w": 0.05159884134928386,
+          "x": -0.006540698510928499,
+          "y": 0.10979561248106662
+        },
+        {
+          "confidence": 1,
+          "h": 0.09177827475011802,
+          "text": "Sept 2026",
+          "w": 0.05159883903734611,
+          "x": -0.00581395498857037,
+          "y": 0.05424006305151774
+        }
+      ]
+    },
+    {
+      "file": "public/images/mow-biovore.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.0950520801303969,
+          "text": "Sept 2026",
+          "w": 0.053060668430247884,
+          "x": 0.0029028048039858763,
+          "y": 0.7591145837644317
+        },
+        {
+          "confidence": 1,
+          "h": 0.0924479198696031,
+          "text": "Sept 2026",
+          "w": 0.051607783836654465,
+          "x": 0.0021757592285225453,
+          "y": 0.7174479148508037
+        },
+        {
+          "confidence": 1,
+          "h": 0.09103114899219733,
+          "text": "Sept 2026",
+          "w": 0.05261225640019284,
+          "x": 0.002827644356702384,
+          "y": 0.6733562759274738
+        },
+        {
+          "confidence": 1,
+          "h": 0.0546875,
+          "text": "Sept",
+          "w": 0.030531004679018606,
+          "x": 0.003629847030813226,
+          "y": 0.6640625007388248
+        },
+        {
+          "confidence": 1,
+          "h": 0.09127483800316338,
+          "text": "Sept 2026",
+          "w": 0.05282779752621336,
+          "x": 0.002699876305563394,
+          "y": 0.4947295492678674
+        },
+        {
+          "confidence": 1,
+          "h": 0.0950520897392062,
+          "text": "Sept 2026",
+          "w": 0.05306186488241418,
+          "x": 0.0021754631656887347,
+          "y": 0.44791666290868903
+        },
+        {
+          "confidence": 1,
+          "h": 0.09375,
+          "text": "Sept 2026",
+          "w": 0.05233452390517866,
+          "x": 0.002175761504096238,
+          "y": 0.40364583349160266
+        },
+        {
+          "confidence": 1,
+          "h": 0.0950520801303969,
+          "text": "Sept 2026",
+          "w": 0.05306126933895922,
+          "x": 0.002175761521674795,
+          "y": 0.35807291682803666
+        },
+        {
+          "confidence": 1,
+          "h": 0.06640625000000011,
+          "text": "Sept 2",
+          "w": 0.03707229973729988,
+          "x": 0.003629548102842717,
+          "y": 0.34114583425755673
+        },
+        {
+          "confidence": 1,
+          "h": 0.09244791506519845,
+          "text": "Sept 2026",
+          "w": 0.05160777847139811,
+          "x": 0.002902505794109247,
+          "y": 0.13802083686490763
+        }
+      ]
+    },
+    {
+      "file": "public/images/indomitus.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.05858357605796083,
+          "text": "Augus",
+          "w": 0.03152563571929932,
+          "x": 0.001080783549984954,
+          "y": 0.932313284569355
+        },
+        {
+          "confidence": 1,
+          "h": 0.10069288071120508,
+          "text": "August 2026",
+          "w": 0.061231794357299814,
+          "x": -0.000591336208378519,
+          "y": 0.8007984562105444
+        },
+        {
+          "confidence": 1,
+          "h": 0.10362694789147331,
+          "text": "August 2026",
+          "w": 0.058147444725036614,
+          "x": -3.954668305889974e-06,
+          "y": 0.7551813439199841
+        },
+        {
+          "confidence": 1,
+          "h": 0.0692951992519184,
+          "text": "August?",
+          "w": 0.040263519287109376,
+          "x": -0.0002468443743237292,
+          "y": 0.7441550115841613
+        },
+        {
+          "confidence": 1,
+          "h": 0.0987388848727423,
+          "text": "August 2026",
+          "w": 0.05852593421936035,
+          "x": 0.0004403018775839218,
+          "y": 0.6254374775516134
+        },
+        {
+          "confidence": 1,
+          "h": 0.0692951992519183,
+          "text": "August :",
+          "w": 0.04026351928710938,
+          "x": 0.00047790930751012706,
+          "y": 0.6108311409456858
+        },
+        {
+          "confidence": 1,
+          "h": 0.05569948226147081,
+          "text": "2026",
+          "w": 0.031257379055023196,
+          "x": 0.026885845820522922,
+          "y": 0.5803108800569045
+        },
+        {
+          "confidence": 1,
+          "h": 0.06680389183401259,
+          "text": "August",
+          "w": 0.03875826358795166,
+          "x": 0.0004779080894718435,
+          "y": 0.5692809979079265
+        },
+        {
+          "confidence": 1,
+          "h": 0.06693907145136979,
+          "text": "August",
+          "w": 0.038744544982910155,
+          "x": -0.00023179801273724544,
+          "y": 0.2129275192061365
+        },
+        {
+          "confidence": 1,
+          "h": 0.06680389183401259,
+          "text": "August",
+          "w": 0.03875826358795166,
+          "x": -0.0002468445765969807,
+          "y": 0.16892611038855565
+        },
+        {
+          "confidence": 1,
+          "h": 0.06735751145666591,
+          "text": "August",
+          "w": 0.037798075675964354,
+          "x": -3.6893028420448283e-06,
+          "y": 0.12435233298456594
+        },
+        {
+          "confidence": 1,
+          "h": 0.06680389183401259,
+          "text": "August",
+          "w": 0.03875826358795166,
+          "x": 0.0004779080894718435,
+          "y": -0.008439209345959542
+        }
+      ]
+    },
+    {
+      "file": "public/images/indomitus-mirror.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.09865986903017321,
+          "text": "August 2026",
+          "w": 0.05858381749192185,
+          "x": -0.0017332192069288827,
+          "y": 0.8031540944790057
+        },
+        {
+          "confidence": 1,
+          "h": 0.09844103083474964,
+          "text": "August 2026",
+          "w": 0.05714443505927145,
+          "x": -0.0009015038089877361,
+          "y": 0.7583748884743232
+        },
+        {
+          "confidence": 1,
+          "h": 0.09979142423613263,
+          "text": "August 2026",
+          "w": 0.05784918251011125,
+          "x": -0.0008935240827843036,
+          "y": 0.7131524629203319
+        },
+        {
+          "confidence": 1,
+          "h": 0.10213698680674921,
+          "text": "August 2026",
+          "w": 0.057412787496340434,
+          "x": -0.0007267429511228005,
+          "y": 0.6666317658976799
+        },
+        {
+          "confidence": 1,
+          "h": 0.0985277833691044,
+          "text": "August 2026",
+          "w": 0.059331397560220225,
+          "x": -0.0020729006686747405,
+          "y": 0.6252600624708818
+        },
+        {
+          "confidence": 1,
+          "h": 0.09983971858643492,
+          "text": "August 2026",
+          "w": 0.05930781579530546,
+          "x": -0.002523038790866174,
+          "y": 0.5810391363312007
+        },
+        {
+          "confidence": 1,
+          "h": 0.09937334473259818,
+          "text": "August 2026",
+          "w": 0.05791902244297851,
+          "x": -0.0016455487725600593,
+          "y": 0.5363075704797668
+        },
+        {
+          "confidence": 1,
+          "h": 0.09952115128449956,
+          "text": "August 2026",
+          "w": 0.058002008653861785,
+          "x": -0.0016882261953993392,
+          "y": 0.4923797848795807
+        },
+        {
+          "confidence": 1,
+          "h": 0.0698372424753988,
+          "text": "August?",
+          "w": 0.0392441838917676,
+          "x": -0.0014534883126210573,
+          "y": 0.4780012763765731
+        },
+        {
+          "confidence": 1,
+          "h": 0.06655987526194562,
+          "text": "August",
+          "w": 0.036142085841097495,
+          "x": -0.0012145600292747364,
+          "y": 0.4373299515323892
+        },
+        {
+          "confidence": 1,
+          "h": 0.06595628547432686,
+          "text": "August",
+          "w": 0.03706395071798691,
+          "x": -0.0014534876923852213,
+          "y": 0.3488048027146907
+        },
+        {
+          "confidence": 1,
+          "h": 0.0881284093679987,
+          "text": "August 202",
+          "w": 0.051325467789363394,
+          "x": -0.0031976725090899242,
+          "y": 0.2839802722147847
+        },
+        {
+          "confidence": 1,
+          "h": 0.0698372424753988,
+          "text": "August",
+          "w": 0.0392441838917676,
+          "x": -0.0014534883126210573,
+          "y": 0.2557790541543511
+        },
+        {
+          "confidence": 1,
+          "h": 0.06901482863832908,
+          "text": "August",
+          "w": 0.03751105388612238,
+          "x": -0.001180745894899461,
+          "y": 0.2126554238636108
+        },
+        {
+          "confidence": 1,
+          "h": 0.06775591724145835,
+          "text": "August",
+          "w": 0.036759322918925655,
+          "x": -0.0011588103017914654,
+          "y": 0.16998384966011904
+        },
+        {
+          "confidence": 1,
+          "h": 0.06983724719072293,
+          "text": "August",
+          "w": 0.03924418653902455,
+          "x": -0.0021802328614253575,
+          "y": 0.03484881845784671
+        },
+        {
+          "confidence": 1,
+          "h": 0.020700580846836125,
+          "text": "Keep him safe, decent heal from Passive",
+          "w": 0.1875,
+          "x": 0.3124999977955427,
+          "y": 0.6072351422501683
+        },
+        {
+          "confidence": 1,
+          "h": 0.021013597033374687,
+          "text": "Buffed in 2026, he's strong with Overwatch",
+          "w": 0.1976744038292636,
+          "x": 0.5450581459535853,
+          "y": 0.6044499381310111
+        },
+        {
+          "confidence": 1,
+          "h": 0.023485784919653807,
+          "text": "Marneus Calgar",
+          "w": 0.09447674615609813,
+          "x": 0.8430232538841602,
+          "y": 0.20148331326650937
+        }
+      ]
+    },
+    {
+      "file": "public/images/fall-of-cadia.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.08565466474778582,
+          "text": "Sept 2026",
+          "w": 0.049974456088233546,
+          "x": 0.0026273230337109372,
+          "y": 0.8108888413366611
+        },
+        {
+          "confidence": 1,
+          "h": 0.08810540945223055,
+          "text": "Sept 2026",
+          "w": 0.04941860625182978,
+          "x": 0.0021802317792934773,
+          "y": 0.7642374502568401
+        },
+        {
+          "confidence": 1,
+          "h": 0.08810540945223055,
+          "text": "Sept 2026",
+          "w": 0.04941860625182978,
+          "x": 0.0021802317792934773,
+          "y": 0.7201959994796381
+        },
+        {
+          "confidence": 1,
+          "h": 0.08810540000991074,
+          "text": "Sept 2026",
+          "w": 0.049418600957315886,
+          "x": 0.0021802330066167455,
+          "y": 0.6761545570322907
+        },
+        {
+          "confidence": 1,
+          "h": 0.05648027552236423,
+          "text": "2026",
+          "w": 0.030352849914000148,
+          "x": 0.02029871535283015,
+          "y": 0.2772449441742517
+        },
+        {
+          "confidence": 1,
+          "h": 0.08580311690226639,
+          "text": "Sept 2026",
+          "w": 0.04982664384914719,
+          "x": 0.0019335416645742747,
+          "y": 0.2342197057300558
+        },
+        {
+          "confidence": 1,
+          "h": 0.08810540945223067,
+          "text": "Sept 2020",
+          "w": 0.049418606251829776,
+          "x": 0.0014534881552918488,
+          "y": 0.18781257867212275
+        },
+        {
+          "confidence": 1,
+          "h": 0.08681006950907189,
+          "text": "Sept 2026",
+          "w": 0.04869186009573158,
+          "x": 0.0021802323918239234,
+          "y": 0.14377113361562333
+        },
+        {
+          "confidence": 1,
+          "h": 0.04226580704792893,
+          "text": "sep",
+          "w": 0.021019678162171724,
+          "x": 0.005143112637718832,
+          "y": 0.09763951578957208
+        },
+        {
+          "confidence": 1,
+          "h": 0.02072538715778005,
+          "text": "Easy to obtain, decent units:",
+          "w": 0.13081394807073,
+          "x": 0.7921511671346931,
+          "y": 0.4689119179496074
+        },
+        {
+          "confidence": 1,
+          "h": 0.013197044924934342,
+          "text": "and marks",
+          "w": 0.04215116322164658,
+          "x": 0.5610465113423535,
+          "y": 0.11633663369872826
+        }
+      ]
+    },
+    {
+      "file": "public/images/fall-of-cadia-mirror.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.09858446831070489,
+          "text": "August 2026",
+          "w": 0.05707102920069839,
+          "x": 0.0020537368134988083,
+          "y": 0.8022518697567075
+        },
+        {
+          "confidence": 1,
+          "h": 0.09545817370039233,
+          "text": "August 2026",
+          "w": 0.05581128207120029,
+          "x": 0.0019335415732197056,
+          "y": 0.7598450582500597
+        },
+        {
+          "confidence": 1,
+          "h": 0.06464335370603891,
+          "text": "August",
+          "w": 0.036337206291429926,
+          "x": 0.0021802337854051478,
+          "y": 0.7454561036623113
+        },
+        {
+          "confidence": 1,
+          "h": 0.055596303271115755,
+          "text": "2026",
+          "w": 0.03125000231193774,
+          "x": 0.026889533379305705,
+          "y": 0.7144499099432007
+        },
+        {
+          "confidence": 1,
+          "h": 0.09545816958529274,
+          "text": "August 2026",
+          "w": 0.05581128207120029,
+          "x": 0.0019335415732197056,
+          "y": 0.671989761092437
+        },
+        {
+          "confidence": 1,
+          "h": 0.06264467866932566,
+          "text": "August",
+          "w": 0.033918389985055634,
+          "x": 0.0017386992585767646,
+          "y": 0.660862340355534
+        },
+        {
+          "confidence": 1,
+          "h": 0.10211418670358008,
+          "text": "August 2026",
+          "w": 0.0574127890846946,
+          "x": 0.002180231622353705,
+          "y": 0.5361522117232898
+        },
+        {
+          "confidence": 1,
+          "h": 0.07885212162680355,
+          "text": "August 20",
+          "w": 0.04433140147816051,
+          "x": 0.0021802301650062747,
+          "y": 0.5128995182279765
+        },
+        {
+          "confidence": 1,
+          "h": 0.06722733169440442,
+          "text": "August",
+          "w": 0.03779069380326704,
+          "x": 0.0014534903970462923,
+          "y": 0.48059822254182083
+        },
+        {
+          "confidence": 1,
+          "h": 0.09208554923212908,
+          "text": "August 2020",
+          "w": 0.05340471209901752,
+          "x": 0.0012414827744963303,
+          "y": 0.1457166758900611
+        },
+        {
+          "confidence": 1,
+          "h": 0.0690217949168711,
+          "text": "August",
+          "w": 0.037539825439453126,
+          "x": 0.0009676633363425227,
+          "y": 0.0369237398167408
+        },
+        {
+          "confidence": 1,
+          "h": 0.06981131379786942,
+          "text": "August",
+          "w": 0.03924418593897964,
+          "x": 0.0007267434570808782,
+          "y": -0.009065862225758003
+        }
+      ]
+    },
+    {
+      "file": "public/images/octarius.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.10367058584976674,
+          "text": "August 2026",
+          "w": 0.058139530817667644,
+          "x": -0.000726741244653242,
+          "y": 0.8030869845901368
+        },
+        {
+          "confidence": 1,
+          "h": 0.09881596523885239,
+          "text": "August 2026",
+          "w": 0.058976830376519095,
+          "x": -0.0017688332586783446,
+          "y": 0.7616763532317797
+        },
+        {
+          "confidence": 1,
+          "h": 0.0673982509154516,
+          "text": "August",
+          "w": 0.03779069847530789,
+          "x": -0.0007267446121854433,
+          "y": 0.7473889575812198
+        },
+        {
+          "confidence": 1,
+          "h": 0.10002058707500772,
+          "text": "August 2026",
+          "w": 0.057849184672037764,
+          "x": -0.0016194053428331676,
+          "y": 0.6722054268919657
+        },
+        {
+          "confidence": 1,
+          "h": 0.06270767646799014,
+          "text": "Octarius",
+          "w": 0.16454432805379232,
+          "x": 0.07102626571515758,
+          "y": 0.6395198647492548
+        },
+        {
+          "confidence": 1,
+          "h": 0.09859391865972544,
+          "text": "August 2026",
+          "w": 0.0570196098751492,
+          "x": -0.000893525009757237,
+          "y": 0.6281641798193618
+        },
+        {
+          "confidence": 1,
+          "h": 0.10211909600202329,
+          "text": "August 2026",
+          "w": 0.05932982762654622,
+          "x": -0.002330797460604053,
+          "y": 0.5818276389768071
+        },
+        {
+          "confidence": 1,
+          "h": 0.08717956921129566,
+          "text": "August 202",
+          "w": 0.050450038909912114,
+          "x": -0.0024137886628886928,
+          "y": 0.5527976419557866
+        },
+        {
+          "confidence": 1,
+          "h": 0.0829422866840197,
+          "text": "August 20",
+          "w": 0.0465116262435913,
+          "x": -0.001453486959098751,
+          "y": 0.510342330323651
+        },
+        {
+          "confidence": 1,
+          "h": 0.06869358880516918,
+          "text": "August",
+          "w": 0.03851744333902995,
+          "x": -0.0014534895216116715,
+          "y": 0.48054957854728786
+        },
+        {
+          "confidence": 1,
+          "h": 0.09723573516883521,
+          "text": "August 2026",
+          "w": 0.05862068600124782,
+          "x": -0.0013331988782969806,
+          "y": 0.2720539218462418
+        },
+        {
+          "confidence": 1,
+          "h": 0.101077007686043,
+          "text": "August 2026",
+          "w": 0.05668604109022353,
+          "x": -0.0014534858313179613,
+          "y": 0.22795890596946689
+        },
+        {
+          "confidence": 1,
+          "h": 0.08465784633026696,
+          "text": "August 202",
+          "w": 0.04904159969753689,
+          "x": -0.0016882281883890936,
+          "y": 0.1978049655438775
+        },
+        {
+          "confidence": 1,
+          "h": 0.06869358880516918,
+          "text": "August",
+          "w": 0.03851744333902995,
+          "x": -0.0014534890302173586,
+          "y": 0.16966874958580558
+        },
+        {
+          "confidence": 1,
+          "h": 0.06524623223249215,
+          "text": "August",
+          "w": 0.0352784342235989,
+          "x": -0.0011330692985058708,
+          "y": 0.1290498158811454
+        },
+        {
+          "confidence": 1,
+          "h": 0.06869358407815895,
+          "text": "August",
+          "w": 0.0385174380408393,
+          "x": -0.002180230781644567,
+          "y": 0.036249065369641675
+        },
+        {
+          "confidence": 1,
+          "h": 0.06739825091545182,
+          "text": "August",
+          "w": 0.03779069847530789,
+          "x": -0.0014534890413835822,
+          "y": -0.0077923899739704705
+        },
+        {
+          "confidence": 1,
+          "h": 0.04404145043431018,
+          "text": "Octarius Campaign - Required Characters",
+          "w": 0.44476742214626735,
+          "x": 0.32267442568195354,
+          "y": 0.927461139954477
+        },
+        {
+          "confidence": 1,
+          "h": 0.015544040495578226,
+          "text": "campaigns/octarius",
+          "w": 0.08720929887559681,
+          "x": 0.8590116281784808,
+          "y": 0.9170984459870987
+        }
+      ]
+    },
+    {
+      "file": "public/images/octarius-mirror.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.10186173758500838,
+          "text": "August 2026",
+          "w": 0.05741278820920626,
+          "x": -0.0007267442224256262,
+          "y": 0.8002289281474376
+        },
+        {
+          "confidence": 1,
+          "h": 0.09663165936879758,
+          "text": "August 2026",
+          "w": 0.05797098595831872,
+          "x": -0.0009695953802806787,
+          "y": 0.7603214045667515
+        },
+        {
+          "confidence": 1,
+          "h": 0.10186173758500827,
+          "text": "August 2026",
+          "w": 0.05741278820920626,
+          "x": -0.0007267442224256262,
+          "y": 0.7126000621680563
+        },
+        {
+          "confidence": 1,
+          "h": 0.09826226905452207,
+          "text": "August 2026",
+          "w": 0.057477996526560306,
+          "x": -0.00043628448619188,
+          "y": 0.6711540114893348
+        },
+        {
+          "confidence": 1,
+          "h": 0.0657754282874159,
+          "text": "August",
+          "w": 0.037063954421547654,
+          "x": -1.1207762509871346e-09,
+          "y": 0.6584782656548622
+        },
+        {
+          "confidence": 1,
+          "h": 0.05789524235137522,
+          "text": "Octarius",
+          "w": 0.16172604340156033,
+          "x": 0.07248000074755472,
+          "y": 0.6192482550158839
+        },
+        {
+          "confidence": 1,
+          "h": 0.09817802267680276,
+          "text": "August 2026",
+          "w": 0.058744604423704855,
+          "x": -0.0010259915444482076,
+          "y": 0.4056854452572529
+        },
+        {
+          "confidence": 1,
+          "h": 0.09816601326872376,
+          "text": "August 2026",
+          "w": 0.05875118517775355,
+          "x": -0.0010325702352341714,
+          "y": 0.36199946885150225
+        },
+        {
+          "confidence": 1,
+          "h": 0.10186173758500838,
+          "text": "August 2026",
+          "w": 0.05741278820920626,
+          "x": -0.0007267447038309311,
+          "y": 0.3156928452551062
+        },
+        {
+          "confidence": 1,
+          "h": 0.0984232749321392,
+          "text": "August 2026",
+          "w": 0.058882720005629274,
+          "x": -0.0018217928478906208,
+          "y": 0.27283086070170803
+        },
+        {
+          "confidence": 1,
+          "h": 0.08926006806446041,
+          "text": "August 2026",
+          "w": 0.054912615290530764,
+          "x": -0.0009993789203524314,
+          "y": 0.2369017177708529
+        },
+        {
+          "confidence": 1,
+          "h": 0.10314656847886094,
+          "text": "August 2026",
+          "w": 0.05813954154037326,
+          "x": -0.0007267459638990675,
+          "y": 0.18167413933318632
+        },
+        {
+          "confidence": 1,
+          "h": 0.08954884492296955,
+          "text": "August 202l",
+          "w": 0.053556150674485554,
+          "x": -0.0010457132074246024,
+          "y": 0.1489696325618255
+        },
+        {
+          "confidence": 1,
+          "h": 0.06964140306522648,
+          "text": "August",
+          "w": 0.03924418766401593,
+          "x": -0.0014534896966190837,
+          "y": -0.005181525269191134
+        },
+        {
+          "confidence": 1,
+          "h": 0.04446750560109669,
+          "text": "Octarius Mirror - Required Characters",
+          "w": 0.4041666723735536,
+          "x": 0.34166666886530644,
+          "y": 0.925902864743323
+        },
+        {
+          "confidence": 1,
+          "h": 0.018041236611410216,
+          "text": "campaigns/octarius-mirror",
+          "w": 0.11627906703012691,
+          "x": 0.8444767448279598,
+          "y": 0.9123711339709272
+        }
+      ]
+    },
+    {
+      "file": "public/images/saim-hann.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.10100980191617392,
+          "text": "August 2026",
+          "w": 0.058668553250507245,
+          "x": -0.0009530598191676075,
+          "y": 0.8018985635451249
+        },
+        {
+          "confidence": 1,
+          "h": 0.09991965628959032,
+          "text": "August 2026",
+          "w": 0.057917590280180994,
+          "x": -0.0002165868442220566,
+          "y": 0.7577839346835029
+        },
+        {
+          "confidence": 1,
+          "h": 0.10085454167546459,
+          "text": "August 2026",
+          "w": 0.05861403641191502,
+          "x": -0.0008821923144099847,
+          "y": 0.7126042830418248
+        },
+        {
+          "confidence": 1,
+          "h": 0.09201674177839947,
+          "text": "August 2020",
+          "w": 0.0552085487587938,
+          "x": -0.0010803478087631194,
+          "y": 0.6762136294053236
+        },
+        {
+          "confidence": 1,
+          "h": 0.09997351156698697,
+          "text": "August 2026",
+          "w": 0.057791515461449484,
+          "x": -0.0002070765953369892,
+          "y": 0.6242352729988703
+        },
+        {
+          "confidence": 1,
+          "h": 0.10005158295502536,
+          "text": "August 2026",
+          "w": 0.05961571850822967,
+          "x": -0.001168877682581361,
+          "y": 0.5800881536458509
+        },
+        {
+          "confidence": 1,
+          "h": 0.09841179100242825,
+          "text": "August 2026",
+          "w": 0.05724529155249735,
+          "x": -0.00023931370498669622,
+          "y": 0.5363624045222302
+        },
+        {
+          "confidence": 1,
+          "h": 0.09338258485536322,
+          "text": "August 202",
+          "w": 0.05417532596773315,
+          "x": -0.001650430699414136,
+          "y": 0.49857153589467684
+        },
+        {
+          "confidence": 1,
+          "h": 0.06013760128536749,
+          "text": "Augusy",
+          "w": 0.03126912672542831,
+          "x": 0.0006635682305280293,
+          "y": 0.4863671126776784
+        },
+        {
+          "confidence": 1,
+          "h": 0.07124352532464095,
+          "text": "ISt 2026",
+          "w": 0.039979629146242604,
+          "x": 0.017437510719285065,
+          "y": 0.22409326342495162
+        },
+        {
+          "confidence": 1,
+          "h": 0.0971185632654139,
+          "text": "August 2026",
+          "w": 0.05639467887508059,
+          "x": -0.0009248702991497761,
+          "y": 0.1827333494755381
+        },
+        {
+          "confidence": 1,
+          "h": 0.06693292153848185,
+          "text": "August",
+          "w": 0.0387493615011567,
+          "x": -0.0009609505472560294,
+          "y": 0.1675938059593346
+        },
+        {
+          "confidence": 1,
+          "h": 0.10168153505067556,
+          "text": "August TerminusMaximus.com",
+          "w": 0.12672182657186268,
+          "x": -0.00022055563911921693,
+          "y": -0.002602068682086456
+        },
+        {
+          "confidence": 1,
+          "h": 0.06865285100163632,
+          "text": "August",
+          "w": 0.038526141527786995,
+          "x": -0.0007310945354813702,
+          "y": -0.01036269427547909
+        },
+        {
+          "confidence": 1,
+          "h": 0.019383557293866205,
+          "text": "August 2026",
+          "w": 0.05100781709245106,
+          "x": 0.9156298121460836,
+          "y": 0.4371994128420553
+        },
+        {
+          "confidence": 1,
+          "h": 0.023444894326699717,
+          "text": "Rubric Marine",
+          "w": 0.08284883591735248,
+          "x": 0.7107558142179227,
+          "y": 0.20466321348524297
+        }
+      ]
+    },
+    {
+      "file": "public/images/saim-hann-mirror.png",
+      "lines": [
+        {
+          "confidence": 1,
+          "h": 0.05468749516514926,
+          "text": "2026",
+          "w": 0.03053161124346194,
+          "x": 0.02107140347200749,
+          "y": 0.8125000010971579
+        },
+        {
+          "confidence": 1,
+          "h": 0.08854165699696503,
+          "text": "Sept 2026",
+          "w": 0.04942824464272879,
+          "x": 0.0021754111639102932,
+          "y": 0.7656250080024992
+        },
+        {
+          "confidence": 1,
+          "h": 0.0898437403302984,
+          "text": "Sept 2026",
+          "w": 0.050154986317412525,
+          "x": 0.0021754127993372516,
+          "y": 0.7200520906554551
+        },
+        {
+          "confidence": 1,
+          "h": 0.08628586066841926,
+          "text": "Sept 2026",
+          "w": 0.049776615863646165,
+          "x": 0.002788434597838817,
+          "y": 0.6770238548082532
+        },
+        {
+          "confidence": 1,
+          "h": 0.072916661831816,
+          "text": "Sept 202",
+          "w": 0.040706672317494086,
+          "x": 0.002902476541672853,
+          "y": 0.6458333371531528
+        },
+        {
+          "confidence": 1,
+          "h": 0.08723957366363178,
+          "text": "Sept 2026",
+          "w": 0.04870085503645004,
+          "x": 0.002902478439818497,
+          "y": 0.58723959201621
+        },
+        {
+          "confidence": 1,
+          "h": 0.08723957366363178,
+          "text": "Sept 2026",
+          "w": 0.04870085503645004,
+          "x": 0.002902478439818497,
+          "y": 0.5429687586828766
+        },
+        {
+          "confidence": 1,
+          "h": 0.08854165699696503,
+          "text": "Sept 2026",
+          "w": 0.04942824464272879,
+          "x": 0.0021754111639102932,
+          "y": 0.4973958413358326
+        },
+        {
+          "confidence": 1,
+          "h": 0.08984374033029852,
+          "text": "Sept 2026",
+          "w": 0.050154986317412525,
+          "x": 0.0021754127993372516,
+          "y": 0.4518229239887883
+        },
+        {
+          "confidence": 1,
+          "h": 0.08763209585907794,
+          "text": "Sept 2026",
+          "w": 0.05076992739537718,
+          "x": 0.0019593539937155587,
+          "y": 0.40878919758309484
+        },
+        {
+          "confidence": 1,
+          "h": 0.08598622562616343,
+          "text": "Sept 2026",
+          "w": 0.0498148681251866,
+          "x": 0.002684673232242263,
+          "y": 0.36459957307875723
+        },
+        {
+          "confidence": 1,
+          "h": 0.07291666183181589,
+          "text": "Sept 202",
+          "w": 0.040706672317494086,
+          "x": 0.002902476541672853,
+          "y": 0.33333333715315283
+        }
+      ]
+    }
+  ]
+}
