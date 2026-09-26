@@ -36,6 +36,15 @@
     "Forcasmo":null
   },
   {
+    "hero_name":"Aethana",
+    "Laviscus":null,
+    "Neuro":null,
+    "AdMech":null,
+    "Battlesuits":"X",
+    "Custodes":null,
+    "Forcasmo":null
+  },
+  {
     "hero_name":"Ahri",
     "Laviscus":null,
     "Neuro":"X",
@@ -240,6 +249,15 @@
     "AdMech":null,
     "Battlesuits":null,
     "Custodes":"X",
+    "Forcasmo":null
+  },
+  {
+    "hero_name":"Nubari",
+    "Laviscus":"X",
+    "Neuro":null,
+    "AdMech":null,
+    "Battlesuits":null,
+    "Custodes":null,
     "Forcasmo":null
   },
   {
