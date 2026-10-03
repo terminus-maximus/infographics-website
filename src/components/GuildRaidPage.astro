@@ -5,6 +5,7 @@ import Footer from "./Footer.astro";
 import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
 import ReplayIcon from "./replay-library/ReplayIcon.astro";
 import RecommendationSections from "./RecommendationSections.astro";
+import { guildRaidImageExists } from "../lib/guildRaidAssets";
 import replayCsv from "../data/GR-replays-v2.csv?raw";
 import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
 import bossRows from "../data/replay-library/bosses.json";
@@ -26,9 +27,15 @@ const {
   description,
   sectionTitle,
   seasonNumber,
-  guides = []
+  guides: requestedGuides = []
 } = Astro.props;
 
+// Artwork appears automatically on the next build once the files are added.
+const guides = requestedGuides.map((guide) => ({
+  ...guide,
+  imageAvailable: guide.imageAvailable !== false && guildRaidImageExists(guide.imageSrc),
+  webImageSrc: guildRaidImageExists(guide.webImageSrc) ? guide.webImageSrc : undefined
+}));
 const pageImageGuide = guides.find((guide) => guide.imageAvailable !== false);
 const pageImage = pageImageGuide?.webImageSrc || pageImageGuide?.imageSrc;
 
@@ -153,8 +160,16 @@ const seasonReplays = seasonReplayRefs
       return null;
     }
 
+    // Full curated rosters list five heroes followed by their Machine of War.
+    // Older CSV rows only name a team, so keep the library icons for those.
+    const curatedTeam = (row.TEAM || "").split(",").map((name) => name.trim()).filter(Boolean);
+    const hasCuratedRoster = curatedTeam.length === 6;
+
     return {
       ...replay,
+      team: row.Archetype?.trim() || replay.team,
+      heroes: hasCuratedRoster ? curatedTeam.slice(0, 5) : replay.heroes,
+      mow: hasCuratedRoster ? curatedTeam[5] : replay.mow,
       seasonTier,
       tier: replay.tier || "Unknown"
     };
@@ -205,10 +220,7 @@ const guideReplaySections = guides.map((guide) => {
           <h3>{guide.title}</h3>
 
           {guide.imageAvailable === false ? (
-            <>
-              <div class="infographic-placeholder" role="img" aria-label={`${guide.imageAlt} pending`} />
-              <p class="caption infographic-pending">Infographic coming soon</p>
-            </>
+            <div class="infographic-placeholder" aria-hidden="true" />
           ) : (
             <>
               <a
@@ -358,19 +370,11 @@ const guideReplaySections = guides.map((guide) => {
   }
 
   .infographic-placeholder {
-    background: #121212;
-    border: 1px dashed #333;
-    border-radius: 8px;
     box-sizing: border-box;
     height: 160px;
     margin: 0 auto;
     max-width: 700px;
     width: 100%;
-  }
-
-  .infographic-pending {
-    color: #cccccc;
-    text-align: center;
   }
 
     .caption-link {

@@ -6,6 +6,7 @@ import RecommendationSections from "../../components/RecommendationSections.astr
 import { discoveryGraphics } from "../../data/graphics";
 import { currentGuildRaidSeason } from "../../data/guildRaid";
 import { nextGuildRaidSeason } from "../../data/nextGuildRaidSeason";
+import { guildRaidImageExists } from "../../lib/guildRaidAssets";
 
 const guildRaidArchive = discoveryGraphics.find(
   (graphic) => graphic.href === "/guild-raid/archive",
@@ -56,12 +57,12 @@ const guildRaidGuides = [
         {guildRaidGuides.map((guide) => (
           <a class:list={["card", { "next-season-card": guide === nextGuildRaidSeason }]} href={guide.href}>
             <div class="card-image-wrap">
-              <img
+              {guildRaidImageExists(guide.thumbnail) && <img
                 src={guide.thumbnail}
                 alt={`${guide.title} preview`}
                 class="card-image"
                 loading="lazy"
-              />
+              />}
             </div>
 
             <div class="card-title-row">

@@ -3,8 +3,15 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
+import { guildRaidImageExists } from "../../lib/guildRaidAssets";
 
 const seasons = [
+  {
+    title: "Season 111",
+    href: "/guild-raid/s111",
+    description: "Guild Raid Season 111 infographics and boss lineup archive.",
+    thumbnail: "/images/web/guild-raid-s111-mythic.webp"
+  },
   {
     title: "Season 110",
     href: "/guild-raid/s110",
@@ -114,12 +121,12 @@ const seasons = [
       {seasons.map((season) => (
         <a href={season.href} class="card">
           <div class="card-image-wrapper">
-            <img
+            {guildRaidImageExists(season.thumbnail) && <img
               src={season.thumbnail}
               alt={`${season.title} Guild Raid archive preview`}
               class="card-image"
               loading="lazy"
-            />
+            />}
           </div>
 
           <div class="card-content">
