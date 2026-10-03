@@ -8,8 +8,8 @@
     "hero_4": "Boss",
     "hero_5": "Kharn",
     "mow": "Biovore",
-    "replay_count": 26,
-    "average_damage": 1645423.08,
+    "replay_count": 29,
+    "average_damage": 1642448.28,
     "max_damage": 2000000
   },
   {
@@ -34,8 +34,8 @@
     "hero_4": "Kharn",
     "hero_5": "Dante",
     "mow": "Biovore",
-    "replay_count": 88,
-    "average_damage": 1285750.67,
+    "replay_count": 100,
+    "average_damage": 1283760.59,
     "max_damage": 1900000
   },
   {
@@ -60,8 +60,8 @@
     "hero_4": "Boss",
     "hero_5": "Vit",
     "mow": "Biovore",
-    "replay_count": 49,
-    "average_damage": 1260612.24,
+    "replay_count": 51,
+    "average_damage": 1258235.29,
     "max_damage": 1890000
   },
   {
@@ -86,8 +86,8 @@
     "hero_4": "Aesoth",
     "hero_5": "Vit",
     "mow": "Biovore",
-    "replay_count": 68,
-    "average_damage": 1779249.99,
+    "replay_count": 71,
+    "average_damage": 1779197.17,
     "max_damage": 2300000
   },
   {
@@ -242,8 +242,8 @@
     "hero_4": "Vit",
     "hero_5": "Ammuk",
     "mow": "Reanimator",
-    "replay_count": 15,
-    "average_damage": 2197904.67,
+    "replay_count": 16,
+    "average_damage": 2158035.62,
     "max_damage": 3600000
   },
   {
@@ -255,8 +255,8 @@
     "hero_4": "Boss",
     "hero_5": "Aesoth",
     "mow": "PBC",
-    "replay_count": 19,
-    "average_damage": 2073263.16,
+    "replay_count": 22,
+    "average_damage": 2085545.45,
     "max_damage": 2870000
   },
   {
