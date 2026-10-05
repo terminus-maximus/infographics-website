@@ -1,4 +1,4 @@
-export type LreCharacter = "Lucius" | "Uthar" | "Farsight" | "Lysander";
+export type LreCharacter = "Lucius" | "Uthar" | "Farsight" | "Lysander" | "Fabius Bile";
 
 export function getLreBasicsContent(character: LreCharacter): string {
   return `

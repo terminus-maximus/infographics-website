@@ -14,10 +14,13 @@ const {
   lastUpdated,
   basicsTitle,
   basicsContent,
+  basicsDetailsContent,
+  noIndex = false,
   resources = []
 } = Astro.props;
 
 const basicsHtml = basicsContent ? marked.parse(basicsContent) : "";
+const basicsDetailsHtml = basicsDetailsContent ? marked.parse(basicsDetailsContent) : "";
 
 const displayImageSrc =
   webImageSrc ||
@@ -29,6 +32,9 @@ const displayImageSrc =
   description={description}
   image={displayImageSrc}
 >
+  <Fragment slot="head">
+    {noIndex && <meta name="robots" content="noindex, nofollow, noimageindex" />}
+  </Fragment>
   <Header />
 
   <main>
@@ -82,8 +88,20 @@ const displayImageSrc =
     <section class="content-section">
       <h2>{basicsTitle || `${title} Basics`}</h2>
       <div class="markdown-content" set:html={basicsHtml} />
+      {basicsDetailsContent && (
+        <details class="event-details">
+          <summary>
+            <span>More Event Details</span>
+            <span class="expand-details">Expand details <span aria-hidden="true">+</span></span>
+            <span class="collapse-details">Collapse details <span aria-hidden="true">−</span></span>
+          </summary>
+          <div class="markdown-content details-content" set:html={basicsDetailsHtml} />
+        </details>
+      )}
     </section>
   )}
+
+  <slot name="after-basics" />
 
   {resources.length > 0 && (
     <section class="content-section">
@@ -200,6 +218,36 @@ const displayImageSrc =
     color: #cccccc;
     line-height: 1.7;
   }
+
+  .event-details {
+    margin-top: 1.5rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: #161616;
+  }
+
+  .event-details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .6rem 1rem;
+    min-height: 44px;
+    padding: .8rem 1rem;
+    color: #d4af37;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .event-details summary::-webkit-details-marker { display: none; }
+  .event-details summary:hover { background: #302b1b; border-radius: 8px; }
+  .event-details summary:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
+  .expand-details, .collapse-details { font-size: .8rem; }
+  .expand-details span, .collapse-details span { margin-left: .4rem; font-size: 1.2rem; }
+  .collapse-details, .event-details[open] .expand-details { display: none; }
+  .event-details[open] .collapse-details { display: inline; }
+  .details-content { padding: 0 1rem 1rem; border-top: 1px solid #333; }
 
   .markdown-content :global(a),
   .resource-list a {

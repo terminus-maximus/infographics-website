@@ -1,0 +1,1975 @@
+{
+  "characterBuild": "1.42.166",
+  "tracks": [
+    {
+      "id": "alpha",
+      "name": "Alpha",
+      "enemyFaction": "Black Legion",
+      "excludedAlliance": "Chaos",
+      "requirements": [
+        {
+          "id": "alpha_0",
+          "label": "Black Templars",
+          "points": 100
+        },
+        {
+          "id": "alpha_1",
+          "label": "Blast damage",
+          "points": 95
+        },
+        {
+          "id": "alpha_2",
+          "label": "Final Vengeance",
+          "points": 90
+        },
+        {
+          "id": "alpha_3",
+          "label": "Max 2 hits",
+          "points": 60
+        },
+        {
+          "id": "alpha_4",
+          "label": "No Bolter",
+          "points": 30
+        }
+      ]
+    },
+    {
+      "id": "beta",
+      "name": "Beta",
+      "enemyFaction": "Aeldari",
+      "excludedAlliance": "Xenos",
+      "requirements": [
+        {
+          "id": "beta_0",
+          "label": "Piercing damage",
+          "points": 90
+        },
+        {
+          "id": "beta_1",
+          "label": "Max 3 hits",
+          "points": 40
+        },
+        {
+          "id": "beta_2",
+          "label": "Deep Strike",
+          "points": 95
+        },
+        {
+          "id": "beta_3",
+          "label": "Parry",
+          "points": 100
+        },
+        {
+          "id": "beta_4",
+          "label": "No Power",
+          "points": 50
+        }
+      ]
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "enemyFaction": "Dark Angels",
+      "excludedAlliance": "Imperial",
+      "requirements": [
+        {
+          "id": "gamma_0",
+          "label": "Mechanical",
+          "points": 80
+        },
+        {
+          "id": "gamma_1",
+          "label": "Infiltrate",
+          "points": 100
+        },
+        {
+          "id": "gamma_2",
+          "label": "Min 5 hits",
+          "points": 70
+        },
+        {
+          "id": "gamma_3",
+          "label": "Flame damage",
+          "points": 95
+        },
+        {
+          "id": "gamma_4",
+          "label": "No Flying",
+          "points": 30
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "blackAbaddon",
+      "name": "Abaddon",
+      "faction": "Black Legion",
+      "portrait": "/images/heroes/Abaddon.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_0",
+          "beta_1"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "thousInfernalMaster",
+      "name": "Abraxas",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Abrax.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_3",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "admecManipulus",
+      "name": "Actus",
+      "faction": "Adeptus Mechanicus",
+      "portrait": "/images/heroes/Actus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "emperKakophonist",
+      "name": "Adamatar",
+      "faction": "Emperor's Children",
+      "portrait": "/images/heroes/Adamantar.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "custoVexilusPraetor",
+      "name": "Aesoth",
+      "faction": "Adeptus Custodes",
+      "portrait": "/images/heroes/Aesoth.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "eldarAutarch",
+      "name": "Aethana",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Aethana.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": []
+      }
+    },
+    {
+      "id": "thousAhriman",
+      "name": "Ahriman",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Ahri.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_3"
+        ]
+      }
+    },
+    {
+      "id": "necroSpyder",
+      "name": "Aleph-Null",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Aleph.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_2"
+        ]
+      }
+    },
+    {
+      "id": "votanMemnyr",
+      "name": "Âmmuk",
+      "faction": "Leagues of Votann",
+      "portrait": "/images/heroes/Ammuk.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "blackTerminator",
+      "name": "Angrax",
+      "faction": "Black Legion",
+      "portrait": "/images/heroes/Angrax.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_2"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "necroOverlord",
+      "name": "Anuphet",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Anu.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "blackPossession",
+      "name": "Archimatos",
+      "faction": "Black Legion",
+      "portrait": "/images/heroes/Archi.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "spaceRockfist",
+      "name": "Arjac",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Arjac.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_2"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "darkaAsmodai",
+      "name": "Asmodai",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Asmo.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [],
+        "gamma": null
+      }
+    },
+    {
+      "id": "custoAtlacoya",
+      "name": "Atlacoya",
+      "faction": "Adeptus Custodes",
+      "portrait": "/images/heroes/Atla.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "tauAunShi",
+      "name": "Aun'Shi",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/Aunshi.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "worldEightbound",
+      "name": "Azkor",
+      "faction": "World Eaters",
+      "portrait": "/images/heroes/Azkor.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "darkaAzrael",
+      "name": "Azrael",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Azrael.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "spaceWolfPriest",
+      "name": "Baldr",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Baldr.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "darkaTerminator",
+      "name": "Baraqiel",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Barq.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_2"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "ultraInceptorSgt",
+      "name": "Bellator",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Bella.webp",
+      "eligibility": {
+        "alpha": [],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "templAggressor",
+      "name": "Burchard",
+      "faction": "Black Templars",
+      "portrait": "/images/heroes/Burchard.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_0",
+          "alpha_1"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "eldarRanger",
+      "name": "Calandis",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Calandis.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "ultraCalgar",
+      "name": "Calgar",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Calgar.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "adeptCelestine",
+      "name": "Celestine",
+      "faction": "Adepta Sororitas",
+      "portrait": "/images/heroes/Cele.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "ultraEliminatorSgt",
+      "name": "Certus",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Certus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "bloodTerminator",
+      "name": "Cezare",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Cezare.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_2"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "deathBlightbringer",
+      "name": "Corrodius",
+      "faction": "Death Guard",
+      "portrait": "/images/heroes/Corro.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraCreed",
+      "name": "Creed",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Creed.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "astarCyrus",
+      "name": "Cyrus",
+      "faction": "Adeptus Astartes",
+      "portrait": "/images/heroes/Cyrus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "bloodDante",
+      "name": "Dante",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Dante.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_0",
+          "beta_2",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "tauDarkstrider",
+      "name": "Darkstrider",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/Darkstrider.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tyranDeathleaper",
+      "name": "Deathleaper",
+      "faction": "Tyranids",
+      "portrait": "/images/heroes/DL.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraDreir",
+      "name": "Dreir",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Dreir.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "eldarFarseer",
+      "name": "Eldryon",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Eldy.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "admecRuststalker",
+      "name": "Exitor-Rho",
+      "faction": "Adeptus Mechanicus",
+      "portrait": "/images/heroes/Rho.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "tauFarsight",
+      "name": "Farsight",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/Farsight.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0"
+        ]
+      }
+    },
+    {
+      "id": "darkaCompanion",
+      "name": "Forcas",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Forcas.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "orksBigMek",
+      "name": "Gibbascrapz",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Gibba.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "templSwordBrother",
+      "name": "Godswyl",
+      "faction": "Black Templars",
+      "portrait": "/images/heroes/Godswyl.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_0",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "orksWarboss",
+      "name": "Gulgortz",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Boss.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "blackHaarken",
+      "name": "Haarken",
+      "faction": "Black Legion",
+      "portrait": "/images/heroes/Haarken.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_0",
+          "beta_4"
+        ],
+        "gamma": []
+      }
+    },
+    {
+      "id": "emperFlawlessBlade",
+      "name": "Hascule",
+      "faction": "Emperor's Children",
+      "portrait": "/images/heroes/Hascule.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_0",
+          "beta_1",
+          "beta_3",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "votanBeserk",
+      "name": "Hâvyr",
+      "faction": "Leagues of Votann",
+      "portrait": "/images/heroes/Havyr.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "templHelbrecht",
+      "name": "Helbrecht",
+      "faction": "Black Templars",
+      "portrait": "/images/heroes/Helb.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_0",
+          "alpha_2"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "genesBiophagus",
+      "name": "Hollan",
+      "faction": "Genestealer Cults",
+      "portrait": "/images/heroes/Hollan.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "necroDestroyer",
+      "name": "Imospekh",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Imo.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "ultraApothecary",
+      "name": "Incisus",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Incisus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_0",
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "genesPrimus",
+      "name": "Isaak",
+      "faction": "Genestealer Cults",
+      "portrait": "/images/heroes/Isaak.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "adeptHospitaller",
+      "name": "Isabella",
+      "faction": "Adepta Sororitas",
+      "portrait": "/images/heroes/Isa.webp",
+      "eligibility": {
+        "alpha": [],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "templChampion",
+      "name": "Jaeger",
+      "faction": "Black Templars",
+      "portrait": "/images/heroes/Jaeger.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_0",
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "eldarJainZar",
+      "name": "Jain Zar",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Jain.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "genesKelermorph",
+      "name": "Judh",
+      "faction": "Genestealer Cults",
+      "portrait": "/images/heroes/Judh.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "custoBladeChampion",
+      "name": "Kariyan",
+      "faction": "Adeptus Custodes",
+      "portrait": "/images/heroes/Kari.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_0",
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "worldKharn",
+      "name": "Khârn",
+      "faction": "World Eaters",
+      "portrait": "/images/heroes/Kharn.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_0",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "votanChampion",
+      "name": "Kîmm",
+      "faction": "Leagues of Votann",
+      "portrait": "/images/heroes/Kymm.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraBullgryn",
+      "name": "Kut",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Kut.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "emperExultant",
+      "name": "Laviscus",
+      "faction": "Emperor's Children",
+      "portrait": "/images/heroes/Lav.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "eldarLhykhis",
+      "name": "Lhykhis",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Lhykhis.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1",
+          "gamma_2"
+        ]
+      }
+    },
+    {
+      "id": "bloodDeathCompany",
+      "name": "Lucien",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Lucien.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "emperLucius",
+      "name": "Lucius",
+      "faction": "Emperor's Children",
+      "portrait": "/images/heroes/Lucius.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_3"
+        ],
+        "gamma": [
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astarLysander",
+      "name": "Lysander",
+      "faction": "Adeptus Astartes",
+      "portrait": "/images/heroes/Lysander.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_2"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "worldJakhal",
+      "name": "Macer",
+      "faction": "World Eaters",
+      "portrait": "/images/heroes/Macer.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "necroWarden",
+      "name": "Makhotep",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Makho.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "deathBlightlord",
+      "name": "Maladus",
+      "faction": "Death Guard",
+      "portrait": "/images/heroes/Maladus.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "bloodIntercessor",
+      "name": "Mataneo",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Mataneo.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_2"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "eldarMauganRa",
+      "name": "Maugan Ra",
+      "faction": "Aeldari",
+      "portrait": "/images/heroes/Maugan.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "bloodMephiston",
+      "name": "Mephiston",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Meph.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "adeptMorvenn",
+      "name": "Morvenn Vahl",
+      "faction": "Adepta Sororitas",
+      "portrait": "/images/heroes/Morvenn.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "deathRotbone",
+      "name": "Nauseous",
+      "faction": "Death Guard",
+      "portrait": "/images/heroes/Rotbone.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tyranNeurothrope",
+      "name": "Neurothrope",
+      "faction": "Tyranids",
+      "portrait": "/images/heroes/Neuro.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": []
+      }
+    },
+    {
+      "id": "bloodSanguinary",
+      "name": "Nicodemus",
+      "faction": "Blood Angels",
+      "portrait": "/images/heroes/Nico.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "spaceStormcaller",
+      "name": "Njal",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Njal.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "astarEradicator",
+      "name": "Nubari",
+      "faction": "Adeptus Astartes",
+      "portrait": "/images/lre/portraits/astarEradicator.png",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "tyranParasite",
+      "name": "Parasite of Mortrex",
+      "faction": "Tyranids",
+      "portrait": "/images/heroes/Parasite.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": []
+      }
+    },
+    {
+      "id": "deathPutrifier",
+      "name": "Pestillian",
+      "faction": "Death Guard",
+      "portrait": "/images/heroes/Pesti.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "spaceBlackmane",
+      "name": "Ragnar",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Rag.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "darkaSternguard",
+      "name": "Ramus",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Ramus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "tauCrisis",
+      "name": "Re'vas",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/Revas.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_2",
+          "gamma_3"
+        ]
+      }
+    },
+    {
+      "id": "adeptCanoness",
+      "name": "Roswitha",
+      "faction": "Adepta Sororitas",
+      "portrait": "/images/heroes/Rosie.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "darkaHellblaster",
+      "name": "Sarquael",
+      "faction": "Dark Angels",
+      "portrait": "/images/heroes/Sarq.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "thousSekhetar",
+      "name": "Sekhetar Robot",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Sek.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": [
+          "gamma_0",
+          "gamma_1",
+          "gamma_3",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tauShadowsun",
+      "name": "Shadowsun",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/SS.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1"
+        ]
+      }
+    },
+    {
+      "id": "emperNoiseMarine",
+      "name": "Shiron",
+      "faction": "Emperor's Children",
+      "portrait": "/images/heroes/Shiron.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tauMarksman",
+      "name": "Sho'syl",
+      "faction": "T'au Empire",
+      "portrait": "/images/heroes/Sho.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraPrimarisPsy",
+      "name": "Sibyll",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Sibyll.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "orksKillaKan",
+      "name": "Snappawrecka",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Snappa.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "orksRuntherd",
+      "name": "Snotflogga",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Snot.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "admecDestroyer",
+      "name": "Sy-gex",
+      "faction": "Adeptus Mechanicus",
+      "portrait": "/images/heroes/Sygex.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "admecMarshall",
+      "name": "Tan Gi'da",
+      "faction": "Adeptus Mechanicus",
+      "portrait": "/images/heroes/Tan.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "orksNob",
+      "name": "Tanksmasha",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Tank.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "worldExecutions",
+      "name": "Tarvakh",
+      "faction": "World Eaters",
+      "portrait": "/images/heroes/Tarvakh.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_0",
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraOrdnance",
+      "name": "Thaddeus",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Thad.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_1",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "thousSorcerer",
+      "name": "Thaumachus",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Thaum.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_3"
+        ]
+      }
+    },
+    {
+      "id": "genesPatriarch",
+      "name": "The Patermine",
+      "faction": "Genestealer Cults",
+      "portrait": "/images/heroes/Pater.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_1",
+          "gamma_2",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "templAncient",
+      "name": "Thoread",
+      "faction": "Black Templars",
+      "portrait": "/images/heroes/Thoread.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_0",
+          "alpha_2",
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_3"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "necroChronomancer",
+      "name": "Thothmek",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Thoth.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0"
+        ]
+      }
+    },
+    {
+      "id": "necroPlasmancer",
+      "name": "Thutmose",
+      "faction": "Necrons",
+      "portrait": "/images/heroes/Thut.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_0"
+        ]
+      }
+    },
+    {
+      "id": "ultraTigurius",
+      "name": "Tigurius",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Tiggy.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "ultraTitus",
+      "name": "Titus",
+      "faction": "Ultramarines",
+      "portrait": "/images/heroes/Titus.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "spaceHound",
+      "name": "Tjark",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Tjark.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "thousTerminator",
+      "name": "Toth",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Toth.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [],
+        "gamma": [
+          "gamma_2",
+          "gamma_3",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "custoTrajann",
+      "name": "Trajann",
+      "faction": "Adeptus Custodes",
+      "portrait": "/images/heroes/Traj.webp",
+      "eligibility": {
+        "alpha": [],
+        "beta": [
+          "beta_0",
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "deathTyphus",
+      "name": "Typhus",
+      "faction": "Death Guard",
+      "portrait": "/images/heroes/Typhus.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tyranTyrantGuard",
+      "name": "Tyrant Guard",
+      "faction": "Tyranids",
+      "portrait": "/images/heroes/TG.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "custoKyrus",
+      "name": "Tyrith",
+      "faction": "Adeptus Custodes",
+      "portrait": "/images/heroes/Tyrith.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "spaceWulfen",
+      "name": "Ulf",
+      "faction": "Space Wolves",
+      "portrait": "/images/heroes/Ulf.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_0",
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "votanUthar",
+      "name": "Ûthar",
+      "faction": "Leagues of Votann",
+      "portrait": "/images/heroes/Uthar.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "adeptRetributor",
+      "name": "Vindicta",
+      "faction": "Adepta Sororitas",
+      "portrait": "/images/heroes/Vindi.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_4"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "admecDominus",
+      "name": "Vitruvius",
+      "faction": "Adeptus Mechanicus",
+      "portrait": "/images/heroes/Vitru.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "blackObliterator",
+      "name": "Volk",
+      "faction": "Black Legion",
+      "portrait": "/images/heroes/Volk.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [],
+        "gamma": [
+          "gamma_2",
+          "gamma_3",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "votanIronmaster",
+      "name": "Vynn",
+      "faction": "Leagues of Votann",
+      "portrait": "/images/heroes/Vynn.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "tyranWingedPrime",
+      "name": "Winged Prime",
+      "faction": "Tyranids",
+      "portrait": "/images/heroes/Winged.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_2",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_2"
+        ]
+      }
+    },
+    {
+      "id": "worldTerminator",
+      "name": "Wrask",
+      "faction": "World Eaters",
+      "portrait": "/images/heroes/Wrask.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_2",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_3",
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "genesMagus",
+      "name": "Xybia",
+      "faction": "Genestealer Cults",
+      "portrait": "/images/heroes/Xybia.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3",
+          "alpha_4"
+        ],
+        "beta": null,
+        "gamma": [
+          "gamma_4"
+        ]
+      }
+    },
+    {
+      "id": "astraYarrick",
+      "name": "Yarrick",
+      "faction": "Astra Militarum",
+      "portrait": "/images/heroes/Yarrick.webp",
+      "eligibility": {
+        "alpha": [
+          "alpha_3"
+        ],
+        "beta": [
+          "beta_1"
+        ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "thousTzaangor",
+      "name": "Yazaghor",
+      "faction": "Thousand Sons",
+      "portrait": "/images/heroes/Yaz.webp",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": []
+      }
+    }
+  ]
+}

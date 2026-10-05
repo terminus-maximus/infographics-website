@@ -1,0 +1,265 @@
+---
+import { eligibleCharacters, highPointsCombinations, type LrePlannerData } from "../lib/lrePlanner";
+
+interface Props { data: LrePlannerData }
+const { data: sourceData } = Astro.props;
+const data = {
+  ...sourceData,
+  tracks: sourceData.tracks.map(track => ({
+    ...track,
+    requirements: [...track.requirements].sort((a, b) => b.points - a.points),
+  })),
+};
+const combinations = highPointsCombinations(data.characters, data.tracks[0]);
+---
+
+<div class="lre-planner" data-lre-planner>
+  <script is:inline type="application/json" data-planner-data set:html={JSON.stringify(data).replace(/</g, '\\u003c')} />
+  <section class="planner-section" aria-labelledby="tracks-heading">
+    <h2 id="tracks-heading">Tracks &amp; Filters</h2>
+    <p class="intro">Select requirements to find characters who meet all of them.</p>
+    <div class="planner-controls" data-interactive hidden>
+      <button type="button" data-reset-all>Reset all filters</button>
+    </div>
+    <noscript><p class="empty">Enable JavaScript to filter characters and apply combinations. The full eligible rosters and leading Alpha combinations are shown below.</p></noscript>
+    <div class="tracks-grid">
+      {data.tracks.map(track => {
+        const pool = eligibleCharacters(data.characters, track.id);
+        return (
+          <article class={`track track-${track.id}`} data-track={track.id} aria-labelledby={`${track.id}-heading`}>
+            <header class="track-heading">
+              <div class="track-title"><h3 id={`${track.id}-heading`} tabindex="-1">{track.name}</h3><button type="button" data-clear-track data-interactive hidden aria-label={`Clear ${track.name} filters`}>Clear</button></div>
+              <p>Enemies: {track.enemyFaction}</p>
+              <p>No {track.excludedAlliance} characters</p>
+            </header>
+            <fieldset disabled>
+              <legend class="sr-only">{track.name} requirements — select all that apply</legend>
+              {track.requirements.map(requirement => (
+                <label class="requirement">
+                  <input type="checkbox" value={requirement.id} aria-label={`${track.name}: ${requirement.label}`} />
+                  <span>{requirement.label}<small>{eligibleCharacters(data.characters, track.id, [requirement.id]).length} eligible</small></span>
+                  <strong>{requirement.points}<span class="sr-only"> bonus points per battle</span></strong>
+                </label>
+              ))}
+            </fieldset>
+            <div class="track-summary" role="status" aria-live="polite" aria-atomic="true">
+              <strong data-match-count>{pool.length} matching characters</strong>
+              <span data-selected-points>0 selected bonus points per battle</span>
+            </div>
+            <div class="roster-scroll" tabindex="0" role="region" aria-label={`${track.name} matching characters`}>
+              <ul class="character-grid">
+                {pool.map(character => (
+                  <li data-character={character.id} title={`${character.name} · ${character.faction}`}>
+                    <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
+                    <span>{character.name}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="empty" data-empty hidden>No characters match. Try clearing a requirement.</p>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+    <p class="footnote">This is an eligibility pool, not your personal collection. Points shown are requirement bonuses per battle; kill and clear bonuses are excluded.</p>
+  </section>
+
+  <section class="planner-section combinations-section" aria-labelledby="combinations-heading">
+    <div class="section-heading">
+      <h2 id="combinations-heading">High Points Combinations</h2>
+      <label data-interactive hidden>Track
+        <select data-combo-track aria-label="High Points Combinations track">
+          {data.tracks.map(track => <option value={track.id}>{track.name}</option>)}
+        </select>
+      </label>
+    </div>
+    <p class="intro">Find high-scoring combinations of requirements shared by at least three characters.</p>
+    <p class="sr-only" data-combo-status role="status" aria-live="polite">{combinations.length} Alpha combinations</p>
+    <div class="combinations-grid" data-combinations>
+      {combinations.map(combination => (
+        <article class="combination">
+          <div class="combo-score"><strong>{combination.points}</strong><span>bonus points / battle</span></div>
+          <h3>{combination.requirements.map(requirement => requirement.label).join(' + ')}</h3>
+          <p class="combo-count">{combination.characters.length} eligible characters</p>
+          {combination.characters.length <= 10 ? (
+            <ul class="character-grid combo-character-grid">
+              {combination.characters.map(character => (
+                <li title={`${character.name} · ${character.faction}`}>
+                  <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
+                  <span>{character.name}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="combo-names">{combination.characters.map(character => character.name).join(', ')}</p>
+          )}
+          <button type="button" data-use-combo={combination.requirements.map(requirement => requirement.id).join(' ')} data-interactive hidden>Use these {combination.requirements.length} filters</button>
+        </article>
+      ))}
+    </div>
+  </section>
+</div>
+
+<script>
+  import { eligibleCharacters, highPointsCombinations, selectedPoints, type LrePlannerData } from '../lib/lrePlanner';
+
+  document.querySelectorAll<HTMLElement>('[data-lre-planner]').forEach(planner => {
+    const data: LrePlannerData = JSON.parse(planner.querySelector('[data-planner-data]')!.textContent!);
+    const comboTrack = planner.querySelector<HTMLSelectElement>('[data-combo-track]')!;
+    const comboGrid = planner.querySelector<HTMLElement>('[data-combinations]')!;
+    const trackCards = [...planner.querySelectorAll<HTMLElement>('[data-track]')];
+
+    function updateTrack(card: HTMLElement) {
+      const track = data.tracks.find(track => track.id === card.dataset.track)!;
+      const selected = [...card.querySelectorAll<HTMLInputElement>('input:checked')].map(input => input.value);
+      const matches = eligibleCharacters(data.characters, track.id, selected);
+      const ids = new Set(matches.map(character => character.id));
+      card.querySelectorAll<HTMLElement>('[data-character]').forEach(item => { item.hidden = !ids.has(item.dataset.character!); });
+      card.querySelector('[data-match-count]')!.textContent = `${matches.length} matching character${matches.length === 1 ? '' : 's'}`;
+      card.querySelector('[data-selected-points]')!.textContent = `${selectedPoints(track, selected)} selected bonus points per battle`;
+      card.querySelector<HTMLElement>('[data-empty]')!.hidden = matches.length > 0;
+      card.querySelector<HTMLElement>('.roster-scroll')!.scrollTop = 0;
+    }
+
+    function resetTrack(card: HTMLElement) {
+      card.querySelectorAll<HTMLInputElement>('input').forEach(input => { input.checked = false; });
+      updateTrack(card);
+    }
+
+    const element = <K extends keyof HTMLElementTagNameMap>(tag: K, className: string, text: string) => {
+      const node = document.createElement(tag);
+      node.className = className;
+      node.textContent = text;
+      return node;
+    };
+
+    function renderCombinations() {
+      const track = data.tracks.find(track => track.id === comboTrack.value)!;
+      const combinations = highPointsCombinations(data.characters, track);
+      const fragment = document.createDocumentFragment();
+      for (const combination of combinations) {
+        const article = element('article', 'combination', '');
+        const score = element('div', 'combo-score', '');
+        score.append(element('strong', '', String(combination.points)), element('span', '', 'bonus points / battle'));
+        const button = element('button', '', `Use these ${combination.requirements.length} filters`);
+        button.type = 'button';
+        button.dataset.useCombo = combination.requirements.map(requirement => requirement.id).join(' ');
+        let characters: HTMLElement;
+        if (combination.characters.length <= 10) {
+          characters = element('ul', 'character-grid combo-character-grid', '');
+          for (const character of combination.characters) {
+            const item = element('li', '', '');
+            item.title = `${character.name} · ${character.faction}`;
+            const portrait = document.createElement('img');
+            portrait.src = character.portrait;
+            portrait.alt = '';
+            portrait.width = 60;
+            portrait.height = 60;
+            portrait.loading = 'lazy';
+            item.append(portrait, element('span', '', character.name));
+            characters.append(item);
+          }
+        } else {
+          characters = element('p', 'combo-names', combination.characters.map(character => character.name).join(', '));
+        }
+        article.append(score,
+          element('h3', '', combination.requirements.map(requirement => requirement.label).join(' + ')),
+          element('p', 'combo-count', `${combination.characters.length} eligible characters`),
+          characters, button);
+        fragment.append(article);
+      }
+      if (!combinations.length) fragment.append(element('p', 'empty', 'No combinations have at least three eligible characters.'));
+      comboGrid.replaceChildren(fragment);
+      planner.querySelector('[data-combo-status]')!.textContent = `${combinations.length} ${track.name} combinations`;
+    }
+
+    planner.querySelectorAll<HTMLElement>('[data-interactive]').forEach(control => { control.hidden = false; });
+    planner.querySelectorAll<HTMLFieldSetElement>('fieldset').forEach(fieldset => { fieldset.disabled = false; });
+    trackCards.forEach(card => {
+      card.addEventListener('change', () => updateTrack(card));
+      card.querySelector('[data-clear-track]')!.addEventListener('click', () => resetTrack(card));
+    });
+    planner.querySelector('[data-reset-all]')!.addEventListener('click', () => {
+      trackCards.forEach(resetTrack);
+    });
+    comboTrack.addEventListener('change', renderCombinations);
+    comboGrid.addEventListener('click', event => {
+      const button = (event.target as Element).closest<HTMLButtonElement>('[data-use-combo]');
+      if (!button) return;
+      const card = trackCards.find(card => card.dataset.track === comboTrack.value)!;
+      const selected = new Set(button.dataset.useCombo!.split(' '));
+      card.querySelectorAll<HTMLInputElement>('input').forEach(input => { input.checked = selected.has(input.value); });
+      updateTrack(card);
+      card.querySelector<HTMLElement>('h3')!.focus({ preventScroll: true });
+      card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+<style is:global>
+  .lre-planner { --planner-gold: #d4af37; color: #f5f5f5; }
+  .lre-planner [hidden] { display: none !important; }
+  .lre-planner .planner-section { margin-bottom: 4rem; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; }
+  .lre-planner h2 { margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid #333; color: var(--planner-gold); font-size: 1.5rem; }
+  .lre-planner .intro { color: #ccc; line-height: 1.7; margin: 0 0 .8rem; }
+  .lre-planner .footnote { color: #aaa; font-size: .8rem; line-height: 1.65; }
+  .lre-planner .footnote:last-child { margin-bottom: 0; }
+  .lre-planner .planner-controls { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem; }
+  .lre-planner label { font-size: .85rem; }
+  .lre-planner select, .lre-planner button { font: inherit; color: #f5f5f5; background: #121212; border: 1px solid #555; border-radius: 7px; padding: .7rem .85rem; box-sizing: border-box; }
+  .lre-planner button { cursor: pointer; color: var(--planner-gold); font-size: .82rem; min-height: 44px; }
+  .lre-planner button:hover { background: #302b1b; border-color: var(--planner-gold); }
+  .lre-planner :is(button, input, select, .roster-scroll, h3):focus-visible { outline: 2px solid var(--planner-gold); outline-offset: 3px; }
+  .lre-planner .tracks-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .lre-planner .track { --track-accent: #80cbc4; min-width: 0; border: 1px solid #444; border-top: 4px solid var(--track-accent); border-radius: 10px; background: #151515; overflow: hidden; scroll-margin-top: 6rem; }
+  .lre-planner .track-beta { --track-accent: #f0937f; }
+  .lre-planner .track-gamma { --track-accent: #b3d481; }
+  .lre-planner .track-heading { padding: 1rem; background: #202222; }
+  .lre-planner .track-title { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .4rem; }
+  .lre-planner .track-title h3 { color: var(--track-accent); font-size: 1.5rem; margin: 0; }
+  .lre-planner .track-title button { padding: .4rem .6rem; }
+  .lre-planner .track-heading p { font-size: .78rem; line-height: 1.5; margin: .2rem 0; color: #ccc; }
+  .lre-planner fieldset { padding: .5rem .75rem; margin: 0; border: 0; min-width: 0; }
+  .lre-planner .requirement { display: flex; align-items: center; gap: .65rem; min-height: 54px; padding: .4rem; border-bottom: 1px solid #303030; cursor: pointer; border-radius: 4px; box-sizing: border-box; }
+  .lre-planner .requirement:last-child { border-bottom: 0; }
+  .lre-planner .requirement:has(input:checked) { background: #302d21; }
+  .lre-planner .requirement input { width: 18px; height: 18px; flex-shrink: 0; margin: 0; accent-color: var(--planner-gold); }
+  .lre-planner .requirement > span { flex: 1; line-height: 1.4; }
+  .lre-planner .requirement small { display: block; font-size: .68rem; color: #aaa; }
+  .lre-planner .requirement strong { color: var(--track-accent); font-size: .9rem; }
+  .lre-planner .track-summary { display: grid; gap: .3rem; padding: .9rem 1rem; border-block: 1px solid #333; font-size: .83rem; background: #202020; }
+  .lre-planner .track-summary span { color: #bbb; font-size: .72rem; }
+  .lre-planner .roster-scroll { --character-row-height: 104px; max-height: calc(2 * var(--character-row-height) + 3rem); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #666 #1b1b1b; }
+  .lre-planner .roster-scroll .character-grid { grid-auto-rows: var(--character-row-height); }
+  .lre-planner .character-grid { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-content: start; gap: 1rem .4rem; padding: 1rem .65rem; margin: 0; }
+  .lre-planner .character-grid li { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: .45rem; text-align: center; }
+  .lre-planner .character-grid img { display: block; width: min(60px, 100%); height: auto; aspect-ratio: 1; object-fit: contain; }
+  .lre-planner .character-grid span { font-size: .69rem; line-height: 1.35; overflow-wrap: anywhere; }
+  .lre-planner .empty { padding: 1rem; color: #ccc; line-height: 1.6; font-size: .85rem; }
+  .lre-planner .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #333; margin-bottom: 1rem; padding-bottom: .7rem; }
+  .lre-planner .section-heading h2 { border: 0; margin: 0; padding: 0; }
+  .lre-planner .section-heading label { display: flex; align-items: center; gap: .6rem; }
+  .lre-planner .combinations-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .lre-planner .combination { border: 1px solid #444; border-radius: 9px; background: #151515; padding: 1.1rem; display: flex; flex-direction: column; align-items: flex-start; }
+  .lre-planner .combo-score { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+  .lre-planner .combo-score strong { font-size: 1.9rem; color: var(--planner-gold); }
+  .lre-planner .combo-score span { color: #aaa; font-size: .7rem; }
+  .lre-planner .combination h3 { font-size: .95rem; line-height: 1.6; margin: .8rem 0; }
+  .lre-planner .combo-count { color: var(--planner-gold); font-size: .74rem; margin: 0 0 .45rem; }
+  .lre-planner .combo-names { color: #ccc; font-size: .78rem; line-height: 1.7; margin: 0 0 1rem; }
+  .lre-planner .character-grid.combo-character-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); width: 100%; padding: .5rem 0 1rem; }
+  .lre-planner .combination button { margin-top: auto; }
+  .lre-planner .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  @media (max-width: 1050px) and (min-width: 801px) { .lre-planner .character-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 800px) {
+    .lre-planner .tracks-grid { grid-template-columns: 1fr; }
+    .lre-planner .character-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); }
+    .lre-planner .combinations-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .lre-planner .planner-section { padding: 1rem; margin-bottom: 3rem; }
+    .lre-planner .planner-controls { align-items: stretch; flex-direction: column; }
+    .lre-planner .section-heading { flex-direction: column; align-items: flex-start; }
+    .lre-planner .combinations-grid { grid-template-columns: 1fr; }
+  }
+</style>
