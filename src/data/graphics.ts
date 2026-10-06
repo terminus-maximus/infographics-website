@@ -204,6 +204,14 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "legendary"
     },
     {
+      title: "Fabius Bile LRE Guide",
+      href: "/lre/fabius",
+      description: "Be ready for his first event November 8",
+      image: "/images/fabius-lre.png",
+      thumbnail: "/images/thumbnails/fabius-lre-thumb.png",
+      category: "legendary"
+    },
+    {
       title: "Farsight LRE",
       href: "/lre/farsight",
       description: "Be ready for the Tau Legendary on Dec 13",

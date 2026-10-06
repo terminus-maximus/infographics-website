@@ -17,7 +17,7 @@ assert.equal(data.characters.length, 117);
 assert.equal(new Set(data.characters.map(character => character.id)).size, 117);
 assert(!/1\.43|marketing|orksWeirdboy|lostaBile|\/Users\/|file:\/\//i.test(dataText));
 assert(!/Battle points<|Rules &amp; evidence|Character coverage<|All heroes ranked|Useful requirement intersections|1\.43\.94/i.test(page));
-assert.match(page, /<meta name="robots" content="noindex, nofollow, noimageindex"/);
+assert(!/<meta name="robots"[^>]*noindex/.test(page), 'The public guide must allow indexing');
 assert.match(page, /High Points Combinations/);
 assert.match(page, /src="\/images\/web\/fabius-lre.webp"/);
 assert.match(page, /href="\/images\/fabius-lre.png"/);
@@ -45,12 +45,29 @@ assert.deepEqual(eligibleCharacters(data.characters, 'alpha', ['alpha_0', 'alpha
 assert.deepEqual(eligibleCharacters(data.characters, 'beta', ['beta_0', 'beta_1', 'beta_4']).map(character => character.name), ['Hascule', 'Incisus', 'Tarvakh', 'Trajann']);
 assert(!eligibleCharacters(data.characters, 'alpha').some(character => character.id === 'blackAbaddon'), 'Excluded factions must never appear, even without requirement filters');
 
-// Search every built page, including hidden recommendation candidates, for leaks.
-const htmlFiles = readdirSync(resolve(root, 'dist'), { recursive: true }).filter(path => path.endsWith('.html'));
+// Public promotion: global navigation, ordered landing cards and recommendation eligibility.
+const htmlFiles = readdirSync(resolve(root, 'dist'), { recursive: true }).filter(path => path.endsWith('index.html'));
+let navigationPages = 0;
 for (const path of htmlFiles) {
-  if (path === 'lre/fabius/index.html') continue;
-  assert(!/\/lre\/fabius|fabius-lre|High Points Combinations|orksWeirdboy/i.test(read(`dist/${path}`)), `Unlisted content exposed in ${path}`);
+  const html = read(`dist/${path}`);
+  if (/<meta[^>]*http-equiv="refresh"/i.test(html)) continue; // Redirect documents have no navigation.
+  const menu = html.match(/id="lre-menu"[^>]*>([\s\S]*?)<\/div>/)?.[1];
+  assert(menu?.includes('href="/lre/fabius"'), `Missing global navigation in ${path}`);
+  assert(menu.indexOf('/lre/uthar') < menu.indexOf('/lre/fabius'), `Wrong LRE navigation order in ${path}`);
+  navigationPages++;
 }
+const home = read('dist/index.html');
+const homeSections = [...home.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)].map(match => match[1]);
+assert(homeSections[1].includes('href="/lre/uthar"'));
+assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[2]), 'Fabius must follow Uthar as the third homepage block, including the hero');
+assert(homeSections[2].includes('Be ready for his first event November 8'));
+const legendarySection = homeSections.find(section => section.includes('Legendary Guides'));
+assert(legendarySection);
+const firstCardRoutes = html => [...html.matchAll(/<a class="card" href="([^"]+)"/g)].slice(0, 2).map(match => match[1]);
+assert.deepEqual(firstCardRoutes(legendarySection), ['/lre/uthar', '/lre/fabius']);
+assert.deepEqual(firstCardRoutes(read('dist/lre/index.html')), ['/lre/uthar', '/lre/fabius']);
+assert(read('dist/lre/lysander/index.html').includes('data-recommendation-route="/lre/fabius"'));
+assert(!page.includes('data-recommendation-route="/lre/fabius"'), 'Do not recommend the guide to itself');
 
 if (process.argv[2]) {
   const report = readReport(process.argv[2]);
@@ -68,4 +85,4 @@ if (process.argv[2]) {
     }
   }
 }
-console.log(`Fabius checks passed: 117 local characters, 15 requirements, combinations, portraits, noindex, and no exposure across ${htmlFiles.length - 1} other pages.`);
+console.log(`Fabius checks passed: 117 local characters, 15 requirements, combinations, portraits, public indexing, homepage/LRE placement, recommendation eligibility, and navigation across ${navigationPages} pages.`);

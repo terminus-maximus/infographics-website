@@ -7,8 +7,6 @@ import data from "../../data/lre/fabius.json";
 const basics = getLreBasicsContent("Fabius Bile");
 const detailsStart = basics.indexOf("## Event Goal");
 
-// Intentionally unlisted. Do not register in graphics, navigation or LRE cards
-// until the user explicitly asks to make the guide discoverable.
 ---
 
 <FeaturedInfographicPage
@@ -20,7 +18,6 @@ const detailsStart = basics.indexOf("## Event Goal");
   basicsTitle="Fabius Bile LRE Basics"
   basicsContent={basics.slice(0, detailsStart)}
   basicsDetailsContent={basics.slice(detailsStart)}
-  noIndex={true}
 >
   <LrePlanner slot="after-basics" data={data} />
 </FeaturedInfographicPage>
