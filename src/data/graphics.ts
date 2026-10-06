@@ -206,7 +206,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Farsight LRE",
       href: "/lre/farsight",
-      description: "Be ready for the Tau Legendary on either Nov 8 or Dec 13",
+      description: "Be ready for the Tau Legendary on Dec 13",
       image: "/images/farsight-lre.png",
       thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
@@ -214,7 +214,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Lysander LRE",
       href: "/lre/lysander",
-      description: "Be ready for the First Captain on either Dec 13 or Jan 17",
+      description: "Be ready for the First Captain on Jan 17",
       image: "/images/lysander-lre.png",
       thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
       category: "legendary"
@@ -231,7 +231,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Campaign Event",
       href: "/campaign-event",
-      description: "Next CE begins Sept 10",
+      description: "Next CE begins Oct 15",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
       category: "event"
@@ -239,7 +239,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Hero Release Events",
       href: "/hre",
-      description: "Next HRE begins Sept 13",
+      description: "Next HRE begins Oct 18",
       image: "/images/hre.png",
       thumbnail: "/images/thumbnails/hre-thumb.png",
       category: "event"
@@ -247,7 +247,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Incursion / MoW",
       href: "/incursion-mow",
-      description: "Next Incursion begins Sept 28",
+      description: "Next Incursion begins Nov 2",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
       category: "event"
