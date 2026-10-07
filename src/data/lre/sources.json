@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "generation": "3f34a218c37c08ed2202",
+  "events": {
+    "farsight": {
+      "eventId": "legendary_hero_event_13",
+      "eventBuild": "1.42.166",
+      "eventSource": "production",
+      "characterBuild": "1.42.166",
+      "snapshot": "local",
+      "mode": "regular",
+      "sha256": "e57657ccc4effe3dc34e3e3cbb7904db2cdd79132755e9bdae3d758e3d128a5e"
+    },
+    "uthar": {
+      "eventId": "legendary_hero_event_14",
+      "eventBuild": "1.42.166",
+      "eventSource": "production",
+      "characterBuild": "1.42.166",
+      "snapshot": "local",
+      "mode": "regular",
+      "sha256": "973801d9c0c84f8c891cb6e19063abd7369becf0deefb333dc279c9ed45df874"
+    },
+    "lysander": {
+      "eventId": "legendary_hero_event_15",
+      "eventBuild": "1.42.166",
+      "eventSource": "production",
+      "characterBuild": "1.42.166",
+      "snapshot": "local",
+      "mode": "regular",
+      "sha256": "4439c367efa8a9dde756c79e0a78d45dc10d50646202a35b8827d712ab00ba73"
+    },
+    "fabius": {
+      "eventId": "legendary_hero_event_16",
+      "eventBuild": "1.43.94",
+      "eventSource": "marketing_preview",
+      "characterBuild": "1.42.166",
+      "snapshot": "local",
+      "mode": "regular",
+      "sha256": "71e63a21024442f5ac2bd15b9ab4d431b79050bab7e77cedbad5a1eeb2af0811"
+    }
+  }
+}

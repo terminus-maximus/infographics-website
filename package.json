@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "import:lre": "node scripts/import-lre.mjs",
+    "check:lre": "node scripts/check-lre.mjs",
     "check:guild-raid-next-season": "node scripts/check-guild-raid-next-season.mjs",
     "preview": "astro preview",
     "astro": "astro"

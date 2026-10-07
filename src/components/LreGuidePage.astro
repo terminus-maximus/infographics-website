@@ -1,0 +1,32 @@
+---
+import FeaturedInfographicPage from './FeaturedInfographicPage.astro';
+import LrePlanner from './LrePlanner.astro';
+import { getLreBasicsContent, type LreCharacter } from '../data/lreBasics';
+import type { LrePlannerData } from '../lib/lrePlanner';
+
+interface Props {
+  character: LreCharacter;
+  imageSrc: string;
+  lastUpdated: string;
+  data: LrePlannerData;
+  resources?: { title: string; url: string }[];
+}
+
+const { character, imageSrc, lastUpdated, data, resources = [] } = Astro.props;
+const basics = getLreBasicsContent(character);
+const detailsStart = basics.indexOf('## Event Goal');
+---
+
+<FeaturedInfographicPage
+  title={`${character} Legendary Release Event`}
+  description="Event requirements, planning, and best team guide."
+  imageSrc={imageSrc}
+  imageAlt={`${character} Legendary Release Event Infographic`}
+  lastUpdated={lastUpdated}
+  basicsTitle={`${character} LRE Basics`}
+  basicsContent={basics.slice(0, detailsStart)}
+  basicsDetailsContent={basics.slice(detailsStart)}
+  resources={resources}
+>
+  <LrePlanner slot="after-basics" data={data} />
+</FeaturedInfographicPage>

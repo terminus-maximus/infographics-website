@@ -1,4 +1,4 @@
-// Import only the approved event requirements and the 1.42.166 regular roster.
+// Legacy research reconciliation. For current exports, use import-lre.mjs.
 // Usage: node scripts/import-fabius-lre.mjs /path/to/fabius-bile-lre16.html
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync } from 'node:fs';
@@ -21,7 +21,7 @@ export function normalizeReport(report, catalog) {
     id: track.id,
     name: track.name,
     enemyFaction: track.enemy_faction,
-    excludedAlliance: track.excluded_alliance,
+    excludedGroups: [track.excluded_alliance],
     requirements: track.requirements.map(({ id, label, score }) => ({ id, label, points: score })),
   }));
   const characters = report.rosters.local.map(unit => ({

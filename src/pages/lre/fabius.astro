@@ -1,23 +1,11 @@
 ---
-import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
-import LrePlanner from "../../components/LrePlanner.astro";
-import { getLreBasicsContent } from "../../data/lreBasics";
+import LreGuidePage from "../../components/LreGuidePage.astro";
 import data from "../../data/lre/fabius.json";
-
-const basics = getLreBasicsContent("Fabius Bile");
-const detailsStart = basics.indexOf("## Event Goal");
-
 ---
 
-<FeaturedInfographicPage
-  title="Fabius Bile Legendary Release Event"
-  description="Event requirements, planning, and best team guide."
+<LreGuidePage
+  character="Fabius Bile"
   imageSrc="/images/fabius-lre.png"
-  imageAlt="Fabius Bile Legendary Release Event Infographic"
   lastUpdated="October 5, 2026"
-  basicsTitle="Fabius Bile LRE Basics"
-  basicsContent={basics.slice(0, detailsStart)}
-  basicsDetailsContent={basics.slice(detailsStart)}
->
-  <LrePlanner slot="after-basics" data={data} />
-</FeaturedInfographicPage>
+  data={data}
+/>

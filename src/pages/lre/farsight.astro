@@ -1,16 +1,13 @@
 ---
-import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
-import { getLreBasicsContent } from "../../data/lreBasics";
+import LreGuidePage from "../../components/LreGuidePage.astro";
+import data from "../../data/lre/farsight.json";
 ---
 
-<FeaturedInfographicPage
-  title="Farsight Legendary Release Event"
-  description="Event requirements, planning, and best team guide."
+<LreGuidePage
+  character="Farsight"
   imageSrc="/images/farsight-lre.png"
-  imageAlt="Farsight Legendary Release Event Infographic"
-  lastUpdated="May 20, 2026"
-  basicsTitle="Legendary Release Event Basics"
-  basicsContent={getLreBasicsContent("Farsight")}
+  lastUpdated="October 7, 2026"
+  data={data}
   resources={[
     { title: "Reddit Discussion", url: "https://www.reddit.com/r/WH40KTacticus/comments/1tisa6s/infographic_farsight_lre_guide_prepare_for_his/" },
   ]}

@@ -1,17 +1,14 @@
 ---
-import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
-import { getLreBasicsContent } from "../../data/lreBasics";
+import LreGuidePage from "../../components/LreGuidePage.astro";
+import data from "../../data/lre/lysander.json";
 ---
 
-<FeaturedInfographicPage
-  title="Lysander Legendary Release Event"
-  description="Event requirements, planning, and best team guide."
+<LreGuidePage
+  character="Lysander"
   imageSrc="/images/lysander-lre.png"
-  imageAlt="Lysander Legendary Release Event Infographic"
-  lastUpdated="July 28, 2026"
-  basicsTitle="Lysander LRE Basics"
-  basicsContent={getLreBasicsContent("Lysander")}
-    resources={[
+  lastUpdated="October 7, 2026"
+  data={data}
+  resources={[
     { title: "Reddit Discussion - Event 1", url: "https://www.reddit.com/r/WH40KTacticus/comments/1v93gy1/infographic_lysander_lre_guide_first_event_begins/" },
   ]}
 />

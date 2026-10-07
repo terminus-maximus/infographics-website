@@ -8,7 +8,7 @@ export interface LreTrack {
   id: string;
   name: string;
   enemyFaction: string;
-  excludedAlliance: string;
+  excludedGroups: string[];
   requirements: LreRequirement[];
 }
 

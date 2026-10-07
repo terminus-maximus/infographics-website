@@ -69,7 +69,7 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
             <header class="track-heading">
               <div class="track-title"><h3 id={`${track.id}-heading`} tabindex="-1">{track.name}</h3><button type="button" data-clear-track data-interactive hidden aria-label={`Clear ${track.name} filters`}>Clear</button></div>
               <p>Enemies: {track.enemyFaction}</p>
-              <p>No {track.excludedAlliance} characters</p>
+              <p>{track.excludedGroups.length ? `No ${track.excludedGroups.join(' or ')} characters` : 'All factions allowed'}</p>
             </header>
             <fieldset disabled>
               <legend class="sr-only">{track.name} requirements — select all that apply</legend>
