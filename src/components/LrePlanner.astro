@@ -15,14 +15,53 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
 
 <div class="lre-planner" data-lre-planner>
   <script is:inline type="application/json" data-planner-data set:html={JSON.stringify(data).replace(/</g, '\\u003c')} />
+  <section class="planner-section combinations-section" aria-labelledby="combinations-heading">
+    <h2 id="combinations-heading">High Points Combinations</h2>
+    <p class="intro">Find high-scoring combinations of requirements shared by at least three characters.</p>
+    <div class="track-selector" role="group" aria-label="High Points Combinations track" data-interactive hidden>
+      {data.tracks.map((track, index) => (
+        <button type="button" class={`track-selector-button track-${track.id}`} data-select-track={track.id} aria-pressed={index === 0} aria-controls="high-points-combinations track-filters">
+          {track.name}<span class="track-selected-mark" aria-hidden="true">✓</span>
+        </button>
+      ))}
+    </div>
+    <noscript><p class="empty">Enable JavaScript to switch tracks, filter characters and apply combinations. Leading Alpha combinations and the full eligible rosters are shown below.</p></noscript>
+    <p class="sr-only" data-combo-status role="status" aria-live="polite">{combinations.length} Alpha combinations</p>
+    <div class="combinations-grid" id="high-points-combinations" data-combinations>
+      {combinations.map(combination => (
+        <article class="combination">
+          <div class="combo-score"><strong>{combination.points}</strong><span>bonus points / battle</span></div>
+          <h3>{combination.requirements.map(requirement => requirement.label).join(' + ')}</h3>
+          <p class="combo-count">{combination.characters.length} eligible characters</p>
+          {combination.characters.length <= 10 ? (
+            <ul class="character-grid combo-character-grid">
+              {combination.characters.map(character => (
+                <li title={`${character.name} · ${character.faction}`}>
+                  <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
+                  <span>{character.name}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="combo-names">{combination.characters.map(character => character.name).join(', ')}</p>
+          )}
+          <button type="button" data-use-combo={combination.requirements.map(requirement => requirement.id).join(' ')} data-interactive hidden>Use these {combination.requirements.length} filters</button>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="planner-section" aria-labelledby="tracks-heading">
     <h2 id="tracks-heading">Tracks &amp; Filters</h2>
     <p class="intro">Select requirements to find characters who meet all of them.</p>
-    <div class="planner-controls" data-interactive hidden>
-      <button type="button" data-reset-all>Reset all filters</button>
+    <div class="track-selector" role="group" aria-label="Tracks & Filters track" data-interactive hidden>
+      {data.tracks.map((track, index) => (
+        <button type="button" class={`track-selector-button track-${track.id}`} data-select-track={track.id} aria-pressed={index === 0} aria-controls="high-points-combinations track-filters">
+          {track.name}<span class="track-selected-mark" aria-hidden="true">✓</span>
+        </button>
+      ))}
     </div>
-    <noscript><p class="empty">Enable JavaScript to filter characters and apply combinations. The full eligible rosters and leading Alpha combinations are shown below.</p></noscript>
-    <div class="tracks-grid">
+    <div class="tracks-grid" id="track-filters">
       {data.tracks.map(track => {
         const pool = eligibleCharacters(data.characters, track.id);
         return (
@@ -63,41 +102,6 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
     </div>
     <p class="footnote">This is an eligibility pool, not your personal collection. Points shown are requirement bonuses per battle; kill and clear bonuses are excluded.</p>
   </section>
-
-  <section class="planner-section combinations-section" aria-labelledby="combinations-heading">
-    <div class="section-heading">
-      <h2 id="combinations-heading">High Points Combinations</h2>
-      <label data-interactive hidden>Track
-        <select data-combo-track aria-label="High Points Combinations track">
-          {data.tracks.map(track => <option value={track.id}>{track.name}</option>)}
-        </select>
-      </label>
-    </div>
-    <p class="intro">Find high-scoring combinations of requirements shared by at least three characters.</p>
-    <p class="sr-only" data-combo-status role="status" aria-live="polite">{combinations.length} Alpha combinations</p>
-    <div class="combinations-grid" data-combinations>
-      {combinations.map(combination => (
-        <article class="combination">
-          <div class="combo-score"><strong>{combination.points}</strong><span>bonus points / battle</span></div>
-          <h3>{combination.requirements.map(requirement => requirement.label).join(' + ')}</h3>
-          <p class="combo-count">{combination.characters.length} eligible characters</p>
-          {combination.characters.length <= 10 ? (
-            <ul class="character-grid combo-character-grid">
-              {combination.characters.map(character => (
-                <li title={`${character.name} · ${character.faction}`}>
-                  <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
-                  <span>{character.name}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p class="combo-names">{combination.characters.map(character => character.name).join(', ')}</p>
-          )}
-          <button type="button" data-use-combo={combination.requirements.map(requirement => requirement.id).join(' ')} data-interactive hidden>Use these {combination.requirements.length} filters</button>
-        </article>
-      ))}
-    </div>
-  </section>
 </div>
 
 <script>
@@ -105,9 +109,20 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
 
   document.querySelectorAll<HTMLElement>('[data-lre-planner]').forEach(planner => {
     const data: LrePlannerData = JSON.parse(planner.querySelector('[data-planner-data]')!.textContent!);
-    const comboTrack = planner.querySelector<HTMLSelectElement>('[data-combo-track]')!;
+    const trackButtons = [...planner.querySelectorAll<HTMLButtonElement>('[data-select-track]')];
+    let selectedTrackId = data.tracks[0].id;
     const comboGrid = planner.querySelector<HTMLElement>('[data-combinations]')!;
+    const trackGrid = planner.querySelector<HTMLElement>('#track-filters')!;
     const trackCards = [...planner.querySelectorAll<HTMLElement>('[data-track]')];
+
+    function selectTrack(trackId: string) {
+      selectedTrackId = trackId;
+      trackButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.selectTrack === trackId));
+      });
+      trackGrid.dataset.activeTrack = trackId;
+      trackCards.forEach(card => { card.hidden = card.dataset.track !== trackId; });
+    }
 
     function updateTrack(card: HTMLElement) {
       const track = data.tracks.find(track => track.id === card.dataset.track)!;
@@ -134,7 +149,7 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
     };
 
     function renderCombinations() {
-      const track = data.tracks.find(track => track.id === comboTrack.value)!;
+      const track = data.tracks.find(track => track.id === selectedTrackId)!;
       const combinations = highPointsCombinations(data.characters, track);
       const fragment = document.createDocumentFragment();
       for (const combination of combinations) {
@@ -175,23 +190,30 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
 
     planner.querySelectorAll<HTMLElement>('[data-interactive]').forEach(control => { control.hidden = false; });
     planner.querySelectorAll<HTMLFieldSetElement>('fieldset').forEach(fieldset => { fieldset.disabled = false; });
+    selectTrack(selectedTrackId);
     trackCards.forEach(card => {
       card.addEventListener('change', () => updateTrack(card));
       card.querySelector('[data-clear-track]')!.addEventListener('click', () => resetTrack(card));
     });
-    planner.querySelector('[data-reset-all]')!.addEventListener('click', () => {
-      trackCards.forEach(resetTrack);
+    trackButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.dataset.selectTrack === selectedTrackId) return;
+        const buttonTop = button.getBoundingClientRect().top;
+        selectTrack(button.dataset.selectTrack!);
+        renderCombinations();
+        // Updating combinations above the lower selector must not move it out of view.
+        window.scrollBy({ top: button.getBoundingClientRect().top - buttonTop, behavior: 'instant' });
+      });
     });
-    comboTrack.addEventListener('change', renderCombinations);
     comboGrid.addEventListener('click', event => {
       const button = (event.target as Element).closest<HTMLButtonElement>('[data-use-combo]');
       if (!button) return;
-      const card = trackCards.find(card => card.dataset.track === comboTrack.value)!;
+      const card = trackCards.find(card => card.dataset.track === selectedTrackId)!;
       const selected = new Set(button.dataset.useCombo!.split(' '));
       card.querySelectorAll<HTMLInputElement>('input').forEach(input => { input.checked = selected.has(input.value); });
       updateTrack(card);
       card.querySelector<HTMLElement>('h3')!.focus({ preventScroll: true });
-      card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+      trackGrid.closest('section')!.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
     });
   });
 </script>
@@ -199,19 +221,21 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
 <style is:global>
   .lre-planner { --planner-gold: #d4af37; color: #f5f5f5; }
   .lre-planner [hidden] { display: none !important; }
-  .lre-planner .planner-section { margin-bottom: 4rem; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; }
+  .lre-planner .planner-section { margin-bottom: 4rem; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; scroll-margin-top: 6rem; }
   .lre-planner h2 { margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid #333; color: var(--planner-gold); font-size: 1.5rem; }
   .lre-planner .intro { color: #ccc; line-height: 1.7; margin: 0 0 .8rem; }
   .lre-planner .footnote { color: #aaa; font-size: .8rem; line-height: 1.65; }
   .lre-planner .footnote:last-child { margin-bottom: 0; }
-  .lre-planner .planner-controls { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem; }
   .lre-planner label { font-size: .85rem; }
-  .lre-planner select, .lre-planner button { font: inherit; color: #f5f5f5; background: #121212; border: 1px solid #555; border-radius: 7px; padding: .7rem .85rem; box-sizing: border-box; }
+  .lre-planner button { font: inherit; color: #f5f5f5; background: #121212; border: 1px solid #555; border-radius: 7px; padding: .7rem .85rem; box-sizing: border-box; }
   .lre-planner button { cursor: pointer; color: var(--planner-gold); font-size: .82rem; min-height: 44px; }
   .lre-planner button:hover { background: #302b1b; border-color: var(--planner-gold); }
-  .lre-planner :is(button, input, select, .roster-scroll, h3):focus-visible { outline: 2px solid var(--planner-gold); outline-offset: 3px; }
+  .lre-planner :is(button, input, .roster-scroll, h3):focus-visible { outline: 2px solid var(--planner-gold); outline-offset: 3px; }
   .lre-planner .tracks-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-  .lre-planner .track { --track-accent: #80cbc4; min-width: 0; border: 1px solid #444; border-top: 4px solid var(--track-accent); border-radius: 10px; background: #151515; overflow: hidden; scroll-margin-top: 6rem; }
+  .lre-planner .tracks-grid[data-active-track] { grid-template-columns: 1fr; }
+  .lre-planner .tracks-grid[data-active-track] .character-grid { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
+  .lre-planner .track { min-width: 0; border: 1px solid #444; border-top: 4px solid var(--track-accent); border-radius: 10px; background: #151515; overflow: hidden; scroll-margin-top: 6rem; }
+  .lre-planner .track-alpha { --track-accent: #80cbc4; }
   .lre-planner .track-beta { --track-accent: #f0937f; }
   .lre-planner .track-gamma { --track-accent: #b3d481; }
   .lre-planner .track-heading { padding: 1rem; background: #202222; }
@@ -236,9 +260,12 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
   .lre-planner .character-grid img { display: block; width: min(60px, 100%); height: auto; aspect-ratio: 1; object-fit: contain; }
   .lre-planner .character-grid span { font-size: .69rem; line-height: 1.35; overflow-wrap: anywhere; }
   .lre-planner .empty { padding: 1rem; color: #ccc; line-height: 1.6; font-size: .85rem; }
-  .lre-planner .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #333; margin-bottom: 1rem; padding-bottom: .7rem; }
-  .lre-planner .section-heading h2 { border: 0; margin: 0; padding: 0; }
-  .lre-planner .section-heading label { display: flex; align-items: center; gap: .6rem; }
+  .lre-planner .track-selector { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0; }
+  .lre-planner .track-selector-button { position: relative; min-width: 0; min-height: 52px; padding: .75rem .5rem; border: 2px solid var(--track-accent); border-radius: 999px; background: color-mix(in srgb, var(--track-accent) 12%, #121212); color: var(--track-accent); font-size: 1rem; font-weight: 700; transition: background-color .2s ease, box-shadow .2s ease; }
+  .lre-planner .track-selector-button:hover { border-color: var(--track-accent); background: color-mix(in srgb, var(--track-accent) 22%, #121212); }
+  .lre-planner .track-selector-button[aria-pressed="true"] { border-color: var(--planner-gold); box-shadow: 0 0 0 2px var(--planner-gold), 0 0 16px #d4af3740; background: color-mix(in srgb, var(--track-accent) 22%, #121212); }
+  .lre-planner .track-selected-mark { position: absolute; top: -.5rem; right: .5rem; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--planner-gold); color: #121212; font-size: .8rem; visibility: hidden; }
+  .lre-planner [aria-pressed="true"] .track-selected-mark { visibility: visible; }
   .lre-planner .combinations-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
   .lre-planner .combination { border: 1px solid #444; border-radius: 9px; background: #151515; padding: 1.1rem; display: flex; flex-direction: column; align-items: flex-start; }
   .lre-planner .combo-score { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
@@ -258,8 +285,9 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
   }
   @media (max-width: 700px) {
     .lre-planner .planner-section { padding: 1rem; margin-bottom: 3rem; }
-    .lre-planner .planner-controls { align-items: stretch; flex-direction: column; }
-    .lre-planner .section-heading { flex-direction: column; align-items: flex-start; }
+    .lre-planner .track-selector { gap: .6rem; }
+    .lre-planner .track-selector-button { font-size: .9rem; }
     .lre-planner .combinations-grid { grid-template-columns: 1fr; }
   }
+  @media (prefers-reduced-motion: reduce) { .lre-planner .track-selector-button { transition: none; } }
 </style>
