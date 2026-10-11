@@ -21,8 +21,8 @@
     "hero_4": "Abaddon",
     "hero_5": "Archi",
     "mow": "Zkar",
-    "replay_count": 12,
-    "average_damage": 1118666.67,
+    "replay_count": 13,
+    "average_damage": 1129538.46,
     "max_damage": 1550000
   },
   {
@@ -34,8 +34,8 @@
     "hero_4": "Kharn",
     "hero_5": "Dante",
     "mow": "Biovore",
-    "replay_count": 100,
-    "average_damage": 1283760.59,
+    "replay_count": 101,
+    "average_damage": 1286099.59,
     "max_damage": 1900000
   },
   {
@@ -60,8 +60,8 @@
     "hero_4": "Boss",
     "hero_5": "Vit",
     "mow": "Biovore",
-    "replay_count": 51,
-    "average_damage": 1258235.29,
+    "replay_count": 52,
+    "average_damage": 1260115.38,
     "max_damage": 1890000
   },
   {
@@ -99,8 +99,8 @@
     "hero_4": "Darkstrider",
     "hero_5": "Lhykis",
     "mow": "PBC",
-    "replay_count": 9,
-    "average_damage": 2128888.89,
+    "replay_count": 10,
+    "average_damage": 2112000.0,
     "max_damage": 2700000
   },
   {
@@ -138,8 +138,8 @@
     "hero_4": "Aesoth",
     "hero_5": "Dante",
     "mow": "Biovore",
-    "replay_count": 27,
-    "average_damage": 983814.81,
+    "replay_count": 29,
+    "average_damage": 983655.17,
     "max_damage": 1210000
   },
   {
@@ -216,8 +216,8 @@
     "hero_4": "Ammuk",
     "hero_5": "Traj",
     "mow": "Reanimator",
-    "replay_count": 3,
-    "average_damage": 1243333.33,
+    "replay_count": 4,
+    "average_damage": 1274217.25,
     "max_damage": 1480000
   },
   {
@@ -229,8 +229,8 @@
     "hero_4": "Boss",
     "hero_5": "Aesoth",
     "mow": "Biovore",
-    "replay_count": 18,
-    "average_damage": 1035277.78,
+    "replay_count": 20,
+    "average_damage": 1056900.0,
     "max_damage": 1470000
   },
   {

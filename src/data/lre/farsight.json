@@ -1,5 +1,5 @@
 {
-  "characterBuild": "1.42.166",
+  "characterBuild": "1.43.130",
   "tracks": [
     {
       "id": "alpha",
@@ -385,8 +385,7 @@
         ],
         "gamma": [
           "gamma_0",
-          "gamma_2",
-          "gamma_3"
+          "gamma_2"
         ]
       }
     },
@@ -665,6 +664,22 @@
         "gamma": [
           "gamma_0"
         ]
+      }
+    },
+    {
+      "id": "lostaBile",
+      "name": "Fabius Bile",
+      "faction": "The Lost and the Damned",
+      "portrait": "/images/lre/portraits/lostaBile.png",
+      "eligibility": {
+        "alpha": [
+          "alpha_0"
+        ],
+        "beta": [
+          "beta_2",
+          "beta_4"
+        ],
+        "gamma": null
       }
     },
     {
@@ -1942,6 +1957,19 @@
         "beta": [
           "beta_4"
         ],
+        "gamma": null
+      }
+    },
+    {
+      "id": "orksWeirdboy",
+      "name": "Zapspitta",
+      "faction": "Orks",
+      "portrait": "/images/lre/portraits/orksWeirdboy.png",
+      "eligibility": {
+        "alpha": [
+          "alpha_0"
+        ],
+        "beta": null,
         "gamma": null
       }
     }

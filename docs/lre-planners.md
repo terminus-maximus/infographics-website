@@ -19,16 +19,16 @@ The importer reads the schema-version-2 index once, resolves paths relative to i
 
 This is a build-time adapter to Fabius's existing compact planner contract, rather than a public mirror of the full export. The SQLite database, raw evidence, absolute source paths, alternate ability modes, Marketing roster, battle tables and coverage rankings are not copied to the website. Existing hero portraits are reused by game unit ID; new portraits resolve against the index's `asset_base` and are checked against the generation manifest before copying. `src/data/lre/sources.json` records generation, event and character builds, source status and checksums for maintenance; it is not loaded into the planner.
 
-The October 7, 2026 import uses generation `3f34a218c37c08ed2202`:
+The October 11, 2026 import uses generation `89eccc64132a0d6679bb`:
 
 | Guide | Event configuration | Character roster |
 | --- | --- | --- |
-| Farsight | Production 1.42.166 | Production 1.42.166, 117 characters |
-| Uthar | Production 1.42.166 | Production 1.42.166, 117 characters |
-| Lysander | Production 1.42.166 | Production 1.42.166, 117 characters |
-| Fabius Bile | Marketing preview 1.43.94 | Production 1.42.166, 117 characters |
+| Farsight | Production 1.43.130 | Production 1.43.130, 119 characters |
+| Uthar | Production 1.43.130 | Production 1.43.130, 119 characters |
+| Lysander | Production 1.43.130 | Production 1.43.130, 119 characters |
+| Fabius Bile | Production 1.43.130 | Production 1.43.130, 119 characters |
 
-Fabius's requirements, scores and character eligibility are unchanged from the previously approved report. Regular eligibility includes unlocked active/passive abilities and excludes relic effects. Event dates are not imported or inferred from this snapshot.
+This refresh uses the installed production application's embedded GameConfig and adds Fabius Bile and Zapspitta, including their round portraits, to every planner. Nubari's LRE portrait was also updated after confirming that its previous bytes matched the prior generation. Fabius's requirements and scores are unchanged from the Marketing preview; its event configuration now comes from production. Existing characters retain their Fabius and Lysander eligibility. Azrael no longer qualifies for Farsight Gamma's and Uthar Gamma's “Max 1 hits” requirement, as recorded in the refreshed backend. Regular eligibility includes unlocked active/passive abilities and excludes relic effects. Event dates are not imported or inferred from this snapshot.
 
 Faction bans come from `banned_faction_ids` and are checked against each character's precomputed `allowed` flag. Restriction text combines `excluded_alliances` with the localized names of `additional_banned_faction_ids`. Farsight Gamma therefore says “No Chaos or Orks characters,” and excludes both groups even when no filters are checked. Do not use the nullable legacy `excluded_alliance` field or infer bans from lane order.
 
@@ -36,7 +36,9 @@ The current interface shows requirement bonuses per battle, excluding kill/clear
 
 ## Verification
 
-`check:lre` checks all four built layouts, collapsed details, descending requirement order, portraits, restriction text, scores and combination ordering. With the index argument it also compares all 384 current filter states and every qualifying intersection against the backend, including Farsight's additional Ork ban. It checks that a variable score schedule cannot silently import. The independent Fabius check retains its known pool counts and public navigation/discovery assertions. Its optional frozen HTML-report argument still supports historical reconciliation; use `import:lre` for current imports.
+`check:lre` checks all four built layouts, collapsed details, descending requirement order, portraits, restriction text, scores and combination ordering. With the index argument it also compares all 384 current filter states and every qualifying intersection against the backend, including Farsight's additional Ork ban. It checks that a variable score schedule cannot silently import. The independent Fabius check pins pool counts for the reviewed 1.42.166 and 1.43.130 snapshots and retains its public navigation/discovery assertions. Its optional frozen HTML-report argument is only for a matching historical dataset; use `import:lre` for current imports.
+
+October 11 refresh validation: all 49 pages build, all 384 filter states and qualifying intersections reconcile to the new backend, and the Fabius fixture and navigation checks pass. The Fabius, Zapspitta and Nubari portrait files in both `public/` and `dist/` match the new generation byte for byte. These changes are prepared locally; this refresh did not deploy the site.
 
 The October 7 production build generates 49 pages. Repository-wide `astro check` still reports 61 existing errors in other/shared site code; the LRE routes, shared guide, planner and planner types have no diagnostics.
 

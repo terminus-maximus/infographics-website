@@ -12,10 +12,33 @@ const dataText = read('src/data/lre/fabius.json');
 const data = JSON.parse(dataText);
 const page = read('dist/lre/fabius/index.html');
 
-assert.equal(data.characterBuild, '1.42.166');
-assert.equal(data.characters.length, 117);
-assert.equal(new Set(data.characters.map(character => character.id)).size, 117);
-assert(!/1\.43|marketing|orksWeirdboy|lostaBile|\/Users\/|file:\/\//i.test(dataText));
+// Keep the original preview-era fixture as well as the reviewed production refresh.
+const fixtures = {
+  '1.42.166': { characters: 117, pools: [
+    { allowed: 91, counts: [5, 8, 13, 41, 74] },
+    { allowed: 79, counts: [10, 59, 8, 9, 45] },
+    { allowed: 64, counts: [12, 7, 12, 8, 49] },
+  ] },
+  '1.43.130': { characters: 119, pools: [
+    { allowed: 92, counts: [5, 8, 13, 42, 75] },
+    { allowed: 80, counts: [10, 60, 8, 9, 46] },
+    { allowed: 66, counts: [12, 7, 12, 8, 51] },
+  ] },
+};
+const fixture = fixtures[data.characterBuild];
+assert(fixture, `Review pool expectations for character build ${data.characterBuild}`);
+assert.equal(data.characters.length, fixture.characters);
+assert.equal(new Set(data.characters.map(character => character.id)).size, fixture.characters);
+assert(!/marketing|\/Users\/|file:\/\//i.test(dataText));
+const sources = JSON.parse(read('src/data/lre/sources.json'));
+assert.equal(sources.events.fabius.characterBuild, data.characterBuild);
+if (data.characterBuild === '1.43.130') {
+  assert.equal(sources.events.fabius.eventBuild, '1.43.130');
+  assert.equal(sources.events.fabius.eventSource, 'production');
+  for (const id of ['lostaBile', 'orksWeirdboy']) assert(data.characters.some(unit => unit.id === id));
+} else {
+  assert(!data.characters.some(unit => ['lostaBile', 'orksWeirdboy'].includes(unit.id)));
+}
 assert(!/Battle points<|Rules &amp; evidence|Character coverage<|All heroes ranked|Useful requirement intersections|1\.43\.94/i.test(page));
 assert(!/<meta name="robots"[^>]*noindex/.test(page), 'The public guide must allow indexing');
 assert.match(page, /High Points Combinations/);
@@ -24,11 +47,7 @@ assert.match(page, /href="\/images\/fabius-lre.png"/);
 assert(page.indexOf('Fabius Bile LRE Basics') < page.indexOf('id="tracks-heading"'));
 for (const unit of data.characters) assert(existsSync(resolve(root, `public${unit.portrait}`)), `Missing portrait: ${unit.name}`);
 
-const expected = [
-  { allowed: 91, counts: [5, 8, 13, 41, 74] },
-  { allowed: 79, counts: [10, 59, 8, 9, 45] },
-  { allowed: 64, counts: [12, 7, 12, 8, 49] },
-];
+const expected = fixture.pools;
 for (const [index, track] of data.tracks.entries()) {
   assert.equal(eligibleCharacters(data.characters, track.id).length, expected[index].allowed);
   assert.deepEqual(track.requirements.map(requirement => eligibleCharacters(data.characters, track.id, [requirement.id]).length), expected[index].counts);
@@ -47,25 +66,26 @@ assert(!eligibleCharacters(data.characters, 'alpha').some(character => character
 
 // Public promotion: global navigation, ordered landing cards and recommendation eligibility.
 const htmlFiles = readdirSync(resolve(root, 'dist'), { recursive: true }).filter(path => path.endsWith('index.html'));
+const lreOrder = ['/lre/fabius', '/lre/farsight', '/lre/lysander', '/lre/uthar'];
 let navigationPages = 0;
 for (const path of htmlFiles) {
   const html = read(`dist/${path}`);
   if (/<meta[^>]*http-equiv="refresh"/i.test(html)) continue; // Redirect documents have no navigation.
   const menu = html.match(/id="lre-menu"[^>]*>([\s\S]*?)<\/div>/)?.[1];
   assert(menu?.includes('href="/lre/fabius"'), `Missing global navigation in ${path}`);
-  assert(menu.indexOf('/lre/uthar') < menu.indexOf('/lre/fabius'), `Wrong LRE navigation order in ${path}`);
+  assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match => match[1]), lreOrder, `Wrong LRE navigation order in ${path}`);
   navigationPages++;
 }
 const home = read('dist/index.html');
 const homeSections = [...home.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)].map(match => match[1]);
-assert(homeSections[1].includes('href="/lre/uthar"'));
-assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[2]), 'Fabius must follow Uthar as the third homepage block, including the hero');
+assert(homeSections[1].includes('href="/campaign-event"'));
+assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[2]), 'Fabius must follow Campaign Event as the third homepage block, including the hero');
 assert(homeSections[2].includes('Be ready for his first event November 8'));
 const legendarySection = homeSections.find(section => section.includes('Legendary Guides'));
 assert(legendarySection);
-const firstCardRoutes = html => [...html.matchAll(/<a class="card" href="([^"]+)"/g)].slice(0, 2).map(match => match[1]);
-assert.deepEqual(firstCardRoutes(legendarySection), ['/lre/uthar', '/lre/fabius']);
-assert.deepEqual(firstCardRoutes(read('dist/lre/index.html')), ['/lre/uthar', '/lre/fabius']);
+const cardRoutes = html => [...html.matchAll(/<a class="card" href="([^"]+)"/g)].map(match => match[1]);
+assert.deepEqual(cardRoutes(legendarySection), lreOrder);
+assert.deepEqual(cardRoutes(read('dist/lre/index.html')), lreOrder);
 assert(read('dist/lre/lysander/index.html').includes('data-recommendation-route="/lre/fabius"'));
 assert(!page.includes('data-recommendation-route="/lre/fabius"'), 'Do not recommend the guide to itself');
 
@@ -85,4 +105,4 @@ if (process.argv[2]) {
     }
   }
 }
-console.log(`Fabius checks passed: 117 local characters, 15 requirements, combinations, portraits, public indexing, homepage/LRE placement, recommendation eligibility, and navigation across ${navigationPages} pages.`);
+console.log(`Fabius checks passed: ${fixture.characters} local characters (${data.characterBuild}), 15 requirements, combinations, portraits, public indexing, homepage/LRE placement, recommendation eligibility, and navigation across ${navigationPages} pages.`);

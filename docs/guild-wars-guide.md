@@ -11,7 +11,7 @@ The local dataset builds independently of the analysis project. Normal `npm run 
 - `src/data/guild-wars/attackers.json`: sanitized generated statistics and identity/portrait references.
 - `scripts/import-guild-wars.mjs`: explicit, read-only source adaptation; validates before writing the website dataset and required portraits.
 - `scripts/check-guild-wars.mjs`: focused checks against the built pages, optionally with full source reconciliation.
-- `src/components/Header.astro`: Explore has six expandable groups: Start Here, Campaign Guides, Guild Raid, Guild Wars, Events, and LRE. Guild Wars links to its landing page with Attackers first and Defenders second.
+- `src/components/Header.astro`: Menu has six expandable groups: New Player, Campaign Guides, Guild Raid, Guild Wars, Events, and LRE. Guild Wars links to its landing page with Attackers first and Defenders second.
 - `src/pages/index.astro`: the Guild Wars card section sits between Guild Raids and Legendary Guides and uses active `guild-war` entries from the shared discovery catalog.
 - `src/data/graphics.ts`: discovery/recommendation registration. Attack and Defend are eligible for More to Explore on other pages via their WebP recommendation images. Their catalog order also puts Defend second in the home-page Guild Wars section. This repository has no sitemap generator or sitemap file to extend.
 

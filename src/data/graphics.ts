@@ -196,14 +196,6 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "raid"
     },
     {
-      title: "Uthar LRE",
-      href: "/lre/uthar",
-      description: "Be ready for the Votann Legendary on Oct 4",
-      image: "/images/uthar-lre.png",
-      thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
-      category: "legendary"
-    },
-    {
       title: "Fabius Bile LRE Guide",
       href: "/lre/fabius",
       description: "Be ready for his first event November 8",
@@ -225,6 +217,14 @@ const graphicDefinitions: GraphicDefinition[] = [
       description: "Be ready for the First Captain on Jan 17",
       image: "/images/lysander-lre.png",
       thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
+      category: "legendary"
+    },
+    {
+      title: "Uthar LRE",
+      href: "/lre/uthar",
+      description: "Be ready for the Votann Legendary on Feb 21",
+      image: "/images/uthar-lre.png",
+      thumbnail: "/images/thumbnails/uthar-lre-thumb.png",
       category: "legendary"
     },
     {

@@ -1,42 +1,42 @@
 {
   "schemaVersion": 2,
-  "generation": "3f34a218c37c08ed2202",
+  "generation": "89eccc64132a0d6679bb",
   "events": {
     "farsight": {
       "eventId": "legendary_hero_event_13",
-      "eventBuild": "1.42.166",
+      "eventBuild": "1.43.130",
       "eventSource": "production",
-      "characterBuild": "1.42.166",
+      "characterBuild": "1.43.130",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "e57657ccc4effe3dc34e3e3cbb7904db2cdd79132755e9bdae3d758e3d128a5e"
+      "sha256": "05c00fbeac79ce550d8b21453fa8e699bbe86939ae4259f2e3b219c6a6e3590a"
     },
     "uthar": {
       "eventId": "legendary_hero_event_14",
-      "eventBuild": "1.42.166",
+      "eventBuild": "1.43.130",
       "eventSource": "production",
-      "characterBuild": "1.42.166",
+      "characterBuild": "1.43.130",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "973801d9c0c84f8c891cb6e19063abd7369becf0deefb333dc279c9ed45df874"
+      "sha256": "61258dc9ab2524d04a3a700f412db7d594e05195d3ff2a9fbf61473042e831e4"
     },
     "lysander": {
       "eventId": "legendary_hero_event_15",
-      "eventBuild": "1.42.166",
+      "eventBuild": "1.43.130",
       "eventSource": "production",
-      "characterBuild": "1.42.166",
+      "characterBuild": "1.43.130",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "4439c367efa8a9dde756c79e0a78d45dc10d50646202a35b8827d712ab00ba73"
+      "sha256": "daed70cbb6139dbab31e4d8ca3035eab35dbc3af1540fef0a0d7ceb8416aa468"
     },
     "fabius": {
       "eventId": "legendary_hero_event_16",
-      "eventBuild": "1.43.94",
-      "eventSource": "marketing_preview",
-      "characterBuild": "1.42.166",
+      "eventBuild": "1.43.130",
+      "eventSource": "production",
+      "characterBuild": "1.43.130",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "71e63a21024442f5ac2bd15b9ab4d431b79050bab7e77cedbad5a1eeb2af0811"
+      "sha256": "9ac1d50957b6175339b3cacbb01219596e1dc3a9ae9c0ed2b11d8c6ad8cf1ec2"
     }
   }
 }
