@@ -69746,5 +69746,33 @@
     "hero_4":null,
     "hero_5":null,
     "MoW":null
+  },
+  {
+    "creator":"JurassicKyle",
+    "video_id":"5d8dnLX4gl4",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=5d8dnLX4gl4",
+    "published_at":"10\/11\/2026 10:09 PM",
+    "title":"L4 Cawl 748k w\/ Battlesuits & Lhykhis 40K: Tacticus #tacticus #guildraid #warhammer40k",
+    "tier_guess":"L4",
+    "tier_final":"L4",
+    "boss_guess":"Cawl",
+    "boss_final":"Cawl",
+    "damage_guess":"748000",
+    "damage_final":"748000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"10\/12\/2026 2:31 AM",
+    "notes":null,
+    "map":"Cawl_03",
+    "team_archetype":"Battlesuits",
+    "team_key":"Traj",
+    "Team (no MoW)":"Traj",
+    "Team":"Traj, FF",
+    "hero_1":"Traj",
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"FF"
   }
 ]
