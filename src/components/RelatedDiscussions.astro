@@ -1,0 +1,82 @@
+---
+import discussionData from "../data/relatedDiscussions.json";
+
+interface Props {
+  pathname?: string;
+}
+
+interface Discussion {
+  title: string;
+  label: string;
+  url: string;
+  publishedAt: number;
+}
+
+const data: {
+  posts: Record<string, Discussion>;
+  pages: Record<string, string[]>;
+} = discussionData;
+const pathname = Astro.props.pathname || Astro.url.pathname;
+const route = `/${pathname.split("/").filter(Boolean).join("/")}/`;
+const discussions = [...new Set(data.pages[route] || [])]
+  .map((id) => {
+    const post = data.posts[id];
+    if (!post) throw new Error(`Related Discussions: missing post ${id} for ${route}`);
+    return { id, ...post };
+  })
+  .sort((a, b) => b.publishedAt - a.publishedAt || a.id.localeCompare(b.id))
+  .slice(0, 5);
+---
+
+{discussions.length > 0 && (
+  <section class="related-discussions" aria-labelledby="related-discussions-heading">
+    <h2 id="related-discussions-heading">Related Discussions</h2>
+    <ul>
+      {discussions.map((discussion) => (
+        <li>
+          <a href={discussion.url} title={discussion.title} target="_blank" rel="noopener noreferrer">
+            {discussion.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .related-discussions {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    margin-top: 4rem;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    color: #cccccc;
+    line-height: 1.7;
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  a {
+    color: #d4af37;
+    overflow-wrap: anywhere;
+  }
+
+  a:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 700px) {
+    .related-discussions { padding: 1rem; }
+  }
+</style>

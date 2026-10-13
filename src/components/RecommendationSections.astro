@@ -1,5 +1,6 @@
 ---
 import RequiredHeroIcons from "./campaign/RequiredHeroIcons.astro";
+import RelatedDiscussions from "./RelatedDiscussions.astro";
 import {
   getMoreToExploreCandidates,
   getRelatedGuides,
@@ -14,6 +15,8 @@ const relatedGuides = getRelatedGuides(pathname);
 const moreToExplore = getMoreToExploreCandidates(pathname, relatedGuides);
 const moreToExploreCount = relatedGuides.length ? 3 : 6;
 ---
+
+<RelatedDiscussions pathname={pathname} />
 
 {relatedGuides.length > 0 && (
   <section id="related-guides" class="recommendation-section" data-recommendation-section="related-guides">

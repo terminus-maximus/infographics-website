@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-13",
+  "source_revision": "ba05ba908872404a68e1b2925cbb354416a6a1ca",
+  "applied_to": "local working tree",
+  "routes_checked": 49,
+  "discussion_pages": 36,
+  "discussion_links": 58,
+  "added_links": 43,
+  "retained_links": 15,
+  "distinct_posts": 51,
+  "remaining_confirmed_missing": 0,
+  "checks": [
+    "Exact audit selections and labels on every built route",
+    "At most five distinct IDs per page",
+    "Descending verified Reddit publication timestamps",
+    "Only verified Terminus_Maximus submissions",
+    "One Related Discussions heading per populated page, no rendered Other Resources headings",
+    "All five ambiguous page/post associations remain unadded",
+    "All existing discussion links retained",
+    "Guild War editorial community citations unchanged"
+  ],
+  "build": "passed",
+  "build_warnings": [
+    "Existing Season 103 missing replay IDs: Zz5kvJevkNM, vSD_4HZtQUQ"
+  ],
+  "ambiguous_associations": {
+    "/guild-raid/boss-meta/": [
+      "1jzw9ml",
+      "1ibdnnb",
+      "1haefd7",
+      "1fibqh1"
+    ],
+    "/guild-raid/next-season/": [
+      "1wxjgky"
+    ]
+  },
+  "pages": [
+    {
+      "route": "/about/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/beginner-guide/",
+      "count": 3,
+      "ids": [
+        "1tx0quk",
+        "1ppbc4g",
+        "1lesd58"
+      ]
+    },
+    {
+      "route": "/campaign-event/",
+      "count": 5,
+      "ids": [
+        "1x3rf3p",
+        "1w9xvm1",
+        "1vdlzid",
+        "1uiymuh",
+        "1tnd7z4"
+      ]
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "count": 1,
+      "ids": [
+        "1vo9iqb"
+      ]
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "count": 1,
+      "ids": [
+        "1vo9iqb"
+      ]
+    },
+    {
+      "route": "/campaigns/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "count": 1,
+      "ids": [
+        "1vo9iqb"
+      ]
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "count": 1,
+      "ids": [
+        "1vo9iqb"
+      ]
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "count": 1,
+      "ids": [
+        "1wix7pt"
+      ]
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "count": 1,
+      "ids": [
+        "1wix7pt"
+      ]
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "count": 1,
+      "ids": [
+        "1wix7pt"
+      ]
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "count": 1,
+      "ids": [
+        "1wix7pt"
+      ]
+    },
+    {
+      "route": "/elite-campaigns/",
+      "count": 3,
+      "ids": [
+        "1ur2q4w",
+        "1pzqzz1",
+        "1lijpn8"
+      ]
+    },
+    {
+      "route": "/event-campaign/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/events/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/feedback/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/guild-raid/archive/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "count": 2,
+      "ids": [
+        "1wqy5s1",
+        "1uwat65"
+      ]
+    },
+    {
+      "route": "/guild-raid/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/guild-raid/next-season/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/guild-raid/s097/",
+      "count": 1,
+      "ids": [
+        "1s0rwsl"
+      ]
+    },
+    {
+      "route": "/guild-raid/s098/",
+      "count": 1,
+      "ids": [
+        "1sd8xns"
+      ]
+    },
+    {
+      "route": "/guild-raid/s099/",
+      "count": 1,
+      "ids": [
+        "1spy65o"
+      ]
+    },
+    {
+      "route": "/guild-raid/s100/",
+      "count": 1,
+      "ids": [
+        "1t2w8a4"
+      ]
+    },
+    {
+      "route": "/guild-raid/s101/",
+      "count": 1,
+      "ids": [
+        "1tfvdri"
+      ]
+    },
+    {
+      "route": "/guild-raid/s102/",
+      "count": 1,
+      "ids": [
+        "1tt052a"
+      ]
+    },
+    {
+      "route": "/guild-raid/s103/",
+      "count": 1,
+      "ids": [
+        "1u3cbsv"
+      ]
+    },
+    {
+      "route": "/guild-raid/s104/",
+      "count": 1,
+      "ids": [
+        "1uha9ct"
+      ]
+    },
+    {
+      "route": "/guild-raid/s105/",
+      "count": 1,
+      "ids": [
+        "1usu6mq"
+      ]
+    },
+    {
+      "route": "/guild-raid/s106/",
+      "count": 1,
+      "ids": [
+        "1v6es5a"
+      ]
+    },
+    {
+      "route": "/guild-raid/s107/",
+      "count": 1,
+      "ids": [
+        "1vj7woi"
+      ]
+    },
+    {
+      "route": "/guild-raid/s108/",
+      "count": 2,
+      "ids": [
+        "1vx6y7b",
+        "1vwdef8"
+      ]
+    },
+    {
+      "route": "/guild-raid/s109/",
+      "count": 1,
+      "ids": [
+        "1w870y1"
+      ]
+    },
+    {
+      "route": "/guild-raid/s110/",
+      "count": 1,
+      "ids": [
+        "1wlm2us"
+      ]
+    },
+    {
+      "route": "/guild-raid/s111/",
+      "count": 1,
+      "ids": [
+        "1wxjgky"
+      ]
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "count": 1,
+      "ids": [
+        "1wg650s"
+      ]
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "count": 1,
+      "ids": [
+        "1wg650s"
+      ]
+    },
+    {
+      "route": "/guild-wars/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/hre/",
+      "count": 5,
+      "ids": [
+        "1wcnawc",
+        "1vgi111",
+        "1ukuyms",
+        "1tolrbn",
+        "1sszsx4"
+      ]
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/incursion-mow/",
+      "count": 5,
+      "ids": [
+        "1wp50n4",
+        "1vtsem0",
+        "1uz5c3s",
+        "1u0gkl6",
+        "1t5t52f"
+      ]
+    },
+    {
+      "route": "/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/lre/fabius/",
+      "count": 1,
+      "ids": [
+        "1x007bu"
+      ]
+    },
+    {
+      "route": "/lre/farsight/",
+      "count": 2,
+      "ids": [
+        "1tisa6s",
+        "1p975vn"
+      ]
+    },
+    {
+      "route": "/lre/",
+      "count": 0,
+      "ids": []
+    },
+    {
+      "route": "/lre/lucius/",
+      "count": 3,
+      "ids": [
+        "1ufh23g",
+        "1qqnja5",
+        "1lzaffe"
+      ]
+    },
+    {
+      "route": "/lre/lysander/",
+      "count": 1,
+      "ids": [
+        "1v93gy1"
+      ]
+    },
+    {
+      "route": "/lre/uthar/",
+      "count": 2,
+      "ids": [
+        "1wb28nq",
+        "1rjwv33"
+      ]
+    },
+    {
+      "route": "/replay-library/",
+      "count": 0,
+      "ids": []
+    }
+  ],
+  "visual_checks": [
+    "Campaign Event: five dated links rendered under Related Discussions",
+    "Indomitus: new section rendered before Related Guides"
+  ],
+  "preview_screenshot": "/Users/danfoster01/.codex/visualizations/2026/10/13/01a13731-53c1-79d3-9c52-2b824e039b75/related-discussions-campaign.jpg"
+}

@@ -1,0 +1,11 @@
+{
+  "1sd8xns": {
+    "routes": ["/guild-raid/s098/"],
+    "reason": "Reddit post body explicitly states Season 98 runs Wed April 8 to Mon April 20; the title omits the season number."
+  },
+  "1wxjgky": {
+    "routes": ["/guild-raid/s111/"],
+    "review_routes": ["/guild-raid/next-season/"],
+    "reason": "Main post and linked replay page concern Season 111. Its fourth graphic previews Season 112, but the post warns that the lineup is not final. Review preview relevance before linking it to the rolling next-season page."
+  }
+}
