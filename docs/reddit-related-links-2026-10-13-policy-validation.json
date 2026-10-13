@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-10-13",
+  "timezone": "America/Los_Angeles",
+  "max_age_months": 18,
+  "inclusive_cutoff": "2025-04-13",
+  "closed_candidates": 5,
+  "pending_ambiguous_matches": 0,
+  "confirmed_missing_links": 0,
+  "expired_current_links": 0,
+  "current_links": 58,
+  "pages_with_links": 36,
+  "built_routes_verified": 49,
+  "oldest_current_publication": "2025-06-18",
+  "build": "passed",
+  "checks": [
+    "Calendar-month cutoff inclusive at local midnight",
+    "Month-end and leap-year clamping",
+    "America/Los_Angeles timezone",
+    "Stale evidence snapshot cannot change run date",
+    "Assignments cannot bypass age limit",
+    "Expired verified links are retirements, not unresolved URLs",
+    "Rejection applies to a page/post pair, preserving valid matches on other pages",
+    "Current rendered lists unchanged from the verified 58-link selection"
+  ],
+  "enforcement": "During audits and site builds; static pages update on rebuild"
+}

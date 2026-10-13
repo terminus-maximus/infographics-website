@@ -2,7 +2,7 @@
 
 Confirmed Reddit discussions are maintained in `src/data/relatedDiscussions.json`. `posts` contains publication timestamps, labels, titles, and canonical URLs. `pages` maps each canonical route to explicitly reviewed post IDs. Update this data for future additions; page-local `resources` arrays are reserved for other resources.
 
-`RelatedDiscussions.astro` is rendered before Related Guides by the shared `RecommendationSections.astro`. It deduplicates post IDs, sorts by publication timestamp descending, and displays at most five. Pages without confirmed assignments render no discussion section. Labels use posting dates in America/Los_Angeles; HRE labels also identify the character.
+`RelatedDiscussions.astro` is rendered before Related Guides by the shared `RecommendationSections.astro`. It excludes posts older than 18 calendar months and rejected page/post pairs, deduplicates post IDs, sorts by publication timestamp descending, and displays at most five. Pages without confirmed assignments render no discussion section. Labels use posting dates in America/Los_Angeles; HRE labels also identify the character.
 
 ## October 13, 2026 application
 
@@ -13,25 +13,19 @@ Confirmed Reddit discussions are maintained in `src/data/relatedDiscussions.json
 - No specific Biovore post was found, so that page has no discussion section.
 - Validation covers the local build; it does not verify the deployed site.
 
-## Ambiguous matches for Dan to review
+## Age limit and closed candidates — October 13, 2026
 
-These five page/post associations have **not** been applied. Authorship and dates are verified; topic relevance is the open question.
+Only discussions published within the last **18 calendar months** are eligible. The cutoff uses the run/build date in America/Los_Angeles, subtracts 18 months with month-end clamping, and includes posts published on the cutoff date. On October 13, 2026, that means **April 13, 2025 onward**. Publication dates, not dates of comments or events, determine age.
 
-### Guild Raid Boss Meta
+`src/data/relatedDiscussionPolicy.json` is the shared policy for the website and audit helper. The website enforces it at build time through `src/lib/relatedDiscussions.mjs`; the static output updates on the next build. The audit helper uses today's client date (or an explicit `--as-of` date), even when reading an older evidence snapshot. Apply eligibility before the newest-five selection, so an expired link never occupies a slot or appears as a review suggestion.
 
-The two explicit Boss Meta guide posts from September and July 2026 have been added. Decide whether the earlier general raid-meta overviews belong here as historical discussions:
+Dan abandoned all five initially ambiguous page/post matches. They are recorded as persistent rejections and must not be proposed again:
 
-| Posted | Candidate | Why review is needed |
-| --- | --- | --- |
-| Apr 15, 2025 | [Raid Meta, April 2025](https://www.reddit.com/r/WH40KTacticus/comments/1jzw9ml/raid_meta_april_2025/) | Broad raid-meta overview; confirm its content fits the current boss-by-boss guide. |
-| Jan 27, 2025 | [Raid Meta — Overview & Best Teams, according to PoH Word Bearers](https://www.reddit.com/r/WH40KTacticus/comments/1ibdnnb/raid_meta_overview_best_teams_according_to_poh/) | Earlier PoH overview; confirm it is useful history for this page's topic. |
-| Dec 9, 2024 | [Guild Raid Meta, December 2024](https://www.reddit.com/r/WH40KTacticus/comments/1haefd7/guild_raid_meta_december_2024_according_to_poh/) | Earlier PoH framework; same relevance question. |
-| Sept 16, 2024 | [Guild Raid Meta, Season 57](https://www.reddit.com/r/WH40KTacticus/comments/1fibqh1/guild_raid_meta_season_57_according_to_poh_word/) | Season-labelled historical meta overview; confirm it belongs with Boss Meta rather than a season guide. |
+- Boss Meta: `1jzw9ml`, `1ibdnnb`, `1haefd7`, and `1fibqh1`.
+- Next Season: `1wxjgky`. This is a rejected association only; the same post remains a confirmed discussion on the Season 111 page.
 
-If all four qualify, the newest three would join the two confirmed 2026 discussions; the September 2024 post would remain outside the five-link cap.
+There are **no pending ambiguous matches** from the initial audit. Explicit rejections also cover candidates that have not yet aged out. The original dated audit and its evidence remain a historical snapshot, superseded by this policy for future selections.
 
-### Next Season (currently Season 112)
+All 58 published links across 36 pages remain within the age limit on October 13, 2026; the oldest is June 18, 2025. No existing published discussion needs removal today.
 
-[Guild Raid Guide Season 111 — who has missed MAGNUS?](https://www.reddit.com/r/WH40KTacticus/comments/1wxjgky/infographic_guild_raid_guide_season_111_who_has/) — posted **Oct 4, 2026**.
-
-This is linked on the Season 111 page. Its fourth image previews Season 112, but the post explicitly says the lineup was provisional pending the patch. Decide whether that preview is useful on the rolling Next Season page. No link has been added there, and the target season must be rechecked before any later approval is applied.
+Validation: `node scripts/check-related-discussions.mjs`, the Python audit helper with `--as-of 2026-10-13`, and `npm run build`.

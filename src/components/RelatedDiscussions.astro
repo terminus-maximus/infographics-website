@@ -1,31 +1,14 @@
 ---
 import discussionData from "../data/relatedDiscussions.json";
+import discussionPolicy from "../data/relatedDiscussionPolicy.json";
+import { selectRelatedDiscussions } from "../lib/relatedDiscussions.mjs";
 
 interface Props {
   pathname?: string;
 }
 
-interface Discussion {
-  title: string;
-  label: string;
-  url: string;
-  publishedAt: number;
-}
-
-const data: {
-  posts: Record<string, Discussion>;
-  pages: Record<string, string[]>;
-} = discussionData;
 const pathname = Astro.props.pathname || Astro.url.pathname;
-const route = `/${pathname.split("/").filter(Boolean).join("/")}/`;
-const discussions = [...new Set(data.pages[route] || [])]
-  .map((id) => {
-    const post = data.posts[id];
-    if (!post) throw new Error(`Related Discussions: missing post ${id} for ${route}`);
-    return { id, ...post };
-  })
-  .sort((a, b) => b.publishedAt - a.publishedAt || a.id.localeCompare(b.id))
-  .slice(0, 5);
+const discussions = selectRelatedDiscussions(discussionData, discussionPolicy, pathname);
 ---
 
 {discussions.length > 0 && (

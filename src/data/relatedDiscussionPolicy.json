@@ -1,0 +1,35 @@
+{
+  "maxAgeMonths": 18,
+  "rejectedMatches": [
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1jzw9ml",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1ibdnnb",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1haefd7",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1fibqh1",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/next-season/",
+      "postId": "1wxjgky",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this provisional preview association. Its confirmed Season 111 discussion remains valid."
+    }
+  ]
+}

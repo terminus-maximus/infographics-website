@@ -1,5 +1,7 @@
 # Reddit related links audit — 2026-10-13
 
+This is the historical pre-change audit. The five ambiguous matches were subsequently rejected; the current 18-month policy and closed decisions are in [Related Discussions](related-discussions.md).
+
 **43 confirmed missing links across 35 infographic pages.** Audited 49 built routes, including 38 infographic pages. The site currently has 15 discussion links on 9 pages.
 
 This is an audit and proposed selection; website source was not changed. “Other Resources” is the current discussion heading. Proposed cap: five per page, newest publication first, including relevant historical posts.
