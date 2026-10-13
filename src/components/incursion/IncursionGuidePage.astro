@@ -24,8 +24,8 @@ const tocGroups = [
   image={guide.infographic?.src} url={`https://terminusmaximus.com/incursion-mow/${guide.slug}`}>
   <Header />
   <main class="campaign-page incursion-guide" id="guide-content">
-    <CampaignHero title={guide.title} subtitle={guide.subtitle} updatedAt={guide.updatedAt}
-      updatedLabel="Research updated" backHref="/incursion-mow" backLabel="Incursion & Machine of War" />
+    <CampaignHero title={guide.title} subtitle={guide.subtitle} infographicSrc={guide.infographic?.fullSizeSrc}
+      backHref="/incursion-mow" backLabel="Incursion & Machine of War" />
 
     <FeaturedInfographic title={`${guide.machine} Strategy Infographic`} asset={guide.infographic} />
 

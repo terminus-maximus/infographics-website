@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import InfographicUpdated from '../../components/InfographicUpdated.astro';
 import Footer from '../../components/Footer.astro';
 import RecommendationSections from '../../components/RecommendationSections.astro';
 import TeamSection from '../../components/guild-wars/TeamSection.astro';
@@ -8,7 +9,7 @@ import FloatingTeamList from '../../components/guild-wars/FloatingTeamList.astro
 import editorial from '../../data/guild-wars/editorial.json';
 import { teams, units, scope, number } from '../../lib/guildWars';
 import '../../styles/guild-wars.css';
-const { title, description, lastUpdated, infographic } = editorial;
+const { title, description, infographic } = editorial;
 const span = (values: number[]) => values.join('–');
 ---
 <Layout title={`${title} | Terminus Maximus Infographics`} description={description} image={infographic.webp} url="/guild-wars/attack/">
@@ -17,7 +18,7 @@ const span = (values: number[]) => values.join('–');
     <section class="hero">
       <h1>{title}</h1>
       <p>{description}</p>
-      <p class="last-updated">Last Updated: {lastUpdated}</p>
+      <InfographicUpdated imageSrc={infographic.png} />
     </section>
     <section class="panel" aria-labelledby="infographic-title">
       <h2 id="infographic-title">Featured Infographic</h2>

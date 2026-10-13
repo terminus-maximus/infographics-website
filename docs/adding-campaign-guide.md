@@ -57,6 +57,8 @@ Add:
 - Any missing hero portraits referenced by `characters.json` under `public/images/heroes/`.
 - Any missing equipment icons referenced by `equip_recs.json` under `public/images/equipment/`.
 
+Record the full-size PNG's Git revision date and commit in `src/data/infographicRevisions.json`, and pass the catalog's `featuredImage` to `CampaignHero` as `infographicSrc`. The header uses the PNG date, independently of the replay JSON's `updatedAt`; see [Infographic update dates](infographic-dates.md).
+
 Rank badges and equipment frames are shared assets and normally do not need campaign-specific additions.
 
 ## Final checks

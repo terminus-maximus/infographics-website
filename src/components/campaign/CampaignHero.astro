@@ -1,23 +1,17 @@
 ---
+import InfographicUpdated from '../InfographicUpdated.astro';
+
 interface Props {
   title: string;
   subtitle: string;
   image?: string;
   imageAlt?: string;
-  updatedAt?: string;
-  updatedLabel?: string;
+  infographicSrc?: string;
   backHref?: string;
   backLabel?: string;
 }
 
-const { title, subtitle, image, imageAlt = "", updatedAt, updatedLabel = "Replay data updated", backHref, backLabel } = Astro.props;
-const formattedUpdatedAt = updatedAt
-  ? new Date(`${updatedAt}T12:00:00`).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-  : "";
+const { title, subtitle, image, imageAlt = "", infographicSrc, backHref, backLabel } = Astro.props;
 ---
 
 <section class="campaign-hero">
@@ -32,9 +26,7 @@ const formattedUpdatedAt = updatedAt
   <h1>{title}</h1>
   <p class="subtitle">{subtitle}</p>
 
-  {formattedUpdatedAt && (
-    <p class="last-updated">{updatedLabel}: <time datetime={updatedAt}>{formattedUpdatedAt}</time></p>
-  )}
+  {infographicSrc && <InfographicUpdated imageSrc={infographicSrc} />}
 </section>
 
 <style>
@@ -80,12 +72,6 @@ const formattedUpdatedAt = updatedAt
     color: var(--guide-muted, #cccccc);
     font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.6;
-  }
-
-  .last-updated {
-    margin: 1rem auto 0;
-    color: var(--guide-accent, #d4af37);
-    font-size: 0.95rem;
   }
 
   @media (max-width: 700px) {

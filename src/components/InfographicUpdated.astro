@@ -1,0 +1,18 @@
+---
+import { getInfographicRevision } from '../lib/infographicDates';
+
+interface Props { imageSrc: string }
+const { imageSrc } = Astro.props;
+const { updatedOn, formattedDate } = getInfographicRevision(imageSrc);
+---
+
+<p class="last-updated">Last updated on <time datetime={updatedOn}>{formattedDate}</time></p>
+
+<style>
+  .last-updated {
+    margin: 1rem auto 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+    color: var(--guide-accent, #d4af37) !important;
+  }
+</style>

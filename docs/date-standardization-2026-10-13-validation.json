@@ -1,0 +1,150 @@
+{
+  "scope": "Local built site; not deployed",
+  "counts": {
+    "no_update_label": 10,
+    "compliant": 22,
+    "redirect": 1,
+    "excluded_time_bound_guide": 16
+  },
+  "routes_scanned": 49,
+  "roster_versions": {
+    "farsight": "1.43.130",
+    "uthar": "1.43.130",
+    "lysander": "1.43.130",
+    "fabius": "1.43.130"
+  },
+  "guide_dates": [
+    {
+      "route": "/beginner-guide/",
+      "label": "Last updated on Jun 4, 2026",
+      "png": "/images/beginner-guide.png",
+      "png_revision_date": "2026-06-04"
+    },
+    {
+      "route": "/campaign-event/",
+      "label": "Last updated on Oct 11, 2026",
+      "png": "/images/campaign-event.png",
+      "png_revision_date": "2026-10-11"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "label": "Last updated on Sept 16, 2026",
+      "png": "/images/fall-of-cadia.png",
+      "png_revision_date": "2026-09-16"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "label": "Last updated on Aug 10, 2026",
+      "png": "/images/fall-of-cadia-mirror.png",
+      "png_revision_date": "2026-08-10"
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "label": "Last updated on Aug 4, 2026",
+      "png": "/images/indomitus.png",
+      "png_revision_date": "2026-08-04"
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "label": "Last updated on Aug 5, 2026",
+      "png": "/images/indomitus-mirror.png",
+      "png_revision_date": "2026-08-05"
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "label": "Last updated on Aug 15, 2026",
+      "png": "/images/octarius.png",
+      "png_revision_date": "2026-08-15"
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "label": "Last updated on Aug 17, 2026",
+      "png": "/images/octarius-mirror.png",
+      "png_revision_date": "2026-08-17"
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "label": "Last updated on Aug 19, 2026",
+      "png": "/images/saim-hann.png",
+      "png_revision_date": "2026-08-19"
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "label": "Last updated on Sept 16, 2026",
+      "png": "/images/saim-hann-mirror.png",
+      "png_revision_date": "2026-09-16"
+    },
+    {
+      "route": "/elite-campaigns/",
+      "label": "Last updated on Jul 8, 2026",
+      "png": "/images/elite-campaigns.png",
+      "png_revision_date": "2026-07-08"
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "label": "Last updated on Sept 25, 2026",
+      "png": "/images/boss-meta.png",
+      "png_revision_date": "2026-09-25"
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "label": "Last updated on Sept 12, 2026",
+      "png": "/images/guild-wars-attack.png",
+      "png_revision_date": "2026-09-12"
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "label": "Last updated on Sept 13, 2026",
+      "png": "/images/guild-wars-defend.png",
+      "png_revision_date": "2026-09-13"
+    },
+    {
+      "route": "/hre/",
+      "label": "Last updated on Oct 12, 2026",
+      "png": "/images/hre.png",
+      "png_revision_date": "2026-10-12"
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "label": "Last updated on Sept 23, 2026",
+      "png": "/images/mow-biovore.png",
+      "png_revision_date": "2026-09-23"
+    },
+    {
+      "route": "/incursion-mow/",
+      "label": "Last updated on Sept 23, 2026",
+      "png": "/images/incursion-mow.png",
+      "png_revision_date": "2026-09-23"
+    },
+    {
+      "route": "/lre/fabius/",
+      "label": "Last updated on Oct 5, 2026",
+      "png": "/images/fabius-lre.png",
+      "png_revision_date": "2026-10-05"
+    },
+    {
+      "route": "/lre/farsight/",
+      "label": "Last updated on May 30, 2026",
+      "png": "/images/farsight-lre.png",
+      "png_revision_date": "2026-05-30"
+    },
+    {
+      "route": "/lre/lucius/",
+      "label": "Last updated on Jun 23, 2026",
+      "png": "/images/lucius-lre.png",
+      "png_revision_date": "2026-06-23"
+    },
+    {
+      "route": "/lre/lysander/",
+      "label": "Last updated on Jul 26, 2026",
+      "png": "/images/lysander-lre.png",
+      "png_revision_date": "2026-07-26"
+    },
+    {
+      "route": "/lre/uthar/",
+      "label": "Last updated on Sept 9, 2026",
+      "png": "/images/uthar-lre.png",
+      "png_revision_date": "2026-09-09"
+    }
+  ]
+}

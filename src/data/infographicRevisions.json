@@ -1,0 +1,90 @@
+{
+  "/images/beginner-guide.png": {
+    "updatedOn": "2026-06-04",
+    "commit": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85"
+  },
+  "/images/boss-meta.png": {
+    "updatedOn": "2026-09-25",
+    "commit": "8d37761f237484317847d77156f5e87117c7f1bc"
+  },
+  "/images/campaign-event.png": {
+    "updatedOn": "2026-10-11",
+    "commit": "dcf2df798ada569a68f83c281a732c54218e93c9"
+  },
+  "/images/elite-campaigns.png": {
+    "updatedOn": "2026-07-08",
+    "commit": "2bf9344c81ca5fa2002a414196614f76ce203f8b"
+  },
+  "/images/fabius-lre.png": {
+    "updatedOn": "2026-10-05",
+    "commit": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76"
+  },
+  "/images/fall-of-cadia-mirror.png": {
+    "updatedOn": "2026-08-10",
+    "commit": "7f4614d021cdc3788dbb9680beb059ed816d39ad"
+  },
+  "/images/fall-of-cadia.png": {
+    "updatedOn": "2026-09-16",
+    "commit": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772"
+  },
+  "/images/farsight-lre.png": {
+    "updatedOn": "2026-05-30",
+    "commit": "7d601b2f99c7fabf271251af5272117430d7751a"
+  },
+  "/images/guild-wars-attack.png": {
+    "updatedOn": "2026-09-12",
+    "commit": "f5087d43d013f228d4a9cd507237bf3bc896141f"
+  },
+  "/images/guild-wars-defend.png": {
+    "updatedOn": "2026-09-13",
+    "commit": "27e70d039a3a72d3fb509652dc23e5fdb4948c10"
+  },
+  "/images/hre.png": {
+    "updatedOn": "2026-10-12",
+    "commit": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568"
+  },
+  "/images/incursion-mow.png": {
+    "updatedOn": "2026-09-23",
+    "commit": "44097643468cb78ab4e81e5c2a55f1cf9c675f39"
+  },
+  "/images/indomitus-mirror.png": {
+    "updatedOn": "2026-08-05",
+    "commit": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab"
+  },
+  "/images/indomitus.png": {
+    "updatedOn": "2026-08-04",
+    "commit": "8c28ff641a7f04f504bef83374aac81a029bba0a"
+  },
+  "/images/lucius-lre.png": {
+    "updatedOn": "2026-06-23",
+    "commit": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e"
+  },
+  "/images/lysander-lre.png": {
+    "updatedOn": "2026-07-26",
+    "commit": "9e859ca1b0009ee3c985b769de3dc46236109e69"
+  },
+  "/images/mow-biovore.png": {
+    "updatedOn": "2026-09-23",
+    "commit": "44097643468cb78ab4e81e5c2a55f1cf9c675f39"
+  },
+  "/images/octarius-mirror.png": {
+    "updatedOn": "2026-08-17",
+    "commit": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1"
+  },
+  "/images/octarius.png": {
+    "updatedOn": "2026-08-15",
+    "commit": "b368e7775caa66c37f73afe22b4bfd530bbf15d7"
+  },
+  "/images/saim-hann-mirror.png": {
+    "updatedOn": "2026-09-16",
+    "commit": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772"
+  },
+  "/images/saim-hann.png": {
+    "updatedOn": "2026-08-19",
+    "commit": "5f9004188af38478da232cb4b70a72ddcbd098ad"
+  },
+  "/images/uthar-lre.png": {
+    "updatedOn": "2026-09-09",
+    "commit": "745f01051f786e7c2d2929e9ce1296d9ba4186dc"
+  }
+}

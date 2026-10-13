@@ -2,6 +2,8 @@
 
 Farsight, Uthar, Lysander and Fabius Bile use `src/components/LreGuidePage.astro` and the same `LrePlanner.astro`. The page order is infographic, event overview with collapsed More Event Details, High Points Combinations, Tracks & Filters, then any existing resource links and recommendations. Lucius remains the legacy guide; the supplied backend covers only the four events above.
 
+The hero shows the PNG revision date as `Last updated on Oct 5, 2026`, followed by `Roster data as of Version 1.43.130` using the planner dataset's actual `characterBuild`. These are independent: importing a new roster changes the version line without bumping the artwork date. See [Infographic update dates](infographic-dates.md).
+
 Both track selectors stay synchronized. Each track retains its own AND filters; Clear only resets the active track. Combinations use at least two requirements and three eligible characters, sort by bonus points then pool size, and show at most 12 results. Applying a combination selects its filters and moves focus to its track. Requirements sort by descending points. Pools show portraits in a two-row scrolling area; combinations with at most ten characters show portraits too. The initial HTML includes Alpha combinations and all track rosters, with unavailable controls hidden or disabled until JavaScript loads.
 
 ## Backend import

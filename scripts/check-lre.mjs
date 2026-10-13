@@ -28,6 +28,7 @@ for (const { route } of Object.values(eventRoutes)) {
   }
 
   assert(!/<meta name="robots"[^>]*noindex/.test(page));
+  assert(page.includes(`Roster data as of Version ${data.characterBuild}`), `${route}: roster version must follow the planner dataset`);
   const sectionOrder = ['Featured Infographic', 'LRE Basics', 'More Event Details', 'id="combinations-heading"', 'id="tracks-heading"'];
   if (route !== 'fabius') sectionOrder.push('Other Resources');
   for (const [i, title] of sectionOrder.entries()) {

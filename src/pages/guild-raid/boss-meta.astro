@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import InfographicUpdated from "../../components/InfographicUpdated.astro";
 import Footer from "../../components/Footer.astro";
 import BossMetaResults from "../../components/replay-library/BossMetaResults.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
@@ -26,7 +27,7 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   <section class="hero">
     <h1>{title}</h1>
     <p>{description}</p>
-    <p class="last-updated">Last Updated: September 25, 2026</p>
+    <InfographicUpdated imageSrc={imageSrc} />
   </section>
 
   <section class="infographic-section">
@@ -245,12 +246,6 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
     font-size: clamp(1rem, 2vw, 1.2rem);
     max-width: 760px;
     margin: 0 auto;
-  }
-
-  .hero .last-updated {
-    color: #d4af37;
-    font-size: 0.95rem;
-    margin-top: 1rem;
   }
 
   section {
