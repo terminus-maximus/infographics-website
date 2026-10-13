@@ -79,8 +79,8 @@ for (const path of htmlFiles) {
 const home = read('dist/index.html');
 const homeSections = [...home.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)].map(match => match[1]);
 assert(homeSections[1].includes('href="/campaign-event"'));
-assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[2]), 'Fabius must follow Campaign Event as the third homepage block, including the hero');
-assert(homeSections[2].includes('Be ready for his first event November 8'));
+assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[3]), 'Fabius must follow Campaign Event and HRE as the fourth homepage block, including the hero');
+assert(homeSections[3].includes('Be ready for his first event November 8'));
 const legendarySection = homeSections.find(section => section.includes('Legendary Guides'));
 assert(legendarySection);
 const cardRoutes = html => [...html.matchAll(/<a class="card" href="([^"]+)"/g)].map(match => match[1]);
