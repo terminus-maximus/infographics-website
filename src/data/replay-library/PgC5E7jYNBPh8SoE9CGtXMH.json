@@ -53450,5 +53450,33 @@
     "hero_4":"Vit",
     "hero_5":"Ammuk",
     "MoW":"Reanimator"
+  },
+  {
+    "creator":"Malikyth",
+    "video_id":"9BInbR7qdRs",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=9BInbR7qdRs",
+    "published_at":"10\/12\/2026 5:01 PM",
+    "title":"M1 - Riptide - S111 - AdMech - 1,400,028 Damage [KnightsOfCaliban]",
+    "tier_guess":"M1",
+    "tier_final":"M1",
+    "boss_guess":"Riptide",
+    "boss_final":"Riptide",
+    "damage_guess":"1400028",
+    "damage_final":"1400028",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"10\/13\/2026 2:31 AM",
+    "notes":null,
+    "map":"Riptide_02",
+    "team_archetype":"AdMech",
+    "team_key":"Traj",
+    "Team (no MoW)":"Traj",
+    "Team":"Traj, Biovore",
+    "hero_1":"Traj",
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
