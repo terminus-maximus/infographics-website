@@ -112,6 +112,11 @@
   {
     "boss_clean": "Cawl",
     "meta_choice": "ALTERNATE",
+    "video_id": "i7N_q_CFo3E"
+  },
+  {
+    "boss_clean": "Cawl",
+    "meta_choice": "ALTERNATE",
     "video_id": "qP3UN_thLk4"
   },
   {
@@ -143,11 +148,6 @@
     "boss_clean": "Cawl",
     "meta_choice": "ALTERNATE",
     "video_id": "Qt-tPFBF44k"
-  },
-  {
-    "boss_clean": "Cawl",
-    "meta_choice": "ALTERNATE",
-    "video_id": "Bmrpd-8RYkk"
   },
   {
     "boss_clean": "Cawl",
@@ -547,6 +547,11 @@
   {
     "boss_clean": "Lion",
     "meta_choice": "META",
+    "video_id": "g7-8GcNMtOo"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "META",
     "video_id": "DTIz8ZUQLg0"
   },
   {
@@ -555,9 +560,9 @@
     "video_id": "y0kui713-j4"
   },
   {
-    "boss_clean": "Lion",
-    "meta_choice": "META",
-    "video_id": "PaK8ZdwaY8k"
+    "boss_clean": "Magnus",
+    "meta_choice": "ALTERNATE",
+    "video_id": "EVRqX4Q3TJU"
   },
   {
     "boss_clean": "Magnus",
@@ -583,6 +588,11 @@
     "boss_clean": "Magnus",
     "meta_choice": "META",
     "video_id": "fcmEhs3BYS0"
+  },
+  {
+    "boss_clean": "Magnus",
+    "meta_choice": "META",
+    "video_id": "iRQGloObq0E"
   },
   {
     "boss_clean": "Magnus",
@@ -623,11 +633,6 @@
     "boss_clean": "Magnus",
     "meta_choice": "META",
     "video_id": "eLlS1kKiuV8"
-  },
-  {
-    "boss_clean": "Magnus",
-    "meta_choice": "META",
-    "video_id": "15dZUegfuAo"
   },
   {
     "boss_clean": "Mortarion",
