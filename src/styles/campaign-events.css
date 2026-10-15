@@ -15,7 +15,7 @@ body:has(.ce-page) { margin: 0; background: #121212; color: #f5f5f5; font-family
 .ce-page .play-as img { object-fit: contain; }
 .ce-page .ce-infographic { margin: 0 0 2rem; border: 1px solid #3c3c3c; border-radius: 12px; background: #191919; overflow: hidden; }
 .ce-page .ce-infographic > a { display: block; }
-.ce-page .ce-infographic img { display: block; width: 100%; height: auto; }
+.ce-page .ce-infographic img { display: block; width: 100%; max-width: 700px; height: auto; margin: 0 auto; border-radius: 8px; }
 .ce-page .ce-infographic figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: .75rem; color: #aaa; padding: .8rem 1rem; font-size: .75rem; }
 .ce-page .jump-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
 .ce-page .jump-links a { text-decoration: none; border: 1px solid #444; border-radius: 7px; padding: .65rem .85rem; font-size: .8rem; background: #202020; }
