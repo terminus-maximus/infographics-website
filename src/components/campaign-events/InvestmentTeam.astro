@@ -1,0 +1,49 @@
+---
+import type { CampaignEventGuide } from '../../data/campaign-events/types';
+import { eventCharacters } from '../../lib/campaign-events';
+import { lowestSeenSupportIds } from '../../lib/campaign-events-validation.mjs';
+import { buildAction, buildLabel, environmentLabel } from '../../lib/campaign-event-display';
+import HeroStats from './HeroStats.astro';
+interface Props { guide: CampaignEventGuide; }
+const { guide } = Astro.props;
+const supportIds: string[] = lowestSeenSupportIds(guide);
+const heroes = [...guide.requiredHeroes, ...supportIds.map(id => guide.supportingHeroes.find(hero => hero.heroId === id)!)];
+const build = guide.research.builds.find(build => guide.research.lowestSeen.recordIds.includes(build.id))!;
+---
+<div class="investment-legend"><p><strong>Lowest Seen</strong><span>The selected E30 three-medal team.</span></p><p><strong>Safe Bet</strong><span>Our recommended investment targets.</span></p></div>
+<div class="investment-table" role="table" aria-label={`${guide.displayTitle} Lowest Seen and Safe Bet investment`}>
+  <div class="investment-head" role="row"><span role="columnheader">Your five-hero team</span><span role="columnheader">Lowest Seen</span><span role="columnheader">Safe Bet</span></div>
+  {heroes.map((hero, index) => {
+    const character = eventCharacters[hero.heroId];
+    const safe = hero.safeBetScenarios[0]?.investment;
+    return <div class:list={['investment-row', { 'support-start': index === 3 }]} role="row" data-investment-hero={hero.heroId}>
+      <div class="hero-identity" role="rowheader"><img src={character.portrait} alt="" width="56" height="56" loading="lazy" /><div><strong>{character.name}</strong><small>{index < 3 ? 'Required' : 'Support'}</small></div></div>
+      <div role="cell" data-investment="lowest"><span class="mobile-label">Lowest Seen</span><HeroStats heroId={hero.heroId} rank={hero.lowestSeen.rank.value} active={hero.lowestSeen.active.value} passive={hero.lowestSeen.passive.value} /></div>
+      <div role="cell" data-investment="safe"><span class="mobile-label">Safe Bet</span><HeroStats heroId={hero.heroId} rank={safe?.rank.value} active={safe?.active.value} passive={safe?.passive.value} /></div>
+    </div>;
+  })}
+</div>
+<div class="team-credit"><span>{buildLabel(build)} · {build.sourceLabel}</span>{environmentLabel(build) && <span class="badge">{environmentLabel(build)}</span>}<a href={build.resultSourceUrl || build.sourceUrl} target="_blank" rel="noopener noreferrer">{buildAction(build)} ↗</a></div>
+<style>
+  .investment-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+  .investment-legend p { margin: 0; padding: .8rem 1rem; border-left: 2px solid #d4af37; background: #252218; font-size: .84rem; line-height: 1.6; }
+  .investment-legend strong, .investment-legend span { display: block; }
+  .investment-legend strong { color: #f1d277; }
+  .investment-legend span { color: #bbb; }
+  .investment-table { border: 1px solid #3b3b3b; border-radius: 10px; overflow: hidden; }
+  .investment-head, .investment-row { display: grid; grid-template-columns: minmax(180px, 1fr) repeat(2, minmax(0, 1.2fr)); align-items: center; }
+  .investment-head { background: #28261f; color: #e4c55e; font-size: .8rem; font-weight: 600; }
+  .investment-head > *, .investment-row > * { padding: 1rem; min-width: 0; }
+  .investment-row { background: #171717; border-top: 1px solid #333; }
+  .investment-row.support-start { border-top: 2px solid #726239; }
+  .hero-identity { display: flex; align-items: center; gap: .8rem; }
+  .hero-identity img { border-radius: 50%; border: 1px solid #555; background: #242424; flex-shrink: 0; }
+  .hero-identity strong { font-size: .95rem; color: #f5f5f5; }
+  .hero-identity small { display: block; color: #aaa; font-size: .7rem; margin-top: .25rem; }
+  .mobile-label { display: none; }
+  .team-credit { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; color: #bbb; margin-top: 1rem; font-size: .78rem; }
+  a { color: #e4c55e; text-underline-offset: .2em; }
+  .badge { padding: .2rem .5rem; color: #e4c55e; background: #302b1e; border: 1px solid #645532; border-radius: 4px; }
+  @media (max-width: 800px) { .investment-head { display: none; } .investment-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero-identity { grid-column: 1 / -1; padding-bottom: .35rem; } .mobile-label { display: block; font-size: .75rem; margin-bottom: .7rem; color: #e4c55e; } .investment-row > [role='cell']:last-child { border-left: 1px solid #333; } }
+  @media (max-width: 500px) { .investment-legend { grid-template-columns: 1fr; gap: .5rem; } .investment-row > * { padding: .7rem; } }
+</style>

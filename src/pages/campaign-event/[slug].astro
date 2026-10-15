@@ -1,0 +1,9 @@
+---
+import CampaignEventGuide from "../../components/campaign-events/CampaignEventGuide.astro";
+import { campaignEvents } from "../../lib/campaign-events";
+export function getStaticPaths() {
+  return campaignEvents.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+const { guide } = Astro.props;
+---
+<CampaignEventGuide guide={guide} />

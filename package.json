@@ -12,7 +12,8 @@
     "check:lre": "node scripts/check-lre.mjs",
     "check:guild-raid-next-season": "node scripts/check-guild-raid-next-season.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:campaign-events": "node scripts/check-campaign-events.mjs --built"
   },
   "dependencies": {
     "astro": "^6.4.2",

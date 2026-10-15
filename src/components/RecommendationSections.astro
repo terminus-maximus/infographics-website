@@ -8,11 +8,13 @@ import {
 
 interface Props {
   pathname?: string;
+  showMoreToExplore?: boolean;
 }
 
 const pathname = Astro.props.pathname || Astro.url.pathname;
+const { showMoreToExplore = true } = Astro.props;
 const relatedGuides = getRelatedGuides(pathname);
-const moreToExplore = getMoreToExploreCandidates(pathname, relatedGuides);
+const moreToExplore = showMoreToExplore ? getMoreToExploreCandidates(pathname, relatedGuides) : [];
 const moreToExploreCount = relatedGuides.length ? 3 : 6;
 ---
 

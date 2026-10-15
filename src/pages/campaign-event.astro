@@ -1,49 +1,24 @@
 ---
-import FeaturedInfographicPage from "../components/FeaturedInfographicPage.astro";
+import '../styles/campaign-events.css';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import RecommendationSections from '../components/RecommendationSections.astro';
+import EventGuideGrid from '../components/campaign-events/EventGuideGrid.astro';
+import InfographicUpdated from '../components/InfographicUpdated.astro';
 ---
-
-<FeaturedInfographicPage
-  title="Campaign Event"
-  description="Event details, required characters, and rewards."
-  imageSrc="/images/campaign-event.png"
-  imageAlt="Campaign Event Infographic"
-  basicsTitle="Campaign Event Basics"
-  basicsContent={`
-## Event Timing
-
-Campaign Events run for **14 days** and typically return every **5 weeks**, allowing players to continue progress across multiple appearances.
-
-## One-Time Path Choice
-
-At the start of each event, you must choose **one path** to pursue.
-
-* You cannot switch paths once selected.
-* Your choice remains locked until the event returns.
-
-## Required Characters
-
-Each path is built around **three Required Characters**.
-
-* These characters are needed to access and progress through that path's stages.
-* Different paths feature different character requirements.
-
-## Borrowing Characters (Normal Difficulty)
-
-Normal difficulty allows players to borrow Required Characters they do not own.
-
-* Any Required Character can be borrowed.
-* Borrowed characters scale up to the stage's maximum Rarity Cap.
-* This makes Normal difficulty accessible even for newer accounts.
-
-## Extremis Difficulty
-
-Extremis difficulty removes the borrowing system entirely.
-
-* You must use your own roster.
-* Borrowed characters are not available.
-* Success depends on how much you've invested in the Required Characters and supporting team members.
-
-For many players, Extremis is where roster depth and long-term planning become most important.
-
-`}
-/>
+<Layout title="Campaign Event Guides | Terminus Maximus" description="Choose your Campaign Event path. Explore all six CE guides with required heroes, Lowest Seen teams, Safe Bet investment, replays, and Extremis rewards." image="/images/web/campaign-event.webp" url="https://terminusmaximus.com/campaign-event/">
+  <Header /><main class="ce-page">
+    <header class="ce-hero"><p class="eyebrow">Six paths. Build your team.</p><h1>Campaign Event Guides</h1><p class="intro">Pick the path that fits your roster. Start with the overview, then explore the teams, investment targets, and replays for each Campaign Event.</p></header>
+    <nav class="jump-links" aria-label="On this page"><a href="#guides">Choose your CE</a><a href="#overview">Overview Infographic</a><a href="#basics">How Campaign Events work</a></nav>
+    <figure class="ce-infographic" id="overview"><a href="/images/campaign-event.png" target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title="Campaign Event Overview" data-ga4-link-source="image"><img src="/images/web/campaign-event.webp" alt="Campaign Event overview: six paths, required characters, and rewards" width="1200" height="675" fetchpriority="high" /></a><figcaption><InfographicUpdated imageSrc="/images/campaign-event.png" /><a href="/images/campaign-event.png" target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title="Campaign Event Overview" data-ga4-link-source="full-size-link">Open full-size infographic ↗</a></figcaption></figure>
+    <section id="guides" aria-labelledby="guides-heading"><div class="section-heading"><h2 id="guides-heading">Choose your CE</h2></div><p class="section-intro">The event name is the faction you fight. Each card shows the heroes and factions you can bring.</p><EventGuideGrid /></section>
+    <section class="guide-panel" id="basics" aria-labelledby="basics-heading" style="margin-top: 2rem"><div class="section-heading"><h2 id="basics-heading">Campaign Event Basics</h2></div><div class="basics-grid">
+      <article class="tip"><span>01 · Choose your path</span><h3>One event, one choice</h3><p>Campaign Events run for 14 days and typically return every five weeks. Your chosen path stays locked for that appearance, and your progress carries over when it returns.</p></article>
+      <article class="tip"><span>02 · Know your trio</span><h3>Three heroes are required</h3><p>Each path has three required characters. Build them together: some battles only allow the required trio, so your supports cannot carry every stage.</p></article>
+      <article class="tip"><span>03 · Start on Normal</span><h3>Borrow heroes to get going</h3><p>On Normal, you can borrow required heroes you don’t own. Borrowed characters scale to the stage’s rarity cap, making this a useful starting point for newer accounts.</p></article>
+      <article class="tip"><span>04 · Push into Extremis</span><h3>Bring your own roster</h3><p>Extremis has no borrowed heroes. These guides focus on three medals at E30, the final main-path battle, with earlier replays to help you get there.</p></article>
+    </div><p class="callout">Start with the path your roster can support. A strong supporting pair, good equipment, and the right ability levels can matter as much as the ranks on your required trio.</p></section>
+    <RecommendationSections />
+  </main><Footer />
+</Layout>

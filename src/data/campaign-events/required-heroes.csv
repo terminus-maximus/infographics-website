@@ -1,0 +1,31 @@
+Campaign,Hero,LowestSeenRank,LowestSeenActive,LowestSeenPassive,LowestSeenScope,LowestSeenSource,SafeBetRank,SafeBetActive,SafeBetPassive,SafeBetNotes
+Dark Angels,Aleph-Null,D3,49,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,With Thothmek D3 50/50 + Anuphet D3 50/47; Venerable Battle Mark. Inferred targets use the accepted all-D3 E30 profile with small skill buffers.
+Dark Angels,Imospekh,D3,45,45,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,47,47,With Thothmek D3 50/50 + Anuphet D3 50/47; Venerable Battle Mark. Inferred targets use the accepted all-D3 E30 profile with small skill buffers.
+Dark Angels,Thutmose,D3,50,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,With Thothmek D3 50/50 + Anuphet D3 50/47; Venerable Battle Mark. Inferred targets use the accepted all-D3 E30 profile with small skill buffers.
+Dark Angels,Thothmek,D3,50,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,Inferred support Safe Bet: Retain Thothmek’s source-backed E30 investment as an editable support estimate for Thothmek + Anuphet; improved repeatability has not been measured.
+Dark Angels,Anuphet,D3,50,47,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,A1,55,55,Manually adjusted
+Sisters,Wrask,D3,46,49,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,With Khârn A1 54/50 + Archimatos D2 47/47; Imperial Aquila. Inferred targets retain the D3 required trio and add small skill buffers to the accepted E30 profile.
+Sisters,Azkor,D3,44,44,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,47,47,With Khârn A1 54/50 + Archimatos D2 47/47; Imperial Aquila. Inferred targets retain the D3 required trio and add small skill buffers to the accepted E30 profile.
+Sisters,Tarvakh,D3,46,39,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,47,47,Manually adjusted
+Sisters,Khârn,A1,54,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,A1,55,55,Manually adjusted
+Sisters,Archimatos,D2,47,47,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,Manually adjusted
+Death Guard,Vindicta,D2,47,47,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,With Morvenn Vahl D3 50/50 + Helbrecht D3 50/50.
+Death Guard,Isabella,D3,35,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,50,50,With Morvenn Vahl D3 50/50 + Helbrecht D3 50/50.
+Death Guard,Roswitha,D2,36,35,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,46,50,Manually adjusted
+Death Guard,Celestine,D3,17,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,D3,35,50,Manually adjusted
+Death Guard,Helbrecht,A1,50,50,E30 · Three medals,https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242,A1,55,55,Manually adjusted
+AdMech,Maladus,D3,49,35,E30 · Three medals · Reported,https://www.reddit.com/r/WH40KTacticus/comments/1vh2mgd/comment/p26b6rh/,D3,50,35,With Rotbone D3 (raw ability pair 49/38) + Khârn A1 55/55.
+AdMech,Corrodius,S3,46,8,E30 · Three medals · Reported,https://www.reddit.com/r/WH40KTacticus/comments/1vh2mgd/comment/p26b6rh/,G1,35,35,With Rotbone D3 (raw ability pair 49/38) + Khârn A1 55/55. Inferred Corrodius skills: 35/35 is explicit in the accepted infographic and the creator-labelled QA E30 team; retain the approved G1 rank buffer. The combined profile is untested.
+AdMech,Pestillian,Iron 2,32,33,E30 · Three medals · Reported,https://www.reddit.com/r/WH40KTacticus/comments/1vh2mgd/comment/p26b6rh/,G1,35,35,With Rotbone D3 (raw ability pair 49/38) + Khârn A1 55/55.
+AdMech,Nauseous,D3,44,44,E30 · Three medals · Reported,https://www.reddit.com/r/WH40KTacticus/comments/1vh2mgd/comment/p26b6rh/,D3,47,47,Manually adjusted
+AdMech,Khârn,A1,55,55,E30 · Three medals · Reported,https://www.reddit.com/r/WH40KTacticus/comments/1vh2mgd/comment/p26b6rh/,A1,55,55,Manually adjusted
+Tyranids,Bellator,D3,50,38,E30 · Three medals,https://www.youtube.com/watch?v=131Zxf-1b_E&t=2198s,D3,50,44,Manually adjusted
+Tyranids,Incisus,D3,50,38,E30 · Three medals,https://www.youtube.com/watch?v=131Zxf-1b_E&t=2200s,D3,50,44,Manually adjusted
+Tyranids,Titus,D3,38,44,E30 · Three medals,https://www.youtube.com/watch?v=131Zxf-1b_E&t=2202s,D3,44,44,Manually adjusted
+Tyranids,Dante,A1,38,56,E30 · Three medals,https://www.youtube.com/watch?v=131Zxf-1b_E&t=2208s,A1,50,55,Manually adjusted
+Tyranids,Mephiston,D3,41,50,E30 · Three medals,https://www.youtube.com/watch?v=131Zxf-1b_E&t=2205s,D3,47,50,Manually adjusted
+T’au,Hollan,D1,44,44,E30 · Three medals · QA,https://www.youtube.com/watch?v=VwQzCzxEN80&t=239.3s,D1,44,44,Manually adjusted
+T’au,Xybia,D1,44,44,E30 · Three medals · QA,https://www.youtube.com/watch?v=VwQzCzxEN80&t=239.3s,D1,44,44,Manually adjusted
+T’au,Judh,D2,47,44,E30 · Three medals · QA,https://www.youtube.com/watch?v=VwQzCzxEN80&t=239.3s,D2,47,44,Manually adjusted
+T’au,Isaak,D1,44,44,E30 · Three medals · QA,https://www.youtube.com/watch?v=VwQzCzxEN80&t=239.3s,D1,44,44,Manually adjusted
+T’au,Neurothrope,D3,35,35,E30 · Three medals · QA,https://www.youtube.com/watch?v=VwQzCzxEN80&t=239.3s,D3,35,50,Manually adjusted

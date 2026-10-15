@@ -1,0 +1,46 @@
+body:has(.ce-page) { margin: 0; background: #121212; color: #f5f5f5; font-family: 'Lexend', sans-serif; }
+.ce-page { box-sizing: border-box; max-width: 1200px; padding: 2rem; margin: 0 auto; }
+.ce-page * { box-sizing: border-box; }
+.ce-page a { color: #e4c55e; text-underline-offset: .2em; }
+.ce-page :is(a, summary, button):focus-visible { outline: 2px solid #e4c55e; outline-offset: 4px; }
+.ce-page .ce-hero { margin-bottom: 1.75rem; }
+.ce-page .back-link { display: inline-block; font-size: .85rem; margin-bottom: 1.5rem; text-decoration: none; }
+.ce-page .eyebrow { color: #d4af37; text-transform: uppercase; letter-spacing: .14em; font-size: .7rem; margin: 0 0 .5rem; }
+.ce-page h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; letter-spacing: -.03em; }
+.ce-page .hero-heading { display: flex; align-items: center; gap: 1rem; }
+.ce-page .hero-heading > img { width: 68px; height: 68px; object-fit: contain; }
+.ce-page .intro { max-width: 780px; color: #bbb; line-height: 1.7; font-size: 1rem; margin: 1rem 0; }
+.ce-page .play-as { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; font-size: .75rem; color: #bbb; }
+.ce-page .play-as span { display: inline-flex; align-items: center; gap: .4rem; }
+.ce-page .play-as img { object-fit: contain; }
+.ce-page .ce-infographic { margin: 0 0 2rem; border: 1px solid #3c3c3c; border-radius: 12px; background: #191919; overflow: hidden; }
+.ce-page .ce-infographic > a { display: block; }
+.ce-page .ce-infographic img { display: block; width: 100%; height: auto; }
+.ce-page .ce-infographic figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: .75rem; color: #aaa; padding: .8rem 1rem; font-size: .75rem; }
+.ce-page .jump-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+.ce-page .jump-links a { text-decoration: none; border: 1px solid #444; border-radius: 7px; padding: .65rem .85rem; font-size: .8rem; background: #202020; }
+.ce-page .jump-links a:hover { border-color: #d4af37; background: #29251b; }
+.ce-page .guide-panel { min-width: 0; padding: 1.5rem; margin-bottom: 2rem; background: #1c1c1c; border: 1px solid #363636; border-radius: 12px; scroll-margin-top: 1rem; }
+.ce-page .section-heading { display: flex; align-items: baseline; gap: .8rem; padding-bottom: .85rem; margin-bottom: 1.25rem; border-bottom: 1px solid #3c3c3c; }
+.ce-page .section-heading > span { color: #a28c50; font-size: .8rem; }
+.ce-page h2 { color: #e4c55e; font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.3; margin: 0; }
+.ce-page .section-intro { color: #bbb; font-size: .86rem; line-height: 1.7; margin: 0 0 1.25rem; }
+.ce-page .callout { border-left: 3px solid #b99a42; border-radius: 0 7px 7px 0; padding: .85rem 1rem; background: #282419; color: #d6cfbc; font-size: .83rem; line-height: 1.7; margin: 1.25rem 0 0; }
+.ce-page .build-grid, .tip-grid, .basics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.ce-page .tip { background: #151515; border: 1px solid #353535; border-radius: 9px; padding: 1.2rem; }
+.ce-page .tip > span { color: #e4c55e; font-size: .7rem; }
+.ce-page .tip h3 { margin: .5rem 0; font-size: 1rem; color: #eee; }
+.ce-page .tip p { font-size: .84rem; color: #bbb; line-height: 1.75; margin: 0; }
+.ce-page .tier-row { display: grid; grid-template-columns: 165px minmax(0, 1fr); gap: 1rem; padding: 1.1rem 0; border-top: 1px solid #343434; }
+.ce-page .tier-title { display: flex; align-items: start; gap: .7rem; }
+.ce-page .tier-title b { display: grid; place-items: center; flex-shrink: 0; width: 2rem; height: 2rem; border: 1px solid #66562c; border-radius: 6px; background: #2d281c; color: #edce6e; }
+.ce-page .tier-title span { color: #ccc; font-size: .75rem; line-height: 1.5; }
+.ce-page .support-roster { display: flex; flex-wrap: wrap; gap: .8rem; }
+.ce-page .support-hero { display: grid; justify-items: center; align-content: start; gap: .4rem; width: 84px; text-decoration: none; }
+.ce-page .support-hero img { border-radius: 50%; border: 1px solid #555; background: #292929; }
+.ce-page .support-hero span { color: #ccc; font-size: .65rem; text-align: center; }
+.ce-page details > summary { color: #dcc477; padding: .85rem 0; cursor: pointer; font-size: .85rem; }
+.ce-page .credits ul { padding-left: 1.3rem; }
+.ce-page .credits li, .ce-page .credits p { font-size: .78rem; line-height: 1.7; color: #aaa; }
+@media (max-width: 750px) { .ce-page { padding: 1.25rem; } .ce-page .guide-panel { padding: 1rem; } .ce-page .build-grid, .ce-page .tip-grid { grid-template-columns: 1fr; } .ce-page .tier-row { grid-template-columns: 1fr; } .ce-page .hero-heading > img { width: 50px; height: 50px; } }
+@media (max-width: 500px) { .ce-page .basics-grid { grid-template-columns: 1fr; } .ce-page .jump-links { gap: .4rem; } .ce-page .jump-links a { padding: .6rem; font-size: .7rem; } }

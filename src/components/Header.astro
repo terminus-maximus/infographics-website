@@ -64,6 +64,26 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
         </div>
         <div class="submenu">
           <div class="submenu-header">
+            <a class="submenu-link" href="/campaign-event/" data-ga4-nav-section="ce_guides">CE Guides</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open CE Guides menu"
+              aria-expanded="false"
+              aria-controls="ce-guides-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="ce-guides-menu">
+            <a href="/campaign-event/admech/" data-ga4-nav-section="ce_guides">AdMech</a>
+            <a href="/campaign-event/tyranids/" data-ga4-nav-section="ce_guides">Tyranids</a>
+            <a href="/campaign-event/" data-ga4-nav-section="ce_guides">Explore All Guides</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
             <a class="submenu-link" href="/guild-raid" data-ga4-nav-section="guild_raid">Guild Raid</a>
             <button
               class="submenu-button"

@@ -1,0 +1,76 @@
+---
+import allCharacters from "../../data/campaigns/characters.json";
+import rewardIcons from "../../data/campaign-events/reward-icons.json";
+import { eventCharacters } from "../../lib/campaign-events";
+import type { EventRewards } from "../../data/campaign-events/types";
+interface Props { rewards: EventRewards; eventName: string; }
+const { rewards, eventName } = Astro.props;
+const portrait = (name: string) => {
+  const eventHero = Object.values(eventCharacters).find(hero => hero.name === name);
+  if (eventHero) return eventHero.portrait;
+  const hero = Object.values(allCharacters.characters).find(hero => hero.shortName === name || hero.name.includes(name) || name === 'Shadowsun' && hero.shortName === 'SS');
+  if (!hero) throw new Error(`Missing shard portrait for ${name}`);
+  return `/images/heroes/${hero.portrait}`;
+};
+const rewardIcon = (name: string) => {
+  const icon = (rewardIcons as Record<string, string>)[name];
+  if (!icon) throw new Error(`Missing reward icon for ${name}`);
+  return icon;
+};
+---
+<p class="intro">Repeatable shard farms and key Extremis rewards.</p>
+<div class="shard-grid">{rewards.shardFarms.map(shard => <article class="shard-card" data-reward="character-shards"><img src={portrait(shard.hero)} alt="" width="54" height="54" loading="lazy" /><h3>{shard.hero}</h3><p><strong>E{shard.regularStage}</strong><span>Regular shards</span></p><p><strong>E{shard.mythicStage}</strong><span>Mythic shards</span></p></article>)}</div>
+<table aria-label={`${eventName} Extremis rewards`}>
+  <thead><tr><th scope="col">Reward</th><th scope="col">Where to earn it</th></tr></thead>
+  <tbody>
+    <tr data-reward="chest-shards">
+      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <div class="reward-identity"><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span>{shard.hero} <strong class="quantity">×{shard.initialTotal}</strong><small>Chest shards · total</small></span></div>)}</div></th>
+      <td>First {rewards.chestTrack.initialChestCount} progress chests<small>Through {rewards.chestTrack.finalChestPoints.toLocaleString("en-US")} points, across Normal and Extremis</small></td>
+    </tr>
+    <tr data-reward="repeat-chest">
+      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <div class="reward-identity"><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span>{shard.hero} <strong class="quantity">×{shard.repeatQuantity}</strong><small>Chest shards · per repeat</small></span></div>)}</div></th>
+      <td>Repeatable final chest<small>Every {rewards.chestTrack.repeatPoints} additional progress points</small></td>
+    </tr>
+    {rewards.equipment.map(item => <tr data-reward={item.kind}>
+      <th scope="row"><div class="reward-identity"><img class="reward-icon" src={rewardIcon(item.name)} alt="" width="56" height="56" loading="lazy" /><span>{item.name}<small>{item.kind === "relic" ? item.exclusiveHero ? `${item.exclusiveHero} relic` : "Relic equipment" : "Mythic equipment"}</small></span></div></th>
+      <td><strong>E{item.stage}</strong> · Gold milestone<small>One-time reward</small></td>
+    </tr>)}
+    <tr data-reward="mythic-upgrade">
+      <th scope="row"><div class="reward-identity"><img class="reward-icon" src={rewardIcon(rewards.finalUpgrade)} alt="" width="56" height="56" loading="lazy" /><span>{rewards.finalUpgrade}<small>Mythic upgrade</small></span></div></th>
+      <td><strong>E30</strong> · repeatable drop</td>
+    </tr>
+  </tbody>
+</table>
+<p class="reward-note"><strong>Gold milestone:</strong> Lightning Victory with no characters lost and no borrowed heroes. Shard rows list repeatable drops; one-time shard bonuses are additional. Chest quantities are base rewards.</p>
+<p class="source">Source: Tacticus game data {rewards.source.gameVersion} · verified {rewards.source.verifiedAt}.</p>
+<style>
+  .shard-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1.5rem; }
+  .shard-card { text-align: center; border: 1px solid #3b3b3b; border-radius: 9px; padding: 1rem .5rem; background: #151515; }
+  .shard-card img { border-radius: 50%; border: 1px solid #555; background: #252525; }
+  .shard-card h3 { color: #eee; font-size: .75rem; margin: .5rem 0 .8rem; }
+  .shard-card p { margin: .45rem 0 0; font-size: .76rem; line-height: 1.5; }
+  .shard-card strong { color: #e4c55e; }
+  .shard-card span { display: block; color: #aaa; font-size: .65rem; }
+  @media (max-width: 600px) { .shard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .intro { margin: 0 0 1rem; color: #ccc; font-size: .9rem; line-height: 1.65; }
+  table { width: 100%; border-collapse: collapse; text-align: left; table-layout: fixed; font-size: .87rem; line-height: 1.6; }
+  th, td { padding: .85rem 1rem; border-bottom: 1px solid #393939; vertical-align: top; overflow-wrap: anywhere; }
+  thead th { color: #e4c55e; font-size: .78rem; font-weight: 600; background: #252218; }
+  thead th:first-child { width: 48%; }
+  tbody th { font-weight: 500; color: #eee; }
+  td { color: #ddd; }
+  td strong { color: #f1e5b7; font-weight: 600; white-space: nowrap; }
+  small { display: block; margin-top: .2rem; color: #aaa; font-size: .75rem; font-weight: 400; line-height: 1.5; }
+  .chest-rewards { display: grid; gap: .8rem; }
+  .reward-identity { display: flex; align-items: center; gap: .8rem; }
+  .reward-identity > span { min-width: 0; }
+  .reward-identity img { display: block; flex-shrink: 0; }
+  .reward-icon { object-fit: contain; padding: .25rem; border: 1px solid #645532; border-radius: 8px; background: #252218; }
+  .reward-portrait { border-radius: 50%; border: 1px solid #555; background: #252525; }
+  .quantity { color: #e4c55e; font-weight: 600; white-space: nowrap; }
+  .reward-note { color: #bbb; font-size: .78rem; line-height: 1.7; margin: 1rem 0 .5rem; }
+  .reward-note strong { color: #ddd; }
+  .source { color: #999; font-size: .7rem; line-height: 1.6; margin-bottom: 0; }
+  @media (max-width: 600px) { th, td { padding: .75rem .5rem; } table { font-size: .8rem; } small { font-size: .7rem; } .reward-identity { flex-direction: column; align-items: flex-start; gap: .5rem; } }
+</style>

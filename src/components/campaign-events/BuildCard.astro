@@ -1,0 +1,43 @@
+---
+import type { ResearchBuild } from '../../data/campaign-events/research-types';
+import { eventCharacters } from '../../lib/campaign-events';
+import { buildAction, buildLabel, environmentLabel } from '../../lib/campaign-event-display';
+import HeroStats from './HeroStats.astro';
+interface Props { build: ResearchBuild; requiredHeroIds: string[]; compact?: boolean; }
+const { build, requiredHeroIds, compact = false } = Astro.props;
+const pool = Boolean(build.recommendation?.supportPool);
+const supports = build.heroes.filter(hero => !requiredHeroIds.includes(hero.heroId));
+const pair = supports.map(hero => eventCharacters[hero.heroId].name).join(' + ');
+const title = pool ? 'Community support pool' : compact ? `E${build.stageId} · ${build.sourceLabel}` : pair || build.sourceLabel;
+const heroes = [...build.heroes].sort((a, b) => Number(requiredHeroIds.includes(b.heroId)) - Number(requiredHeroIds.includes(a.heroId)));
+---
+<article class:list={['build-card', { compact }]} id={build.id} data-build={build.id}>
+  <header><div><p class="eyebrow">{pool ? 'Choose your supports' : compact ? 'Battle replay' : 'E30 · Three medals'}</p><h3>{title}</h3></div>{environmentLabel(build) && <span class="badge">{environmentLabel(build)}</span>}</header>
+  {!compact && <p class="build-byline">{buildLabel(build)} · {build.sourceLabel}</p>}
+  {pool && <p class="pool-note">Three required heroes plus a choice of supports. This six-hero pool does not specify which two supports deployed together.</p>}
+  {compact ? <div class="replay-heroes">{heroes.map(hero => <img src={eventCharacters[hero.heroId].portrait} alt={eventCharacters[hero.heroId].name} title={eventCharacters[hero.heroId].name} width="42" height="42" loading="lazy" />)}</div> : <div class="build-team">{heroes.map(hero => <div class="build-hero"><div class="identity"><img src={eventCharacters[hero.heroId].portrait} alt="" width="44" height="44" loading="lazy" /><span>{eventCharacters[hero.heroId].name}<small>{requiredHeroIds.includes(hero.heroId) ? 'Required' : 'Support'}</small></span></div><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div>}
+  <div class="build-footer"><span>{build.outcome === 'three_medal' ? 'Three medals' : build.outcome === 'win_only' ? 'Victory · fewer than three medals' : 'Progression'}{build.lightning ? ' · Lightning' : ''}</span><a class="watch-link" href={build.resultSourceUrl || build.sourceUrl} target="_blank" rel="noopener noreferrer">{build.kind === 'clear' ? '▶ ' : ''}{buildAction(build)} ↗</a></div>
+  {compact && <details><summary>Team ranks &amp; abilities</summary><div class="build-team">{heroes.map(hero => <div class="build-hero"><span>{eventCharacters[hero.heroId].name}</span><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div></details>}
+  {heroes.some(hero => hero.unassignedAbilities || hero.reportedRank && hero.reportedRank.value !== hero.rank.value) && <details><summary>Build notes</summary><ul>{heroes.map(hero => <>{hero.unassignedAbilities && <li>{eventCharacters[hero.heroId].name}: {hero.unassignedAbilities}.</li>}{hero.reportedRank && hero.reportedRank.value !== hero.rank.value && <li>{eventCharacters[hero.heroId].name}: the replay shows {hero.rank.value}; the creator reports {hero.reportedRank.value}.</li>}</>)}</ul></details>}
+</article>
+<style>
+  .build-card { min-width: 0; padding: 1.25rem; border: 1px solid #3b3b3b; background: #151515; border-radius: 10px; scroll-margin-top: 1rem; }
+  header { display: flex; align-items: start; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+  .eyebrow { color: #ac965a; text-transform: uppercase; letter-spacing: .08em; font-size: .64rem; margin: 0 0 .35rem; }
+  h3 { margin: 0; color: #f3e5b9; font-size: 1rem; line-height: 1.5; }
+  .badge { padding: .2rem .5rem; border: 1px solid #645532; color: #e4c55e; background: #302b1e; border-radius: 4px; font-size: .66rem; white-space: nowrap; }
+  .build-byline, .pool-note { color: #bbb; font-size: .78rem; line-height: 1.6; }
+  .build-team { margin: 1rem 0; }
+  .build-hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem; border-top: 1px solid #303030; padding: .7rem 0; color: #eee; font-size: .8rem; }
+  .identity { display: flex; align-items: center; gap: .6rem; }
+  .identity img, .replay-heroes img { border: 1px solid #4b4b4b; border-radius: 50%; background: #252525; }
+  .identity small { display: block; color: #aaa; font-size: .65rem; margin-top: .2rem; }
+  .build-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 1rem; }
+  .build-footer > span { color: #aaa; font-size: .7rem; }
+  .watch-link { border: 1px solid #67582c; background: #2a2518; border-radius: 6px; padding: .55rem .7rem; text-decoration: none; color: #f1d277; font-size: .76rem; }
+  .watch-link:hover { background: #38301d; border-color: #d4af37; }
+  .replay-heroes { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+  details { border-top: 1px solid #333; margin-top: 1rem; }
+  summary { color: #d5bd74; font-size: .75rem; cursor: pointer; padding: .7rem 0 0; }
+  li { color: #bbb; font-size: .75rem; line-height: 1.65; }
+</style>

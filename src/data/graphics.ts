@@ -1,3 +1,5 @@
+import { campaignEventCatalog } from "./campaign-events/catalog";
+import eventData from "./campaign-events/guides.json";
 import { currentGuildRaidSeason } from "./guildRaid";
 import characterSource from "./campaigns/characters.json";
 import requiredRecommendations from "./campaigns/required-recs.json";
@@ -51,6 +53,18 @@ type GraphicDefinition = Omit<Graphic, "recommendationImage" | "lifecycle"> & {
 };
 
 const graphicDefinitions: GraphicDefinition[] = [
+    ...campaignEventCatalog.map(event => ({
+      title: `${event.name} CE`,
+      href: `/campaign-event/${event.slug}/`,
+      description: event.description,
+      image: `/images/ce-${event.slug}.png`,
+      thumbnail: `/images/thumbnails/ce-${event.slug}-thumb.png`,
+      category: "ce-guides",
+      requiredHeroes: eventData.events.find(guide => guide.slug === event.slug)!.requiredHeroIds.map(id => {
+        const hero = (eventData.characters as Record<string, RequiredHeroIcon>)[id];
+        return { name: hero.name, portrait: hero.portrait };
+      }),
+    })),
     {
       title: "Beginner Guide",
       href: "/beginner-guide",
@@ -237,9 +251,9 @@ const graphicDefinitions: GraphicDefinition[] = [
       lifecycle: "retired"
     },
     {
-      title: "Campaign Event",
+      title: "Campaign Event Guides",
       href: "/campaign-event",
-      description: "Next CE begins Oct 15",
+      description: "Explore all six CE paths, teams, replays, and Extremis rewards.",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
       category: "event"

@@ -15,6 +15,14 @@ const campaignGuides = discoveryGraphics.filter(
       "/campaigns/",
     ].includes(g.href),
 );
+const ceGuides = [
+  "/campaign-event/admech/",
+  "/campaign-event/tyranids/",
+  "/campaign-event",
+].map((href) => {
+  const graphic = discoveryGraphics.find((graphic) => graphic.href === href)!;
+  return { ...graphic, title: href === "/campaign-event" ? "Explore All CE" : graphic.title };
+});
 const guildRaids = discoveryGraphics.filter(
   (g) => g.category === "raid" && g.href !== "/guild-raid/archive",
 );
@@ -44,7 +52,7 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 <section class="content-section">
   <header class="content-section-heading">
     <a href="/campaign-event">
-      <h2>Campaign Event Guide</h2>
+      <h2>Campaign Event Guides</h2>
       <p class="campaign-event-subtitle">Choose your CE on Oct 15</p>
     </a>
   </header>
@@ -192,6 +200,33 @@ This entire block is commented out.
             />
           </div>
 
+          <div class="card-title-row">
+            <h3>{graphic.title}</h3>
+          </div>
+          {graphic.requiredHeroes?.length ? (
+            <RequiredHeroIcons heroes={graphic.requiredHeroes} />
+          ) : (
+            <p>{graphic.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="ce-guides">
+    <h2>CE Guides</h2>
+
+    <div class="card-grid">
+      {ceGuides.map((graphic) => (
+        <a class="card" href={graphic.href}>
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
           <div class="card-title-row">
             <h3>{graphic.title}</h3>
           </div>

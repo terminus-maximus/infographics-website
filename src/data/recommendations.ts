@@ -7,6 +7,8 @@ export const normalizeRecommendationPath = (value: string): string => {
   return withLeadingSlash === "/" ? "/" : withLeadingSlash.replace(/\/+$/, "");
 };
 
+const ceRoutes = discoveryGraphics.filter(graphic => graphic.category === "ce-guides").map(graphic => graphic.href);
+
 const campaignCompanions = ["/beginner-guide", "/elite-campaigns", "/campaigns"];
 const campaignRoutes = [
   "/campaigns/indomitus",
@@ -27,6 +29,7 @@ const guildRaidRoutes = {
 };
 
 export const relatedGuideRoutes: Record<string, string[]> = Object.fromEntries([
+  ...ceRoutes.map(route => [route, ["/campaign-event", ...ceRoutes.filter(companion => companion !== route)]]),
   ["/beginner-guide", ["/campaigns", ...campaignRoutes]],
   ["/elite-campaigns", ["/campaigns", ...campaignRoutes]],
   ...campaignRoutes.map((route) => [route, campaignCompanions]),

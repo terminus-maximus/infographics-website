@@ -1,0 +1,26 @@
+---
+import { abilityIcon, rankDisplay } from '../../lib/campaign-event-display';
+interface Props { heroId: string; rank?: string | number | null; active?: string | number | null; passive?: string | number | null; }
+const { heroId, rank = null, active = null, passive = null } = Astro.props;
+const badge = rankDisplay(rank);
+---
+<div class="hero-stats">
+  <span class="stat rank" title={badge.name} aria-label={`Rank: ${badge.name}`}>
+    {badge.src && <img src={badge.src} alt="" width="28" height="28" loading="lazy" />}<strong>{badge.label}</strong>
+  </span>
+  <span class="stat" title={`Active: ${active ?? 'not recorded'}`} aria-label={`Active ability: ${active ?? 'not recorded'}`}>
+    <img src={abilityIcon(heroId, 'Active')} alt="" width="28" height="28" loading="lazy" /><strong>{active ?? '—'}</strong><small>Active</small>
+  </span>
+  <span class="stat" title={`Passive: ${passive ?? 'not recorded'}`} aria-label={`Passive ability: ${passive ?? 'not recorded'}`}>
+    <img src={abilityIcon(heroId, 'Passive')} alt="" width="28" height="28" loading="lazy" /><strong>{passive ?? '—'}</strong><small>Passive</small>
+  </span>
+</div>
+<style>
+  .hero-stats { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1rem; }
+  .stat { display: grid; grid-template-columns: 28px auto; align-items: center; column-gap: .35rem; color: #eee; }
+  .stat img { object-fit: contain; grid-row: 1 / 3; }
+  .stat strong { font-size: .95rem; font-weight: 600; line-height: 1.2; }
+  .stat small { font-size: .6rem; color: #aaa; line-height: 1.2; }
+  .rank { color: #f1d277; }
+  @media (max-width: 600px) { .hero-stats { gap: .5rem .35rem; } .rank { flex-basis: 100%; display: flex; } .stat { grid-template-columns: 20px auto; column-gap: .2rem; } .stat img { width: 20px; height: 20px; } .stat small { font-size: .55rem; } .stat strong { font-size: .85rem; } }
+</style>

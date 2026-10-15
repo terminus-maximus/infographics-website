@@ -1,0 +1,47 @@
+---
+import '../../styles/campaign-events.css';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import RecommendationSections from '../RecommendationSections.astro';
+import InvestmentTeam from './InvestmentTeam.astro';
+import BuildCard from './BuildCard.astro';
+import EventRewards from './EventRewards.astro';
+import { eventCharacters, eventSnapshot, guideHref } from '../../lib/campaign-events';
+import { campaignEventCatalog, factionIcons } from '../../data/campaign-events/catalog';
+import { eventNotes } from '../../data/campaign-events/presentation';
+import { formatInfographicDate } from '../../lib/infographicDates';
+import type { CampaignEventGuide } from '../../data/campaign-events/types';
+interface Props { guide: CampaignEventGuide; }
+const { guide } = Astro.props;
+const meta = campaignEventCatalog.find(event => event.slug === guide.slug)!;
+const notes = eventNotes[guide.slug];
+const selectedIds = new Set(guide.research.lowestSeen.recordIds);
+const teamIds = new Set(guide.research.e30Teams.flatMap(team => team.recordIds));
+const alternatives = guide.research.builds.filter(build => teamIds.has(build.id) && !selectedIds.has(build.id));
+const pools = guide.research.builds.filter(build => build.recommendation?.supportPool);
+const replays = guide.research.builds.filter(build => build.kind === 'clear' && !teamIds.has(build.id)).sort((a,b) => parseInt(a.stageId || '0') - parseInt(b.stageId || '0'));
+const tierLabels = { S: 'Lowest Seen E30 team', A: 'Other E30 three-medal options', B: 'Other Extremis use', C: 'Other eligible heroes' };
+const sources = [...new Map(guide.research.builds.map(build => { const url = new URL(build.sourceUrl); url.searchParams.delete('t'); return [url.href, { url: url.href, name: build.sourceLabel }]; })).values()];
+const fullImage = `/images/ce-${guide.slug}.png`;
+const webImage = `/images/web/ce-${guide.slug}.webp`;
+---
+<Layout title={`${guide.displayTitle} CE Guide | Terminus Maximus`} description={`${guide.displayTitle} Campaign Event guide: Lowest Seen and Safe Bet teams, alternate E30 clears, replays, and Extremis rewards.`} image={webImage} url={`https://terminusmaximus.com${guideHref(guide)}`}>
+  <Header />
+  <main class="ce-page">
+    <header class="ce-hero"><a class="back-link" href="/campaign-event/">← All CE Guides</a><div class="hero-heading"><img src={`/images/factions/${meta.icon}.png`} alt="" width="68" height="68" /><div><p class="eyebrow">Campaign Event · Extremis</p><h1>{guide.displayTitle} CE Guide</h1></div></div><p class="intro">{meta.description}</p><div class="play-as">Play as {guide.playableFactions.map(faction => <span><img src={`/images/factions/${factionIcons[faction]}.png`} alt="" width="26" height="26" />{faction}</span>)}</div></header>
+    <figure class="ce-infographic"><a href={fullImage} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={`${guide.displayTitle} CE Guide`} data-ga4-link-source="image"><img src={webImage} alt={`${guide.displayTitle} Campaign Event infographic: required heroes, Lowest Seen and Safe Bet investment, supports, and rewards`} width="1200" height="675" fetchpriority="high" /></a><figcaption><span>Guide updated <time datetime={eventSnapshot.updatedAt}>{formatInfographicDate(eventSnapshot.updatedAt)}</time></span><a href={fullImage} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={`${guide.displayTitle} CE Guide`} data-ga4-link-source="full-size-link">Open full-size infographic ↗</a></figcaption></figure>
+    <nav class="jump-links" aria-label="On this page"><a href="#lowest-seen">Lowest Seen &amp; Safe Bet</a><a href="#alternates">Alternate Options</a><a href="#replays">Replays</a><a href="#supports">Support Roster</a><a href="#tactics">Battle Tips</a><a href="#rewards">Rewards</a></nav>
+    <section class="guide-panel" id="lowest-seen" aria-labelledby="lowest-heading"><div class="section-heading"><span>01</span><h2 id="lowest-heading">Your team for E30</h2></div><p class="section-intro">Three required heroes. Two supports. Aim for three medals on Extremis 30.</p><InvestmentTeam guide={guide} /><p class="callout">{notes.teamSummary}</p></section>
+    <section class="guide-panel" id="alternates" aria-labelledby="alternates-heading"><div class="section-heading"><span>02</span><h2 id="alternates-heading">Alternate Options</h2></div><p class="section-intro">{guide.slug === 'admech' || guide.slug === 'tau' ? 'More E30 three-medal builds with the same support pair. Each keeps the investment from its own replay or recommendation.' : 'Other E30 three-medal teams and builds. Pick the option that best fits your roster.'}</p><div class="build-grid">{[...alternatives, ...pools].map(build => <BuildCard build={build} requiredHeroIds={guide.requiredHeroIds} />)}</div></section>
+    <section class="guide-panel" id="replays" aria-labelledby="replays-heading"><div class="section-heading"><span>03</span><h2 id="replays-heading">More useful replays</h2></div><p class="section-intro">See the positioning, opening moves, and ability timing on earlier Extremis stages. E30 links are with the teams above.</p><div class="build-grid">{replays.map(build => <BuildCard build={build} requiredHeroIds={guide.requiredHeroIds} compact />)}</div></section>
+    <section class="guide-panel" id="supports" aria-labelledby="supports-heading"><div class="section-heading"><span>04</span><h2 id="supports-heading">Choose your supports</h2></div>{Object.entries(tierLabels).map(([tier, label]) => {
+      const heroes = guide.supportingHeroes.filter(hero => hero.tier === tier).sort((a,b) => eventCharacters[a.heroId].name.localeCompare(eventCharacters[b.heroId].name));
+      return heroes.length > 0 && <div class="tier-row"><div class="tier-title"><b>{tier}</b><span>{label}</span></div><div class="support-roster">{heroes.map(hero => <div class="support-hero" title={hero.rationale}><img src={eventCharacters[hero.heroId].portrait} alt="" width="52" height="52" loading="lazy" /><span>{eventCharacters[hero.heroId].name}</span></div>)}</div></div>;
+    })}</section>
+    <section class="guide-panel" id="tactics" aria-labelledby="tactics-heading"><div class="section-heading"><span>05</span><h2 id="tactics-heading">Battle Tips</h2></div><div class="tip-grid">{notes.tips.map(tip => <article class="tip"><span>{tip.stage}</span><h3>{tip.title}</h3><p>{tip.text}</p></article>)}</div></section>
+    <section class="guide-panel" id="rewards" aria-labelledby="rewards-heading"><div class="section-heading"><span>06</span><h2 id="rewards-heading">Extremis rewards</h2></div><EventRewards rewards={guide.rewards} eventName={guide.displayTitle} /></section>
+    <details class="guide-panel credits"><summary>Credits &amp; research notes</summary><p>Thanks to the players and creators who shared their clears. Lowest Seen combines recorded builds and community reports; Safe Bet is our recommendation. QA and test-server footage is labelled where it appears.</p><p>Community infographic recommendations are credited to <a href="https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242" target="_blank" rel="noopener noreferrer">Forgotten Saber and the contributing players</a>.</p><ul>{sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a></li>)}</ul></details>
+    <RecommendationSections showMoreToExplore={false} />
+  </main><Footer />
+</Layout>
