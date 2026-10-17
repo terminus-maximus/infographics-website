@@ -4,6 +4,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
 import { discoveryGraphics } from "../data/graphics";
+import { guildRaidImageExists } from "../lib/guildRaidAssets";
+
+const season112Image = [
+  "/images/web/guild-raid-s112-mythic.webp",
+  "/images/guild-raid-s112-mythic.png",
+].find((image) => guildRaidImageExists(image));
 
 const startHere = discoveryGraphics.filter((g) => g.category === "start");
 const campaignGuides = discoveryGraphics.filter(
@@ -51,30 +57,6 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
 <section class="content-section">
   <header class="content-section-heading">
-    <a href="/campaign-event">
-      <h2>Campaign Event Guides</h2>
-      <p class="campaign-event-subtitle">Choose your CE on Oct 15</p>
-    </a>
-  </header>
-
-  <a href="/campaign-event" class="image-link">
-    <img
-      src="/images/web/campaign-event.webp"
-      alt="Campaign Event Guide"
-      class="infographic"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/campaign-event" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
     <a href="/hre">
       <h2>HRE Mission Guide</h2>
       <p class="hre-subtitle">Play to unlock Zapspitta on Oct 18</p>
@@ -92,6 +74,34 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
   <p class="caption">
     <a href="/hre" class="caption-link">
+      LEARN MORE
+    </a>
+  </p>
+</section>
+
+<section class="content-section">
+  <header class="content-section-heading">
+    <a href="/guild-raid/s112">
+      <h2>Guild Raid Season 112</h2>
+      <p class="guild-raid-subtitle">Boss lineups, maps, and recommended teams</p>
+    </a>
+  </header>
+
+  {season112Image ? (
+    <a href="/guild-raid/s112" class="image-link">
+      <img
+        src={season112Image}
+        alt="Guild Raid Season 112 Mythic Bosses Infographic"
+        class="infographic"
+        loading="lazy"
+      />
+    </a>
+  ) : (
+    <div class="infographic-placeholder" aria-hidden="true" />
+  )}
+
+  <p class="caption">
+    <a href="/guild-raid/s112" class="caption-link">
       LEARN MORE
     </a>
   </p>
@@ -572,8 +582,8 @@ This entire block is commented out.
   line-height: 1.5;
 }
 
-.content-section-heading .campaign-event-subtitle,
 .content-section-heading .hre-subtitle,
+.content-section-heading .guild-raid-subtitle,
 .content-section-heading .fabius-subtitle {
   color: #ffffff;
 }
@@ -607,6 +617,12 @@ This entire block is commented out.
   height: auto;
   border-radius: 8px;
   display: block;
+  margin: 0 auto;
+}
+
+.infographic-placeholder {
+  height: 160px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
