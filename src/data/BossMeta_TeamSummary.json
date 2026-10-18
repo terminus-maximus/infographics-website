@@ -138,9 +138,9 @@
     "hero_4": "Aesoth",
     "hero_5": "Dante",
     "mow": "Biovore",
-    "replay_count": 31,
-    "average_damage": 990193.55,
-    "max_damage": 1210000
+    "replay_count": 33,
+    "average_damage": 999878.79,
+    "max_damage": 1300000
   },
   {
     "boss_clean": "Lion",
@@ -216,8 +216,8 @@
     "hero_4": "Ammuk",
     "hero_5": "Traj",
     "mow": "Reanimator",
-    "replay_count": 4,
-    "average_damage": 1274217.25,
+    "replay_count": 5,
+    "average_damage": 1279373.8,
     "max_damage": 1480000
   },
   {
