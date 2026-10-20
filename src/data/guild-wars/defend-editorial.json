@@ -1,42 +1,55 @@
 {
-  "edition": "September 2026",
+  "edition": "October 2026",
   "title": "Guild War Top 10 Defend Teams",
   "description": "Explore ten Guild War defend teams and their most common counters.",
   "cardDescription": "Guild War Top 10 Defend Teams and their most common counters",
-  "captureDate": "September 6, 2026",
-  "extractionDate": "September 12, 2026",
+  "captureDate": "October 6, 2026",
+  "reportDate": "October 18, 2026",
+  "presentationDate": "October 19, 2026",
   "infographic": {
     "png": "/images/guild-wars-defend.png",
     "webp": "/images/web/guild-wars-defend.webp",
     "thumbnail": "/images/thumbnails/guild-wars-defend-thumb.png",
     "width": 700,
-    "height": 393,
+    "height": 394,
     "thumbnailWidth": 600,
     "thumbnailHeight": 337
   },
   "teams": [
+    {
+      "id": "D_bef6bbe9854322",
+      "title": "Z’kar Psykers",
+      "anchor": "zkar-psykers",
+      "heroes": [
+        "deathTyphus",
+        "thousTerminator",
+        "blackObliterator",
+        "emperLucius",
+        "worldTerminator"
+      ]
+    },
     {
       "id": "D1",
       "title": "Death Guard",
       "anchor": "death-guard",
       "heroes": [
         "deathBlightlord",
-        "deathBlightbringer",
         "deathRotbone",
+        "deathBlightbringer",
         "deathTyphus",
         "thousTerminator"
       ]
     },
     {
-      "id": "D2",
-      "title": "Necrons",
-      "anchor": "necrons",
+      "id": "D_08f961bcca1238",
+      "title": "GSC",
+      "anchor": "genestealers",
       "heroes": [
-        "necroSpyder",
-        "necroDestroyer",
-        "necroOverlord",
-        "necroPlasmancer",
-        "necroChronomancer"
+        "genesKelermorph",
+        "genesPrimus",
+        "genesBiophagus",
+        "genesMagus",
+        "emperLucius"
       ]
     },
     {
@@ -52,15 +65,39 @@
       ]
     },
     {
-      "id": "D4",
-      "title": "Black Legion",
-      "anchor": "black-legion",
+      "id": "D_a266055437f16b",
+      "title": "DG Ranged",
+      "anchor": "dg-ranged",
       "heroes": [
-        "blackAbaddon",
-        "blackHaarken",
         "blackObliterator",
-        "blackPossession",
-        "blackTerminator"
+        "tauMarksman",
+        "deathBlightlord",
+        "deathRotbone",
+        "blackAbaddon"
+      ]
+    },
+    {
+      "id": "D_bf5e1eaa8f3d87",
+      "title": "Blood Angels",
+      "anchor": "blood-angels",
+      "heroes": [
+        "bloodMephiston",
+        "bloodDeathCompany",
+        "bloodIntercessor",
+        "bloodSanguinary",
+        "bloodDante"
+      ]
+    },
+    {
+      "id": "D_585c5519ff4ba9",
+      "title": "Mechs",
+      "anchor": "mechs",
+      "heroes": [
+        "admecMarshall",
+        "admecManipulus",
+        "necroSpyder",
+        "orksWarboss",
+        "tauCrisis"
       ]
     },
     {
@@ -76,63 +113,27 @@
       ]
     },
     {
-      "id": "D6",
-      "title": "Dark Angels",
-      "anchor": "dark-angels",
-      "heroes": [
-        "darkaCompanion",
-        "darkaAzrael",
-        "darkaAsmodai",
-        "darkaHellblaster",
-        "darkaTerminator"
-      ]
-    },
-    {
-      "id": "D7",
-      "title": "Tyranids",
-      "anchor": "tyranids",
-      "heroes": [
-        "tyranDeathleaper",
-        "tyranNeurothrope",
-        "tyranParasite",
-        "tyranTyrantGuard",
-        "tyranWingedPrime"
-      ]
-    },
-    {
-      "id": "D8",
-      "title": "Ultramarines",
-      "anchor": "ultramarines",
-      "heroes": [
-        "ultraCalgar",
-        "ultraTitus",
-        "ultraInceptorSgt",
-        "ultraTigurius",
-        "ultraApothecary"
-      ]
-    },
-    {
       "id": "D9",
       "title": "Custodes",
       "anchor": "custodes",
       "heroes": [
         "custoBladeChampion",
         "custoTrajann",
-        "bloodDante",
         "worldKharn",
-        "spaceBlackmane"
+        "spaceBlackmane",
+        "bloodDante"
       ]
     },
     {
-      "id": "D10",
-      "title": "Mech",
-      "anchor": "mech",
+      "id": "D_23f1d8cc6ad754",
+      "title": "AdMech",
+      "anchor": "admech",
       "heroes": [
         "admecRuststalker",
         "admecMarshall",
         "admecManipulus",
         "admecDominus",
-        "admecDestroyer"
+        "tauMarksman"
       ]
     }
   ]

@@ -35,9 +35,9 @@ const span = (values: number[]) => values.join('–');
           <summary id="criteria-title">Criteria</summary>
           <div class="disclosure-body">
             <ul class="methodology-notes">
-              <li><strong>10 complete teams, 50 distinct heroes.</strong> Each defense has exactly five heroes, with no hero reused across the selected ten. Machines of War may repeat.</li>
-              <li><strong>Failure Rate shaped the original selection.</strong> Candidates needed at least 100 attempts, 10 wars and five known defending guilds, with no more than 30% of attempts from one war or 50% from one guild. This was the first tested support level that allowed ten teams without shared heroes.</li>
-              <li><strong>Current ordering by Failure Rate.</strong> Highest first</li>
+              <li><strong>10 complete teams, 35 distinct heroes.</strong> Each hero appears at most twice, and no pair of teams shares more than two heroes. Teams with shared heroes are alternatives; Machines of War may repeat.</li>
+              <li><strong>Evidence across wars.</strong> Candidates needed at least 89 attempts, 10 wars and five known defending guilds, with no more than 20% of attempts from one war or 50% from one guild. This was the highest attempt threshold that allowed ten teams under the overlap limits.</li>
+              <li><strong>Ordered by Failure Rate.</strong> Highest unrounded rate first.</li>
               <li><strong>Complete battle records.</strong> Both clears and failures count. Cleanup attacks and incomplete or ambiguous records are excluded from performance metrics.</li>
             </ul>
           </div>
@@ -45,7 +45,7 @@ const span = (values: number[]) => values.join('–');
         <details class="methods-section">
           <summary id="data-source-title">Data Sources</summary>
           <div class="disclosure-body">
-            <p>Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Detailed results use the verified source counts. Logs were captured {editorial.captureDate} and extracted {editorial.extractionDate}; the report's community names and hero order were updated September 13, 2026.</p>
+            <p>Source: <a href="https://www.tacticus.xyz/">TacticusXYZ</a>. Captures end {editorial.captureDate}; the report is dated {editorial.reportDate}, with community names and hero order updated {editorial.presentationDate}.</p>
             <dl class="source-facts">
               <div><dt>Edition</dt><dd>{editorial.edition}</dd></div>
               <div><dt>Seasons</dt><dd>{scope.seasons[0]}–{scope.seasons.at(-1)}</dd></div>
@@ -54,7 +54,7 @@ const span = (values: number[]) => values.join('–');
               <div><dt>Eligible non-cleanup attacks</dt><dd>{number(scope.eligibleAttacks)}</dd></div>
               <div><dt>Exact selected-defense attempts</dt><dd>{number(scope.exactDefenseAttempts)}</dd></div>
             </dl>
-            <p>The fixed Season 24–26 / BF1–5 sample contains {number(scope.records)} recorded attacks before exclusions. Counter results use this wider Battlefield scope; the <a href="/guild-wars/attack/">attack page</a> shows its own BF4–5 results.</p>
+            <p>The Season {scope.seasons[0]}–{scope.seasons.at(-1)} / BF{scope.tiers[0]}–{scope.tiers.at(-1)} sample contains {number(scope.records)} recorded attacks before exclusions. The <a href="/guild-wars/attack/">attack page</a> uses the same seasonal and Battlefield scope.</p>
           </div>
         </details>
         <details class="methods-section">
@@ -79,12 +79,12 @@ const span = (values: number[]) => values.join('–');
           <div class="disclosure-body">
             <ul class="methodology-notes">
               <li><strong>Defense performance:</strong> Main metrics and Battlefield results require all five named defenders and their selected, most common Machine of War. All eligible opponents count, whether or not they contain a listed attack core.</li>
-              <li><strong>Counter matching:</strong> Every named attack core hero must be present; remaining heroes and both Machines of War are unrestricted. The observed defense must share at least three of the target team's five heroes, including four- and five-hero matches. Blood Angels requires all five named heroes; its attack-page four-of-five flex cohort is excluded here.</li>
+              <li><strong>Counter matching:</strong> Every named attack core hero must be present; remaining heroes and both Machines of War are unrestricted. The observed defense must share at least three of the target team's five heroes. GSC, Blood Angels and Orks require all five named heroes; their four-of-five flex cohorts are excluded here.</li>
               <li><strong>Counter order and support:</strong> All ten attack cores remain visible for every defense, sorted by total clear count descending, then attempts, wars and canonical core ID. Supported means at least 30 eligible attempts across 10 wars; smaller samples are Low support, and zero attempts means No data. Support labels describe the overall matchup, not each Meds Up subset.</li>
-              <li><strong>One attack, one observation:</strong> Repeated captures and multiple matching hero trios do not multiply a battle's weight. The same attack counts once within a matchup.</li>
+              <li><strong>One attack, one observation:</strong> Each attack counts once within a matchup, even if several hero trios match. Related defenses can share observations, so their counter totals are not additive.</li>
               <li><strong>Eligible outcomes:</strong> Performance requires five distinct identified heroes on each side, known death states, and the source's initial-convention marker (an em dash with no numeric debuff). A numeric debuff of at least one is Cleanup; numeric zero or ambiguous markers are excluded. The marker does not verify full starting health or the first attack against a deployment.</li>
               <li><strong>Machines of War:</strong> Only options with at least 5% unrounded usage are shown, ordered by occurrence count. Missing or ambiguous Machines remain in the denominator. Recorded support does not establish that its abilities were activated, and the most common option is not selected by its failure rate.</li>
-              <li><strong>Battlefield composition:</strong> BF1–5 attempts sum to each team's total. Share describes where this team's observations occurred, not its prevalence among all defenses in a tier. Meds Up failure rates are calculated directly from the saved attempts for each Battlefield.</li>
+              <li><strong>Battlefield composition:</strong> BF4–5 attempts sum to each team's total. Share describes where this team's observations occurred, not its prevalence among all defenses in a tier. Meds Up failure rates use the saved attempts for each Battlefield.</li>
               <li><strong>Interpreting results:</strong> These are observed uploaded logs, not all Guild War play. Tier mix, opponent choice, power, caps, maps, season and repeated wars are not adjusted for. Broader counter rates do not directly estimate the exact five-hero-plus-Machine matchup, and Meds Up comparisons do not measure Medicae's causal effect.</li>
             </ul>
           </div>

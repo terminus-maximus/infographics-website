@@ -16,10 +16,10 @@ const localMows = {
   'mow:tyran_biovore_01': 'Biovore',
   'mow:ultra_dreadnought_01': 'Galatian',
 };
-// The source's short_name is Nauseous; use the requested, registry-grounded surname.
-const characterNames = { deathRotbone: 'Rotbone' };
+// Accepted short names; the registry labels these Nauseous and Sekhetar Robot.
+const characterNames = { deathRotbone: 'Rotbone', thousSekhetar: 'Sekhetar' };
 // Tacticus.xyz labels the Reanimator portrait as Thothmek; correct only this MoW ID.
-const mowNames = { 'mow:necro_reanimator_01': 'Reanimator' };
+const mowNames = { 'mow:necro_reanimator_01': 'Reanimator', 'mow:death_crawler_01': 'PBC' };
 // Repair UTF-8 bytes misread as Mac Roman in four registry labels; IDs stay untouched.
 const repairName = name => name.replaceAll('√¢', 'â').replaceAll('√Ç', 'Â').replaceAll('√õ', 'Û');
 export const fraction = (n, d) => d ? n / d : null;
@@ -56,7 +56,8 @@ function stats(row) {
 }
 
 export function normalizeReport(report, mapping = editorial) {
-  assert(Array.isArray(report.cards) && report.registry && report.audit && report.discovery, 'Expected a complete report-data object (HTML or JSON export).');
+  const discovery = report.summary || report.discovery;
+  assert(Array.isArray(report.cards) && report.registry && report.audit && discovery, 'Expected a complete report-data object (HTML or JSON export).');
   const cards = new Map(report.cards.map(c => [c.core_id, c]));
   const expected = mapping.teams.map(t => t.id);
   assert.equal(cards.size, report.cards.length, 'Duplicate source core IDs');
@@ -71,6 +72,11 @@ export function normalizeReport(report, mapping = editorial) {
   const teams = mapping.teams.map(meta => {
     const card = cards.get(meta.id);
     assert.deepEqual([...meta.core].sort(), [...card.core].sort(), `Core membership changed: ${meta.id}`);
+    if (card.display_order) {
+      assert.deepEqual(meta.core, card.display_order, `Hero presentation changed: ${meta.id}`);
+      assert.equal(meta.core[0], card.captain, `Captain changed: ${meta.id}`);
+      assert.equal(meta.title, card.name, `Team name changed: ${meta.id}`);
+    }
     assert.equal(meta.id, `c_${[...card.core].sort().join('_')}`);
     const base = stats(card);
     checkRate(card.perfect_rate, base.perfect, base.attempts, 'Perfect / all attempts');
@@ -137,7 +143,6 @@ export function normalizeReport(report, mapping = editorial) {
     let flexAnalysis;
     if (card.flex_analysis) {
       const source = card.flex_analysis;
-      assert.equal(meta.anchor, 'blood-angels', 'Four-of-five flex is specific to Blood Angels');
       assert.equal(card.core.length, 5);
       assert.equal(source.mode, 'any_four_of_five');
       assert.equal(source.minimum_core_members, 4);
@@ -152,7 +157,7 @@ export function normalizeReport(report, mapping = editorial) {
         const numerator = source.win_profile.counts[key], denominator = source.win_profile.denominators[key];
         const rate = source.win_profile.rates[key];
         assert(numerator >= 0 && numerator <= denominator);
-        checkRate(rate, numerator, denominator, `Blood Angels flex ${key}`);
+        checkRate(rate, numerator, denominator, `${meta.title} flex ${key}`);
         return [key, { numerator, denominator, rate }];
       }));
       assert.equal(source.win_profile.wins, cohort.clears);
@@ -172,7 +177,7 @@ export function normalizeReport(report, mapping = editorial) {
       assert.equal(sum(medsUp,'perfect'), flexMetrics.perfect_meds_up.numerator);
       const flexRows = [...source.individual_flex].sort(usageOrder).map(row => {
         stats(row);
-        assert(!card.core.includes(row.unit), 'Named Blood Angels hero cannot be a replacement');
+        assert(!card.core.includes(row.unit), 'Named core hero cannot be a replacement');
         const containing = source.variants.filter(v => v.team.includes(row.unit));
         for (const key of ['attacks','clears','failures']) assert.equal(sum(containing,key),row[key], 'Replacement evidence differs from actual lineups');
         usedUnits.add(row.unit);
@@ -202,10 +207,10 @@ export function normalizeReport(report, mapping = editorial) {
     return [id, { name: repairName(mowNames[id] || characterNames[id] || unit.short_name || unit.name), kind: unit.kind, image }];
   }));
   const scopeRows = report.audit.by_season_tier;
-  assert.equal(sum(scopeRows, 'eligible'), report.discovery.eligible);
+  assert.equal(sum(scopeRows, 'eligible'), discovery.eligible);
   return {
     schemaVersion: 1,
-    scope: { seasons: [...new Set(scopeRows.map(r => r.season))].sort((a,b) => a-b), tiers: [...new Set(scopeRows.map(r => r.tier))].sort((a,b) => a-b), wars: report.audit.war_count, eligibleAttacks: report.discovery.eligible },
+    scope: { seasons: [...new Set(scopeRows.map(r => r.season))].sort((a,b) => a-b), tiers: [...new Set(scopeRows.map(r => r.tier))].sort((a,b) => a-b), wars: report.audit.wars_with_attacks ?? report.audit.war_count, eligibleAttacks: discovery.eligible },
     units, teams,
   };
 }

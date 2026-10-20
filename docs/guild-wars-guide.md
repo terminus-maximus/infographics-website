@@ -2,6 +2,26 @@
 
 The local dataset builds independently of the analysis project. Normal `npm run dev` and `npm run build` never read or refresh the research source. No new package is required.
 
+## Current release — October 19, 2026
+
+Accepted sources, including the October 19 community names and captain-first portrait orders:
+
+- Attack: `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/attacker_core_discovery/2026-10-18-v9-win-rate/index.html`
+- Defend: `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/defender_core_discovery/2026-10-18-s25-s27/index.html`
+- Defender reconciliation input: the latter report's `inputs/attacks.jsonl.gz`. The importer also recognizes the older `extraction/exports/attacks.jsonl.gz` layout.
+
+Both pages now use S25–27 / BF4–5, with 69,521 eligible attacks and 162 wars containing observations (163 indexed, one source-empty). Attack has 41 distinct core heroes, ranked by unrounded clear rate. GSC, Blood Angels and Orks each retain a separate four-of-five replacement cohort; main metrics still require the whole core. Existing attack anchors, tips, display cutoffs and five-row evidence tables are retained. Tips mentioning Ahriman or Shadowsun now identify them as flex where appropriate.
+
+Defend has ten ranked exact-five representatives using 35 distinct heroes. Each hero appears at most twice; pairs share at most two heroes. The evidence floor is 89 attempts / 10 wars / 5 guilds, with 20% war and 50% guild concentration caps. There are 2,275 exact-defense attempts. Counter populations can overlap: the importer counts each observation once in **every** matching defense/core cell and reconciles all 100 cells against the report. The website preserves its total-clears-first order, all ten counters, four counter metrics, 5% MoW cutoff, and Battlefield disclosure (now BF4 and BF5). The source's extra defender-flex panels and deployment tools are not added to the website.
+
+The supplied PNGs, WebPs and thumbnails are used unchanged; display dimensions match the new derivatives. PBC naming is consistent across both pages. Full source reconciliation covers 39 attacker tables and 20 defender Battlefield/Medicae rows, plus captain icons, ordered core/counter portraits and links. Source reports are read-only.
+
+Validation: all 56 static pages build. Both focused checks pass with their accepted source HTMLs. Browser checks at 1280px, 390px and 320px find no broken images, page-level overflow or JavaScript errors, including all expanded disclosures; keyboard toggling and horizontal evidence-table scrolling work. The local date audit verifies all 22 dated pages, including both October 19 Guild Wars headers. The repository-wide Astro check reports 65 errors, with no Guild Wars diagnostics. The separate LRE check stops at `farsight: missing Other Resources`; no LRE files changed in this refresh.
+
+The October artwork is committed as `0b12402`. Both header dates use `2026-10-19`, the content commit's date in America/Los_Angeles, with its full SHA recorded in `src/data/infographicRevisions.json`. Future artwork updates must refresh those entries after committing the PNGs. The data edition is October 2026; the import/build workflow itself does not commit, push or deploy.
+
+The September sections below describe prior releases; the current scope and roster above supersede their fixed counts and team memberships.
+
 ## Files
 
 - `src/pages/guild-wars/index.astro`: paired Attack and Defend landing cards, following the LRE guide layout.

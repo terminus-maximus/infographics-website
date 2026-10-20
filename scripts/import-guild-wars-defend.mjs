@@ -34,19 +34,33 @@ function reconcile(actual, source, label) {
   }
 }
 
+export function recordsPathFor(reportPath) {
+  const reportDir = reportPath.endsWith('.json') ? resolve(dirname(reportPath), '..') : dirname(reportPath);
+  const candidates = ['inputs/attacks.jsonl.gz', 'extraction/exports/attacks.jsonl.gz'].map(path => resolve(reportDir, path));
+  const recordsPath = candidates.find(path => existsSync(path));
+  assert(recordsPath, 'Missing frozen battle records beside the accepted report');
+  return recordsPath;
+}
+
 export async function normalizeDefendReport(report, recordsPath) {
   assert.equal(report.defenders.length, 10);
   assert.equal(report.attackers.length, attackEditorial.teams.length);
   assert.equal(report.cells.length, report.defenders.length * report.attackers.length);
   assert.equal(new Set(report.cells.map(c => `${c.defender_id}|${c.attacker_core_id}`)).size, report.cells.length);
-  assert.deepEqual(report.config.seasons, [24, 25, 26]);
-  assert.deepEqual(report.config.battlefields, [1, 2, 3, 4, 5]);
-  assert.equal(new Set(editorial.teams.flatMap(t => t.heroes)).size, 50);
+  assert(report.config.seasons.length && report.config.battlefields.length, 'Missing report scope');
+  const heroUses = new Map();
+  for (const team of editorial.teams) for (const hero of team.heroes) heroUses.set(hero, (heroUses.get(hero) || 0) + 1);
+  for (const count of heroUses.values()) assert(count <= (report.config.max_hero_uses ?? 1), 'Defender hero-use cap exceeded');
+  for (const [i, team] of editorial.teams.entries()) for (const other of editorial.teams.slice(i + 1)) {
+    assert(team.heroes.filter(hero => other.heroes.includes(hero)).length <= (report.config.max_shared_heroes ?? 0), 'Defender overlap cap exceeded');
+  }
   assert.equal(new Set(editorial.teams.map(t => t.anchor)).size, 10);
   const attackers = attackEditorial.teams.map(meta => {
     const source = report.attackers.find(a => a.core_id === meta.id);
     assert(source, `Missing Attack core: ${meta.title}`);
     assert.equal(canonical(source.heroes), canonical(meta.core), `Attack membership changed: ${meta.title}`);
+    assert.equal(source.name, meta.title, `Attack name changed: ${meta.id}`);
+    if (source.captain) assert.deepEqual(source.heroes, meta.core, `Attack portrait order changed: ${meta.id}`);
     return meta;
   });
   const defenders = editorial.teams.map(meta => {
@@ -54,6 +68,10 @@ export async function normalizeDefendReport(report, recordsPath) {
     assert(source, `Missing defense: ${meta.id}`);
     assert.equal(canonical(source.heroes), canonical(meta.heroes), `Defender membership changed: ${meta.title}`);
     assert.equal(source.name, meta.title, `Defender name changed: ${meta.id}`);
+    if (source.captain) {
+      assert.deepEqual(source.heroes, meta.heroes, `Defender portrait order changed: ${meta.id}`);
+      assert.equal(meta.heroes[0], source.captain);
+    }
     return { source, meta, overall: empty(), medsUp: empty(),
       tiers: report.config.battlefields.map(tier => ({ tier, overall: empty(), medsUp: empty() })),
       counters: attackers.map(a => ({ id: a.id, overall: empty(), medsUp: empty() })),
@@ -91,9 +109,9 @@ export async function normalizeDefendReport(report, recordsPath) {
       add(tier.overall, row);
       if (up) { add(exact.medsUp, row); add(tier.medsUp, row); }
     }
-    const target = defenders.find(d => d.meta.heroes.filter(h => row.defender_team.includes(h)).length >= 3);
-    if (!target) continue;
-    for (const attacker of attackers) {
+    // Related-defense populations can overlap; count once in every matching cell.
+    const targets = defenders.filter(d => d.meta.heroes.filter(h => row.defender_team.includes(h)).length >= 3);
+    for (const target of targets) for (const attacker of attackers) {
       if (!attacker.core.every(h => row.attacker_team.includes(h))) continue;
       const cell = target.counters.find(c => c.id === attacker.id);
       add(cell.overall, row);
@@ -154,7 +172,7 @@ async function main() {
   assert(input, 'Usage: node scripts/import-guild-wars-defend.mjs /explicit/report/index.html [output.json]');
   const reportPath = resolve(input), report = readReport(reportPath);
   const reportDir = reportPath.endsWith('.json') ? resolve(dirname(reportPath), '..') : dirname(reportPath);
-  const data = await normalizeDefendReport(report, resolve(reportDir, 'extraction/exports/attacks.jsonl.gz'));
+  const data = await normalizeDefendReport(report, recordsPathFor(reportPath));
   const destination = resolve(root, output);
   assert(relative(root, destination) && !relative(root, destination).startsWith('..'), 'Output must be inside website');
   const copies = Object.entries(data.units).filter(([, unit]) => !existsSync(resolve(root, `public${unit.image}`))).map(([id, unit]) => {
@@ -165,6 +183,6 @@ async function main() {
   for (const [source, target] of copies) { mkdirSync(dirname(target), { recursive: true }); copyFileSync(source, target); }
   mkdirSync(dirname(destination), { recursive: true });
   writeFileSync(destination, JSON.stringify(data, null, 2) + '\n');
-  console.log(`Imported ten defenses and 100 counters; reconciled ${data.scope.records} records, 50 Battlefield/Medicae breakdowns, and all MoW shares. Copied ${copies.length} portraits.`);
+  console.log(`Imported ten defenses and 100 counters; reconciled ${data.scope.records} records, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae breakdowns, and all MoW shares. Copied ${copies.length} portraits.`);
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

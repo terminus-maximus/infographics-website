@@ -46,7 +46,7 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
       <p class="table-note">Supported means at least 30 attempts across 10 wars; smaller samples stay visible.</p>
     </div></details>
     <details class="battlefield-tiers"><summary>Battlefield Tiers</summary><div class="disclosure-body">
-      <p>Where this team appears across its {number(team.attempts)} eligible attempts, listed from BF1 to BF5. Results use all five heroes with {units[team.mow].name}.</p>
+      <p>Where this team appears across its {number(team.attempts)} eligible attempts, listed from BF{team.tiers[0].tier} to BF{team.tiers.at(-1)!.tier}. Results use all five heroes with {units[team.mow].name}.</p>
       <p class="scroll-hint">Scroll the table sideways to see both failure rates →</p>
       <div class="context-scroll" role="region" tabindex="0" aria-label={`${team.title} Battlefield results, horizontally scrollable`}>
         <table class="battlefield-table"><caption>{team.title}: Battlefield composition and failure rates</caption>

@@ -1,4 +1,6 @@
-# Infographic updates required
+# September infographic update history
+
+Superseded October 19, 2026: the user supplied new October Attack and Defend PNGs and both derivatives, now present in the local repository. The website datasets and ordered portraits match the accepted October reports; see `guild-wars-guide.md`. The older artwork requests below are retained as historical context, not outstanding work.
 
 The existing full-resolution PNG was visually inspected. It still shows Hollan/Judh/Isaak with Patermine as flex, and Dante/Mataneo/Mephiston/Nicodemus with Lucien as flex. Its roster and flex numbers need updating; the eight other core panels keep their existing rosters and source statistics.
 

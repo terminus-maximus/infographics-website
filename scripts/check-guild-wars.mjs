@@ -20,7 +20,6 @@ assert.equal(percent(fraction(0, 12)), '0.0%');
 assert.equal(percent(fraction(1705, 2525)), '67.5%');
 assert.equal(ratio(2808, 4010), '2,808 / 4,010');
 assert.equal(data.teams.length, 10);
-assert.equal(new Set(data.teams.flatMap(t => t.core)).size, 33);
 assert.equal(new Set(data.teams.flatMap(t => t.core)).size, data.teams.flatMap(t => t.core).length, 'Repeated core heroes');
 assert.equal(all(page, /class="panel team-section"/g).length, 10);
 assert.equal(all(landing, /class="card"/g).length, 2);
@@ -60,12 +59,17 @@ for (const [index, meta] of editorial.teams.entries()) {
   const t = data.teams[index];
   assert.equal(t.id, meta.id);
   assert.deepEqual([...t.core].sort(), [...meta.core].sort());
+  if (index) assert(data.teams[index - 1].clearRate >= t.clearRate, 'Attack win-rate order');
   const start = page.indexOf(`id="${meta.anchor}"`);
   assert(start > 0 && page.includes(`href="#${meta.anchor}"`));
   const end = index < 9 ? page.indexOf(`id="${editorial.teams[index + 1].anchor}"`) : page.indexOf('</main>');
   const section = page.slice(start, end);
   const bodyText = strip(section);
   assert(bodyText.includes(meta.title));
+  const core = section.match(/<div class="core-lineup"[^>]*>([\s\S]*?)<\/div>/)[1];
+  assert.deepEqual(all(core, /data-unit-id="([^"]+)"/g).map(([, id]) => id), meta.core, 'Core portrait order');
+  const jump = page.match(new RegExp(`<a href="#${meta.anchor}"[^>]*>([\\s\\S]*?)<\\/a>`))[1];
+  assert(jump.includes(`src="${data.units[meta.core[0]].image}"`), 'Captain portrait');
   assert.equal(t.clears + t.failures, t.attempts);
   assert.equal(t.perfect + t.withDeaths, t.clears);
   assert.equal(t.clearRate, fraction(t.clears, t.attempts));
@@ -121,6 +125,16 @@ for (const [index, meta] of editorial.teams.entries()) {
   }
 }
 
+// Accepted October V9: full-core counts and independent four-of-five cohorts.
+if (editorial.edition === 'October 2026') {
+  assert.equal(new Set(data.teams.flatMap(t => t.core)).size, 41);
+  assert.deepEqual(data.scope, { seasons: [25, 26, 27], tiers: [4, 5], wars: 162, eligibleAttacks: 69521 });
+  assert.deepEqual(data.teams.map(t => [t.clears, t.attempts]), [[2353,2473],[180,198],[813,897],[305,348],[2086,2381],[1416,1622],[330,388],[1855,2237],[814,1036],[1698,2204]]);
+  assert.deepEqual(editorial.teams.filter((_, i) => data.teams[i].flexAnalysis).map(t => t.title), ['GSC', 'Blood Angels', 'Orks']);
+  assert.equal(data.units['mow:death_crawler_01'].name, 'PBC');
+  assert.equal(data.units.thousSekhetar.name, 'Sekhetar');
+}
+
 // September 12 refresh: independently verified raw death states, Medicae buffs and lineups.
 // Evidence: V4 exports/validation.json and exports/core_win_metrics.csv.
 if (editorial.edition === 'September 2026') {
@@ -159,4 +173,4 @@ if (process.argv[2]) {
   }
   console.log('Accepted report reconciled; changed-core rejection and exact co-occurrence checks passed.');
 }
-console.log('Guild Wars checks passed: 10 cores, 33 distinct heroes, 33 rendered tables, four-of-five flex evidence, five-row lineup limits, counts, denominators, assets, and labels.');
+console.log(`Guild Wars checks passed: 10 cores, ${new Set(data.teams.flatMap(t => t.core)).size} distinct heroes, ${30 + 3 * data.teams.filter(t => t.flexAnalysis).length} rendered tables, four-of-five flex evidence, five-row lineup limits, counts, denominators, assets, and labels.`);
