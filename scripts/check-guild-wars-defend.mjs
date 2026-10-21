@@ -31,6 +31,10 @@ if (meta.edition === 'October 2026') {
   assert.deepEqual(meta.teams.map(t => t.title), ['Z’kar Psykers','Death Guard','GSC','CRIMJ','DG Ranged','Blood Angels','Mechs','Orks','Custodes','AdMech']);
   // Broader counter populations overlap even though no ranked pair shares a trio.
   assert.equal(data.teams.flatMap(t => t.counters).reduce((n, c) => n + c.attempts, 0), 9614);
+  assert.deepEqual(data.teams.map(t => t.flex.length), [1,5,2,0,8,0,2,0,0,2]);
+  const gscFlex = data.teams[2].flex.find(f => f.addedHero === 'genesPatriarch');
+  assert.equal(gscFlex.removedHero, 'emperLucius');
+  assert.deepEqual([gscFlex.failures, gscFlex.attempts], [274,903]);
 } else if (meta.edition === 'September 2026') {
   assert.equal(new Set(data.teams.flatMap(t => t.heroes)).size, 50);
   assert.equal(data.scope.exactDefenseAttempts, 3494);
@@ -71,6 +75,24 @@ for (const [index, team] of data.teams.entries()) {
     assert(strip(usage).includes(percent(option.share)));
   }
   assert.equal(team.mows.reduce((n, m) => n + m.attempts, team.unknownMows), team.mowOccurrences);
+  const flexDisclosure = section.match(/<details class="defender-flex"[^>]*>([\s\S]*?)<\/details>/);
+  assert.equal(Boolean(flexDisclosure), team.flex.length > 0, 'Show flex only when supported choices exist');
+  if (flexDisclosure) {
+    const choices = all(flexDisclosure[1], /<li\b[^>]*data-flex-id="([^"]+)"[^>]*>([\s\S]*?)<\/li>/g);
+    assert.equal(choices.length, team.flex.length);
+    for (const [i, flex] of team.flex.entries()) {
+      assert.equal(choices[i][1], flex.id);
+      assert.equal(new Set(flex.heroes).size, 5);
+      assert.deepEqual(flex.heroes, team.heroes.map(h => h === flex.removedHero ? flex.addedHero : h));
+      assert(!team.heroes.includes(flex.addedHero) && team.heroes.includes(flex.removedHero));
+      assert.equal(flex.failureRate, fraction(flex.failures, flex.attempts));
+      if (i) assert(team.flex[i - 1].failureRate >= flex.failureRate, 'Flex failure-rate order');
+      assert.deepEqual(all(choices[i][2], /data-unit-id="([^"]+)"/g).map(([, id]) => id), [flex.removedHero, flex.addedHero, flex.mow]);
+      const text = strip(choices[i][2]);
+      assert(text.includes(percent(flex.failureRate)) && text.includes(`${ratio(flex.failures, flex.attempts)} failures / attempts`));
+      assert(text.includes(`${flex.wars} wars`));
+    }
+  }
   const tables = all(section, /<tbody[^>]*>([\s\S]*?)<\/tbody>/g);
   assert.equal(tables.length, 2);
   const counterRows = all(tables[0][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
@@ -127,6 +149,13 @@ assert(attack.includes('data-recommendation-route="/guild-wars/defend/"'));
 assert(!page.includes('data-recommendation-route="/guild-wars/defend/"'));
 if (process.argv[2]) {
   const sourcePath = resolve(process.argv[2]);
-  assert.deepEqual(data, await normalizeDefendReport(readReport(sourcePath), recordsPathFor(sourcePath)));
+  const report = readReport(sourcePath), recordsPath = recordsPathFor(sourcePath);
+  assert.deepEqual(data, await normalizeDefendReport(report, recordsPath));
+  const badSwap = structuredClone(report);
+  const withFlex = badSwap.defenders.find(d => d.flex_alternatives?.length);
+  if (withFlex) {
+    withFlex.flex_alternatives[0].added_hero = withFlex.heroes[0];
+    await assert.rejects(() => normalizeDefendReport(badSwap, recordsPath), /Incorrect incoming flex hero/);
+  }
 }
-console.log(`Defend checks passed: 10 teams, 100 linked counters with four rates, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae rows, usage cutoffs, all navigation placements and source reconciliation when supplied.`);
+console.log(`Defend checks passed: 10 teams, 100 linked counters with four rates, ${data.teams.reduce((n, t) => n + t.flex.length, 0)} independent flex choices, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae rows, usage cutoffs, all navigation placements and source reconciliation when supplied.`);

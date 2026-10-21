@@ -23,6 +23,23 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
     <p class="cohort-note">Share of {number(team.mowOccurrences)} recorded appearances of these five heroes. Machines with at least 5% usage are shown.</p>
   </section>
   <div class="evidence">
+    {team.flex.length > 0 && <details class="defender-flex"><summary>Flex choices</summary><div class="disclosure-body">
+      <p>Swap one hero at a time, keeping the other four. Each option shows its own Failure Rate with the Machine of War shown, highest rate first.</p>
+      <ul class="flex-choices">
+        {team.flex.map(flex => <li data-flex-id={flex.id}>
+          <div class="flex-swap">
+            <div><span class="swap-label">Replace</span><UnitPortrait id={flex.removedHero} compact registry={units} /></div>
+            <span class="swap-arrow" aria-hidden="true">→</span>
+            <div><span class="swap-label">With</span><UnitPortrait id={flex.addedHero} compact registry={units} /></div>
+          </div>
+          <div class="flex-result">
+            <div><strong>{percent(flex.failureRate)}</strong><span>Failure Rate</span><small>{ratio(flex.failures, flex.attempts)} failures / attempts <span aria-hidden="true">·</span> {number(flex.wars)} wars</small></div>
+            <div class="flex-machine"><span class="swap-label">Machine of War</span><UnitPortrait id={flex.mow} compact registry={units} /></div>
+          </div>
+        </li>)}
+      </ul>
+      <p class="table-note">These swaps have separate samples; they do not inherit the main team's rates or counters. Check for shared heroes before using them alongside other defenses.</p>
+    </div></details>}
     <details class="counters"><summary>Counters</summary><div class="disclosure-body">
       <p>Attack teams ranked by total clears, highest first. These results cover defenses sharing <strong>at least three of these five heroes</strong>, with any Machine of War. Select a team name to explore it on the <a href="/guild-wars/attack/">attack page</a>.</p>
       <p class="scroll-hint">Scroll the table sideways to compare all four metrics →</p>
@@ -83,6 +100,23 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
   .cohort-note, .table-note { font-size: .8rem; }
   .scroll-hint { display: none; font-size: .75rem; }
   .mow-options { margin-bottom: 1.5rem; }
+  .flex-choices { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .85rem; padding: 0; list-style: none; }
+  .flex-choices > li { min-width: 0; padding: 1rem; background: #121212; border: 1px solid #333; border-radius: 8px; }
+  .flex-swap { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: .65rem; align-items: center; }
+  .swap-label { display: block; margin-bottom: .4rem; color: #aaa; font-size: .75rem; }
+  .swap-arrow { color: #d4af37; }
+  .flex-result { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: .85rem; border-top: 1px solid #333; }
+  .flex-result strong { color: #f5d76e; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+  .flex-result strong + span { margin-left: .5rem; color: #bbb; font-size: .8rem; }
+  .flex-result small { display: block; margin-top: .3rem; color: #aaa; font-size: .75rem; }
+  .flex-machine { min-width: 0; }
+  .flex-choices :global(.unit.compact) { max-width: 100%; }
+  .flex-choices :global(.unit-name) { min-width: 0; }
+  @media(max-width: 850px) { .flex-choices { grid-template-columns: minmax(0,1fr); } }
+  @media(max-width: 450px) {
+    .flex-swap > div { text-align: center; }
+    .flex-swap :global(.unit.compact) { flex-direction: column; width: 100%; text-align: center; }
+  }
   .evidence .disclosure-body > p:first-child { font-size: .875rem; }
   .context-scroll { max-width: 100%; overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: .875rem; text-align: left; font-variant-numeric: tabular-nums; }

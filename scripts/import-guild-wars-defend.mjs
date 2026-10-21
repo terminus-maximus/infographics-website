@@ -72,12 +72,28 @@ export async function normalizeDefendReport(report, recordsPath) {
       assert.deepEqual(source.heroes, meta.heroes, `Defender portrait order changed: ${meta.id}`);
       assert.equal(meta.heroes[0], source.captain);
     }
-    return { source, meta, overall: empty(), medsUp: empty(),
+    const flex = (source.flex_alternatives || []).map(alternative => {
+      assert.equal(new Set(alternative.heroes).size, 5, 'Flex must be an exact five-hero lineup');
+      assert.deepEqual(meta.heroes.filter(h => !alternative.heroes.includes(h)), [alternative.removed_hero], 'Incorrect outgoing flex hero');
+      assert.deepEqual(alternative.heroes.filter(h => !meta.heroes.includes(h)), [alternative.added_hero], 'Incorrect incoming flex hero');
+      assert.equal(canonical(alternative.shared_heroes), canonical(meta.heroes.filter(h => h !== alternative.removed_hero)));
+      assert(alternative.passes_support && alternative.n >= report.config.support.attacks && alternative.wars >= report.config.support.wars && alternative.guilds >= report.config.support.guilds, 'Unsupported defender flex');
+      assert(alternative.max_war_share <= report.config.support.max_war_share && alternative.max_guild_share <= report.config.support.max_guild_share, 'Flex concentration cap exceeded');
+      return { source: alternative, overall: empty(), occurrences: 0, mows: new Map() };
+    });
+    assert.equal(new Set(flex.map(f => f.source.team_id)).size, flex.length, 'Duplicate flex lineup');
+    return { source, meta, overall: empty(), medsUp: empty(), flex,
       tiers: report.config.battlefields.map(tier => ({ tier, overall: empty(), medsUp: empty() })),
       counters: attackers.map(a => ({ id: a.id, overall: empty(), medsUp: empty() })),
       occurrences: 0, unknownMows: 0, mows: new Map() };
   });
   const exactByHeroes = new Map(defenders.map(d => [canonical(d.meta.heroes), d]));
+  const flexByHeroes = new Map();
+  for (const d of defenders) for (const flex of d.flex) {
+    const key = canonical(flex.source.heroes);
+    if (!flexByHeroes.has(key)) flexByHeroes.set(key, []);
+    flexByHeroes.get(key).push(flex);
+  }
   const seen = new Set();
   const wars = new Set();
   let eligible = 0;
@@ -90,11 +106,16 @@ export async function normalizeDefendReport(report, recordsPath) {
     seen.add(row.attack_key);
     wars.add(row.war_id);
     const exact = exactByHeroes.get(canonical(row.defender_team));
+    const alternatives = flexByHeroes.get(canonical(row.defender_team)) || [];
     const mow = row.defender_mow_state === 'observed' && row.defender_mows.length === 1 ? row.defender_mows[0] : null;
     if (exact) {
       exact.occurrences++;
       if (mow) exact.mows.set(mow, (exact.mows.get(mow) || 0) + 1);
       else exact.unknownMows++;
+    }
+    for (const alternative of alternatives) {
+      alternative.occurrences++;
+      if (mow) alternative.mows.set(mow, (alternative.mows.get(mow) || 0) + 1);
     }
     if (!row.eligible) continue;
     assert(row.debuff === null && row.debuff_raw === '—' && row.debuff_quality === 'initial_convention');
@@ -103,6 +124,7 @@ export async function normalizeDefendReport(report, recordsPath) {
     assert.equal(new Set(row.defender_team).size, 5);
     eligible++;
     const up = row.medicae === 'up';
+    for (const alternative of alternatives) if (mow === alternative.source.mow) add(alternative.overall, row);
     if (exact && mow === exact.source.mow) {
       const tier = exact.tiers.find(t => t.tier === row.tier);
       add(exact.overall, row);
@@ -149,11 +171,21 @@ export async function normalizeDefendReport(report, recordsPath) {
       return { unit: m.mow, attempts: m.count, share: m.share };
     }).sort((a, b) => b.attempts - a.attempts || compare(a.unit, b.unit));
     assert.equal(d.mows.get(d.source.mow), mows[0].attempts, 'Selected MoW must be most common');
+    const flex = d.flex.map(alternative => {
+      const source = alternative.source, stats = finish(alternative.overall);
+      reconcile(stats, source, `${d.meta.title} flex ${source.team_id}`);
+      assert.equal(alternative.occurrences, source.occurrences, 'Flex occurrence count');
+      assert.equal(alternative.mows.get(source.mow), source.modal_occurrences, 'Flex modal MoW count');
+      assert.equal(source.modal_occurrences, Math.max(...alternative.mows.values()), 'Flex MoW must be most common');
+      return { id: source.team_id, heroes: d.meta.heroes.map(h => h === source.removed_hero ? source.added_hero : h),
+        removedHero: source.removed_hero, addedHero: source.added_hero, mow: source.mow, ...stats };
+    }).sort((a, b) => (b.failureRate ?? -1) - (a.failureRate ?? -1) || b.attempts - a.attempts || b.wars - a.wars || compare(a.id, b.id));
     return { id: d.meta.id, heroes: d.meta.heroes, mow: d.source.mow, ...overall, medsUp, tiers, counters,
-      mowOccurrences: d.occurrences, unknownMows: d.unknownMows, mows };
+      mowOccurrences: d.occurrences, unknownMows: d.unknownMows, mows, flex };
   }).sort((a, b) => (b.failureRate ?? -1) - (a.failureRate ?? -1) || b.attempts - a.attempts || compare(a.id, b.id));
   assert.equal(teams.reduce((n, t) => n + t.attempts, 0), report.summary.selected_attempts);
-  const usedUnits = new Set([...teams.flatMap(t => [...t.heroes, t.mow, ...t.mows.filter(m => m.share >= .05).map(m => m.unit)]), ...attackers.flatMap(a => a.core)]);
+  assert.equal(teams.reduce((n, t) => n + t.flex.length, 0), report.summary.flex_alternative_count ?? 0);
+  const usedUnits = new Set([...teams.flatMap(t => [...t.heroes, t.mow, ...t.mows.filter(m => m.share >= .05).map(m => m.unit), ...t.flex.flatMap(f => [...f.heroes, f.mow])]), ...attackers.flatMap(a => a.core)]);
   const units = Object.fromEntries([...usedUnits].sort().map(id => {
     const source = report.registry[id];
     assert(source?.image, `Missing identity/portrait: ${id}`);
@@ -183,6 +215,6 @@ async function main() {
   for (const [source, target] of copies) { mkdirSync(dirname(target), { recursive: true }); copyFileSync(source, target); }
   mkdirSync(dirname(destination), { recursive: true });
   writeFileSync(destination, JSON.stringify(data, null, 2) + '\n');
-  console.log(`Imported ten defenses and 100 counters; reconciled ${data.scope.records} records, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae breakdowns, and all MoW shares. Copied ${copies.length} portraits.`);
+  console.log(`Imported ten defenses, 100 counters and ${data.teams.reduce((n, t) => n + t.flex.length, 0)} flex choices; reconciled ${data.scope.records} records, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae breakdowns, and all MoW shares. Copied ${copies.length} portraits.`);
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

@@ -116,6 +116,11 @@
       "image": "/images/heroes/Maladus.webp",
       "kind": "character"
     },
+    "deathPutrifier": {
+      "name": "Pestillian",
+      "image": "/images/heroes/Pesti.webp",
+      "kind": "character"
+    },
     "deathRotbone": {
       "name": "Rotbone",
       "image": "/images/heroes/Rotbone.webp",
@@ -134,6 +139,11 @@
     "emperLucius": {
       "name": "Lucius",
       "image": "/images/heroes/Lucius.webp",
+      "kind": "character"
+    },
+    "emperNoiseMarine": {
+      "name": "Shiron",
+      "image": "/images/heroes/Shiron.webp",
       "kind": "character"
     },
     "genesBiophagus": {
@@ -289,6 +299,11 @@
     "thousTzaangor": {
       "name": "Yazaghor",
       "image": "/images/heroes/Yaz.webp",
+      "kind": "character"
+    },
+    "tyranWingedPrime": {
+      "name": "Winged Prime",
+      "image": "/images/heroes/Winged.webp",
       "kind": "character"
     },
     "ultraCalgar": {
@@ -679,6 +694,31 @@
           "attempts": 2,
           "share": 0.004282655246252677
         }
+      ],
+      "flex": [
+        {
+          "id": "t_77e695faa04619",
+          "heroes": [
+            "deathTyphus",
+            "thousTerminator",
+            "blackObliterator",
+            "emperLucius",
+            "spaceStormcaller"
+          ],
+          "removedHero": "worldTerminator",
+          "addedHero": "spaceStormcaller",
+          "mow": "mow:thous_daemonprince_01",
+          "attempts": 402,
+          "clears": 241,
+          "failures": 161,
+          "perfect": 105,
+          "withDeaths": 136,
+          "wars": 58,
+          "failureRate": 0.40049751243781095,
+          "clearRate": 0.599502487562189,
+          "perfectPerAttempt": 0.26119402985074625,
+          "perfectPerClear": 0.43568464730290457
+        }
       ]
     },
     {
@@ -1056,6 +1096,123 @@
           "unit": "mow:tyran_biovore_01",
           "attempts": 8,
           "share": 0.04
+        }
+      ],
+      "flex": [
+        {
+          "id": "t_81e9c7a821fd4d",
+          "heroes": [
+            "deathBlightlord",
+            "deathRotbone",
+            "blackObliterator",
+            "deathTyphus",
+            "thousTerminator"
+          ],
+          "removedHero": "deathBlightbringer",
+          "addedHero": "blackObliterator",
+          "mow": "mow:death_crawler_01",
+          "attempts": 158,
+          "clears": 104,
+          "failures": 54,
+          "perfect": 40,
+          "withDeaths": 64,
+          "wars": 61,
+          "failureRate": 0.34177215189873417,
+          "clearRate": 0.6582278481012658,
+          "perfectPerAttempt": 0.25316455696202533,
+          "perfectPerClear": 0.38461538461538464
+        },
+        {
+          "id": "t_685a367b38a8f3",
+          "heroes": [
+            "deathBlightlord",
+            "deathRotbone",
+            "deathBlightbringer",
+            "deathTyphus",
+            "tauMarksman"
+          ],
+          "removedHero": "thousTerminator",
+          "addedHero": "tauMarksman",
+          "mow": "mow:death_crawler_01",
+          "attempts": 436,
+          "clears": 291,
+          "failures": 145,
+          "perfect": 118,
+          "withDeaths": 173,
+          "wars": 111,
+          "failureRate": 0.33256880733944955,
+          "clearRate": 0.6674311926605505,
+          "perfectPerAttempt": 0.2706422018348624,
+          "perfectPerClear": 0.4054982817869416
+        },
+        {
+          "id": "t_588870403dfed2",
+          "heroes": [
+            "deathBlightlord",
+            "deathRotbone",
+            "tauMarksman",
+            "deathTyphus",
+            "thousTerminator"
+          ],
+          "removedHero": "deathBlightbringer",
+          "addedHero": "tauMarksman",
+          "mow": "mow:death_crawler_01",
+          "attempts": 132,
+          "clears": 92,
+          "failures": 40,
+          "perfect": 39,
+          "withDeaths": 53,
+          "wars": 55,
+          "failureRate": 0.30303030303030304,
+          "clearRate": 0.696969696969697,
+          "perfectPerAttempt": 0.29545454545454547,
+          "perfectPerClear": 0.42391304347826086
+        },
+        {
+          "id": "t_0f0fe12854058c",
+          "heroes": [
+            "deathBlightlord",
+            "deathRotbone",
+            "deathBlightbringer",
+            "deathTyphus",
+            "deathPutrifier"
+          ],
+          "removedHero": "thousTerminator",
+          "addedHero": "deathPutrifier",
+          "mow": "mow:death_crawler_01",
+          "attempts": 146,
+          "clears": 103,
+          "failures": 43,
+          "perfect": 39,
+          "withDeaths": 64,
+          "wars": 68,
+          "failureRate": 0.2945205479452055,
+          "clearRate": 0.7054794520547946,
+          "perfectPerAttempt": 0.2671232876712329,
+          "perfectPerClear": 0.3786407766990291
+        },
+        {
+          "id": "t_ba2488effcde09",
+          "heroes": [
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon",
+            "deathTyphus",
+            "thousTerminator"
+          ],
+          "removedHero": "deathBlightbringer",
+          "addedHero": "blackAbaddon",
+          "mow": "mow:death_crawler_01",
+          "attempts": 112,
+          "clears": 85,
+          "failures": 27,
+          "perfect": 44,
+          "withDeaths": 41,
+          "wars": 65,
+          "failureRate": 0.24107142857142858,
+          "clearRate": 0.7589285714285714,
+          "perfectPerAttempt": 0.39285714285714285,
+          "perfectPerClear": 0.5176470588235295
         }
       ]
     },
@@ -1449,6 +1606,54 @@
           "unit": "mow:ultra_dreadnought_01",
           "attempts": 2,
           "share": 0.008888888888888889
+        }
+      ],
+      "flex": [
+        {
+          "id": "t_59474441e8dda6",
+          "heroes": [
+            "genesKelermorph",
+            "genesPrimus",
+            "genesBiophagus",
+            "genesMagus",
+            "genesPatriarch"
+          ],
+          "removedHero": "emperLucius",
+          "addedHero": "genesPatriarch",
+          "mow": "mow:tyran_biovore_01",
+          "attempts": 903,
+          "clears": 629,
+          "failures": 274,
+          "perfect": 377,
+          "withDeaths": 252,
+          "wars": 133,
+          "failureRate": 0.3034330011074197,
+          "clearRate": 0.6965669988925803,
+          "perfectPerAttempt": 0.4174972314507198,
+          "perfectPerClear": 0.5993640699523053
+        },
+        {
+          "id": "t_317c2fc2d63ab8",
+          "heroes": [
+            "genesKelermorph",
+            "genesPrimus",
+            "genesBiophagus",
+            "genesMagus",
+            "tyranWingedPrime"
+          ],
+          "removedHero": "emperLucius",
+          "addedHero": "tyranWingedPrime",
+          "mow": "mow:tyran_biovore_01",
+          "attempts": 92,
+          "clears": 76,
+          "failures": 16,
+          "perfect": 54,
+          "withDeaths": 22,
+          "wars": 53,
+          "failureRate": 0.17391304347826086,
+          "clearRate": 0.8260869565217391,
+          "perfectPerAttempt": 0.5869565217391305,
+          "perfectPerClear": 0.7105263157894737
         }
       ]
     },
@@ -1858,7 +2063,8 @@
           "attempts": 3,
           "share": 0.0010897203051216855
         }
-      ]
+      ],
+      "flex": []
     },
     {
       "id": "D_a266055437f16b",
@@ -2235,6 +2441,192 @@
           "unit": "mow:ultra_dreadnought_01",
           "attempts": 3,
           "share": 0.016483516483516484
+        }
+      ],
+      "flex": [
+        {
+          "id": "t_8bd628554a31db",
+          "heroes": [
+            "blackObliterator",
+            "deathTyphus",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "deathTyphus",
+          "mow": "mow:death_crawler_01",
+          "attempts": 101,
+          "clears": 62,
+          "failures": 39,
+          "perfect": 28,
+          "withDeaths": 34,
+          "wars": 47,
+          "failureRate": 0.38613861386138615,
+          "clearRate": 0.6138613861386139,
+          "perfectPerAttempt": 0.27722772277227725,
+          "perfectPerClear": 0.45161290322580644
+        },
+        {
+          "id": "t_26f0ba6574a352",
+          "heroes": [
+            "blackObliterator",
+            "emperLucius",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "emperLucius",
+          "mow": "mow:death_crawler_01",
+          "attempts": 262,
+          "clears": 181,
+          "failures": 81,
+          "perfect": 73,
+          "withDeaths": 108,
+          "wars": 74,
+          "failureRate": 0.30916030534351147,
+          "clearRate": 0.6908396946564885,
+          "perfectPerAttempt": 0.2786259541984733,
+          "perfectPerClear": 0.40331491712707185
+        },
+        {
+          "id": "t_a1222dfdfe13bb",
+          "heroes": [
+            "deathTyphus",
+            "tauMarksman",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "blackObliterator",
+          "addedHero": "deathTyphus",
+          "mow": "mow:death_crawler_01",
+          "attempts": 119,
+          "clears": 86,
+          "failures": 33,
+          "perfect": 38,
+          "withDeaths": 48,
+          "wars": 52,
+          "failureRate": 0.2773109243697479,
+          "clearRate": 0.7226890756302521,
+          "perfectPerAttempt": 0.31932773109243695,
+          "perfectPerClear": 0.4418604651162791
+        },
+        {
+          "id": "t_bb1ba778fa36ee",
+          "heroes": [
+            "emperLucius",
+            "tauMarksman",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "blackObliterator",
+          "addedHero": "emperLucius",
+          "mow": "mow:death_crawler_01",
+          "attempts": 91,
+          "clears": 66,
+          "failures": 25,
+          "perfect": 24,
+          "withDeaths": 42,
+          "wars": 47,
+          "failureRate": 0.27472527472527475,
+          "clearRate": 0.7252747252747253,
+          "perfectPerAttempt": 0.26373626373626374,
+          "perfectPerClear": 0.36363636363636365
+        },
+        {
+          "id": "t_fc9c23e258c5dc",
+          "heroes": [
+            "blackObliterator",
+            "emperNoiseMarine",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "emperNoiseMarine",
+          "mow": "mow:death_crawler_01",
+          "attempts": 115,
+          "clears": 86,
+          "failures": 29,
+          "perfect": 35,
+          "withDeaths": 51,
+          "wars": 42,
+          "failureRate": 0.25217391304347825,
+          "clearRate": 0.7478260869565218,
+          "perfectPerAttempt": 0.30434782608695654,
+          "perfectPerClear": 0.4069767441860465
+        },
+        {
+          "id": "t_0bebf23f617f82",
+          "heroes": [
+            "blackObliterator",
+            "deathBlightbringer",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "deathBlightbringer",
+          "mow": "mow:death_crawler_01",
+          "attempts": 206,
+          "clears": 156,
+          "failures": 50,
+          "perfect": 64,
+          "withDeaths": 92,
+          "wars": 71,
+          "failureRate": 0.24271844660194175,
+          "clearRate": 0.7572815533980582,
+          "perfectPerAttempt": 0.3106796116504854,
+          "perfectPerClear": 0.41025641025641024
+        },
+        {
+          "id": "t_63246683c08fed",
+          "heroes": [
+            "deathBlightbringer",
+            "tauMarksman",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "blackObliterator",
+          "addedHero": "deathBlightbringer",
+          "mow": "mow:death_crawler_01",
+          "attempts": 439,
+          "clears": 351,
+          "failures": 88,
+          "perfect": 167,
+          "withDeaths": 184,
+          "wars": 98,
+          "failureRate": 0.20045558086560364,
+          "clearRate": 0.7995444191343963,
+          "perfectPerAttempt": 0.3804100227790433,
+          "perfectPerClear": 0.4757834757834758
+        },
+        {
+          "id": "t_77018dac10bd4e",
+          "heroes": [
+            "worldKharn",
+            "tauMarksman",
+            "deathBlightlord",
+            "deathRotbone",
+            "blackAbaddon"
+          ],
+          "removedHero": "blackObliterator",
+          "addedHero": "worldKharn",
+          "mow": "mow:death_crawler_01",
+          "attempts": 164,
+          "clears": 143,
+          "failures": 21,
+          "perfect": 75,
+          "withDeaths": 68,
+          "wars": 50,
+          "failureRate": 0.12804878048780488,
+          "clearRate": 0.8719512195121951,
+          "perfectPerAttempt": 0.4573170731707317,
+          "perfectPerClear": 0.5244755244755245
         }
       ]
     },
@@ -2639,7 +3031,8 @@
           "attempts": 5,
           "share": 0.013333333333333334
         }
-      ]
+      ],
+      "flex": []
     },
     {
       "id": "D_585c5519ff4ba9",
@@ -3021,6 +3414,54 @@
           "unit": "mow:tauta_broadside_01",
           "attempts": 2,
           "share": 0.008583690987124463
+        }
+      ],
+      "flex": [
+        {
+          "id": "t_5c421a8668b8ab",
+          "heroes": [
+            "admecMarshall",
+            "admecManipulus",
+            "necroSpyder",
+            "orksWarboss",
+            "admecRuststalker"
+          ],
+          "removedHero": "tauCrisis",
+          "addedHero": "admecRuststalker",
+          "mow": "mow:ultra_dreadnought_01",
+          "attempts": 107,
+          "clears": 94,
+          "failures": 13,
+          "perfect": 55,
+          "withDeaths": 39,
+          "wars": 54,
+          "failureRate": 0.12149532710280374,
+          "clearRate": 0.8785046728971962,
+          "perfectPerAttempt": 0.514018691588785,
+          "perfectPerClear": 0.5851063829787234
+        },
+        {
+          "id": "t_ee1e1c931b6bbf",
+          "heroes": [
+            "admecMarshall",
+            "admecManipulus",
+            "necroSpyder",
+            "admecRuststalker",
+            "tauCrisis"
+          ],
+          "removedHero": "orksWarboss",
+          "addedHero": "admecRuststalker",
+          "mow": "mow:ultra_dreadnought_01",
+          "attempts": 256,
+          "clears": 231,
+          "failures": 25,
+          "perfect": 140,
+          "withDeaths": 91,
+          "wars": 93,
+          "failureRate": 0.09765625,
+          "clearRate": 0.90234375,
+          "perfectPerAttempt": 0.546875,
+          "perfectPerClear": 0.6060606060606061
         }
       ]
     },
@@ -3430,7 +3871,8 @@
           "attempts": 1,
           "share": 0.0017035775127768314
         }
-      ]
+      ],
+      "flex": []
     },
     {
       "id": "D9",
@@ -3818,7 +4260,8 @@
           "attempts": 1,
           "share": 0.004784688995215311
         }
-      ]
+      ],
+      "flex": []
     },
     {
       "id": "D_23f1d8cc6ad754",
@@ -4205,6 +4648,54 @@
           "unit": "mow:death_crawler_01",
           "attempts": 2,
           "share": 0.008928571428571428
+        }
+      ],
+      "flex": [
+        {
+          "id": "t_09d1bbca5457ae",
+          "heroes": [
+            "admecRuststalker",
+            "admecMarshall",
+            "admecManipulus",
+            "admecDominus",
+            "necroSpyder"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "necroSpyder",
+          "mow": "mow:ultra_dreadnought_01",
+          "attempts": 102,
+          "clears": 94,
+          "failures": 8,
+          "perfect": 63,
+          "withDeaths": 31,
+          "wars": 51,
+          "failureRate": 0.0784313725490196,
+          "clearRate": 0.9215686274509803,
+          "perfectPerAttempt": 0.6176470588235294,
+          "perfectPerClear": 0.6702127659574468
+        },
+        {
+          "id": "t_f0bae6f2558df6",
+          "heroes": [
+            "admecRuststalker",
+            "admecMarshall",
+            "admecManipulus",
+            "admecDominus",
+            "orksWarboss"
+          ],
+          "removedHero": "tauMarksman",
+          "addedHero": "orksWarboss",
+          "mow": "mow:ultra_dreadnought_01",
+          "attempts": 165,
+          "clears": 155,
+          "failures": 10,
+          "perfect": 108,
+          "withDeaths": 47,
+          "wars": 74,
+          "failureRate": 0.06060606060606061,
+          "clearRate": 0.9393939393939394,
+          "perfectPerAttempt": 0.6545454545454545,
+          "perfectPerClear": 0.6967741935483871
         }
       ]
     }
