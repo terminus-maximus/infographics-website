@@ -1,0 +1,2685 @@
+{
+  "audited_at": "2026-10-24T15:25:45.394212-07:00",
+  "timezone": "America/Los_Angeles",
+  "git_head": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+  "repo": "/Users/danfoster01/Documents/Websites/terminusmaximus",
+  "build": "/Users/danfoster01/Documents/Websites/terminusmaximus/dist",
+  "live_base": null,
+  "date_rule": "Latest PNG content commit, committer date in audit timezone; follow identical copies/renames; require exact day and standardized wording",
+  "counts": {
+    "no_update_label": 10,
+    "compliant": 28,
+    "redirect": 1,
+    "excluded_time_bound_guide": 17
+  },
+  "live_only_routes": [],
+  "routes": [
+    {
+      "route": "/about/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/beginner-guide/",
+      "local": {
+        "title": "Beginner Guide",
+        "labels": [
+          "Last updated on Jun 4, 2026"
+        ],
+        "pngs": [
+          "/images/beginner-guide.png"
+        ],
+        "web_images": [
+          "/images/web/beginner-guide.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-06-04",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-06-04",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/admech/",
+      "local": {
+        "title": "AdMech CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-admech.png"
+        ],
+        "web_images": [
+          "/images/web/ce-admech.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/dark-angels/",
+      "local": {
+        "title": "Dark Angels CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-dark-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-dark-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/death-guard/",
+      "local": {
+        "title": "Death Guard CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-death-guard.png"
+        ],
+        "web_images": [
+          "/images/web/ce-death-guard.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/",
+      "local": {
+        "title": "Campaign Event Guides",
+        "labels": [
+          "Last updated on Oct 11, 2026"
+        ],
+        "pngs": [
+          "/images/campaign-event.png"
+        ],
+        "web_images": [
+          "/images/web/campaign-event.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-11",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-11",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/sisters/",
+      "local": {
+        "title": "Sisters CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-sisters.png"
+        ],
+        "web_images": [
+          "/images/web/ce-sisters.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/tau/",
+      "local": {
+        "title": "T\u2019au CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tau.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tau.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaign-event/tyranids/",
+      "local": {
+        "title": "Tyranids CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tyranids.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tyranids.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "local": {
+        "title": "Tacticus Fall of Cadia Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-09-16",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-09-16",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "local": {
+        "title": "Tacticus Fall of Cadia Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 10, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-10",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-10",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/",
+      "local": {
+        "title": "Warhammer 40,000: Tacticus Campaign Guides",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "local": {
+        "title": "Tacticus Indomitus Campaign Guide",
+        "labels": [
+          "Last updated on Aug 4, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-04",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-04",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "local": {
+        "title": "Tacticus Indomitus Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 5, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-05",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-05",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "local": {
+        "title": "Tacticus Octarius Campaign Guide",
+        "labels": [
+          "Last updated on Aug 15, 2026"
+        ],
+        "pngs": [
+          "/images/octarius.png"
+        ],
+        "web_images": [
+          "/images/web/octarius.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-15",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-15",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "local": {
+        "title": "Tacticus Octarius Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 17, 2026"
+        ],
+        "pngs": [
+          "/images/octarius-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/octarius-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-17",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-17",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "local": {
+        "title": "Tacticus Saim-Hann Campaign Guide",
+        "labels": [
+          "Last updated on Aug 19, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-08-19",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-08-19",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "local": {
+        "title": "Tacticus Saim-Hann Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-09-16",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-09-16",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/elite-campaigns/",
+      "local": {
+        "title": "Elite Campaigns",
+        "labels": [
+          "Last updated on Jul 8, 2026"
+        ],
+        "pngs": [
+          "/images/elite-campaigns.png"
+        ],
+        "web_images": [
+          "/images/web/elite-campaigns.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-07-08",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-07-08",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/event-campaign/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": "0; url=/campaign-event",
+        "noindex": false
+      },
+      "classification": "redirect"
+    },
+    {
+      "route": "/events/",
+      "local": {
+        "title": "Events",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/feedback/",
+      "local": {
+        "title": "Feedback",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/guild-raid/archive/",
+      "local": {
+        "title": "Guild Raid Archive",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "local": {
+        "title": "Guild Raid Boss Meta Guide",
+        "labels": [
+          "Last updated on Oct 24, 2026"
+        ],
+        "pngs": [
+          "/images/boss-meta.png"
+        ],
+        "web_images": [
+          "/images/web/boss-meta.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-24",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-24",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/guild-raid/",
+      "local": {
+        "title": "Guild Raid Guides",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/guild-raid/next-season/",
+      "local": {
+        "title": "Next Season",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s112-coming-soon.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s112-coming-soon.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s097/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s97-epic.png",
+          "/images/guild-raid-s97-legendary.png",
+          "/images/guild-raid-s97-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s97-epic.webp",
+          "/images/web/guild-raid-s97-legendary.webp",
+          "/images/web/guild-raid-s97-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s098/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s98-coming-soon.png",
+          "/images/guild-raid-s98-epic.png",
+          "/images/guild-raid-s98-legendary.png",
+          "/images/guild-raid-s98-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s98-coming-soon.webp",
+          "/images/web/guild-raid-s98-epic.webp",
+          "/images/web/guild-raid-s98-legendary.webp",
+          "/images/web/guild-raid-s98-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s099/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s99-coming-soon.png",
+          "/images/guild-raid-s99-epic.png",
+          "/images/guild-raid-s99-legendary.png",
+          "/images/guild-raid-s99-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s99-coming-soon.webp",
+          "/images/web/guild-raid-s99-epic.webp",
+          "/images/web/guild-raid-s99-legendary.webp",
+          "/images/web/guild-raid-s99-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s100/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s100-coming-soon.png",
+          "/images/guild-raid-s100-epic.png",
+          "/images/guild-raid-s100-legendary.png",
+          "/images/guild-raid-s100-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s100-coming-soon.webp",
+          "/images/web/guild-raid-s100-epic.webp",
+          "/images/web/guild-raid-s100-legendary.webp",
+          "/images/web/guild-raid-s100-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s101/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s101-coming-soon.png",
+          "/images/guild-raid-s101-epic.png",
+          "/images/guild-raid-s101-legendary.png",
+          "/images/guild-raid-s101-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s101-coming-soon.webp",
+          "/images/web/guild-raid-s101-epic.webp",
+          "/images/web/guild-raid-s101-legendary.webp",
+          "/images/web/guild-raid-s101-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s102/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s102-coming-soon.png",
+          "/images/guild-raid-s102-epic.png",
+          "/images/guild-raid-s102-legendary.png",
+          "/images/guild-raid-s102-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s102-coming-soon.webp",
+          "/images/web/guild-raid-s102-epic.webp",
+          "/images/web/guild-raid-s102-legendary.webp",
+          "/images/web/guild-raid-s102-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s103/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s103-coming-soon.png",
+          "/images/guild-raid-s103-epic.png",
+          "/images/guild-raid-s103-legendary.png",
+          "/images/guild-raid-s103-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s103-coming-soon.webp",
+          "/images/web/guild-raid-s103-epic.webp",
+          "/images/web/guild-raid-s103-legendary.webp",
+          "/images/web/guild-raid-s103-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s104/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s104-coming-soon.png",
+          "/images/guild-raid-s104-epic.png",
+          "/images/guild-raid-s104-legendary.png",
+          "/images/guild-raid-s104-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s104-coming-soon.webp",
+          "/images/web/guild-raid-s104-epic.webp",
+          "/images/web/guild-raid-s104-legendary.webp",
+          "/images/web/guild-raid-s104-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s105/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s105-coming-soon.png",
+          "/images/guild-raid-s105-epic.png",
+          "/images/guild-raid-s105-legendary.png",
+          "/images/guild-raid-s105-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s105-coming-soon.webp",
+          "/images/web/guild-raid-s105-epic.webp",
+          "/images/web/guild-raid-s105-legendary.webp",
+          "/images/web/guild-raid-s105-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s106/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s106-coming-soon.png",
+          "/images/guild-raid-s106-epic.png",
+          "/images/guild-raid-s106-legendary.png",
+          "/images/guild-raid-s106-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s106-coming-soon.webp",
+          "/images/web/guild-raid-s106-epic.webp",
+          "/images/web/guild-raid-s106-legendary.webp",
+          "/images/web/guild-raid-s106-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s107/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s107-coming-soon.png",
+          "/images/guild-raid-s107-epic.png",
+          "/images/guild-raid-s107-legendary.png",
+          "/images/guild-raid-s107-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s107-coming-soon.webp",
+          "/images/web/guild-raid-s107-epic.webp",
+          "/images/web/guild-raid-s107-legendary.webp",
+          "/images/web/guild-raid-s107-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s108/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s108-coming-soon.png",
+          "/images/guild-raid-s108-epic.png",
+          "/images/guild-raid-s108-legendary.png",
+          "/images/guild-raid-s108-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s108-coming-soon.webp",
+          "/images/web/guild-raid-s108-epic.webp",
+          "/images/web/guild-raid-s108-legendary.webp",
+          "/images/web/guild-raid-s108-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s109/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s109-coming-soon.png",
+          "/images/guild-raid-s109-epic.png",
+          "/images/guild-raid-s109-legendary.png",
+          "/images/guild-raid-s109-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s109-coming-soon.webp",
+          "/images/web/guild-raid-s109-epic.webp",
+          "/images/web/guild-raid-s109-legendary.webp",
+          "/images/web/guild-raid-s109-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s110/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s110-coming-soon.png",
+          "/images/guild-raid-s110-epic.png",
+          "/images/guild-raid-s110-legendary.png",
+          "/images/guild-raid-s110-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s110-coming-soon.webp",
+          "/images/web/guild-raid-s110-epic.webp",
+          "/images/web/guild-raid-s110-legendary.webp",
+          "/images/web/guild-raid-s110-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s111/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s111-coming-soon.png",
+          "/images/guild-raid-s111-epic.png",
+          "/images/guild-raid-s111-legendary.png",
+          "/images/guild-raid-s111-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s111-coming-soon.webp",
+          "/images/web/guild-raid-s111-epic.webp",
+          "/images/web/guild-raid-s111-legendary.webp",
+          "/images/web/guild-raid-s111-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-raid/s112/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [
+          "/images/guild-raid-s112-coming-soon.png",
+          "/images/guild-raid-s112-epic.png",
+          "/images/guild-raid-s112-legendary.png",
+          "/images/guild-raid-s112-mythic.png"
+        ],
+        "web_images": [
+          "/images/web/guild-raid-s112-coming-soon.webp",
+          "/images/web/guild-raid-s112-epic.webp",
+          "/images/web/guild-raid-s112-legendary.webp",
+          "/images/web/guild-raid-s112-mythic.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "excluded_time_bound_guide"
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "local": {
+        "title": "Guild War Top 10 Attack Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-attack.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-attack.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-19",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-19",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "local": {
+        "title": "Guild War Top 10 Defend Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-defend.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-defend.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-19",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-19",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/guild-wars/",
+      "local": {
+        "title": "Guild Wars",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/hre/",
+      "local": {
+        "title": "Hero Release Events",
+        "labels": [
+          "Last updated on Oct 12, 2026"
+        ],
+        "pngs": [
+          "/images/hre.png"
+        ],
+        "web_images": [
+          "/images/web/hre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-12",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-12",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "local": {
+        "title": "Biovore Incursion Guide",
+        "labels": [
+          "Last updated on Sept 23, 2026"
+        ],
+        "pngs": [
+          "/images/mow-biovore.png"
+        ],
+        "web_images": [
+          "/images/web/mow-biovore.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-09-23",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-09-23",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/incursion-mow/",
+      "local": {
+        "title": "Incursion & Machine of War",
+        "labels": [
+          "Last updated on Sept 23, 2026"
+        ],
+        "pngs": [
+          "/images/incursion-mow.png"
+        ],
+        "web_images": [
+          "/images/web/incursion-mow.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-09-23",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-09-23",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/",
+      "local": {
+        "title": "",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/lre/fabius/",
+      "local": {
+        "title": "Fabius Bile Legendary Release Event",
+        "labels": [
+          "Last updated on Oct 5, 2026"
+        ],
+        "pngs": [
+          "/images/fabius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/fabius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-10-05",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-10-05",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/lre/farsight/",
+      "local": {
+        "title": "Farsight Legendary Release Event",
+        "labels": [
+          "Last updated on May 30, 2026"
+        ],
+        "pngs": [
+          "/images/farsight-lre.png"
+        ],
+        "web_images": [
+          "/images/web/farsight-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-05-30",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-05-30",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/lre/",
+      "local": {
+        "title": "Legendary Release Events",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    },
+    {
+      "route": "/lre/lucius/",
+      "local": {
+        "title": "Lucius Legendary Release Event",
+        "labels": [
+          "Last updated on Jun 23, 2026"
+        ],
+        "pngs": [
+          "/images/lucius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lucius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-06-23",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-06-23",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/lre/lysander/",
+      "local": {
+        "title": "Lysander Legendary Release Event",
+        "labels": [
+          "Last updated on Jul 26, 2026"
+        ],
+        "pngs": [
+          "/images/lysander-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lysander-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-07-26",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-07-26",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/lre/uthar/",
+      "local": {
+        "title": "Uthar Legendary Release Event",
+        "labels": [
+          "Last updated on Sept 9, 2026"
+        ],
+        "pngs": [
+          "/images/uthar-lre.png"
+        ],
+        "web_images": [
+          "/images/web/uthar-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "label_date": "2026-09-09",
+      "label_precision": "day",
+      "wording_compliant": true,
+      "png_revision_date": "2026-09-09",
+      "date_matches": true,
+      "classification": "compliant"
+    },
+    {
+      "route": "/replay-library/",
+      "local": {
+        "title": "Replay Library",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "no_update_label"
+    }
+  ],
+  "assets": {
+    "/images/beginner-guide.png": {
+      "path": "public/images/beginner-guide.png",
+      "exists": true,
+      "sha256": "57e6c3f1ccd074bb4360f5a1e50260031c3e4418dfb75b2e4a07b12d42efe404",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+        "authored_at": "2026-06-04T15:13:42-07:00",
+        "committed_at": "2026-06-04T15:13:42-07:00",
+        "subject": "Beginner Guide Icon Fix",
+        "date": "2026-06-04",
+        "path_status": [
+          "M\tpublic/images/beginner-guide.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+        "authored_at": "2026-06-04T15:13:42-07:00",
+        "committed_at": "2026-06-04T15:13:42-07:00",
+        "subject": "Beginner Guide Icon Fix",
+        "date": "2026-06-04",
+        "path_status": [
+          "M\tpublic/images/beginner-guide.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/beginner-guide.webp": {
+      "path": "public/images/web/beginner-guide.webp",
+      "exists": true,
+      "sha256": "e2868719d18b80ce9c3ad8fed1bf79ae20627a069dc560f2308435c5da3ac676",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+        "authored_at": "2026-06-04T15:13:42-07:00",
+        "committed_at": "2026-06-04T15:13:42-07:00",
+        "subject": "Beginner Guide Icon Fix",
+        "date": "2026-06-04",
+        "path_status": [
+          "M\tpublic/images/web/beginner-guide.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+        "authored_at": "2026-06-04T15:13:42-07:00",
+        "committed_at": "2026-06-04T15:13:42-07:00",
+        "subject": "Beginner Guide Icon Fix",
+        "date": "2026-06-04",
+        "path_status": [
+          "M\tpublic/images/web/beginner-guide.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-admech.png": {
+      "path": "public/images/ce-admech.png",
+      "exists": true,
+      "sha256": "b859b3215e614eef26c446bb66a60aa5564f3ba178e66420b72bd97bbc9443c2",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-admech.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-admech.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-admech.webp": {
+      "path": "public/images/web/ce-admech.webp",
+      "exists": true,
+      "sha256": "86361233bd71abf7bdc6409fc2628a50a4ed1acb55e84c624eed4ca482f00a0f",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-admech.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-admech.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-dark-angels.png": {
+      "path": "public/images/ce-dark-angels.png",
+      "exists": true,
+      "sha256": "9afb4450051533574bb1a3a683c9219de7bb0cc76b88e81b60b9c0118286e942",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-dark-angels.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-dark-angels.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-dark-angels.webp": {
+      "path": "public/images/web/ce-dark-angels.webp",
+      "exists": true,
+      "sha256": "f7ce33f99d7ec061ef62d6eb2d5656d9f736d1b464aa234d59170ebee72347a9",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-dark-angels.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-dark-angels.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-death-guard.png": {
+      "path": "public/images/ce-death-guard.png",
+      "exists": true,
+      "sha256": "7dbe0cd3d5899f15c1cd1aa91355f4b12c7da0e788f0f857017cdbcf63ef179b",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-death-guard.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-death-guard.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-death-guard.webp": {
+      "path": "public/images/web/ce-death-guard.webp",
+      "exists": true,
+      "sha256": "208a131150aa1f9ed6136d03b6bc3efb31ad75ddac6cc306b812f7b6f6e82805",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-death-guard.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-death-guard.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/campaign-event.png": {
+      "path": "public/images/campaign-event.png",
+      "exists": true,
+      "sha256": "3397f2b53e7f3f2b8cafafeb6512f9bb48cd54b89d0ae3afe524d9c28635db69",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "dcf2df798ada569a68f83c281a732c54218e93c9",
+        "authored_at": "2026-10-11T20:24:43-07:00",
+        "committed_at": "2026-10-11T20:24:43-07:00",
+        "subject": "CE Guide",
+        "date": "2026-10-11",
+        "path_status": [
+          "M\tpublic/images/campaign-event.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "dcf2df798ada569a68f83c281a732c54218e93c9",
+        "authored_at": "2026-10-11T20:24:43-07:00",
+        "committed_at": "2026-10-11T20:24:43-07:00",
+        "subject": "CE Guide",
+        "date": "2026-10-11",
+        "path_status": [
+          "M\tpublic/images/campaign-event.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/campaign-event.webp": {
+      "path": "public/images/web/campaign-event.webp",
+      "exists": true,
+      "sha256": "63c995e98bfe5964ade5f5edea37f93a678ba18f299b65efd984d20bf40d61af",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "dcf2df798ada569a68f83c281a732c54218e93c9",
+        "authored_at": "2026-10-11T20:24:43-07:00",
+        "committed_at": "2026-10-11T20:24:43-07:00",
+        "subject": "CE Guide",
+        "date": "2026-10-11",
+        "path_status": [
+          "M\tpublic/images/web/campaign-event.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "dcf2df798ada569a68f83c281a732c54218e93c9",
+        "authored_at": "2026-10-11T20:24:43-07:00",
+        "committed_at": "2026-10-11T20:24:43-07:00",
+        "subject": "CE Guide",
+        "date": "2026-10-11",
+        "path_status": [
+          "M\tpublic/images/web/campaign-event.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-sisters.png": {
+      "path": "public/images/ce-sisters.png",
+      "exists": true,
+      "sha256": "893d0b9ea5efe36e6bcd558b3d38864764ff9a876f8500c271762714afcd67c6",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-sisters.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-sisters.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-sisters.webp": {
+      "path": "public/images/web/ce-sisters.webp",
+      "exists": true,
+      "sha256": "a4465b7d7aa59d95ae9da062f02a442ccff1e641e8632e2ae16f4e1c45c7b233",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-sisters.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-sisters.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-tau.png": {
+      "path": "public/images/ce-tau.png",
+      "exists": true,
+      "sha256": "3b4972a6f96a4a1e9235196c1db1653cf60518c1521d3ca76a1436a88f421319",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-tau.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-tau.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-tau.webp": {
+      "path": "public/images/web/ce-tau.webp",
+      "exists": true,
+      "sha256": "94fa03bf1bd833b044a66cab9bb512d979216748840b53e2527e1e24a3de4d04",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-tau.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-tau.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/ce-tyranids.png": {
+      "path": "public/images/ce-tyranids.png",
+      "exists": true,
+      "sha256": "dcb1937cf333c35973c171dac3fd842d027d1aea2ba45815f5df49a5eba6587b",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-tyranids.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/ce-tyranids.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/ce-tyranids.webp": {
+      "path": "public/images/web/ce-tyranids.webp",
+      "exists": true,
+      "sha256": "b314d9acdaaf0376d98e9d877bf27d4dfb34e47ba4db1886f367252d4b2b64bd",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-tyranids.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+        "authored_at": "2026-10-15T14:32:44-07:00",
+        "committed_at": "2026-10-15T14:32:44-07:00",
+        "subject": "CE Extremis Guides launch",
+        "date": "2026-10-15",
+        "path_status": [
+          "A\tpublic/images/web/ce-tyranids.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/fall-of-cadia.png": {
+      "path": "public/images/fall-of-cadia.png",
+      "exists": true,
+      "sha256": "346e6f0a32078ee0676a613d926fd8754200e4603681188e026dad0a7c372fdd",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+        "authored_at": "2026-09-16T16:03:34-07:00",
+        "committed_at": "2026-09-16T16:03:34-07:00",
+        "subject": "Campaign Guide error fixes",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/fall-of-cadia.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+        "authored_at": "2026-09-16T16:03:34-07:00",
+        "committed_at": "2026-09-16T16:03:34-07:00",
+        "subject": "Campaign Guide error fixes",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/fall-of-cadia.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/fall-of-cadia.webp": {
+      "path": "public/images/web/fall-of-cadia.webp",
+      "exists": true,
+      "sha256": "19605360607534036d98f0fba0b3b1196c311edd9aa4d02cbad72f59f6b1f076",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "123354ec91d693fae6a89d8d36149ffba297904c",
+        "authored_at": "2026-09-16T16:04:12-07:00",
+        "committed_at": "2026-09-16T16:04:12-07:00",
+        "subject": "Fixes with thumb and webp",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/web/fall-of-cadia.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "123354ec91d693fae6a89d8d36149ffba297904c",
+        "authored_at": "2026-09-16T16:04:12-07:00",
+        "committed_at": "2026-09-16T16:04:12-07:00",
+        "subject": "Fixes with thumb and webp",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/web/fall-of-cadia.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/fall-of-cadia-mirror.png": {
+      "path": "public/images/fall-of-cadia-mirror.png",
+      "exists": true,
+      "sha256": "d19c2a7e7bfca72243606d7249e007ae72edf7df75d622476ae300b109092bdf",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+        "authored_at": "2026-08-10T21:51:13-07:00",
+        "committed_at": "2026-08-10T21:51:13-07:00",
+        "subject": "FoC Mirror",
+        "date": "2026-08-10",
+        "path_status": [
+          "A\tpublic/images/fall-of-cadia-mirror.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+        "authored_at": "2026-08-10T21:51:13-07:00",
+        "committed_at": "2026-08-10T21:51:13-07:00",
+        "subject": "FoC Mirror",
+        "date": "2026-08-10",
+        "path_status": [
+          "A\tpublic/images/fall-of-cadia-mirror.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/fall-of-cadia-mirror.webp": {
+      "path": "public/images/web/fall-of-cadia-mirror.webp",
+      "exists": true,
+      "sha256": "68b15558fa1dd1eeec2ea6130f89a3bf6e44fde7668c2b177aa9c7aa0be7aa42",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+        "authored_at": "2026-08-10T21:51:13-07:00",
+        "committed_at": "2026-08-10T21:51:13-07:00",
+        "subject": "FoC Mirror",
+        "date": "2026-08-10",
+        "path_status": [
+          "A\tpublic/images/web/fall-of-cadia-mirror.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+        "authored_at": "2026-08-10T21:51:13-07:00",
+        "committed_at": "2026-08-10T21:51:13-07:00",
+        "subject": "FoC Mirror",
+        "date": "2026-08-10",
+        "path_status": [
+          "A\tpublic/images/web/fall-of-cadia-mirror.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/indomitus.png": {
+      "path": "public/images/indomitus.png",
+      "exists": true,
+      "sha256": "025184bb8cc558d5969460f3cb386ae9fb59b99e7db5dbbeae2d7c52b6b98af7",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+        "authored_at": "2026-08-04T15:31:06-07:00",
+        "committed_at": "2026-08-04T15:31:06-07:00",
+        "subject": "Indomitus equipment",
+        "date": "2026-08-04",
+        "path_status": [
+          "M\tpublic/images/indomitus.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+        "authored_at": "2026-08-04T15:31:06-07:00",
+        "committed_at": "2026-08-04T15:31:06-07:00",
+        "subject": "Indomitus equipment",
+        "date": "2026-08-04",
+        "path_status": [
+          "M\tpublic/images/indomitus.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/indomitus.webp": {
+      "path": "public/images/web/indomitus.webp",
+      "exists": true,
+      "sha256": "3a33f8f46ad9fa7f50e857f3a07cb660d7732c05c2b65ea5e4aa03205ec3bbb0",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+        "authored_at": "2026-08-04T15:31:06-07:00",
+        "committed_at": "2026-08-04T15:31:06-07:00",
+        "subject": "Indomitus equipment",
+        "date": "2026-08-04",
+        "path_status": [
+          "M\tpublic/images/web/indomitus.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+        "authored_at": "2026-08-04T15:31:06-07:00",
+        "committed_at": "2026-08-04T15:31:06-07:00",
+        "subject": "Indomitus equipment",
+        "date": "2026-08-04",
+        "path_status": [
+          "M\tpublic/images/web/indomitus.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/indomitus-mirror.png": {
+      "path": "public/images/indomitus-mirror.png",
+      "exists": true,
+      "sha256": "87d05c42c854c715fd418995fa1d3c16e64174333c263b95e69080593259da7d",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+        "authored_at": "2026-08-05T11:28:40-07:00",
+        "committed_at": "2026-08-05T11:28:40-07:00",
+        "subject": "Revised necron graphic",
+        "date": "2026-08-05",
+        "path_status": [
+          "M\tpublic/images/indomitus-mirror.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+        "authored_at": "2026-08-05T11:28:40-07:00",
+        "committed_at": "2026-08-05T11:28:40-07:00",
+        "subject": "Revised necron graphic",
+        "date": "2026-08-05",
+        "path_status": [
+          "M\tpublic/images/indomitus-mirror.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/indomitus-mirror.webp": {
+      "path": "public/images/web/indomitus-mirror.webp",
+      "exists": true,
+      "sha256": "33089ce5484b234986445f1875a473b26a42c6cb0d8e4f0a65ff53b46ed1e117",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+        "authored_at": "2026-08-05T11:28:40-07:00",
+        "committed_at": "2026-08-05T11:28:40-07:00",
+        "subject": "Revised necron graphic",
+        "date": "2026-08-05",
+        "path_status": [
+          "M\tpublic/images/web/indomitus-mirror.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+        "authored_at": "2026-08-05T11:28:40-07:00",
+        "committed_at": "2026-08-05T11:28:40-07:00",
+        "subject": "Revised necron graphic",
+        "date": "2026-08-05",
+        "path_status": [
+          "M\tpublic/images/web/indomitus-mirror.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/octarius.png": {
+      "path": "public/images/octarius.png",
+      "exists": true,
+      "sha256": "96ebe23f2cebdefe5338a46b8f6df72e60d4942e419ba4da26fbd01a6825fbe5",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+        "authored_at": "2026-08-15T10:46:04-07:00",
+        "committed_at": "2026-08-15T10:46:04-07:00",
+        "subject": "Octarius campaign page",
+        "date": "2026-08-15",
+        "path_status": [
+          "A\tpublic/images/octarius.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+        "authored_at": "2026-08-15T10:46:04-07:00",
+        "committed_at": "2026-08-15T10:46:04-07:00",
+        "subject": "Octarius campaign page",
+        "date": "2026-08-15",
+        "path_status": [
+          "A\tpublic/images/octarius.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/octarius.webp": {
+      "path": "public/images/web/octarius.webp",
+      "exists": true,
+      "sha256": "0b76cefe0ce8e955e873322f79b3e8fbf5e385849ffdd45bc78e41ab239406b6",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+        "authored_at": "2026-08-15T10:46:04-07:00",
+        "committed_at": "2026-08-15T10:46:04-07:00",
+        "subject": "Octarius campaign page",
+        "date": "2026-08-15",
+        "path_status": [
+          "A\tpublic/images/web/octarius.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+        "authored_at": "2026-08-15T10:46:04-07:00",
+        "committed_at": "2026-08-15T10:46:04-07:00",
+        "subject": "Octarius campaign page",
+        "date": "2026-08-15",
+        "path_status": [
+          "A\tpublic/images/web/octarius.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/octarius-mirror.png": {
+      "path": "public/images/octarius-mirror.png",
+      "exists": true,
+      "sha256": "5cad8014d88182487895fb8d33b4c68b695e6a6cc3e11fb2920e9a09fa08d94e",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+        "authored_at": "2026-08-17T14:08:34-07:00",
+        "committed_at": "2026-08-17T14:08:34-07:00",
+        "subject": "Octarius Mirror page and references",
+        "date": "2026-08-17",
+        "path_status": [
+          "A\tpublic/images/octarius-mirror.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+        "authored_at": "2026-08-17T14:08:34-07:00",
+        "committed_at": "2026-08-17T14:08:34-07:00",
+        "subject": "Octarius Mirror page and references",
+        "date": "2026-08-17",
+        "path_status": [
+          "A\tpublic/images/octarius-mirror.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/octarius-mirror.webp": {
+      "path": "public/images/web/octarius-mirror.webp",
+      "exists": true,
+      "sha256": "4c5257a810276959eee13ec9b6a71f525180d05610d20db48ec060fe3d3da1e4",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+        "authored_at": "2026-08-17T14:08:34-07:00",
+        "committed_at": "2026-08-17T14:08:34-07:00",
+        "subject": "Octarius Mirror page and references",
+        "date": "2026-08-17",
+        "path_status": [
+          "A\tpublic/images/web/octarius-mirror.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+        "authored_at": "2026-08-17T14:08:34-07:00",
+        "committed_at": "2026-08-17T14:08:34-07:00",
+        "subject": "Octarius Mirror page and references",
+        "date": "2026-08-17",
+        "path_status": [
+          "A\tpublic/images/web/octarius-mirror.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/saim-hann.png": {
+      "path": "public/images/saim-hann.png",
+      "exists": true,
+      "sha256": "cf1464bd5a7eef6ee8585ccb6e3f6f494945d0522f88f933b820e9846852ee4b",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+        "authored_at": "2026-08-19T19:15:07-07:00",
+        "committed_at": "2026-08-19T19:15:07-07:00",
+        "subject": "Saim-Hann and new Homepage",
+        "date": "2026-08-19",
+        "path_status": [
+          "A\tpublic/images/saim-hann.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+        "authored_at": "2026-08-19T19:15:07-07:00",
+        "committed_at": "2026-08-19T19:15:07-07:00",
+        "subject": "Saim-Hann and new Homepage",
+        "date": "2026-08-19",
+        "path_status": [
+          "A\tpublic/images/saim-hann.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/saim-hann.webp": {
+      "path": "public/images/web/saim-hann.webp",
+      "exists": true,
+      "sha256": "116b886b8650f5cdc599df3461ef7bdf2a685f0870950405fec5e1c488d03635",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+        "authored_at": "2026-08-19T19:15:07-07:00",
+        "committed_at": "2026-08-19T19:15:07-07:00",
+        "subject": "Saim-Hann and new Homepage",
+        "date": "2026-08-19",
+        "path_status": [
+          "A\tpublic/images/web/saim-hann.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+        "authored_at": "2026-08-19T19:15:07-07:00",
+        "committed_at": "2026-08-19T19:15:07-07:00",
+        "subject": "Saim-Hann and new Homepage",
+        "date": "2026-08-19",
+        "path_status": [
+          "A\tpublic/images/web/saim-hann.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/saim-hann-mirror.png": {
+      "path": "public/images/saim-hann-mirror.png",
+      "exists": true,
+      "sha256": "05071a2eb9a7b8460c81cf17fcb8c65b36fe420216e1cdc1e29707e1d773af05",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+        "authored_at": "2026-09-16T16:03:34-07:00",
+        "committed_at": "2026-09-16T16:03:34-07:00",
+        "subject": "Campaign Guide error fixes",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/saim-hann-mirror.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+        "authored_at": "2026-09-16T16:03:34-07:00",
+        "committed_at": "2026-09-16T16:03:34-07:00",
+        "subject": "Campaign Guide error fixes",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/saim-hann-mirror.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/saim-hann-mirror.webp": {
+      "path": "public/images/web/saim-hann-mirror.webp",
+      "exists": true,
+      "sha256": "6b3e1ac6b19e2ccdde0d90b25ef564a897deb1cb43e92aae5c27333606048a48",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "123354ec91d693fae6a89d8d36149ffba297904c",
+        "authored_at": "2026-09-16T16:04:12-07:00",
+        "committed_at": "2026-09-16T16:04:12-07:00",
+        "subject": "Fixes with thumb and webp",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/web/saim-hann-mirror.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "123354ec91d693fae6a89d8d36149ffba297904c",
+        "authored_at": "2026-09-16T16:04:12-07:00",
+        "committed_at": "2026-09-16T16:04:12-07:00",
+        "subject": "Fixes with thumb and webp",
+        "date": "2026-09-16",
+        "path_status": [
+          "M\tpublic/images/web/saim-hann-mirror.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/elite-campaigns.png": {
+      "path": "public/images/elite-campaigns.png",
+      "exists": true,
+      "sha256": "75049f3c0c205d7d7135b04a0e51fca2c387174dd91b0cb62e789378a221f29f",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+        "authored_at": "2026-07-08T12:27:27-07:00",
+        "committed_at": "2026-07-08T12:27:27-07:00",
+        "subject": "Elite Campaigns",
+        "date": "2026-07-08",
+        "path_status": [
+          "M\tpublic/images/elite-campaigns.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+        "authored_at": "2026-07-08T12:27:27-07:00",
+        "committed_at": "2026-07-08T12:27:27-07:00",
+        "subject": "Elite Campaigns",
+        "date": "2026-07-08",
+        "path_status": [
+          "M\tpublic/images/elite-campaigns.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/elite-campaigns.webp": {
+      "path": "public/images/web/elite-campaigns.webp",
+      "exists": true,
+      "sha256": "049d8325b228925c5b12f176898df48f10d33480eb7895d968bf942190a4b796",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+        "authored_at": "2026-07-08T12:27:27-07:00",
+        "committed_at": "2026-07-08T12:27:27-07:00",
+        "subject": "Elite Campaigns",
+        "date": "2026-07-08",
+        "path_status": [
+          "M\tpublic/images/web/elite-campaigns.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+        "authored_at": "2026-07-08T12:27:27-07:00",
+        "committed_at": "2026-07-08T12:27:27-07:00",
+        "subject": "Elite Campaigns",
+        "date": "2026-07-08",
+        "path_status": [
+          "M\tpublic/images/web/elite-campaigns.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/boss-meta.png": {
+      "path": "public/images/boss-meta.png",
+      "exists": true,
+      "sha256": "fd21c1d5534a873cb4c9caf9be80e41d283954991fd0b8bc98c0299f84a0fe84",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+        "authored_at": "2026-10-24T15:18:04-07:00",
+        "committed_at": "2026-10-24T15:18:04-07:00",
+        "subject": "Update October Boss Meta infographic",
+        "date": "2026-10-24",
+        "path_status": [
+          "M\tpublic/images/boss-meta.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+        "authored_at": "2026-10-24T15:18:04-07:00",
+        "committed_at": "2026-10-24T15:18:04-07:00",
+        "subject": "Update October Boss Meta infographic",
+        "date": "2026-10-24",
+        "path_status": [
+          "M\tpublic/images/boss-meta.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/boss-meta.webp": {
+      "path": "public/images/web/boss-meta.webp",
+      "exists": true,
+      "sha256": "d9e1f777181856c350fceb18263fc35066a5f07c6e1ecd3bae7a7e0fcbcb8e94",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+        "authored_at": "2026-10-24T15:18:04-07:00",
+        "committed_at": "2026-10-24T15:18:04-07:00",
+        "subject": "Update October Boss Meta infographic",
+        "date": "2026-10-24",
+        "path_status": [
+          "M\tpublic/images/web/boss-meta.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+        "authored_at": "2026-10-24T15:18:04-07:00",
+        "committed_at": "2026-10-24T15:18:04-07:00",
+        "subject": "Update October Boss Meta infographic",
+        "date": "2026-10-24",
+        "path_status": [
+          "M\tpublic/images/web/boss-meta.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/guild-wars-attack.png": {
+      "path": "public/images/guild-wars-attack.png",
+      "exists": true,
+      "sha256": "7d7e28727497f7e61ce820840128822fd2e09a064c6fcf94e809b66a6d585e82",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/guild-wars-attack.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/guild-wars-attack.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/guild-wars-attack.webp": {
+      "path": "public/images/web/guild-wars-attack.webp",
+      "exists": true,
+      "sha256": "6cf2c1e8d0b86ba88e5ba6152d261b120d91c38c06bfa04e181864a01530ef0a",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/web/guild-wars-attack.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/web/guild-wars-attack.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/guild-wars-defend.png": {
+      "path": "public/images/guild-wars-defend.png",
+      "exists": true,
+      "sha256": "837f8480f922ed330975940c7d5dc3d4f1dce4fad9f91ef10400ae541e2c35c3",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/guild-wars-defend.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/guild-wars-defend.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/guild-wars-defend.webp": {
+      "path": "public/images/web/guild-wars-defend.webp",
+      "exists": true,
+      "sha256": "7b50dff39530d19d7455df4eba977825a0366571928f7d9834df454f714fc900",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/web/guild-wars-defend.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+        "authored_at": "2026-10-19T17:04:43-07:00",
+        "committed_at": "2026-10-19T17:04:43-07:00",
+        "subject": "Update October Guild Wars infographics",
+        "date": "2026-10-19",
+        "path_status": [
+          "M\tpublic/images/web/guild-wars-defend.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/hre.png": {
+      "path": "public/images/hre.png",
+      "exists": true,
+      "sha256": "1894e70149e5d2d4521757e45fcfd1ddbfa6828f026db240e4d7f81625e29270",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+        "authored_at": "2026-10-12T17:09:03-07:00",
+        "committed_at": "2026-10-12T17:09:03-07:00",
+        "subject": "HRE Guide",
+        "date": "2026-10-12",
+        "path_status": [
+          "M\tpublic/images/hre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+        "authored_at": "2026-10-12T17:09:03-07:00",
+        "committed_at": "2026-10-12T17:09:03-07:00",
+        "subject": "HRE Guide",
+        "date": "2026-10-12",
+        "path_status": [
+          "M\tpublic/images/hre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/hre.webp": {
+      "path": "public/images/web/hre.webp",
+      "exists": true,
+      "sha256": "ea2f16522fc1f9deccc548c382d79b3334e7902c66badcc27c28be29f806ddab",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+        "authored_at": "2026-10-12T17:09:03-07:00",
+        "committed_at": "2026-10-12T17:09:03-07:00",
+        "subject": "HRE Guide",
+        "date": "2026-10-12",
+        "path_status": [
+          "M\tpublic/images/web/hre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+        "authored_at": "2026-10-12T17:09:03-07:00",
+        "committed_at": "2026-10-12T17:09:03-07:00",
+        "subject": "HRE Guide",
+        "date": "2026-10-12",
+        "path_status": [
+          "M\tpublic/images/web/hre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/mow-biovore.png": {
+      "path": "public/images/mow-biovore.png",
+      "exists": true,
+      "sha256": "575fc8f776c18d59ec82defe39fad95f7ac30d64a7064f55be6240a1689244cd",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "A\tpublic/images/mow-biovore.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "A\tpublic/images/mow-biovore.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/mow-biovore.webp": {
+      "path": "public/images/web/mow-biovore.webp",
+      "exists": true,
+      "sha256": "dd7633c0e9c7eec02d7dcc51a7717b9bd25ec042e23ae0445b3d18245f49355a",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "A\tpublic/images/web/mow-biovore.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "A\tpublic/images/web/mow-biovore.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/incursion-mow.png": {
+      "path": "public/images/incursion-mow.png",
+      "exists": true,
+      "sha256": "18c561a47d660b6ff10343ede5b91abe6a4f891014e82e53fff45c8a0374cb57",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "M\tpublic/images/incursion-mow.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "M\tpublic/images/incursion-mow.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/incursion-mow.webp": {
+      "path": "public/images/web/incursion-mow.webp",
+      "exists": true,
+      "sha256": "8cda88412bbdc1ff12d6581beed1871669ea76f0d0568638190433d919fcd954",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "M\tpublic/images/web/incursion-mow.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+        "authored_at": "2026-09-23T16:09:31-07:00",
+        "committed_at": "2026-09-23T16:09:31-07:00",
+        "subject": "MoW update and Biovore guide",
+        "date": "2026-09-23",
+        "path_status": [
+          "M\tpublic/images/web/incursion-mow.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/fabius-lre.png": {
+      "path": "public/images/fabius-lre.png",
+      "exists": true,
+      "sha256": "b5aa6ab8254b556b0a0baa0cf2111bda6fcd82e32127a3cc4a2495299421c060",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+        "authored_at": "2026-10-05T16:53:41-07:00",
+        "committed_at": "2026-10-05T16:53:41-07:00",
+        "subject": "Add unlisted Fabius Bile LRE guide and planner",
+        "date": "2026-10-05",
+        "path_status": [
+          "A\tpublic/images/fabius-lre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+        "authored_at": "2026-10-05T16:53:41-07:00",
+        "committed_at": "2026-10-05T16:53:41-07:00",
+        "subject": "Add unlisted Fabius Bile LRE guide and planner",
+        "date": "2026-10-05",
+        "path_status": [
+          "A\tpublic/images/fabius-lre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/fabius-lre.webp": {
+      "path": "public/images/web/fabius-lre.webp",
+      "exists": true,
+      "sha256": "9081ba69c93e9885242436ff7723c34b53a731b327704eba66b5d704d262b78d",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+        "authored_at": "2026-10-05T16:53:41-07:00",
+        "committed_at": "2026-10-05T16:53:41-07:00",
+        "subject": "Add unlisted Fabius Bile LRE guide and planner",
+        "date": "2026-10-05",
+        "path_status": [
+          "A\tpublic/images/web/fabius-lre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+        "authored_at": "2026-10-05T16:53:41-07:00",
+        "committed_at": "2026-10-05T16:53:41-07:00",
+        "subject": "Add unlisted Fabius Bile LRE guide and planner",
+        "date": "2026-10-05",
+        "path_status": [
+          "A\tpublic/images/web/fabius-lre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/farsight-lre.png": {
+      "path": "public/images/farsight-lre.png",
+      "exists": true,
+      "sha256": "72ce7cb88d103cb88f9ca7607e8241064381e569d11696d7f3ee2492d7f96336",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "6af06ae6581a16b19f29d9b336d5c872bd80df03",
+        "authored_at": "2026-06-01T08:56:23-07:00",
+        "committed_at": "2026-06-01T08:56:23-07:00",
+        "subject": "Thumbnails",
+        "date": "2026-06-01",
+        "path_status": [
+          "C100\tpublic/images/lre.png\tpublic/images/farsight-lre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "7d601b2f99c7fabf271251af5272117430d7751a",
+        "authored_at": "2026-05-30T16:14:13-07:00",
+        "committed_at": "2026-05-30T16:14:13-07:00",
+        "subject": "Add infographic pages and reusable layout",
+        "date": "2026-05-30",
+        "path_status": [
+          "A\tpublic/images/lre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": [
+        {
+          "sha": "6af06ae6581a16b19f29d9b336d5c872bd80df03",
+          "authored_at": "2026-06-01T08:56:23-07:00",
+          "committed_at": "2026-06-01T08:56:23-07:00",
+          "subject": "Thumbnails",
+          "date": "2026-06-01",
+          "path_status": [
+            "C100\tpublic/images/lre.png\tpublic/images/farsight-lre.png"
+          ]
+        }
+      ]
+    },
+    "/images/web/farsight-lre.webp": {
+      "path": "public/images/web/farsight-lre.webp",
+      "exists": true,
+      "sha256": "5322adbebfa5b5dfe12828c6f4be2d25d2e6d7d4a5a7ff2bee76c753db6eff84",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "1d6500070051212ec062481945622cec4d82990d",
+        "authored_at": "2026-06-02T15:11:34-07:00",
+        "committed_at": "2026-06-02T15:11:34-07:00",
+        "subject": "Guild Raid component and webP",
+        "date": "2026-06-02",
+        "path_status": [
+          "A\tpublic/images/web/farsight-lre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "1d6500070051212ec062481945622cec4d82990d",
+        "authored_at": "2026-06-02T15:11:34-07:00",
+        "committed_at": "2026-06-02T15:11:34-07:00",
+        "subject": "Guild Raid component and webP",
+        "date": "2026-06-02",
+        "path_status": [
+          "A\tpublic/images/web/farsight-lre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/lucius-lre.png": {
+      "path": "public/images/lucius-lre.png",
+      "exists": true,
+      "sha256": "4d439450c8f60615899eb9008cd89ccb07ba1b9e6e486ac46c72746666085498",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+        "authored_at": "2026-06-23T15:50:37-07:00",
+        "committed_at": "2026-06-23T15:50:37-07:00",
+        "subject": "Refreshed Lucius graphic",
+        "date": "2026-06-23",
+        "path_status": [
+          "M\tpublic/images/lucius-lre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+        "authored_at": "2026-06-23T15:50:37-07:00",
+        "committed_at": "2026-06-23T15:50:37-07:00",
+        "subject": "Refreshed Lucius graphic",
+        "date": "2026-06-23",
+        "path_status": [
+          "M\tpublic/images/lucius-lre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/lucius-lre.webp": {
+      "path": "public/images/web/lucius-lre.webp",
+      "exists": true,
+      "sha256": "a36f765eab5d0d5830b41f610e390752e277d77e253affe1599dd9ae31e7a6cf",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+        "authored_at": "2026-06-23T15:50:37-07:00",
+        "committed_at": "2026-06-23T15:50:37-07:00",
+        "subject": "Refreshed Lucius graphic",
+        "date": "2026-06-23",
+        "path_status": [
+          "M\tpublic/images/web/lucius-lre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+        "authored_at": "2026-06-23T15:50:37-07:00",
+        "committed_at": "2026-06-23T15:50:37-07:00",
+        "subject": "Refreshed Lucius graphic",
+        "date": "2026-06-23",
+        "path_status": [
+          "M\tpublic/images/web/lucius-lre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/lysander-lre.png": {
+      "path": "public/images/lysander-lre.png",
+      "exists": true,
+      "sha256": "84d9d0ae5c541544fb73c4032edf716bbf95e754c206a2a515ad869ed1995470",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+        "authored_at": "2026-07-26T09:25:05-07:00",
+        "committed_at": "2026-07-26T09:25:05-07:00",
+        "subject": "revised s106 and lysander assets",
+        "date": "2026-07-26",
+        "path_status": [
+          "A\tpublic/images/lysander-lre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+        "authored_at": "2026-07-26T09:25:05-07:00",
+        "committed_at": "2026-07-26T09:25:05-07:00",
+        "subject": "revised s106 and lysander assets",
+        "date": "2026-07-26",
+        "path_status": [
+          "A\tpublic/images/lysander-lre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/lysander-lre.webp": {
+      "path": "public/images/web/lysander-lre.webp",
+      "exists": true,
+      "sha256": "0f28fc1883f238bb59bff83eae3eff0b54c71a8f690dfea21abe6cd44916fc7d",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+        "authored_at": "2026-07-26T09:25:05-07:00",
+        "committed_at": "2026-07-26T09:25:05-07:00",
+        "subject": "revised s106 and lysander assets",
+        "date": "2026-07-26",
+        "path_status": [
+          "A\tpublic/images/web/lysander-lre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+        "authored_at": "2026-07-26T09:25:05-07:00",
+        "committed_at": "2026-07-26T09:25:05-07:00",
+        "subject": "revised s106 and lysander assets",
+        "date": "2026-07-26",
+        "path_status": [
+          "A\tpublic/images/web/lysander-lre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/uthar-lre.png": {
+      "path": "public/images/uthar-lre.png",
+      "exists": true,
+      "sha256": "ec51237526cb831d2ef600828e083c3cfaac268d9a2f2d53443dddb5e27e4c59",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+        "authored_at": "2026-09-09T16:28:43-07:00",
+        "committed_at": "2026-09-09T16:28:43-07:00",
+        "subject": "Sekehtar Uthar LRE",
+        "date": "2026-09-09",
+        "path_status": [
+          "M\tpublic/images/uthar-lre.png"
+        ]
+      },
+      "content_commit": {
+        "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+        "authored_at": "2026-09-09T16:28:43-07:00",
+        "committed_at": "2026-09-09T16:28:43-07:00",
+        "subject": "Sekehtar Uthar LRE",
+        "date": "2026-09-09",
+        "path_status": [
+          "M\tpublic/images/uthar-lre.png"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    },
+    "/images/web/uthar-lre.webp": {
+      "path": "public/images/web/uthar-lre.webp",
+      "exists": true,
+      "sha256": "eb1540a9d171b9a3fecb76e9a0c088043a8193ded1e349beb8ac6cbb70287d1a",
+      "working_tree_status": "",
+      "latest_commit": {
+        "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+        "authored_at": "2026-09-09T16:28:43-07:00",
+        "committed_at": "2026-09-09T16:28:43-07:00",
+        "subject": "Sekehtar Uthar LRE",
+        "date": "2026-09-09",
+        "path_status": [
+          "M\tpublic/images/web/uthar-lre.webp"
+        ]
+      },
+      "content_commit": {
+        "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+        "authored_at": "2026-09-09T16:28:43-07:00",
+        "committed_at": "2026-09-09T16:28:43-07:00",
+        "subject": "Sekehtar Uthar LRE",
+        "date": "2026-09-09",
+        "path_status": [
+          "M\tpublic/images/web/uthar-lre.webp"
+        ]
+      },
+      "skipped_identical_copies_or_renames": []
+    }
+  }
+}

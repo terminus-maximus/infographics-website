@@ -4,12 +4,36 @@
     "commit": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85"
   },
   "/images/boss-meta.png": {
-    "updatedOn": "2026-09-25",
-    "commit": "8d37761f237484317847d77156f5e87117c7f1bc"
+    "updatedOn": "2026-10-24",
+    "commit": "e0184bf309c11a39f2ff94792320d976f0c83bc8"
   },
   "/images/campaign-event.png": {
     "updatedOn": "2026-10-11",
     "commit": "dcf2df798ada569a68f83c281a732c54218e93c9"
+  },
+  "/images/ce-admech.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-dark-angels.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-death-guard.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-sisters.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-tau.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-tyranids.png": {
+    "updatedOn": "2026-10-15",
+    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
   },
   "/images/elite-campaigns.png": {
     "updatedOn": "2026-07-08",

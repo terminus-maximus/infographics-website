@@ -1,0 +1,2539 @@
+{
+  "audit_date": "2026-10-24",
+  "evidence_date": "2026-10-24",
+  "cutoff_date": "2025-04-24",
+  "max_age_months": 18,
+  "rejected_matches": [
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1jzw9ml",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1ibdnnb",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1haefd7",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/boss-meta/",
+      "postId": "1fibqh1",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this historical raid-meta candidate. Do not propose it again."
+    },
+    {
+      "page": "/guild-raid/next-season/",
+      "postId": "1wxjgky",
+      "decidedOn": "2026-10-13",
+      "reason": "Dan abandoned this provisional preview association. Its confirmed Season 111 discussion remains valid."
+    }
+  ],
+  "source_revision": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+  "timezone": "America/Los_Angeles",
+  "coverage": {
+    "status": "cutoff_reached",
+    "count": 115,
+    "cutoff": "2025-04-24",
+    "oldest_retrieved": "2025-04-15T16:28:49.000Z",
+    "last_complete_cursor": "t3_1jzw9ml",
+    "notes": [
+      "Public JSON retrieved through web reader on 2026-10-24. Direct HTTP and the in-app browser were blocked by Reddit network security.",
+      "Large responses were truncated; pagination resumed after the last fully parsed submission. Smaller two-submission pages recovered the Jan 4 entry and continued past the cutoff. No unparsed listing cursor was used to skip submissions.",
+      "Eligibility uses the inclusive 18-calendar-month window and America/Los_Angeles publication dates. The public feed is not proof of deleted or unavailable submissions."
+    ]
+  },
+  "pages": [
+    {
+      "route": "/about/",
+      "title": "About | Terminus Maximus Infographics",
+      "source": "src/pages/about.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/beginner-guide/",
+      "title": "Beginner Guide",
+      "source": "src/pages/beginner-guide.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1tx0quk",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tx0quk/infographic_beginner_guide_games_modes_normal/",
+          "label": "Reddit Discussion - Jun 4, 2026"
+        },
+        {
+          "id": "1ppbc4g",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ppbc4g/beginner_guide_new_player_infographic_game_modes/",
+          "label": "Reddit Discussion - Dec 17, 2025"
+        },
+        {
+          "id": "1lesd58",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lesd58/beginner_guide_now_on_discord/",
+          "label": "Reddit Discussion - Jun 18, 2025"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1tx0quk",
+          "title": "[Infographic] Beginner Guide - Games Modes & Normal Campaign Investment Guide",
+          "created_utc": 1780607591,
+          "date": "2026-06-04",
+          "label": "Reddit Discussion - Jun 4, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tx0quk/infographic_beginner_guide_games_modes_normal/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1ppbc4g",
+          "title": "[Beginner Guide] New Player Infographic – Game Modes &amp; Campaign Investment",
+          "created_utc": 1766013498,
+          "date": "2025-12-17",
+          "label": "Reddit Discussion - Dec 17, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ppbc4g/beginner_guide_new_player_infographic_game_modes/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1pzqzz1"
+        },
+        {
+          "id": "1lesd58",
+          "title": "Beginner Guide - now on Discord!",
+          "created_utc": 1750280162,
+          "date": "2025-06-18",
+          "label": "Reddit Discussion - Jun 18, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lesd58/beginner_guide_now_on_discord/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lijpn8"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaign-event/admech/",
+      "title": "AdMech CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/dark-angels/",
+      "title": "Dark Angels CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/death-guard/",
+      "title": "Death Guard CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/",
+      "title": "Campaign Event Guides",
+      "source": "src/pages/campaign-event.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1x3rf3p",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x3rf3p/infographic_campaign_event_guide_choose_oct_15/",
+          "label": "Reddit Discussion - Oct 11, 2026"
+        },
+        {
+          "id": "1w9xvm1",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1w9xvm1/infographic_campaign_event_guide_choose_on_sept_10/",
+          "label": "Reddit Discussion - Sept 7, 2026"
+        },
+        {
+          "id": "1vdlzid",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vdlzid/infographic_campaign_event_guide_choose_yours_aug/",
+          "label": "Reddit Discussion - Aug 2, 2026"
+        },
+        {
+          "id": "1uiymuh",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uiymuh/infographic_campaign_events_guide_make_your/",
+          "label": "Reddit Discussion - Jun 29, 2026"
+        },
+        {
+          "id": "1tnd7z4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tnd7z4/infographic_campaign_event_guide_new_choices_on/",
+          "label": "Reddit Discussion - May 25, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1x3rf3p",
+          "title": "[Infographic] Campaign Event Guide - choose Oct 15",
+          "created_utc": 1791775855,
+          "date": "2026-10-11",
+          "label": "Reddit Discussion - Oct 11, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x3rf3p/infographic_campaign_event_guide_choose_oct_15/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1w9xvm1",
+          "title": "[Infographic] Campaign Event Guide - choose on Sept 10",
+          "created_utc": 1788800668,
+          "date": "2026-09-07",
+          "label": "Reddit Discussion - Sept 7, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1w9xvm1/infographic_campaign_event_guide_choose_on_sept_10/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1vdlzid",
+          "title": "[Infographic] Campaign Event Guide - choose yours Aug 6",
+          "created_utc": 1785686884,
+          "date": "2026-08-02",
+          "label": "Reddit Discussion - Aug 2, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vdlzid/infographic_campaign_event_guide_choose_yours_aug/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1uiymuh",
+          "title": "[Infographic] Campaign Events Guide - make your choice on July 2",
+          "created_utc": 1782753254,
+          "date": "2026-06-29",
+          "label": "Reddit Discussion - Jun 29, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uiymuh/infographic_campaign_events_guide_make_your/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [
+        {
+          "id": "1tnd7z4",
+          "title": "[Infographic] Campaign Event Guide - new choices on May 28",
+          "created_utc": 1779724424,
+          "date": "2026-05-25",
+          "label": "Reddit Discussion - May 25, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tnd7z4/infographic_campaign_event_guide_new_choices_on/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1sru9gq",
+          "title": "[Infographic] Campaign Event Guide - choose wisely April 23",
+          "created_utc": 1776791895,
+          "date": "2026-04-21",
+          "label": "Reddit Discussion - Apr 21, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sru9gq/infographic_campaign_event_guide_choose_wisely/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1rveco7",
+          "title": "[Infographic] Campaign Event Guide - choose wisely on March 19th",
+          "created_utc": 1773678631,
+          "date": "2026-03-16",
+          "label": "Reddit Discussion - Mar 16, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rveco7/infographic_campaign_event_guide_choose_wisely_on/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1r0juqd",
+          "title": "[Infographic] Campaign Event Guide - choose your path Feb 12",
+          "created_utc": 1770678575,
+          "date": "2026-02-09",
+          "label": "Reddit Discussion - Feb 9, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1r0juqd/infographic_campaign_event_guide_choose_your_path/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1q3z2bf",
+          "title": "[Infographic] Campaign Event Guide - choose your path Jan 8",
+          "created_utc": 1767554928,
+          "date": "2026-01-04",
+          "label": "Reddit Discussion - Jan 4, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1q3z2bf/infographic_campaign_event_guide_choose_your_path/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1q7o3um"
+        },
+        {
+          "id": "1pcneiv",
+          "title": "CE Guide: choose your path on Dec 4th",
+          "created_utc": 1764716325,
+          "date": "2025-12-02",
+          "label": "Reddit Discussion - Dec 2, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1pcneiv/ce_guide_choose_your_path_on_dec_4th/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1plt1iy"
+        },
+        {
+          "id": "1ohpnad",
+          "title": "Campaign Event Guide: choose wisely Oct 30th",
+          "created_utc": 1761597074,
+          "date": "2025-10-27",
+          "label": "Reddit Discussion - Oct 27, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ohpnad/campaign_event_guide_choose_wisely_oct_30th/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1on2bpa"
+        }
+      ],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [
+        {
+          "id": "1tnd7z4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tnd7z4/infographic_campaign_event_guide_new_choices_on/",
+          "label": "Reddit Discussion - May 25, 2026"
+        }
+      ],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/sisters/",
+      "title": "Sisters CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/tau/",
+      "title": "T’au CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaign-event/tyranids/",
+      "title": "Tyranids CE Guide",
+      "source": null,
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x70ax1",
+          "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+          "created_utc": 1792105348,
+          "date": "2026-10-15",
+          "label": "Reddit Discussion - Oct 15, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "title": "Tacticus Fall of Cadia Campaign Guide",
+      "source": "src/pages/campaigns/fall-of-cadia/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vo9iqb",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "label": "Reddit Discussion - Aug 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vo9iqb",
+          "title": "[Infographic] Campaign Guides - Indomitus & Fall of Cadia, Normal + Mirror",
+          "created_utc": 1786719340,
+          "date": "2026-08-14",
+          "label": "Reddit Discussion - Aug 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "title": "Tacticus Fall of Cadia Mirror Campaign Guide",
+      "source": "src/pages/campaigns/fall-of-cadia-mirror/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vo9iqb",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "label": "Reddit Discussion - Aug 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vo9iqb",
+          "title": "[Infographic] Campaign Guides - Indomitus & Fall of Cadia, Normal + Mirror",
+          "created_utc": 1786719340,
+          "date": "2026-08-14",
+          "label": "Reddit Discussion - Aug 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/",
+      "title": "Warhammer 40,000: Tacticus Campaign Guides",
+      "source": "src/pages/campaigns/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "title": "Tacticus Indomitus Campaign Guide",
+      "source": "src/pages/campaigns/indomitus/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vo9iqb",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "label": "Reddit Discussion - Aug 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vo9iqb",
+          "title": "[Infographic] Campaign Guides - Indomitus & Fall of Cadia, Normal + Mirror",
+          "created_utc": 1786719340,
+          "date": "2026-08-14",
+          "label": "Reddit Discussion - Aug 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "title": "Tacticus Indomitus Mirror Campaign Guide",
+      "source": "src/pages/campaigns/indomitus-mirror/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vo9iqb",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "label": "Reddit Discussion - Aug 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vo9iqb",
+          "title": "[Infographic] Campaign Guides - Indomitus & Fall of Cadia, Normal + Mirror",
+          "created_utc": 1786719340,
+          "date": "2026-08-14",
+          "label": "Reddit Discussion - Aug 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vo9iqb/infographic_campaign_guides_indomitus_fall_of/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "title": "Tacticus Octarius Campaign Guide",
+      "source": "src/pages/campaigns/octarius/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wix7pt",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "label": "Reddit Discussion - Sept 17, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wix7pt",
+          "title": "[Infographic] Campaign Guides - Octarius & Saim Hann, Normal + Mirror",
+          "created_utc": 1789659042,
+          "date": "2026-09-17",
+          "label": "Reddit Discussion - Sept 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "title": "Tacticus Octarius Mirror Campaign Guide",
+      "source": "src/pages/campaigns/octarius-mirror/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wix7pt",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "label": "Reddit Discussion - Sept 17, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wix7pt",
+          "title": "[Infographic] Campaign Guides - Octarius & Saim Hann, Normal + Mirror",
+          "created_utc": 1789659042,
+          "date": "2026-09-17",
+          "label": "Reddit Discussion - Sept 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "title": "Tacticus Saim-Hann Campaign Guide",
+      "source": "src/pages/campaigns/saim-hann/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wix7pt",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "label": "Reddit Discussion - Sept 17, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wix7pt",
+          "title": "[Infographic] Campaign Guides - Octarius & Saim Hann, Normal + Mirror",
+          "created_utc": 1789659042,
+          "date": "2026-09-17",
+          "label": "Reddit Discussion - Sept 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "title": "Tacticus Saim-Hann Mirror Campaign Guide",
+      "source": "src/pages/campaigns/saim-hann-mirror/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wix7pt",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "label": "Reddit Discussion - Sept 17, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wix7pt",
+          "title": "[Infographic] Campaign Guides - Octarius & Saim Hann, Normal + Mirror",
+          "created_utc": 1789659042,
+          "date": "2026-09-17",
+          "label": "Reddit Discussion - Sept 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wix7pt/infographic_campaign_guides_octarius_saim_hann/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/elite-campaigns/",
+      "title": "Elite Campaigns",
+      "source": "src/pages/elite-campaigns.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1ur2q4w",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ur2q4w/infographic_elite_campaigns_guide_great_for/",
+          "label": "Reddit Discussion - Jul 8, 2026"
+        },
+        {
+          "id": "1pzqzz1",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1pzqzz1/beginner_guide_new_player_infographic_elite/",
+          "label": "Reddit Discussion - Dec 30, 2025"
+        },
+        {
+          "id": "1lijpn8",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lijpn8/elite_campaigns_june_2025/",
+          "label": "Reddit Discussion - Jun 23, 2025"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1ur2q4w",
+          "title": "[Infographic] Elite Campaigns Guide – Great for Beginners & Roster Progression",
+          "created_utc": 1783538479,
+          "date": "2026-07-08",
+          "label": "Reddit Discussion - Jul 8, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ur2q4w/infographic_elite_campaigns_guide_great_for/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1pzqzz1",
+          "title": "[Beginner Guide] New Player Infographic - Elite Campaigns",
+          "created_utc": 1767122220,
+          "date": "2025-12-30",
+          "label": "Reddit Discussion - Dec 30, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1pzqzz1/beginner_guide_new_player_infographic_elite/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1q7o3um"
+        },
+        {
+          "id": "1lijpn8",
+          "title": "Elite Campaigns, June 2025",
+          "created_utc": 1750692813,
+          "date": "2025-06-23",
+          "label": "Reddit Discussion - Jun 23, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lijpn8/elite_campaigns_june_2025/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lq08l8"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/event-campaign/",
+      "title": "Campaign Event | Terminus Maximus Infographics",
+      "source": "src/pages/event-campaign.astro",
+      "scope": "redirect",
+      "current": []
+    },
+    {
+      "route": "/events/",
+      "title": "Events",
+      "source": "src/pages/events/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/feedback/",
+      "title": "Feedback",
+      "source": "src/pages/feedback.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/guild-raid/archive/",
+      "title": "Guild Raid Archive",
+      "source": "src/pages/guild-raid/archive.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "title": "Guild Raid Boss Meta Guide",
+      "source": "src/pages/guild-raid/boss-meta.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wqy5s1",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wqy5s1/infographic_guild_raid_boss_meta_guide_september/",
+          "label": "Reddit Discussion - Sept 26, 2026"
+        },
+        {
+          "id": "1uwat65",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uwat65/infographic_boss_meta_guide_meta_alternate_teams/",
+          "label": "Reddit Discussion - Jul 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wqy5s1",
+          "title": "[Infographic] Guild Raid Boss Meta Guide — September update from 1800+ replay analysis",
+          "created_utc": 1790448195,
+          "date": "2026-09-26",
+          "label": "Reddit Discussion - Sept 26, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wqy5s1/infographic_guild_raid_boss_meta_guide_september/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1uwat65",
+          "title": "[Infographic] Boss Meta Guide — META & ALTERNATE teams for every Guild Raid boss",
+          "created_utc": 1784040466,
+          "date": "2026-07-14",
+          "label": "Reddit Discussion - Jul 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uwat65/infographic_boss_meta_guide_meta_alternate_teams/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/",
+      "title": "Guild Raid Guides",
+      "source": "src/pages/guild-raid/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/guild-raid/next-season/",
+      "title": "Next Season",
+      "source": "src/pages/guild-raid/next-season.astro",
+      "scope": "infographic",
+      "current": [],
+      "selected": [],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "no_match_found"
+    },
+    {
+      "route": "/guild-raid/s097/",
+      "title": "Guild Raid Season 97 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s097.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1s0rwsl",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1s0rwsl/infographic_guild_raid_guide_season_97/",
+          "label": "Reddit Discussion - Mar 22, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1s0rwsl",
+          "title": "[Infographic] Guild Raid Guide - Season 97: introducing Mythic Tier 2 bosses!",
+          "created_utc": 1774201097,
+          "date": "2026-03-22",
+          "label": "Reddit Discussion - Mar 22, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1s0rwsl/infographic_guild_raid_guide_season_97/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s098/",
+      "title": "Guild Raid Season 98 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s098.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1sd8xns",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sd8xns/infographic_guild_raid_guide_mythic_avatar_coming/",
+          "label": "Reddit Discussion - Apr 5, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1sd8xns",
+          "title": "[Infographic] Guild Raid Guide - Mythic Avatar coming April 8th!",
+          "created_utc": 1775408661,
+          "date": "2026-04-05",
+          "label": "Reddit Discussion - Apr 5, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sd8xns/infographic_guild_raid_guide_mythic_avatar_coming/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s099/",
+      "title": "Guild Raid Season 99 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s099.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1spy65o",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1spy65o/infographic_guild_raid_guide_season_99_starts/",
+          "label": "Reddit Discussion - Apr 19, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1spy65o",
+          "title": "[Infographic] Guild Raid Guide - Season 99 starts April 22",
+          "created_utc": 1776617270,
+          "date": "2026-04-19",
+          "label": "Reddit Discussion - Apr 19, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1spy65o/infographic_guild_raid_guide_season_99_starts/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s100/",
+      "title": "Guild Raid Season 100 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s100.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1t2w8a4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1t2w8a4/infographic_guild_raid_guide_season_100_with/",
+          "label": "Reddit Discussion - May 3, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1t2w8a4",
+          "title": "[Infographic] Guild Raid Guide - Season 100 with Mythic Cawl starts May 6th",
+          "created_utc": 1777839299,
+          "date": "2026-05-03",
+          "label": "Reddit Discussion - May 3, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1t2w8a4/infographic_guild_raid_guide_season_100_with/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s101/",
+      "title": "Guild Raid Season 101 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s101.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1tfvdri",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tfvdri/infographic_guild_raid_guide_season_101_unleashes/",
+          "label": "Reddit Discussion - May 17, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1tfvdri",
+          "title": "[Infographic] Guild Raid Guide - Season 101 unleashes Mortarion on May 20th",
+          "created_utc": 1779037714,
+          "date": "2026-05-17",
+          "label": "Reddit Discussion - May 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tfvdri/infographic_guild_raid_guide_season_101_unleashes/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s102/",
+      "title": "Guild Raid Season 102 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s102.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1tt052a",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tt052a/infographic_guild_raid_guide_season_102_mythic/",
+          "label": "Reddit Discussion - May 31, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1tt052a",
+          "title": "[Infographic] Guild Raid Guide - Season 102 - Mythic Avatar returns!",
+          "created_utc": 1780245208,
+          "date": "2026-05-31",
+          "label": "Reddit Discussion - May 31, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tt052a/infographic_guild_raid_guide_season_102_mythic/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s103/",
+      "title": "Guild Raid Season 103 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s103.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1u3cbsv",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1u3cbsv/infographic_season_103_lion_eljohnson_debuts_in/",
+          "label": "Reddit Discussion - Jun 11, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1u3cbsv",
+          "title": "[Infographic] Season 103 - Lion El'Johnson debuts in Guild Raids on June 17",
+          "created_utc": 1781213948,
+          "date": "2026-06-11",
+          "label": "Reddit Discussion - Jun 11, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1u3cbsv/infographic_season_103_lion_eljohnson_debuts_in/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s104/",
+      "title": "Guild Raid Season 104 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s104.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1uha9ct",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uha9ct/infographic_guild_raid_guide_season_104_mythic/",
+          "label": "Reddit Discussion - Jun 27, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1uha9ct",
+          "title": "[Infographic] Guild Raid Guide - Season 104 - Mythic Ghazghkull begins July 1st",
+          "created_utc": 1782585280,
+          "date": "2026-06-27",
+          "label": "Reddit Discussion - Jun 27, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uha9ct/infographic_guild_raid_guide_season_104_mythic/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s105/",
+      "title": "Guild Raid Season 105 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s105.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1usu6mq",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1usu6mq/infographic_guild_raids_s105_triple_primarch/",
+          "label": "Reddit Discussion - Jul 10, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1usu6mq",
+          "title": "[Infographic] Guild Raids S105 — Triple Primarch Punishment & Replay Library Launch!",
+          "created_utc": 1783704358,
+          "date": "2026-07-10",
+          "label": "Reddit Discussion - Jul 10, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1usu6mq/infographic_guild_raids_s105_triple_primarch/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s106/",
+      "title": "Guild Raid Season 106 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s106.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1v6es5a",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1v6es5a/infographic_guild_raid_guide_season_106_the_lion/",
+          "label": "Reddit Discussion - Jul 25, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1v6es5a",
+          "title": "[Infographic] Guild Raid Guide - Season 106 the Lion enters Mythic difficulty",
+          "created_utc": 1785001423,
+          "date": "2026-07-25",
+          "label": "Reddit Discussion - Jul 25, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1v6es5a/infographic_guild_raid_guide_season_106_the_lion/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s107/",
+      "title": "Guild Raid Season 107 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s107.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vj7woi",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vj7woi/infographic_guild_raid_guide_s107_the_debut_of/",
+          "label": "Reddit Discussion - Aug 8, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vj7woi",
+          "title": "[Infographic] Guild Raid Guide - S107 the debut of Mythic 3 tier",
+          "created_utc": 1786225339,
+          "date": "2026-08-08",
+          "label": "Reddit Discussion - Aug 8, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vj7woi/infographic_guild_raid_guide_s107_the_debut_of/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s108/",
+      "title": "Guild Raid Season 108 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s108.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1vx6y7b",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vx6y7b/updated_guild_raid_guide_season_108_corrected/",
+          "label": "Reddit Discussion - Aug 24, 2026"
+        },
+        {
+          "id": "1vwdef8",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vwdef8/infographic_guild_raid_guide_s108_brings_m3/",
+          "label": "Reddit Discussion - Aug 23, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1vx6y7b",
+          "title": "[Updated] Guild Raid Guide - Season 108 corrected Legendaries",
+          "created_utc": 1787587363,
+          "date": "2026-08-24",
+          "label": "Reddit Discussion - Aug 24, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vx6y7b/updated_guild_raid_guide_season_108_corrected/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1vwdef8",
+          "title": "[Infographic] Guild Raid Guide - S108 brings M3 Riptide on Aug 26",
+          "created_utc": 1787506365,
+          "date": "2026-08-23",
+          "label": "Reddit Discussion - Aug 23, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vwdef8/infographic_guild_raid_guide_s108_brings_m3/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s109/",
+      "title": "Guild Raid Season 109 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s109.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1w870y1",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1w870y1/infographic_guild_raid_guide_season_109_brings/",
+          "label": "Reddit Discussion - Sept 5, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1w870y1",
+          "title": "[Infographic] Guild Raid Guide - Season 109 brings The Lion to M3",
+          "created_utc": 1788629648,
+          "date": "2026-09-05",
+          "label": "Reddit Discussion - Sept 5, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1w870y1/infographic_guild_raid_guide_season_109_brings/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s110/",
+      "title": "Guild Raid Season 110 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s110.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wlm2us",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wlm2us/infographic_guild_raid_guide_season_110_brings/",
+          "label": "Reddit Discussion - Sept 20, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wlm2us",
+          "title": "[Infographic] Guild Raid Guide - Season 110 brings CAWL to M3",
+          "created_utc": 1789922839,
+          "date": "2026-09-20",
+          "label": "Reddit Discussion - Sept 20, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wlm2us/infographic_guild_raid_guide_season_110_brings/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s111/",
+      "title": "Guild Raid Season 111 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s111.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wxjgky",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wxjgky/infographic_guild_raid_guide_season_111_who_has/",
+          "label": "Reddit Discussion - Oct 4, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wxjgky",
+          "title": "[Infographic] Guild Raid Guide Season 111 - who has missed MAGNUS?",
+          "created_utc": 1791130311,
+          "date": "2026-10-04",
+          "label": "Reddit Discussion - Oct 4, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wxjgky/infographic_guild_raid_guide_season_111_who_has/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/guild-raid/s112/",
+      "title": "Guild Raid Season 112 | Terminus Maximus Infographics",
+      "source": "src/pages/guild-raid/s112.astro",
+      "scope": "infographic",
+      "current": [],
+      "selected": [
+        {
+          "id": "1x8kbe0",
+          "title": "[Infographic] Guild Raid Guide Season 112 - big bad Ghaz!",
+          "created_utc": 1792268791,
+          "date": "2026-10-17",
+          "label": "Reddit Discussion - Oct 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x8kbe0/infographic_guild_raid_guide_season_112_big_bad/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x8kbe0",
+          "title": "[Infographic] Guild Raid Guide Season 112 - big bad Ghaz!",
+          "created_utc": 1792268791,
+          "date": "2026-10-17",
+          "label": "Reddit Discussion - Oct 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x8kbe0/infographic_guild_raid_guide_season_112_big_bad/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": true,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "title": "Guild War Top 10 Attack Teams",
+      "source": "src/pages/guild-wars/attack.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wg650s",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wg650s/infographic_guild_wars_top_10_attack_top_10/",
+          "label": "Reddit Discussion - Sept 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1xbs1ef",
+          "title": "[Infographic] Guild Wars: Top 10 Teams for Season 28",
+          "created_utc": 1792600401,
+          "date": "2026-10-21",
+          "label": "Reddit Discussion - Oct 21, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xbs1ef/infographic_guild_wars_top_10_teams_for_season_28/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        },
+        {
+          "id": "1wg650s",
+          "title": "[Infographic] Guild Wars: Top 10 Attack & Top 10 Defend Teams",
+          "created_utc": 1789398706,
+          "date": "2026-09-14",
+          "label": "Reddit Discussion - Sept 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wg650s/infographic_guild_wars_top_10_attack_top_10/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1xbs1ef",
+          "title": "[Infographic] Guild Wars: Top 10 Teams for Season 28",
+          "created_utc": 1792600401,
+          "date": "2026-10-21",
+          "label": "Reddit Discussion - Oct 21, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xbs1ef/infographic_guild_wars_top_10_teams_for_season_28/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "title": "Guild War Top 10 Defend Teams",
+      "source": "src/pages/guild-wars/defend.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wg650s",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wg650s/infographic_guild_wars_top_10_attack_top_10/",
+          "label": "Reddit Discussion - Sept 14, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1xbs1ef",
+          "title": "[Infographic] Guild Wars: Top 10 Teams for Season 28",
+          "created_utc": 1792600401,
+          "date": "2026-10-21",
+          "label": "Reddit Discussion - Oct 21, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xbs1ef/infographic_guild_wars_top_10_teams_for_season_28/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        },
+        {
+          "id": "1wg650s",
+          "title": "[Infographic] Guild Wars: Top 10 Attack & Top 10 Defend Teams",
+          "created_utc": 1789398706,
+          "date": "2026-09-14",
+          "label": "Reddit Discussion - Sept 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wg650s/infographic_guild_wars_top_10_attack_top_10/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1xbs1ef",
+          "title": "[Infographic] Guild Wars: Top 10 Teams for Season 28",
+          "created_utc": 1792600401,
+          "date": "2026-10-21",
+          "label": "Reddit Discussion - Oct 21, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xbs1ef/infographic_guild_wars_top_10_teams_for_season_28/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=20&raw_json=1"
+        }
+      ],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/guild-wars/",
+      "title": "Guild Wars",
+      "source": "src/pages/guild-wars/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/hre/",
+      "title": "Hero Release Events",
+      "source": "src/pages/hre.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wcnawc",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wcnawc/infographic_nubari_hre_mission_guide_begins_sept/",
+          "label": "Reddit Discussion - Nubari - Sept 10, 2026"
+        },
+        {
+          "id": "1vgi111",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vgi111/infographic_sekhetar_hre_mission_guide_starts_aug/",
+          "label": "Reddit Discussion - Sekhetar - Aug 5, 2026"
+        },
+        {
+          "id": "1ukuyms",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ukuyms/infographic_cezare_hre_mission_guide/",
+          "label": "Reddit Discussion - Cezare - Jul 1, 2026"
+        },
+        {
+          "id": "1tolrbn",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tolrbn/infographic_thothmek_hre_mission_guide/",
+          "label": "Reddit Discussion - Thothmek - May 26, 2026"
+        },
+        {
+          "id": "1sszsx4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sszsx4/infographic_havyr_hre_mission_guide_unlock_the/",
+          "label": "Reddit Discussion - Havyr - Apr 22, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1x5yri9",
+          "title": "[Infographic] Zapspitta HRE Mission Guide - begins Oct 18",
+          "created_utc": 1792001866,
+          "date": "2026-10-14",
+          "label": "Reddit Discussion - Zapspitta - Oct 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x5yri9/infographic_zapspitta_hre_mission_guide_begins/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1wcnawc",
+          "title": "[Infographic] Nubari HRE Mission Guide - begins Sept 13",
+          "created_utc": 1789056045,
+          "date": "2026-09-10",
+          "label": "Reddit Discussion - Nubari - Sept 10, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wcnawc/infographic_nubari_hre_mission_guide_begins_sept/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1vgi111",
+          "title": "[Infographic] Sekhetar HRE Mission Guide - starts Aug 9",
+          "created_utc": 1785959579,
+          "date": "2026-08-05",
+          "label": "Reddit Discussion - Sekhetar - Aug 5, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vgi111/infographic_sekhetar_hre_mission_guide_starts_aug/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1ukuyms",
+          "title": "[Infographic] Cezare HRE Mission Guide",
+          "created_utc": 1782933027,
+          "date": "2026-07-01",
+          "label": "Reddit Discussion - Cezare - Jul 1, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ukuyms/infographic_cezare_hre_mission_guide/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1tolrbn",
+          "title": "[Infographic] Thothmek HRE Mission Guide",
+          "created_utc": 1779832879,
+          "date": "2026-05-26",
+          "label": "Reddit Discussion - Thothmek - May 26, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tolrbn/infographic_thothmek_hre_mission_guide/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [
+        {
+          "id": "1sszsx4",
+          "title": "[Infographic] Havyr HRE Mission Guide - unlock the Cthonian Beserk on April 26!",
+          "created_utc": 1776895450,
+          "date": "2026-04-22",
+          "label": "Reddit Discussion - Apr 22, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sszsx4/infographic_havyr_hre_mission_guide_unlock_the/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1rxidyh",
+          "title": "[Infographic] Ammuk HRE Missions - unlock the Memnyr Strategist March 22!",
+          "created_utc": 1773872668,
+          "date": "2026-03-18",
+          "label": "Reddit Discussion - Mar 18, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rxidyh/infographic_ammuk_hre_missions_unlock_the_memnyr/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1r2gbde",
+          "title": "[Infographic] Vynn HRE Missions - unlock the Iron-Master Feb 15!",
+          "created_utc": 1770860378,
+          "date": "2026-02-11",
+          "label": "Reddit Discussion - Feb 11, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1r2gbde/infographic_vynn_hre_missions_unlock_the/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1q7o3um",
+          "title": "[Infographic] Baldr HRE Mission Guide, starts Jan 11",
+          "created_utc": 1767906574,
+          "date": "2026-01-08",
+          "label": "Reddit Discussion - Jan 8, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1q7o3um/infographic_baldr_hre_mission_guide_starts_jan_11/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1qmzjop&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1peegl8",
+          "title": "HRE Mission Guide: unlock Hascule on Dec 7th",
+          "created_utc": 1764888688,
+          "date": "2025-12-04",
+          "label": "Reddit Discussion - Dec 4, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1peegl8/hre_mission_guide_unlock_hascule_on_dec_7th/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1plt1iy"
+        },
+        {
+          "id": "1okaig2",
+          "title": "HRE Mission Guide: unlock Tyrith on Nov 2nd",
+          "created_utc": 1761855513,
+          "date": "2025-10-30",
+          "label": "Reddit Discussion - Oct 30, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1okaig2/hre_mission_guide_unlock_tyrith_on_nov_2nd/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1on2bpa"
+        },
+        {
+          "id": "1nqkh8h",
+          "title": "HRE Mission Guide: Adamatar, Lord Kakaphonist",
+          "created_utc": 1758838921,
+          "date": "2025-09-25",
+          "label": "Reddit Discussion - Sept 25, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1nqkh8h/hre_mission_guide_adamatar_lord_kakaphonist/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nystyx"
+        },
+        {
+          "id": "1mwklpw",
+          "title": "HRE Mission Guide: Shiron the Noise Marine",
+          "created_utc": 1755804293,
+          "date": "2025-08-21",
+          "label": "Reddit Discussion - Aug 21, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mwklpw/hre_mission_guide_shiron_the_noise_marine/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mz48gd"
+        },
+        {
+          "id": "1m379x7",
+          "title": "Atlacoya HRE Mission Guide",
+          "created_utc": 1752856950,
+          "date": "2025-07-18",
+          "label": "Reddit Discussion - Jul 18, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1m379x7/atlacoya_hre_mission_guide/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mblh83"
+        }
+      ],
+      "manual_review": [],
+      "missing": [
+        {
+          "id": "1x5yri9",
+          "title": "[Infographic] Zapspitta HRE Mission Guide - begins Oct 18",
+          "created_utc": 1792001866,
+          "date": "2026-10-14",
+          "label": "Reddit Discussion - Zapspitta - Oct 14, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x5yri9/infographic_zapspitta_hre_mission_guide_begins/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "retire": [
+        {
+          "id": "1sszsx4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sszsx4/infographic_havyr_hre_mission_guide_unlock_the/",
+          "label": "Reddit Discussion - Havyr - Apr 22, 2026"
+        }
+      ],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "changes_proposed"
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "title": "Biovore Incursion Guide",
+      "source": "src/pages/incursion-mow/[machine].astro",
+      "scope": "infographic",
+      "current": [],
+      "selected": [],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "no_match_found"
+    },
+    {
+      "route": "/incursion-mow/",
+      "title": "Incursion & Machine of War",
+      "source": "src/pages/incursion-mow/index.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wp50n4",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wp50n4/infographic_incursion_mow_guide_choose_your/",
+          "label": "Reddit Discussion - Sept 24, 2026"
+        },
+        {
+          "id": "1vtsem0",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vtsem0/infographic_incursion_mow_guide_choose_your/",
+          "label": "Reddit Discussion - Aug 20, 2026"
+        },
+        {
+          "id": "1uz5c3s",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uz5c3s/infographic_incursion_mow_guide_choose_yours_on/",
+          "label": "Reddit Discussion - Jul 17, 2026"
+        },
+        {
+          "id": "1u0gkl6",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1u0gkl6/infographic_incursion_mow_guide_choose_on_june_15/",
+          "label": "Reddit Discussion - Jun 8, 2026"
+        },
+        {
+          "id": "1t5t52f",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1t5t52f/infographic_incursion_mow_guide_choose_on_may_11/",
+          "label": "Reddit Discussion - May 6, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wp50n4",
+          "title": "[Infographic] Incursion Mow Guide - choose your Machine on Sept 28",
+          "created_utc": 1790264355,
+          "date": "2026-09-24",
+          "label": "Reddit Discussion - Sept 24, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wp50n4/infographic_incursion_mow_guide_choose_your/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1vtsem0",
+          "title": "[Infographic] Incursion Mow Guide - choose your Machine on Aug 24",
+          "created_utc": 1787252097,
+          "date": "2026-08-20",
+          "label": "Reddit Discussion - Aug 20, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1vtsem0/infographic_incursion_mow_guide_choose_your/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1uz5c3s",
+          "title": "[Infographic] Incursion MoW Guide - choose yours on July 20",
+          "created_utc": 1784307296,
+          "date": "2026-07-17",
+          "label": "Reddit Discussion - Jul 17, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1uz5c3s/infographic_incursion_mow_guide_choose_yours_on/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1u0gkl6",
+          "title": "[Infographic] Incursion MoW Guide - choose on June 15",
+          "created_utc": 1780943747,
+          "date": "2026-06-08",
+          "label": "Reddit Discussion - Jun 8, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1u0gkl6/infographic_incursion_mow_guide_choose_on_june_15/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1t5t52f",
+          "title": "[Infographic] Incursion MoW Guide - choose on May 11",
+          "created_utc": 1778109056,
+          "date": "2026-05-06",
+          "label": "Reddit Discussion - May 6, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1t5t52f/infographic_incursion_mow_guide_choose_on_may_11/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [
+        {
+          "id": "1saur80",
+          "title": "[Infographic] Incursion MoW Guide - pick your path April 6",
+          "created_utc": 1775166298,
+          "date": "2026-04-02",
+          "label": "Reddit Discussion - Apr 2, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1saur80/infographic_incursion_mow_guide_pick_your_path/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1rfeodp",
+          "title": "[Infographic] MoW Guide - choose your Incursion on March 2nd",
+          "created_utc": 1772123095,
+          "date": "2026-02-26",
+          "label": "Reddit Discussion - Feb 26, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rfeodp/infographic_mow_guide_choose_your_incursion_on/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1qk9y3o",
+          "title": "[MoW Guide] choose your Incursion on Jan 26th",
+          "created_utc": 1769123508,
+          "date": "2026-01-22",
+          "label": "Reddit Discussion - Jan 22, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qk9y3o/mow_guide_choose_your_incursion_on_jan_26th/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1qmzjop&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1poh5h2",
+          "title": "MoW Guide: choose your Incursion on Dec 22nd",
+          "created_utc": 1765927885,
+          "date": "2025-12-16",
+          "label": "Reddit Discussion - Dec 16, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1poh5h2/mow_guide_choose_your_incursion_on_dec_22nd/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ppbc4g"
+        },
+        {
+          "id": "1owae07",
+          "title": "MoW Guide: next Incursion starts Mon Nov 17",
+          "created_utc": 1763061973,
+          "date": "2025-11-13",
+          "label": "Reddit Discussion - Nov 13, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1owae07/mow_guide_next_incursion_starts_mon_nov_17/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ozm740"
+        },
+        {
+          "id": "1o2q9cd",
+          "title": "MoW Guide: the Incursion starts Oct 13",
+          "created_utc": 1760066878,
+          "date": "2025-10-09",
+          "label": "Reddit Discussion - Oct 9, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1o2q9cd/mow_guide_the_incursion_starts_oct_13/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1o8ik62"
+        },
+        {
+          "id": "1n9cm5a",
+          "title": "Incursion is coming!  Choose your MoW on Sept 8",
+          "created_utc": 1757095895,
+          "date": "2025-09-05",
+          "label": "Reddit Discussion - Sept 5, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1n9cm5a/incursion_is_coming_choose_your_mow_on_sept_8/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nb1t1r"
+        },
+        {
+          "id": "1mf560d",
+          "title": "Machine of War (MoW) Guide, August 2025",
+          "created_utc": 1754074949,
+          "date": "2025-08-01",
+          "label": "Reddit Discussion - Aug 1, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mf560d/machine_of_war_mow_guide_august_2025/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mni869"
+        }
+      ],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/",
+      "title": "Terminus Maximus Infographics",
+      "source": "src/pages/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/lre/fabius/",
+      "title": "Fabius Bile Legendary Release Event",
+      "source": "src/pages/lre/fabius.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1x007bu",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x007bu/infographic_fabius_bile_lre_guide_nov_8/",
+          "label": "Reddit Discussion - Oct 7, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1x007bu",
+          "title": "[Infographic] Fabius Bile LRE Guide - Nov 8",
+          "created_utc": 1791388504,
+          "date": "2026-10-07",
+          "label": "Reddit Discussion - Oct 7, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x007bu/infographic_fabius_bile_lre_guide_nov_8/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/lre/farsight/",
+      "title": "Farsight Legendary Release Event",
+      "source": "src/pages/lre/farsight.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1tisa6s",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tisa6s/infographic_farsight_lre_guide_prepare_for_his/",
+          "label": "Reddit Discussion - May 20, 2026"
+        },
+        {
+          "id": "1p975vn",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1p975vn/farsight_lre_guide_get_ready_for_dec_28th/",
+          "label": "Reddit Discussion - Nov 28, 2025"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1tisa6s",
+          "title": "[Infographic] Farsight LRE Guide - prepare for his 2nd event on June 21",
+          "created_utc": 1779297426,
+          "date": "2026-05-20",
+          "label": "Reddit Discussion - May 20, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1tisa6s/infographic_farsight_lre_guide_prepare_for_his/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1p975vn",
+          "title": "Farsight LRE Guide: get ready for Dec 28th",
+          "created_utc": 1764366566,
+          "date": "2025-11-28",
+          "label": "Reddit Discussion - Nov 28, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1p975vn/farsight_lre_guide_get_ready_for_dec_28th/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1pcneiv"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/lre/",
+      "title": "Legendary Release Events",
+      "source": "src/pages/lre/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    },
+    {
+      "route": "/lre/lucius/",
+      "title": "Lucius Legendary Release Event",
+      "source": "src/pages/lre/lucius.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1ufh23g",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ufh23g/infographic_lucius_lre_guide_final_event_begins/",
+          "label": "Reddit Discussion - Jun 25, 2026"
+        },
+        {
+          "id": "1qqnja5",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qqnja5/infographic_lucius_lre_legendary_event_guide/",
+          "label": "Reddit Discussion - Jan 29, 2026"
+        },
+        {
+          "id": "1lzaffe",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lzaffe/lucius_lre_guide/",
+          "label": "Reddit Discussion - Jul 13, 2025"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1ufh23g",
+          "title": "[Infographic] Lucius LRE Guide - final event begins July 26",
+          "created_utc": 1782409444,
+          "date": "2026-06-25",
+          "label": "Reddit Discussion - Jun 25, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ufh23g/infographic_lucius_lre_guide_final_event_begins/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1qqnja5",
+          "title": "[Infographic] Lucius LRE Legendary Event Guide, starts Feb 1",
+          "created_utc": 1769726417,
+          "date": "2026-01-29",
+          "label": "Reddit Discussion - Jan 29, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qqnja5/infographic_lucius_lre_legendary_event_guide/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1lzaffe",
+          "title": "Lucius LRE Guide",
+          "created_utc": 1752458815,
+          "date": "2025-07-13",
+          "label": "Reddit Discussion - Jul 13, 2025",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lzaffe/lucius_lre_guide/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lzwm0m"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/lre/lysander/",
+      "title": "Lysander Legendary Release Event",
+      "source": "src/pages/lre/lysander.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1v93gy1",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1v93gy1/infographic_lysander_lre_guide_first_event_begins/",
+          "label": "Reddit Discussion - Jul 28, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1v93gy1",
+          "title": "[Infographic] Lysander LRE Guide - first event begins Aug 29",
+          "created_utc": 1785256163,
+          "date": "2026-07-28",
+          "label": "Reddit Discussion - Jul 28, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1v93gy1/infographic_lysander_lre_guide_first_event_begins/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1vgi111&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/lre/uthar/",
+      "title": "Uthar Legendary Release Event",
+      "source": "src/pages/lre/uthar.astro",
+      "scope": "infographic",
+      "current": [
+        {
+          "id": "1wb28nq",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wb28nq/infographic_ûthar_lre_guide_his_2nd_event_returns/",
+          "label": "Reddit Discussion - Sept 8, 2026"
+        },
+        {
+          "id": "1rjwv33",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rjwv33/infographic_ûthar_lre_guide_play_to_unlock_on/",
+          "label": "Reddit Discussion - Mar 3, 2026"
+        }
+      ],
+      "selected": [
+        {
+          "id": "1wb28nq",
+          "title": "[Infographic] Ûthar LRE Guide - his 2nd event returns Oct 4",
+          "created_utc": 1788903967,
+          "date": "2026-09-08",
+          "label": "Reddit Discussion - Sept 8, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1wb28nq/infographic_ûthar_lre_guide_his_2nd_event_returns/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1x8kbe0&limit=20&raw_json=1&sort=new"
+        },
+        {
+          "id": "1rjwv33",
+          "title": "[Infographic] Ûthar LRE Guide - play to unlock on March 8th",
+          "created_utc": 1772561791,
+          "date": "2026-03-03",
+          "label": "Reddit Discussion - Mar 3, 2026",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rjwv33/infographic_ûthar_lre_guide_play_to_unlock_on/",
+          "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+        }
+      ],
+      "older_matches": [],
+      "manual_review": [],
+      "missing": [],
+      "retire": [],
+      "unresolved_current": [],
+      "duplicate_current": false,
+      "needs_section": false,
+      "status": "current_selection_matches"
+    },
+    {
+      "route": "/replay-library/",
+      "title": "Replay Library",
+      "source": "src/pages/replay-library/index.astro",
+      "scope": "hub_or_utility",
+      "current": []
+    }
+  ],
+  "assignments": {
+    "1sd8xns": {
+      "routes": [
+        "/guild-raid/s098/"
+      ],
+      "reason": "Post body explicitly states Season 98 runs April 8–20; title omits the season number."
+    },
+    "1wxjgky": {
+      "routes": [
+        "/guild-raid/s111/"
+      ],
+      "reason": "Main post and linked replay page concern Season 111. The speculative Season 112 teaser is excluded from the rolling next-season page by the saved rejected-pair policy."
+    },
+    "1xbs1ef": {
+      "routes": [
+        "/guild-wars/attack/",
+        "/guild-wars/defend/"
+      ],
+      "reason": "Post explicitly presents two Season 28 Guild War graphics covering attack and defend teams, using Seasons 25–27 battlefield 4–5 research."
+    },
+    "1x8kbe0": {
+      "routes": [
+        "/guild-raid/s112/"
+      ],
+      "reason": "Main subject, dates, and exact page link are Season 112. Incidental replay-library promotion and the Season 113 teaser are not separate topic assignments."
+    },
+    "1x70ax1": {
+      "routes": [
+        "/campaign-event/",
+        "/campaign-event/admech/",
+        "/campaign-event/dark-angels/",
+        "/campaign-event/death-guard/",
+        "/campaign-event/sisters/",
+        "/campaign-event/tau/",
+        "/campaign-event/tyranids/"
+      ],
+      "reason": "Post explicitly launches the six named Extremis guides, links each exact route, and explains expansion of the Campaign Event overview with E30 teams and replays."
+    },
+    "1x5yri9": {
+      "routes": [
+        "/hre/"
+      ],
+      "reason": "Zapspitta HRE mission guide is a direct match for the rolling HRE guide; label uses actual publication date and names Zapspitta."
+    }
+  },
+  "excluded_posts": [
+    {
+      "id": "1lg9rnt",
+      "title": "Beginner Guide, June 2025",
+      "reason": "removed/deleted"
+    },
+    {
+      "id": "1lekyri",
+      "title": "Beginner Guide, June 2025",
+      "reason": "removed/deleted"
+    },
+    {
+      "id": "1k4h26m",
+      "title": "Season 73 Raid Calendar - starts Wednesday!",
+      "reason": "older than 18 months (cutoff 2025-04-24)"
+    },
+    {
+      "id": "1jzw9ml",
+      "title": "Raid Meta, April 2025",
+      "reason": "older than 18 months (cutoff 2025-04-24)"
+    }
+  ],
+  "unmatched_posts": [
+    {
+      "id": "1sn94e2",
+      "title": "[Infographic] Trajann LRE Guide - FINAL event May 17th",
+      "created_utc": 1776358059,
+      "date": "2026-04-16",
+      "label": "Reddit Discussion - Apr 16, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1sn94e2/infographic_trajann_lre_guide_final_event_may_17th/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1rr8q9n",
+      "title": "[Infographic] Dante LRE Guide - play his FINAL event on April 12th!",
+      "created_utc": 1773268228,
+      "date": "2026-03-11",
+      "label": "Reddit Discussion - Mar 11, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rr8q9n/infographic_dante_lre_guide_play_his_final_event/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1robkqc",
+      "title": "[Infographic] Guild Raid Guide - Season 96: mythic Szarekh returns!",
+      "created_utc": 1772992826,
+      "date": "2026-03-08",
+      "label": "Reddit Discussion - Mar 8, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1robkqc/infographic_guild_raid_guide_season_96_mythic/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1rbay6t",
+      "title": "[Infographic] Guild Raid Guide - Season 95: mythic Magnus returns!",
+      "created_utc": 1771730357,
+      "date": "2026-02-21",
+      "label": "Reddit Discussion - Feb 21, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rbay6t/infographic_guild_raid_guide_season_95_mythic/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1qze6mm",
+      "title": "[Infographic] Guild Raid Guide - Season 94: the return of Mythic Ghazghkull",
+      "created_utc": 1770569957,
+      "date": "2026-02-08",
+      "label": "Reddit Discussion - Feb 8, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qze6mm/infographic_guild_raid_guide_season_94_the_return/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1qmzjop",
+      "title": "[Infographic] Guild Raid Guide - Season 93: the return of Mythic Morty!",
+      "created_utc": 1769384535,
+      "date": "2026-01-25",
+      "label": "Reddit Discussion - Jan 25, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qmzjop/infographic_guild_raid_guide_season_93_the_return/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1t5t52f&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1qb2yj5",
+      "title": "[Infographic] Guild Raid Guide - mythic Riptide unleashed in Season 92!",
+      "created_utc": 1768242713,
+      "date": "2026-01-12",
+      "label": "Reddit Discussion - Jan 12, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1qb2yj5/infographic_guild_raid_guide_mythic_riptide/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?after=t3_1qmzjop&limit=20&raw_json=1&sort=new"
+    },
+    {
+      "id": "1py190q",
+      "title": "Guild Raid Guide: Season 91",
+      "created_utc": 1766952945,
+      "date": "2025-12-28",
+      "label": "Reddit Discussion - Dec 28, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1py190q/guild_raid_guide_season_91/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1pzqzz1"
+    },
+    {
+      "id": "1plt1iy",
+      "title": "Season 90 Raid Calendar: mythic Szarekh returns!",
+      "created_utc": 1765652290,
+      "date": "2025-12-13",
+      "label": "Reddit Discussion - Dec 13, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1plt1iy/season_90_raid_calendar_mythic_szarekh_returns/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ppbc4g"
+    },
+    {
+      "id": "1pbf8s4",
+      "title": "Season 89: the return of Mythic Ghaz!",
+      "created_utc": 1764601908,
+      "date": "2025-12-01",
+      "label": "Reddit Discussion - Dec 1, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1pbf8s4/season_89_the_return_of_mythic_ghaz/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1pcneiv"
+    },
+    {
+      "id": "1p2gijj",
+      "title": "Trajann LRE Guide: starts this Saturday!",
+      "created_utc": 1763676013,
+      "date": "2025-11-20",
+      "label": "Reddit Discussion - Nov 20, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1p2gijj/trajann_lre_guide_starts_this_saturday/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1p975vn"
+    },
+    {
+      "id": "1ozm740",
+      "title": "Season 88: the debut of Mythic Rogal Dorn",
+      "created_utc": 1763399995,
+      "date": "2025-11-17",
+      "label": "Reddit Discussion - Nov 17, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1ozm740/season_88_the_debut_of_mythic_rogal_dorn/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1p975vn"
+    },
+    {
+      "id": "1on2bpa",
+      "title": "Season 87 Raid Calendar: Magnus goes MYTHIC",
+      "created_utc": 1762143393,
+      "date": "2025-11-02",
+      "label": "Reddit Discussion - Nov 2, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1on2bpa/season_87_raid_calendar_magnus_goes_mythic/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ozm740"
+    },
+    {
+      "id": "1odfq1a",
+      "title": "Trajann LRE: 2nd event begins Nov 23",
+      "created_utc": 1761156298,
+      "date": "2025-10-22",
+      "label": "Reddit Discussion - Oct 22, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1odfq1a/trajann_lre_2nd_event_begins_nov_23/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ohpnad"
+    },
+    {
+      "id": "1o8ik62",
+      "title": "Guild Raids: Season 86",
+      "created_utc": 1760649422,
+      "date": "2025-10-16",
+      "label": "Reddit Discussion - Oct 16, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1o8ik62/guild_raids_season_86/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1ohpnad"
+    },
+    {
+      "id": "1nystyx",
+      "title": "Season 85 Raids: introducing Mythic Mortarion",
+      "created_utc": 1759681844,
+      "date": "2025-10-05",
+      "label": "Reddit Discussion - Oct 5, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1nystyx/season_85_raids_introducing_mythic_mortarion/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1o8ik62"
+    },
+    {
+      "id": "1nmx24e",
+      "title": "Season 84: introducing Ghazghkull at Mythic difficulty",
+      "created_utc": 1758473483,
+      "date": "2025-09-21",
+      "label": "Reddit Discussion - Sept 21, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1nmx24e/season_84_introducing_ghazghkull_at_mythic/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nystyx"
+    },
+    {
+      "id": "1nh98p3",
+      "title": "Patermine LRE Guide: final event begins Oct 19th",
+      "created_utc": 1757900980,
+      "date": "2025-09-14",
+      "label": "Reddit Discussion - Sept 14, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1nh98p3/patermine_lre_guide_final_event_begins_oct_19th/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nmx24e"
+    },
+    {
+      "id": "1nb1t1r",
+      "title": "Season 83: the Silent King, Szarekh, is MYTHICAL",
+      "created_utc": 1757271969,
+      "date": "2025-09-07",
+      "label": "Reddit Discussion - Sept 7, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1nb1t1r/season_83_the_silent_king_szarekh_is_mythical/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nmx24e"
+    },
+    {
+      "id": "1mz48gd",
+      "title": "Season 82 Raid Calendars",
+      "created_utc": 1756062045,
+      "date": "2025-08-24",
+      "label": "Reddit Discussion - Aug 24, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mz48gd/season_82_raid_calendars/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1nb1t1r"
+    },
+    {
+      "id": "1muq5qq",
+      "title": "Mythic Missions: Raid Meta Teams",
+      "created_utc": 1755626913,
+      "date": "2025-08-19",
+      "label": "Reddit Discussion - Aug 19, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1muq5qq/mythic_missions_raid_meta_teams/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mz48gd"
+    },
+    {
+      "id": "1mqmntf",
+      "title": "Mythic Missions: AdMech Team",
+      "created_utc": 1755229694,
+      "date": "2025-08-14",
+      "label": "Reddit Discussion - Aug 14, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mqmntf/mythic_missions_admech_team/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1muq5qq"
+    },
+    {
+      "id": "1mp8xxp",
+      "title": "Dante LRE Guide: 2nd event begins Sept 14th",
+      "created_utc": 1755102001,
+      "date": "2025-08-13",
+      "label": "Reddit Discussion - Aug 13, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mp8xxp/dante_lre_guide_2nd_event_begins_sept_14th/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1muq5qq"
+    },
+    {
+      "id": "1mogzbd",
+      "title": "Mythic Missions: unlocking August 20th",
+      "created_utc": 1755023818,
+      "date": "2025-08-12",
+      "label": "Reddit Discussion - Aug 12, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mogzbd/mythic_missions_unlocking_august_20th/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mp8xxp"
+    },
+    {
+      "id": "1mni869",
+      "title": "Season 81 Raids: Riptide premiere!",
+      "created_utc": 1754930862,
+      "date": "2025-08-11",
+      "label": "Reddit Discussion - Aug 11, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mni869/season_81_raids_riptide_premiere/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mp8xxp"
+    },
+    {
+      "id": "1mblh83",
+      "title": "Season 80 Raids: Legendary &amp; lower Tiers",
+      "created_utc": 1753721394,
+      "date": "2025-07-28",
+      "label": "Reddit Discussion - Jul 28, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1mblh83/season_80_raids_legendary_lower_tiers/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mni869"
+    },
+    {
+      "id": "1lzwm0m",
+      "title": "Guild Raids, Season 79",
+      "created_utc": 1752522725,
+      "date": "2025-07-14",
+      "label": "Reddit Discussion - Jul 14, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lzwm0m/guild_raids_season_79/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1mblh83"
+    },
+    {
+      "id": "1lq08l8",
+      "title": "Mephiston LRE Guide",
+      "created_utc": 1751473403,
+      "date": "2025-07-02",
+      "label": "Reddit Discussion - Jul 2, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lq08l8/mephiston_lre_guide/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lzwm0m"
+    },
+    {
+      "id": "1lobh94",
+      "title": "Season 78 Raid Calendar",
+      "created_utc": 1751299595,
+      "date": "2025-06-30",
+      "label": "Reddit Discussion - Jun 30, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lobh94/season_78_raid_calendar/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lq08l8"
+    },
+    {
+      "id": "1lcwbbh",
+      "title": "Season 77: double Primarch season!!!!",
+      "created_utc": 1750088831,
+      "date": "2025-06-16",
+      "label": "Reddit Discussion - Jun 16, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1lcwbbh/season_77_double_primarch_season/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lesd58"
+    },
+    {
+      "id": "1l2iz4o",
+      "title": "UPDATE: Ghaz has fled!  Season 76 revised calendar",
+      "created_utc": 1748974016,
+      "date": "2025-06-03",
+      "label": "Reddit Discussion - Jun 3, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1l2iz4o/update_ghaz_has_fled_season_76_revised_calendar/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lcwbbh"
+    },
+    {
+      "id": "1l1ldu9",
+      "title": "L5 Cawl returns!  Season 76 raid calendar",
+      "created_utc": 1748879058,
+      "date": "2025-06-02",
+      "label": "Reddit Discussion - Jun 2, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1l1ldu9/l5_cawl_returns_season_76_raid_calendar/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1lcwbbh"
+    },
+    {
+      "id": "1kr7hdu",
+      "title": "Morty is BACK, Season 75 Raid Calendar",
+      "created_utc": 1747754301,
+      "date": "2025-05-20",
+      "label": "Reddit Discussion - May 20, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1kr7hdu/morty_is_back_season_75_raid_calendar/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1l1ldu9"
+    },
+    {
+      "id": "1kfeyrz",
+      "title": "Wednesday is the new Guild Raid season!",
+      "created_utc": 1746460140,
+      "date": "2025-05-05",
+      "label": "Reddit Discussion - May 5, 2025",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1kfeyrz/wednesday_is_the_new_guild_raid_season/",
+      "evidence_source": "https://www.reddit.com/user/Terminus_Maximus/submitted.json?sort=new&limit=2&after=t3_1l1ldu9"
+    }
+  ]
+}

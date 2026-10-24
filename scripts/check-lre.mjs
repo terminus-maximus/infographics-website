@@ -5,12 +5,15 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { eligibleCharacters, highPointsCombinations, selectedPoints } from '../src/lib/lrePlanner.ts';
 import { eventRoutes, readBackend, normalizeEvent, sourceRecord } from './import-lre.mjs';
+import { selectRelatedDiscussions } from '../src/lib/relatedDiscussions.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = path => readFileSync(resolve(root, path), 'utf8');
 const ids = units => units.map(unit => unit.id).sort();
 const key = requirements => [...requirements].sort().join(' ');
 const catalog = JSON.parse(read('src/data/campaigns/characters.json')).characters;
+const discussions = JSON.parse(read('src/data/relatedDiscussions.json'));
+const discussionPolicy = JSON.parse(read('src/data/relatedDiscussionPolicy.json'));
 const backend = process.argv[2] ? readBackend(process.argv[2]) : null;
 if (backend) assert.deepEqual(JSON.parse(read('src/data/lre/sources.json')), sourceRecord(backend.index, backend.events));
 let filterStates = 0;
@@ -30,7 +33,11 @@ for (const { route } of Object.values(eventRoutes)) {
   assert(!/<meta name="robots"[^>]*noindex/.test(page));
   assert(page.includes(`Roster data as of Version ${data.characterBuild}`), `${route}: roster version must follow the planner dataset`);
   const sectionOrder = ['Featured Infographic', 'LRE Basics', 'More Event Details', 'id="combinations-heading"', 'id="tracks-heading"'];
-  if (route !== 'fabius') sectionOrder.push('Other Resources');
+  const relatedDiscussions = selectRelatedDiscussions(discussions, discussionPolicy, `/lre/${route}/`);
+  if (relatedDiscussions.length) sectionOrder.push('Related Discussions');
+  for (const discussion of relatedDiscussions) {
+    assert(page.includes(`href="${discussion.url}"`), `${route}: missing discussion ${discussion.id}`);
+  }
   for (const [i, title] of sectionOrder.entries()) {
     assert(page.includes(title), `${route}: missing ${title}`);
     if (i) assert(page.indexOf(sectionOrder[i - 1]) < page.indexOf(title), `${route}: misplaced ${title}`);

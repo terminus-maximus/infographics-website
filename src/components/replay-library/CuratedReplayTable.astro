@@ -9,6 +9,7 @@ interface Props {
   sortable?: boolean;
   showTierDividers?: boolean;
   tierColumnLabel?: string;
+  preserveOrder?: boolean;
 }
 
 const {
@@ -17,15 +18,16 @@ const {
   labelledBy,
   sortable = false,
   showTierDividers = true,
-  tierColumnLabel = "Tier"
+  tierColumnLabel = "Tier",
+  preserveOrder = false
 } = Astro.props;
 
 const getTeamIcon = (team: string) => teamIconMap[team] || team;
 const tierSortRank = { M3: 0, M2: 1, M1: 2, L5: 3, L4: 4, L3: 5, L2: 6, L1: 7 };
-const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damage) : replays;
+const displayReplays = sortable && !preserveOrder ? [...replays].sort((a, b) => b.damage - a.damage) : replays;
 ---
 
-<div class="table-wrap curated-replay-table-wrap" data-curated-sortable={sortable ? "true" : undefined}>
+<div class="table-wrap curated-replay-table-wrap" data-curated-sortable={sortable ? "true" : undefined} data-curated-initial-sort={preserveOrder ? "none" : "damage"}>
   <table class="replay-table curated-replay-table" aria-labelledby={labelledBy}>
     <thead>
       <tr>
@@ -35,8 +37,8 @@ const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damag
         <th data-curated-sort-header={sortable ? "team" : undefined} aria-sort={sortable ? "none" : undefined}>
           {sortable ? <button class="sort-button" type="button" data-curated-sort-key="team" data-column-index="1">Team</button> : "Team"}
         </th>
-        <th data-curated-sort-header={sortable ? "damage" : undefined} aria-sort={sortable ? "descending" : undefined}>
-          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="damage" data-column-index="2" data-sort-direction="desc">Damage</button> : "Damage"}
+        <th data-curated-sort-header={sortable ? "damage" : undefined} aria-sort={sortable ? (preserveOrder ? "none" : "descending") : undefined}>
+          {sortable ? <button class="sort-button" type="button" data-curated-sort-key="damage" data-column-index="2" data-sort-direction={preserveOrder ? undefined : "desc"}>Damage</button> : "Damage"}
         </th>
         <th data-curated-sort-header={sortable ? "tier" : undefined} aria-sort={sortable ? "none" : undefined}>
           {sortable ? <button class="sort-button" type="button" data-curated-sort-key="tier" data-column-index="3">{tierColumnLabel}</button> : tierColumnLabel}
@@ -149,7 +151,7 @@ const displayReplays = sortable ? [...replays].sort((a, b) => b.damage - a.damag
     const headers = Array.from(wrapper.querySelectorAll("[data-curated-sort-header]"));
     if (!body) return;
 
-    const sortState = { key: "damage", direction: "desc" };
+    const sortState = { key: wrapper.dataset.curatedInitialSort === "none" ? "" : "damage", direction: "desc" };
     const numericKeys = new Set(["damage", "tier", "publishedAt"]);
 
     const updateHeaders = () => {

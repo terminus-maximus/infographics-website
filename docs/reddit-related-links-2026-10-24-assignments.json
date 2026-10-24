@@ -1,0 +1,45 @@
+{
+  "1sd8xns": {
+    "routes": [
+      "/guild-raid/s098/"
+    ],
+    "reason": "Post body explicitly states Season 98 runs April 8–20; title omits the season number."
+  },
+  "1wxjgky": {
+    "routes": [
+      "/guild-raid/s111/"
+    ],
+    "reason": "Main post and linked replay page concern Season 111. The speculative Season 112 teaser is excluded from the rolling next-season page by the saved rejected-pair policy."
+  },
+  "1xbs1ef": {
+    "routes": [
+      "/guild-wars/attack/",
+      "/guild-wars/defend/"
+    ],
+    "reason": "Post explicitly presents two Season 28 Guild War graphics covering attack and defend teams, using Seasons 25–27 battlefield 4–5 research."
+  },
+  "1x8kbe0": {
+    "routes": [
+      "/guild-raid/s112/"
+    ],
+    "reason": "Main subject, dates, and exact page link are Season 112. Incidental replay-library promotion and the Season 113 teaser are not separate topic assignments."
+  },
+  "1x70ax1": {
+    "routes": [
+      "/campaign-event/",
+      "/campaign-event/admech/",
+      "/campaign-event/dark-angels/",
+      "/campaign-event/death-guard/",
+      "/campaign-event/sisters/",
+      "/campaign-event/tau/",
+      "/campaign-event/tyranids/"
+    ],
+    "reason": "Post explicitly launches the six named Extremis guides, links each exact route, and explains expansion of the Campaign Event overview with E30 teams and replays."
+  },
+  "1x5yri9": {
+    "routes": [
+      "/hre/"
+    ],
+    "reason": "Zapspitta HRE mission guide is a direct match for the rolling HRE guide; label uses actual publication date and names Zapspitta."
+  }
+}

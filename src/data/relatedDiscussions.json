@@ -305,6 +305,30 @@
       "label": "Reddit Discussion - Mar 3, 2026",
       "url": "https://www.reddit.com/r/WH40KTacticus/comments/1rjwv33/infographic_ûthar_lre_guide_play_to_unlock_on/",
       "publishedAt": 1772561791.0
+    },
+    "1x70ax1": {
+      "title": "[Infographic] Campaign Event Extremis Guides - details for all 6 CEs",
+      "label": "Reddit Discussion - Oct 15, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x70ax1/infographic_campaign_event_extremis_guides/",
+      "publishedAt": 1792105348
+    },
+    "1x8kbe0": {
+      "title": "[Infographic] Guild Raid Guide Season 112 - big bad Ghaz!",
+      "label": "Reddit Discussion - Oct 17, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x8kbe0/infographic_guild_raid_guide_season_112_big_bad/",
+      "publishedAt": 1792268791
+    },
+    "1xbs1ef": {
+      "title": "[Infographic] Guild Wars: Top 10 Teams for Season 28",
+      "label": "Reddit Discussion - Oct 21, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xbs1ef/infographic_guild_wars_top_10_teams_for_season_28/",
+      "publishedAt": 1792600401
+    },
+    "1x5yri9": {
+      "title": "[Infographic] Zapspitta HRE Mission Guide - begins Oct 18",
+      "label": "Reddit Discussion - Zapspitta - Oct 14, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x5yri9/infographic_zapspitta_hre_mission_guide_begins/",
+      "publishedAt": 1792001866
     }
   },
   "pages": {
@@ -314,11 +338,11 @@
       "1lesd58"
     ],
     "/campaign-event/": [
+      "1x70ax1",
       "1x3rf3p",
       "1w9xvm1",
       "1vdlzid",
-      "1uiymuh",
-      "1tnd7z4"
+      "1uiymuh"
     ],
     "/campaigns/fall-of-cadia/": [
       "1vo9iqb"
@@ -400,17 +424,19 @@
       "1wxjgky"
     ],
     "/guild-wars/attack/": [
+      "1xbs1ef",
       "1wg650s"
     ],
     "/guild-wars/defend/": [
+      "1xbs1ef",
       "1wg650s"
     ],
     "/hre/": [
+      "1x5yri9",
       "1wcnawc",
       "1vgi111",
       "1ukuyms",
-      "1tolrbn",
-      "1sszsx4"
+      "1tolrbn"
     ],
     "/incursion-mow/": [
       "1wp50n4",
@@ -437,6 +463,27 @@
     "/lre/uthar/": [
       "1wb28nq",
       "1rjwv33"
+    ],
+    "/campaign-event/admech/": [
+      "1x70ax1"
+    ],
+    "/campaign-event/dark-angels/": [
+      "1x70ax1"
+    ],
+    "/campaign-event/death-guard/": [
+      "1x70ax1"
+    ],
+    "/campaign-event/sisters/": [
+      "1x70ax1"
+    ],
+    "/campaign-event/tau/": [
+      "1x70ax1"
+    ],
+    "/campaign-event/tyranids/": [
+      "1x70ax1"
+    ],
+    "/guild-raid/s112/": [
+      "1x8kbe0"
     ]
   }
 }

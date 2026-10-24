@@ -70,16 +70,16 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
     <div class="markdown-content">
       <div class="markdown-content">
   <p>
-    Guild Raid teams are expensive to build, so choosing the right investments matters. This guide identifies the strongest Meta and Alternate teams for every Guild Raid boss using large-scale replay analysis rather than opinion alone.
+    This guide identifies Meta and Alternate teams for every Guild Raid boss using researched replay data. The comparisons assume all characters are at maximum tier.
   </p>
 
   <ul>
     <li><strong>⭐ Meta Team</strong> — The strongest overall recommendation for that boss.</li>
-    <li><strong>🔄 Alternate Team</strong> — A powerful second option, usually built around a different team archetype.</li>
+    <li><strong>🔄 Alternate Team</strong> — The leading option from a different team archetype. Magnus is the one exception, with two Custodes lineups.</li>
   </ul>
 
   <p>
-    Every recommendation includes the exact five-character lineup, recommended Machine of War, summary performance statistics, and curated replay examples so you can compare strategies before investing resources.
+    Every recommendation includes the exact five-character lineup, recommended Machine of War, summary performance statistics, and curated replay examples so you can study how the team plays.
   </p>
 </div>
     </div>
@@ -89,6 +89,10 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
     <h2>Boss Meta Teams &amp; Replay Results</h2>
     <p class="section-intro">
       Explore the recommended Meta and Alternate team for each Guild Raid boss, including the selected lineup, analyzed performance, and curated replay examples.
+    </p>
+    <p class="section-intro">
+      Replay counts and damage statistics cover the looping stages: <strong>L4, L5, M1, M2 and M3</strong>.
+      Examples prioritize those stages, with L1–L3 replays filling available places when fewer than ten looping-stage examples exist. These extra examples do not affect the statistics.
     </p>
     <BossMetaResults />
   </section>
@@ -100,7 +104,7 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   <h3>How the Analysis Works</h3>
 
   <p class="methodology-lead">
-    Rather than relying on opinion or isolated showcase videos, these recommendations are built from a <a href="/replay-library/">large dataset</a> of Guild Raid replay videos collected from experienced creators across multiple raid seasons.
+    These recommendations are built from a <a href="/replay-library/">large dataset</a> of Guild Raid replay videos collected from creators across multiple raid seasons.
   </p>
 
   <p>
@@ -122,17 +126,23 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
 
   <h3>Step 1: Measuring Replay Quality</h3>
   <p>
-    Every replay receives a quality score based primarily on damage dealt. Performance is adjusted for raid difficulty, giving additional credit to successful clears at higher Legendary and Mythic tiers.
+    Rankings use validated replays from L4, L5, M1, M2 and M3, the stages that loop during a season. L1–L3 are cleared once per season and do not contribute to rankings or summary statistics.
+  </p>
+  <p>
+    Each replay's damage is divided by the median damage recorded for the same boss and stage. This compares performance within a stage before combining results across stages.
   </p>
 
   <h3>Step 2: Weighting the Current Meta</h3>
   <p>
-    Guild Raid strategies evolve over time. More recent replays receive greater influence through a gradual recency weighting, while older successful strategies continue contributing to the overall analysis.
+    More recent replays receive greater influence, with their weight halving every 90 days relative to the latest qualifying replay date. For each exact team, replay scores are averaged within each stage, then combined using stage weights of L4 1.25, L5 1.33, M1 1.42, M2 1.50 and M3 1.75.
+  </p>
+  <p>
+    A coverage factor also accounts for how many of the boss's observed looping stages the team has demonstrated. It is the square root of the team's observed stage-weight share. Maps remain combined.
   </p>
 
   <h3>Step 3: Identifying the Best Teams</h3>
   <p>
-    Replays are first grouped into broader team archetypes before identifying the strongest exact team within each archetype.
+    Exact teams are scored consistently, then each archetype is represented by its highest-scoring qualifying team.
   </p>
 
   <p>
@@ -151,15 +161,15 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   <h3>Step 4: Community Confidence</h3>
 
   <p class="methodology-key-point">
-    Popularity still matters—but only as a confidence signal.
+    Replay support has diminishing returns and stops increasing at ten replays.
   </p>
 
   <p>
-    Teams that repeatedly appear across successful community replays receive a modest frequency bonus, while average performance remains the primary factor in determining the final rankings. This rewards strategies that consistently succeed without allowing replay volume alone to dominate the results.
+    The support multiplier is <code>min(replay count / 10, 1)^0.42</code>. The final score is 100 × stage-normalized, recency-weighted performance × coverage × support. Replays beyond ten still contribute to performance and damage statistics; they do not increase the support multiplier.
   </p>
 
   <p class="methodology-threshold-callout">
-    A five-hero and one Machine of War team needs at least 2 qualifying replays to be considered for the final selection.
+    An exact team of five distinct heroes and one Machine of War needs at least 2 qualifying L4–M3 replays to be considered for the final selection.
   </p>
 
   <h3>Step 5: Selecting the Final Recommendations</h3>
@@ -173,13 +183,13 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   </p>
 
   <p>
-    Minimum replay thresholds ensure recommendations are supported by multiple successful examples. If an alternate archetype lacks sufficient replay data, another well-supported team is selected instead.
+    Magnus is the sole exception to the different-archetype rule: Dante is the Meta Custodes lineup, and Atlacoya is the selected Alternate Custodes lineup. The Atlacoya selection is an editorial choice; it does not change the scoring formula used for the other bosses.
   </p>
 
   <h3>Replay Examples</h3>
 
   <p>
-    The replay examples shown above are curated examples of the exact recommended team—not simply similar teams from the same archetype.
+    Each team has up to ten exact-lineup replay examples. L4–M3 examples appear first, ordered by damage from highest to lowest. If fewer than ten are available, the remaining places are filled with L1–L3 examples, also ordered by damage.
   </p>
 
   <p>
@@ -192,11 +202,11 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   </ul>
 
   <p>
-    This allows you to study positioning, deployment order, movement, and execution from successful runs using the exact lineup being recommended.
+    L1–L3 examples are included only to help study positioning, deployment order, movement, and execution. They never affect eligibility, rankings, replay counts, average damage or maximum damage. Displayed damage statistics are raw damage across all qualifying L4–M3 replays for the exact team, rather than weighted scores or just the ten examples shown.
   </p>
 
   <p class="methodology-closing">
-    These recommendations represent hundreds of hours of replay collection, validation, and analysis. As new replay data becomes available, future updates automatically adapt to reflect the evolving Guild Raid meta.
+    Team recommendations are reviewed for each guide update. New matching replays can refresh the evidence for an existing lineup without automatically changing the recommended teams.
   </p>
 </div>
     </div>
