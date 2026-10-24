@@ -4,12 +4,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
 import { discoveryGraphics } from "../data/graphics";
-import { guildRaidImageExists } from "../lib/guildRaidAssets";
-
-const season112Image = [
-  "/images/web/guild-raid-s112-mythic.webp",
-  "/images/guild-raid-s112-mythic.png",
-].find((image) => guildRaidImageExists(image));
 
 const startHere = discoveryGraphics.filter((g) => g.category === "start");
 const campaignGuides = discoveryGraphics.filter(
@@ -57,34 +51,6 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
 <section class="content-section">
   <header class="content-section-heading">
-    <a href="/guild-raid/s112">
-      <h2>Guild Raid Season 112</h2>
-      <p class="guild-raid-subtitle">Boss lineups, maps, and recommended teams</p>
-    </a>
-  </header>
-
-  {season112Image ? (
-    <a href="/guild-raid/s112" class="image-link">
-      <img
-        src={season112Image}
-        alt="Guild Raid Season 112 Mythic Bosses Infographic"
-        class="infographic"
-        loading="lazy"
-      />
-    </a>
-  ) : (
-    <div class="infographic-placeholder" aria-hidden="true" />
-  )}
-
-  <p class="caption">
-    <a href="/guild-raid/s112" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
     <a href="/guild-wars/">
       <h2>Guild War Guides</h2>
       <p class="guild-wars-subtitle">Get ready for Season 28 with updated meta teams</p>
@@ -102,6 +68,30 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
   <p class="caption">
     <a href="/guild-wars/" class="caption-link">
+      LEARN MORE
+    </a>
+  </p>
+</section>
+
+<section class="content-section">
+  <header class="content-section-heading">
+    <a href="/guild-raid/boss-meta/">
+      <h2>Boss Meta Guide</h2>
+      <p class="boss-meta-subtitle">Updated for October. Built on 2000+ replay analysis across L4 to M3</p>
+    </a>
+  </header>
+
+  <a href="/guild-raid/boss-meta/" class="image-link">
+    <img
+      src="/images/web/boss-meta.webp"
+      alt="Guild Raid Boss Meta Infographic"
+      class="infographic"
+      loading="lazy"
+    />
+  </a>
+
+  <p class="caption">
+    <a href="/guild-raid/boss-meta/" class="caption-link">
       LEARN MORE
     </a>
   </p>
@@ -583,7 +573,7 @@ This entire block is commented out.
 }
 
 .content-section-heading .guild-wars-subtitle,
-.content-section-heading .guild-raid-subtitle,
+.content-section-heading .boss-meta-subtitle,
 .content-section-heading .fabius-subtitle {
   color: #ffffff;
 }
@@ -617,12 +607,6 @@ This entire block is commented out.
   height: auto;
   border-radius: 8px;
   display: block;
-  margin: 0 auto;
-}
-
-.infographic-placeholder {
-  height: 160px;
-  max-width: 600px;
   margin: 0 auto;
 }
 
