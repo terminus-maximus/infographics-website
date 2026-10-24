@@ -5,6 +5,7 @@ import { createInterface } from 'node:readline';
 import { dirname, resolve, basename, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readReport, fraction } from './import-guild-wars.mjs';
+import { observedTeams } from './guild-wars-observed.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const readJSON = path => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
@@ -82,7 +83,7 @@ export async function normalizeDefendReport(report, recordsPath) {
       return { source: alternative, overall: empty(), occurrences: 0, mows: new Map() };
     });
     assert.equal(new Set(flex.map(f => f.source.team_id)).size, flex.length, 'Duplicate flex lineup');
-    return { source, meta, overall: empty(), medsUp: empty(), flex,
+    return { source, meta, overall: empty(), medsUp: empty(), flex, observed: new Map(),
       tiers: report.config.battlefields.map(tier => ({ tier, overall: empty(), medsUp: empty() })),
       counters: attackers.map(a => ({ id: a.id, overall: empty(), medsUp: empty() })),
       occurrences: 0, unknownMows: 0, mows: new Map() };
@@ -123,6 +124,16 @@ export async function normalizeDefendReport(report, recordsPath) {
     assert.equal(new Set(row.attacker_team).size, 5);
     assert.equal(new Set(row.defender_team).size, 5);
     eligible++;
+    // Exploratory exact configurations include one-hero swaps and every recorded MoW,
+    // independently of the stricter selected-defense/modal-MoW headline population.
+    assert(mow || (row.defender_mow_state === 'missing_unknown' && row.defender_mows.length === 0), 'Review ambiguous observed defense support');
+    const observedMow = mow || 'missing_unknown';
+    for (const target of defenders) {
+      if (target.meta.heroes.filter(h => row.defender_team.includes(h)).length < 4) continue;
+      const key = `${canonical(row.defender_team)}|${observedMow}`;
+      if (!target.observed.has(key)) target.observed.set(key, { team: [...row.defender_team], mow: observedMow, ...empty() });
+      add(target.observed.get(key), row);
+    }
     const up = row.medicae === 'up';
     for (const alternative of alternatives) if (mow === alternative.source.mow) add(alternative.overall, row);
     if (exact && mow === exact.source.mow) {
@@ -180,13 +191,15 @@ export async function normalizeDefendReport(report, recordsPath) {
       return { id: source.team_id, heroes: d.meta.heroes.map(h => h === source.removed_hero ? source.added_hero : h),
         removedHero: source.removed_hero, addedHero: source.added_hero, mow: source.mow, ...stats };
     }).sort((a, b) => (b.failureRate ?? -1) - (a.failureRate ?? -1) || b.attempts - a.attempts || b.wars - a.wars || compare(a.id, b.id));
-    return { id: d.meta.id, heroes: d.meta.heroes, mow: d.source.mow, ...overall, medsUp, tiers, counters,
+    const observed = observedTeams([...d.observed.values()].map(row => ({ team: row.team, mow: row.mow, attempts: row.attempts, wins: row.failures, wars: row.wars.size })));
+    return { id: d.meta.id, heroes: d.meta.heroes, mow: d.source.mow, ...overall, medsUp, tiers, counters, observed,
       mowOccurrences: d.occurrences, unknownMows: d.unknownMows, mows, flex };
   }).sort((a, b) => (b.failureRate ?? -1) - (a.failureRate ?? -1) || b.attempts - a.attempts || compare(a.id, b.id));
   assert.equal(teams.reduce((n, t) => n + t.attempts, 0), report.summary.selected_attempts);
   assert.equal(teams.reduce((n, t) => n + t.flex.length, 0), report.summary.flex_alternative_count ?? 0);
-  const usedUnits = new Set([...teams.flatMap(t => [...t.heroes, t.mow, ...t.mows.filter(m => m.share >= .05).map(m => m.unit), ...t.flex.flatMap(f => [...f.heroes, f.mow])]), ...attackers.flatMap(a => a.core)]);
+  const usedUnits = new Set([...teams.flatMap(t => [...t.heroes, t.mow, ...t.mows.filter(m => m.share >= .05).map(m => m.unit), ...t.flex.flatMap(f => [...f.heroes, f.mow]), ...t.observed.rows.flatMap(row => [...row.team, row.mow])]), ...attackers.flatMap(a => a.core)]);
   const units = Object.fromEntries([...usedUnits].sort().map(id => {
+    if (id === 'missing_unknown') return [id, { name: 'MoW not recorded', image: null, kind: 'no_support' }];
     const source = report.registry[id];
     assert(source?.image, `Missing identity/portrait: ${id}`);
     const existing = attackData.units[id];
@@ -196,7 +209,7 @@ export async function normalizeDefendReport(report, recordsPath) {
     const name = (overrides[id] || existing?.name || source.short_name || source.name).replaceAll('√¢', 'â').replaceAll('√Ç', 'Â').replaceAll('√õ', 'Û');
     return [id, { name, image, kind: source.kind }];
   }));
-  return { schemaVersion: 1, scope: { seasons: report.config.seasons, tiers: report.config.battlefields, wars: wars.size, records: seen.size, eligibleAttacks: eligible, exactDefenseAttempts: report.summary.selected_attempts }, units, teams };
+  return { schemaVersion: 2, scope: { seasons: report.config.seasons, tiers: report.config.battlefields, wars: wars.size, records: seen.size, eligibleAttacks: eligible, exactDefenseAttempts: report.summary.selected_attempts }, units, teams };
 }
 
 async function main() {
@@ -207,7 +220,7 @@ async function main() {
   const data = await normalizeDefendReport(report, recordsPathFor(reportPath));
   const destination = resolve(root, output);
   assert(relative(root, destination) && !relative(root, destination).startsWith('..'), 'Output must be inside website');
-  const copies = Object.entries(data.units).filter(([, unit]) => !existsSync(resolve(root, `public${unit.image}`))).map(([id, unit]) => {
+  const copies = Object.entries(data.units).filter(([, unit]) => unit.image && !existsSync(resolve(root, `public${unit.image}`))).map(([id, unit]) => {
     const source = resolve(reportDir, report.registry[id].image);
     assert(!relative(reportDir, source).startsWith('..') && existsSync(source), `Missing portrait: ${id}`);
     return [source, resolve(root, `public${unit.image}`)];

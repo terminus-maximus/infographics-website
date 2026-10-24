@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { readReport, fraction } from './import-guild-wars.mjs';
 import { normalizeDefendReport, recordsPathFor } from './import-guild-wars-defend.mjs';
+import { checkObserved } from './check-guild-wars-observed.mjs';
 import { percent, ratio } from '../src/lib/guildWarsFormat.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -20,7 +21,7 @@ assert(page.includes(meta.title) && page.includes(meta.description));
 assert.equal(data.units['mow:death_crawler_01'].name, 'PBC');
 assert(!page.includes('Foetid Bloat-Drone'));
 assert(page.includes('rel="canonical" href="https://terminusmaximus.com/guild-wars/defend/"'));
-assert(!/Heroes exactly|Complete Team exactly|Hard Maps|Popular flex options/.test(page));
+assert(!/Heroes exactly|Complete Team exactly|Hard Maps|Popular flex options|Flex choices/.test(page));
 assert.equal(all(page, /Team Tips coming soon/g).length, 10);
 assert.equal(data.teams.length, 10);
 assert.equal(data.teams.reduce((n, t) => n + t.attempts, 0), data.scope.exactDefenseAttempts);
@@ -75,27 +76,10 @@ for (const [index, team] of data.teams.entries()) {
     assert(strip(usage).includes(percent(option.share)));
   }
   assert.equal(team.mows.reduce((n, m) => n + m.attempts, team.unknownMows), team.mowOccurrences);
-  const flexDisclosure = section.match(/<details class="defender-flex"[^>]*>([\s\S]*?)<\/details>/);
-  assert.equal(Boolean(flexDisclosure), team.flex.length > 0, 'Show flex only when supported choices exist');
-  if (flexDisclosure) {
-    const choices = all(flexDisclosure[1], /<li\b[^>]*data-flex-id="([^"]+)"[^>]*>([\s\S]*?)<\/li>/g);
-    assert.equal(choices.length, team.flex.length);
-    for (const [i, flex] of team.flex.entries()) {
-      assert.equal(choices[i][1], flex.id);
-      assert.equal(new Set(flex.heroes).size, 5);
-      assert.deepEqual(flex.heroes, team.heroes.map(h => h === flex.removedHero ? flex.addedHero : h));
-      assert(!team.heroes.includes(flex.addedHero) && team.heroes.includes(flex.removedHero));
-      assert.equal(flex.failureRate, fraction(flex.failures, flex.attempts));
-      if (i) assert(team.flex[i - 1].failureRate >= flex.failureRate, 'Flex failure-rate order');
-      assert.deepEqual(all(choices[i][2], /data-unit-id="([^"]+)"/g).map(([, id]) => id), [flex.removedHero, flex.addedHero, flex.mow]);
-      const text = strip(choices[i][2]);
-      assert(text.includes(percent(flex.failureRate)) && text.includes(`${ratio(flex.failures, flex.attempts)} failures / attempts`));
-      assert(text.includes(`${flex.wars} wars`));
-    }
-  }
+  checkObserved(section, team.observed, editorial.heroes, data.units, true);
   const tables = all(section, /<tbody[^>]*>([\s\S]*?)<\/tbody>/g);
-  assert.equal(tables.length, 2);
-  const counterRows = all(tables[0][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
+  assert.equal(tables.length, 3);
+  const counterRows = all(tables[1][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
   assert.equal(counterRows.length, 10);
   for (const [i, counter] of team.counters.entries()) {
     if (i) assert(team.counters[i - 1].clears >= counter.clears, 'Counter clear-count order');
@@ -114,7 +98,7 @@ for (const [index, team] of data.teams.entries()) {
       `${percent(counter.perfectPerClear)} ${ratio(counter.perfect, counter.clears)}`,
     ]);
   }
-  const tierRows = all(tables[1][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
+  const tierRows = all(tables[2][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
   assert.equal(tierRows.length, data.scope.tiers.length);
   assert.deepEqual(tiers.map(t => t.tier), data.scope.tiers);
   for (const key of ['attempts', 'failures', 'clears', 'perfect', 'withDeaths']) {
@@ -158,4 +142,4 @@ if (process.argv[2]) {
     await assert.rejects(() => normalizeDefendReport(badSwap, recordsPath), /Incorrect incoming flex hero/);
   }
 }
-console.log(`Defend checks passed: 10 teams, 100 linked counters with four rates, ${data.teams.reduce((n, t) => n + t.flex.length, 0)} independent flex choices, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae rows, usage cutoffs, all navigation placements and source reconciliation when supplied.`);
+console.log(`Defend checks passed: 10 teams, 100 linked counters with four rates, 10 observed-defense disclosures with exact lineups and single-hero swaps, ${data.teams.length * data.scope.tiers.length} Battlefield/Medicae rows, usage cutoffs, all navigation placements and source reconciliation when supplied.`);

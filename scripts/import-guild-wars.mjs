@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs';
 import { dirname, resolve, basename, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { observedTeams } from './guild-wars-observed.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const readJSON = path => JSON.parse(readFileSync(path, 'utf8'));
@@ -191,12 +192,18 @@ export function normalizeReport(report, mapping = editorial) {
         combinations: evidence(source.variants,'variants',cohort,4),
         mows: evidence(source.mows,'mows',cohort,4), teamMows: evidence(source.exact,'exact',cohort,4) };
     }
+    if (card.core.length === 5) assert(card.flex_analysis, 'Five-hero cores require the complete replacement cohort');
+    const observed = observedTeams((card.flex_analysis || card).exact.map(row => {
+      const counts = stats(row);
+      return { team: row.team, mow: row.mow, attempts: counts.attempts, wins: counts.clears, wars: counts.wars };
+    }));
+    for (const row of observed.rows) for (const id of [...row.team, row.mow]) usedUnits.add(id);
     card.core.forEach(id => usedUnits.add(id));
     assert(card.interval === null || (card.interval.length === 2 && card.interval.every(n => Number.isFinite(n) && n >= 0 && n <= 1)));
-    return { id: card.core_id, core: [...card.core], ...base, interval: card.interval, perfectPerAttempt: card.perfect_rate, metrics, contexts, flex, combinations, mows, teamMows, ...(flexAnalysis ? { flexAnalysis } : {}) };
+    return { id: card.core_id, core: [...card.core], ...base, interval: card.interval, perfectPerAttempt: card.perfect_rate, metrics, contexts, flex, combinations, mows, teamMows, observed, ...(flexAnalysis ? { flexAnalysis } : {}) };
   });
   const units = Object.fromEntries([...usedUnits].sort().map(id => {
-    if (id === 'missing_unknown') return [id, { name: 'No MoW deployed', kind: 'no_support', image: null }];
+    if (id === 'missing_unknown') return [id, { name: 'MoW not recorded', kind: 'no_support', image: null }];
     const unit = report.registry[id];
     assert(unit && unit.image, `Unmapped unit or support category: ${id}. Add an explicit editorial mapping; do not label it No MoW deployed.`);
     assert(['character', 'machine_of_war'].includes(unit.kind), `Unsupported identity kind: ${id}`);
@@ -209,7 +216,7 @@ export function normalizeReport(report, mapping = editorial) {
   const scopeRows = report.audit.by_season_tier;
   assert.equal(sum(scopeRows, 'eligible'), discovery.eligible);
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     scope: { seasons: [...new Set(scopeRows.map(r => r.season))].sort((a,b) => a-b), tiers: [...new Set(scopeRows.map(r => r.tier))].sort((a,b) => a-b), wars: report.audit.wars_with_attacks ?? report.audit.war_count, eligibleAttacks: discovery.eligible },
     units, teams,
   };

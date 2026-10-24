@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "scope": {
     "seasons": [
       25,
@@ -315,7 +315,7 @@
       "image": "/images/heroes/Isaak.webp"
     },
     "missing_unknown": {
-      "name": "No MoW deployed",
+      "name": "MoW not recorded",
       "kind": "no_support",
       "image": null
     },
@@ -1098,6 +1098,161 @@
               "genesPrimus"
             ],
             "mow": "mow:necro_reanimator_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 43,
+        "rows": [
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesMagus",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 32,
+            "wins": 32,
+            "wars": 27,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "emperLucius",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesMagus",
+              "genesPrimus"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 31,
+            "wins": 31,
+            "wars": 29,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:darka_stormspeeder_01",
+            "attempts": 23,
+            "wins": 23,
+            "wars": 22,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "genesKelermorph",
+              "genesMagus",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 19,
+            "wins": 19,
+            "wars": 19,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesMagus",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 16,
+            "wins": 16,
+            "wars": 12,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "astraOrdnance",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesMagus",
+              "genesPrimus"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 15,
+            "wins": 15,
+            "wars": 14,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:ultra_dreadnought_01",
+            "attempts": 14,
+            "wins": 14,
+            "wars": 14,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "emperLucius",
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 14,
+            "wins": 14,
+            "wars": 13,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesMagus",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:ultra_dreadnought_01",
+            "attempts": 13,
+            "wins": 13,
+            "wars": 12,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "genesBiophagus",
+              "genesKelermorph",
+              "genesPatriarch",
+              "genesPrimus",
+              "tyranWingedPrime"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 13,
+            "wins": 13,
+            "wars": 12,
+            "rate": 1,
+            "limited": true
           }
         ]
       },
@@ -3921,6 +4076,41 @@
             "mow": "mow:darka_stormspeeder_01"
           }
         ]
+      },
+      "observed": {
+        "total": 2,
+        "rows": [
+          {
+            "team": [
+              "eldarAutarch",
+              "eldarMauganRa",
+              "tauCrisis",
+              "tauFarsight",
+              "ultraCalgar"
+            ],
+            "mow": "mow:tauta_broadside_01",
+            "attempts": 19,
+            "wins": 18,
+            "wars": 16,
+            "rate": 0.9473684210526315,
+            "limited": true
+          },
+          {
+            "team": [
+              "eldarAutarch",
+              "eldarMauganRa",
+              "tauCrisis",
+              "tauFarsight",
+              "ultraCalgar"
+            ],
+            "mow": "mow:darka_stormspeeder_01",
+            "attempts": 32,
+            "wins": 26,
+            "wars": 23,
+            "rate": 0.8125,
+            "limited": false
+          }
+        ]
       }
     },
     {
@@ -5257,6 +5447,161 @@
               "worldKharn"
             ],
             "mow": "mow:ultra_dreadnought_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 22,
+        "rows": [
+          {
+            "team": [
+              "adeptCelestine",
+              "custoBladeChampion",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 17,
+            "wins": 17,
+            "wars": 17,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "spaceBlackmane",
+              "tauAunShi",
+              "ultraInceptorSgt",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 15,
+            "wins": 15,
+            "wars": 13,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "darkaCompanion",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 12,
+            "wins": 12,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "eldarAutarch",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 12,
+            "wins": 12,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "orksRuntherd",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 11,
+            "wins": 11,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "spaceBlackmane",
+              "spaceWolfPriest",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 10,
+            "wins": 10,
+            "wars": 10,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "custoTrajann",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 24,
+            "wins": 23,
+            "wars": 21,
+            "rate": 0.9583333333333334,
+            "limited": false
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "orksRuntherd",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "missing_unknown",
+            "attempts": 22,
+            "wins": 21,
+            "wars": 19,
+            "rate": 0.9545454545454546,
+            "limited": false
+          },
+          {
+            "team": [
+              "bloodDante",
+              "custoBladeChampion",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 41,
+            "wins": 39,
+            "wars": 34,
+            "rate": 0.9512195121951219,
+            "limited": false
+          },
+          {
+            "team": [
+              "custoBladeChampion",
+              "orksWarboss",
+              "spaceBlackmane",
+              "tauAunShi",
+              "worldKharn"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 19,
+            "wins": 18,
+            "wars": 19,
+            "rate": 0.9473684210526315,
+            "limited": true
           }
         ]
       }
@@ -6619,6 +6964,161 @@
             "mow": "mow:thous_daemonprince_01"
           }
         ]
+      },
+      "observed": {
+        "total": 11,
+        "rows": [
+          {
+            "team": [
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator",
+              "tyranNeurothrope"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 22,
+            "wins": 22,
+            "wars": 20,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackObliterator",
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousSekhetar",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 13,
+            "wins": 13,
+            "wars": 10,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackObliterator",
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousTerminator",
+              "ultraTigurius"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 10,
+            "wins": 10,
+            "wars": 9,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackPossession",
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 10,
+            "wins": 10,
+            "wars": 9,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackObliterator",
+              "deathTyphus",
+              "emperLucius",
+              "spaceStormcaller",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 15,
+            "wins": 14,
+            "wars": 13,
+            "rate": 0.9333333333333333,
+            "limited": true
+          },
+          {
+            "team": [
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator",
+              "worldTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 14,
+            "wins": 13,
+            "wars": 14,
+            "rate": 0.9285714285714286,
+            "limited": true
+          },
+          {
+            "team": [
+              "deathTyphus",
+              "necroSpyder",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 10,
+            "wins": 9,
+            "wars": 10,
+            "rate": 0.9,
+            "limited": true
+          },
+          {
+            "team": [
+              "astarLysander",
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 10,
+            "wins": 9,
+            "wars": 6,
+            "rate": 0.9,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackObliterator",
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 18,
+            "wins": 16,
+            "wars": 18,
+            "rate": 0.8888888888888888,
+            "limited": true
+          },
+          {
+            "team": [
+              "deathTyphus",
+              "spaceStormcaller",
+              "thousAhriman",
+              "thousTerminator",
+              "ultraTigurius"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 15,
+            "wins": 12,
+            "wars": 15,
+            "rate": 0.8,
+            "limited": true
+          }
+        ]
       }
     },
     {
@@ -7083,6 +7583,161 @@
               "bloodSanguinary"
             ],
             "mow": "mow:necro_reanimator_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 30,
+        "rows": [
+          {
+            "team": [
+              "bloodDante",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary",
+              "worldKharn"
+            ],
+            "mow": "missing_unknown",
+            "attempts": 16,
+            "wins": 16,
+            "wars": 16,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodDeathCompany",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodTerminator"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 13,
+            "wins": 13,
+            "wars": 12,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary",
+              "bloodTerminator"
+            ],
+            "mow": "mow:darka_stormspeeder_01",
+            "attempts": 12,
+            "wins": 12,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodDeathCompany",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 40,
+            "wins": 38,
+            "wars": 36,
+            "rate": 0.95,
+            "limited": false
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary",
+              "bloodTerminator"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 19,
+            "wins": 18,
+            "wars": 18,
+            "rate": 0.9473684210526315,
+            "limited": true
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodDeathCompany",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 78,
+            "wins": 72,
+            "wars": 53,
+            "rate": 0.9230769230769231,
+            "limited": false
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary",
+              "bloodTerminator"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 13,
+            "wins": 12,
+            "wars": 13,
+            "rate": 0.9230769230769231,
+            "limited": true
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodDeathCompany",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 254,
+            "wins": 233,
+            "wars": 116,
+            "rate": 0.9173228346456693,
+            "limited": false
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodSanguinary",
+              "bloodTerminator"
+            ],
+            "mow": "mow:astra_ordnancebattery_01",
+            "attempts": 24,
+            "wins": 22,
+            "wars": 21,
+            "rate": 0.9166666666666666,
+            "limited": false
+          },
+          {
+            "team": [
+              "bloodDante",
+              "bloodDeathCompany",
+              "bloodIntercessor",
+              "bloodMephiston",
+              "bloodTerminator"
+            ],
+            "mow": "mow:ultra_dreadnought_01",
+            "attempts": 11,
+            "wins": 10,
+            "wars": 11,
+            "rate": 0.9090909090909091,
+            "limited": true
           }
         ]
       },
@@ -10013,6 +10668,161 @@
             "mow": "mow:tyran_biovore_01"
           }
         ]
+      },
+      "observed": {
+        "total": 22,
+        "rows": [
+          {
+            "team": [
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousSekhetar",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 13,
+            "wins": 13,
+            "wars": 12,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackPossession",
+              "deathTyphus",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 58,
+            "wins": 55,
+            "wars": 47,
+            "rate": 0.9482758620689655,
+            "limited": false
+          },
+          {
+            "team": [
+              "adeptRetributor",
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 18,
+            "wins": 17,
+            "wars": 18,
+            "rate": 0.9444444444444444,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackPossession",
+              "eldarFarseer",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 94,
+            "wins": 88,
+            "wars": 48,
+            "rate": 0.9361702127659575,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor",
+              "tyranNeurothrope"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 156,
+            "wins": 142,
+            "wars": 54,
+            "rate": 0.9102564102564102,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 21,
+            "wins": 19,
+            "wars": 20,
+            "rate": 0.9047619047619048,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackPossession",
+              "bloodMephiston",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 101,
+            "wins": 91,
+            "wars": 69,
+            "rate": 0.900990099009901,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTzaangor",
+              "tyranNeurothrope"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 388,
+            "wins": 346,
+            "wars": 134,
+            "rate": 0.8917525773195877,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousSorcerer",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 42,
+            "wins": 37,
+            "wars": 35,
+            "rate": 0.8809523809523809,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackPossession",
+              "thousAhriman",
+              "thousInfernalMaster",
+              "thousTerminator",
+              "thousTzaangor"
+            ],
+            "mow": "mow:thous_daemonprince_01",
+            "attempts": 81,
+            "wins": 71,
+            "wars": 63,
+            "rate": 0.8765432098765432,
+            "limited": false
+          }
+        ]
       }
     },
     {
@@ -11268,6 +12078,101 @@
               "astraYarrick"
             ],
             "mow": "mow:tauta_broadside_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 6,
+        "rows": [
+          {
+            "team": [
+              "adeptCelestine",
+              "adeptHospitaller",
+              "astraDreir",
+              "astraYarrick",
+              "templSwordBrother"
+            ],
+            "mow": "mow:astra_ordnancebattery_01",
+            "attempts": 11,
+            "wins": 11,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "adeptCanoness",
+              "adeptCelestine",
+              "adeptHospitaller",
+              "astraDreir",
+              "astraYarrick"
+            ],
+            "mow": "mow:adept_exorcist_01",
+            "attempts": 10,
+            "wins": 10,
+            "wars": 10,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "adeptCelestine",
+              "adeptHospitaller",
+              "adeptRetributor",
+              "astraDreir",
+              "astraYarrick"
+            ],
+            "mow": "mow:astra_ordnancebattery_01",
+            "attempts": 66,
+            "wins": 62,
+            "wars": 39,
+            "rate": 0.9393939393939394,
+            "limited": false
+          },
+          {
+            "team": [
+              "adeptCelestine",
+              "adeptHospitaller",
+              "astraCreed",
+              "astraDreir",
+              "astraYarrick"
+            ],
+            "mow": "mow:astra_ordnancebattery_01",
+            "attempts": 103,
+            "wins": 93,
+            "wars": 57,
+            "rate": 0.9029126213592233,
+            "limited": false
+          },
+          {
+            "team": [
+              "adeptCelestine",
+              "adeptHospitaller",
+              "adeptRetributor",
+              "astraDreir",
+              "astraYarrick"
+            ],
+            "mow": "mow:adept_exorcist_01",
+            "attempts": 36,
+            "wins": 28,
+            "wars": 31,
+            "rate": 0.7777777777777778,
+            "limited": false
+          },
+          {
+            "team": [
+              "adeptCelestine",
+              "adeptHospitaller",
+              "astraDreir",
+              "astraOrdnance",
+              "astraYarrick"
+            ],
+            "mow": "mow:astra_ordnancebattery_01",
+            "attempts": 18,
+            "wins": 13,
+            "wars": 16,
+            "rate": 0.7222222222222222,
+            "limited": true
           }
         ]
       }
@@ -12762,6 +13667,161 @@
             "mow": "mow:black_forgefiend_01"
           }
         ]
+      },
+      "observed": {
+        "total": 40,
+        "rows": [
+          {
+            "team": [
+              "blackAbaddon",
+              "deathBlightlord",
+              "deathRotbone",
+              "emperLucius",
+              "tauMarksman"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 33,
+            "wins": 33,
+            "wars": 28,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackObliterator",
+              "deathBlightlord",
+              "deathRotbone",
+              "emperLucius"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 17,
+            "wins": 16,
+            "wars": 14,
+            "rate": 0.9411764705882353,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackObliterator",
+              "deathBlightlord",
+              "deathRotbone",
+              "emperNoiseMarine"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 65,
+            "wins": 60,
+            "wars": 40,
+            "rate": 0.9230769230769231,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackPossession",
+              "deathBlightlord",
+              "deathRotbone",
+              "deathTyphus"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 13,
+            "wins": 12,
+            "wars": 13,
+            "rate": 0.9230769230769231,
+            "limited": true
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "deathBlightbringer",
+              "deathBlightlord",
+              "deathRotbone",
+              "worldKharn"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 25,
+            "wins": 23,
+            "wars": 24,
+            "rate": 0.92,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackObliterator",
+              "deathBlightlord",
+              "deathRotbone",
+              "worldTerminator"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 36,
+            "wins": 33,
+            "wars": 27,
+            "rate": 0.9166666666666666,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "deathBlightbringer",
+              "deathBlightlord",
+              "deathRotbone",
+              "emperLucius"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 34,
+            "wins": 31,
+            "wars": 17,
+            "rate": 0.9117647058823529,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "deathBlightlord",
+              "deathRotbone",
+              "emperLucius",
+              "worldTerminator"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 22,
+            "wins": 20,
+            "wars": 12,
+            "rate": 0.9090909090909091,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "deathBlightbringer",
+              "deathBlightlord",
+              "deathPutrifier",
+              "deathRotbone"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 20,
+            "wins": 18,
+            "wars": 17,
+            "rate": 0.9,
+            "limited": false
+          },
+          {
+            "team": [
+              "blackAbaddon",
+              "blackObliterator",
+              "deathBlightlord",
+              "deathRotbone",
+              "worldKharn"
+            ],
+            "mow": "mow:death_crawler_01",
+            "attempts": 10,
+            "wins": 9,
+            "wars": 10,
+            "rate": 0.9,
+            "limited": true
+          }
+        ]
       }
     },
     {
@@ -13226,6 +14286,161 @@
               "orksWarboss"
             ],
             "mow": "mow:thous_daemonprince_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 19,
+        "rows": [
+          {
+            "team": [
+              "blackHaarken",
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 23,
+            "wins": 23,
+            "wars": 20,
+            "rate": 1,
+            "limited": false
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksKillaKan",
+              "orksRuntherd",
+              "orksWarboss",
+              "tyranParasite"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 11,
+            "wins": 11,
+            "wars": 11,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss",
+              "templHelbrecht"
+            ],
+            "mow": "mow:tauta_broadside_01",
+            "attempts": 10,
+            "wins": 10,
+            "wars": 9,
+            "rate": 1,
+            "limited": true
+          },
+          {
+            "team": [
+              "astraOrdnance",
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 18,
+            "wins": 17,
+            "wars": 15,
+            "rate": 0.9444444444444444,
+            "limited": true
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksKillaKan",
+              "orksRuntherd",
+              "orksWarboss",
+              "spaceWulfen"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 16,
+            "wins": 15,
+            "wars": 16,
+            "rate": 0.9375,
+            "limited": true
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksKillaKan",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 42,
+            "wins": 39,
+            "wars": 37,
+            "rate": 0.9285714285714286,
+            "limited": false
+          },
+          {
+            "team": [
+              "eldarRanger",
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 25,
+            "wins": 23,
+            "wars": 14,
+            "rate": 0.92,
+            "limited": false
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss",
+              "templHelbrecht"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 45,
+            "wins": 41,
+            "wars": 36,
+            "rate": 0.9111111111111111,
+            "limited": false
+          },
+          {
+            "team": [
+              "orksBigMek",
+              "orksKillaKan",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:darka_stormspeeder_01",
+            "attempts": 10,
+            "wins": 9,
+            "wars": 9,
+            "rate": 0.9,
+            "limited": true
+          },
+          {
+            "team": [
+              "necroDestroyer",
+              "orksBigMek",
+              "orksNob",
+              "orksRuntherd",
+              "orksWarboss"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 15,
+            "wins": 13,
+            "wars": 7,
+            "rate": 0.8666666666666667,
+            "limited": true
           }
         ]
       },
@@ -16311,6 +17526,161 @@
               "admecRuststalker"
             ],
             "mow": "mow:black_forgefiend_01"
+          }
+        ]
+      },
+      "observed": {
+        "total": 35,
+        "rows": [
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "orksWarboss"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 23,
+            "wins": 22,
+            "wars": 22,
+            "rate": 0.9565217391304348,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "orksWarboss"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 33,
+            "wins": 31,
+            "wars": 28,
+            "rate": 0.9393939393939394,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "necroOverlord"
+            ],
+            "mow": "mow:necro_reanimator_01",
+            "attempts": 56,
+            "wins": 52,
+            "wars": 42,
+            "rate": 0.9285714285714286,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "tauMarksman"
+            ],
+            "mow": "mow:tyran_biovore_01",
+            "attempts": 37,
+            "wins": 34,
+            "wars": 32,
+            "rate": 0.918918918918919,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "orksWarboss"
+            ],
+            "mow": "mow:orkss_rukkatrukk_01",
+            "attempts": 11,
+            "wins": 10,
+            "wars": 11,
+            "rate": 0.9090909090909091,
+            "limited": true
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "orksWarboss"
+            ],
+            "mow": "mow:necro_reanimator_01",
+            "attempts": 60,
+            "wins": 52,
+            "wars": 43,
+            "rate": 0.8666666666666667,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDestroyer",
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker"
+            ],
+            "mow": "mow:black_forgefiend_01",
+            "attempts": 15,
+            "wins": 13,
+            "wars": 13,
+            "rate": 0.8666666666666667,
+            "limited": true
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "tauCrisis"
+            ],
+            "mow": "mow:ultra_dreadnought_01",
+            "attempts": 69,
+            "wins": 59,
+            "wars": 53,
+            "rate": 0.855072463768116,
+            "limited": false
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "necroSpyder"
+            ],
+            "mow": "mow:tauta_broadside_01",
+            "attempts": 13,
+            "wins": 11,
+            "wars": 13,
+            "rate": 0.8461538461538461,
+            "limited": true
+          },
+          {
+            "team": [
+              "admecDominus",
+              "admecManipulus",
+              "admecMarshall",
+              "admecRuststalker",
+              "tauCrisis"
+            ],
+            "mow": "mow:necro_reanimator_01",
+            "attempts": 13,
+            "wins": 11,
+            "wars": 12,
+            "rate": 0.8461538461538461,
+            "limited": true
           }
         ]
       }

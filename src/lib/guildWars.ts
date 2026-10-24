@@ -6,12 +6,16 @@ export interface Counts { attempts: number; clears: number; failures: number; pe
 export interface Usage { unit: string; attempts: number; share: number | null }
 export interface Evidence extends Counts { share: number | null; team?: string[]; unit?: string; mow?: string; omittedCore?: string[] }
 export interface EvidenceSet { total: number; rows: Evidence[] }
+export interface ObservedSet {
+  total: number;
+  rows: { team: string[]; mow: string; attempts: number; wins: number; wars: number; rate: number; limited: boolean }[];
+}
 export interface Metric { numerator: number; denominator: number; rate: number | null }
 export interface Team extends Counts {
   id: string; core: string[]; interval: number[] | null; perfectPerAttempt: number | null;
   metrics: Record<string, Metric>;
   contexts: (Counts & { map: string; medicae: string })[];
-  flex: Usage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet;
+  flex: Usage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet; observed: ObservedSet;
   flexAnalysis?: Counts & {
     mode: string; minimumCoreMembers: number; completeCoreAttempts: number; replacementAttempts: number;
     metrics: Record<string, Metric>; contexts: (Counts & { map: string; medicae: string })[];

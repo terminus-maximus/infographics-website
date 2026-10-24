@@ -1,0 +1,54 @@
+---
+import UnitPortrait from './UnitPortrait.astro';
+import { number, percent, ratio, type ObservedSet, type Unit } from '../../lib/guildWars';
+interface Props { evidence: ObservedSet; core: string[]; title: string; registry: Record<string, Unit>; defense?: boolean }
+const { evidence, core, title, registry, defense = false } = Astro.props;
+const rateLabel = defense ? 'Hold Rate' : 'Win Rate';
+const allowSwap = defense || core.length === 5;
+---
+<details class="observed-teams">
+  <summary>{defense ? 'Observed Defenses' : 'Observed Teams'}</summary>
+  <div class="disclosure-body">
+    <p class="table-intro">Exact five heroes + recorded MoW. {allowSwap ? 'Includes single-hero swaps.' : 'Every core hero is required.'} Minimum 10 attempts.</p>
+    {evidence.rows.length ? <>
+      <p class="table-count">{evidence.total > 10 ? `Top 10 of ${number(evidence.total)} qualifying combinations.` : `${number(evidence.total)} qualifying ${evidence.total === 1 ? 'combination' : 'combinations'}.`} Sorted by highest {rateLabel.toLowerCase()}. <span class="limited-sample">Limited sample</span>: fewer than 20 attempts.</p>
+      <p class="table-hint">Scroll across to see all results →</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label={`${title} observed ${defense ? 'defenses' : 'teams'}, horizontally scrollable`}>
+        <table>
+          <caption>{title}: observed {defense ? 'defenses' : 'teams'}, highest {rateLabel.toLowerCase()} first</caption>
+          <thead><tr><th scope="col">Complete Team</th><th scope="col">{rateLabel} ↓</th><th scope="col">{defense ? 'Holds' : 'Wins'} / Attempts</th></tr></thead>
+          <tbody>{evidence.rows.map(row => {
+            const removed = core.filter(id => !row.team.includes(id));
+            const added = row.team.filter(id => !core.includes(id));
+            const ordered = [...core.filter(id => row.team.includes(id)), ...added];
+            return <tr>
+              <th scope="row"><div class="lineup">{ordered.map(id => <UnitPortrait id={id} compact core={core.includes(id)} registry={registry} />)}<UnitPortrait id={row.mow} compact registry={registry} /></div>{removed.length === 1 && <p class="swap-note">Swap: {registry[removed[0]].name} → {added.map(id => registry[id].name).join(', ')}</p>}</th>
+              <td><strong>{percent(row.rate)}</strong>{row.limited && <span class="limited-sample">Limited sample</span>}</td>
+              <td>{ratio(row.wins, row.attempts)}</td>
+            </tr>;
+          })}</tbody>
+        </table>
+      </div>
+      {defense && <p class="table-note">Swaps have their own rates and do not inherit the main team's counters. Check shared heroes before deploying.</p>}
+    </> : <p>No observed combinations meet the minimum of 10 attempts.</p>}
+  </div>
+</details>
+<style>
+  .table-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+  table { width: 100%; border-collapse: collapse; text-align: left; font-size: .875rem; font-variant-numeric: tabular-nums; }
+  caption { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .table-intro { font-size: .875rem; }
+  .table-note, .table-count, .table-hint { font-size: .8rem; }
+  .table-hint { display: none; }
+  th, td { padding: .7rem .8rem; border-bottom: 1px solid #333; vertical-align: middle; }
+  th { font-weight: 500; }
+  thead th { color: #d4af37; background: #202020; white-space: nowrap; }
+  td { white-space: nowrap; }
+  td strong { display: block; color: #f5d76e; font-size: 1.1rem; font-weight: 500; }
+  tbody tr:nth-child(even) { background: #1b1b1b; }
+  .lineup { display: grid; grid-template-columns: repeat(2, minmax(130px,1fr)); gap: .35rem .75rem; min-width: 290px; }
+  .swap-note { margin: .65rem 0 0; font-size: .75rem; }
+  .limited-sample { display: inline-block; color: #d6c89a; border: 1px solid #6c5b35; border-radius: 4px; padding: .15rem .35rem; font-size: .65rem; }
+  td .limited-sample { margin-top: .4rem; }
+  @media(max-width: 900px) { .table-hint { display: block; } }
+</style>

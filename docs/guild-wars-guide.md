@@ -2,6 +2,26 @@
 
 The local dataset builds independently of the analysis project. Normal `npm run dev` and `npm run build` never read or refresh the research source. No new package is required.
 
+## October 24, 2026 — Observed Teams and Observed Defenses
+
+The website now has one collapsed **Observed Teams** disclosure per Attack section and one **Observed Defenses** disclosure per Defense section. These replace the two exact-lineup tables, the separate Attack four-of-five evidence disclosure and Defense Flex choices. Existing styling, popular flex/MoW lists, headline metrics, ranked team order, counters, Hard Maps/Battlefield results and artwork dates are preserved. The October 19 accepted research reports remain read-only.
+
+Each row is an exact five-hero lineup plus a recorded MoW category. Attack requires all named core heroes for three-/four-hero cores; five-hero cores include the deduplicated four-of-five replacement cohort. Defense includes every observed lineup sharing at least four of the displayed five heroes, with each MoW kept separate. This is exploratory evidence and does not change the stricter rules for ranked representatives. Swaps show the outgoing/incoming names; portraits show only heroes actually present, preserving the approved order for retained core heroes.
+
+A combination qualifies with **10 attempts**, with no minimum war count. Show **up to 10**, sorted by unrounded Win Rate (Attack clears/attempts) or Hold Rate (Defense failures/attempts), then attempts descending, wars descending and canonical hero/MoW identity. A row gets **Limited sample** when attempts <20, regardless of war count; that label never overrides rate order. The visible copy simply says “Sorted by highest win rate” (or hold rate). Missing support is **MoW not recorded**, not proof that no MoW was deployed. The **Complete Team** column combines the five heroes and MoW in one two-column, three-row portrait grid. Only rate and wins/holds over attempts appear alongside it; war counts remain in the data for reconciliation and tie-breaking. No padding with sparse observations and no transfer of headline rates or counter probabilities to swaps.
+
+Schema v2 adds `observed: { total, rows }` to each team. The Attack importer selects from the full accepted `exact` arrays (using `flex_analysis.exact` for five-hero cores), before the legacy usage-based 25-row truncation. The Defense importer reconstructs all qualifying exact-five/MoW groups from the same frozen battle records, retaining failures and counting each observation once per matching defense family. The existing `flex`, `combinations`, `teamMows` and replacement-cohort fields remain in the local datasets for reconciliation; they are no longer separate evidence tables on the page. Normal builds still use only the local JSON.
+
+`ObservedTeams.astro` renders both variants using the existing disclosure, portrait, dark table and gold-accent styling. `guild-wars-observed.mjs` performs full-population filtering/ranking. The two focused checks verify the rendered rows and retained page behavior. An additional independent audit reconstructs all Attack and Defense candidate groups directly from frozen records:
+
+```sh
+node scripts/check-guild-wars-observed.mjs '/path/to/accepted/inputs/attacks.jsonl.gz'
+```
+
+The October snapshot yields **575 qualifying configurations across 20 sections** at the 10-attempt minimum; only the best ten per section are displayed. Revas OW has two and Imperial Summons has six; the other sections each display ten. These are observations, not evidence that a particular substitution or MoW caused better performance.
+
+The September and October 19/21 descriptions below document the previous UI; this section supersedes their disclosure names, displayed flex choices, evidence row limits and usage-first table order.
+
 ## Current release — October 19, 2026
 
 Accepted sources, including the October 19 community names and captain-first portrait orders:

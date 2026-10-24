@@ -73,12 +73,12 @@ const span = (values: number[]) => values.join('–');
           <summary id="methodology-title">Methodology</summary>
           <div class="disclosure-body">
             <ul class="methodology-notes">
-              <li><strong>Core teams:</strong> Main metrics, Machines of War, and main exact-lineup tables include all heroes in the listed core. Eligible attacks exclude cleanups and include failures. Five-hero cores also have separate four-of-five flex evidence, counting each attack once.</li>
+              <li><strong>Core teams:</strong> Main metrics, Machines of War and Hard Maps require every listed core hero. Eligible attacks exclude cleanups and include failures. Five-hero cores use a separate four-of-five pool for popular flex and Observed Teams; each attack counts once in that pool.</li>
               <li><strong>Popular flex:</strong> Up to five heroes are shown, ranked by observed usage, with at least 3.8% occurrence. Shares can add up to more than 100% because teams have multiple flex slots.</li>
               <li><strong>Machines of War:</strong> Up to three options are shown, ranked by observed usage, with at least 10% occurrence. Recorded support does not establish that its abilities were activated.</li>
-              <li><strong>No MoW deployed:</strong> This is the display label for attacks with no Machine of War recorded.</li>
-              <li><strong>Observed lineups:</strong> “Heroes exactly” shows actual five-hero teams with all Machines of War combined. “Complete Team exactly” preserves each lineup and its recorded support category.</li>
-              <li><strong>Evidence tables:</strong> The five most-used combinations are shown, ranked by attacks, then clear rate. Gold portrait borders identify the core heroes.</li>
+              <li><strong>MoW not recorded:</strong> The source does not identify a Machine of War; this does not confirm that none was deployed.</li>
+              <li><strong>Observed Teams:</strong> Each row is an exact five-hero lineup plus its recorded Machine of War. Three- and four-hero cores require every core hero; five-hero cores also include single-hero swaps. Win Rate is clears / attempts for that exact combination.</li>
+              <li><strong>Evidence minimum:</strong> Show up to 10 combinations with at least 10 attempts, sorted by highest Win Rate. Limited sample means fewer than 20 attempts. These exploratory variants do not change the headline rankings. Gold portrait borders identify core heroes present in the row.</li>
               <li><strong>Interpreting results:</strong> These results describe observed complete lineups and matchups. Popular flex choices do not guarantee that every combination works together.</li>
             </ul>
           </div>

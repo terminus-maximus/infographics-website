@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { readReport, normalizeReport, fraction } from './import-guild-wars.mjs';
+import { checkObserved } from './check-guild-wars-observed.mjs';
 import { percent, ratio } from '../src/lib/guildWarsFormat.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -36,7 +37,8 @@ for (const [html, route] of [[landing, '/guild-wars/'], [page, '/guild-wars/atta
   assert(!html.includes('aria-label="Breadcrumb"'));
   for (const [,src] of all(html, /<img[^>]*src="([^"]+)"/g)) assert(existsSync(resolve(root, `public${src}`)), `Missing image ${src}`);
 }
-assert.equal(data.units.missing_unknown.name, 'No MoW deployed');
+assert.equal(data.units.missing_unknown.name, 'MoW not recorded');
+assert(!/Heroes exactly|Complete Team exactly|Flex combinations — any four of five|No MoW deployed/.test(page));
 assert.equal(data.units.missing_unknown.image, null);
 assert.equal(data.units.worldKharn.name, 'Khârn');
 assert.equal(data.units.deathRotbone.name, 'Rotbone');
@@ -84,8 +86,8 @@ for (const [index, meta] of editorial.teams.entries()) {
   for (const row of t.flex) assert.equal(row.share, row.attempts / t.attempts);
   assert.equal(t.flex.reduce((n,r) => n + r.attempts,0), (5-t.core.length)*t.attempts);
   const usageLists = all(section, /<ul class="usage-options"[^>]*>([\s\S]*?)<\/ul>/g);
-  assert.equal(usageLists.length, t.flexAnalysis ? 3 : 2);
-  for (const [listIndex, candidates, minimum, limit] of [[0, t.flexAnalysis?.flex || t.flex, .038, 5], [1, t.mows.rows, .1, 3], ...(t.flexAnalysis ? [[2,t.flexAnalysis.mows.rows,.1,3]] : [])]) {
+  assert.equal(usageLists.length, 2);
+  for (const [listIndex, candidates, minimum, limit] of [[0, t.flexAnalysis?.flex || t.flex, .038, 5], [1, t.mows.rows, .1, 3]]) {
     const displayed = all(usageLists[listIndex][1], /data-unit-id="([^"]+)"/g).map(([, id]) => id);
     const eligible = candidates.filter(row => row.share !== null && row.share >= minimum).slice(0, limit);
     assert.deepEqual(displayed, eligible.map(row => row.unit), `${meta.title} usage cutoff/order differs`);
@@ -94,34 +96,15 @@ for (const [index, meta] of editorial.teams.entries()) {
       assert(strip(usageLists[listIndex][1]).includes(percent(row.share)));
     }
   }
+  checkObserved(section, t.observed, meta.core, data.units);
   const tables = all(section, /<tbody\b[^>]*>([\s\S]*?)<\/tbody>/g);
-  assert.equal(tables.length, t.flexAnalysis ? 6 : 3);
-  for (const [tableIndex, key, cohort] of [[0,'combinations',t],[1,'teamMows',t],...(t.flexAnalysis ? [[3,'combinations',t.flexAnalysis],[4,'teamMows',t.flexAnalysis]] : [])]) {
-    const evidence = cohort[key];
-    assert.equal(evidence.rows.length, Math.min(25, evidence.total));
-    const rows = all(tables[tableIndex][1], /<tr\b[^>]*>([\s\S]*?)<\/tr>/g);
-    assert.equal(rows.length, Math.min(5, evidence.total));
-    for (const [i, row] of evidence.rows.slice(0, 5).entries()) {
-      assert.equal(row.share, row.attempts / cohort.attempts);
-      assert.equal(row.clears + row.failures, row.attempts);
-      const cells = all(rows[i][1], /<td[^>]*>([\s\S]*?)<\/td>/g).map(([,html]) => strip(html));
-      const numbers = key === 'teamMows' ? cells.slice(1) : cells;
-      assert.deepEqual(numbers, [row.attempts.toLocaleString('en-US'), percent(row.share), row.clears.toLocaleString('en-US'), percent(row.clearRate), row.perfect.toLocaleString('en-US'), row.failures.toLocaleString('en-US')]);
-      const ids = all(rows[i][1], /data-unit-id="([^"]+)"/g).map(([,id]) => id);
-      const expected = [...meta.core.filter(id => row.team.includes(id)), ...row.team.filter(id => !meta.core.includes(id)), ...(row.mow ? [row.mow] : [])];
-      assert.deepEqual(ids, expected, 'Rendered lineup/support differs from normalized evidence');
-      assert.equal(ids.length, key === 'teamMows' ? 6 : 5, 'Rendered an omitted core hero or missing actual hero');
-      if (row.omittedCore) assert(rows[i][1].includes(row.omittedCore.length ? 'Replaces ' : 'All five core heroes'));
-    }
-  }
-  assert.equal(all(tables[2][1], /<tr\b[^>]*>/g).length, t.contexts.length);
+  assert.equal(tables.length, 2);
+  assert.equal(all(tables[1][1], /<tr\b[^>]*>/g).length, t.contexts.length);
   if (t.flexAnalysis) {
     const f = t.flexAnalysis;
-    assert.equal(all(tables[5][1], /<tr\b[^>]*>/g).length, f.contexts.length);
     assert.equal(f.flex.reduce((n,r) => n+r.attempts,0), f.replacementAttempts);
     for (const row of f.flex) assert.equal(row.share,row.attempts/f.attempts);
     assert(bodyText.includes('Each attack counts once.'));
-    for (const metric of Object.values(f.metrics)) assert(bodyText.includes(ratio(metric.numerator,metric.denominator)));
   }
 }
 
@@ -173,4 +156,4 @@ if (process.argv[2]) {
   }
   console.log('Accepted report reconciled; changed-core rejection and exact co-occurrence checks passed.');
 }
-console.log(`Guild Wars checks passed: 10 cores, ${new Set(data.teams.flatMap(t => t.core)).size} distinct heroes, ${30 + 3 * data.teams.filter(t => t.flexAnalysis).length} rendered tables, four-of-five flex evidence, five-row lineup limits, counts, denominators, assets, and labels.`);
+console.log(`Guild Wars checks passed: 10 cores, ${new Set(data.teams.flatMap(t => t.core)).size} distinct heroes, 20 rendered tables, single observed disclosure per core, up to ten rate-ranked configurations, counts, denominators, assets, and labels.`);
