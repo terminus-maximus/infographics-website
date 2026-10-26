@@ -1,12 +1,24 @@
 # Infographic update dates
 
-All 28 evergreen infographic guide pages use the PNG's Git revision date and the same public wording, for example: **Last updated on Oct 24, 2026**. Month names are Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov, Dec. Dates always include the day and year.
+All 30 evergreen infographic guide pages use the PNG's Git revision date and the same public wording, for example: **Last updated on Oct 26, 2026**. Month names are Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov, Dec. Dates always include the day and year.
 
 This policy was selected by Dan on October 13, 2026. It intentionally replaces campaign replay-data, Biovore research, and LRE page-update dates in the header. Those underlying provenance fields remain available in their source datasets; the public header consistently refers to the infographic.
 
 ## Shared source and rendering
 
-`src/data/infographicRevisions.json` stores `{ updatedOn, commit }` for each full-size PNG URL. Dates are ISO `YYYY-MM-DD`; the commit records the evidence behind the date. `src/lib/infographicDates.ts` validates the dates and supplies the shared abbreviation format. `InfographicUpdated.astro` renders the label and `<time datetime>` consistently across featured pages, campaign/Biovore heroes, Campaign Event guides, Guild Wars and Boss Meta. Missing dates fail the build.
+`src/data/infographicRevisions.json` stores `{ updatedOn, commit }` for each full-size PNG URL. Dates are ISO `YYYY-MM-DD`; the commit records the evidence behind the date. `src/lib/infographicDates.ts` validates the dates and supplies the shared abbreviation format. `InfographicUpdated.astro` renders the label and `<time datetime>` consistently across featured pages, campaign/Biovore heroes, Campaign Event guides, Guild Wars and Boss Meta. Missing registry entries fail the build.
+
+The October 26 Z’Kar, PBC, and refreshed Incursion overview PNGs are committed in
+`8feacfb126a95f76984793c18e5b7de29a0dcfa1`. Its committer timestamp is
+`2026-10-26T16:12:34-07:00` (America/Los_Angeles), so all three registry entries use
+`2026-10-26`. The temporary unverified preview state is resolved. The shared date
+renderer again requires committed dates for all registered artwork.
+
+Final October 26 local audit: all 58 routes built. All 30 direct-scope dates
+match their committed PNG revisions and standard wording, with zero mismatches
+or unverified dates. The 17 season/preview exclusions, ten other undated routes,
+and one redirect remain unchanged. All four LRE roster-version checks and 384
+filter states passed. Live deployment is verified separately after pushing.
 
 When replacing an infographic, inspect its PNG history after committing the asset, update its registry entry to the content commit's date in America/Los_Angeles, and rebuild. Follow byte-identical copies or renames back to the prior content revision. Do not use WebP/thumbnail conversion dates, event dates printed inside the image, filesystem timestamps, or the build date. Farsight's registry date follows the unchanged copy back to the May 30 original tracked content. The public site uses committed metadata and does not require Git history on the deployment host.
 

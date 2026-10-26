@@ -1,0 +1,40 @@
+---
+import type { IncursionGuide } from "../../data/incursion/types";
+interface Props { tips: NonNullable<IncursionGuide["stageTips"]> }
+const { tips } = Astro.props;
+---
+<section class="guide-panel" id="stage-tips" aria-labelledby="stage-tips-heading">
+  <h2 id="stage-tips-heading">Stage-Specific Tips</h2>
+  <p class="section-intro">{tips.introduction}</p>
+  <nav class="stage-jumps" aria-label="Jump to a battle">
+    {tips.stages.map((stage) => <a href={`#battle-${stage.stage}`} aria-label={`Battle ${stage.stage}`}>{stage.stage}</a>)}
+  </nav>
+  <p class="stage-caveat">{tips.caveat}</p>
+  <div class="stage-list">
+    {tips.stages.map((stage) => (
+      <details id={`battle-${stage.stage}`} open={stage.highlighted}>
+        <summary><span class="stage-number">Battle {stage.stage}</span><span>{stage.title}</span></summary>
+        <div class="stage-body">
+          <p>{stage.advice}</p>
+          <a href={stage.link.url} target="_blank" rel="noopener noreferrer">{stage.link.label} <span aria-hidden="true">↗</span></a>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+<style>
+  .stage-jumps { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+  .stage-jumps a { display: grid; place-items: center; width: 2.75rem; min-height: 2.75rem; border: 1px solid var(--guide-border); border-radius: 6px; background: var(--guide-soft); color: var(--guide-accent); font-size: .85rem; text-decoration: none; }
+  .stage-jumps a:hover { border-color: var(--guide-accent); }
+  .stage-caveat { margin: 0 0 1.25rem; color: var(--guide-muted); font-size: .8rem; line-height: 1.75; }
+  .stage-list { display: grid; gap: .65rem; }
+  details { border: 1px solid var(--guide-border); border-radius: 8px; background: var(--guide-soft); scroll-margin-top: 6rem; }
+  details:target { border-color: var(--guide-accent); }
+  summary { padding: 1rem; color: var(--guide-ink); cursor: pointer; font-size: .9rem; line-height: 1.6; }
+  summary::marker { color: var(--guide-accent); }
+  .stage-number { display: inline-block; min-width: 5.5rem; margin-right: .5rem; color: var(--guide-accent); font-weight: 600; }
+  .stage-body { padding: 0 1rem 1rem; }
+  .stage-body p { margin: 0 0 .75rem; color: var(--guide-muted); font-size: .88rem; line-height: 1.8; }
+  .stage-body a { color: var(--guide-accent); font-size: .8rem; text-underline-offset: .2em; }
+  @media (max-width: 480px) { summary span:last-child { display: block; margin-top: .2rem; } }
+</style>

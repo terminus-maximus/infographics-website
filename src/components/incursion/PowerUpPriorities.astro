@@ -17,7 +17,7 @@ const { powerUps } = Astro.props;
     ))}
   </div>
   <details>
-    <summary>Compare Extra Hits, Regeneration, Lifesteal, and Havocs</summary>
+    <summary>{powerUps.comparisonLabel ?? "Compare Extra Hits, Regeneration, Lifesteal, and Havocs"}</summary>
     <dl>
       {powerUps.notes.map((note) => <div><dt>{note.name}</dt><dd>{note.text}</dd></div>)}
     </dl>

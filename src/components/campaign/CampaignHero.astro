@@ -7,11 +7,13 @@ interface Props {
   image?: string;
   imageAlt?: string;
   infographicSrc?: string;
+  updatedAt?: string;
   backHref?: string;
   backLabel?: string;
 }
 
-const { title, subtitle, image, imageAlt = "", infographicSrc, backHref, backLabel } = Astro.props;
+const { title, subtitle, image, imageAlt = "", infographicSrc, updatedAt, backHref, backLabel } = Astro.props;
+const updatedLabel = updatedAt ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${updatedAt}T00:00:00Z`)) : undefined;
 ---
 
 <section class="campaign-hero">
@@ -27,9 +29,16 @@ const { title, subtitle, image, imageAlt = "", infographicSrc, backHref, backLab
   <p class="subtitle">{subtitle}</p>
 
   {infographicSrc && <InfographicUpdated imageSrc={infographicSrc} />}
+  {!infographicSrc && updatedAt && <p class="last-updated">Last updated on <time datetime={updatedAt}>{updatedLabel}</time></p>}
 </section>
 
 <style>
+  .last-updated {
+    margin: 1rem auto 0;
+    font-size: .95rem;
+    line-height: 1.6;
+    color: var(--guide-accent, #d4af37);
+  }
   .campaign-hero {
     margin-bottom: 3rem;
     text-align: center;

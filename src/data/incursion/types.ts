@@ -55,6 +55,14 @@ export interface IncursionTierReward {
   shardType?: "Mythic";
 }
 
+export interface IncursionStageTip {
+  stage: number;
+  title: string;
+  advice: string;
+  link: GuideLink;
+  highlighted?: boolean;
+}
+
 export interface IncursionGuide {
   slug: string;
   machine: string;
@@ -70,16 +78,24 @@ export interface IncursionGuide {
   strategies: IncursionStrategy[];
   powerUps: {
     introduction: string;
+    comparisonLabel?: string;
     approaches: { strategyId: string; heading: string; focus: string; text: string; link: GuideLink }[];
     notes: { name: string; text: string }[];
   };
   rules: { title: string; text: string }[];
+  stageTips?: {
+    introduction: string;
+    caveat: string;
+    stages: IncursionStageTip[];
+  };
   tierRewards?: IncursionTierReward[];
   relatedGuides: GuideLink[];
   research: {
     summary: string;
     findings: string[];
     creators: IncursionCreator[];
+    reports?: { title: string; text: string; link: GuideLink }[];
+    references?: GuideLink[];
     limitations: string;
   };
 }

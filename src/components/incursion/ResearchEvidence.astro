@@ -28,7 +28,23 @@ const uploadCount = research.creators.reduce((total, creator) => total + creator
       </article>
     ))}
   </div>
+  {research.reports?.length ? (
+    <div class="community-reports">
+      <h3>Community Reports &amp; Flex Options</h3>
+      <p>These written player reports add options beyond the reviewed videos. Their teams and tiers are self-reported.</p>
+      <div class="evidence-grid">
+        {research.reports.map((report) => (
+          <article>
+            <h4>{report.title}</h4>
+            <p>{report.text}</p>
+            <a href={report.link.url} target="_blank" rel="noopener noreferrer">{report.link.label} <span aria-hidden="true">↗</span></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  ) : null}
   <p class="research-limitations">{research.limitations}</p>
+  {research.references?.length ? <nav class="mechanics-links" aria-label="Mechanics references"><span>Mechanics references:</span>{research.references.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</nav> : null}
 </section>
 <style>
   .research-count { margin: -.25rem 0 1rem; color: var(--guide-accent); font-size: .82rem; font-weight: 600; }
@@ -48,5 +64,8 @@ const uploadCount = research.creators.reduce((total, creator) => total + creator
   .evidence-links { display: flex; flex-wrap: wrap; gap: .65rem 1.25rem; margin: auto 0 0; padding: .85rem 0 0; border-top: 1px solid var(--guide-border); list-style: none; }
   a { color: var(--guide-accent); font-size: .8rem; text-underline-offset: .2em; }
   .research-limitations { margin: 1.25rem 0 0; font-size: .8rem; }
+  .community-reports { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--guide-border); }
+  h4 { margin: 0; font-size: .95rem; line-height: 1.5; }
+  .mechanics-links { display: flex; flex-wrap: wrap; gap: .6rem 1rem; margin-top: 1rem; color: var(--guide-muted); font-size: .8rem; line-height: 1.7; }
   @media (max-width: 700px) { .evidence-grid { grid-template-columns: minmax(0, 1fr); } }
 </style>

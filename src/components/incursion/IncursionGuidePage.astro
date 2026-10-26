@@ -10,6 +10,7 @@ import StrategyCard from "./StrategyCard.astro";
 import PowerUpPriorities from "./PowerUpPriorities.astro";
 import ResearchEvidence from "./ResearchEvidence.astro";
 import TierCapsRewards from "./TierCapsRewards.astro";
+import StageTips from "./StageTips.astro";
 import type { IncursionGuide } from "../../data/incursion/types";
 
 interface Props { guide: IncursionGuide }
@@ -17,17 +18,17 @@ const { guide } = Astro.props;
 const tocGroups = [
   { title: "Guide", links: [{ label: "Overview", href: "#overview" }, { label: "Team Strategies", href: "#strategies" }, { label: "Power-Up Priorities", href: "#power-ups" }] },
   { title: "Team Strategies", links: guide.strategies.map((strategy) => ({ label: strategy.name, href: `#${strategy.id}` })) },
-  { title: "Tips & Evidence", links: [{ label: "Rules for Success", href: "#rules" }, ...(guide.tierRewards?.length ? [{ label: "Tier Caps & Shard Rewards", href: "#tier-caps-rewards" }] : []), { label: "Creator Evidence", href: "#research" }] },
+  { title: "Tips & Evidence", links: [{ label: "Rules for Success", href: "#rules" }, ...(guide.stageTips ? [{ label: "Stage-Specific Tips", href: "#stage-tips" }] : []), ...(guide.tierRewards?.length ? [{ label: "Tier Caps & Shard Rewards", href: "#tier-caps-rewards" }] : []), { label: "Creator Evidence", href: "#research" }] },
 ];
 ---
 <Layout title={guide.seoTitle} description={guide.description}
   image={guide.infographic?.src} url={`https://terminusmaximus.com/incursion-mow/${guide.slug}`}>
   <Header />
   <main class="campaign-page incursion-guide" id="guide-content">
-    <CampaignHero title={guide.title} subtitle={guide.subtitle} infographicSrc={guide.infographic?.fullSizeSrc}
+    <CampaignHero title={guide.title} subtitle={guide.subtitle} infographicSrc={guide.infographic?.fullSizeSrc} updatedAt={!guide.infographic ? guide.updatedAt : undefined}
       backHref="/incursion-mow" backLabel="Incursion & Machine of War" />
 
-    <FeaturedInfographic title={`${guide.machine} Strategy Infographic`} asset={guide.infographic} />
+    {guide.infographic && <FeaturedInfographic title={`${guide.machine} Strategy Infographic`} asset={guide.infographic} />}
 
     <nav class="table-of-contents guide-panel" aria-labelledby="table-of-contents-heading">
       <h2 id="table-of-contents-heading">Table of Contents</h2>
@@ -67,6 +68,8 @@ const tocGroups = [
         {guide.rules.map((rule) => <li><h3>{rule.title}</h3><p>{rule.text}</p></li>)}
       </ol>
     </section>
+
+    {guide.stageTips && <StageTips tips={guide.stageTips} />}
 
     {guide.tierRewards?.length ? <TierCapsRewards rows={guide.tierRewards} /> : null}
 

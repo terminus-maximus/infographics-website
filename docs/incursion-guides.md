@@ -36,7 +36,70 @@ The page displays the WebP and links to the full-resolution PNG, preserving the
 existing infographic analytics convention. Social metadata uses the WebP too.
 The Incursion landing-page entry uses the thumbnail. All three assets are
 user-supplied files under `public/`; no image generation or conversion is needed.
-Future machine guides without an infographic retain the placeholder state.
+Machine guides without an infographic begin with the table of contents and use
+the guide's `updatedAt` date. They do not show an unfinished-art placeholder.
+Infographic-backed pages retain their existing image-revision date behaviour.
+
+## Z’Kar and Plagueburst Crawler (October 26, 2026)
+
+The registered pages are `/incursion-mow/zkar/` and
+`/incursion-mow/plagueburst-crawler/`. They reuse the Biovore page structure,
+three strategy cards, hero portraits, power-up cards, rules, and creator evidence.
+The existing hub lists both automatically; they link to each other and Biovore.
+The supplied `mow-zkar` and `mow-pbc` asset sets are now registered: 700 × 392
+WebPs on the guides and in social previews, full-size PNG links with the existing
+analytics attributes, and 600 × 336 thumbnails on the Incursion hub, homepage,
+and Events listing. Their catalog entries also make them eligible for More to
+Explore via the corresponding WebPs. Artwork was not regenerated or edited.
+
+Both supplied PNGs show matching 14-row tier-cap and shard-reward tables. These
+were visually transcribed into `xenosTierRewards` and displayed through the same
+table component used by Biovore. The earlier table-availability caveats have
+been replaced with the supplied-artwork provenance.
+
+The two new PNGs and the refreshed Incursion overview PNG are committed in
+`8feacfb126a95f76984793c18e5b7de29a0dcfa1`. Their registry dates use that commit's
+October 26, 2026 timestamp in America/Los_Angeles. All three headers now read
+`Last updated on Oct 26, 2026`. See `docs/infographic-dates.md`.
+
+Curated research directory:
+
+`/Users/danfoster01/Documents/Campaign YouTube/campaign-video-research/research/xenos_incursion_2026-10-26/`
+
+- `research_dossier.html` and `build_report.py`: synthesized conclusions and caveats.
+- `video_source_ledger.json`, `fresh_visual_review.json`: inherited September review
+  plus the fresh Caoryn Z’Kar and Enquiring Newt PBC review.
+- `stage_advice_index.json`: 15 timestamped stage notes per track. Public wording
+  is adapted in `xenos-stages.ts`; the source tier is explicit on each link.
+- `discord_source_notes.json`, `web_source_ledger.json`: community reports and
+  current mechanics references, with direct links retained in the guides.
+
+Z’Kar covers 15 uploads from five creators. Caoryn's `AJpIaqgXnmE` shows
+Re’vas/Aleph/Boss/Snot/Sho in all 15 result panels, but includes follow-up attempts
+for stages 5 and 9. `Oo4XhkPoRBo` is the older Tier 10 comparison. Ten cpunerd
+uploads contain nine distinct fights; the duplicated finale is not independent
+evidence. Kaiser Arctan's `DhdHWVagHcI` is a 12-fight Tier 13 route with roster
+rotation. AureLuck's `zikovHuKZv0` stops at an Uncommon unlock; Snorri's
+`TJm3d4KXCTc` is a Tier 11 finale only.
+
+PBC covers two uploads from two creators. Caoryn's `Ig0Wjv0H7D8` shows the
+mechanical trio plus Calandis/Maugan across 15 Legendary result panels, including
+an alternate stage 6 branch. Enquiring Newt's `PhSav7_wc3Q` shows the same organic
+five across 20 fights on two Common routes and an unlock after Tier 2 battle 7.
+Both videos are from March 2025. Snot/Gibba Mythic II and Grot-taunt advice are
+later written reports, labelled separately instead of counted as reviewed videos.
+
+Shared content in `xenos.ts` covers repair, summons, overwatch, run preservation,
+and power-ups. Mechanical status, repairability from relics, contamination hexes,
+and contagion auras remain distinct. Mythic relic effects are not assumed below
+Mythic. The guides do not claim minimum ranks or that Sho's drones inherit his
+Extra Hits buff. Their reward tables come from the new, machine-specific PNGs.
+
+`StageTips.astro` adds a battle index and native disclosures, with four priority
+maps expanded per guide. The optional research `reports` and `references` fields
+render written community evidence and mechanics links. Biovore does not opt in
+to these sections. `powerUps.comparisonLabel` keeps its Havoc label specific to
+Biovore while the Xenos guides name their own options.
 
 ## Research provenance
 
@@ -102,6 +165,33 @@ checks passed for image paths/alt text, local routes, unique IDs, a single H1,
 canonical metadata, and all seven linked videos against the research inventory.
 `astro check` reports the same 61 errors and eight hints as an isolated copy of
 the unchanged HEAD revision; this change adds no diagnostics.
+
+October 26, 2026 validation: production build passed (58 pages). Before/after
+`astro check` each reported 66 existing errors, zero warnings, and eight hints;
+the diagnostic lists are identical. Built HTML checks passed for both new guides,
+Biovore, and the hub: single H1, unique IDs, valid section anchors and local
+routes, present image assets and alt attributes, and canonical metadata. Each new
+guide contains 15 battle disclosures. All linked gameplay video IDs are in the
+review ledger. Browser checks found no horizontal overflow at 320, 390, 768,
+and 1100 pixels for both new guides, or at 320 pixels for Biovore and the hub.
+The Z’Kar three-hero and four-hero cards, PBC title, chapter disclosures, and
+table-of-contents navigation were checked visually or interactively. No new
+client-side JavaScript is needed for these sections.
+
+Artwork integration validation on October 26: the 58-page build passed; the
+type-check diagnostic list remained unchanged (66 existing errors, eight hints).
+Both pages have the correct WebP, two tracked full-resolution PNG links, matching
+social image metadata, and 14 reward rows. The home, Events, and Incursion hub
+contain both thumbnails; More to Explore's candidate pool contains both WebPs.
+Built asset bytes match the supplied files. Browser checks confirmed the artwork
+and no horizontal overflow at 320/390 pixels. The four LRE checks and all 384
+filter states passed after the shared date-renderer change.
+
+Release validation on October 26: after committing the artwork and resolving
+its three revision dates, all 30 infographic dates pass the local Git-history
+audit. The temporary unverified-date renderer has been removed; the existing
+strict committed-date contract is preserved. The 58-page production build and
+all four LRE checks pass, with no new type-check diagnostics.
 
 ## Files added or changed
 

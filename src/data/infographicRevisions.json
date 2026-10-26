@@ -68,8 +68,8 @@
     "commit": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568"
   },
   "/images/incursion-mow.png": {
-    "updatedOn": "2026-09-23",
-    "commit": "44097643468cb78ab4e81e5c2a55f1cf9c675f39"
+    "updatedOn": "2026-10-26",
+    "commit": "8feacfb126a95f76984793c18e5b7de29a0dcfa1"
   },
   "/images/indomitus-mirror.png": {
     "updatedOn": "2026-08-05",
@@ -90,6 +90,14 @@
   "/images/mow-biovore.png": {
     "updatedOn": "2026-09-23",
     "commit": "44097643468cb78ab4e81e5c2a55f1cf9c675f39"
+  },
+  "/images/mow-pbc.png": {
+    "updatedOn": "2026-10-26",
+    "commit": "8feacfb126a95f76984793c18e5b7de29a0dcfa1"
+  },
+  "/images/mow-zkar.png": {
+    "updatedOn": "2026-10-26",
+    "commit": "8feacfb126a95f76984793c18e5b7de29a0dcfa1"
   },
   "/images/octarius-mirror.png": {
     "updatedOn": "2026-08-17",
