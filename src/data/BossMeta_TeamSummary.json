@@ -8,9 +8,9 @@
     "hero_4": "Boss",
     "hero_5": "Aesoth",
     "mow": "Biovore",
-    "replay_count": 17,
-    "average_damage": 1659588.24,
-    "max_damage": 2200000
+    "replay_count": 36,
+    "average_damage": 1693673.36,
+    "max_damage": 2409000
   },
   {
     "boss_clean": "Avatar",
@@ -21,8 +21,8 @@
     "hero_4": "Abaddon",
     "hero_5": "Archi",
     "mow": "Zkar",
-    "replay_count": 15,
-    "average_damage": 1152800,
+    "replay_count": 16,
+    "average_damage": 1142125.0,
     "max_damage": 1570000
   },
   {
@@ -34,8 +34,8 @@
     "hero_4": "Kharn",
     "hero_5": "Dante",
     "mow": "Biovore",
-    "replay_count": 105,
-    "average_damage": 1306217.87,
+    "replay_count": 111,
+    "average_damage": 1300746.63,
     "max_damage": 1900000
   },
   {
@@ -47,8 +47,8 @@
     "hero_4": "Abaddon",
     "hero_5": "Archi",
     "mow": "Zkar",
-    "replay_count": 30,
-    "average_damage": 1134033.33,
+    "replay_count": 31,
+    "average_damage": 1132935.48,
     "max_damage": 1491000
   },
   {
@@ -60,9 +60,9 @@
     "hero_4": "Boss",
     "hero_5": "Vit",
     "mow": "Biovore",
-    "replay_count": 26,
-    "average_damage": 1204692.31,
-    "max_damage": 1650000
+    "replay_count": 60,
+    "average_damage": 1265466.67,
+    "max_damage": 1890000
   },
   {
     "boss_clean": "Dorn",
@@ -86,8 +86,8 @@
     "hero_4": "Darkstrider",
     "hero_5": "Lhykis",
     "mow": "PBC",
-    "replay_count": 10,
-    "average_damage": 2122822.8,
+    "replay_count": 16,
+    "average_damage": 2175514.25,
     "max_damage": 2700000
   },
   {
@@ -99,8 +99,8 @@
     "hero_4": "Aesoth",
     "hero_5": "Vit",
     "mow": "Biovore",
-    "replay_count": 71,
-    "average_damage": 1779070.41,
+    "replay_count": 87,
+    "average_damage": 1783827.57,
     "max_damage": 2300000
   },
   {
@@ -112,9 +112,9 @@
     "hero_4": "Boss",
     "hero_5": "Atla",
     "mow": "PBC",
-    "replay_count": 3,
-    "average_damage": 2343333.33,
-    "max_damage": 2430000
+    "replay_count": 6,
+    "average_damage": 2463333.33,
+    "max_damage": 3180000
   },
   {
     "boss_clean": "Hive Tyrant",
@@ -125,9 +125,9 @@
     "hero_4": "Darkstrider",
     "hero_5": "Lhykis",
     "mow": "PBC",
-    "replay_count": 2,
-    "average_damage": 1835000,
-    "max_damage": 2100000
+    "replay_count": 3,
+    "average_damage": 2003333.33,
+    "max_damage": 2340000
   },
   {
     "boss_clean": "Lion",
@@ -178,7 +178,7 @@
     "hero_5": "Atla",
     "mow": "Biovore",
     "replay_count": 8,
-    "average_damage": 933000,
+    "average_damage": 933000.0,
     "max_damage": 1120000
   },
   {
@@ -204,7 +204,7 @@
     "hero_5": "Rosie",
     "mow": "Zkar",
     "replay_count": 10,
-    "average_damage": 1044000,
+    "average_damage": 1044000.0,
     "max_damage": 1250000
   },
   {
@@ -216,8 +216,8 @@
     "hero_4": "Abaddon",
     "hero_5": "Archi",
     "mow": "Zkar",
-    "replay_count": 27,
-    "average_damage": 1020592.59,
+    "replay_count": 45,
+    "average_damage": 1037133.33,
     "max_damage": 1310000
   },
   {
@@ -242,9 +242,9 @@
     "hero_4": "Boss",
     "hero_5": "Aesoth",
     "mow": "PBC",
-    "replay_count": 20,
-    "average_damage": 2016150,
-    "max_damage": 2490000
+    "replay_count": 39,
+    "average_damage": 2053641.03,
+    "max_damage": 2870000
   },
   {
     "boss_clean": "Screamer",
@@ -255,9 +255,9 @@
     "hero_4": "Vit",
     "hero_5": "Ammuk",
     "mow": "Reanimator",
-    "replay_count": 11,
-    "average_damage": 1885305.64,
-    "max_damage": 2235795
+    "replay_count": 16,
+    "average_damage": 2158035.62,
+    "max_damage": 3600000
   },
   {
     "boss_clean": "Szarekh",
@@ -295,7 +295,7 @@
     "hero_5": "Helb",
     "mow": "Reanimator",
     "replay_count": 2,
-    "average_damage": 3183834,
+    "average_damage": 3183834.0,
     "max_damage": 3507668
   },
   {
@@ -307,8 +307,8 @@
     "hero_4": "Boss",
     "hero_5": "Atla",
     "mow": "PBC",
-    "replay_count": 4,
-    "average_damage": 2322250,
+    "replay_count": 5,
+    "average_damage": 2375800.0,
     "max_damage": 2670000
   }
 ]
