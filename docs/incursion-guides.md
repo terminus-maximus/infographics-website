@@ -6,7 +6,11 @@ it there to create the next machine page and its landing-page link. The parent
 hub lives at `src/pages/incursion-mow/index.astro`, preserving `/incursion-mow`.
 Guides with an infographic also enter the shared `graphics.ts` discovery catalog
 automatically, making them candidates for More to Explore and including them in
-the home/events listings. More to Explore chooses a random subset on each page
+the Events listing. The home page's Game Events section shows only the Incursion
+overview; machine-specific guides remain in the shared discovery catalog. The
+overview is also the third home page feature, between Boss Meta and Fabius Bile.
+The header's Incursion submenu links to Overview, Biovore, PBC, and Zkar.
+More to Explore chooses a random subset on each page
 load, so catalog membership does not mean appearing on every visit.
 
 The shared layout uses the existing site Layout, Header, Footer, CampaignHero,

@@ -123,6 +123,27 @@ import { currentGuildRaidSeason } from "../data/guildRaid";
         </div>
         <div class="submenu">
           <div class="submenu-header">
+            <a class="submenu-link" href="/incursion-mow" data-ga4-nav-section="incursion">Incursion</a>
+            <button
+              class="submenu-button"
+              type="button"
+              aria-label="Open Incursion menu"
+              aria-expanded="false"
+              aria-controls="incursion-menu"
+            >
+              <span class="submenu-arrow" aria-hidden="true">▾</span>
+            </button>
+          </div>
+
+          <div class="submenu-menu" id="incursion-menu">
+            <a href="/incursion-mow" data-ga4-nav-section="incursion">Overview</a>
+            <a href="/incursion-mow/biovore/" data-ga4-nav-section="incursion">Biovore</a>
+            <a href="/incursion-mow/plagueburst-crawler/" data-ga4-nav-section="incursion">PBC</a>
+            <a href="/incursion-mow/zkar/" data-ga4-nav-section="incursion">Zkar</a>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="submenu-header">
             <a class="submenu-link" href="/events" data-ga4-nav-section="game_events">Events</a>
             <button
               class="submenu-button"

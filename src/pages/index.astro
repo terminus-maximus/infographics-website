@@ -28,7 +28,10 @@ const guildRaids = discoveryGraphics.filter(
 );
 const guildWars = discoveryGraphics.filter((g) => g.category === "guild-war");
 const legendaryGuides = discoveryGraphics.filter((g) => g.category === "legendary");
-const gameEvents = discoveryGraphics.filter((g) => g.category === "event");
+// Keep machine-specific guides in discovery while showing only the overview here.
+const gameEvents = discoveryGraphics.filter(
+  (g) => g.category === "event" && !g.href.startsWith("/incursion-mow/"),
+);
 const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 ---
 
@@ -92,6 +95,30 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
   <p class="caption">
     <a href="/guild-raid/boss-meta/" class="caption-link">
+      LEARN MORE
+    </a>
+  </p>
+</section>
+
+<section class="content-section">
+  <header class="content-section-heading">
+    <a href="/incursion-mow">
+      <h2>Incursion MoW Guide</h2>
+      <p class="incursion-subtitle">Choose your Machine of War on Nov 2</p>
+    </a>
+  </header>
+
+  <a href="/incursion-mow" class="image-link">
+    <img
+      src="/images/web/incursion-mow.webp"
+      alt="Incursion and Machine of War Infographic"
+      class="infographic"
+      loading="lazy"
+    />
+  </a>
+
+  <p class="caption">
+    <a href="/incursion-mow" class="caption-link">
       LEARN MORE
     </a>
   </p>
@@ -574,6 +601,7 @@ This entire block is commented out.
 
 .content-section-heading .guild-wars-subtitle,
 .content-section-heading .boss-meta-subtitle,
+.content-section-heading .incursion-subtitle,
 .content-section-heading .fabius-subtitle {
   color: #ffffff;
 }
