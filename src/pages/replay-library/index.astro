@@ -82,7 +82,7 @@ const teamIconMap = Object.fromEntries(
         <li><strong>Boss</strong> to find replays against a specific Guild Raid Boss.</li>
         <li><strong>Team</strong> to focus on an archetype such as Neuro, AdMech, or Laviscus.</li>
         <li><strong>Map</strong> to find runs for a specific Boss map</li>
-        <li><strong>Tier</strong> to compare Legendary and Mythic difficulty runs.</li>
+        <li><strong>Tier</strong> to select one or more Legendary and Mythic difficulty tiers.</li>
         <li><strong>Included Heroes</strong> to find replays using specific characters.</li>
         <li><strong>Excluded Heroes</strong> to find alternatives when you are missing a character.</li>
       </ul>
@@ -162,12 +162,12 @@ const teamIconMap = Object.fromEntries(
       includedHeroes: "hero",
       excludedHeroes: "excludeHero"
     });
-    const MULTI_VALUE_FILTERS = new Set(["includedHeroes", "excludedHeroes"]);
+    const MULTI_VALUE_FILTERS = new Set(["tier", "includedHeroes", "excludedHeroes"]);
     const createDefaultFilterState = () => ({
       boss: "",
       map: "",
       team: "",
-      tier: "",
+      tier: [],
       minimumDamage: 0,
       minimumDate: "",
       includedHeroes: [],
@@ -266,7 +266,9 @@ const teamIconMap = Object.fromEntries(
         const validMaps = new Set(getAvailableMaps(nextState));
         const validTiers = new Set(replayLibraryData.tiers);
         nextState.map = getFirstValidParam(params, "map", (value) => validMaps.has(value));
-        nextState.tier = getFirstValidParam(params, "tier", (value) => validTiers.has(value));
+        nextState.tier = [...new Set(
+          params.getAll(FILTER_QUERY_PARAMS.tier).filter((tier) => validTiers.has(tier))
+        )];
 
         const minimumDamage = getFirstValidParam(params, "minimumDamage", (value) => {
           const number = Number(value);
@@ -408,8 +410,7 @@ const teamIconMap = Object.fromEntries(
       const placeholder = {
         boss: "Select a Boss",
         team: "All Teams",
-        map: "All Maps",
-        tier: "All Tiers"
+        map: "All Maps"
       }[filterName];
       const label = value || placeholder;
 
@@ -419,6 +420,21 @@ const teamIconMap = Object.fromEntries(
         .forEach((option) => {
           option.setAttribute("aria-selected", String(option.dataset.value === value));
         });
+    };
+
+    const updateTierFilter = () => {
+      const selectedTiers = replayLibraryData.tiers.filter((tier) => state.tier.includes(tier));
+      const label = selectedTiers.join(", ") || "All Tiers";
+      const summary = selectedTiers.length > 3 ? `${selectedTiers.length} tiers selected` : label;
+      const singleTier = selectedTiers.length === 1 ? selectedTiers[0] : "";
+
+      choiceToggles.tier.innerHTML = selectedChoiceHtml("tier", singleTier, summary);
+      choiceToggles.tier.title = label;
+      choiceToggles.tier.setAttribute("aria-label", `Tier: ${label}`);
+      choiceMenus.tier.querySelector("[data-clear-tiers]").setAttribute("aria-pressed", String(selectedTiers.length === 0));
+      choiceMenus.tier.querySelectorAll("[data-tier-checkbox]").forEach((checkbox) => {
+        checkbox.checked = state.tier.includes(checkbox.value);
+      });
     };
 
     const renderChoiceMenu = (filterName, placeholder, options) => {
@@ -514,7 +530,7 @@ const teamIconMap = Object.fromEntries(
 
       if (!hasPrimaryFilter) {
         state.map = "";
-        state.tier = "";
+        state.tier = [];
         state.minimumDamage = 0;
         state.minimumDate = "";
         state.includedHeroes = [];
@@ -525,7 +541,7 @@ const teamIconMap = Object.fromEntries(
         setChoiceValue("boss", "");
         setChoiceValue("map", "");
         setChoiceValue("team", "");
-        setChoiceValue("tier", "");
+        updateTierFilter();
         setHeroOptions("");
         return;
       }
@@ -541,7 +557,7 @@ const teamIconMap = Object.fromEntries(
 
       setChoiceValue("boss", state.boss);
       setChoiceValue("team", state.team);
-      setChoiceValue("tier", state.tier);
+      updateTierFilter();
       setHeroOptions(state.team);
     };
 
@@ -551,7 +567,7 @@ const teamIconMap = Object.fromEntries(
       return replayLibraryData.replays.filter((replay) => {
         if (state.boss && replay.boss !== state.boss) return false;
         if (state.team && replay.team !== state.team) return false;
-        if (state.tier && replay.tier !== state.tier) return false;
+        if (state.tier.length && !state.tier.includes(replay.tier)) return false;
         if (state.map && replay.map !== state.map) return false;
         if (replay.damage < state.minimumDamage) return false;
         if (state.minimumDate && replay.publishedAtTimestamp < parseDateFilterTimestamp(state.minimumDate)) return false;
@@ -760,6 +776,15 @@ const teamIconMap = Object.fromEntries(
     };
 
     form.addEventListener("input", (event) => {
+      const tierCheckbox = event.target.closest("[data-tier-checkbox]");
+      if (tierCheckbox) {
+        state.tier = Array.from(
+          choiceMenus.tier.querySelectorAll("[data-tier-checkbox]:checked")
+        ).map((checkbox) => checkbox.value);
+        render({ syncUrl: true });
+        return;
+      }
+
       const minimumDamageField = event.target.closest('[data-filter="minimumDamage"]');
       if (minimumDamageField) {
         state.minimumDamage = Number(minimumDamageField.value) || 0;
@@ -801,6 +826,12 @@ const teamIconMap = Object.fromEntries(
     });
 
     form.addEventListener("click", (event) => {
+      if (event.target.closest("[data-clear-tiers]")) {
+        state.tier = [];
+        render({ syncUrl: true });
+        return;
+      }
+
       const option = event.target.closest("[data-choice-option]");
       if (!option) return;
 
@@ -809,7 +840,7 @@ const teamIconMap = Object.fromEntries(
 
       if (filterName === "boss") {
         state.map = "";
-        state.tier = "";
+        state.tier = [];
         state.minimumDamage = 0;
         state.minimumDate = "";
         state.includedHeroes = [];
@@ -826,6 +857,13 @@ const teamIconMap = Object.fromEntries(
 
       closeAllChoiceMenus();
       render({ syncUrl: true });
+    });
+
+    choiceMenus.tier.parentElement.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || choiceMenus.tier.hidden) return;
+      event.preventDefault();
+      closeChoiceMenu("tier");
+      choiceToggles.tier.focus();
     });
 
     sortButtons.forEach((button) => {
