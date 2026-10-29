@@ -1,7 +1,7 @@
 {
   "id": "octarius",
   "name": "Octarius",
-  "updatedAt": "2026-08-15",
+  "updatedAt": "2026-10-29",
   "modes": [
     {
       "id": "normal",
@@ -1221,22 +1221,22 @@
               "roster": [
                 {
                   "characterId": "orksWarboss",
-                  "rankId": "Iron1",
+                  "rankId": "Gold1",
                   "role": "required"
                 },
                 {
                   "characterId": "orksBigMek",
-                  "rankId": "Iron1",
+                  "rankId": "Gold1",
                   "role": "required"
                 },
                 {
                   "characterId": "orksKillaKan",
-                  "rankId": "Iron1",
+                  "rankId": "Silver1",
                   "role": "required"
                 },
                 {
                   "characterId": "orksRuntherd",
-                  "rankId": "Iron1",
+                  "rankId": "Silver1",
                   "role": "optional"
                 }
               ],
