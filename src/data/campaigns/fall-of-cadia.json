@@ -1,7 +1,7 @@
 {
   "id": "fall_of_cadia",
   "name": "Fall Of Cadia",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-10-29",
   "modes": [
     {
       "id": "normal",
@@ -3350,17 +3350,17 @@
               "roster": [
                 {
                   "characterId": "blackTerminator",
-                  "rankId": "Silver1",
+                  "rankId": "Gold1",
                   "role": "required"
                 },
                 {
                   "characterId": "blackPossession",
-                  "rankId": "Silver1",
+                  "rankId": "Gold1",
                   "role": "required"
                 },
                 {
                   "characterId": "blackHaarken",
-                  "rankId": "Silver1",
+                  "rankId": "Gold1",
                   "role": "required"
                 }
               ],
