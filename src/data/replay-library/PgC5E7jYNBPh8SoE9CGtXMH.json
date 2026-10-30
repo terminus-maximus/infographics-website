@@ -60086,5 +60086,33 @@
     "hero_4":"Boss",
     "hero_5":"Aesoth",
     "MoW":"Biovore"
+  },
+  {
+    "creator":"Baldrick",
+    "video_id":"J0izW25IIck",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=J0izW25IIck",
+    "published_at":"10\/29\/2026 11:33 PM",
+    "title":"s112 - Ghazghkull M3 - LHS - 2,038k - Lavistodes with Vitruvius - Baldrick #gameplay #games #gaming",
+    "tier_guess":"M3",
+    "tier_final":"M3",
+    "boss_guess":"Ghaz",
+    "boss_final":"Ghaz",
+    "damage_guess":"2038000",
+    "damage_final":"2038000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"10\/30\/2026 2:29 AM",
+    "notes":null,
+    "map":"Ghaz_05",
+    "team_archetype":"Laviscus",
+    "team_key":null,
+    "Team (no MoW)":null,
+    "Team":"Biovore",
+    "hero_1":null,
+    "hero_2":null,
+    "hero_3":null,
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
