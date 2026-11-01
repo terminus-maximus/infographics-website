@@ -220,7 +220,7 @@ const guideReplaySections = guides.map((guide) => {
           <h3>{guide.title}</h3>
 
           {guide.imageAvailable === false ? (
-            <div class="infographic-placeholder" aria-hidden="true" />
+            <p class="infographic-placeholder">Infographic in progress</p>
           ) : (
             <>
               <a
@@ -370,10 +370,18 @@ const guideReplaySections = guides.map((guide) => {
   }
 
   .infographic-placeholder {
+    align-items: center;
+    border: 1px dashed #444;
+    border-radius: 8px;
     box-sizing: border-box;
+    color: #cccccc;
+    display: flex;
     height: 160px;
+    justify-content: center;
     margin: 0 auto;
     max-width: 700px;
+    padding: 1rem;
+    text-align: center;
     width: 100%;
   }
 
