@@ -1,0 +1,2298 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "app_version": "1.43.130",
+    "config_full_hash": "ec6666201ed35fbf38dfd837c97cc6c9",
+    "extracted_at": "2026-10-11T15:17:00.715766+00:00",
+    "snapshot_files": {
+      "balance.json": "b066455101f0b72df181717053b5d6c8582718d7851387492fef1156a9f76ba5",
+      "localization.en.json": "59a7af0831244a25eb54e3eccab8b72511ab979ee7fc219456e6356acf37486b",
+      "visuals.json": "cb1b94db73e778b048d8d4283d7abb6bf877dcc7e8be54fedafad377706db510",
+      "lre.json": "bbd68da4298964a95e4fd3973fdb6eddd98f2c8a6ae71a29d6a16f2cd1ec4808"
+    }
+  },
+  "source_hashes": {
+    "data/raw/manifest.json": "278885c33131e4a5940a32b788a08f785f98b23964933bf78b5790d2b77d8e3b",
+    "data/raw/balance.json": "b066455101f0b72df181717053b5d6c8582718d7851387492fef1156a9f76ba5",
+    "data/raw/localization.en.json": "59a7af0831244a25eb54e3eccab8b72511ab979ee7fc219456e6356acf37486b",
+    "data/processed/catalog.json": "800e378288d103ec5aa43715f87f9b1f1e4c97b6646be7b91fff5b06fe32fadc",
+    "scripts/build.py": "7ef66668a4e5a82c1a1b06fa413bb17b4eafd6024ee19c4e3dcd46171d0f2792"
+  },
+  "game_config_sha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
+  "asset_registry_sha256": "89d83255686b02ad283dd051b013f02a33a1714c029f48fc98eec50409e4d87e",
+  "rank_policy": "Ranks 1–10 use corresponding Relic ability entries without character rarity multipliers; default rank 10.",
+  "coverage": {
+    "relics": 35,
+    "heroes": 68
+  },
+  "relics": [
+    {
+      "id": "R_Block_DaemonfleshPlate",
+      "ability_id": "DaemonfleshPlate",
+      "name": "Daemonflesh Plate",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "blackTerminator",
+        "deathBlightlord",
+        "thousTerminator",
+        "worldTerminator"
+      ],
+      "rank": 10,
+      "template": "Each time the relic bearer attacks, it gains +{[extraArmor]} Armour. After attacking {[nrOfAttacks]} times, this bonus is reset and the relic bearer can use its active ability again.",
+      "ranks": [
+        {
+          "extraArmor": 145,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraArmor": 153,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraArmor": 161,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraArmor": 168,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraArmor": 176,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraArmor": 184,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraArmor": 192,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraArmor": 200,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraArmor": 208,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraArmor": 215,
+          "nrOfAttacks": 7
+        }
+      ],
+      "description": "Each time the relic bearer attacks, it gains +215 Armour. After attacking 7 times, this bonus is reset and the relic bearer can use its active ability again.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Block_DaemonfleshPlate.webp",
+        "width": 209,
+        "height": 195,
+        "sha256": "ebcb2444b275492fdd659d5cd197ec0b953cb24bc06616c36002ddaa058df7e4",
+        "sprite_name": "ui_icon_item_R_Block_DaemonFleshPlate",
+        "guid": "78dd97788c0f0431db196019f4a8d03a",
+        "source_bundle": "items/r_block_daemonfleshplate",
+        "source_sha256": "a1884ed769431e4a6add4676fabdaf3c7fe9881a7a6ff19af898d0f4d9a05ff6",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Block_DaemonfleshPlate"
+    },
+    {
+      "id": "R_Booster_Block_LionHelmRelic",
+      "ability_id": "LionHelmRelic",
+      "name": "Lion Helm",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "darkaAzrael"
+      ],
+      "rank": 10,
+      "template": "Friendly units adjacent to Azrael block an additional +{[blockDmg]} Damage. At the end of Azrael's turn, if there is no friendly Watcher in the Dark on the battlefield, he has a {[chance]}% chance to summon a Watcher in the Dark in a free adjacent hex.",
+      "ranks": [
+        {
+          "blockDmg": 490,
+          "chance": 50
+        },
+        {
+          "blockDmg": 516,
+          "chance": 55
+        },
+        {
+          "blockDmg": 543,
+          "chance": 60
+        },
+        {
+          "blockDmg": 569,
+          "chance": 65
+        },
+        {
+          "blockDmg": 596,
+          "chance": 70
+        },
+        {
+          "blockDmg": 622,
+          "chance": 75
+        },
+        {
+          "blockDmg": 649,
+          "chance": 80
+        },
+        {
+          "blockDmg": 675,
+          "chance": 90
+        },
+        {
+          "blockDmg": 702,
+          "chance": 95
+        },
+        {
+          "blockDmg": 728,
+          "chance": 100
+        }
+      ],
+      "description": "Friendly units adjacent to Azrael block an additional +728 Damage. At the end of Azrael's turn, if there is no friendly Watcher in the Dark on the battlefield, he has a 100% chance to summon a Watcher in the Dark in a free adjacent hex.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Block_LionHelmRelic.webp",
+        "width": 187,
+        "height": 244,
+        "sha256": "f692f71ec8b5df2e864a76f0ed8e1eb1f92abdf8c7ca797a368598c0fe7b34b9",
+        "sprite_name": "ui_icon_item_R_Booster_Block_LionHelmRelic",
+        "guid": "0e4b71cab755fe547934f65a7af465b2",
+        "source_bundle": "items/r_booster_block_lionhelmrelic",
+        "source_sha256": "6da64927adaf23684b8afcb90533f56a1d25d530640b8f4b3a0e29497ad09ef4",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Block_LionHelmRelic"
+    },
+    {
+      "id": "R_Booster_Block_NornCrown",
+      "ability_id": "NornCrown",
+      "name": "Norn Crown",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "tyranNeurothrope"
+      ],
+      "rank": 10,
+      "template": "The maximum level of Neuroparasite is increased by 1. Other friendly Psykers within Synapse range and friendly Summons within Synapse range deal +{[extraDmg]} Damage to enemies that are affected by Neuroparasite.",
+      "ranks": [
+        {
+          "extraDmg": 880
+        },
+        {
+          "extraDmg": 928
+        },
+        {
+          "extraDmg": 975
+        },
+        {
+          "extraDmg": 1023
+        },
+        {
+          "extraDmg": 1070
+        },
+        {
+          "extraDmg": 1118
+        },
+        {
+          "extraDmg": 1165
+        },
+        {
+          "extraDmg": 1213
+        },
+        {
+          "extraDmg": 1260
+        },
+        {
+          "extraDmg": 1308
+        }
+      ],
+      "description": "The maximum level of Neuroparasite is increased by 1. Other friendly Psykers within Synapse range and friendly Summons within Synapse range deal +1308 Damage to enemies that are affected by Neuroparasite.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Block_NornCrown.webp",
+        "width": 254,
+        "height": 247,
+        "sha256": "97d07c9c95bf3958c2ee83f8d762284372e8d47e311996b2b63afb0df3c556ab",
+        "sprite_name": "ui_icon_item_R_Booster_Block_NornCrown",
+        "guid": "436917ab5209ba74083695087a9b5e23",
+        "source_bundle": "items/r_booster_block_norncrown",
+        "source_sha256": "4c7f5b6cd3534307888b779ce55bf21a060b6adf6c0fa574a5a254ad52df98c8",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Block_NornCrown"
+    },
+    {
+      "id": "R_Booster_Block_PhoenixGem",
+      "ability_id": "PhoenixGem",
+      "name": "Phoenix Gem",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "eldarAutarch"
+      ],
+      "rank": 10,
+      "template": "The first time each battle that Aethana is defeated, she is instead revived with a maximum of {[hp]} Health remaining, even if Overkilled.",
+      "ranks": [
+        {
+          "hp": 3915
+        },
+        {
+          "hp": 4126
+        },
+        {
+          "hp": 4338
+        },
+        {
+          "hp": 4549
+        },
+        {
+          "hp": 4760
+        },
+        {
+          "hp": 4972
+        },
+        {
+          "hp": 5183
+        },
+        {
+          "hp": 5394
+        },
+        {
+          "hp": 5606
+        },
+        {
+          "hp": 5817
+        }
+      ],
+      "description": "The first time each battle that Aethana is defeated, she is instead revived with a maximum of 5817 Health remaining, even if Overkilled.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Block_PhoenixGem.webp",
+        "width": 187,
+        "height": 211,
+        "sha256": "1200a90f77ccd9a83003fdd1aa13ddda251703b732b5d9f76fed5c2edf0e9b85",
+        "sprite_name": "ui_icon_item_R_Booster_Block_PhoenixGem",
+        "guid": "daf462d9cfeed6440b6b4c5a34093dbc",
+        "source_bundle": "items/r_booster_block_phoenixgem",
+        "source_sha256": "2a688b42baedf175dfda2cc603856e4635dd3fc13ce61b0780c4835fb0136d5f",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Block_PhoenixGem"
+    },
+    {
+      "id": "R_Booster_Crit_AmuletOfTheVoidwyrm",
+      "ability_id": "AmuletOfTheVoidwyrm",
+      "name": "Amulet of the Voidwyrm",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "genesBiophagus",
+        "genesPrimus",
+        "genesKelermorph"
+      ],
+      "rank": 10,
+      "template": "The relic bearer takes -{[critDmgReduction]} Crit Damage for each friendly adjacent Summon or Decoy.",
+      "ranks": [
+        {
+          "critDmgReduction": 390
+        },
+        {
+          "critDmgReduction": 411
+        },
+        {
+          "critDmgReduction": 432
+        },
+        {
+          "critDmgReduction": 453
+        },
+        {
+          "critDmgReduction": 474
+        },
+        {
+          "critDmgReduction": 495
+        },
+        {
+          "critDmgReduction": 516
+        },
+        {
+          "critDmgReduction": 537
+        },
+        {
+          "critDmgReduction": 558
+        },
+        {
+          "critDmgReduction": 579
+        }
+      ],
+      "description": "The relic bearer takes -579 Crit Damage for each friendly adjacent Summon or Decoy.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_AmuletOfTheVoidwyrm.webp",
+        "width": 205,
+        "height": 233,
+        "sha256": "a78bf0072b66e0568c471148fd27dca6d1157e2c5430e43c3ce773ae929e68e1",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_AmuletOfTheVoidwyrm",
+        "guid": "ad929096428044b70a34ded38c0c6dac",
+        "source_bundle": "items/r_booster_crit_amuletofthevoidwyrm",
+        "source_sha256": "53d46762458f9f0c19592de1045ba2280ce8ffa1c37b079076914e583969b6ee",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_AmuletOfTheVoidwyrm"
+    },
+    {
+      "id": "R_Booster_Crit_BookOfFate",
+      "ability_id": "BookOfFate",
+      "name": "Book of Fate",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "blackPossession",
+        "thousInfernalMaster",
+        "thousSorcerer"
+      ],
+      "rank": 10,
+      "template": "After the relic bearer performs a normal attack, a friendly adjacent Summon performs a normal attack against an enemy in range, if possible. If the summon is a Daemon, it deals +{[extraDmg]} Damage with this attack.",
+      "ranks": [
+        {
+          "extraDmg": 880
+        },
+        {
+          "extraDmg": 928
+        },
+        {
+          "extraDmg": 975
+        },
+        {
+          "extraDmg": 1023
+        },
+        {
+          "extraDmg": 1070
+        },
+        {
+          "extraDmg": 1118
+        },
+        {
+          "extraDmg": 1165
+        },
+        {
+          "extraDmg": 1213
+        },
+        {
+          "extraDmg": 1260
+        },
+        {
+          "extraDmg": 1308
+        }
+      ],
+      "description": "After the relic bearer performs a normal attack, a friendly adjacent Summon performs a normal attack against an enemy in range, if possible. If the summon is a Daemon, it deals +1308 Damage with this attack.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_BookOfFate.webp",
+        "width": 198,
+        "height": 208,
+        "sha256": "8088d72755a086f8817bb42b20d97a35f397ec2dfa127f81dc71a4526b87e5d9",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_BookOfFate",
+        "guid": "2f3d9e9bfdc20514cbdda7b23c0baae3",
+        "source_bundle": "items/r_booster_crit_bookoffate",
+        "source_sha256": "0dd52f65666fba1e2f39efc0476aa42fd37a4ed8b443ee1b38bd25557694d45e",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_BookOfFate"
+    },
+    {
+      "id": "R_Booster_Crit_ChaliceOfBaal",
+      "ability_id": "ChaliceOfBaal",
+      "name": "Chalice of Baal",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "bloodSanguinary"
+      ],
+      "rank": 10,
+      "template": "The first time each turn that any unit adjacent to Nicodemus dies, he heals himself and all friendly adjacent units for {[hp]} Health. All affected units deal +{[extraDmg]} Damage with normal melee attacks until the end of this turn.",
+      "ranks": [
+        {
+          "hp": 1765,
+          "extraDmg": 490
+        },
+        {
+          "hp": 1860,
+          "extraDmg": 516
+        },
+        {
+          "hp": 1956,
+          "extraDmg": 543
+        },
+        {
+          "hp": 2051,
+          "extraDmg": 569
+        },
+        {
+          "hp": 2146,
+          "extraDmg": 596
+        },
+        {
+          "hp": 2241,
+          "extraDmg": 622
+        },
+        {
+          "hp": 2337,
+          "extraDmg": 649
+        },
+        {
+          "hp": 2432,
+          "extraDmg": 675
+        },
+        {
+          "hp": 2527,
+          "extraDmg": 702
+        },
+        {
+          "hp": 2622,
+          "extraDmg": 728
+        }
+      ],
+      "description": "The first time each turn that any unit adjacent to Nicodemus dies, he heals himself and all friendly adjacent units for 2622 Health. All affected units deal +728 Damage with normal melee attacks until the end of this turn.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_ChaliceOfBaal.webp",
+        "width": 148,
+        "height": 208,
+        "sha256": "18ac21f992101dca5c910dc53798d4219abf4c62b0e71193996dcaf610039cbc",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_ChaliceOfBaal",
+        "guid": "3dd61f0d6e4c848e2926a47f93146d3d",
+        "source_bundle": "items/r_booster_crit_chaliceofbaal",
+        "source_sha256": "23b57c6aef2a027642895cb056a114cfb392f9dc54ffc44099ec040d2056093d",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_ChaliceOfBaal"
+    },
+    {
+      "id": "R_Booster_Crit_IntoxicatingElixir",
+      "ability_id": "IntoxicatingElixir",
+      "name": "Intoxicating Elixir",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "emperNoiseMarine",
+        "emperKakophonist",
+        "emperFlawlessBlade",
+        "emperExultant"
+      ],
+      "rank": 10,
+      "template": "The relic bearer deals +{[extraCritDmg]} Crit Damage for each unit within range 2 that is Suppressed, Stunned, Taunted, or Thrilled, up to a maximum of 6 times. This bonus is doubled if the relic bearer is at or below 50% Health.",
+      "ranks": [
+        {
+          "extraCritDmg": 295
+        },
+        {
+          "extraCritDmg": 311
+        },
+        {
+          "extraCritDmg": 327
+        },
+        {
+          "extraCritDmg": 343
+        },
+        {
+          "extraCritDmg": 359
+        },
+        {
+          "extraCritDmg": 375
+        },
+        {
+          "extraCritDmg": 391
+        },
+        {
+          "extraCritDmg": 406
+        },
+        {
+          "extraCritDmg": 422
+        },
+        {
+          "extraCritDmg": 438
+        }
+      ],
+      "description": "The relic bearer deals +438 Crit Damage for each unit within range 2 that is Suppressed, Stunned, Taunted, or Thrilled, up to a maximum of 6 times. This bonus is doubled if the relic bearer is at or below 50% Health.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_IntoxicatingElixir.webp",
+        "width": 197,
+        "height": 216,
+        "sha256": "8bf91bd45fb13c7674bc7b1c7e831f972da101042e88a599ca0c076772129fcb",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_IntoxicatingElixir",
+        "guid": "faac28ef34e2c0c409d1346a99d871ad",
+        "source_bundle": "items/r_booster_crit_intoxicatingelixir",
+        "source_sha256": "1c73e40b5532b067aa8da216c874e68732af92140f94ce42340866dee52c50cd",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_IntoxicatingElixir"
+    },
+    {
+      "id": "R_Booster_Crit_KardiocoreGalvanus",
+      "ability_id": "KardiocoreGalvanus",
+      "name": "Kardiocore Galvanus",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "admecDestroyer",
+        "admecRuststalker",
+        "admecMarshall"
+      ],
+      "rank": 10,
+      "template": "The relic bearer deals +{[extraCritDmg]} Crit Damage for each friendly adjacent Mechanical unit.",
+      "ranks": [
+        {
+          "extraCritDmg": 295
+        },
+        {
+          "extraCritDmg": 311
+        },
+        {
+          "extraCritDmg": 327
+        },
+        {
+          "extraCritDmg": 343
+        },
+        {
+          "extraCritDmg": 359
+        },
+        {
+          "extraCritDmg": 375
+        },
+        {
+          "extraCritDmg": 391
+        },
+        {
+          "extraCritDmg": 406
+        },
+        {
+          "extraCritDmg": 422
+        },
+        {
+          "extraCritDmg": 438
+        }
+      ],
+      "description": "The relic bearer deals +438 Crit Damage for each friendly adjacent Mechanical unit.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_KardiocoreGalvanus.webp",
+        "width": 223,
+        "height": 177,
+        "sha256": "e865e6b350ee3093ef3d444077096fe87dd18591dc72ec8c81e727a615c0b1f9",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_KardiocoreGalvanus",
+        "guid": "c73c21aeeed65754da6d319dad92a12f",
+        "source_bundle": "items/r_booster_crit_kardiocoregalvanus",
+        "source_sha256": "42676333a6ab67b9dd57227bd2442f82a40fe534ea4f15d6295b686683b334df",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_KardiocoreGalvanus"
+    },
+    {
+      "id": "R_Booster_Crit_NetherRealmCasket",
+      "ability_id": "NetherRealmCasket",
+      "name": "Nether-Realm Casket",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "necroWarden",
+        "necroSpyder",
+        "necroDestroyer"
+      ],
+      "rank": 10,
+      "template": "The relic bearer takes -{[critDmgReduction]} Crit Damage for each adjacent friendly Mechanical unit and regenerates an additional  {[hpToHeal]} Health from Living Metal.",
+      "ranks": [
+        {
+          "critDmgReduction": 390,
+          "hpToHeal": 980
+        },
+        {
+          "critDmgReduction": 411,
+          "hpToHeal": 1033
+        },
+        {
+          "critDmgReduction": 432,
+          "hpToHeal": 1086
+        },
+        {
+          "critDmgReduction": 453,
+          "hpToHeal": 1139
+        },
+        {
+          "critDmgReduction": 474,
+          "hpToHeal": 1192
+        },
+        {
+          "critDmgReduction": 495,
+          "hpToHeal": 1244
+        },
+        {
+          "critDmgReduction": 516,
+          "hpToHeal": 1297
+        },
+        {
+          "critDmgReduction": 537,
+          "hpToHeal": 1350
+        },
+        {
+          "critDmgReduction": 558,
+          "hpToHeal": 1403
+        },
+        {
+          "critDmgReduction": 579,
+          "hpToHeal": 1456
+        }
+      ],
+      "description": "The relic bearer takes -579 Crit Damage for each adjacent friendly Mechanical unit and regenerates an additional  1456 Health from Living Metal.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_NetherRealmCasket.webp",
+        "width": 188,
+        "height": 218,
+        "sha256": "ab83babd51826f2175c71853369e12e47bd1ecb4a4a77ea231684804e787a421",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_NetherRealmCasket",
+        "guid": "6e7b9a2f0b9648845b406970d3750a92",
+        "source_bundle": "items/r_booster_crit_netherrealmcasket",
+        "source_sha256": "54fa6f96e70852fe170ccb862222c559a08df142c9db1614bc05e3286f3f0254",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_NetherRealmCasket"
+    },
+    {
+      "id": "R_Booster_Crit_OrbsOfDecay",
+      "ability_id": "OrbsOfDecay",
+      "name": "Orbs of Decay",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "deathRotbone",
+        "deathPutrifier",
+        "deathBlightbringer"
+      ],
+      "rank": 10,
+      "template": "The relic bearer's normal attacks deal an additional 2x {[minDmg]}-{[maxDmg]} Toxic Damage to enemy units that have their Armour reduced by 30% or more and are also on or adjacent to the target's hex. Additionally, the target's hex is Contaminated.",
+      "ranks": [
+        {
+          "minDmg": 685,
+          "maxDmg": 1370
+        },
+        {
+          "minDmg": 722,
+          "maxDmg": 1444
+        },
+        {
+          "minDmg": 759,
+          "maxDmg": 1518
+        },
+        {
+          "minDmg": 796,
+          "maxDmg": 1592
+        },
+        {
+          "minDmg": 833,
+          "maxDmg": 1666
+        },
+        {
+          "minDmg": 870,
+          "maxDmg": 1740
+        },
+        {
+          "minDmg": 907,
+          "maxDmg": 1814
+        },
+        {
+          "minDmg": 944,
+          "maxDmg": 1888
+        },
+        {
+          "minDmg": 981,
+          "maxDmg": 1962
+        },
+        {
+          "minDmg": 1018,
+          "maxDmg": 2036
+        }
+      ],
+      "description": "The relic bearer's normal attacks deal an additional 2x 1018-2036 Toxic Damage to enemy units that have their Armour reduced by 30% or more and are also on or adjacent to the target's hex. Additionally, the target's hex is Contaminated.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_OrbsOfDecay.webp",
+        "width": 177,
+        "height": 194,
+        "sha256": "7a987a4a27c47a332dc594427f727211b2871d32cab0a494874e490eaf9c952d",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_OrbsOfDecay",
+        "guid": "13b733f67ac3d6342aab6fbbefab0215",
+        "source_bundle": "items/r_booster_crit_orbsofdecay",
+        "source_sha256": "f765de3e03d517cce3afbceb4a44eb4173e60cc941e5c93e56dd489a689c2922",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_OrbsOfDecay"
+    },
+    {
+      "id": "R_Booster_Crit_PhasalSubjugator",
+      "ability_id": "PhasalSubjugator",
+      "name": "Phasal Subjugator",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "necroOverlord"
+      ],
+      "rank": 10,
+      "template": "After moving, if there is no friendly Necron Warrior on the battlefield, Anuphet summons a Necron Warrior in a free adjacent hex. If Anuphet does not move, this ability triggers at the end of his turn. After My Will Be Done triggers, it triggers a second time, but only a friendly adjacent Necron Warrior that was not affected by it this turn can perform an attack. The Necron Warriors have {[summonHp]} Health, {[summonDmg]} Damage and {[summonArmor]} Armour.",
+      "ranks": [
+        {
+          "summonHp": 5875,
+          "summonDmg": 1960,
+          "summonArmor": 1470
+        },
+        {
+          "summonHp": 6192,
+          "summonDmg": 2066,
+          "summonArmor": 1549
+        },
+        {
+          "summonHp": 6509,
+          "summonDmg": 2172,
+          "summonArmor": 1629
+        },
+        {
+          "summonHp": 6826,
+          "summonDmg": 2277,
+          "summonArmor": 1708
+        },
+        {
+          "summonHp": 7143,
+          "summonDmg": 2383,
+          "summonArmor": 1787
+        },
+        {
+          "summonHp": 7461,
+          "summonDmg": 2489,
+          "summonArmor": 1867
+        },
+        {
+          "summonHp": 7778,
+          "summonDmg": 2595,
+          "summonArmor": 1946
+        },
+        {
+          "summonHp": 8095,
+          "summonDmg": 2701,
+          "summonArmor": 2025
+        },
+        {
+          "summonHp": 8412,
+          "summonDmg": 2806,
+          "summonArmor": 2105
+        },
+        {
+          "summonHp": 8729,
+          "summonDmg": 2912,
+          "summonArmor": 2184
+        }
+      ],
+      "description": "After moving, if there is no friendly Necron Warrior on the battlefield, Anuphet summons a Necron Warrior in a free adjacent hex. If Anuphet does not move, this ability triggers at the end of his turn. After My Will Be Done triggers, it triggers a second time, but only a friendly adjacent Necron Warrior that was not affected by it this turn can perform an attack. The Necron Warriors have 8729 Health, 2912 Damage and 2184 Armour.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_PhasalSubjugator.webp",
+        "width": 226,
+        "height": 169,
+        "sha256": "8aab697380fb2ecdb0bce69ffeedd7b4a7ec10a6163f95ccf7c554d3f79992bc",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_PhasalSubjugator",
+        "guid": "8b311d46a2355b04591c56cd95d6b806",
+        "source_bundle": "items/r_booster_crit_phasalsubjugator",
+        "source_sha256": "8fe330600a2cbd5cdfffb15f38c35bec3647a2ce330669f312e22187f911146e",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_PhasalSubjugator"
+    },
+    {
+      "id": "R_Booster_Crit_TalismanOfRage",
+      "ability_id": "TalismanOfRage",
+      "name": "Talisman of Rage",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "worldJakhal",
+        "worldEightbound",
+        "worldExecutions"
+      ],
+      "rank": 10,
+      "template": "Each time the relic bearer defeats an enemy with a melee attack, it counts twice for Blessings Of Khorne. The relic bearer takes -{[critDmgReduction]} Crit Damage for each level of Blessings Of Khorne.",
+      "ranks": [
+        {
+          "critDmgReduction": 295
+        },
+        {
+          "critDmgReduction": 311
+        },
+        {
+          "critDmgReduction": 327
+        },
+        {
+          "critDmgReduction": 343
+        },
+        {
+          "critDmgReduction": 359
+        },
+        {
+          "critDmgReduction": 375
+        },
+        {
+          "critDmgReduction": 391
+        },
+        {
+          "critDmgReduction": 406
+        },
+        {
+          "critDmgReduction": 422
+        },
+        {
+          "critDmgReduction": 438
+        }
+      ],
+      "description": "Each time the relic bearer defeats an enemy with a melee attack, it counts twice for Blessings Of Khorne. The relic bearer takes -438 Crit Damage for each level of Blessings Of Khorne.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_TalismanOfRage.webp",
+        "width": 206,
+        "height": 248,
+        "sha256": "cbe08730273a57c12e6805b8c14f1dfa72efe9b30f31b65f89f27e0d12bbffbf",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_TalismanOfRage",
+        "guid": "f7564dff2d6418d4f942498bdd6534d5",
+        "source_bundle": "items/r_booster_crit_talismanofrage",
+        "source_sha256": "4c397cad997225c79c1bffe9bc6735db84ffdcc4cc178d7132f6ecdc1947fa2f",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_TalismanOfRage"
+    },
+    {
+      "id": "R_Booster_Crit_WyrdmakersHelm",
+      "ability_id": "WyrdmakersHelm",
+      "name": "Wyrdmaker's Helm",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "spaceWolfPriest"
+      ],
+      "rank": 10,
+      "template": "During his turn, each time Baldr or an adjacent friendly unit gets healed for the first time this turn, Baldr immediately performs a normal melee attack. These attacks deal +{[extraDmg]} Damage and add Ice to the target's hex.",
+      "ranks": [
+        {
+          "extraDmg": 490
+        },
+        {
+          "extraDmg": 516
+        },
+        {
+          "extraDmg": 543
+        },
+        {
+          "extraDmg": 569
+        },
+        {
+          "extraDmg": 596
+        },
+        {
+          "extraDmg": 622
+        },
+        {
+          "extraDmg": 649
+        },
+        {
+          "extraDmg": 675
+        },
+        {
+          "extraDmg": 702
+        },
+        {
+          "extraDmg": 728
+        }
+      ],
+      "description": "During his turn, each time Baldr or an adjacent friendly unit gets healed for the first time this turn, Baldr immediately performs a normal melee attack. These attacks deal +728 Damage and add Ice to the target's hex.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Booster_Crit_WyrdmakersHelm.webp",
+        "width": 205,
+        "height": 221,
+        "sha256": "d5d97712e42665be878d57d35e9f2705d1638dd9e32c66f4a8174526b5775b36",
+        "sprite_name": "ui_icon_item_R_Booster_Crit_WyrdmakersHelm",
+        "guid": "97599fdc6e2002e45b7071f58a18eeb5",
+        "source_bundle": "items/r_booster_crit_wyrdmakershelm",
+        "source_sha256": "750ac26094426471b049a0cc1fe86f4030fd5a12dd9f8acb1cd62abc3531d697",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Booster_Crit_WyrdmakersHelm"
+    },
+    {
+      "id": "R_Crit_BladeOfTheAncestors",
+      "ability_id": "BladeOfTheAncestors",
+      "name": "Blade of the Ancestors",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "votanUthar"
+      ],
+      "rank": 10,
+      "template": "Ûthar gains +{[extraCritChance]}% Crit Chance and deals +{[extraCritDmg]} Crit Damage each time a friendly character dies or kills an enemy unit. Once Ûthar crits, this bonus resets.",
+      "ranks": [
+        {
+          "extraCritChance": 8,
+          "extraCritDmg": 590
+        },
+        {
+          "extraCritChance": 8,
+          "extraCritDmg": 622
+        },
+        {
+          "extraCritChance": 8,
+          "extraCritDmg": 654
+        },
+        {
+          "extraCritChance": 8,
+          "extraCritDmg": 686
+        },
+        {
+          "extraCritChance": 9,
+          "extraCritDmg": 717
+        },
+        {
+          "extraCritChance": 9,
+          "extraCritDmg": 749
+        },
+        {
+          "extraCritChance": 9,
+          "extraCritDmg": 781
+        },
+        {
+          "extraCritChance": 10,
+          "extraCritDmg": 813
+        },
+        {
+          "extraCritChance": 10,
+          "extraCritDmg": 845
+        },
+        {
+          "extraCritChance": 10,
+          "extraCritDmg": 877
+        }
+      ],
+      "description": "Ûthar gains +10% Crit Chance and deals +877 Crit Damage each time a friendly character dies or kills an enemy unit. Once Ûthar crits, this bonus resets.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_BladeOfTheAncestors.webp",
+        "width": 255,
+        "height": 190,
+        "sha256": "9d62c5d6cf3d7e06936c05bead2bafca540f5b3cad650fda0a55ca80b584e0b2",
+        "sprite_name": "ui_icon_item_R_Crit_BladeOfTheAncestors",
+        "guid": "8b98c68cc3f34d344ad33c5e4d0e6055",
+        "source_bundle": "items/r_crit_bladeoftheancestors",
+        "source_sha256": "7079dc9943e6f6a64c29962038d45e29e60f2801a55de634fc5c2baa131bf599",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_BladeOfTheAncestors"
+    },
+    {
+      "id": "R_Crit_DawnBlade",
+      "ability_id": "DawnBlade",
+      "name": "Dawn Blade",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "tauFarsight"
+      ],
+      "rank": 10,
+      "template": "Commander Farsight's melee attacks deal +{[extraDmg]} Damage for each time another friendly Character within 2 hexes has performed a ranged attack this turn. When Commander Farsight kills an enemy unit with a melee attack, he repairs himself for {[hpToHeal]} Health.",
+      "ranks": [
+        {
+          "extraDmg": 390,
+          "hpToHeal": 4895
+        },
+        {
+          "extraDmg": 411,
+          "hpToHeal": 5159
+        },
+        {
+          "extraDmg": 432,
+          "hpToHeal": 5423
+        },
+        {
+          "extraDmg": 453,
+          "hpToHeal": 5688
+        },
+        {
+          "extraDmg": 474,
+          "hpToHeal": 5952
+        },
+        {
+          "extraDmg": 495,
+          "hpToHeal": 6216
+        },
+        {
+          "extraDmg": 516,
+          "hpToHeal": 6480
+        },
+        {
+          "extraDmg": 537,
+          "hpToHeal": 6745
+        },
+        {
+          "extraDmg": 558,
+          "hpToHeal": 7009
+        },
+        {
+          "extraDmg": 579,
+          "hpToHeal": 7273
+        }
+      ],
+      "description": "Commander Farsight's melee attacks deal +579 Damage for each time another friendly Character within 2 hexes has performed a ranged attack this turn. When Commander Farsight kills an enemy unit with a melee attack, he repairs himself for 7273 Health.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_DawnBlade.webp",
+        "width": 226,
+        "height": 177,
+        "sha256": "8f91e3a8e30f59bfd946f04eedb9b00afb3c0229429c851bef8c22d651a4c116",
+        "sprite_name": "ui_icon_item_R_Crit_DawnBlade",
+        "guid": "6014ba246d4657d44afca99b81af7f38",
+        "source_bundle": "items/r_crit_dawnblade",
+        "source_sha256": "db18cf11031609631f0b2a3e6569cf2cbadb521bec759582e7d84a46ab13757a",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_DawnBlade"
+    },
+    {
+      "id": "R_Crit_Dw02AdvancedBurstCannon",
+      "ability_id": "Dw02AdvancedBurstCannon",
+      "name": "DW-02 Advanced Burst Cannon",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "tauCrisis"
+      ],
+      "rank": 10,
+      "template": "Each time Re'vas attacks, she gains +{[extraPierceRatio]}% pierce ratio. After attacking {[nrOfAttacks]} times, this bonus is reset, and Re'vas can use her active ability again.",
+      "ranks": [
+        {
+          "extraPierceRatio": 3,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraPierceRatio": 4,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraPierceRatio": 4,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraPierceRatio": 4,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraPierceRatio": 4,
+          "nrOfAttacks": 8
+        },
+        {
+          "extraPierceRatio": 5,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraPierceRatio": 5,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraPierceRatio": 5,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraPierceRatio": 5,
+          "nrOfAttacks": 7
+        },
+        {
+          "extraPierceRatio": 6,
+          "nrOfAttacks": 7
+        }
+      ],
+      "description": "Each time Re'vas attacks, she gains +6% pierce ratio. After attacking 7 times, this bonus is reset, and Re'vas can use her active ability again.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Dw02AdvancedBurstCannon.webp",
+        "width": 226,
+        "height": 184,
+        "sha256": "785c30c96d60fd927f1d136ef190b0425fd068d046cb66c34f6913da89b45a41",
+        "sprite_name": "ui_icon_item_R_Crit_DW02AdvancedBurstCannon",
+        "guid": "330c00db6456360479bb2d1b77dd3df1",
+        "source_bundle": "items/r_crit_dw02advancedburstcannon",
+        "source_sha256": "22fbb68d64133d58439eaa6e7725f5838cbcb85dfb167942d13ba2571eb42a6b",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Dw02AdvancedBurstCannon"
+    },
+    {
+      "id": "R_Crit_Fidelity",
+      "ability_id": "Fidelity",
+      "name": "Fidelity",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "tauAunShi"
+      ],
+      "rank": 10,
+      "template": "Grants Aun'shi an additional effect based on his current bonus from Serene Unifier:\nSense of Stone: Regenerates {[hp]} Health after attacking\nZephyr's Grace: Has +{[extraCritChance]}% Crit Chance\nStorm of Fire: Attacks score +{[extraHits]} hits",
+      "ranks": [
+        {
+          "hp": 3915,
+          "extraCritChance": 15,
+          "extraHits": 1
+        },
+        {
+          "hp": 4126,
+          "extraCritChance": 17,
+          "extraHits": 1
+        },
+        {
+          "hp": 4338,
+          "extraCritChance": 19,
+          "extraHits": 1
+        },
+        {
+          "hp": 4549,
+          "extraCritChance": 21,
+          "extraHits": 2
+        },
+        {
+          "hp": 4760,
+          "extraCritChance": 23,
+          "extraHits": 2
+        },
+        {
+          "hp": 4972,
+          "extraCritChance": 25,
+          "extraHits": 2
+        },
+        {
+          "hp": 5183,
+          "extraCritChance": 27,
+          "extraHits": 2
+        },
+        {
+          "hp": 5394,
+          "extraCritChance": 29,
+          "extraHits": 3
+        },
+        {
+          "hp": 5606,
+          "extraCritChance": 31,
+          "extraHits": 3
+        },
+        {
+          "hp": 5817,
+          "extraCritChance": 33,
+          "extraHits": 3
+        }
+      ],
+      "description": "Grants Aun'shi an additional effect based on his current bonus from Serene Unifier:\nSense of Stone: Regenerates 5817 Health after attacking\nZephyr's Grace: Has +33% Crit Chance\nStorm of Fire: Attacks score +3 hits",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Fidelity.webp",
+        "width": 220,
+        "height": 150,
+        "sha256": "39e6d09198ef65414259d14a34bb8834507ce8cf267ed7add64186679e7295fb",
+        "sprite_name": "ui_icon_item_R_Crit_Fidelity",
+        "guid": "1fb40a7f02de7ca47919d0e48432e51c",
+        "source_bundle": "items/r_crit_fidelity",
+        "source_sha256": "1b842a915e270a6e0f3758860afb4c7a75228748024304bd8a774f402f93118b",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Fidelity"
+    },
+    {
+      "id": "R_Crit_HeadwoppasKillchoppa",
+      "ability_id": "HeadwoppasKillchoppa",
+      "name": "Headwoppa's Killchoppa",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "orksWarboss"
+      ],
+      "rank": 10,
+      "template": "Boss Gulgortz and all friendly Ork Boyz deal +{[extraDmg]} Damage with melee attacks for each enemy unit that Boss Gulgortz has defeated in this battle.",
+      "ranks": [
+        {
+          "extraDmg": 195
+        },
+        {
+          "extraDmg": 206
+        },
+        {
+          "extraDmg": 216
+        },
+        {
+          "extraDmg": 227
+        },
+        {
+          "extraDmg": 237
+        },
+        {
+          "extraDmg": 248
+        },
+        {
+          "extraDmg": 258
+        },
+        {
+          "extraDmg": 269
+        },
+        {
+          "extraDmg": 279
+        },
+        {
+          "extraDmg": 290
+        }
+      ],
+      "description": "Boss Gulgortz and all friendly Ork Boyz deal +290 Damage with melee attacks for each enemy unit that Boss Gulgortz has defeated in this battle.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_HeadwoppasKillchoppa.webp",
+        "width": 225,
+        "height": 188,
+        "sha256": "60ff196132eb8fa1ff9b918514bf9d638d7896d023259acb6ba7ec61ce44769d",
+        "sprite_name": "ui_icon_item_R_Crit_HeadwoppasKillchoppa",
+        "guid": "58d91fb1b3e4944c1b66552ebe704c68",
+        "source_bundle": "items/r_crit_headwoppaskillchoppa",
+        "source_sha256": "0517e6f86f80c51c6d8ee99f19dd76e23a909b78e3f86b72096a05d2c31d41c2",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_HeadwoppasKillchoppa"
+    },
+    {
+      "id": "R_Crit_Helspear",
+      "ability_id": "Helspear",
+      "name": "Helspear",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "blackHaarken"
+      ],
+      "rank": 10,
+      "template": "Herald of the Apocalypse always adds Despoiled Ground to the hexes of affected enemies, and the next attack against affected enemies also ignores {[armorIgnored]} Armour. After Herald of the Apocalypse has been used and Haarken defeats {[nrOfUnits]} enemy units, he can use the ability again.",
+      "ranks": [
+        {
+          "armorIgnored": 685,
+          "nrOfUnits": 8
+        },
+        {
+          "armorIgnored": 722,
+          "nrOfUnits": 8
+        },
+        {
+          "armorIgnored": 759,
+          "nrOfUnits": 7
+        },
+        {
+          "armorIgnored": 796,
+          "nrOfUnits": 7
+        },
+        {
+          "armorIgnored": 833,
+          "nrOfUnits": 6
+        },
+        {
+          "armorIgnored": 870,
+          "nrOfUnits": 6
+        },
+        {
+          "armorIgnored": 907,
+          "nrOfUnits": 5
+        },
+        {
+          "armorIgnored": 944,
+          "nrOfUnits": 5
+        },
+        {
+          "armorIgnored": 981,
+          "nrOfUnits": 4
+        },
+        {
+          "armorIgnored": 1018,
+          "nrOfUnits": 4
+        }
+      ],
+      "description": "Herald of the Apocalypse always adds Despoiled Ground to the hexes of affected enemies, and the next attack against affected enemies also ignores 1018 Armour. After Herald of the Apocalypse has been used and Haarken defeats 4 enemy units, he can use the ability again.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Helspear.webp",
+        "width": 225,
+        "height": 151,
+        "sha256": "3683690e68e9192b92a2e3a020291a89ddab39797aeddca1c7d84faa78c7955f",
+        "sprite_name": "ui_icon_item_R_Crit_Helspear",
+        "guid": "abb88431c052e1b44ab42edba168288a",
+        "source_bundle": "items/r_crit_helspear",
+        "source_sha256": "2910fbf19c32c66653c1c73e3bdcb918a64646444108d54cd02fbfbe8b2ac9f6",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Helspear"
+    },
+    {
+      "id": "R_Crit_Lakrimae",
+      "ability_id": "Lakrimae",
+      "name": "Lakrimae",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "deathTyphus"
+      ],
+      "rank": 10,
+      "template": "Typhus' normal melee attacks add Contamination to the target's hex. During his turn, when a non-mechanical enemy unit within Typhus' Contagion aura is killed, he summons a Poxwalker in the hex of the defeated unit, as long as there are less than 3 friendly Poxwalkers on the battlefield. The Poxwalkers have {[summonHp]} Health and {[summonDmg]} Damage.",
+      "ranks": [
+        {
+          "summonHp": 2940,
+          "summonDmg": 3425
+        },
+        {
+          "summonHp": 3099,
+          "summonDmg": 3610
+        },
+        {
+          "summonHp": 3257,
+          "summonDmg": 3795
+        },
+        {
+          "summonHp": 3416,
+          "summonDmg": 3980
+        },
+        {
+          "summonHp": 3575,
+          "summonDmg": 4165
+        },
+        {
+          "summonHp": 3733,
+          "summonDmg": 4349
+        },
+        {
+          "summonHp": 3892,
+          "summonDmg": 4534
+        },
+        {
+          "summonHp": 4051,
+          "summonDmg": 4719
+        },
+        {
+          "summonHp": 4210,
+          "summonDmg": 4904
+        },
+        {
+          "summonHp": 4368,
+          "summonDmg": 5089
+        }
+      ],
+      "description": "Typhus' normal melee attacks add Contamination to the target's hex. During his turn, when a non-mechanical enemy unit within Typhus' Contagion aura is killed, he summons a Poxwalker in the hex of the defeated unit, as long as there are less than 3 friendly Poxwalkers on the battlefield. The Poxwalkers have 4368 Health and 5089 Damage.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Lakrimae.webp",
+        "width": 212,
+        "height": 188,
+        "sha256": "c18a3d9f7ba5575774558b5dc916ba195cbbfa9868a23dffab7b5663ca76a4d6",
+        "sprite_name": "ui_icon_item_R_Crit_Lakrimae",
+        "guid": "abbcd9878901dce4eb92903457c2ec21",
+        "source_bundle": "items/r_crit_lakrimae",
+        "source_sha256": "59fa8485b1424571ba3972f35b561135dc9a421d3b075ae8077108a3ceccb7fd",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Lakrimae"
+    },
+    {
+      "id": "R_Crit_Maugetar",
+      "ability_id": "Maugetar",
+      "name": "Maugetar",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "eldarMauganRa"
+      ],
+      "rank": 10,
+      "template": "During his turn, if Maugan Ra has not moved, he can move after attacking and his attacks that contain a Crit deal an additional 1x {[minDmg]}-{[maxDmg]} Direct Damage. When Overwatching, Crits deal this additional hit if he has not moved in his last turn.",
+      "ranks": [
+        {
+          "minDmg": 1765,
+          "maxDmg": 2350
+        },
+        {
+          "minDmg": 1860,
+          "maxDmg": 2477
+        },
+        {
+          "minDmg": 1956,
+          "maxDmg": 2604
+        },
+        {
+          "minDmg": 2051,
+          "maxDmg": 2731
+        },
+        {
+          "minDmg": 2146,
+          "maxDmg": 2857
+        },
+        {
+          "minDmg": 2241,
+          "maxDmg": 2984
+        },
+        {
+          "minDmg": 2337,
+          "maxDmg": 3111
+        },
+        {
+          "minDmg": 2432,
+          "maxDmg": 3238
+        },
+        {
+          "minDmg": 2527,
+          "maxDmg": 3365
+        },
+        {
+          "minDmg": 2622,
+          "maxDmg": 3492
+        }
+      ],
+      "description": "During his turn, if Maugan Ra has not moved, he can move after attacking and his attacks that contain a Crit deal an additional 1x 2622-3492 Direct Damage. When Overwatching, Crits deal this additional hit if he has not moved in his last turn.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Maugetar.webp",
+        "width": 226,
+        "height": 150,
+        "sha256": "717bf9cd8d1998083c1826d2c36f795c7abb486d015f6a07ee184528eebfe653",
+        "sprite_name": "ui_icon_item_R_Crit_Maugetar",
+        "guid": "f73ed625fa0959d43858a3bcef6f106e",
+        "source_bundle": "items/r_crit_maugetar",
+        "source_sha256": "31c66ac0cabf321dcd4ce8bbf0bd23143eb92f02dd5142657ba80023c3725f17",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Maugetar"
+    },
+    {
+      "id": "R_Crit_MawClawsOfThyrax",
+      "ability_id": "MawClawsOfThyrax",
+      "name": "Maw-Claws of Thyrax",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "tyranTyrantGuard",
+        "tyranWingedPrime",
+        "tyranParasite",
+        "genesPatriarch"
+      ],
+      "rank": 10,
+      "template": "The relic bearer deals +{[extraCritDmg]} Crit Damage for each adjacent Summon.",
+      "ranks": [
+        {
+          "extraCritDmg": 295
+        },
+        {
+          "extraCritDmg": 311
+        },
+        {
+          "extraCritDmg": 327
+        },
+        {
+          "extraCritDmg": 343
+        },
+        {
+          "extraCritDmg": 359
+        },
+        {
+          "extraCritDmg": 375
+        },
+        {
+          "extraCritDmg": 391
+        },
+        {
+          "extraCritDmg": 406
+        },
+        {
+          "extraCritDmg": 422
+        },
+        {
+          "extraCritDmg": 438
+        }
+      ],
+      "description": "The relic bearer deals +438 Crit Damage for each adjacent Summon.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_MawClawsOfThyrax.webp",
+        "width": 215,
+        "height": 254,
+        "sha256": "0aa65321806f1d27bb684e86844e4a0ecd4119bb93c337a3c4766e142d760573",
+        "sprite_name": "ui_icon_item_R_Crit_MawClawsOfThyrax",
+        "guid": "409730f8281a74f23b9b0d847009858f",
+        "source_bundle": "items/r_crit_mawclawsofthyrax",
+        "source_sha256": "5ec7317426cdc73e580faa1fdd8160be0efa05b28214d35ca8fabdac77c7ef1c",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_MawClawsOfThyrax"
+    },
+    {
+      "id": "R_Crit_MonsterSlayerOfCaliban",
+      "ability_id": "MonsterSlayerOfCaliban",
+      "name": "Monster Slayer of Caliban",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "darkaCompanion"
+      ],
+      "rank": 10,
+      "template": "Forcas deals +{[extraDmg]} Damage to Big Targets and Vehicles. He also has an added {[blockChance]}% chance to Block {[blockDmg]} Damage.",
+      "ranks": [
+        {
+          "extraDmg": 490,
+          "blockChance": 10,
+          "blockDmg": 1470
+        },
+        {
+          "extraDmg": 516,
+          "blockChance": 10,
+          "blockDmg": 1549
+        },
+        {
+          "extraDmg": 543,
+          "blockChance": 10,
+          "blockDmg": 1629
+        },
+        {
+          "extraDmg": 569,
+          "blockChance": 10,
+          "blockDmg": 1708
+        },
+        {
+          "extraDmg": 596,
+          "blockChance": 10,
+          "blockDmg": 1787
+        },
+        {
+          "extraDmg": 622,
+          "blockChance": 10,
+          "blockDmg": 1867
+        },
+        {
+          "extraDmg": 649,
+          "blockChance": 10,
+          "blockDmg": 1946
+        },
+        {
+          "extraDmg": 675,
+          "blockChance": 10,
+          "blockDmg": 2025
+        },
+        {
+          "extraDmg": 702,
+          "blockChance": 10,
+          "blockDmg": 2105
+        },
+        {
+          "extraDmg": 728,
+          "blockChance": 10,
+          "blockDmg": 2184
+        }
+      ],
+      "description": "Forcas deals +728 Damage to Big Targets and Vehicles. He also has an added 10% chance to Block 2184 Damage.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_MonsterSlayerOfCaliban.webp",
+        "width": 226,
+        "height": 160,
+        "sha256": "ea83423adef04c5a22f00c3e08b61bb31a027b45646a1ceed94fe044d5361255",
+        "sprite_name": "ui_icon_item_R_Crit_MonsterSlayerOfCaliban",
+        "guid": "f9ae7bd0fb99ab3418fec6c77ea40ddd",
+        "source_bundle": "items/r_crit_monsterslayerofcaliban",
+        "source_sha256": "fbce7f885a3f6ee5a7f9d8697e31d77283de465e76372741ed9398baa736ed82",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_MonsterSlayerOfCaliban"
+    },
+    {
+      "id": "R_Crit_ParagonSpear",
+      "ability_id": "ParagonSpear",
+      "name": "Paragon Spear",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "custoKyrus"
+      ],
+      "rank": 10,
+      "template": "All of Tyrith's hits that are Crits deal the maximum possible Damage. At the beginning of Tyrith's turn, she attacks a random enemy within range 2 and deals 2x {[minDmg]}-{[maxDmg]} Bolter Damage to it. If there is an enemy adjacent to her, this range is reduced to 1.",
+      "ranks": [
+        {
+          "minDmg": 2155,
+          "maxDmg": 2940
+        },
+        {
+          "minDmg": 2271,
+          "maxDmg": 3099
+        },
+        {
+          "minDmg": 2388,
+          "maxDmg": 3257
+        },
+        {
+          "minDmg": 2504,
+          "maxDmg": 3416
+        },
+        {
+          "minDmg": 2620,
+          "maxDmg": 3575
+        },
+        {
+          "minDmg": 2737,
+          "maxDmg": 3733
+        },
+        {
+          "minDmg": 2853,
+          "maxDmg": 3892
+        },
+        {
+          "minDmg": 2969,
+          "maxDmg": 4051
+        },
+        {
+          "minDmg": 3086,
+          "maxDmg": 4210
+        },
+        {
+          "minDmg": 3202,
+          "maxDmg": 4368
+        }
+      ],
+      "description": "All of Tyrith's hits that are Crits deal the maximum possible Damage. At the beginning of Tyrith's turn, she attacks a random enemy within range 2 and deals 2x 3202-4368 Bolter Damage to it. If there is an enemy adjacent to her, this range is reduced to 1.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_ParagonSpear.webp",
+        "width": 226,
+        "height": 170,
+        "sha256": "610d7a718b0155e99ca68710025d0c0f688a5348429de82448be62daff0c68ab",
+        "sprite_name": "ui_icon_item_R_Crit_ParagonSpear",
+        "guid": "31d670640b4b8954ba4d115716cf950f",
+        "source_bundle": "items/r_crit_paragonspear",
+        "source_sha256": "e949f177cbb1ad786c5c1d8ff15d44d505155fca22e173f4666f4fae465e6b0c",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_ParagonSpear"
+    },
+    {
+      "id": "R_Crit_RelicBoltPistol",
+      "ability_id": "RelicBoltPistol",
+      "name": "Relic Bolt Pistol",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "ultraInceptorSgt",
+        "ultraTitus",
+        "templSwordBrother",
+        "darkaHellblaster",
+        "spaceHound",
+        "astarCyrus",
+        "darkaSternguard"
+      ],
+      "rank": 10,
+      "template": "The relic bearer gains +{[extraPierceRatio]}% pierce ratio with melee attacks and deals +{[extraCritDmg]} Crit Damage with ranged attacks. These bonuses are doubled against Chaos or Xenos enemies.",
+      "ranks": [
+        {
+          "extraPierceRatio": 5,
+          "extraCritDmg": 590
+        },
+        {
+          "extraPierceRatio": 6,
+          "extraCritDmg": 622
+        },
+        {
+          "extraPierceRatio": 6,
+          "extraCritDmg": 654
+        },
+        {
+          "extraPierceRatio": 7,
+          "extraCritDmg": 686
+        },
+        {
+          "extraPierceRatio": 7,
+          "extraCritDmg": 717
+        },
+        {
+          "extraPierceRatio": 8,
+          "extraCritDmg": 749
+        },
+        {
+          "extraPierceRatio": 8,
+          "extraCritDmg": 781
+        },
+        {
+          "extraPierceRatio": 9,
+          "extraCritDmg": 813
+        },
+        {
+          "extraPierceRatio": 9,
+          "extraCritDmg": 845
+        },
+        {
+          "extraPierceRatio": 10,
+          "extraCritDmg": 877
+        }
+      ],
+      "description": "The relic bearer gains +10% pierce ratio with melee attacks and deals +877 Crit Damage with ranged attacks. These bonuses are doubled against Chaos or Xenos enemies.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_RelicBoltPistol.webp",
+        "width": 224,
+        "height": 256,
+        "sha256": "dde1a4f58017423d6044d467086f77edde6b7740eabe4ee98a6cb5275bec182d",
+        "sprite_name": "ui_icon_item_R_Crit_RelicBoltPistol",
+        "guid": "276d6be89b2d3406a8633e4960a37dc6",
+        "source_bundle": "items/r_crit_relicboltpistol",
+        "source_sha256": "fc8488bd8cda912e7f7f45a925fe009d01a0d7960cc579df20199f75aedfd3ea",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_RelicBoltPistol"
+    },
+    {
+      "id": "R_Crit_RelicPowerFist",
+      "ability_id": "RelicPowerFist",
+      "name": "Relic Power Fist",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "templAggressor",
+        "bloodIntercessor",
+        "darkaTerminator"
+      ],
+      "rank": 10,
+      "template": "The relic bearer's attacks that deal Power Damage have a {[chance]}% chance to Suppress and a {[chance_2]}% chance to Stun enemies targeted by them. These chances are doubled if the attack is an active ability.",
+      "ranks": [
+        {
+          "chance": 33,
+          "chance_2": 33
+        },
+        {
+          "chance": 34,
+          "chance_2": 34
+        },
+        {
+          "chance": 36,
+          "chance_2": 36
+        },
+        {
+          "chance": 38,
+          "chance_2": 38
+        },
+        {
+          "chance": 40,
+          "chance_2": 40
+        },
+        {
+          "chance": 42,
+          "chance_2": 42
+        },
+        {
+          "chance": 44,
+          "chance_2": 44
+        },
+        {
+          "chance": 46,
+          "chance_2": 46
+        },
+        {
+          "chance": 48,
+          "chance_2": 48
+        },
+        {
+          "chance": 50,
+          "chance_2": 50
+        }
+      ],
+      "description": "The relic bearer's attacks that deal Power Damage have a 50% chance to Suppress and a 50% chance to Stun enemies targeted by them. These chances are doubled if the attack is an active ability.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_RelicPowerFist.webp",
+        "width": 188,
+        "height": 207,
+        "sha256": "94fceaf1a07e0e5f06af3b79393b0fbccbfac598053a7eccf590fe464d1d305f",
+        "sprite_name": "ui_icon_item_R_Crit_RelicPowerFist",
+        "guid": "b00851266a21f44f2a31193b1b6494e1",
+        "source_bundle": "items/r_crit_relicpowerfist",
+        "source_sha256": "969d8296bab5f07870420c5526317cac730ae6290d50924e174d40196611ffe3",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_RelicPowerFist"
+    },
+    {
+      "id": "R_Crit_SabreOfSacrifice",
+      "ability_id": "SabreOfSacrifice",
+      "name": "Sabre of Sacrifice",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "astraDreir"
+      ],
+      "rank": 10,
+      "template": "When Dreir or Death Riders adjacent to Dreir are charging, their attacks Suppress their targets for 1 round. After charging and until the start of their next turn, they additionally have +{[extraArmor]} Armour for each friendly unit that has been defeated this battle.",
+      "ranks": [
+        {
+          "extraArmor": 685
+        },
+        {
+          "extraArmor": 722
+        },
+        {
+          "extraArmor": 759
+        },
+        {
+          "extraArmor": 796
+        },
+        {
+          "extraArmor": 833
+        },
+        {
+          "extraArmor": 870
+        },
+        {
+          "extraArmor": 907
+        },
+        {
+          "extraArmor": 944
+        },
+        {
+          "extraArmor": 981
+        },
+        {
+          "extraArmor": 1018
+        }
+      ],
+      "description": "When Dreir or Death Riders adjacent to Dreir are charging, their attacks Suppress their targets for 1 round. After charging and until the start of their next turn, they additionally have +1018 Armour for each friendly unit that has been defeated this battle.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_SabreOfSacrifice.webp",
+        "width": 226,
+        "height": 153,
+        "sha256": "6e967bc2c9cf772e60aa3d232f38648f2d4a8583b3eaf14eccd8d369bae5d4e6",
+        "sprite_name": "ui_icon_item_R_Crit_SabreOfSacrifice",
+        "guid": "44943917c41f3f0428a94aaa7ff4faa4",
+        "source_bundle": "items/r_crit_sabreofsacrifice",
+        "source_sha256": "d22cd85cf62978beff293bd1efe30249e65199d9b021411793ca027660007811",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_SabreOfSacrifice"
+    },
+    {
+      "id": "R_Crit_TalonOfHorus",
+      "ability_id": "TalonOfHorus",
+      "name": "Talon of Horus",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "blackAbaddon"
+      ],
+      "rank": 10,
+      "template": "When Abaddon performs a normal melee attack, he also deals 3x {[minDmg]}-{[maxDmg]} Power Damage to all enemies adjacent to both the target of the attack and to Abaddon.",
+      "ranks": [
+        {
+          "minDmg": 1175,
+          "maxDmg": 1565
+        },
+        {
+          "minDmg": 1238,
+          "maxDmg": 1649
+        },
+        {
+          "minDmg": 1302,
+          "maxDmg": 1734
+        },
+        {
+          "minDmg": 1365,
+          "maxDmg": 1818
+        },
+        {
+          "minDmg": 1429,
+          "maxDmg": 1903
+        },
+        {
+          "minDmg": 1492,
+          "maxDmg": 1987
+        },
+        {
+          "minDmg": 1556,
+          "maxDmg": 2072
+        },
+        {
+          "minDmg": 1619,
+          "maxDmg": 2156
+        },
+        {
+          "minDmg": 1682,
+          "maxDmg": 2241
+        },
+        {
+          "minDmg": 1746,
+          "maxDmg": 2325
+        }
+      ],
+      "description": "When Abaddon performs a normal melee attack, he also deals 3x 1746-2325 Power Damage to all enemies adjacent to both the target of the attack and to Abaddon.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_TalonOfHorus.webp",
+        "width": 190,
+        "height": 223,
+        "sha256": "1cf2102f090990bfae390e6056fe72204f89d2a7d20e9630c2b3602bb1512f91",
+        "sprite_name": "ui_icon_item_R_Crit_TalonOfHorus",
+        "guid": "c79d2b88bf71c9b4fb0ad0e7b312656b",
+        "source_bundle": "items/r_crit_talonofhorus",
+        "source_sha256": "323c40d807374ff284d30f7564b1cd1e8a5f46991c6ef3319bbe34b29543c6b9",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_TalonOfHorus"
+    },
+    {
+      "id": "R_Crit_TheArdentBlade",
+      "ability_id": "TheArdentBlade",
+      "name": "The Ardent Blade",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "adeptCelestine"
+      ],
+      "rank": 10,
+      "template": "The first time each turn that Celestine defeats an enemy unit, she resurrects one of her Geminae Superia with {[hp]} Health in a free adjacent hex. If they cannot be resurrected, then one of them within 3 hexes takes an action instead.",
+      "ranks": [
+        {
+          "hp": 2350
+        },
+        {
+          "hp": 2477
+        },
+        {
+          "hp": 2604
+        },
+        {
+          "hp": 2731
+        },
+        {
+          "hp": 2857
+        },
+        {
+          "hp": 2984
+        },
+        {
+          "hp": 3111
+        },
+        {
+          "hp": 3238
+        },
+        {
+          "hp": 3365
+        },
+        {
+          "hp": 3492
+        }
+      ],
+      "description": "The first time each turn that Celestine defeats an enemy unit, she resurrects one of her Geminae Superia with 3492 Health in a free adjacent hex. If they cannot be resurrected, then one of them within 3 hexes takes an action instead.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_TheArdentBlade.webp",
+        "width": 181,
+        "height": 177,
+        "sha256": "f18a936dadceb082aec6c20ed9e237226bae9a353b21659b20419b08b0816471",
+        "sprite_name": "ui_icon_item_R_Crit_TheArdentBlade",
+        "guid": "1f7a1a64198004c75aab70c5dd2b63dd",
+        "source_bundle": "items/r_crit_theardentblade",
+        "source_sha256": "d5d54f72326b55a4a4a4a26fc24955687cfffebcb8e614ab926fd60a43205f54",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_TheArdentBlade"
+    },
+    {
+      "id": "R_Crit_Vitarus",
+      "ability_id": "Vitarus",
+      "name": "Vitarus",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "bloodMephiston"
+      ],
+      "rank": 10,
+      "template": "The hexes of each enemy hit by Mephiston's normal melee attack or by Fury of the Ancients are set on Fire. If these attacks hit enemies on hexes with Fire, they deal +{[extraDmg]} Damage and extinguish the Fire.",
+      "ranks": [
+        {
+          "extraDmg": 490
+        },
+        {
+          "extraDmg": 516
+        },
+        {
+          "extraDmg": 543
+        },
+        {
+          "extraDmg": 569
+        },
+        {
+          "extraDmg": 596
+        },
+        {
+          "extraDmg": 622
+        },
+        {
+          "extraDmg": 649
+        },
+        {
+          "extraDmg": 675
+        },
+        {
+          "extraDmg": 702
+        },
+        {
+          "extraDmg": 728
+        }
+      ],
+      "description": "The hexes of each enemy hit by Mephiston's normal melee attack or by Fury of the Ancients are set on Fire. If these attacks hit enemies on hexes with Fire, they deal +728 Damage and extinguish the Fire.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_Vitarus.webp",
+        "width": 206,
+        "height": 224,
+        "sha256": "7f262325be89ede4399e7acb8aedb5d3c51db2cfca44a2a85709dc10cd6d262d",
+        "sprite_name": "ui_icon_item_R_Crit_Vitarus",
+        "guid": "05354e3a626b3418a82a26a425fe3ce0",
+        "source_bundle": "items/r_crit_vitarus",
+        "source_sha256": "22bdc4c1a3364ae9bc17f4614e5c7a1e3ef5d4597a24f4c3360bde1416c164ec",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_Vitarus"
+    },
+    {
+      "id": "R_Crit_VolummsMasterArtifice",
+      "ability_id": "VolummsMasterArtifice",
+      "name": "Vôlumm's Master Artifice",
+      "rarity": "Mythic",
+      "unique": true,
+      "hero_ids": [
+        "votanIronmaster"
+      ],
+      "rank": 10,
+      "template": "After Vynn or friendly E-COGs have performed +{[nrOfRepairs]} repairs, Vynn heals for {[hpToHeal]} Health and can use his active ability again.",
+      "ranks": [
+        {
+          "nrOfRepairs": 8,
+          "hpToHeal": 5875
+        },
+        {
+          "nrOfRepairs": 8,
+          "hpToHeal": 6192
+        },
+        {
+          "nrOfRepairs": 8,
+          "hpToHeal": 6509
+        },
+        {
+          "nrOfRepairs": 8,
+          "hpToHeal": 6826
+        },
+        {
+          "nrOfRepairs": 8,
+          "hpToHeal": 7143
+        },
+        {
+          "nrOfRepairs": 7,
+          "hpToHeal": 7461
+        },
+        {
+          "nrOfRepairs": 7,
+          "hpToHeal": 7778
+        },
+        {
+          "nrOfRepairs": 7,
+          "hpToHeal": 8095
+        },
+        {
+          "nrOfRepairs": 7,
+          "hpToHeal": 8412
+        },
+        {
+          "nrOfRepairs": 7,
+          "hpToHeal": 8729
+        }
+      ],
+      "description": "After Vynn or friendly E-COGs have performed +7 repairs, Vynn heals for 8729 Health and can use his active ability again.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Crit_VolummsMasterArtifice.webp",
+        "width": 224,
+        "height": 210,
+        "sha256": "cb3d982b00b3719d5a65ccb447a114dbf77a15cfcfbc4d07becef19edd651d61",
+        "sprite_name": "ui_icon_item_R_Crit_VolummsMasterArtifice",
+        "guid": "0c235b65058612e4a81647ebe73682f5",
+        "source_bundle": "items/r_crit_volummsmasterartifice",
+        "source_sha256": "c648e10282ffa2657374a53da0579c6aeab317886d8d2e9711e3c4988d8ca50e",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Crit_VolummsMasterArtifice"
+    },
+    {
+      "id": "R_Defensive_RelicOfLostCadia",
+      "ability_id": "RelicOfLostCadia",
+      "name": "Relic of Lost Cadia",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "astraPrimarisPsy",
+        "astraBullgryn",
+        "astraOrdnance"
+      ],
+      "rank": 10,
+      "template": "Friendly surrounding Imperial Summons have Final Vengeance. When the relic bearer is defeated, summons a Cadian Guardsman in its hex with {[summonHp]} Health, {[summonDmg]} Damage and {[summonArmor]} Armour.",
+      "ranks": [
+        {
+          "summonHp": 3915,
+          "summonDmg": 2350,
+          "summonArmor": 785
+        },
+        {
+          "summonHp": 4126,
+          "summonDmg": 2477,
+          "summonArmor": 827
+        },
+        {
+          "summonHp": 4338,
+          "summonDmg": 2604,
+          "summonArmor": 870
+        },
+        {
+          "summonHp": 4549,
+          "summonDmg": 2731,
+          "summonArmor": 912
+        },
+        {
+          "summonHp": 4760,
+          "summonDmg": 2857,
+          "summonArmor": 954
+        },
+        {
+          "summonHp": 4972,
+          "summonDmg": 2984,
+          "summonArmor": 997
+        },
+        {
+          "summonHp": 5183,
+          "summonDmg": 3111,
+          "summonArmor": 1039
+        },
+        {
+          "summonHp": 5394,
+          "summonDmg": 3238,
+          "summonArmor": 1082
+        },
+        {
+          "summonHp": 5606,
+          "summonDmg": 3365,
+          "summonArmor": 1124
+        },
+        {
+          "summonHp": 5817,
+          "summonDmg": 3492,
+          "summonArmor": 1166
+        }
+      ],
+      "description": "Friendly surrounding Imperial Summons have Final Vengeance. When the relic bearer is defeated, summons a Cadian Guardsman in its hex with 5817 Health, 3492 Damage and 1166 Armour.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Defensive_RelicOfLostCadia.webp",
+        "width": 207,
+        "height": 189,
+        "sha256": "d315113cd2f3cd6752b3f6bb12c986d000b6b52596cd2825d4dfae492fbae0ae",
+        "sprite_name": "ui_icon_item_R_Defensive_RelicOfLostCadia",
+        "guid": "646eb23c0847d25489b921cbc4023ac2",
+        "source_bundle": "items/r_defensive_relicoflostcadia",
+        "source_sha256": "5af17095ddd0484d2077c36c2450a3a59dbe040e5e11788dc45ddb1b25a6a6dd",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Defensive_RelicOfLostCadia"
+    },
+    {
+      "id": "R_Defensive_SupaCyborkBody",
+      "ability_id": "SupaCyborkBody",
+      "name": "Supa-Cybork Body",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "orksRuntherd",
+        "orksBigMek",
+        "orksNob"
+      ],
+      "rank": 10,
+      "template": "The relic bearer can be healed as well as repaired and additionally takes -{[critDmgReduction]} Crit Damage for each adjacent enemy unit.",
+      "ranks": [
+        {
+          "critDmgReduction": 390
+        },
+        {
+          "critDmgReduction": 411
+        },
+        {
+          "critDmgReduction": 432
+        },
+        {
+          "critDmgReduction": 453
+        },
+        {
+          "critDmgReduction": 474
+        },
+        {
+          "critDmgReduction": 495
+        },
+        {
+          "critDmgReduction": 516
+        },
+        {
+          "critDmgReduction": 537
+        },
+        {
+          "critDmgReduction": 558
+        },
+        {
+          "critDmgReduction": 579
+        }
+      ],
+      "description": "The relic bearer can be healed as well as repaired and additionally takes -579 Crit Damage for each adjacent enemy unit.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Defensive_SupaCyborkBody.webp",
+        "width": 226,
+        "height": 256,
+        "sha256": "fdd40cae400f79ab17a8daa4e8861e13ea3498f5b4a7c0c4a3caa2d925c49f03",
+        "sprite_name": "ui_icon_item_R_Defensive_SupaCyborkBody",
+        "guid": "48f98f8f7174141f98487c7c897abb80",
+        "source_bundle": "items/r_defensive_supacyborkbody",
+        "source_sha256": "d4867bf3ab894514e6ee15b0faca53de3be4b93e33cc6d8f733756f86a11a507",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Defensive_SupaCyborkBody"
+    },
+    {
+      "id": "R_Defensive_Thrydderghyre",
+      "ability_id": "Thrydderghyre",
+      "name": "Thrydderghyre",
+      "rarity": "Mythic",
+      "unique": false,
+      "hero_ids": [
+        "thousTzaangor"
+      ],
+      "rank": 10,
+      "template": "The first time Yazaghor loses Health and the first time he uses Sorcerous Facade, he summons a Copy of himself in a free adjacent hex with {[statsPct]}% of his own Health, Damage and Armour. The copies cannot use Sorcerous Facade or Thrydderghyre, but have Twisted Mirage as additional passive ability.",
+      "ranks": [
+        {
+          "statsPct": 50
+        },
+        {
+          "statsPct": 51
+        },
+        {
+          "statsPct": 52
+        },
+        {
+          "statsPct": 54
+        },
+        {
+          "statsPct": 56
+        },
+        {
+          "statsPct": 58
+        },
+        {
+          "statsPct": 60
+        },
+        {
+          "statsPct": 62
+        },
+        {
+          "statsPct": 64
+        },
+        {
+          "statsPct": 66
+        }
+      ],
+      "description": "The first time Yazaghor loses Health and the first time he uses Sorcerous Facade, he summons a Copy of himself in a free adjacent hex with 66% of his own Health, Damage and Armour. The copies cannot use Sorcerous Facade or Thrydderghyre, but have Twisted Mirage as additional passive ability.",
+      "icon": {
+        "src": "/images/hero-profile/relics/R_Defensive_Thrydderghyre.webp",
+        "width": 218,
+        "height": 198,
+        "sha256": "ae10f7588016888837de5bc78ed388d44694f6eca4dad12f225db511163f1286",
+        "sprite_name": "ui_icon_item_R_Defensive_Thrydderghyre",
+        "guid": "cc49f9a3eac0e9f4d9178ace035b7a93",
+        "source_bundle": "items/r_defensive_thrydderghyre",
+        "source_sha256": "ae76e5ca1d1adae9e29abfdab7b83eeab40d17f32182716582d49b883cb9daa9",
+        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+      },
+      "source_pointer": "/clientGameConfig/items/R_Defensive_Thrydderghyre"
+    }
+  ]
+}

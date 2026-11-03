@@ -27,6 +27,7 @@ const guildRaids = discoveryGraphics.filter(
   (g) => g.category === "raid" && g.href !== "/guild-raid/archive",
 );
 const guildWars = discoveryGraphics.filter((g) => g.category === "guild-war");
+const heroGuides = discoveryGraphics.filter((g) => g.category === "heroes");
 const legendaryGuides = discoveryGraphics.filter((g) => g.category === "legendary");
 // Keep machine-specific guides in discovery while showing only the overview here.
 const gameEvents = discoveryGraphics.filter(
@@ -54,30 +55,6 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
 <section class="content-section">
   <header class="content-section-heading">
-    <a href="/incursion-mow">
-      <h2>Incursion MoW Guide</h2>
-      <p class="incursion-subtitle">Choose your Machine of War on Nov 2</p>
-    </a>
-  </header>
-
-  <a href="/incursion-mow" class="image-link">
-    <img
-      src="/images/web/incursion-mow.webp"
-      alt="Incursion and Machine of War Infographic"
-      class="infographic"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/incursion-mow" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
     <a href="/guild-raid/s113/">
       <h2>Guild Raid Season 113</h2>
       <p class="guild-raid-subtitle">Get ready for M3 Magnus starting Nov 4</p>
@@ -95,6 +72,32 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
 
   <p class="caption">
     <a href="/guild-raid/s113/" class="caption-link">
+      LEARN MORE
+    </a>
+  </p>
+</section>
+
+<section class="content-section">
+  <header class="content-section-heading">
+    <a href="/heroes/top-10/">
+      <h2>Top 10 Hero Guide</h2>
+      <p class="top-10-subtitle">Current rankings based on performance data</p>
+    </a>
+  </header>
+
+  <a href="/heroes/top-10/" class="image-link">
+    <img
+      src="/images/web/top-10.webp"
+      alt="Top 10 Tacticus Heroes infographic"
+      class="infographic"
+      width="700"
+      height="393"
+      loading="lazy"
+    />
+  </a>
+
+  <p class="caption">
+    <a href="/heroes/top-10/" class="caption-link">
       LEARN MORE
     </a>
   </p>
@@ -291,6 +294,32 @@ This entire block is commented out.
     </div>
   </section>
 
+  <section class="hero-guides-section">
+    <h2>Hero Guides</h2>
+
+    <div class="card-grid">
+      {heroGuides.map((graphic) => (
+        <a class="card" href={graphic.href}>
+          <div class="card-image-wrap">
+            <img
+              src={graphic.thumbnail}
+              alt={`${graphic.title} preview`}
+              class="card-image"
+              loading="lazy"
+              width="600"
+              height="337"
+            />
+          </div>
+
+          <div class="card-title-row">
+            <h3>{graphic.title}</h3>
+          </div>
+          <p>{graphic.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section>
     <h2>Legendary Guides</h2>
 
@@ -469,6 +498,10 @@ This entire block is commented out.
     margin-bottom: 0;
   }
 
+  .hero-guides-section .card p {
+    color: #f5f5f5;
+  }
+
   /* Mobile refinements */
   @media (max-width: 700px) {
     main {
@@ -577,7 +610,7 @@ This entire block is commented out.
 
 .content-section-heading .guild-wars-subtitle,
 .content-section-heading .guild-raid-subtitle,
-.content-section-heading .incursion-subtitle,
+.content-section-heading .top-10-subtitle,
 .content-section-heading .fabius-subtitle {
   color: #ffffff;
 }

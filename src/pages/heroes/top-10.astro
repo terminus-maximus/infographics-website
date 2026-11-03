@@ -1,0 +1,43 @@
+---
+import HeroLayout from '../../layouts/HeroLayout.astro';
+import FeaturedInfographic from '../../components/FeaturedInfographic.astro';
+import Portrait from '../../components/heroes/Portrait.astro';
+import ModeRatings from '../../components/heroes/ModeRatings.astro';
+import RatingGauge from '../../components/heroes/RatingGauge.astro';
+import { publication, publicationGraphic, monthLabel, readableDate, heroHref, heroById } from '../../lib/heroes.mjs';
+import { topRows, formatOverall } from '../../lib/hero-scoring.mjs';
+import summarySource from '../../data/heroes/top-10-summaries.json';
+import '../../styles/hero-rankings.css';
+const ranked = publication ? topRows(publication.heroes,publication.cutoff_count,publication.include_cutoff_ties) : [];
+const summaries = (summarySource as Record<string,Record<string,string>>)[publication?.month ?? ''] ?? {};
+for (const hero of ranked) {
+  const summary = summaries[hero.unit_id];
+  if (!summary?.trim() || summary.trim().split(/\s+/u).length > 15) throw new Error(`Top 10 summary must contain 1–15 words: ${publication?.month}/${hero.unit_id}`);
+}
+---
+<HeroLayout title="Best Tacticus Heroes — Top 10 Rankings | Terminus Maximus" description="Monthly Tacticus Top 10 hero rankings, with Guild Raid, Guild War, Horde and Popularity scores, concise explanations and links to hero guides." image={publicationGraphic ? publicationGraphic.src : undefined} path="/heroes/top-10/" crumbs={[{name:'Top 10',url:'/heroes/top-10/'}]}>
+  <header class="directory-heading top-ranking-heading"><h1>Best Tacticus Heroes — Top 10</h1></header>
+  {publication && publicationGraphic && <FeaturedInfographic title={`${monthLabel(publication.month)} Top 10 Heroes`} asset={publicationGraphic} />}
+  <div class="top-ranking-meta">{publication && <p class="muted">{monthLabel(publication.month)} rankings · Published {readableDate(publication.published_date)}</p>}<a href="/heroes/#scoring">How scoring works</a></div>
+  {publication ? <>
+    {ranked.length > publication.cutoff_count && <p class="muted">{ranked.length} heroes share this edition’s Top {publication.cutoff_count}, including ties.</p>}
+    {ranked.length < publication.cutoff_count && <p class="muted">{ranked.length} heroes have complete ratings in this edition.</p>}
+    <div class="top-ranking">{ranked.map(hero => { const identity = heroById.get(hero.unit_id)!; return <article class="hero-section ranked-hero" id={hero.slug} aria-labelledby={`ranked-${hero.slug}`}>
+      <header class="hero-identity ranked-hero-identity">
+        <a class="ranked-portrait" href={heroHref(hero)} aria-label={`${hero.name} guide`}><Portrait hero={hero} /></a>
+        <div>
+          <p class="eyebrow ranked-identity-meta"><span class="rank-position">Rank {hero.rank}</span><span>{identity.alliance} · {identity.faction}</span></p>
+          <h2 id={`ranked-${hero.slug}`}><a href={heroHref(hero)}>{hero.name}</a></h2>
+          <p class="hero-title">{identity.title}</p>
+          <a class="ranked-guide-link" href={heroHref(hero)}>View hero guide <span aria-hidden="true">→</span><span class="visually-hidden"> for {hero.name}</span></a>
+        </div>
+      </header>
+      <div class="rating-summary compact-rating ranked-summary">
+        <div><span class="ranked-summary-label">Overall Hero Rating</span><strong class="overall-number">{formatOverall(hero.final_score)} <small>/ 10</small></strong></div>
+        <RatingGauge value={hero.final_score} label={`${hero.name} Overall Hero Rating`} />
+        <p class="overall-summary-copy" data-overall-summary>{summaries[hero.unit_id]}</p>
+      </div>
+      <ModeRatings assessments={hero.assessments} bonus={hero.guide_bonus} bonusGuides={hero.guides} headingLevel={3} showGauges />
+    </article>; })}</div>
+  </> : <p>No monthly snapshot has been published yet. <a href="/heroes/">Browse current hero assessments.</a></p>}
+</HeroLayout>

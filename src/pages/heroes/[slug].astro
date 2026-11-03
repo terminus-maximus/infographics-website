@@ -1,0 +1,29 @@
+---
+import HeroLayout from '../../layouts/HeroLayout.astro';
+import Portrait from '../../components/heroes/Portrait.astro';
+import ScorePanel from '../../components/heroes/ScorePanel.astro';
+import ReferenceStats from '../../components/heroes/ReferenceStats.astro';
+import GuideLinks from '../../components/heroes/GuideLinks.astro';
+import { heroes, heroHref, currentRelease, readableDate } from '../../lib/heroes.mjs';
+import { formatOverall } from '../../lib/hero-scoring.mjs';
+import type { Hero } from '../../lib/hero-types';
+interface Props { hero: Hero; }
+export function getStaticPaths() { return heroes.map(hero => ({ params:{slug:hero.slug}, props:{hero} })); }
+const { hero } = Astro.props;
+const description = `${hero.name}, ${hero.faction} (${hero.alliance}). Reference stats, abilities and assessed Guild Raid, Guild War and Horde ratings for Tacticus.`;
+---
+<HeroLayout title={`${hero.name} Tacticus Guide — Stats & Hero Rating | Terminus Maximus`} description={description} image={hero.portrait?.src || undefined} path={heroHref(hero)} crumbs={[{name:hero.name,url:heroHref(hero)}]}>
+  <header class="hero-identity">
+    <Portrait hero={hero} large />
+    <div>
+      <p class="eyebrow">{hero.alliance} · {hero.faction}</p>
+      <h1>{hero.name}</h1>
+      <p class="hero-title">{hero.title}</p>
+      <a class="identity-rating" href="#analysis">Overall hero rating <strong>{formatOverall(hero.overall.final_score)}{hero.overall.final_score !== null && ' / 10'}</strong></a>
+      <p class="muted score-updated">{hero.availability_status?.includes('preview') || hero.availability_status?.includes('upcoming') ? 'Preview record · ' : ''}Score updated: {readableDate(currentRelease.date)}</p>
+    </div>
+  </header>
+  <ScorePanel hero={hero} />
+  <ReferenceStats hero={hero} />
+  <GuideLinks hero={hero} />
+</HeroLayout>

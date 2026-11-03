@@ -1,0 +1,13 @@
+---
+import type { Mode } from '../../lib/hero-types';
+import { modeNames } from '../../lib/hero-scoring.mjs';
+import icons from '../../data/heroes/profile-icons.json';
+interface Props { mode:Mode; label?:string; }
+const {mode,label=modeNames[mode]} = Astro.props;
+const icon = icons.modes[mode];
+---
+<span class="hero-mode-label"><img class="mode-token" src={icon.src} width={icon.width} height={icon.height} alt="" aria-hidden="true" /><span>{label}</span></span>
+<style>
+  .hero-mode-label{display:inline-flex;align-items:center;gap:.4em;vertical-align:middle}
+  .hero-mode-label img.mode-token{display:block;width:var(--mode-token-size,1.6em);height:var(--mode-token-size,1.6em);max-width:none;flex-shrink:0;object-fit:contain;object-position:center;border-radius:0;background:transparent}
+</style>

@@ -1,4 +1,5 @@
 ---
+import GuideHeroLinks from "../heroes/GuideHeroLinks.astro";
 import "../../styles/campaign-layout.css";
 import "../../styles/incursion-guide.css";
 import Layout from "../../layouts/Layout.astro";
@@ -78,6 +79,7 @@ const tocGroups = [
     <nav class="guide-next" aria-label="Related guides">
       {guide.relatedGuides.map((link) => <a href={link.url}>{link.label}</a>)}
     </nav>
+  <GuideHeroLinks />
   </main>
   <Footer />
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import FeaturedInfographicPage from './FeaturedInfographicPage.astro';
 import LrePlanner from './LrePlanner.astro';
+import GuideHeroLinks from './heroes/GuideHeroLinks.astro';
 import { getLreBasicsContent, type LreCharacter } from '../data/lreBasics';
 import type { LrePlannerData } from '../lib/lrePlanner';
 
@@ -27,5 +28,5 @@ const detailsStart = basics.indexOf('## Event Goal');
   basicsDetailsContent={basics.slice(detailsStart)}
   resources={resources}
 >
-  <LrePlanner slot="after-basics" data={data} />
+  <Fragment slot="after-basics"><LrePlanner data={data} /><GuideHeroLinks /></Fragment>
 </FeaturedInfographicPage>

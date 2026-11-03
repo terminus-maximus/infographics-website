@@ -1,0 +1,18 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/heroes.css';
+const { title, description, image, path, crumbs = [] } = Astro.props;
+const trail = [{name:'Home',url:'/'},{name:'Hero Guides',url:'/heroes/'},...crumbs];
+const json = { '@context':'https://schema.org', '@type':'BreadcrumbList', itemListElement: trail.map((crumb,index) => ({ '@type':'ListItem', position:index+1, name:crumb.name, item:`https://terminusmaximus.com${crumb.url}` })) };
+---
+<Layout title={title} description={description} image={image} url={`https://terminusmaximus.com${path}`}>
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(json).replace(/</g,'\u003c')} /></Fragment>
+  <Header />
+  <main class="heroes-page">
+    <nav class="hero-breadcrumbs" aria-label="Breadcrumb">{trail.map((crumb,index) => <><a href={crumb.url} aria-current={index === trail.length - 1 ? 'page' : undefined}>{crumb.name}</a>{index < trail.length-1 && <span aria-hidden="true">/</span>}</>)}</nav>
+    <slot />
+  </main>
+  <Footer />
+</Layout>

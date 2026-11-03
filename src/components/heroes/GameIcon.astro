@@ -1,0 +1,5 @@
+---
+interface Props { icon?: {src:string;width:number;height:number;count?:number}; class?:string; }
+const {icon,class:className = ''} = Astro.props;
+---
+<span class:list={['game-icon',className]} aria-hidden="true">{icon && Array.from({length:icon.count ?? 1}, () => <img src={icon.src} width={icon.width} height={icon.height} alt="" />)}</span>

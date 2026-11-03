@@ -1,0 +1,599 @@
+{
+  "app_version": "1.43.130",
+  "icons": {
+    "faction": {
+      "Adeptus Astartes": {
+        "id": "AdeptusAstartes",
+        "src": "/images/hero-filters/faction/AdeptusAstartes.webp",
+        "width": 98,
+        "height": 71,
+        "source_sha256": "803f00a29f11e0285de9914ca339fa6f2154641f4c9e1fbbff8c5576e475fd9b"
+      },
+      "Adeptus Mechanicus": {
+        "id": "AdeptusMechanicus",
+        "src": "/images/hero-filters/faction/AdeptusMechanicus.webp",
+        "width": 77,
+        "height": 76,
+        "source_sha256": "e3f938931c293b02230313044a9636ee5e0ae69092faf9a938988f48396122bd"
+      },
+      "Aeldari": {
+        "id": "Aeldari",
+        "src": "/images/hero-filters/faction/Aeldari.webp",
+        "width": 77,
+        "height": 92,
+        "source_sha256": "9275423bf35cc2873d70ff08c64810e3b1a18cfa26c75ee39b1d0c8d1db37528"
+      },
+      "Astra Militarum": {
+        "id": "AstraMilitarum",
+        "src": "/images/hero-filters/faction/AstraMilitarum.webp",
+        "width": 98,
+        "height": 47,
+        "source_sha256": "0d51d2349c629099f3c7458f3e1970b665b7a1a57924d4c6bf13c9c5fd7b196e"
+      },
+      "Black Legion": {
+        "id": "BlackLegion",
+        "src": "/images/hero-filters/faction/BlackLegion.webp",
+        "width": 82,
+        "height": 86,
+        "source_sha256": "3250f6e9b15925b1fdb54d5334c160769d960e5c92a81aefb8f3c512bcc4ad1f"
+      },
+      "Black Templars": {
+        "id": "BlackTemplars",
+        "src": "/images/hero-filters/faction/BlackTemplars.webp",
+        "width": 77,
+        "height": 77,
+        "source_sha256": "4eef9e060963a14bde7820c0a8af935d58acba8be27e11a2d772379928b6fb59"
+      },
+      "Blood Angels": {
+        "id": "BloodAngels",
+        "src": "/images/hero-filters/faction/BloodAngels.webp",
+        "width": 64,
+        "height": 54,
+        "source_sha256": "40663c741c766a0d6aee1760bf5298e4fe26c654be11a32a69c528562645c06d"
+      },
+      "Adeptus Custodes": {
+        "id": "Custodes",
+        "src": "/images/hero-filters/faction/Custodes.webp",
+        "width": 64,
+        "height": 63,
+        "source_sha256": "ab0d19fb1000c4ceeae246ab13f416b8add02c46bbe9a0939544fb85d8857fd0"
+      },
+      "Dark Angels": {
+        "id": "DarkAngels",
+        "src": "/images/hero-filters/faction/DarkAngels.webp",
+        "width": 101,
+        "height": 102,
+        "source_sha256": "f062499219ec8be0bc5bfdccb5b2676d11a47e0b234b8e1289d6d2b67e0a5e4f"
+      },
+      "Death Guard": {
+        "id": "DeathGuard",
+        "src": "/images/hero-filters/faction/DeathGuard.webp",
+        "width": 84,
+        "height": 90,
+        "source_sha256": "385c53d973cdf060a9fb95761078d7c0be1f58972192ca04f63b0e752c3d4780"
+      },
+      "Emperor's Children": {
+        "id": "EmperorsChildren",
+        "src": "/images/hero-filters/faction/EmperorsChildren.webp",
+        "width": 78,
+        "height": 83,
+        "source_sha256": "f983a98fd1ce85bcbc632e014323739d6cb7219886471acd1c1a3e3c4ccf420b"
+      },
+      "Genestealer Cults": {
+        "id": "Genestealers",
+        "src": "/images/hero-filters/faction/Genestealers.webp",
+        "width": 61,
+        "height": 62,
+        "source_sha256": "21dadeb9cb1a53442695cfa510ba7e0c5b87bcd878381da97a853c34e7c46399"
+      },
+      "Leagues of Votann": {
+        "id": "LeaguesOfVotann",
+        "src": "/images/hero-filters/faction/LeaguesOfVotann.webp",
+        "width": 69,
+        "height": 103,
+        "source_sha256": "bc450b0d1863780e046c6f6929b53369875761368b79c5d43903866c5a3c12de"
+      },
+      "Necrons": {
+        "id": "Necrons",
+        "src": "/images/hero-filters/faction/Necrons.webp",
+        "width": 72,
+        "height": 93,
+        "source_sha256": "9552f39f3dc9e4dfd0936afdbba0ef7c0dd9afb5780aad67c90f192ebf75c8ea"
+      },
+      "Orks": {
+        "id": "Orks",
+        "src": "/images/hero-filters/faction/Orks.webp",
+        "width": 99,
+        "height": 104,
+        "source_sha256": "8291694772e7c71491428afbd3efdc329a3591bb647ebf158bbb3050939b74e1"
+      },
+      "Adepta Sororitas": {
+        "id": "Sisterhood",
+        "src": "/images/hero-filters/faction/Sisterhood.webp",
+        "width": 76,
+        "height": 75,
+        "source_sha256": "861d7d07cba7b4e1a6ef77c4100d6b2d0559dbf08d72ea0aa2a52c18c6ad8b84"
+      },
+      "Space Wolves": {
+        "id": "SpaceWolves",
+        "src": "/images/hero-filters/faction/SpaceWolves.webp",
+        "width": 106,
+        "height": 99,
+        "source_sha256": "52bdf5af00f4680d74b767f8f30992e8fed64f5880ad7988e09123ee01e560a1"
+      },
+      "T'au Empire": {
+        "id": "Tau",
+        "src": "/images/hero-filters/faction/Tau.webp",
+        "width": 77,
+        "height": 77,
+        "source_sha256": "082ca8a3518a72f264b5fdba168f636fde2fe68541098b00614466310f90cbe5"
+      },
+      "The Lost and the Damned": {
+        "id": "TheLostAndTheDamned",
+        "src": "/images/hero-filters/faction/TheLostAndTheDamned.webp",
+        "width": 61,
+        "height": 62,
+        "source_sha256": "623d2f31a9be5f04fe9be71eeaeb093696aa2d001d335dd2c35f5683f91c7f35"
+      },
+      "Thousand Sons": {
+        "id": "ThousandSons",
+        "src": "/images/hero-filters/faction/ThousandSons.webp",
+        "width": 99,
+        "height": 96,
+        "source_sha256": "764eb6854f7344a623eb5a811dbdd6b710174c86f6942327f4e2ac3e01df9d24"
+      },
+      "Tyranids": {
+        "id": "Tyranids",
+        "src": "/images/hero-filters/faction/Tyranids.webp",
+        "width": 100,
+        "height": 101,
+        "source_sha256": "973d2307243fad0576865941f5f4606afc46d744170102f39aa66922e142a503"
+      },
+      "Ultramarines": {
+        "id": "Ultramarines",
+        "src": "/images/hero-filters/faction/Ultramarines.webp",
+        "width": 85,
+        "height": 77,
+        "source_sha256": "3c21dd399725e5340d2895ae4f5509cd927422476b4fbfd9f13859847b114d97"
+      },
+      "World Eaters": {
+        "id": "WorldEaters",
+        "src": "/images/hero-filters/faction/WorldEaters.webp",
+        "width": 64,
+        "height": 64,
+        "source_sha256": "2d5858234cd9c405507bcda2f94f12af73ddfb8b4bf601a85703d52970565009"
+      }
+    },
+    "traits": {
+      "Act of Faith": {
+        "id": "ActOfFaith",
+        "src": "/images/hero-filters/traits/ActOfFaith.webp",
+        "width": 109,
+        "height": 108,
+        "source_sha256": "a50133271566b2b515382b3d175e350e13f4aa080088a3927af9d2419653d9cf"
+      },
+      "Ambush": {
+        "id": "Ambush",
+        "src": "/images/hero-filters/traits/Ambush.webp",
+        "width": 85,
+        "height": 90,
+        "source_sha256": "9438a622bffe30583ce508de19384e337693d55e53aa18c3e7897fbe562cdf88"
+      },
+      "Beast Slayer": {
+        "id": "BeastSlayer",
+        "src": "/images/hero-filters/traits/BeastSlayer.webp",
+        "width": 100,
+        "height": 94,
+        "source_sha256": "d96ad87ae208f671a02f9ab78096a113b8d1312644bb34bc158d260c66183671"
+      },
+      "Big Target": {
+        "id": "BigTarget",
+        "src": "/images/hero-filters/traits/BigTarget.webp",
+        "width": 101,
+        "height": 95,
+        "source_sha256": "c1e61fbc9e51e96eb41ae4d8a65ecb3d1941bf9fcf436fb65cabeba7f60c6d7b"
+      },
+      "Blessings of Khorne": {
+        "id": "BlessingsOfKhorne",
+        "src": "/images/hero-filters/traits/BlessingsOfKhorne.webp",
+        "width": 78,
+        "height": 87,
+        "source_sha256": "498f9b37dea13d6cae39d4b0fce1ce4ba3c04968d3dd629cfe1dc72fdb8228ab"
+      },
+      "Camouflage": {
+        "id": "Camouflage",
+        "src": "/images/hero-filters/traits/Camouflage.webp",
+        "width": 89,
+        "height": 93,
+        "source_sha256": "6e48fb248529f9969f53b4920ee484b5ce56e7ffad8c9defba531de83eb20e77"
+      },
+      "Contagions of Nurgle": {
+        "id": "ContagionsOfNurgle",
+        "src": "/images/hero-filters/traits/ContagionsOfNurgle.webp",
+        "width": 97,
+        "height": 96,
+        "source_sha256": "08a5b4eef30b46ecec0c63b0f001f1617dfce8b706dfd1b4919623a383113dd3"
+      },
+      "Crushing Strike": {
+        "id": "CrushingStrike",
+        "src": "/images/hero-filters/traits/CrushingStrike.webp",
+        "width": 101,
+        "height": 101,
+        "source_sha256": "a7d171218878140cce3f9bf74f826795f04526d2d212f91b34b61f1dc34c708f"
+      },
+      "Daemon": {
+        "id": "Daemon",
+        "src": "/images/hero-filters/traits/Daemon.webp",
+        "width": 111,
+        "height": 87,
+        "source_sha256": "0daf8d5a77693757ec2b9b994f238571520942f60785f0f71e0e3f41927eba55"
+      },
+      "Explodes": {
+        "id": "Explodes",
+        "src": "/images/hero-filters/traits/Explodes.webp",
+        "width": 101,
+        "height": 86,
+        "source_sha256": "337f01594ac3b46e5ce086a8151fc1f90abc52b7137374efb0605e5f215e3dc1"
+      },
+      "Final Vengeance": {
+        "id": "FinalJustice",
+        "src": "/images/hero-filters/traits/FinalJustice.webp",
+        "width": 100,
+        "height": 93,
+        "source_sha256": "c3a78e58376f0b522e72964761b9fe45edb5e1db2515ec20c954b4edfa0b14bc"
+      },
+      "Flying": {
+        "id": "Flying",
+        "src": "/images/hero-filters/traits/Flying.webp",
+        "width": 100,
+        "height": 103,
+        "source_sha256": "c0fe8e275397b1306faa8b2d571f509294ff83ab51f8461e6336ca8f34f5a887"
+      },
+      "Get Stuck In": {
+        "id": "GetStuckIn",
+        "src": "/images/hero-filters/traits/GetStuckIn.webp",
+        "width": 54,
+        "height": 95,
+        "source_sha256": "570addff058888c971d25ad8aa33b0753959fcc395e2b7c1d2a4a7a1c41d7e75"
+      },
+      "Healer": {
+        "id": "Healer",
+        "src": "/images/hero-filters/traits/Healer.webp",
+        "width": 94,
+        "height": 91,
+        "source_sha256": "dbd5a956b5475388f6bc62d52fb249d1424afa804a0e52c85c539091a5fcdecc"
+      },
+      "Heavy Weapon": {
+        "id": "HeavyWeapon",
+        "src": "/images/hero-filters/traits/HeavyWeapon.webp",
+        "width": 95,
+        "height": 86,
+        "source_sha256": "bb09b7ba9bb5e0e37dedf5c488fc3bfbf962387940d6c58af6aa7a8e5277114e"
+      },
+      "Indirect Fire": {
+        "id": "IndirectFire",
+        "src": "/images/hero-filters/traits/IndirectFire.webp",
+        "width": 91,
+        "height": 100,
+        "source_sha256": "fe1c062009ea40ee72d79a53263d47948f9eb65b93b04f4bdca7b7476eb3e8d9"
+      },
+      "Infiltrate": {
+        "id": "Infiltrate",
+        "src": "/images/hero-filters/traits/Infiltrate.webp",
+        "width": 104,
+        "height": 86,
+        "source_sha256": "1422b94923fec6d39a70092feda6c5771790388629dff4a4282ec5e0f298e8ff"
+      },
+      "Let the Galaxy Burn": {
+        "id": "LetTheGalaxyBurn",
+        "src": "/images/hero-filters/traits/LetTheGalaxyBurn.webp",
+        "width": 100,
+        "height": 100,
+        "source_sha256": "21b6f47054a5fdc480eb3ef56fefe79de7e09c594b6807785de8c15703f15ee7"
+      },
+      "Living Metal": {
+        "id": "LivingMetal",
+        "src": "/images/hero-filters/traits/LivingMetal.webp",
+        "width": 84,
+        "height": 104,
+        "source_sha256": "2268e89aba4740cc8d9d50b31fed455d72818b3f5c4930f7d941854fc1c2d2b8"
+      },
+      "Martial Ka'tah": {
+        "id": "MartialKatah",
+        "src": "/images/hero-filters/traits/MartialKatah.webp",
+        "width": 92,
+        "height": 85,
+        "source_sha256": "d014f9c6b3ff077f95aa088bac3db878d1763c7344e8d31cba14e2b03371a820"
+      },
+      "Mechanic": {
+        "id": "Mechanic",
+        "src": "/images/hero-filters/traits/Mechanic.webp",
+        "width": 90,
+        "height": 90,
+        "source_sha256": "f9c83e81141b5b32467f9693f5e96c76601b79374ab627a22a4e6f43eae7f5f7"
+      },
+      "Mechanical": {
+        "id": "Mechanical",
+        "src": "/images/hero-filters/traits/Mechanical.webp",
+        "width": 90,
+        "height": 99,
+        "source_sha256": "387bc5456d9503e359ee3410c19f04550e1e5ae7b855452ff7c18e9c99cf0145"
+      },
+      "Mk X Gravis": {
+        "id": "MkXGravis",
+        "src": "/images/hero-filters/traits/MkXGravis.webp",
+        "width": 101,
+        "height": 100,
+        "source_sha256": "4be7a771facb34dff88264838a931da1e981fc76d4c1a9e4bd6d73ba8831bae0"
+      },
+      "Overwatch": {
+        "id": "Overwatch",
+        "src": "/images/hero-filters/traits/Overwatch.webp",
+        "width": 98,
+        "height": 64,
+        "source_sha256": "d8776467131ce4c59e7139668166dc17a934ba2b4d96c4b326cb2819c590af32"
+      },
+      "Parry": {
+        "id": "Parry",
+        "src": "/images/hero-filters/traits/Parry.webp",
+        "width": 80,
+        "height": 91,
+        "source_sha256": "c9542ec0aae93772c25f8119c7940e3f44fb76589579955da5dc44bb54a59be9"
+      },
+      "Prioritised Efficiency": {
+        "id": "PrioritisedEfficiency",
+        "src": "/images/hero-filters/traits/PrioritisedEfficiency.webp",
+        "width": 82,
+        "height": 101,
+        "source_sha256": "f13d3e053ede9235b46b315df8b4395ffb3701dd327e75f825df4e18872b7c75"
+      },
+      "Psyker": {
+        "id": "Psyker",
+        "src": "/images/hero-filters/traits/Psyker.webp",
+        "width": 77,
+        "height": 94,
+        "source_sha256": "b0930b6dffcbf0efd0183f20ad76fce9d3a2e3997daf657007ba79a2ffc9297a"
+      },
+      "Putrid Explosion": {
+        "id": "PutridExplosion",
+        "src": "/images/hero-filters/traits/PutridExplosion.webp",
+        "width": 98,
+        "height": 95,
+        "source_sha256": "7664e6693afe3e108663f5cff4410a29fce720e793a3c028fe81d36644119148"
+      },
+      "Ranged Specialist": {
+        "id": "RangedSpecialist",
+        "src": "/images/hero-filters/traits/RangedSpecialist.webp",
+        "width": 100,
+        "height": 99,
+        "source_sha256": "b0d2f1c80a7b4d1e727f07207c417b0d3a32c1d3ae72f7dca406c9ea86f13989"
+      },
+      "Rapid Assault": {
+        "id": "RapidAssault",
+        "src": "/images/hero-filters/traits/RapidAssault.webp",
+        "width": 99,
+        "height": 89,
+        "source_sha256": "dcdc97803a9efd4e8ac257df8500ac5f06be136440472064626ca3f00b487297"
+      },
+      "Resilient": {
+        "id": "Resilient",
+        "src": "/images/hero-filters/traits/Resilient.webp",
+        "width": 90,
+        "height": 96,
+        "source_sha256": "966a21f73c96a6d891cf7830dc293d34af2c359ab835b37ffdb2e548489c5f5c"
+      },
+      "Shadow in the Warp": {
+        "id": "ShadowInTheWarp",
+        "src": "/images/hero-filters/traits/ShadowInTheWarp.webp",
+        "width": 101,
+        "height": 104,
+        "source_sha256": "f27e7499b76baf5500176511f37a81ee63007be1ecbfada53a5435ca62125966"
+      },
+      "Suppressive Fire": {
+        "id": "SuppressiveFire",
+        "src": "/images/hero-filters/traits/SuppressiveFire.webp",
+        "width": 92,
+        "height": 68,
+        "source_sha256": "9fbe7856055781327356fb1fe5988321911a6b827429d867a24fb7ffbf87b5c0"
+      },
+      "Synapse": {
+        "id": "Synapse",
+        "src": "/images/hero-filters/traits/Synapse.webp",
+        "width": 96,
+        "height": 102,
+        "source_sha256": "127b758b5f5a68165d00b5a01b2966fa629bfdbc2e7aab2c9097856d4ef2bac8"
+      },
+      "Deep Strike": {
+        "id": "TeleportStrike",
+        "src": "/images/hero-filters/traits/TeleportStrike.webp",
+        "width": 87,
+        "height": 102,
+        "source_sha256": "1a293e8a10af153f8495652996337b88526f688f24818123ecddd603cf6888ff"
+      },
+      "Terminator Armour": {
+        "id": "TerminatorArmour",
+        "src": "/images/hero-filters/traits/TerminatorArmour.webp",
+        "width": 101,
+        "height": 101,
+        "source_sha256": "5884421bd979b9292732905454496576057613f451a850a9b753d59a39bb10f0"
+      },
+      "Terrifying": {
+        "id": "Terrifying",
+        "src": "/images/hero-filters/traits/Terrifying.webp",
+        "width": 85,
+        "height": 105,
+        "source_sha256": "374b20a3e66ee8006652b7a2845f8d1fcad19c26bdc783775eeba910756fa341"
+      },
+      "Thrill Seekers": {
+        "id": "ThrillSeekers",
+        "src": "/images/hero-filters/traits/ThrillSeekers.webp",
+        "width": 68,
+        "height": 92,
+        "source_sha256": "913697dfd7c93bad94f35fc9ba68fb29152e72b1b264e6da5b406e17b5937203"
+      },
+      "Unstoppable": {
+        "id": "Unstoppable",
+        "src": "/images/hero-filters/traits/Unstoppable.webp",
+        "width": 54,
+        "height": 95,
+        "source_sha256": "570addff058888c971d25ad8aa33b0753959fcc395e2b7c1d2a4a7a1c41d7e75"
+      },
+      "Vehicle": {
+        "id": "Vehicle",
+        "src": "/images/hero-filters/traits/Vehicle.webp",
+        "width": 103,
+        "height": 94,
+        "source_sha256": "f47096a648e23a16e7da90f7a61419b820c2f71799434f57a4fb01a5bb832d17"
+      },
+      "Weaver Of Fates": {
+        "id": "WeaverOfFate",
+        "src": "/images/hero-filters/traits/WeaverOfFate.webp",
+        "width": 100,
+        "height": 96,
+        "source_sha256": "77e21ec52d581d45d22ac3da2eddaafc63d9fb4b01749691f53cd35759e2dc71"
+      }
+    },
+    "damage": {
+      "Bio": {
+        "id": "Bio",
+        "src": "/images/hero-filters/damage/Bio.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "90a65a093e4055f8e3cd044adc19a271d640ceaa1953d3640c8ea730fadc6fdf"
+      },
+      "Blast": {
+        "id": "Blast",
+        "src": "/images/hero-filters/damage/Blast.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "cc2538c99b2283c314cfa5ed721b6bb622dc77978459a7133e1590c2461240bb"
+      },
+      "Bolter": {
+        "id": "Bolter",
+        "src": "/images/hero-filters/damage/Bolter.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "6bc2e23561bb4919c69633b48bfd8668ccd9e1eba67debfb97a2a62ececfcfad"
+      },
+      "Chain": {
+        "id": "Chain",
+        "src": "/images/hero-filters/damage/Chain.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "597d5575301eb136f6de11e5343af0623b10c5fb8fb45e95538464c71a5076be"
+      },
+      "Energy": {
+        "id": "Energy",
+        "src": "/images/hero-filters/damage/Energy.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "447f42bb4938202d29a942fe2e6b45b2873e65012f2413992e0f750053bf06ea"
+      },
+      "Eviscerating": {
+        "id": "Eviscerate",
+        "src": "/images/hero-filters/damage/Eviscerate.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "9d8fcbf6046ae66451b7a71b4fcf37f606dd439b675dd00e644d3a51e3f00aab"
+      },
+      "Flame": {
+        "id": "Flame",
+        "src": "/images/hero-filters/damage/Flame.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "067e82ac693605a63bb52eb0b8b27471398f6da788498375c324a56ac4e080d0"
+      },
+      "Molecular": {
+        "id": "Gauss",
+        "src": "/images/hero-filters/damage/Gauss.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "f088d8ddf8d13f608e35f654ec14a2326e6ed7eefac0076d3c6842dbcc3bea6b"
+      },
+      "Heavy Round": {
+        "id": "HeavyRound",
+        "src": "/images/hero-filters/damage/HeavyRound.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "1ea43b653d7ee66648098e4e4b8fb949b7dac7a11fa949ca8a3fd220a2cc1609"
+      },
+      "Las": {
+        "id": "Las",
+        "src": "/images/hero-filters/damage/Las.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "276448643db63434f860f60d7c3a63a687dbe38e93913e9ce0a85851da995954"
+      },
+      "Melta": {
+        "id": "Melta",
+        "src": "/images/hero-filters/damage/Melta.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "890cde154b6fac9ee34787b8934ae8703a11874708cd68fe528032f09c27b9f7"
+      },
+      "Particle": {
+        "id": "Particle",
+        "src": "/images/hero-filters/damage/Particle.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "eb8a782668c5db4e2521b3a90bcbacb929dd7f0548f6f9bcad704f3dcef9d26d"
+      },
+      "Physical": {
+        "id": "Physical",
+        "src": "/images/hero-filters/damage/Physical.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "ad70e1cba606d1d279eb0c74ff02e17fee080846194f4734e58e44ecfd903df5"
+      },
+      "Piercing": {
+        "id": "Piercing",
+        "src": "/images/hero-filters/damage/Piercing.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "965d338ef6ebadcf9548aafc190acc1207c4bfdf0bb734b3803c0d375db8ecbf"
+      },
+      "Plasma": {
+        "id": "Plasma",
+        "src": "/images/hero-filters/damage/Plasma.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "efed2edd7d54d40ee76429990e3adb25339ad33c817f3b535af5864cda2dce7c"
+      },
+      "Power": {
+        "id": "Power",
+        "src": "/images/hero-filters/damage/Power.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "c5a13e0a175cd580d0a1f1725a3d5c694b208729b1106d573820a86517225c66"
+      },
+      "Projectile": {
+        "id": "Projectile",
+        "src": "/images/hero-filters/damage/Projectile.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "bc7e43674f44525ff966f221954ac500aea4eebfc4bcdaeeccae6ba9291ed707"
+      },
+      "Psychic": {
+        "id": "Psychic",
+        "src": "/images/hero-filters/damage/Psychic.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "5b90050a571b5fcde876cd040f054e58b799ac45a6827dc81fb56561e378dfcf"
+      },
+      "Pulse": {
+        "id": "Pulse",
+        "src": "/images/hero-filters/damage/Pulse.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "e729a6a28a943aa0df212ba3a225a5a4fa691d9a7ebb891498bbc2a3e5efd2bd"
+      },
+      "Toxic": {
+        "id": "Toxic",
+        "src": "/images/hero-filters/damage/Toxic.webp",
+        "width": 174,
+        "height": 174,
+        "source_sha256": "c7b543f2e96e111053a6f264ebbcd4a654d042aafedd35ba6023a0c37ff4adfb"
+      }
+    }
+  }
+}

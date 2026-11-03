@@ -1,4 +1,5 @@
 ---
+import GuideHeroLinks from "../../components/heroes/GuideHeroLinks.astro";
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import InfographicUpdated from '../../components/InfographicUpdated.astro';
@@ -91,6 +92,7 @@ const span = (values: number[]) => values.join('–');
     </nav>
     {teams.map((team, index) => <TeamSection team={team} index={index} />)}
     <RecommendationSections />
+  <GuideHeroLinks />
   </main>
   <Footer />
   <FloatingTeamList slot="floating-widgets" />

@@ -1,0 +1,9 @@
+---
+import { heroes, heroHref } from '../../lib/heroes.mjs';
+const path = Astro.url.pathname.replace(/\/+$/, '');
+const related = heroes.map(hero => ({hero, roles:[...new Set(hero.guides.filter(g => g.url.replace(/\/+$/, '') === path).map(g => g.role))]})).filter(row => row.roles.length);
+---
+{related.length > 0 && <aside class="guide-hero-links" aria-label="Related hero profiles"><h2>Hero profiles</h2><p>Reference stats and mode ratings for the heroes linked to this guide. Reference links and requirement matches are not team recommendations.</p><details open={related.length <= 16}><summary>Browse {related.length} linked hero profiles</summary><ul>{related.map(({hero,roles}) => <li><a href={heroHref(hero)}>{hero.name}</a> <span>({roles.join(', ')})</span></li>)}</ul></details></aside>}
+<style>
+.guide-hero-links{max-width:1160px;margin:2rem auto;padding:1.25rem;border:1px solid #454035;border-radius:12px;background:#202020;color:#eee;font-family:Lexend,sans-serif}.guide-hero-links h2{color:#d4af37;font-size:1.35rem}.guide-hero-links p,.guide-hero-links span{color:#bcbcbc;font-size:.85rem}.guide-hero-links ul{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding-left:1.2rem}.guide-hero-links a{color:#efd579}.guide-hero-links li{font-size:.9rem}
+</style>

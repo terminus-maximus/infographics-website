@@ -1,0 +1,483 @@
+{
+  "schema_version": 1,
+  "tone_policy": "overall-score-1.0",
+  "reviewed_release": "2026-11-03-popularity-v3",
+  "summaries": {
+    "blackAbaddon": {
+      "tone": "optimistic",
+      "text": "Powerful attacks, impressive staying power, and valuable support for fellow Chaos fighters."
+    },
+    "thousInfernalMaster": {
+      "tone": "optimistic",
+      "text": "Brings an army of summons and helps psychic teammates turn pressure into big damage."
+    },
+    "admecManipulus": {
+      "tone": "optimistic",
+      "text": "Keeps mechanical teams fighting with dependable repairs and a steady stream of extra attacks."
+    },
+    "emperKakophonist": {
+      "tone": "guarded",
+      "text": "Offers specialised damage support, but demanding setups and inconsistent results make him hard to recommend."
+    },
+    "custoVexilusPraetor": {
+      "tone": "optimistic",
+      "text": "Strengthens powerful teams with extra damage and protection, proving especially valuable against tough bosses."
+    },
+    "eldarAutarch": {
+      "tone": "cautious",
+      "text": "Can sharpen a team's damage, but fragile defences and specialised partnerships limit her appeal."
+    },
+    "thousAhriman": {
+      "tone": "optimistic",
+      "text": "Combines strong psychic attacks and valuable team support, bringing welcome firepower to the right lineup."
+    },
+    "necroSpyder": {
+      "tone": "optimistic",
+      "text": "Repairs allies and brings multiplying scarabs, giving mechanical teams excellent staying power through long battles."
+    },
+    "votanMemnyr": {
+      "tone": "measured",
+      "text": "Useful mechanical support and promising defence, though positioning and limited testing leave some questions."
+    },
+    "blackTerminator": {
+      "tone": "optimistic",
+      "text": "Punishes approaching enemies with repeated attacks, making him a strong ally when waves close in."
+    },
+    "necroOverlord": {
+      "tone": "optimistic",
+      "text": "Brings durable reinforcements and valuable recovery, helping mechanical teams keep fighting through demanding battles."
+    },
+    "blackPossession": {
+      "tone": "optimistic",
+      "text": "Turns kills into reinforcements, helping his team build momentum and keep enemies under pressure."
+    },
+    "spaceRockfist": {
+      "tone": "guarded",
+      "text": "Can hold a position, but limited damage and team support make broader investment difficult."
+    },
+    "darkaAsmodai": {
+      "tone": "weak",
+      "text": "Narrow strengths against Chaos rarely justify investment when more versatile fighters offer better returns."
+    },
+    "custoAtlacoya": {
+      "tone": "measured",
+      "text": "A useful answer to psychic enemies, though her value drops outside those specialised matchups."
+    },
+    "tauAunShi": {
+      "tone": "measured",
+      "text": "Giving key allies another ability use can turn battles, though choosing the right partners matters."
+    },
+    "worldEightbound": {
+      "tone": "cautious",
+      "text": "Can strengthen Chaos melee teams, but needs careful setup and offers limited crowd clearing."
+    },
+    "darkaAzrael": {
+      "tone": "cautious",
+      "text": "Supports coordinated Dark Angels teams, but relies heavily on teammates to deliver consistent results."
+    },
+    "spaceWolfPriest": {
+      "tone": "measured",
+      "text": "Useful healing and relic support help sustain Imperial teams, though boss damage remains limited."
+    },
+    "darkaTerminator": {
+      "tone": "measured",
+      "text": "Durable plasma fire offers useful wave control, balanced against slow movement and gaps between blasts."
+    },
+    "ultraInceptorSgt": {
+      "tone": "measured",
+      "text": "Durable reinforcements help developing teams, though tougher enemies and stronger alternatives limit his broader value."
+    },
+    "templAggressor": {
+      "tone": "measured",
+      "text": "A sturdy answer to clustered enemies, provided healers and favourable positioning support his short reach."
+    },
+    "eldarRanger": {
+      "tone": "cautious",
+      "text": "Can pick off exposed enemies, but struggles to offer enough against bosses or crowded waves."
+    },
+    "ultraCalgar": {
+      "tone": "measured",
+      "text": "Durable support with useful damage boosts, though dedicated attackers often contribute more against crowds."
+    },
+    "adeptCelestine": {
+      "tone": "measured",
+      "text": "Mobile and difficult to remove, though limited crowd damage keeps her from excelling everywhere."
+    },
+    "ultraEliminatorSgt": {
+      "tone": "weak",
+      "text": "Occasional safe shots offer little compensation for weak crowd clearing and limited team support."
+    },
+    "bloodTerminator": {
+      "tone": "measured",
+      "text": "Strong defensive teams and nearby healing suit him, while boss battles offer fewer opportunities."
+    },
+    "deathBlightbringer": {
+      "tone": "measured",
+      "text": "Summons and movement support help against waves, but slow setup makes boss fights less rewarding."
+    },
+    "astraCreed": {
+      "tone": "guarded",
+      "text": "His reinforcements have uses, but limited replacements and narrow partnerships leave stronger summoners ahead."
+    },
+    "astarCyrus": {
+      "tone": "weak",
+      "text": "Mines offer occasional opportunities, but demanding setup and weak broader results rarely justify investment."
+    },
+    "bloodDante": {
+      "tone": "optimistic",
+      "text": "A fast, aggressive team player who helps your strongest fighters land even bigger blows."
+    },
+    "tauDarkstrider": {
+      "tone": "cautious",
+      "text": "Useful with the right Tau teammates, but fragile defences and narrow partnerships demand caution."
+    },
+    "tyranDeathleaper": {
+      "tone": "guarded",
+      "text": "Can hunt isolated threats, but limited crowd clearing and boss value restrict his usefulness."
+    },
+    "astraDreir": {
+      "tone": "measured",
+      "text": "Regeneration and supporting riders offer useful endurance, though battle conditions determine their lasting impact."
+    },
+    "eldarFarseer": {
+      "tone": "optimistic",
+      "text": "Helps teammates land much bigger hits, giving developing teams a welcome boost against tough bosses."
+    },
+    "admecRuststalker": {
+      "tone": "optimistic",
+      "text": "Rewards coordinated mechanical teams with repeated attacks, bringing strong boss damage when supported well."
+    },
+    "lostaBile": {
+      "tone": "pending",
+      "text": "Healing and Chaos support remain under review; more live battle evidence is needed."
+    },
+    "tauFarsight": {
+      "tone": "optimistic",
+      "text": "Combines aggressive attacks and valuable Tau support, helping coordinated teams maintain pressure through long fights."
+    },
+    "darkaCompanion": {
+      "tone": "measured",
+      "text": "Repeated attacks help against approaching enemies, though close fighting demands healing and careful positioning."
+    },
+    "orksBigMek": {
+      "tone": "measured",
+      "text": "Repairs and armour support help Ork teams endure, though useful partnerships limit his wider flexibility."
+    },
+    "templSwordBrother": {
+      "tone": "measured",
+      "text": "Steady melee attacks and decent durability help nearby fights, but limited reach restricts wider usefulness."
+    },
+    "orksWarboss": {
+      "tone": "powerful",
+      "text": "Brings the muscle and the backup, helping his whole team hit harder and more often."
+    },
+    "blackHaarken": {
+      "tone": "measured",
+      "text": "Mobile attacks grow stronger with kills, though concentrated damage and limited recovery expose his weaknesses."
+    },
+    "emperFlawlessBlade": {
+      "tone": "guarded",
+      "text": "Can chain attacks with careful positioning, but unreliable triggers and healing needs limit his appeal."
+    },
+    "votanBeserk": {
+      "tone": "weak",
+      "text": "Some armour weakening and disruption, but limited staying power and uncertain results weaken his case."
+    },
+    "templHelbrecht": {
+      "tone": "measured",
+      "text": "Effective against selected psychic bosses, but limited crowd clearing keeps his usefulness concentrated there."
+    },
+    "genesBiophagus": {
+      "tone": "measured",
+      "text": "Valuable healing in Genestealer teams, though protection and suitable partners matter more than personal damage."
+    },
+    "necroDestroyer": {
+      "tone": "optimistic",
+      "text": "Repeated defensive shooting can stop waves in their tracks when protected and positioned well."
+    },
+    "ultraApothecary": {
+      "tone": "measured",
+      "text": "Dependable healing suits restricted teams, though keeping allies alive comes at the cost of attacks."
+    },
+    "genesPrimus": {
+      "tone": "optimistic",
+      "text": "Summons and decoys support effective Guild War teams, rewarding careful positioning and good partners."
+    },
+    "adeptHospitaller": {
+      "tone": "optimistic",
+      "text": "Excellent healing and resurrection keep protected teams standing through waves that would overwhelm others."
+    },
+    "templChampion": {
+      "tone": "measured",
+      "text": "Strong melee counters reward protective teammates, though limited boss usefulness makes him a specialist."
+    },
+    "eldarJainZar": {
+      "tone": "weak",
+      "text": "Mobile melee disruption rarely outweighs limited recovery, weak broader results, and competition from stronger fighters."
+    },
+    "genesKelermorph": {
+      "tone": "measured",
+      "text": "Strong Genestealer war teams give him purpose, though fragile defences and limited versatility remain drawbacks."
+    },
+    "custoBladeChampion": {
+      "tone": "powerful",
+      "text": "A powerhouse against bosses and hordes, with the damage to carry a team."
+    },
+    "worldKharn": {
+      "tone": "powerful",
+      "text": "Relentless attacks make him a standout fighter against enemy teams and tough bosses."
+    },
+    "votanChampion": {
+      "tone": "pending",
+      "text": "Defensive potential remains under review; broader battle evidence is needed before assigning an overall rating."
+    },
+    "astraBullgryn": {
+      "tone": "guarded",
+      "text": "Can block a melee lane, but limited damage and recovery leave more versatile defenders ahead."
+    },
+    "emperExultant": {
+      "tone": "optimistic",
+      "text": "A standout boss specialist who rewards the right teammates with exceptional raid damage."
+    },
+    "eldarLhykhis": {
+      "tone": "pending",
+      "text": "Useful boss partnerships are established, but missing Guild War evidence leaves her overall rating pending."
+    },
+    "bloodDeathCompany": {
+      "tone": "optimistic",
+      "text": "Repeated attacks and solid endurance make him a dependable fighter for supported frontline teams."
+    },
+    "emperLucius": {
+      "tone": "optimistic",
+      "text": "Persistent melee pressure and resurrection make him a valuable Chaos fighter in demanding battles."
+    },
+    "astarLysander": {
+      "tone": "pending",
+      "text": "Durable team support shows potential, but boss performance needs evidence before an overall rating."
+    },
+    "worldJakhal": {
+      "tone": "poor",
+      "text": "Fragile defences and poor broader results make him a poor choice for most rosters."
+    },
+    "necroWarden": {
+      "tone": "cautious",
+      "text": "Repairs and movement support have uses, but stronger alternatives limit his longer term appeal."
+    },
+    "deathBlightlord": {
+      "tone": "optimistic",
+      "text": "A durable Chaos frontline fighter who handles crowded battles particularly well alongside a dependable healer."
+    },
+    "bloodIntercessor": {
+      "tone": "measured",
+      "text": "Mobile attacks and renewable reinforcements help against waves, though boss fights offer fewer rewards."
+    },
+    "eldarMauganRa": {
+      "tone": "cautious",
+      "text": "Can deliver ranged damage with protection, but movement demands and weak recovery limit reliability."
+    },
+    "bloodMephiston": {
+      "tone": "optimistic",
+      "text": "Repeated psychic damage and flexible movement make him a strong wave clearer with healing support."
+    },
+    "adeptMorvenn": {
+      "tone": "guarded",
+      "text": "Can clear nearby enemies with repair support, but limited broader results weaken her investment case."
+    },
+    "deathRotbone": {
+      "tone": "optimistic",
+      "text": "Exceptional healing and revival give Chaos teams the staying power to weather demanding battles."
+    },
+    "tyranNeurothrope": {
+      "tone": "measured",
+      "text": "A useful boss specialist with psychic teammates, but slow damage buildup works poorly against crowds."
+    },
+    "bloodSanguinary": {
+      "tone": "optimistic",
+      "text": "Keeps protected teams healthy while they keep attacking, making him a valuable endurance partner."
+    },
+    "spaceStormcaller": {
+      "tone": "guarded",
+      "text": "Useful in specialised war teams, but difficult setup and weak wave clearing limit broader investment."
+    },
+    "astarEradicator": {
+      "tone": "pending",
+      "text": "Durability and focused damage remain under assessment; more evidence is needed for an overall rating."
+    },
+    "tyranParasite": {
+      "tone": "cautious",
+      "text": "Can generate helpful reinforcements, but mechanical enemies and explosive attacks sharply reduce their value."
+    },
+    "deathPutrifier": {
+      "tone": "measured",
+      "text": "Useful explosive support in selected teams, though slow movement and positioning needs limit flexibility."
+    },
+    "spaceBlackmane": {
+      "tone": "optimistic",
+      "text": "Strengthens melee teammates and brings dependable assault power, especially in coordinated Guild War teams."
+    },
+    "darkaSternguard": {
+      "tone": "pending",
+      "text": "Extra shooting may help Dark Angels teams; limited evidence keeps the overall rating pending."
+    },
+    "tauCrisis": {
+      "tone": "optimistic",
+      "text": "Tough armour and punishing firepower make her excellent at holding back waves of enemies."
+    },
+    "adeptCanoness": {
+      "tone": "cautious",
+      "text": "Useful against selected psychic and daemonic enemies, but narrow targets limit her broader appeal."
+    },
+    "darkaHellblaster": {
+      "tone": "measured",
+      "text": "Reactive plasma fire offers useful pressure, though positioning and Dark Angels partners shape his results."
+    },
+    "thousSekhetar": {
+      "tone": "guarded",
+      "text": "Defensive shooting has potential, but limited testing and repair options make broader investment uncertain."
+    },
+    "tauShadowsun": {
+      "tone": "cautious",
+      "text": "Can strengthen Tau shooting, but positioning demands and stronger support alternatives limit her appeal."
+    },
+    "emperNoiseMarine": {
+      "tone": "measured",
+      "text": "Ranged pressure helps suitable teams, though fragile defences and limited crowd clearing demand protection."
+    },
+    "tauMarksman": {
+      "tone": "optimistic",
+      "text": "Reliable sniper drones bring sustained firepower and disposable protection, helping his team control the battlefield."
+    },
+    "astraPrimarisPsy": {
+      "tone": "cautious",
+      "text": "Can protect specialised teams, but fragile defences and limited damage make broader investment difficult."
+    },
+    "orksKillaKan": {
+      "tone": "measured",
+      "text": "Useful budget firepower with repair support, though tougher battles expose stronger alternatives."
+    },
+    "orksRuntherd": {
+      "tone": "optimistic",
+      "text": "Strong attacks and renewable Grots give supported Ork teams excellent momentum through waves and wars."
+    },
+    "admecDestroyer": {
+      "tone": "cautious",
+      "text": "Can remove armoured threats from range, but limited movement and crowd damage restrict his usefulness."
+    },
+    "admecMarshall": {
+      "tone": "optimistic",
+      "text": "Keeps reinforcements coming, giving his team extra firepower and room to breathe."
+    },
+    "orksNob": {
+      "tone": "cautious",
+      "text": "Offers mobile disruption in selected teams, but limited recovery and sustained damage make investment situational."
+    },
+    "worldExecutions": {
+      "tone": "cautious",
+      "text": "Can add damage beside suitable partners, but demanding conditions make consistent results difficult."
+    },
+    "astraOrdnance": {
+      "tone": "measured",
+      "text": "Useful ranged firepower and disruption, though fragile defences and limited repeated clearing require protection."
+    },
+    "thousSorcerer": {
+      "tone": "cautious",
+      "text": "Shields offer useful protection, but fragile positioning and limited damage keep his role narrow."
+    },
+    "genesPatriarch": {
+      "tone": "measured",
+      "text": "Strong war teams give him purpose, though positioning demands and uneven results limit broader confidence."
+    },
+    "templAncient": {
+      "tone": "cautious",
+      "text": "Can strengthen selected melee teams, but limited personal damage and narrow partnerships reduce flexibility."
+    },
+    "necroChronomancer": {
+      "tone": "cautious",
+      "text": "Protects mechanical teammates, but sacrifices damage and needs suitable partners to justify the slot."
+    },
+    "necroPlasmancer": {
+      "tone": "cautious",
+      "text": "Can fill a mechanical damage slot, but fragile defences and stronger alternatives limit his appeal."
+    },
+    "ultraTigurius": {
+      "tone": "guarded",
+      "text": "Some psychic damage and protection, but stronger specialists usually offer more lasting value."
+    },
+    "ultraTitus": {
+      "tone": "measured",
+      "text": "Can sustain frontline pressure through finishing blows, though reliable recovery depends on suitable targets."
+    },
+    "spaceHound": {
+      "tone": "guarded",
+      "text": "Occasional psychic disruption and mobility rarely compensate for limited crowd clearing and weak boss results."
+    },
+    "thousTerminator": {
+      "tone": "optimistic",
+      "text": "Self healing and revival make him a dependable anchor for defensive teams and prolonged battles."
+    },
+    "custoTrajann": {
+      "tone": "optimistic",
+      "text": "Brings out the best in powerful teammates, helping strong teams take down tough bosses."
+    },
+    "deathTyphus": {
+      "tone": "optimistic",
+      "text": "Durable defence and powerful psychic blasts give Chaos teams a strong answer to crowded battles."
+    },
+    "tyranTyrantGuard": {
+      "tone": "cautious",
+      "text": "Can shelter nearby allies, but positioning demands and limited boss damage make him a specialist."
+    },
+    "custoKyrus": {
+      "tone": "measured",
+      "text": "Durable counterattacks help against waves, though healing support matters and boss opportunities remain limited."
+    },
+    "spaceWulfen": {
+      "tone": "cautious",
+      "text": "Useful against summoned enemies, but ordinary waves and limited recovery expose his narrow strengths."
+    },
+    "votanUthar": {
+      "tone": "pending",
+      "text": "Defensive and damage support remain under assessment; missing Guild War evidence leaves his rating pending."
+    },
+    "adeptRetributor": {
+      "tone": "measured",
+      "text": "Useful fire damage clears clustered enemies, but friendly fire and fragile defences require careful positioning."
+    },
+    "admecDominus": {
+      "tone": "optimistic",
+      "text": "Useful damage support and mechanical repairs earn him a welcome place in several strong teams."
+    },
+    "blackObliterator": {
+      "tone": "measured",
+      "text": "Useful in defensive war teams, though weak armour and movement limits demand dependable protection."
+    },
+    "votanIronmaster": {
+      "tone": "guarded",
+      "text": "Repairs have value, but modest damage and weak broader results make investment difficult to prioritise."
+    },
+    "tyranWingedPrime": {
+      "tone": "measured",
+      "text": "Renewable summons help maintain pressure, though their survival and suitable targets determine lasting value."
+    },
+    "worldTerminator": {
+      "tone": "optimistic",
+      "text": "Turns successful attacks into protective shields, giving nearby Chaos teammates a welcome boost to survival."
+    },
+    "genesMagus": {
+      "tone": "measured",
+      "text": "Decoys and summons support strong war teams, though fragile positioning and partner dependence limit flexibility."
+    },
+    "astraYarrick": {
+      "tone": "cautious",
+      "text": "Summons can help selected teams, but limited replacements and tougher enemies reduce their lasting value."
+    },
+    "thousTzaangor": {
+      "tone": "optimistic",
+      "text": "Helps psychic teammates reach useful positions and deliver stronger turns, rewarding coordinated team building."
+    },
+    "orksWeirdboy": {
+      "tone": "pending",
+      "text": "Psychic damage remains based on preview evidence; live results are needed for a reliable rating."
+    }
+  }
+}

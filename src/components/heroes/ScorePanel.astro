@@ -1,0 +1,21 @@
+---
+import { formatOverall } from '../../lib/hero-scoring.mjs';
+import { overallSummary } from '../../lib/hero-summaries.mjs';
+import type { Hero } from '../../lib/hero-types';
+import ModeRatings from './ModeRatings.astro';
+import RatingGauge from './RatingGauge.astro';
+interface Props { hero: Hero; }
+const { hero } = Astro.props;
+const required = [...new Map(hero.guides.filter(g => g.role === 'required' && ['campaign','event_campaign'].includes(g.category)).map(g => [g.url,g])).values()];
+---
+<section class="hero-section" id="analysis" aria-labelledby="analysis-title">
+  <div class="section-heading"><h2 id="analysis-title">Overall Hero Rating</h2><a href="/heroes/#scoring">How scoring works</a></div>
+  <div class="rating-summary compact-rating">
+    <strong class="overall-number">{formatOverall(hero.overall.final_score)}{hero.overall.final_score !== null && <small> / 10</small>}</strong>
+    {hero.overall.rank && <span>Rank {hero.overall.rank}</span>}
+    <RatingGauge value={hero.overall.final_score} label="Overall Hero Rating" />
+    <p class="overall-summary-copy" data-overall-summary>{overallSummary(hero.unit_id,hero.overall.final_score)}</p>
+  </div>
+  <h3 class="visually-hidden">Mode ratings</h3>
+  <ModeRatings assessments={hero.assessments} bonus={hero.overall.guide_bonus} bonusGuides={required} showGauges />
+</section>

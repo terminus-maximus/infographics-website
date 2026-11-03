@@ -1,0 +1,105 @@
+---
+import HeroLayout from '../../layouts/HeroLayout.astro';
+import Portrait from '../../components/heroes/Portrait.astro';
+import ScoringExplanation from '../../components/heroes/ScoringExplanation.astro';
+import ModeLabel from '../../components/heroes/ModeLabel.astro';
+import type { Mode } from '../../lib/hero-types';
+import { heroes, heroHref, currentRelease, publication, monthLabel, readableDate, publicationGraphic } from '../../lib/heroes.mjs';
+import { formatOverall, formatMode } from '../../lib/hero-scoring.mjs';
+import filterIconSource from '../../data/heroes/filter-icons.json';
+const filterIcons: Record<string, Record<string, {src:string}>> = filterIconSource.icons;
+const fields = [{id:'alliance',label:'Alliance'},{id:'faction',label:'Faction'},{id:'traits',label:'Trait'},{id:'damage',label:'Damage type'},{id:'rarity',label:'Initial rarity'}] as const;
+const rows = heroes.map(hero => ({unit_id:hero.unit_id,name:hero.name,full_name:hero.full_name,aliases:hero.aliases,faction:hero.faction,alliance:hero.alliance,traits:hero.traits.filter(t=>t.id !== 'Hero').map(t=>t.name),damage:[...new Set(hero.weapons.map(w=>w.damage_type))],rarity:hero.initial_rarity,overall:hero.overall.final_score,raid:hero.overall.raid,war:hero.overall.war,horde:hero.overall.horde,popularity:hero.overall.popularity,bonus:hero.overall.guide_bonus}));
+const options = Object.fromEntries(fields.map(f => [f.id,[...new Set(rows.flatMap(h => Array.isArray(h[f.id]) ? h[f.id] : [h[f.id]]).map(String))].sort((a,b)=>a.localeCompare(b,'en'))]));
+const columns = [{id:'name',label:'Hero'},{id:'overall',label:'Overall'},{id:'raid',label:'Raid'},{id:'war',label:'War'},{id:'horde',label:'Horde'},{id:'popularity',label:'Pop.',title:'Popularity'},{id:'bonus',label:'Bonus'}];
+---
+<HeroLayout title="Tacticus Hero Guides & Rankings | Terminus Maximus" description="Explore Tacticus hero reference stats, abilities and approved Guild Raid, Guild War, Horde and Popularity ratings. Search the roster and compare overall hero ratings." image="/images/web/HeroGuideLogo.webp" path="/heroes/">
+  <img class="directory-banner" src="/images/web/HeroGuideLogo.webp" alt="Terminus Maximus Hero Guides & Rankings for Warhammer 40,000: Tacticus" width="700" height="393" fetchpriority="high" />
+  <header class="directory-heading"><h1>Tacticus Hero Guides & Rankings</h1><p class="muted">{heroes.length} Heroes · Updated {readableDate(currentRelease.date)}</p></header>
+  {publication && <aside class="top-preview">{publicationGraphic && <a href="/heroes/top-10/" aria-label="View the Top 10 hero rankings"><img src={publicationGraphic.thumbnailSrc} alt={publicationGraphic.alt} width="140" height="79" loading="lazy" /></a>}<div><p class="eyebrow">{monthLabel(publication.month)}</p><a href="/heroes/top-10/" class="top-preview-link">Explore the Top 10 rankings <span aria-hidden="true">→</span></a><p class="muted">This month’s top heroes, their strengths, and links to the full guides.</p></div></aside>}
+  <section class="hero-section roster-section" aria-labelledby="roster-heading" data-hero-directory>
+    <div class="section-heading"><h2 id="roster-heading">Hero directory</h2><a href="#scoring">How scoring works</a></div>
+    <form class="directory-controls" hidden data-filters>
+      <div class="search-row"><label class="hero-search">Search heroes<input type="search" name="q" placeholder="Name or alias, e.g. Tiggy" autocomplete="off" /></label><button type="reset" class="reset-button">Reset all</button></div>
+      <div class="filter-grid">{fields.map(field => <details><summary>{field.label} <span data-filter-count={field.id}></span></summary><fieldset><legend class="visually-hidden">{field.label}</legend>{options[field.id].map(value => <label><input type="checkbox" name={field.id} value={value} />{filterIcons[field.id]?.[value] && <img class="filter-icon" src={filterIcons[field.id][value].src} width="28" height="28" alt="" loading="lazy" />}<span>{value}</span></label>)}</fieldset></details>)}</div>
+    </form>
+    <div class="table-toolbar"><p data-result-count role="status">{heroes.length} of {heroes.length} heroes</p></div>
+    <p class="scroll-hint muted">Scroll horizontally to compare all ratings.</p>
+    <div class="table-scroll hero-directory-scroll" role="region" aria-label="Sortable hero ratings" tabindex="0"><table class="hero-directory"><caption class="visually-hidden">Tacticus hero directory. Overall, Raid, War, Horde and Popularity scores are out of 10. Campaign Bonus adds up to 0.25 overall. Rankings use unrounded values. Activate a column heading to sort.</caption>
+      <thead><tr>{columns.map(col => <th scope="col" aria-sort={col.id === 'name' ? 'ascending' : 'none'}><button type="button" data-sort={col.id} title={col.title} aria-label={col.title} disabled>{['raid','war','horde','popularity'].includes(col.id) ? <ModeLabel mode={col.id as Mode} label={col.label} /> : col.label}<span aria-hidden="true" data-sort-icon>{col.id === 'name' ? ' ↑' : ' ↕'}</span></button></th>)}</tr></thead>
+      <tbody>{heroes.map(hero => <tr data-unit-id={hero.unit_id}><th scope="row"><a class="hero-table-name" href={heroHref(hero)}><Portrait hero={hero} /><span>{hero.name}</span></a></th><td class="score-cell"><strong>{formatOverall(hero.overall.final_score)}</strong></td><td>{formatMode(hero.assessments.raid.display_score ?? hero.overall.raid)}</td><td>{formatMode(hero.assessments.war.display_score ?? hero.overall.war)}</td><td>{formatMode(hero.assessments.horde.display_score ?? hero.overall.horde)}</td><td>{formatOverall(hero.overall.popularity)}</td><td>{hero.overall.guide_bonus ? `+${hero.overall.guide_bonus}` : '—'}</td></tr>)}</tbody>
+    </table></div>
+    <p data-empty hidden>No heroes match these filters. Try another name or reset the filters.</p>
+    <noscript><p>All {heroes.length} heroes are listed alphabetically. Enable JavaScript to filter and sort.</p></noscript>
+    <script is:inline type="application/json" data-directory-json set:html={JSON.stringify(rows).replace(/</g,'\u003c')} />
+  </section>
+  <section class="hero-section"><h2>Explore the game-mode guides</h2><nav class="hero-jump-links" aria-label="Game-mode guides"><a href="/guild-raid/boss-meta/"><ModeLabel mode="raid" /></a><a href="/guild-wars/"><ModeLabel mode="war" /></a><a href="/campaigns/">Campaigns</a><a href="/campaign-event/">Event Campaigns</a><a href="/lre/">Legendary Release Events</a><a href="/incursion-mow/">Incursion</a></nav></section>
+  <ScoringExplanation />
+</HeroLayout>
+<style>
+  .directory-banner {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
+  }
+</style>
+<script>
+import { sortHeroes, matchesHero } from '../../lib/hero-scoring.mjs';
+const root = document.querySelector<HTMLElement>('[data-hero-directory]')!;
+const form = root.querySelector<HTMLFormElement>('[data-filters]')!;
+const search = form.elements.namedItem('q') as HTMLInputElement;
+const rows = JSON.parse(root.querySelector('[data-directory-json]')!.textContent!);
+const body = root.querySelector('tbody')!;
+const nodes = new Map([...body.querySelectorAll<HTMLTableRowElement>('tr')].map(row=>[row.dataset.unitId,row]));
+const categories = ['alliance','faction','traits','damage','rarity'];
+let sort = 'name', direction = 'asc';
+form.hidden = false;
+root.querySelectorAll<HTMLButtonElement>('[data-sort]').forEach(button => { button.disabled = false; button.addEventListener('click',() => {
+  const field = button.dataset.sort!;
+  direction = sort === field ? (direction === 'asc' ? 'desc' : 'asc') : (['overall','raid','war','horde','popularity','bonus'].includes(field) ? 'desc' : 'asc');
+  sort = field; render(true);
+}); });
+function render(save: boolean) {
+  const values = new FormData(form);
+  const filters = Object.fromEntries(categories.map(key=>[key,values.getAll(key).map(String)]));
+  let count = 0;
+  for (const hero of sortHeroes(rows,sort,direction)) {
+    const node = nodes.get(hero.unit_id)!;
+    node.hidden = !matchesHero(hero,search.value,filters);
+    if (!node.hidden) count++;
+    body.append(node);
+  }
+  root.querySelector('[data-result-count]')!.textContent = `${count} of ${rows.length} heroes`;
+  (root.querySelector('[data-empty]') as HTMLElement).hidden = count !== 0;
+  for (const key of categories) root.querySelector(`[data-filter-count="${key}"]`)!.textContent = filters[key].length ? `(${filters[key].length})` : '';
+  root.querySelectorAll<HTMLElement>('[data-sort]').forEach(button => {
+    button.closest('th')!.setAttribute('aria-sort',button.dataset.sort === sort ? (direction === 'asc' ? 'ascending' : 'descending') : 'none');
+    button.querySelector('[data-sort-icon]')!.textContent = button.dataset.sort === sort ? (direction === 'asc' ? ' ↑' : ' ↓') : ' ↕';
+  });
+  if (save) {
+    const state = new URLSearchParams();
+    if (search.value.trim()) state.set('q',search.value.trim());
+    for (const key of categories) for (const value of filters[key]) state.append(key,value);
+    if (sort !== 'name' || direction !== 'asc') { state.set('sort',sort); state.set('direction',direction); }
+    history.replaceState(null,'',`${location.pathname}${state.size ? '#'+state : ''}`);
+  }
+}
+function restore() {
+  form.reset();
+  const params = new URLSearchParams(location.hash.slice(1));
+  search.value = params.get('q') || '';
+  form.querySelectorAll<HTMLInputElement>('input[type=checkbox]').forEach(input=>input.checked=params.getAll(input.name).includes(input.value));
+  sort = ['name','overall','raid','war','horde','popularity','bonus'].includes(params.get('sort') || '') ? params.get('sort')! : 'name';
+  direction = params.get('direction') === 'desc' ? 'desc' : 'asc';
+  render(false);
+}
+let restoring = true;
+form.addEventListener('submit',event=>event.preventDefault());
+form.addEventListener('input',()=>render(true));
+form.addEventListener('reset',()=>{ if (!restoring) setTimeout(()=>{sort='name';direction='asc';render(true);},0); });
+window.addEventListener('hashchange',()=>{restoring=true;restore();restoring=false;});
+restore(); restoring=false;
+</script>

@@ -1,0 +1,26 @@
+---
+import type { Hero, GuideRelationship } from '../../lib/hero-types';
+import thumbnailSource from '../../data/heroes/guide-thumbnails.json';
+import roundPortraitSource from '../../data/heroes/round-portraits.json';
+import ModeText from './ModeText.astro';
+interface Props { hero: Hero; }
+const { hero } = Astro.props;
+const roundPortraits: Record<string,{src:string;width:number;height:number}> = roundPortraitSource;
+const portrait=roundPortraits[hero.unit_id];
+const roleLabel = (role:string) => role.replace(/\b\w/g,letter=>letter.toUpperCase());
+const categoryOrder: Record<string,number> = {raid:0,war:1,horde:2,lre:3,campaign:4,event_campaign:4,incursion:5};
+const links = [...new Map(hero.guides.map(g => [`${g.url}:${g.role}`, g])).values()]
+  .sort((a,b)=>(categoryOrder[a.category] ?? 6)-(categoryOrder[b.category] ?? 6));
+const orderedAppearances = (guide:GuideRelationship) => [...(guide.appearances || [])]
+  .sort((a,b)=>guide.category==='raid' ? Number(!a.url.endsWith('-meta-team'))-Number(!b.url.endsWith('-meta-team')) : 0);
+const thumbnails: Record<string,{src:string;alt:string;width:number;height:number}> = thumbnailSource;
+---
+<section class="hero-section" id="guides"><h2>Supporting Evidence</h2>
+<ul class="guide-links guide-thumbnail-grid">{links.map(g => <li>
+  <a class="guide-cover" href={g.url}>{thumbnails[g.url] && <img src={thumbnails[g.url].src} alt="" width={thumbnails[g.url].width} height={thumbnails[g.url].height} loading="lazy" />}<span><ModeText text={g.title} /></span></a>
+  {g.appearances?.length ? <ul class="guide-appearances" aria-label={`${hero.name} in ${g.title}`}>
+    {orderedAppearances(g).map(appearance=><li><a class="guide-role" href={appearance.url}>{portrait && <img src={portrait.src} alt="" width={portrait.width} height={portrait.height} loading="lazy" />}<span>{appearance.label}</span></a></li>)}
+  </ul> : <span class="guide-role">{portrait && <img src={portrait.src} alt="" width={portrait.width} height={portrait.height} loading="lazy" />}<span>{roleLabel(g.role)}</span></span>}
+</li>)}</ul>
+{!links.length && <p>No structured guide relationships recorded yet.</p>}
+</section>

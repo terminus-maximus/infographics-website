@@ -1,0 +1,146 @@
+{
+  "/campaign-event/admech/": {
+    "src": "/images/web/ce-admech.webp",
+    "alt": "AdMech Event Campaign infographic",
+    "width": 700,
+    "height": 392
+  },
+  "/campaign-event/dark-angels/": {
+    "src": "/images/web/ce-dark-angels.webp",
+    "alt": "Dark Angels Event Campaign infographic",
+    "width": 700,
+    "height": 394
+  },
+  "/campaign-event/death-guard/": {
+    "src": "/images/web/ce-death-guard.webp",
+    "alt": "Death Guard Event Campaign infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaign-event/sisters/": {
+    "src": "/images/web/ce-sisters.webp",
+    "alt": "Sisters Event Campaign infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaign-event/tau/": {
+    "src": "/images/web/ce-tau.webp",
+    "alt": "T’au Event Campaign infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaign-event/tyranids/": {
+    "src": "/images/web/ce-tyranids.webp",
+    "alt": "Tyranids Event Campaign infographic",
+    "width": 700,
+    "height": 394
+  },
+  "/campaigns/fall-of-cadia-mirror/": {
+    "src": "/images/web/fall-of-cadia-mirror.webp",
+    "alt": "Tacticus Fall of Cadia Mirror Campaign Guide infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaigns/fall-of-cadia/": {
+    "src": "/images/web/fall-of-cadia.webp",
+    "alt": "Tacticus Fall of Cadia Campaign Guide infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaigns/indomitus-mirror/": {
+    "src": "/images/web/indomitus-mirror.webp",
+    "alt": "Tacticus Indomitus Mirror Campaign Guide infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaigns/indomitus/": {
+    "src": "/images/web/indomitus.webp",
+    "alt": "Tacticus Indomitus Campaign Guide infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/campaigns/octarius-mirror/": {
+    "src": "/images/web/octarius-mirror.webp",
+    "alt": "Tacticus Octarius Mirror Campaign Guide infographic",
+    "width": 700,
+    "height": 394
+  },
+  "/campaigns/octarius/": {
+    "src": "/images/web/octarius.webp",
+    "alt": "Tacticus Octarius Campaign Guide infographic",
+    "width": 700,
+    "height": 392
+  },
+  "/campaigns/saim-hann-mirror/": {
+    "src": "/images/web/saim-hann-mirror.webp",
+    "alt": "Tacticus Saim-Hann Mirror Campaign Guide infographic",
+    "width": 700,
+    "height": 391
+  },
+  "/campaigns/saim-hann/": {
+    "src": "/images/web/saim-hann.webp",
+    "alt": "Tacticus Saim-Hann Campaign Guide infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/guild-raid/boss-meta/": {
+    "src": "/images/web/boss-meta.webp",
+    "alt": "Guild Raid Boss Meta Infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/guild-wars/attack/": {
+    "src": "/images/web/guild-wars-attack.webp",
+    "alt": "Guild Wars Top 10 Attackers infographic: ten core teams with popular flex characters and Machines of War",
+    "width": 700,
+    "height": 395
+  },
+  "/guild-wars/defend/": {
+    "src": "/images/web/guild-wars-defend.webp",
+    "alt": "Guild War Top 10 Defend Teams infographic: ten full teams with Machines of War and their most common counters",
+    "width": 700,
+    "height": 394
+  },
+  "/incursion-mow/biovore/": {
+    "src": "/images/web/mow-biovore.webp",
+    "alt": "Biovore Incursion guide with Chaos team cores, flex heroes, tier caps, and shard rewards",
+    "width": 700,
+    "height": 391
+  },
+  "/incursion-mow/plagueburst-crawler/": {
+    "src": "/images/web/mow-pbc.webp",
+    "alt": "Plagueburst Crawler Incursion unlock guide with Xenos team cores, flex heroes, tier caps, and shard rewards",
+    "width": 700,
+    "height": 392
+  },
+  "/incursion-mow/zkar/": {
+    "src": "/images/web/mow-zkar.webp",
+    "alt": "Z’Kar Incursion unlock guide with Xenos team cores, flex heroes, tier caps, and shard rewards",
+    "width": 700,
+    "height": 392
+  },
+  "/lre/fabius/": {
+    "src": "/images/web/fabius-lre.webp",
+    "alt": "Fabius Bile Legendary Release Event Infographic",
+    "width": 700,
+    "height": 393
+  },
+  "/lre/farsight/": {
+    "src": "/images/web/farsight-lre.webp",
+    "alt": "Farsight Legendary Release Event Infographic",
+    "width": 700,
+    "height": 394
+  },
+  "/lre/lysander/": {
+    "src": "/images/web/lysander-lre.webp",
+    "alt": "Lysander Legendary Release Event Infographic",
+    "width": 700,
+    "height": 394
+  },
+  "/lre/uthar/": {
+    "src": "/images/web/uthar-lre.webp",
+    "alt": "Uthar Legendary Release Event Infographic",
+    "width": 700,
+    "height": 394
+  }
+}

@@ -1,0 +1,9 @@
+---
+interface Props {value:number|null;label:string}
+const {value,label}=Astro.props;
+const position=value === null ? null : (Math.max(1,Math.min(10,value))-1)/9*100;
+---
+{value !== null && <div class="rating-gauge" role="meter" aria-label={label} aria-valuemin="1" aria-valuemax="10" aria-valuenow={value} aria-valuetext={`${Number(value.toFixed(2))} out of 10`}>
+  <div class="rating-gauge-track" aria-hidden="true"><span class="rating-gauge-marker" style={`left:${position}%`}></span></div>
+  <div class="rating-gauge-scale" aria-hidden="true"><span>1</span><span>10</span></div>
+</div>}

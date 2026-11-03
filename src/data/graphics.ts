@@ -194,6 +194,22 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "guild-war"
     },
     {
+      title: "Hero Guides",
+      href: "/heroes/",
+      description: "Rankings for every Tacticus character",
+      image: "/images/HeroGuideLogo.png",
+      thumbnail: "/images/thumbnails/HeroGuideLogo-thumb.png",
+      category: "heroes"
+    },
+    {
+      title: "Top 10 Heroes",
+      href: "/heroes/top-10/",
+      description: "The best Tacticus heroes, ranked each month.",
+      image: "/images/top-10.png",
+      thumbnail: "/images/thumbnails/top-10-thumb.png",
+      category: "heroes"
+    },
+    {
       title: "Replay Library",
       href: "/replay-library",
       description: "Web exclusive feature! Search replays by Boss, Map, Team, or even specific Heroes",

@@ -1,4 +1,5 @@
 ---
+import GuideHeroLinks from "../heroes/GuideHeroLinks.astro";
 import '../../styles/campaign-events.css';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../Header.astro';
@@ -43,5 +44,6 @@ const webImage = `/images/web/ce-${guide.slug}.webp`;
     <section class="guide-panel" id="rewards" aria-labelledby="rewards-heading"><div class="section-heading"><span>06</span><h2 id="rewards-heading">Extremis rewards</h2></div><EventRewards rewards={guide.rewards} eventName={guide.displayTitle} /></section>
     <details class="guide-panel credits"><summary>Credits &amp; research notes</summary><p>Thanks to the players and creators who shared their clears. Lowest Seen combines recorded builds and community reports; Safe Bet is our recommendation. QA and test-server footage is labelled where it appears.</p><p>Community infographic recommendations are credited to <a href="https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242" target="_blank" rel="noopener noreferrer">Forgotten Saber and the contributing players</a>.</p><ul>{sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a></li>)}</ul></details>
     <RecommendationSections showMoreToExplore={false} />
+  <GuideHeroLinks />
   </main><Footer />
 </Layout>

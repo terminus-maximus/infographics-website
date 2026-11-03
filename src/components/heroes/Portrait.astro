@@ -1,0 +1,4 @@
+---
+const { hero, large = false } = Astro.props;
+---
+{hero.portrait?.src ? <img class:list={['hero-portrait', {large}]} src={hero.portrait.src} width={hero.portrait.width} height={hero.portrait.height} alt={`${hero.name} portrait`} loading={large ? 'eager' : 'lazy'} /> : <span class:list={['hero-portrait','portrait-fallback',{large}]} role="img" aria-label={`${hero.name}: portrait unavailable`}>−</span>}

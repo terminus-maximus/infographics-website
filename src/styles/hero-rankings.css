@@ -1,0 +1,35 @@
+/* Monthly rankings share the individual guides' identity, summary and mode cards. */
+.top-ranking-heading{max-width:none}
+.top-ranking-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.top-ranking-meta p{margin:0}
+.top-ranking-meta a{font-size:.83rem}
+.top-ranking{margin-top:2rem}
+.ranked-hero{margin-top:2.5rem;padding-top:2rem;scroll-margin-top:1.5rem}
+.ranked-hero:first-child{margin-top:0}
+.ranked-hero-identity{grid-template-columns:140px minmax(0,1fr);align-items:center;margin:0 0 1.5rem}
+.ranked-portrait{display:block;width:140px;border-radius:12px}
+.ranked-portrait .hero-portrait{width:100%;border-radius:12px}
+.ranked-identity-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem 1rem}
+.rank-position{padding:.25rem .6rem;border:1px solid #61512b;border-radius:5px;background:#25231c;color:#f2d780;white-space:nowrap}
+.ranked-hero-identity h2{font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1.2;letter-spacing:-.035em;margin:.6rem 0 .5rem;overflow-wrap:anywhere}
+.ranked-hero-identity h2 a{color:#f5f3ec;text-decoration:none}
+.ranked-hero-identity h2 a:hover{color:#fff0b5}
+.ranked-hero-identity .hero-title{margin:.5rem 0 .65rem}
+.ranked-guide-link{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;font-size:.85rem;text-decoration:none}
+.ranked-guide-link:hover{text-decoration:underline}
+.ranked-summary-label{display:block;font-size:.8rem;color:#d5c99f}
+.ranked-summary.compact-rating{padding:1rem 1.4rem}
+.ranked-summary .rating-gauge{max-width:600px}
+
+@media(max-width:600px){
+  .top-ranking-meta{gap:.5rem}
+  .ranked-hero{margin-top:2rem;padding-top:1.5rem}
+  .ranked-hero-identity{grid-template-columns:95px minmax(0,1fr);gap:1rem;align-items:start}
+  .ranked-portrait{width:95px}
+  .ranked-identity-meta{gap:.5rem;font-size:.6rem;margin-top:0}
+  .rank-position{font-size:.65rem}
+  .ranked-hero-identity h2{font-size:1.65rem}
+  .ranked-hero-identity .hero-title{font-size:.85rem;line-height:1.45}
+  .ranked-guide-link{font-size:.8rem}
+  .ranked-summary.compact-rating{gap:.65rem;padding:1rem}
+}

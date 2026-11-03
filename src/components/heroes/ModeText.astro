@@ -1,0 +1,9 @@
+---
+import ModeLabel from './ModeLabel.astro';
+import type { Mode } from '../../lib/hero-types';
+interface Props { text:string; }
+const {text} = Astro.props;
+const parts = text.split(/(\bGuild Raids?\b|\bGuild Wars?\b|\bHorde\b|\bOnslaught\b)/gi);
+const modeFor = (part:string):Mode|null => /^Guild Raids?$/i.test(part) ? 'raid' : /^Guild Wars?$/i.test(part) ? 'war' : /^(Horde|Onslaught)$/i.test(part) ? 'horde' : null;
+---
+{parts.map(part=>{const mode=modeFor(part);return mode ? <ModeLabel mode={mode} label={part} /> : part;})}

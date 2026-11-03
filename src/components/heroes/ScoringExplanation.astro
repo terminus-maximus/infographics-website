@@ -1,0 +1,182 @@
+---
+import ModeLabel from './ModeLabel.astro';
+---
+<section class="hero-section scoring-section" id="scoring" aria-labelledby="scoring-heading">
+  <p class="eyebrow">The methodology</p>
+  <h2 id="scoring-heading">How scoring works</h2>
+  <div class="methodology-content">
+    <h3>Overall score</h3>
+    <p class="methodology-key-point">Each score contributes <strong>25%</strong>.</p>
+    <div class="methodology-formula">
+      <p>Base = (<ModeLabel mode="raid" /> + <ModeLabel mode="war" /> + <ModeLabel mode="horde" /> + <ModeLabel mode="popularity" />) ÷ 4</p>
+      <p>Overall = min(10, Base + campaign bonus)</p>
+    </div>
+    <p class="methodology-callout">All four scores are needed. A missing score leaves the overall <strong>pending</strong>; it is never zero and the other weights do not change.</p>
+
+    <h3>Campaign bonus</h3>
+    <p>A hero explicitly required in a current Campaign or Event Campaign guide receives <strong>+0.25 once</strong>, even when required in several guides.</p>
+
+    <h3><ModeLabel mode="raid" /></h3>
+    <p>Ratings use a hero’s distinct boss matchups in the <a href="/guild-raid/boss-meta/">Boss Meta Guide</a>, supported by evidence in the <a href="/replay-library/">Replay Library</a>.</p>
+    <div class="methodology-formula">
+      <p><strong>Raid = coverage score + breadth bonus</strong></p>
+      <p>Meta bosses → coverage score:</p>
+      <p class="coverage-bands"><span>1 → 7</span><span>2 → 8</span><span>3 → 8.5</span><span>4–5 → 9</span><span>6–7 → 9.5</span><span>8+ → 10</span></p>
+      <p>Alternate-only coverage: 1 boss → 6.5; 2+ bosses → 7</p>
+      <p>Breadth bonus = +0.5 for 1–2 Meta bosses and at least 5 selected bosses in total; otherwise 0</p>
+    </div>
+    <p>Count each boss once across Meta and Alternate teams, with Meta taking precedence. Heroes outside the selected teams retain their assessed raid and prime value. These are editorial bands; team results do not isolate individual damage.</p>
+
+    <h3><ModeLabel mode="war" /></h3>
+    <p>Meds Up attack wins and defensive holds across five seasons, with BF3, BF4 and BF5 weighted equally. Each role’s average hero rate maps to 5, and the stronger supported role sets the base. The lower range is calibrated so the weakest combined performer receives 1.</p>
+    <div class="methodology-formula">
+      <p><strong>War = nearest half-point(min(10, Base + Attack bonus + Defense bonus))</strong></p>
+    </div>
+    <p>Attack bonus = +0.5 for membership in a Top 10 attacking core. Defense bonus = +0.5 for membership in a Top 10 defending team. Each bonus applies once, for a maximum of +1.</p>
+    <p>Roles need sufficient battle, war and guild coverage; otherwise the rating remains Pending. The current evidence covers S23–27 through October 6, 2026.</p>
+
+    <h3><ModeLabel mode="horde" /></h3>
+    <p>Survival, Legendary Release Events and Onslaught receive equal weight. Each assessment considers a hero’s strongest supported contribution: clearing waves, sustaining allies or enabling teammates.</p>
+    <div class="methodology-formula">
+      <p><strong>Horde = (Survival + LRE + Onslaught) ÷ 3</strong></p>
+      <p>Rounded to the nearest half-point.</p>
+    </div>
+    <p>No further curve or guide bonus applies. Team, positioning, event and relic dependencies remain part of the assessment; provisional and preview ratings keep their evidence labels.</p>
+
+    <h3><ModeLabel mode="popularity" /></h3>
+    <p>Investment counts from <a href="https://tacticusplanner.app/">Tacticus Planner</a> at Silver I (S1), Gold I (G1), Diamond I (D1), Diamond III (D3) and Adamantine II (A2) receive equal weight. Each count is scaled against that milestone’s largest hero count.</p>
+    <div class="methodology-formula">
+      <p><strong>Investment index = (S1 ÷ max(S1) + G1 ÷ max(G1) + D1 ÷ max(D1) + D3 ÷ max(D3) + A2 ÷ max(A2)) ÷ 5</strong></p>
+      <p>Popularity: lowest index → 1 · mean index → 5 · highest index → 10</p>
+    </div>
+    <p>Scores follow straight lines between these three anchors and retain full precision.</p>
+    <p>The current dataset covers 118 heroes; Fabius Bile remains Pending. Counts are inferred to include that rank and higher; the measurement date is unconfirmed. Availability, release age and campaign requirements can influence investment, so this measures adoption rather than battle effectiveness.</p>
+  </div>
+  <p class="methodology-back"><a href="#roster-heading">↑ Back to Hero directory</a></p>
+</section>
+
+<style>
+  #scoring {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    scroll-margin-top: 1rem;
+  }
+
+  #scoring h2 {
+    color: #d4af37;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .methodology-content {
+    max-width: 980px;
+    margin: 0 auto;
+    color: #ccc;
+    line-height: 1.7;
+  }
+
+  #scoring h3 {
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.02));
+    border-left: 3px solid #d4af37;
+    border-radius: 0 8px 8px 0;
+    color: #d4af37;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.35;
+    margin: 2rem 0 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+
+  #scoring h3:first-child {
+    margin-top: 0.25rem;
+  }
+
+  #scoring .methodology-content p {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+  }
+
+  #scoring strong {
+    color: #f5d76e;
+  }
+
+  .methodology-content a {
+    color: #d4af37;
+    font-weight: 700;
+    text-decoration-color: rgba(212, 175, 55, 0.65);
+    text-underline-offset: 0.18em;
+  }
+
+  .methodology-content a:hover,
+  .methodology-content a:focus-visible {
+    color: #f5d76e;
+    text-decoration-thickness: 2px;
+  }
+
+  .methodology-callout,
+  .methodology-formula {
+    background: #151515;
+    border: 1px solid #3a3a3a;
+    border-left: 3px solid #d4af37;
+    border-radius: 8px;
+    color: #e4e4e4;
+    padding: 1rem 1.1rem;
+  }
+
+  .methodology-key-point {
+    border-left: 2px solid rgba(212, 175, 55, 0.65);
+    color: #e0e0e0;
+    font-weight: 650;
+    padding: 0.2rem 0 0.2rem 0.9rem;
+  }
+
+  .methodology-formula {
+    margin: 1rem 0;
+    line-height: 2;
+  }
+
+  #scoring .methodology-formula p {
+    margin: 0;
+  }
+
+  .coverage-bands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+  }
+
+  .coverage-bands span {
+    white-space: nowrap;
+  }
+
+  #scoring .methodology-back {
+    margin: 1.25rem 0 0;
+    text-align: right;
+  }
+
+  .methodology-back a {
+    background: #121212;
+    border: 1px solid #444;
+    border-radius: 999px;
+    color: #d4af37;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.55rem 0.85rem;
+    text-decoration: none;
+  }
+
+  .methodology-back a:hover,
+  .methodology-back a:focus-visible {
+    border-color: #d4af37;
+    color: #f5d76e;
+  }
+
+  @media (max-width: 700px) {
+    #scoring {
+      padding: 1rem;
+    }
+  }
+</style>

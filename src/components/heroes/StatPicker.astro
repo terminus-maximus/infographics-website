@@ -1,0 +1,11 @@
+---
+import GameIcon from './GameIcon.astro';
+interface Icon {src:string;width:number;height:number;count?:number}
+interface Props { id:string; label:string; value:string|number; options:{value:string|number;label:string;icon?:Icon}[]; }
+const {id,label,value,options} = Astro.props;
+const current = options.find(option => String(option.value) === String(value));
+---
+<div class="stat-picker-control"><span class="picker-label">{label}</span><details class="stat-picker" data-picker={id}>
+  <summary aria-label={`${label}: ${current?.label}`}><GameIcon icon={current?.icon} class={`picker-icon ${id}-icon`} /><span data-picker-label>{current?.label}</span><span class="picker-chevron" aria-hidden="true">⌄</span></summary>
+  <fieldset><legend class="visually-hidden">{label}</legend>{options.map(option => <label><input type="radio" name={`hero-${id}`} value={option.value} checked={String(option.value) === String(value)} /><GameIcon icon={option.icon} class={`picker-icon ${id}-icon`} /><span>{option.label}</span></label>)}</fieldset>
+</details></div>

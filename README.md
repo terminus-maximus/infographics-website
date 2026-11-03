@@ -1,3 +1,11 @@
+# Terminus Maximus maintenance
+
+Hero Guides score updates start with [HeroDatabase current context](../HeroDatabase/CURRENT_CONTEXT.md) and the [local score-update workflow](docs/hero-score-update-workflow.md). The [maintenance overview](docs/hero-guides.md) documents page sources and checks. Use [Hero Score Refresh](/Users/danfoster01/.codex/skills/hero-score-refresh/SKILL.md) for approved score/copy application and local Top 10 refreshes.
+
+Current Overall policy: four equal scores (Raid, War, Horde, Popularity), plus a non-stacking **+0.25** for required Campaign/Event Campaign heroes, capped at 10. Require all four; rank unrounded values. Site order: **Overall, Raid, War, Horde, Popularity, Bonus**. Popularity uses the existing Energy/stamina blue beaker. Current research and frozen monthly Top 10 snapshots require separate refresh steps; local snapshot creation does not deploy online.
+
+The original Astro setup notes follow.
+
 # Astro Starter Kit: Basics
 
 ```sh

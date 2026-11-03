@@ -1,0 +1,132 @@
+---
+import { reference } from '../../lib/heroes.mjs';
+import { rankName, traitDescription } from '../../lib/hero-reference.mjs';
+import profileIconSource from '../../data/heroes/profile-icons.json';
+import filterIconSource from '../../data/heroes/filter-icons.json';
+import GameIcon from './GameIcon.astro';
+import StatPicker from './StatPicker.astro';
+import Relics from './Relics.astro';
+import type { Hero } from '../../lib/hero-types';
+interface Props { hero: Hero; }
+interface Icon {src:string;width:number;height:number;count?:number}
+const { hero } = Astro.props;
+const icons = profileIconSource as unknown as Record<string,Record<string,Icon>>;
+const filterIcons = filterIconSource.icons as Record<string,Record<string,Icon>>;
+const contexts = hero.progression.filter(p => p.unlocked && p.stats.length);
+const initial = contexts.find(p => p.index === hero.default_progression)!;
+const initialStats = initial.stats.find(row => row[0] === hero.default_rank);
+const rarities = [...new Set(contexts.map(p => p.rarity))];
+const rankOptions = initial.stats.map(row => ({value:row[0],label:rankName(reference.ranks.find(r => r.index === row[0])),icon:icons.ranks[row[0]]}));
+const compactIcons = (group:string) => Object.fromEntries(Object.entries(icons[group]).map(([key,{src,width,height,count}]) => [key,{src,width,height,...(count !== undefined ? {count} : {})}]));
+const payload = {contexts,ranks:reference.ranks.map(r => ({...r,name:rankName(r)})),initial:hero.default_progression,rank:hero.default_rank,icons:{rarity:compactIcons('rarities'),stars:compactIcons('stars'),rank:compactIcons('ranks')}};
+const traits = hero.traits.filter(trait => trait.id !== 'Hero');
+---
+<section class="hero-section reference-section" id="reference" aria-labelledby="reference-heading" data-hero-reference>
+  <div class="section-heading"><h2 id="reference-heading">Hero Stats</h2><span class="tag">Game {reference.snapshot.app_version}</span></div>
+  <div data-reference-stats>
+    <div class="stat-controls" hidden data-stat-controls>
+      <StatPicker id="rarity" label="Rarity" value={initial.rarity} options={rarities.map(rarity => ({value:rarity,label:rarity,icon:icons.rarities[rarity]}))} />
+      <StatPicker id="stars" label="Stars" value={initial.index} options={contexts.filter(p => p.rarity === initial.rarity).map(p => ({value:p.index,label:p.star_label,icon:icons.stars[p.stars]}))} />
+      <StatPicker id="rank" label="Rank" value={hero.default_rank} options={rankOptions} />
+    </div>
+    <p class="visually-hidden" data-state-label>{`${initial.rarity} · ${initial.star_label} · ${rankOptions.find(r => r.value === hero.default_rank)?.label}`}</p>
+    <div aria-live="polite" aria-atomic="true" class="stat-result">
+      <dl class="reference-values">{['Health','Armor','Damage'].map((label,index) => <div><GameIcon icon={icons.stats[label.toLowerCase()]} class="stat-icon" /><div><dt>{label}</dt><dd data-stat={index+1}>{initialStats?.[index+1]?.toLocaleString('en-US') ?? 'Unavailable'}</dd></div></div>)}</dl>
+      <span class="visually-hidden" data-announcement></span>
+    </div>
+    <script is:inline type="application/json" data-reference-json set:html={JSON.stringify(payload).replace(/</g,'\u003c')} />
+  </div>
+  <div class="combat-grid">
+    <article class="combat-card movement-card"><h3><GameIcon icon={icons.stats.movement} />Movement</h3><strong class="movement-value">{hero.movement ?? '—'}</strong><span class="muted">hexes</span></article>
+    {hero.weapons.map(weapon => <article class="combat-card"><h3><GameIcon icon={icons.stats[weapon.kind]} />{weapon.kind === 'melee' ? 'Melee' : 'Ranged'}</h3><div class="weapon-damage"><GameIcon icon={filterIcons.damage[weapon.damage_type]} /><strong>{weapon.damage_type}</strong></div><dl class="attack-facts"><div><dt><GameIcon icon={icons.stats.hits} />Hits</dt><dd>{weapon.hits}</dd></div><div><dt>Range</dt><dd>{weapon.range}</dd></div><div><dt><GameIcon icon={icons.stats.pierce} />Pierce</dt><dd>{weapon.pierce}%</dd></div></dl></article>)}
+  </div>
+  {traits.length > 0 && <><h3>Traits</h3><div class="trait-card-grid">{traits.map(trait => <article class="ability-card trait-card"><header class="ability-heading"><GameIcon icon={filterIcons.traits[trait.name]} class="trait-card-icon" /><h4>{trait.name}</h4></header><p>{traitDescription(trait)}</p></article>)}</div></>}
+  <h3>Abilities</h3>
+  <div class="ability-grid">{hero.abilities.map(ability => <article class="ability-card" data-ability>
+    <header class="ability-heading"><GameIcon icon={icons.abilities[ability.id]} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h4>{ability.name}</h4></div></header>
+    <div class="ability-level-control" data-level-control hidden><label for={`level-${ability.id}`}>Level <output data-level-output for={`level-${ability.id}`}>60</output></label><div class="ability-range"><span aria-hidden="true">1</span><input type="range" id={`level-${ability.id}`} aria-label={`${ability.name} level`} min="1" max="60" step="1" value="60" /><span aria-hidden="true">60</span></div></div>
+    <p data-ability-description>{ability.description}</p><p class="muted" data-ability-note hidden></p>
+    <script is:inline type="application/json" data-ability-json set:html={JSON.stringify({id:ability.id,template:ability.template,levels_by_rarity:ability.levels_by_rarity,unlock_progression:ability.unlock_progression}).replace(/</g,'\u003c')} />
+  </article>)}</div>
+  <Relics relics={hero.relics} />
+</section>
+<script>
+import { abilityDescription } from '../../lib/hero-reference.mjs';
+type Icon = {src:string;width:number;height:number;count?:number};
+type Option = {value:string|number;label:string;icon?:Icon};
+document.querySelectorAll<HTMLElement>('[data-hero-reference]').forEach(root => {
+  const data = JSON.parse(root.querySelector('[data-reference-json]')!.textContent!);
+  let context = data.contexts.find((p:any) => p.index === data.initial);
+  let selectedRank = data.rank;
+  const pickers = Object.fromEntries(['rarity','stars','rank'].map(key => [key,root.querySelector<HTMLDetailsElement>(`[data-picker="${key}"]`)!]));
+  const iconContent = (parent:Element, icon?:Icon) => {
+    parent.replaceChildren();
+    for (let i=0;i<(icon?.count ?? 1);i++) {
+      if (!icon) break;
+      const img = document.createElement('img');
+      img.src=icon.src; img.width=icon.width; img.height=icon.height; img.alt='';
+      parent.append(img);
+    }
+  };
+  const updatePicker = (key:string, options:Option[], value:string|number) => {
+    const picker=pickers[key], selected=options.find(option => String(option.value) === String(value))!;
+    picker.querySelector('[data-picker-label]')!.textContent=selected.label;
+    picker.querySelector('summary')!.setAttribute('aria-label',`${key === 'rarity' ? 'Rarity' : key === 'stars' ? 'Stars' : 'Rank'}: ${selected.label}`);
+    iconContent(picker.querySelector('summary .game-icon')!,selected.icon);
+    const fieldset=picker.querySelector('fieldset')!;
+    const inputs=[...fieldset.querySelectorAll<HTMLInputElement>('input')];
+    if(inputs.length===options.length && inputs.every((input,i)=>input.value===String(options[i].value))) {
+      inputs.forEach(input=>input.checked=input.value===String(value));
+      return;
+    }
+    fieldset.querySelectorAll('label').forEach(label => label.remove());
+    for (const option of options) {
+      const label=document.createElement('label'), input=document.createElement('input'), icon=document.createElement('span'), text=document.createElement('span');
+      input.type='radio'; input.name=`hero-${key}`; input.value=String(option.value); input.checked=String(option.value)===String(value);
+      icon.className=`game-icon picker-icon ${key}-icon`; icon.setAttribute('aria-hidden','true'); iconContent(icon,option.icon);
+      text.textContent=option.label; label.append(input,icon,text); fieldset.append(label);
+    }
+  };
+  const abilities = [...root.querySelectorAll<HTMLElement>('[data-ability]')].map(panel => ({panel,ability:JSON.parse(panel.querySelector('[data-ability-json]')!.textContent!),slider:panel.querySelector<HTMLInputElement>('input[type=range]')!}));
+  const updateAbility = ({panel,ability,slider}:typeof abilities[number]) => {
+    const level=Number(slider.value);
+    panel.querySelector('[data-level-output]')!.textContent=String(level);
+    panel.querySelector('[data-ability-description]')!.textContent=abilityDescription(ability,context.rarity,level);
+    const note=panel.querySelector<HTMLElement>('[data-ability-note]')!;
+    note.textContent=context.index<ability.unlock_progression ? 'Ability locked at this rarity · preview' : level>context.max_ability_level ? `${context.rarity} level cap: ${context.max_ability_level} · preview` : '';
+    note.hidden=!note.textContent;
+  };
+  const updateStats = () => {
+    const row=context.stats.find((row:number[])=>row[0]===selectedRank);
+    root.querySelectorAll<HTMLElement>('[data-stat]').forEach(cell=>cell.textContent=row[Number(cell.dataset.stat)].toLocaleString('en-US'));
+    const label=`${context.rarity} · ${context.star_label} · ${data.ranks.find((r:any)=>r.index===selectedRank).name}`;
+    root.querySelector('[data-state-label]')!.textContent=label;
+    root.querySelector('[data-announcement]')!.textContent=label;
+    abilities.forEach(updateAbility);
+  };
+  for (const [key,picker] of Object.entries(pickers)) {
+    picker.addEventListener('change',event => {
+      const input=event.target as HTMLInputElement;
+      if (input.type!=='radio') return;
+      if (key==='rarity') {
+        const choices=data.contexts.filter((p:any)=>p.rarity===input.value);
+        context=choices.find((p:any)=>p.stars===context.stars) ?? choices.at(-1);
+      } else if (key==='stars') context=data.contexts.find((p:any)=>p.index===Number(input.value));
+      else selectedRank=Number(input.value);
+      selectedRank=Math.min(selectedRank,context.max_rank);
+      updatePicker('rarity',[...new Set<string>(data.contexts.map((p:any)=>p.rarity))].map(rarity=>({value:rarity,label:rarity,icon:data.icons.rarity[rarity]})),context.rarity);
+      updatePicker('stars',data.contexts.filter((p:any)=>p.rarity===context.rarity).map((p:any)=>({value:p.index,label:p.star_label,icon:data.icons.stars[p.stars]})),context.index);
+      updatePicker('rank',context.stats.map((row:number[])=>({value:row[0],label:data.ranks.find((r:any)=>r.index===row[0]).name,icon:data.icons.rank[row[0]]})),selectedRank);
+      updateStats(); picker.open=false; picker.querySelector('summary')!.focus();
+    });
+    picker.addEventListener('toggle',()=>{if(picker.open)Object.values(pickers).filter(other=>other!==picker).forEach(other=>other.open=false);});
+    picker.addEventListener('keydown',event=>{if(event.key==='Escape'){picker.open=false;picker.querySelector('summary')!.focus();}});
+  }
+  abilities.forEach(item=>{item.panel.querySelector<HTMLElement>('[data-level-control]')!.hidden=false;item.slider.addEventListener('input',()=>updateAbility(item));});
+  root.querySelector<HTMLElement>('[data-stat-controls]')!.hidden=false;
+  document.addEventListener('click',event=>{
+    const target=event.target as Element;
+    Object.values(pickers).forEach(picker=>{if(!picker.contains(target))picker.open=false;});
+  });
+});
+</script>
