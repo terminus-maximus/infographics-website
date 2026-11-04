@@ -11,7 +11,7 @@
     "build": "astro build",
     "import:heroes": "python3 scripts/hero-reference.py && python3 scripts/hero-profile-assets.py && python3 scripts/hero-round-portraits.py && python3 scripts/hero-relics.py && python3 scripts/import-heroes.py",
     "import:hero-relics": "python3 scripts/hero-relics.py",
-    "check:heroes": "node --test scripts/hero-scoring.test.mjs scripts/hero-reference.test.mjs scripts/hero-team-links.test.mjs scripts/hero-summaries.test.mjs && node scripts/check-heroes.mjs",
+    "check:heroes": "node --test scripts/hero-scoring.test.mjs scripts/hero-reference.test.mjs scripts/hero-team-links.test.mjs scripts/hero-summaries.test.mjs scripts/hero-popularity.test.mjs && node scripts/check-heroes.mjs",
     "check:heroes:sources": "python3 scripts/import-heroes.py --check",
     "publish:heroes": "node scripts/publish-heroes.mjs",
     "import:lre": "node scripts/import-lre.mjs",

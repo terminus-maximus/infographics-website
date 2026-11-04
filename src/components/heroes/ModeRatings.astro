@@ -4,23 +4,26 @@ import type { Assessment, Mode } from '../../lib/hero-types';
 import RatingGauge from './RatingGauge.astro';
 import ModeLabel from './ModeLabel.astro';
 import ModeText from './ModeText.astro';
+import { popularityInsight } from '../../lib/hero-popularity.mjs';
 interface Props {
   assessments: Record<Mode,Assessment>;
   bonus: number;
   bonusGuides: {title:string;url:string}[];
   headingLevel?: 3|4;
   showGauges?: boolean;
+  popularityBenchmark: {count:number;hero:string;milestone:string;label:string}|null;
+  heroPortrait?: {src:string;width:number;height:number;name:string};
 }
-const {assessments,bonus,bonusGuides,headingLevel=4,showGauges=false} = Astro.props;
+const {assessments,bonus,bonusGuides,headingLevel=4,showGauges=false,popularityBenchmark,heroPortrait} = Astro.props;
 const Heading = headingLevel === 3 ? 'h3' : 'h4';
 const required = [...new Map(bonusGuides.map(guide=>[guide.url,guide])).values()];
 const guideHref = (url:string) => url.replace(/^https:\/\/terminusmaximus\.com(?=\/)/,'');
 ---
 <div class:list={['mode-grid','hero-rating-grid',{'has-bonus':bonus > 0}]}>
   {MODES.map(mode => { const rating=assessments[mode]; return <article class="mode-panel">
-    <Heading class="mode-title"><ModeLabel mode={mode} /> <strong>{mode === 'popularity' ? formatOverall(rating.recommended_score) : formatMode(rating.display_score ?? rating.recommended_score)}{rating.recommended_score !== null && <small> / 10</small>}</strong></Heading>
+    <Heading class="mode-title"><span class="mode-heading-label">{heroPortrait && <img class="mode-hero-portrait" src={heroPortrait.src} width={heroPortrait.width} height={heroPortrait.height} alt={heroPortrait.name} loading="lazy" />}<ModeLabel mode={mode} /></span> <strong>{mode === 'popularity' ? formatOverall(rating.recommended_score) : formatMode(rating.display_score ?? rating.recommended_score)}{rating.recommended_score !== null && <small> / 10</small>}</strong></Heading>
     {showGauges && <RatingGauge value={rating.recommended_score} label={`${modeNames[mode]} Rating`} />}
-    <p><ModeText text={rating.short_justification || 'Assessment pending.'} /></p>
+    <p><ModeText text={mode === 'popularity' ? popularityInsight(rating,popularityBenchmark) : rating.short_justification || 'Assessment pending.'} /></p>
   </article>; })}
   {bonus > 0 && <article class="mode-panel bonus-panel"><Heading class="mode-title">Bonus Score <strong>+{bonus}</strong></Heading><p>Required in:</p><ul>{required.map(guide=><li><a href={guideHref(guide.url)}>{guide.title}</a></li>)}</ul></article>}
 </div>

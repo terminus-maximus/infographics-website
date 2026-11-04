@@ -404,14 +404,6 @@
       "sha256": "c1993f90b5e31b9cf4dde3d062a98ac4d9d8fe5a97135b0aa1cec21f26cf0d73",
       "name": "Adamantine Rank II",
       "mapping_method": "canonical catalog rank name to existing rank icon"
-    },
-    "20": {
-      "src": "/images/ranks/adamantine-3.webp",
-      "width": 113,
-      "height": 99,
-      "sha256": "297c10f3438df8870877f73efe9b3078e79bacfc990e93fc556879b3b8c5a8e0",
-      "name": "Adamantine Rank III",
-      "mapping_method": "canonical catalog rank name to existing rank icon"
     }
   },
   "stats": {

@@ -139,6 +139,9 @@ def main():
     ranks = catalog["ranks"]
     if [row["index"] for row in ranks] != list(range(len(ranks))):
         raise ValueError("Non-contiguous rank dimension requires review")
+    # The source includes unreleased ranks; the guides stop at the available A2.
+    max_rank = next(row["index"] for row in ranks if row["name"] == "Adamantine Rank II")
+    ranks = [row for row in ranks if row["index"] <= max_rank]
 
     # Import pure existing calculation helpers without writing source pycache.
     sys.dont_write_bytecode = True
@@ -201,13 +204,14 @@ def main():
             if any(not isinstance(value, int) or value < 0 for row in rows for value in row):
                 raise ValueError(f"Invalid rank statistic: {uid}/{step['index']}")
             progression.append({key: step[key] for key in ("index", "rarity", "stars", "unlocked", "max_rank", "max_ability_level")} | {
-                "star_label": star_label(step["stars"]), "stats": [list(row) for row in rows]})
+                "max_rank": min(step["max_rank"], max_rank),
+                "star_label": star_label(step["stars"]), "stats": [list(row) for row in rows if row["rank_index"] <= max_rank]})
         unlocked = [step for step in steps if step["unlocked"]]
         if unlocked[0]["index"] != c["initial_progression_index"]:
             raise ValueError(f"Initial progression disagrees: {uid}")
         default = next(step for step in unlocked if step["rarity"] == "Mythic" and step["stars"] == 14)
-        if ranks[default["max_rank"]]["name"] != "Adamantine Rank III":
-            raise ValueError(f"Maximum rank disagrees: {uid}")
+        if default["max_rank"] < max_rank:
+            raise ValueError(f"Adamantine II is missing from the default progression: {uid}")
         reference_abilities = []
         for kind in ("active", "passive"):
             for aid in c[f"{kind}_ability_ids"]:
@@ -253,12 +257,12 @@ def main():
             "aliases": sorted(aliases.get(uid, {})), "portrait": portrait,
             "initial_rarity": c["initial_rarity"], "movement": c["movement"], "traits": traits, "weapons": weapons,
             "equipment": [], "equipment_slot_ids": c["equipment_slot_types"],
-            "default_progression": default["index"], "default_rank": default["max_rank"], "progression": progression,
+            "default_progression": default["index"], "default_rank": max_rank, "progression": progression,
             "abilities": reference_abilities, "mythic_ability_status": "Not evaluated" if c["mythic_ability_ids"] else None})
     db.close()
     result = {"schema_version": 2, "snapshot": catalog["snapshot"], "source_hashes": source_hashes,
         "ranks": ranks, "stat_columns": ["rank", "health", "armor", "damage"],
-        "default_policy": "Mythic, Mythic wings and Adamantine III. Active and passive abilities default to level 60, with source-derived values for levels 1–60 at each unlocked rarity.",
+        "default_policy": "Mythic, Mythic wings and Adamantine II. Available ranks stop at Adamantine II. Active and passive abilities default to level 60, with source-derived values for levels 1–60 at each unlocked rarity.",
         "limitations": [catalog["calculation_note"], "Rank arithmetic is the documented reference model, not extracted executable game logic. Conditional battle effects are excluded.",
             "Ability levels above the selected rarity's cap and locked passives are previews. Mythic ability source entries are not mapped to the regular 1–60 ability scale.",
             "Some trait quantities are unresolved in the local source and are shown as value unavailable.",

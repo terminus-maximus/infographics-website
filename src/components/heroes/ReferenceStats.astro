@@ -40,14 +40,14 @@ const traits = hero.traits.filter(trait => trait.id !== 'Hero');
     <article class="combat-card movement-card"><h3><GameIcon icon={icons.stats.movement} />Movement</h3><strong class="movement-value">{hero.movement ?? '—'}</strong><span class="muted">hexes</span></article>
     {hero.weapons.map(weapon => <article class="combat-card"><h3><GameIcon icon={icons.stats[weapon.kind]} />{weapon.kind === 'melee' ? 'Melee' : 'Ranged'}</h3><div class="weapon-damage"><GameIcon icon={filterIcons.damage[weapon.damage_type]} /><strong>{weapon.damage_type}</strong></div><dl class="attack-facts"><div><dt><GameIcon icon={icons.stats.hits} />Hits</dt><dd>{weapon.hits}</dd></div><div><dt>Range</dt><dd>{weapon.range}</dd></div><div><dt><GameIcon icon={icons.stats.pierce} />Pierce</dt><dd>{weapon.pierce}%</dd></div></dl></article>)}
   </div>
-  {traits.length > 0 && <><h3>Traits</h3><div class="trait-card-grid">{traits.map(trait => <article class="ability-card trait-card"><header class="ability-heading"><GameIcon icon={filterIcons.traits[trait.name]} class="trait-card-icon" /><h4>{trait.name}</h4></header><p>{traitDescription(trait)}</p></article>)}</div></>}
+  {traits.length > 0 && <><h3>Traits</h3><div class="trait-card-grid">{traits.map(trait => <details class="ability-card trait-card reference-disclosure"><summary class="ability-heading"><GameIcon icon={filterIcons.traits[trait.name]} class="trait-card-icon" /><h4>{trait.name}</h4><span class="disclosure-chevron" aria-hidden="true"></span></summary><p>{traitDescription(trait)}</p></details>)}</div></>}
   <h3>Abilities</h3>
-  <div class="ability-grid">{hero.abilities.map(ability => <article class="ability-card" data-ability>
-    <header class="ability-heading"><GameIcon icon={icons.abilities[ability.id]} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h4>{ability.name}</h4></div></header>
+  <div class="ability-grid">{hero.abilities.map(ability => <details class="ability-card reference-disclosure" data-ability>
+    <summary class="ability-heading"><GameIcon icon={icons.abilities[ability.id]} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h4>{ability.name}</h4></div><span class="disclosure-chevron" aria-hidden="true"></span></summary>
     <div class="ability-level-control" data-level-control hidden><label for={`level-${ability.id}`}>Level <output data-level-output for={`level-${ability.id}`}>60</output></label><div class="ability-range"><span aria-hidden="true">1</span><input type="range" id={`level-${ability.id}`} aria-label={`${ability.name} level`} min="1" max="60" step="1" value="60" /><span aria-hidden="true">60</span></div></div>
     <p data-ability-description>{ability.description}</p><p class="muted" data-ability-note hidden></p>
     <script is:inline type="application/json" data-ability-json set:html={JSON.stringify({id:ability.id,template:ability.template,levels_by_rarity:ability.levels_by_rarity,unlock_progression:ability.unlock_progression}).replace(/</g,'\u003c')} />
-  </article>)}</div>
+  </details>)}</div>
   <Relics relics={hero.relics} />
 </section>
 <script>

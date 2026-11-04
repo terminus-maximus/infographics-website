@@ -4,8 +4,11 @@ import { overallSummary } from '../../lib/hero-summaries.mjs';
 import type { Hero } from '../../lib/hero-types';
 import ModeRatings from './ModeRatings.astro';
 import RatingGauge from './RatingGauge.astro';
+import { heroes } from '../../lib/heroes.mjs';
+import { popularityBenchmark } from '../../lib/hero-popularity.mjs';
 interface Props { hero: Hero; }
 const { hero } = Astro.props;
+const benchmark = popularityBenchmark(heroes);
 const required = [...new Map(hero.guides.filter(g => g.role === 'required' && ['campaign','event_campaign'].includes(g.category)).map(g => [g.url,g])).values()];
 ---
 <section class="hero-section" id="analysis" aria-labelledby="analysis-title">
@@ -17,5 +20,5 @@ const required = [...new Map(hero.guides.filter(g => g.role === 'required' && ['
     <p class="overall-summary-copy" data-overall-summary>{overallSummary(hero.unit_id,hero.overall.final_score)}</p>
   </div>
   <h3 class="visually-hidden">Mode ratings</h3>
-  <ModeRatings assessments={hero.assessments} bonus={hero.overall.guide_bonus} bonusGuides={required} showGauges />
+  <ModeRatings assessments={hero.assessments} bonus={hero.overall.guide_bonus} bonusGuides={required} popularityBenchmark={benchmark} showGauges />
 </section>

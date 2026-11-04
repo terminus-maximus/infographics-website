@@ -88,6 +88,9 @@ def main():
         raise SystemExit("Pillow and UnityPy are required; use LocalDatabase/.venv/bin/python.")
 
     catalog = read(local / "data/processed/catalog.json")
+    reference = read(SITE / "src/data/heroes/reference.json")
+    if reference["snapshot"] != catalog["snapshot"]:
+        raise ValueError("Profile icons and reference snapshot differ; import the reference first")
     images = read(local / "data/processed/image-assets.json")
     manifest = read(local / "data/raw/manifest.json")
     aliases = read(local / "data/processed/legacy-aliases.json")["aliases"]
@@ -178,7 +181,7 @@ def main():
         count = number if number <= 5 else number - 5 if number <= 10 else number - 10 if number <= 13 else 1
         stars[str(number)] = {**star_art[color], "count": count}
     ranks = {}
-    for rank in catalog["ranks"]:
+    for rank in reference["ranks"]:
         metal, _, roman = rank["name"].split()
         numeral = {"I": 1, "II": 2, "III": 3}[roman]
         ranks[str(rank["index"])] = existing(f"/images/ranks/{metal.lower()}-{numeral}.webp",

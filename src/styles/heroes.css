@@ -73,3 +73,24 @@ body:has(.heroes-page){background:#151515;color:#e9e9e9;font-family:Lexend,Arial
 
 /* Shared short overall verdict on profiles and the monthly Top 10. */
 .rating-summary .overall-summary-copy{flex-basis:100%;margin:0;font-size:.95rem;line-height:1.6;color:#f1e8cf}
+
+/* Keep the hero recognizable while scrolling through monthly mode ratings. */
+.mode-heading-label{--mode-token-size:32px;display:flex;align-items:center;gap:.4em}
+.mode-heading-label .mode-hero-portrait{display:block;width:var(--mode-token-size);height:var(--mode-token-size);object-fit:contain;border-radius:50%;flex-shrink:0}
+
+/* Native disclosures keep descriptions and controls available without JavaScript. */
+.trait-card-grid{align-items:start}
+.reference-disclosure{padding:0}
+.reference-disclosure .ability-heading{margin:0;padding:1.2rem;min-height:44px;cursor:pointer;list-style:none;border-radius:9px}
+.reference-disclosure .ability-heading::-webkit-details-marker{display:none}
+.reference-disclosure .ability-heading::marker{content:''}
+.reference-disclosure .ability-heading:hover{background:#ffffff08}
+.reference-disclosure .ability-heading:focus-visible{outline:2px solid #efce72;outline-offset:3px}
+.reference-disclosure .ability-heading>div,.reference-disclosure .ability-heading>h4{min-width:0;overflow-wrap:anywhere}
+.disclosure-chevron{display:block;width:24px;height:24px;flex-shrink:0;margin-left:auto;position:relative}
+.disclosure-chevron::after{content:'';position:absolute;top:5px;left:7px;width:9px;height:9px;border-right:2px solid #efce72;border-bottom:2px solid #efce72;transform:rotate(45deg)}
+.reference-disclosure[open]>.ability-heading{border-bottom:1px solid #555c62;border-radius:9px 9px 0 0}
+.reference-disclosure[open]>.ability-heading .disclosure-chevron::after{top:9px;transform:rotate(225deg)}
+.reference-disclosure>p,.reference-disclosure>.ability-level-control{margin:1rem 1.2rem}
+.reference-disclosure>p:last-child{margin-bottom:1.2rem}
+@media(max-width:600px){.reference-disclosure .ability-heading{padding:1rem}.reference-disclosure>p,.reference-disclosure>.ability-level-control{margin:1rem}}

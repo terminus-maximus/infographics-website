@@ -7,8 +7,12 @@ import RatingGauge from '../../components/heroes/RatingGauge.astro';
 import { publication, publicationGraphic, monthLabel, readableDate, heroHref, heroById } from '../../lib/heroes.mjs';
 import { topRows, formatOverall } from '../../lib/hero-scoring.mjs';
 import summarySource from '../../data/heroes/top-10-summaries.json';
+import roundPortraits from '../../data/heroes/round-portraits.json';
+import { popularityBenchmark } from '../../lib/hero-popularity.mjs';
 import '../../styles/hero-rankings.css';
 const ranked = publication ? topRows(publication.heroes,publication.cutoff_count,publication.include_cutoff_ties) : [];
+const benchmark = popularityBenchmark(publication?.heroes ?? []);
+const portraits = roundPortraits as Record<string,{src:string;width:number;height:number}>;
 const summaries = (summarySource as Record<string,Record<string,string>>)[publication?.month ?? ''] ?? {};
 for (const hero of ranked) {
   const summary = summaries[hero.unit_id];
@@ -37,7 +41,7 @@ for (const hero of ranked) {
         <RatingGauge value={hero.final_score} label={`${hero.name} Overall Hero Rating`} />
         <p class="overall-summary-copy" data-overall-summary>{summaries[hero.unit_id]}</p>
       </div>
-      <ModeRatings assessments={hero.assessments} bonus={hero.guide_bonus} bonusGuides={hero.guides} headingLevel={3} showGauges />
+      <ModeRatings assessments={hero.assessments} bonus={hero.guide_bonus} bonusGuides={hero.guides} popularityBenchmark={benchmark} heroPortrait={{...portraits[hero.unit_id],name:hero.name}} headingLevel={3} showGauges />
     </article>; })}</div>
   </> : <p>No monthly snapshot has been published yet. <a href="/heroes/">Browse current hero assessments.</a></p>}
 </HeroLayout>

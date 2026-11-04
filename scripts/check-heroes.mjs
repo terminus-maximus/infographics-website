@@ -6,6 +6,7 @@ import { heroes, reference, research, currentRelease, publication, graphicValid 
 import { assert, validateRelease, topRows } from '../src/lib/hero-scoring.mjs';
 import { abilityDescription, relicDescription, traitDescription } from '../src/lib/hero-reference.mjs';
 import { overallSummaries, overallSummary } from '../src/lib/hero-summaries.mjs';
+import { popularityBenchmark, popularityInsight } from '../src/lib/hero-popularity.mjs';
 import topSummaries from '../src/data/heroes/top-10-summaries.json' with { type: 'json' };
 import { highPointsHeroMatches } from './hero-lre-links.mjs';
 import { loadTeamGuideRelationships } from './hero-team-links.mjs';
@@ -33,6 +34,9 @@ const lreSources = JSON.parse(readFileSync(resolve(root,'src/data/lre/sources.js
 const lreMatches = Object.fromEntries(Object.keys(lreSources.events).map(slug=>[slug,highPointsHeroMatches(JSON.parse(readFileSync(resolve(root,`src/data/lre/${slug}.json`),'utf8')))]));
 const teamLinks = loadTeamGuideRelationships();
 const builtGuideCache = new Map();
+const benchmark = popularityBenchmark(heroes);
+assert(reference.ranks.at(-1).name === 'Adamantine Rank II' && reference.ranks.at(-1).index === 19,'Available ranks must stop at Adamantine II');
+assert(isDeepStrictEqual(Object.keys(icons.ranks),reference.ranks.map(rank=>String(rank.index))),'Rank icon choices differ from available ranks');
 for (const group of ['rarities','stars','ranks','stats','abilities','modes']) for (const icon of Object.values(icons[group])) {
   assert(icon.src.endsWith('.webp') && existsSync(resolve(root,'public',icon.src.slice(1))),`Missing WebP icon: ${icon.src}`);
 }
@@ -47,9 +51,10 @@ for (const hero of heroes) {
   assert(hero.portrait.width>0 && hero.portrait.height>0, `Invalid portrait dimensions: ${hero.unit_id}`);
   const contexts = hero.progression.filter(p=>p.unlocked);
   const initial = contexts.find(p=>p.index===hero.default_progression);
-  assert(initial?.rarity === 'Mythic' && initial.stars === 14 && hero.default_rank === 20 && initial.stats.some(row=>row[0]===20), `Missing maximum stat state: ${hero.unit_id}`);
+  assert(initial?.rarity === 'Mythic' && initial.stars === 14 && hero.default_rank === 19 && initial.stats.some(row=>row[0]===19), `Missing Adamantine II default stat state: ${hero.unit_id}`);
   assert(new Set(contexts.map(p=>p.index)).size===contexts.length,`Duplicate stat context: ${hero.unit_id}`);
   for (const p of contexts) {
+    assert(p.max_rank<=19 && p.stats.length===p.max_rank+1,`Unavailable or missing ranks: ${hero.unit_id}`);
     assert(new Set(p.stats.map(row=>row[0])).size===p.stats.length,`Duplicate rank: ${hero.unit_id}`);
     for (const row of p.stats) assert(row.length===4 && row.every(Number.isFinite) && row[0]<=p.max_rank && row.slice(1).every(n=>n>=0),`Invalid stat row: ${hero.unit_id}`);
   }
@@ -111,7 +116,10 @@ if (built) {
     const html = readFileSync(pathForUrl(url),'utf8');
     assert(html.includes(`href="https://terminusmaximus.com${url}"`),`Wrong canonical: ${url}`);
     assert(html.includes('BreadcrumbList') && html.includes('application/ld+json') && html.includes('Hero Stats') && html.includes('Mode ratings'),`Missing hero content: ${url}`);
-    assert(html.includes('Mythic wings') && html.includes('Adamantine III') && html.includes('max="60"'),`Wrong initial controls: ${url}`);
+    assert(html.includes('Mythic wings') && html.includes('Adamantine II') && !html.includes('Adamantine III') && !html.includes('Adamantine Rank III') && html.includes('max="60"'),`Wrong initial controls: ${url}`);
+    assert(!html.includes('Five equally weighted milestones') && html.includes(popularityInsight(hero.assessments.popularity,benchmark).replaceAll('<','&lt;')),`Wrong Popularity insight: ${url}`);
+    const disclosures = [...html.matchAll(/<details\b[^>]*class="[^"]*reference-disclosure[^>]*>/g)];
+    assert(disclosures.length===hero.traits.filter(trait=>trait.id!=='Hero').length+hero.abilities.length+hero.relics.length && disclosures.every(([tag])=>! /\sopen(?:\s|=|>)/.test(tag)),`Reference cards must start collapsed: ${url}`);
     const summary=overallSummary(hero.unit_id,hero.overall.final_score).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll("'",'&#39;').replaceAll('"','&quot;');
     assert(html.includes(`class="overall-summary-copy" data-overall-summary>${summary}</p>`),`Missing overall summary: ${url}`);
     assert((html.match(/ data-relic(?:\s|>)/g)||[]).length===hero.relics.length,`Wrong Relic cards: ${url}`);
@@ -131,7 +139,11 @@ if (built) {
   }
   assert(!/<loc>[^<]*[?#]/.test(sitemap), 'Filter URLs in sitemap');
   const top = readFileSync(pathForUrl('/heroes/top-10/'),'utf8');
+  const frozenBenchmark = popularityBenchmark(publication.heroes);
+  assert(!top.includes('Five equally weighted milestones'),'Old Popularity boilerplate in Top 10');
+  assert((top.match(/class="mode-hero-portrait"/g)||[]).length===topRows(publication.heroes).length*4,'Missing Top 10 mode portraits');
   for (const hero of topRows(publication.heroes)) {
+    assert(top.includes(popularityInsight(hero.assessments.popularity,frozenBenchmark).replaceAll('<','&lt;')),`Wrong Top 10 Popularity insight: ${hero.unit_id}`);
     assert(top.includes(`/heroes/${hero.slug}/`),'Missing Top 10 hero');
     assert(top.includes(`class="overall-summary-copy" data-overall-summary>${topSummaries[publication.month][hero.unit_id]}</p>`),`Missing Top 10 summary: ${hero.unit_id}`);
   }

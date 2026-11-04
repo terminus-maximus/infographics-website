@@ -6,15 +6,15 @@ const { relics } = Astro.props;
 ---
 {relics.length > 0 && <div class="relic-section" aria-labelledby="relics-heading" data-relics>
   <h3 id="relics-heading">Relics</h3>
-  <div class="ability-grid">{relics.map(relic => <article class="ability-card" data-relic>
-    <header class="ability-heading"><GameIcon icon={relic.icon} class="ability-icon" /><div><span class="eyebrow">Mythic relic</span><h4>{relic.name}</h4></div></header>
+  <div class="ability-grid">{relics.map(relic => <details class="ability-card reference-disclosure" data-relic>
+    <summary class="ability-heading"><GameIcon icon={relic.icon} class="ability-icon" /><div><span class="eyebrow">Mythic relic</span><h4>{relic.name}</h4></div><span class="disclosure-chevron" aria-hidden="true"></span></summary>
     <div class="ability-level-control" data-relic-control hidden>
       <label for={`relic-rank-${relic.id}`}>Relic rank <output data-relic-rank for={`relic-rank-${relic.id}`}>10</output></label>
       <div class="ability-range"><span aria-hidden="true">1</span><input type="range" id={`relic-rank-${relic.id}`} aria-label={`${relic.name} relic rank`} min="1" max="10" step="1" value="10" /><span aria-hidden="true">10</span></div>
     </div>
     <p data-relic-description>{relic.description}</p>
     <script is:inline type="application/json" data-relic-json set:html={JSON.stringify({id:relic.id,template:relic.template,ranks:relic.ranks}).replace(/</g,'\u003c')} />
-  </article>)}</div>
+  </details>)}</div>
 </div>}
 <script>
 import { relicDescription } from '../../lib/hero-reference.mjs';
