@@ -16,12 +16,12 @@ export function popularityBenchmark(heroes) {
 
 /** Presentation only: percentages do not change the independently normalized score. */
 export function popularityInsight(assessment, benchmark) {
-  if (!benchmark || !['G1','D1','A2'].every(key => Number.isFinite(assessment.counts?.[key]))) {
+  if (!benchmark || !['G1','D3','A2'].every(key => Number.isFinite(assessment.counts?.[key]))) {
     return 'Popularity is pending because Planner milestone counts are unavailable.';
   }
   const percentage = count => {
     const value = count / benchmark.count * 100;
     return value > 0 && value < 0.1 ? '<0.1%' : `${value.toFixed(1)}%`;
   };
-  return `Planner investment: ${percentage(assessment.counts.G1)} at Gold I or higher, ${percentage(assessment.counts.D1)} at Diamond I or higher and ${percentage(assessment.counts.A2)} at Adamantine II.`;
+  return `Planner investment: ${percentage(assessment.counts.G1)} at Gold I or higher, ${percentage(assessment.counts.D3)} at Diamond III or higher and ${percentage(assessment.counts.A2)} at Adamantine II.`;
 }

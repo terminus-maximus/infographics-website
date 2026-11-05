@@ -227,3 +227,9 @@ Popularity insights on the Top 10 and all profiles display Gold I, Diamond I and
 Each Top 10 Raid, War, Horde and Popularity heading now pairs the existing circular hero portrait with its entry token, both 32 pixels high. The portrait supplies the hero name as alternative text.
 
 Validation: all 27 hero tests, source reconciliation, the 180-page build and all 119 built profile checks pass. Built checks cover the percentage text, 40 Top 10 mode portraits, collapsed reference cards and the Adamantine II default. Reference comparison confirms only the 476 unreleased stat rows and associated rank/default metadata changed; released-rank stats and abilities are identical. Research and the November snapshot remain byte-identical. The icon importer reproduces the 20-rank mapping without further changes. `astro check` reports the same 66 previously documented errors in unrelated files, with none in the changed hero components. Visual mobile and browser interaction checks were unavailable because browser access was disabled in this session. Changes are local; no deployment.
+
+## Popularity display milestones — November 5, 2026
+
+Per the requested wording update, Popularity insights now display **Gold I, Diamond III and Adamantine II** percentages on every profile and the Top 10. The middle percentage uses the stored `D3` count and reads “at Diamond III or higher”. The shared benchmark, percentage formatting and Pending behavior are unchanged. This is a rendering-only update; all five milestones still contribute to the Popularity score, and authoritative assessments, rankings and frozen monthly data remain unchanged.
+
+Validation: all 27 hero tests, source reconciliation, the 180-page build and all 119 built profile checks pass. Bellator renders 87.0% at Gold I or higher, 14.7% at Diamond III or higher and 0.2% at Adamantine II. Changes are local; no deployment.
