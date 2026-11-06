@@ -81,6 +81,8 @@ export const overviewContent = {
 export type HeroGuide = {
   characterId: string;
   heading: string;
+  /** Hero name for links when the heading also includes an editorial label. */
+  heroName?: string;
   role: string;
   rankTargets?: { normal: string; elite: string };
   abilityTargets?: {

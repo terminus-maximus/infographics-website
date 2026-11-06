@@ -2,6 +2,7 @@
 import type { CharacterReference, RankReference } from "../../lib/campaigns";
 import type { HeroGuide } from "../../data/campaigns/indomitusGuideContent";
 import type { EquipmentRecommendation } from "../../data/campaigns/equipmentRecommendations";
+import { heroById, heroHref } from "../../lib/heroes.mjs";
 import EquipmentBadge from "./EquipmentBadge.astro";
 
 interface Props {
@@ -12,6 +13,10 @@ interface Props {
 }
 
 const { guide, character, ranks, equipment } = Astro.props;
+const profile = heroById.get(guide.characterId);
+if (!profile) {
+  throw new Error(`Missing Hero Guide for campaign character ${guide.characterId}.`);
+}
 const abilityIcon = (ability: "Active" | "Passive") =>
   `/images/abilities/${guide.abilityTargets?.iconName}-${ability}.webp`;
 ---
@@ -85,6 +90,14 @@ const abilityIcon = (ability: "Active" | "Passive") =>
 
   <div class="hero-copy">
     {guide.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+
+  <div class="hero-profile-row">
+    <p>Explore stats, abilities, traits and ratings across game modes.</p>
+    <a href={heroHref(profile)} data-hero-guide-link>
+      <span>{guide.heroName || guide.heading} Hero Guide</span>
+      <span aria-hidden="true">→</span>
+    </a>
   </div>
 
 </article>
@@ -235,6 +248,42 @@ const abilityIcon = (ability: "Active" | "Passive") =>
     font-weight: 800;
   }
 
+  .hero-profile-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #333;
+  }
+
+  .hero-profile-row p {
+    flex: 1 1 16rem;
+    max-width: 26rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-profile-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    max-width: 100%;
+    color: #d4af37;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+  }
+
+  .hero-profile-row a:hover,
+  .hero-profile-row a:focus-visible {
+    color: #f5d76e;
+    text-decoration: underline;
+  }
+
   @media (max-width: 700px) {
     .hero-guide-card {
       padding: 0.9rem;
@@ -247,6 +296,17 @@ const abilityIcon = (ability: "Active" | "Passive") =>
 
     .recommendations {
       grid-template-columns: 1fr;
+    }
+
+    .hero-profile-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .hero-profile-row p {
+      flex: initial;
+      max-width: none;
     }
   }
 

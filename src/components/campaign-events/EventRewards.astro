@@ -2,9 +2,16 @@
 import allCharacters from "../../data/campaigns/characters.json";
 import rewardIcons from "../../data/campaign-events/reward-icons.json";
 import { eventCharacters } from "../../lib/campaign-events";
+import { heroes, heroHref } from "../../lib/heroes.mjs";
 import type { EventRewards } from "../../data/campaign-events/types";
 interface Props { rewards: EventRewards; eventName: string; }
 const { rewards, eventName } = Astro.props;
+const profilesByName = new Map(heroes.map(hero => [hero.name, hero]));
+const rewardHeroHref = (name: string) => {
+  const hero = profilesByName.get(name);
+  if (!hero) throw new Error(`Missing Hero Guide for reward character ${name}`);
+  return heroHref(hero);
+};
 const portrait = (name: string) => {
   const eventHero = Object.values(eventCharacters).find(hero => hero.name === name);
   if (eventHero) return eventHero.portrait;
@@ -19,20 +26,20 @@ const rewardIcon = (name: string) => {
 };
 ---
 <p class="intro">Repeatable shard farms and key Extremis rewards.</p>
-<div class="shard-grid">{rewards.shardFarms.map(shard => <article class="shard-card" data-reward="character-shards"><img src={portrait(shard.hero)} alt="" width="54" height="54" loading="lazy" /><h3>{shard.hero}</h3><p><strong>E{shard.regularStage}</strong><span>Regular shards</span></p><p><strong>E{shard.mythicStage}</strong><span>Mythic shards</span></p></article>)}</div>
+<div class="shard-grid">{rewards.shardFarms.map(shard => <article class="shard-card" data-reward="character-shards"><a class="shard-hero-link ce-hero-link" href={rewardHeroHref(shard.hero)} title={`${shard.hero} Hero Guide`} data-hero-guide-link><img src={portrait(shard.hero)} alt="" width="54" height="54" loading="lazy" /><h3 class="hero-link-name">{shard.hero}</h3></a><p><strong>E{shard.regularStage}</strong><span>Regular shards</span></p><p><strong>E{shard.mythicStage}</strong><span>Mythic shards</span></p></article>)}</div>
 <table aria-label={`${eventName} Extremis rewards`}>
   <thead><tr><th scope="col">Reward</th><th scope="col">Where to earn it</th></tr></thead>
   <tbody>
     <tr data-reward="chest-shards">
-      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <div class="reward-identity"><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span>{shard.hero} <strong class="quantity">×{shard.initialTotal}</strong><small>Chest shards · total</small></span></div>)}</div></th>
+      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <a class="reward-identity ce-hero-link" href={rewardHeroHref(shard.hero)} title={`${shard.hero} Hero Guide`} data-hero-guide-link><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span><span class="hero-link-name">{shard.hero}</span> <strong class="quantity">×{shard.initialTotal}</strong><small>Chest shards · total</small></span></a>)}</div></th>
       <td>First {rewards.chestTrack.initialChestCount} progress chests<small>Through {rewards.chestTrack.finalChestPoints.toLocaleString("en-US")} points, across Normal and Extremis</small></td>
     </tr>
     <tr data-reward="repeat-chest">
-      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <div class="reward-identity"><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span>{shard.hero} <strong class="quantity">×{shard.repeatQuantity}</strong><small>Chest shards · per repeat</small></span></div>)}</div></th>
+      <th scope="row"><div class="chest-rewards">{rewards.chestShards.map(shard => <a class="reward-identity ce-hero-link" href={rewardHeroHref(shard.hero)} title={`${shard.hero} Hero Guide`} data-hero-guide-link><img class="reward-portrait" src={portrait(shard.hero)} alt="" width="48" height="48" loading="lazy" /><span><span class="hero-link-name">{shard.hero}</span> <strong class="quantity">×{shard.repeatQuantity}</strong><small>Chest shards · per repeat</small></span></a>)}</div></th>
       <td>Repeatable final chest<small>Every {rewards.chestTrack.repeatPoints} additional progress points</small></td>
     </tr>
     {rewards.equipment.map(item => <tr data-reward={item.kind}>
-      <th scope="row"><div class="reward-identity"><img class="reward-icon" src={rewardIcon(item.name)} alt="" width="56" height="56" loading="lazy" /><span>{item.name}<small>{item.kind === "relic" ? item.exclusiveHero ? `${item.exclusiveHero} relic` : "Relic equipment" : "Mythic equipment"}</small></span></div></th>
+      <th scope="row"><div class="reward-identity"><img class="reward-icon" src={rewardIcon(item.name)} alt="" width="56" height="56" loading="lazy" /><span>{item.name}<small>{item.kind === "relic" ? item.exclusiveHero ? <><a href={rewardHeroHref(item.exclusiveHero)} title={`${item.exclusiveHero} Hero Guide`} data-hero-guide-link>{item.exclusiveHero}</a> relic</> : "Relic equipment" : "Mythic equipment"}</small></span></div></th>
       <td><strong>E{item.stage}</strong> · Gold milestone<small>One-time reward</small></td>
     </tr>)}
     <tr data-reward="mythic-upgrade">
@@ -46,8 +53,9 @@ const rewardIcon = (name: string) => {
 <style>
   .shard-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1.5rem; }
   .shard-card { text-align: center; border: 1px solid #3b3b3b; border-radius: 9px; padding: 1rem .5rem; background: #151515; }
+  .shard-hero-link { display: block; }
   .shard-card img { border-radius: 50%; border: 1px solid #555; background: #252525; }
-  .shard-card h3 { color: #eee; font-size: .75rem; margin: .5rem 0 .8rem; }
+  .shard-card h3 { font-size: .75rem; margin: .5rem 0 .8rem; }
   .shard-card p { margin: .45rem 0 0; font-size: .76rem; line-height: 1.5; }
   .shard-card strong { color: #e4c55e; }
   .shard-card span { display: block; color: #aaa; font-size: .65rem; }

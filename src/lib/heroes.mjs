@@ -31,6 +31,11 @@ export const heroes = research.identity.map(identity => {
 assert(new Set(heroes.map(h => h.slug)).size === heroes.length && heroes.every(h => !['top-10','factions','index','scoring'].includes(h.slug)), 'Duplicate/reserved slugs');
 export const heroById = new Map(heroes.map(h => [h.unit_id,h]));
 export const heroHref = hero => `/heroes/${hero.slug}/`;
+export const heroHrefById = unitId => {
+  const hero = heroById.get(unitId);
+  assert(hero, `Missing Hero Guide for character ${unitId}`);
+  return heroHref(hero);
+};
 /** @type {import('./hero-types').Publication|null} */
 export const publication = existsSync(resolve(dataRoot,'publication.json')) ? read(`releases/${read('publication.json').month}.json`) : null;
 if (publication) validateRelease(publication);

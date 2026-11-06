@@ -1,6 +1,7 @@
 ---
 import type { CampaignEventGuide } from '../../data/campaign-events/types';
 import { eventCharacters } from '../../lib/campaign-events';
+import { heroHrefById } from '../../lib/heroes.mjs';
 import { lowestSeenSupportIds } from '../../lib/campaign-events-validation.mjs';
 import { buildAction, buildLabel, environmentLabel } from '../../lib/campaign-event-display';
 import HeroStats from './HeroStats.astro';
@@ -17,7 +18,7 @@ const build = guide.research.builds.find(build => guide.research.lowestSeen.reco
     const character = eventCharacters[hero.heroId];
     const safe = hero.safeBetScenarios[0]?.investment;
     return <div class:list={['investment-row', { 'support-start': index === 3 }]} role="row" data-investment-hero={hero.heroId}>
-      <div class="hero-identity" role="rowheader"><img src={character.portrait} alt="" width="56" height="56" loading="lazy" /><div><strong>{character.name}</strong><small>{index < 3 ? 'Required' : 'Support'}</small></div></div>
+      <div class="hero-identity" role="rowheader"><a class="hero-identity-link ce-hero-link" href={heroHrefById(hero.heroId)} title={`${character.name} Hero Guide`} data-hero-guide-link><img src={character.portrait} alt="" width="56" height="56" loading="lazy" /><span><strong class="hero-link-name">{character.name}</strong><small>{index < 3 ? 'Required' : 'Support'}</small></span></a></div>
       <div role="cell" data-investment="lowest"><span class="mobile-label">Lowest Seen</span><HeroStats heroId={hero.heroId} rank={hero.lowestSeen.rank.value} active={hero.lowestSeen.active.value} passive={hero.lowestSeen.passive.value} /></div>
       <div role="cell" data-investment="safe"><span class="mobile-label">Safe Bet</span><HeroStats heroId={hero.heroId} rank={safe?.rank.value} active={safe?.active.value} passive={safe?.passive.value} /></div>
     </div>;
@@ -36,9 +37,9 @@ const build = guide.research.builds.find(build => guide.research.lowestSeen.reco
   .investment-head > *, .investment-row > * { padding: 1rem; min-width: 0; }
   .investment-row { background: #171717; border-top: 1px solid #333; }
   .investment-row.support-start { border-top: 2px solid #726239; }
-  .hero-identity { display: flex; align-items: center; gap: .8rem; }
+  .hero-identity-link { display: flex; align-items: center; gap: .8rem; }
   .hero-identity img { border-radius: 50%; border: 1px solid #555; background: #242424; flex-shrink: 0; }
-  .hero-identity strong { font-size: .95rem; color: #f5f5f5; }
+  .hero-identity strong { font-size: .95rem; }
   .hero-identity small { display: block; color: #aaa; font-size: .7rem; margin-top: .25rem; }
   .mobile-label { display: none; }
   .team-credit { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; color: #bbb; margin-top: 1rem; font-size: .78rem; }

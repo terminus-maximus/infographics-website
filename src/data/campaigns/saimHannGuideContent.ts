@@ -126,6 +126,7 @@ export const supportingHeroes: HeroGuide[] = [
   {
     characterId: "eldarMauganRa",
     heading: "Best — Maugan Ra",
+    heroName: "Maugan Ra",
     role: "Proven late-Elite ranged damage, Overwatch, and multi-hit Doom synergy.",
     paragraphs: [
       "Maugan Ra is the best demonstrated Saim-Hann support. His six-hit range-three attack, Heavy Weapon, and Overwatch combine naturally with Doom and Aethana’s buffs, and current player evidence says he materially eases Elite 37–40.",
@@ -137,6 +138,7 @@ export const supportingHeroes: HeroGuide[] = [
   {
     characterId: "eldarLhykhis",
     heading: "New — Lhykhis",
+    heroName: "Lhykhis",
     role: "New mobile, high-pierce support with promising but unproven campaign value.",
     paragraphs: [
       "Lhykhis is now available through Crusade Shop. Her movement, multi-hit eligibility, and Molecular damage appear well matched to Saim-Hann’s armored and mobile enemies.",
@@ -147,6 +149,7 @@ export const supportingHeroes: HeroGuide[] = [
   {
     characterId: "eldarJainZar",
     heading: "Last Resort — Jain Zar",
+    heroName: "Jain Zar",
     role: "Mobile defensive disruption, Infiltrate, and Screamer control.",
     paragraphs: [
       "Jain Zar offers defensive utility rather than Maugan Ra’s ranged deletion. Infiltrate crosses Overwatch safely, while Terror’s Lament reduces adjacent enemy damage and melee hit count; players specifically value that control against Screamer dives.",

@@ -1,5 +1,6 @@
 ---
 import GuideHeroLinks from "../../../components/heroes/GuideHeroLinks.astro";
+import { campaignHeroProfileGroups } from "../../../lib/campaign-hero-profiles";
 import "../../../styles/campaign-layout.css";
 import CampaignHero from "../../../components/campaign/CampaignHero.astro";
 import RecommendationSections from "../../../components/RecommendationSections.astro";
@@ -169,7 +170,7 @@ const rankMap = Object.fromEntries(
     </section>
 
     <RecommendationSections />
-  <GuideHeroLinks />
+  <GuideHeroLinks groups={campaignHeroProfileGroups["indomitus-mirror"]} />
   </main>
 
   <Footer />

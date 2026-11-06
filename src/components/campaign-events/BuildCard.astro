@@ -1,6 +1,7 @@
 ---
 import type { ResearchBuild } from '../../data/campaign-events/research-types';
 import { eventCharacters } from '../../lib/campaign-events';
+import { heroHrefById } from '../../lib/heroes.mjs';
 import { buildAction, buildLabel, environmentLabel } from '../../lib/campaign-event-display';
 import HeroStats from './HeroStats.astro';
 interface Props { build: ResearchBuild; requiredHeroIds: string[]; compact?: boolean; }
@@ -15,9 +16,9 @@ const heroes = [...build.heroes].sort((a, b) => Number(requiredHeroIds.includes(
   <header><div><p class="eyebrow">{pool ? 'Choose your supports' : compact ? 'Battle replay' : 'E30 · Three medals'}</p><h3>{title}</h3></div>{environmentLabel(build) && <span class="badge">{environmentLabel(build)}</span>}</header>
   {!compact && <p class="build-byline">{buildLabel(build)} · {build.sourceLabel}</p>}
   {pool && <p class="pool-note">Three required heroes plus a choice of supports. This six-hero pool does not specify which two supports deployed together.</p>}
-  {compact ? <div class="replay-heroes">{heroes.map(hero => <img src={eventCharacters[hero.heroId].portrait} alt={eventCharacters[hero.heroId].name} title={eventCharacters[hero.heroId].name} width="42" height="42" loading="lazy" />)}</div> : <div class="build-team">{heroes.map(hero => <div class="build-hero"><div class="identity"><img src={eventCharacters[hero.heroId].portrait} alt="" width="44" height="44" loading="lazy" /><span>{eventCharacters[hero.heroId].name}<small>{requiredHeroIds.includes(hero.heroId) ? 'Required' : 'Support'}</small></span></div><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div>}
+  {compact ? <div class="replay-heroes">{heroes.map(hero => <a class="replay-hero-link ce-hero-link" href={heroHrefById(hero.heroId)} aria-label={`${eventCharacters[hero.heroId].name} Hero Guide`} title={`${eventCharacters[hero.heroId].name} Hero Guide`} data-hero-guide-link><img src={eventCharacters[hero.heroId].portrait} alt="" width="42" height="42" loading="lazy" /></a>)}</div> : <div class="build-team">{heroes.map(hero => <div class="build-hero"><a class="identity ce-hero-link" href={heroHrefById(hero.heroId)} title={`${eventCharacters[hero.heroId].name} Hero Guide`} data-hero-guide-link><img src={eventCharacters[hero.heroId].portrait} alt="" width="44" height="44" loading="lazy" /><span><span class="hero-link-name">{eventCharacters[hero.heroId].name}</span><small>{requiredHeroIds.includes(hero.heroId) ? 'Required' : 'Support'}</small></span></a><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div>}
   <div class="build-footer"><span>{build.outcome === 'three_medal' ? 'Three medals' : build.outcome === 'win_only' ? 'Victory · fewer than three medals' : 'Progression'}{build.lightning ? ' · Lightning' : ''}</span><a class="watch-link" href={build.resultSourceUrl || build.sourceUrl} target="_blank" rel="noopener noreferrer">{build.kind === 'clear' ? '▶ ' : ''}{buildAction(build)} ↗</a></div>
-  {compact && <details><summary>Team ranks &amp; abilities</summary><div class="build-team">{heroes.map(hero => <div class="build-hero"><span>{eventCharacters[hero.heroId].name}</span><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div></details>}
+  {compact && <details><summary>Team ranks &amp; abilities</summary><div class="build-team">{heroes.map(hero => <div class="build-hero"><a class="text-hero-link" href={heroHrefById(hero.heroId)} title={`${eventCharacters[hero.heroId].name} Hero Guide`} data-hero-guide-link>{eventCharacters[hero.heroId].name}</a><HeroStats heroId={hero.heroId} rank={hero.rank.value} active={hero.active.value} passive={hero.passive.value} /></div>)}</div></details>}
   {heroes.some(hero => hero.unassignedAbilities || hero.reportedRank && hero.reportedRank.value !== hero.rank.value) && <details><summary>Build notes</summary><ul>{heroes.map(hero => <>{hero.unassignedAbilities && <li>{eventCharacters[hero.heroId].name}: {hero.unassignedAbilities}.</li>}{hero.reportedRank && hero.reportedRank.value !== hero.rank.value && <li>{eventCharacters[hero.heroId].name}: the replay shows {hero.rank.value}; the creator reports {hero.reportedRank.value}.</li>}</>)}</ul></details>}
 </article>
 <style>
@@ -37,6 +38,8 @@ const heroes = [...build.heroes].sort((a, b) => Number(requiredHeroIds.includes(
   .watch-link { border: 1px solid #67582c; background: #2a2518; border-radius: 6px; padding: .55rem .7rem; text-decoration: none; color: #f1d277; font-size: .76rem; }
   .watch-link:hover { background: #38301d; border-color: #d4af37; }
   .replay-heroes { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+  .replay-hero-link { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+  .text-hero-link { display: inline-flex; align-items: center; min-height: 44px; }
   details { border-top: 1px solid #333; margin-top: 1rem; }
   summary { color: #d5bd74; font-size: .75rem; cursor: pointer; padding: .7rem 0 0; }
   li { color: #bbb; font-size: .75rem; line-height: 1.65; }
