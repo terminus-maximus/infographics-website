@@ -2,7 +2,7 @@
 import type { RequiredHeroIcon } from "../../data/graphics";
 
 interface Props {
-  heroes: (RequiredHeroIcon & { shortName?: string })[];
+  heroes: (RequiredHeroIcon & { shortName?: string; guideHref?: string })[];
   label?: string;
   showNames?: boolean;
 }
@@ -14,19 +14,23 @@ const { heroes, label = `Required heroes: ${heroes.map((hero) => hero.name).join
   class="required-heroes"
   aria-label={label}
 >
-  {heroes.map((hero) => (
-    <span class:list={["hero-icon", { named: showNames }]}>
+  {heroes.map((hero) => {
+    const Tag = hero.guideHref ? "a" : "span";
+    const guideLabel = `${hero.shortName || hero.name} Hero Guide`;
+    return <Tag class:list={["hero-icon", { named: showNames, "hero-guide-link": hero.guideHref }]}
+      href={hero.guideHref} aria-label={hero.guideHref ? guideLabel : undefined}
+      title={hero.guideHref ? guideLabel : undefined} data-hero-guide-link={hero.guideHref ? true : undefined}>
       <img
       src={hero.portrait}
-      alt={hero.name}
-      title={hero.name}
+      alt={hero.guideHref ? "" : hero.name}
+      title={hero.guideHref ? guideLabel : hero.name}
       width="58"
       height="58"
       loading="lazy"
       />
       {showNames && <span class="hero-name">{hero.shortName || hero.name}</span>}
-    </span>
-  ))}
+    </Tag>;
+  })}
 </div>
 
 <style>
@@ -51,4 +55,10 @@ const { heroes, label = `Required heroes: ${heroes.map((hero) => hero.name).join
   .hero-icon { display: inline-flex; flex-direction: column; align-items: center; gap: .4rem; }
   .named { width: calc(var(--hero-portrait-size, 58px) + 12px); }
   .hero-name { color: inherit; font-size: .8rem; font-weight: 600; line-height: 1.4; text-align: center; overflow-wrap: anywhere; }
+  .hero-guide-link { min-height: 44px; color: var(--guide-accent, #e4c55e); text-decoration: none; border-radius: 5px; }
+  .hero-guide-link:visited { color: var(--guide-accent, #e4c55e); }
+  .hero-guide-link .hero-name { text-decoration: underline; text-underline-offset: .2em; }
+  .hero-guide-link:hover, .hero-guide-link:focus-visible { color: var(--guide-accent-hover, #ffe39a); }
+  .hero-guide-link:hover img { border-color: var(--guide-accent, #e4c55e); }
+  .hero-guide-link:focus-visible { outline: 2px solid var(--guide-accent, #e4c55e); outline-offset: 4px; }
 </style>

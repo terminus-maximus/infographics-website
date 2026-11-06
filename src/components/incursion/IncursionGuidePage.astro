@@ -1,5 +1,4 @@
 ---
-import GuideHeroLinks from "../heroes/GuideHeroLinks.astro";
 import "../../styles/campaign-layout.css";
 import "../../styles/incursion-guide.css";
 import Layout from "../../layouts/Layout.astro";
@@ -58,7 +57,8 @@ const tocGroups = [
     <section class="guide-panel strategies-section" id="strategies" aria-labelledby="strategies-heading">
       <h2 id="strategies-heading">Three Ways to Build for {guide.machine}</h2>
       <p class="section-intro">Start with the path that fits your account, build around its core heroes, then use flex slots to adapt it.</p>
-      <div class="strategy-list">{guide.strategies.map((strategy, index) => <StrategyCard strategy={strategy} number={index + 1} />)}</div>
+      <p class="hero-guide-note"><strong><a href="/heroes/">Hero Guides</a>:</strong> Select a hero’s name or portrait in the strategies below for stats, abilities, traits and ratings.</p>
+      <div class="strategy-list">{guide.strategies.map((strategy, index) => <StrategyCard strategy={strategy} number={index + 1} linkHeroes />)}</div>
     </section>
 
     <PowerUpPriorities powerUps={guide.powerUps} />
@@ -79,7 +79,10 @@ const tocGroups = [
     <nav class="guide-next" aria-label="Related guides">
       {guide.relatedGuides.map((link) => <a href={link.url}>{link.label}</a>)}
     </nav>
-  <GuideHeroLinks />
   </main>
   <Footer />
 </Layout>
+<style>
+  .hero-guide-note { margin: 0 0 1.5rem; color: var(--guide-muted); font-size: .85rem; line-height: 1.7; }
+  .hero-guide-note a { color: var(--guide-accent); text-underline-offset: .2em; }
+</style>

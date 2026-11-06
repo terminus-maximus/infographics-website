@@ -1,11 +1,12 @@
 ---
 import RequiredHeroIcons from "../campaign/RequiredHeroIcons.astro";
 import { characterReferences } from "../../lib/campaigns";
+import { heroHrefById } from "../../lib/heroes.mjs";
 import type { IncursionStrategy } from "../../data/incursion/types";
 
-interface Props { strategy: IncursionStrategy; number: number }
-const { strategy, number } = Astro.props;
-const heroes = (ids: string[]) => ids.map((id) => characterReferences[id]);
+interface Props { strategy: IncursionStrategy; number: number; linkHeroes?: boolean }
+const { strategy, number, linkHeroes = false } = Astro.props;
+const heroes = (ids: string[]) => ids.map((id) => ({ ...characterReferences[id], guideHref: linkHeroes ? heroHrefById(id) : undefined }));
 ---
 
 <article class:list={["strategy-card", { featured: strategy.recommended }]} id={strategy.id} aria-labelledby={`${strategy.id}-heading`}>
