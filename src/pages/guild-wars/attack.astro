@@ -1,5 +1,4 @@
 ---
-import GuideHeroLinks from "../../components/heroes/GuideHeroLinks.astro";
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import InfographicUpdated from '../../components/InfographicUpdated.astro';
@@ -90,14 +89,15 @@ const span = (values: number[]) => values.join('–');
       <h2 id="team-list-title">Explore the teams</h2>
       <ol>{teams.map(team => <li><a href={`#${team.anchor}`}><img src={units[team.core[0]].image!} alt="" width="40" height="40" loading="lazy" /><span>{team.title}</span></a></li>)}</ol>
     </nav>
+    <p class="hero-guide-note"><strong><a href="/heroes/">Hero Guides</a>:</strong> Select a hero’s name or portrait in the teams below for stats, abilities, traits and ratings.</p>
     {teams.map((team, index) => <TeamSection team={team} index={index} />)}
     <RecommendationSections />
-  <GuideHeroLinks />
   </main>
   <Footer />
   <FloatingTeamList slot="floating-widgets" />
 </Layout>
 <style>
+  .hero-guide-note { margin: 0 0 1.5rem; font-size: .85rem; line-height: 1.7; }
   .methods-definitions { margin-bottom: 2rem; }
   .methods-definitions > summary { color: #f5d76e; }
   .methods-definitions > .disclosure-body { padding: 1.5rem; }

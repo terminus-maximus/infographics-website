@@ -1,8 +1,9 @@
 ---
 import UnitPortrait from './UnitPortrait.astro';
 import { number, percent, ratio, type ObservedSet, type Unit } from '../../lib/guildWars';
-interface Props { evidence: ObservedSet; core: string[]; title: string; registry: Record<string, Unit>; defense?: boolean }
-const { evidence, core, title, registry, defense = false } = Astro.props;
+import { heroHrefById } from '../../lib/heroes.mjs';
+interface Props { evidence: ObservedSet; core: string[]; title: string; registry: Record<string, Unit>; defense?: boolean; linkHeroes?: boolean }
+const { evidence, core, title, registry, defense = false, linkHeroes = false } = Astro.props;
 const rateLabel = defense ? 'Hold Rate' : 'Win Rate';
 const allowSwap = defense || core.length === 5;
 ---
@@ -22,7 +23,7 @@ const allowSwap = defense || core.length === 5;
             const added = row.team.filter(id => !core.includes(id));
             const ordered = [...core.filter(id => row.team.includes(id)), ...added];
             return <tr>
-              <th scope="row"><div class="lineup">{ordered.map(id => <UnitPortrait id={id} compact core={core.includes(id)} registry={registry} />)}<UnitPortrait id={row.mow} compact registry={registry} /></div>{removed.length === 1 && <p class="swap-note">Swap: {registry[removed[0]].name} → {added.map(id => registry[id].name).join(', ')}</p>}</th>
+              <th scope="row"><div class="lineup">{ordered.map(id => <UnitPortrait id={id} compact core={core.includes(id)} registry={registry} linkToGuide={linkHeroes} />)}<UnitPortrait id={row.mow} compact registry={registry} /></div>{removed.length === 1 && <p class="swap-note">Swap: {linkHeroes ? <a href={heroHrefById(removed[0])} title={`${registry[removed[0]].name} Hero Guide`} data-hero-guide-link>{registry[removed[0]].name}</a> : registry[removed[0]].name} → {added.map((id, index) => <>{index > 0 && ', '}{linkHeroes ? <a href={heroHrefById(id)} title={`${registry[id].name} Hero Guide`} data-hero-guide-link>{registry[id].name}</a> : registry[id].name}</>)}</p>}</th>
               <td><strong>{percent(row.rate)}</strong>{row.limited && <span class="limited-sample">Limited sample</span>}</td>
               <td>{ratio(row.wins, row.attempts)}</td>
             </tr>;

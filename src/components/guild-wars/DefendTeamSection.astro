@@ -3,6 +3,7 @@ import UnitPortrait from './UnitPortrait.astro';
 import UsageOptions from './UsageOptions.astro';
 import ObservedTeams from './ObservedTeams.astro';
 import { units, number, percent, ratio, type DefendTeam } from '../../lib/guildWarsDefend';
+import { heroHrefById } from '../../lib/heroes.mjs';
 interface Props { team: DefendTeam; index: number }
 const { team, index } = Astro.props;
 const stats = [
@@ -15,7 +16,7 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
 <section class="panel team-section defend-team" id={team.anchor} aria-labelledby={`${team.anchor}-title`} data-defender-id={team.id}>
   <header class="team-header"><h2 id={`${team.anchor}-title`}><span class="team-number">{String(index + 1).padStart(2, '0')}</span>{team.title}</h2></header>
   <h3 class="core-label">Defend team</h3>
-  <div class="core-lineup">{team.heroes.map(id => <UnitPortrait id={id} core registry={units} />)}</div>
+  <div class="core-lineup">{team.heroes.map(id => <UnitPortrait id={id} core registry={units} linkToGuide />)}</div>
   <dl class="rate-grid">{stats.map(stat => <div><dt>{stat.label}</dt><dd><strong>{stat.prefix}{percent(stat.rate)}</strong><span>{ratio(stat.numerator, stat.denominator)}</span><small>{stat.detail}</small></dd></div>)}</dl>
   <p class="cohort-note">Defense metrics and Battlefield results use these five heroes with <strong>{units[team.mow].name}</strong>, their most common recorded Machine of War.</p>
   <section class="mow-options" aria-labelledby={`${team.anchor}-mow`}>
@@ -24,7 +25,7 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
     <p class="cohort-note">Share of {number(team.mowOccurrences)} recorded appearances of these five heroes. Machines with at least 5% usage are shown.</p>
   </section>
   <div class="evidence">
-    <ObservedTeams evidence={team.observed} core={team.heroes} title={team.title} registry={units} defense />
+    <ObservedTeams evidence={team.observed} core={team.heroes} title={team.title} registry={units} defense linkHeroes />
     <details class="counters"><summary>Counters</summary><div class="disclosure-body">
       <p>Attack teams ranked by total clears, highest first. These results cover defenses sharing <strong>at least three of these five heroes</strong>, with any Machine of War. Select a team name to explore it on the <a href="/guild-wars/attack/">attack page</a>.</p>
       <p class="scroll-hint">Scroll the table sideways to compare all four metrics →</p>
@@ -34,7 +35,7 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
           <tbody>{team.counters.map(counter => <tr data-counter-id={counter.id}>
             <th scope="row" class="counter-team">
               <a href={counter.href}>{counter.title}</a>
-              <div class="counter-portraits" aria-label="Required attack heroes">{counter.heroes.map(id => <img src={units[id].image!} alt={units[id].name} title={units[id].name} width="32" height="32" loading="lazy" />)}</div>
+              <div class="counter-portraits" aria-label="Required attack heroes">{counter.heroes.map(id => <a href={heroHrefById(id)} aria-label={`${units[id].name} Hero Guide`} title={`${units[id].name} Hero Guide`} data-unit-id={id} data-hero-guide-link><img src={units[id].image!} alt="" width="32" height="32" loading="lazy" /></a>)}</div>
               <span class="counter-count">{number(counter.clears)} clears <span aria-hidden="true">·</span> {number(counter.wars)} wars</span>
               <span class:list={['evidence-label', { 'low-support': counter.evidence !== 'Supported' }]}>{counter.evidence}</span>
             </th>
@@ -97,6 +98,9 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
   .counter-team { min-width: 210px; }
   .counter-team a { font-size: .95rem; }
   .counter-portraits { display: flex; gap: .25rem; margin: .65rem 0 .45rem; }
+  .counter-portraits a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 6px; }
+  .counter-portraits a:hover img { border-color: #e4c55e; }
+  .counter-portraits a:focus-visible { outline: 2px solid #e4c55e; outline-offset: 2px; }
   .counter-portraits img { object-fit: contain; border: 1px solid rgba(212,175,55,.65); border-radius: 6px; }
   .counter-count { display: block; color: #ccc; font-size: .75rem; font-weight: 400; }
   .evidence-label { display: inline-block; color: #bbcdb3; border: 1px solid #4d6248; border-radius: 4px; padding: .15rem .35rem; font-size: .65rem; margin-top: .4rem; }

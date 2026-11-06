@@ -23,14 +23,14 @@ const mowOptions = team.mows.rows
 <section class="panel team-section" id={team.anchor} aria-labelledby={`${team.anchor}-title`} data-core-id={team.id}>
   <header class="team-header"><h2 id={`${team.anchor}-title`}><span class="team-number">{String(index + 1).padStart(2, '0')}</span>{team.title}</h2></header>
   <h3 class="core-label">Core team</h3>
-  <div class="core-lineup">{team.core.map(id => <UnitPortrait id={id} core />)}</div>
+  <div class="core-lineup">{team.core.map(id => <UnitPortrait id={id} core linkToGuide />)}</div>
   <dl class="rate-grid">{stats.map(stat => <div><dt>{stat.label}</dt><dd><strong>{percent(stat.rate)}</strong><span>{ratio(stat.numerator, stat.denominator)}</span><small>{stat.detail}</small></dd></div>)}</dl>
   <div class="options-grid">
-    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3>{flexCohort && <p>Uses at least four of these five core heroes. Usage is out of {number(flexCohort.attempts)} distinct attacks, including {number(flexCohort.completeCoreAttempts)} with all five and {number(flexCohort.replacementAttempts)} with a replacement. Each attack counts once.</p>}<UsageOptions options={flexOptions} /></section>
+    <section aria-labelledby={`${team.anchor}-flex`}><h3 id={`${team.anchor}-flex`}>Popular flex options</h3>{flexCohort && <p>Uses at least four of these five core heroes. Usage is out of {number(flexCohort.attempts)} distinct attacks, including {number(flexCohort.completeCoreAttempts)} with all five and {number(flexCohort.replacementAttempts)} with a replacement. Each attack counts once.</p>}<UsageOptions options={flexOptions} linkHeroes /></section>
     <section aria-labelledby={`${team.anchor}-mow`}><h3 id={`${team.anchor}-mow`}>Machines of War</h3><UsageOptions options={mowOptions} /></section>
   </div>
   <div class="evidence">
-    <ObservedTeams evidence={team.observed} core={team.core} title={team.title} registry={units} />
+    <ObservedTeams evidence={team.observed} core={team.core} title={team.title} registry={units} linkHeroes />
     <details><summary>Hard Maps</summary><div class="disclosure-body">
       <div class="context-scroll" role="region" tabindex="0" aria-label={`${team.title} map and Medicae results, horizontally scrollable`}>
         <table><caption>Recorded map × Medicae results</caption><thead><tr><th scope="col">Clear rate</th><th scope="col">Map</th><th scope="col">Medicae</th><th scope="col">Attempts</th><th scope="col">Clears</th><th scope="col">Failures</th><th scope="col">Perfects</th><th scope="col">Clears with deaths</th></tr></thead>
