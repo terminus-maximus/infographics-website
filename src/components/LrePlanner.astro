@@ -1,10 +1,15 @@
 ---
 import { eligibleCharacters, highPointsCombinations, type LrePlannerData } from "../lib/lrePlanner";
+import { heroHrefById } from "../lib/heroes.mjs";
 
-interface Props { data: LrePlannerData }
-const { data: sourceData } = Astro.props;
+interface Props { data: LrePlannerData; linkHeroes?: boolean }
+const { data: sourceData, linkHeroes = false } = Astro.props;
+const heroGuideHrefs: Record<string, string> | undefined = linkHeroes
+  ? Object.fromEntries(sourceData.characters.map(character => [character.id, heroHrefById(character.id)]))
+  : undefined;
 const data = {
   ...sourceData,
+  ...(heroGuideHrefs ? { heroGuideHrefs } : {}),
   tracks: sourceData.tracks.map(track => ({
     ...track,
     requirements: [...track.requirements].sort((a, b) => b.points - a.points),
@@ -18,6 +23,7 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
   <section class="planner-section combinations-section" aria-labelledby="combinations-heading">
     <h2 id="combinations-heading">High Points Combinations</h2>
     <p class="intro">Find high-scoring combinations of requirements shared by at least three characters.</p>
+    {linkHeroes && <p class="intro hero-guides-note"><strong>Hero Guides:</strong> Select a hero’s name or portrait below for stats, abilities, traits and ratings.</p>}
     <div class="track-selector" role="group" aria-label="High Points Combinations track" data-interactive hidden>
       {data.tracks.map((track, index) => (
         <button type="button" class={`track-selector-button track-${track.id}`} data-select-track={track.id} aria-pressed={index === 0} aria-controls="high-points-combinations track-filters">
@@ -37,13 +43,21 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
             <ul class="character-grid combo-character-grid">
               {combination.characters.map(character => (
                 <li title={`${character.name} · ${character.faction}`}>
-                  <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
-                  <span>{character.name}</span>
+                  {heroGuideHrefs ? (
+                    <a class="hero-guide-link hero-portrait-link" href={heroGuideHrefs[character.id]} aria-label={`${character.name} Hero Guide`} title={`${character.name} Hero Guide`} data-hero-guide-link>
+                      <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
+                      <span>{character.name}</span>
+                    </a>
+                  ) : (
+                    <><img src={character.portrait} alt="" width="60" height="60" loading="lazy" /><span>{character.name}</span></>
+                  )}
                 </li>
               ))}
             </ul>
           ) : (
-            <p class="combo-names">{combination.characters.map(character => character.name).join(', ')}</p>
+            <p class="combo-names">{heroGuideHrefs ? combination.characters.map((character, index) => (
+              <>{index > 0 && ', '}<a class="hero-guide-link" href={heroGuideHrefs[character.id]} aria-label={`${character.name} Hero Guide`} title={`${character.name} Hero Guide`} data-hero-guide-link>{character.name}</a></>
+            )) : combination.characters.map(character => character.name).join(', ')}</p>
           )}
           <button type="button" data-use-combo={combination.requirements.map(requirement => requirement.id).join(' ')} data-interactive hidden>Use these {combination.requirements.length} filters</button>
         </article>
@@ -89,8 +103,14 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
               <ul class="character-grid">
                 {pool.map(character => (
                   <li data-character={character.id} title={`${character.name} · ${character.faction}`}>
-                    <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
-                    <span>{character.name}</span>
+                    {heroGuideHrefs ? (
+                      <a class="hero-guide-link hero-portrait-link" href={heroGuideHrefs[character.id]} aria-label={`${character.name} Hero Guide`} title={`${character.name} Hero Guide`} data-hero-guide-link>
+                        <img src={character.portrait} alt="" width="60" height="60" loading="lazy" />
+                        <span>{character.name}</span>
+                      </a>
+                    ) : (
+                      <><img src={character.portrait} alt="" width="60" height="60" loading="lazy" /><span>{character.name}</span></>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -105,10 +125,10 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
 </div>
 
 <script>
-  import { eligibleCharacters, highPointsCombinations, selectedPoints, type LrePlannerData } from '../lib/lrePlanner';
+  import { eligibleCharacters, highPointsCombinations, selectedPoints, type LrePlannerData, type LreCharacter } from '../lib/lrePlanner';
 
   document.querySelectorAll<HTMLElement>('[data-lre-planner]').forEach(planner => {
-    const data: LrePlannerData = JSON.parse(planner.querySelector('[data-planner-data]')!.textContent!);
+    const data: LrePlannerData & { heroGuideHrefs?: Record<string, string> } = JSON.parse(planner.querySelector('[data-planner-data]')!.textContent!);
     const trackButtons = [...planner.querySelectorAll<HTMLButtonElement>('[data-select-track]')];
     let selectedTrackId = data.tracks[0].id;
     const comboGrid = planner.querySelector<HTMLElement>('[data-combinations]')!;
@@ -148,6 +168,15 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
       return node;
     };
 
+    function heroLink(character: LreCharacter, portrait = false) {
+      const link = element('a', `hero-guide-link${portrait ? ' hero-portrait-link' : ''}`, '');
+      link.href = data.heroGuideHrefs![character.id];
+      link.setAttribute('aria-label', `${character.name} Hero Guide`);
+      link.title = `${character.name} Hero Guide`;
+      link.dataset.heroGuideLink = '';
+      return link;
+    }
+
     function renderCombinations() {
       const track = data.tracks.find(track => track.id === selectedTrackId)!;
       const combinations = highPointsCombinations(data.characters, track);
@@ -171,11 +200,23 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
             portrait.width = 60;
             portrait.height = 60;
             portrait.loading = 'lazy';
-            item.append(portrait, element('span', '', character.name));
+            const content = data.heroGuideHrefs ? heroLink(character, true) : item;
+            content.append(portrait, element('span', '', character.name));
+            if (content !== item) item.append(content);
             characters.append(item);
           }
         } else {
-          characters = element('p', 'combo-names', combination.characters.map(character => character.name).join(', '));
+          characters = element('p', 'combo-names', '');
+          combination.characters.forEach((character, index) => {
+            if (index > 0) characters.append(', ');
+            if (data.heroGuideHrefs) {
+              const link = heroLink(character);
+              link.textContent = character.name;
+              characters.append(link);
+            } else {
+              characters.append(character.name);
+            }
+          });
         }
         article.append(score,
           element('h3', '', combination.requirements.map(requirement => requirement.label).join(' + ')),
@@ -224,6 +265,12 @@ const combinations = highPointsCombinations(data.characters, data.tracks[0]);
   .lre-planner .planner-section { margin-bottom: 4rem; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; scroll-margin-top: 6rem; }
   .lre-planner h2 { margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid #333; color: var(--planner-gold); font-size: 1.5rem; }
   .lre-planner .intro { color: #ccc; line-height: 1.7; margin: 0 0 .8rem; }
+  .lre-planner .hero-guides-note { font-size: .85rem; }
+  .lre-planner .hero-guides-note strong { color: var(--planner-gold); }
+  .lre-planner .hero-guide-link, .lre-planner .hero-guide-link:visited { color: var(--planner-gold); text-decoration: underline; text-underline-offset: .2em; border-radius: 4px; }
+  .lre-planner .hero-guide-link:hover, .lre-planner .hero-guide-link:focus-visible { color: #f5d76e; }
+  .lre-planner .hero-guide-link:focus-visible { outline: 2px solid var(--planner-gold); outline-offset: 3px; }
+  .lre-planner .hero-portrait-link { display: flex; flex-direction: column; align-items: center; gap: .45rem; width: 100%; height: 100%; min-height: 44px; }
   .lre-planner .footnote { color: #aaa; font-size: .8rem; line-height: 1.65; }
   .lre-planner .footnote:last-child { margin-bottom: 0; }
   .lre-planner label { font-size: .85rem; }

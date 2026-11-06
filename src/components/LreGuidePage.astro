@@ -4,16 +4,18 @@ import LrePlanner from './LrePlanner.astro';
 import GuideHeroLinks from './heroes/GuideHeroLinks.astro';
 import { getLreBasicsContent, type LreCharacter } from '../data/lreBasics';
 import type { LrePlannerData } from '../lib/lrePlanner';
+import { heroHrefById } from '../lib/heroes.mjs';
 
 interface Props {
   character: LreCharacter;
+  heroGuideId?: string;
   imageSrc: string;
   data: LrePlannerData;
   resources?: { title: string; url: string }[];
 }
 
-const { character, imageSrc, data, resources = [] } = Astro.props;
-const basics = getLreBasicsContent(character);
+const { character, heroGuideId, imageSrc, data, resources = [] } = Astro.props;
+const basics = getLreBasicsContent(character, heroGuideId ? heroHrefById(heroGuideId) : undefined);
 const detailsStart = basics.indexOf('## Event Goal');
 ---
 
@@ -28,5 +30,5 @@ const detailsStart = basics.indexOf('## Event Goal');
   basicsDetailsContent={basics.slice(detailsStart)}
   resources={resources}
 >
-  <Fragment slot="after-basics"><LrePlanner data={data} /><GuideHeroLinks /></Fragment>
+  <Fragment slot="after-basics"><LrePlanner data={data} linkHeroes={Boolean(heroGuideId)} />{!heroGuideId && <GuideHeroLinks />}</Fragment>
 </FeaturedInfographicPage>

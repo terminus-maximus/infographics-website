@@ -1,6 +1,7 @@
 ---
 import FeaturedInfographicPage from "../../components/FeaturedInfographicPage.astro";
 import { getLreBasicsContent } from "../../data/lreBasics";
+import { heroHrefById } from "../../lib/heroes.mjs";
 ---
 
 <FeaturedInfographicPage
@@ -9,5 +10,5 @@ import { getLreBasicsContent } from "../../data/lreBasics";
   imageSrc="/images/lucius-lre.png"
   imageAlt="Lucius Legendary Release Event Infographic"
   basicsTitle="Lucius LRE Basics"
-  basicsContent={getLreBasicsContent("Lucius")}
+  basicsContent={getLreBasicsContent("Lucius", heroHrefById("emperLucius"))}
 />

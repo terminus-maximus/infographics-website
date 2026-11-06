@@ -1,10 +1,10 @@
 export type LreCharacter = "Lucius" | "Uthar" | "Farsight" | "Lysander" | "Fabius Bile";
 
-export function getLreBasicsContent(character: LreCharacter): string {
+export function getLreBasicsContent(character: LreCharacter, heroGuideHref?: string): string {
   return `
 ## Event Overview
 
-${character} is unlocked through a Legendary Release Event, where players earn points by clearing battles across multiple tracks and requirements.
+${character} is unlocked through a Legendary Release Event, where players earn points by clearing battles across multiple tracks and requirements.${heroGuideHref ? `\n\nExplore the [${character} Hero Guide](${heroGuideHref}) for stats, abilities, traits and ratings.` : ''}
 
 ## Event Goal
 
