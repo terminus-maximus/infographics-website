@@ -119,7 +119,17 @@ if (built) {
     assert(html.includes('Mythic wings') && html.includes('Adamantine II') && !html.includes('Adamantine III') && !html.includes('Adamantine Rank III') && html.includes('max="60"'),`Wrong initial controls: ${url}`);
     assert(!html.includes('Five equally weighted milestones') && html.includes(popularityInsight(hero.assessments.popularity,benchmark).replaceAll('<','&lt;')),`Wrong Popularity insight: ${url}`);
     const disclosures = [...html.matchAll(/<details\b[^>]*class="[^"]*reference-disclosure[^>]*>/g)];
-    assert(disclosures.length===hero.traits.filter(trait=>trait.id!=='Hero').length+hero.abilities.length+hero.relics.length && disclosures.every(([tag])=>! /\sopen(?:\s|=|>)/.test(tag)),`Reference cards must start collapsed: ${url}`);
+    assert(disclosures.length===1+hero.traits.filter(trait=>trait.id!=='Hero').length+hero.abilities.length+hero.relics.length && disclosures.every(([tag])=>! /\sopen(?:\s|=|>)/.test(tag)),`Reference cards must start collapsed: ${url}`);
+    const factionCards = [...html.matchAll(/<details\b[^>]*\bdata-hero-faction\b[^>]*>[\s\S]*?<\/details>/g)];
+    assert(factionCards.length===1,`Missing or duplicate faction card: ${url}`);
+    const factionCard = factionCards[0][0];
+    const factionMembers = heroes.filter(member=>member.faction_id===hero.faction_id);
+    assert(isDeepStrictEqual([...factionCard.matchAll(/href="([^"]+)"/g)].map(match=>match[1]),factionMembers.map(member=>`/heroes/${member.slug}/`)),`Wrong faction guide links: ${url}`);
+    assert(factionCard.includes(`/images/faction-game/${hero.faction_id}.webp`),`Wrong faction badge: ${url}`);
+    assert(factionCard.includes(`href="${url}" aria-current="page"`) && (factionCard.match(/aria-current="page"/g)||[]).length===1,`Wrong current faction member: ${url}`);
+    for (const member of factionMembers) assert(factionCard.includes(roundPortraits[member.unit_id].src),`Missing faction portrait: ${url}/${member.unit_id}`);
+    const factionPosition = html.indexOf('id="faction-heading"');
+    assert(factionPosition>html.indexOf('class="combat-grid"') && (hero.traits.every(trait=>trait.id==='Hero') || factionPosition<html.indexOf('<h3>Traits</h3>')),`Faction must follow combat stats and precede Traits: ${url}`);
     const summary=overallSummary(hero.unit_id,hero.overall.final_score).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll("'",'&#39;').replaceAll('"','&quot;');
     assert(html.includes(`class="overall-summary-copy" data-overall-summary>${summary}</p>`),`Missing overall summary: ${url}`);
     assert((html.match(/ data-relic(?:\s|>)/g)||[]).length===hero.relics.length,`Wrong Relic cards: ${url}`);

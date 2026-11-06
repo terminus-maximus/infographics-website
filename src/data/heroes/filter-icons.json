@@ -4,164 +4,210 @@
     "faction": {
       "Adeptus Astartes": {
         "id": "AdeptusAstartes",
-        "src": "/images/hero-filters/faction/AdeptusAstartes.webp",
-        "width": 98,
-        "height": 71,
-        "source_sha256": "803f00a29f11e0285de9914ca339fa6f2154641f4c9e1fbbff8c5576e475fd9b"
+        "src": "/images/faction-game/AdeptusAstartes.webp",
+        "width": 256,
+        "height": 243,
+        "source_sha256": "a69caf0905fc7211190dc36c5513b19cfa3c91f01bf912b435beaefa54e1a4da",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_adeptus_astartes_01"
       },
       "Adeptus Mechanicus": {
         "id": "AdeptusMechanicus",
-        "src": "/images/hero-filters/faction/AdeptusMechanicus.webp",
-        "width": 77,
-        "height": 76,
-        "source_sha256": "e3f938931c293b02230313044a9636ee5e0ae69092faf9a938988f48396122bd"
+        "src": "/images/faction-game/AdeptusMechanicus.webp",
+        "width": 256,
+        "height": 251,
+        "source_sha256": "95ac3156d3eb9a39f18f91cf887b1b8ecbb22166f0e09a0f857f12d082f835c9",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_adeptus_mechanicus_01"
       },
       "Aeldari": {
         "id": "Aeldari",
-        "src": "/images/hero-filters/faction/Aeldari.webp",
-        "width": 77,
-        "height": 92,
-        "source_sha256": "9275423bf35cc2873d70ff08c64810e3b1a18cfa26c75ee39b1d0c8d1db37528"
+        "src": "/images/faction-game/Aeldari.webp",
+        "width": 253,
+        "height": 256,
+        "source_sha256": "9a52c4054970de72d74fa0a90bf31c3db071f958e5367f0a8f9b9e6aacd2f593",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_aeldari_01"
       },
       "Astra Militarum": {
         "id": "AstraMilitarum",
-        "src": "/images/hero-filters/faction/AstraMilitarum.webp",
-        "width": 98,
-        "height": 47,
-        "source_sha256": "0d51d2349c629099f3c7458f3e1970b665b7a1a57924d4c6bf13c9c5fd7b196e"
+        "src": "/images/faction-game/AstraMilitarum.webp",
+        "width": 256,
+        "height": 247,
+        "source_sha256": "945e250c4829ce3110fc58a8ffbe96a40a21c45b948ec584602afb9424fbc3fa",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_astra_militarum_01"
       },
       "Black Legion": {
         "id": "BlackLegion",
-        "src": "/images/hero-filters/faction/BlackLegion.webp",
-        "width": 82,
-        "height": 86,
-        "source_sha256": "3250f6e9b15925b1fdb54d5334c160769d960e5c92a81aefb8f3c512bcc4ad1f"
+        "src": "/images/faction-game/BlackLegion.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "b32c255ef756a1c41f8a0852dc96f655898ec43505bb354a243cfaad56aaf980",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_black_legion_01"
       },
       "Black Templars": {
         "id": "BlackTemplars",
-        "src": "/images/hero-filters/faction/BlackTemplars.webp",
-        "width": 77,
-        "height": 77,
-        "source_sha256": "4eef9e060963a14bde7820c0a8af935d58acba8be27e11a2d772379928b6fb59"
+        "src": "/images/faction-game/BlackTemplars.webp",
+        "width": 256,
+        "height": 234,
+        "source_sha256": "f8e20557769e0a650ab5889407813f665bc3e0a1efc4b0e5a98a53df15664454",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_black_templars_01"
       },
       "Blood Angels": {
         "id": "BloodAngels",
-        "src": "/images/hero-filters/faction/BloodAngels.webp",
-        "width": 64,
-        "height": 54,
-        "source_sha256": "40663c741c766a0d6aee1760bf5298e4fe26c654be11a32a69c528562645c06d"
+        "src": "/images/faction-game/BloodAngels.webp",
+        "width": 247,
+        "height": 215,
+        "source_sha256": "6c56b688b73a48cda72693d5617b3f13c788a224a2ed91982addf329324c9af1",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_blood_angels_01"
       },
       "Adeptus Custodes": {
         "id": "Custodes",
-        "src": "/images/hero-filters/faction/Custodes.webp",
-        "width": 64,
-        "height": 63,
-        "source_sha256": "ab0d19fb1000c4ceeae246ab13f416b8add02c46bbe9a0939544fb85d8857fd0"
+        "src": "/images/faction-game/Custodes.webp",
+        "width": 246,
+        "height": 214,
+        "source_sha256": "72ebb63917fdbde12990e22179b92edce1a9967ff6417d732904b2c539ef5e50",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_custodes_01"
       },
       "Dark Angels": {
         "id": "DarkAngels",
-        "src": "/images/hero-filters/faction/DarkAngels.webp",
-        "width": 101,
-        "height": 102,
-        "source_sha256": "f062499219ec8be0bc5bfdccb5b2676d11a47e0b234b8e1289d6d2b67e0a5e4f"
+        "src": "/images/faction-game/DarkAngels.webp",
+        "width": 256,
+        "height": 237,
+        "source_sha256": "6fd816b3e45ccfe317dc1f389c88d0c10abd8008b90e4d756fc83663582a1277",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_dark_angels_01"
       },
       "Death Guard": {
         "id": "DeathGuard",
-        "src": "/images/hero-filters/faction/DeathGuard.webp",
-        "width": 84,
-        "height": 90,
-        "source_sha256": "385c53d973cdf060a9fb95761078d7c0be1f58972192ca04f63b0e752c3d4780"
+        "src": "/images/faction-game/DeathGuard.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "561d7d82416acb2848407d3e66203a0c7ededaf82190dc3af95a7ba59d0a43d1",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_death_guard_01"
       },
       "Emperor's Children": {
         "id": "EmperorsChildren",
-        "src": "/images/hero-filters/faction/EmperorsChildren.webp",
-        "width": 78,
-        "height": 83,
-        "source_sha256": "f983a98fd1ce85bcbc632e014323739d6cb7219886471acd1c1a3e3c4ccf420b"
+        "src": "/images/faction-game/EmperorsChildren.webp",
+        "width": 254,
+        "height": 253,
+        "source_sha256": "8bc5d23c35f203ae39a2f84911055be8b8ac465df491cd94ccd4daea19bf3bac",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_emperors_children_01"
       },
       "Genestealer Cults": {
         "id": "Genestealers",
-        "src": "/images/hero-filters/faction/Genestealers.webp",
-        "width": 61,
-        "height": 62,
-        "source_sha256": "21dadeb9cb1a53442695cfa510ba7e0c5b87bcd878381da97a853c34e7c46399"
+        "src": "/images/faction-game/Genestealers.webp",
+        "width": 255,
+        "height": 256,
+        "source_sha256": "4849b6b5c5703d9d3f98885737bb3eea9b070ed96857daacf441c31edee26789",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_genestealers_01"
       },
       "Leagues of Votann": {
         "id": "LeaguesOfVotann",
-        "src": "/images/hero-filters/faction/LeaguesOfVotann.webp",
-        "width": 69,
-        "height": 103,
-        "source_sha256": "bc450b0d1863780e046c6f6929b53369875761368b79c5d43903866c5a3c12de"
+        "src": "/images/faction-game/LeaguesOfVotann.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "0f96e8b0240f8b7aff439b570707a76450e86eeb75a0a201c88d12c3c1a34440",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_votann_01"
       },
       "Necrons": {
         "id": "Necrons",
-        "src": "/images/hero-filters/faction/Necrons.webp",
-        "width": 72,
-        "height": 93,
-        "source_sha256": "9552f39f3dc9e4dfd0936afdbba0ef7c0dd9afb5780aad67c90f192ebf75c8ea"
+        "src": "/images/faction-game/Necrons.webp",
+        "width": 254,
+        "height": 254,
+        "source_sha256": "2154fec0769ebf0a761175ba892607890e3a7651f06e1e82c3d1d9638eecb147",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_necron_01"
       },
       "Orks": {
         "id": "Orks",
-        "src": "/images/hero-filters/faction/Orks.webp",
-        "width": 99,
-        "height": 104,
-        "source_sha256": "8291694772e7c71491428afbd3efdc329a3591bb647ebf158bbb3050939b74e1"
+        "src": "/images/faction-game/Orks.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "b2fdd1ad84c1f662b90462e61f8f6878586f4ca66ccec0b172b39f6c13dc7bcf",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_orks_01"
       },
       "Adepta Sororitas": {
         "id": "Sisterhood",
-        "src": "/images/hero-filters/faction/Sisterhood.webp",
-        "width": 76,
-        "height": 75,
-        "source_sha256": "861d7d07cba7b4e1a6ef77c4100d6b2d0559dbf08d72ea0aa2a52c18c6ad8b84"
+        "src": "/images/faction-game/Sisterhood.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "d1d1e156174aab9b9c218a748f9d01962801496baea1be470e26a1e1a759a1ff",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_adeptas_01"
       },
       "Space Wolves": {
         "id": "SpaceWolves",
-        "src": "/images/hero-filters/faction/SpaceWolves.webp",
-        "width": 106,
-        "height": 99,
-        "source_sha256": "52bdf5af00f4680d74b767f8f30992e8fed64f5880ad7988e09123ee01e560a1"
+        "src": "/images/faction-game/SpaceWolves.webp",
+        "width": 256,
+        "height": 226,
+        "source_sha256": "73dc2cfbbc2540c62aa1cad40c52e23eabdbd345d7afc67fcf0c76f4a35356dc",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_space_wolves_01"
       },
       "T'au Empire": {
         "id": "Tau",
-        "src": "/images/hero-filters/faction/Tau.webp",
-        "width": 77,
-        "height": 77,
-        "source_sha256": "082ca8a3518a72f264b5fdba168f636fde2fe68541098b00614466310f90cbe5"
+        "src": "/images/faction-game/Tau.webp",
+        "width": 128,
+        "height": 128,
+        "source_sha256": "b7327145c7d459e59ec4d9cd455d3feda864840023674d9a4bc899ba5bad3820",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_tau_01"
       },
       "The Lost and the Damned": {
         "id": "TheLostAndTheDamned",
-        "src": "/images/hero-filters/faction/TheLostAndTheDamned.webp",
-        "width": 61,
-        "height": 62,
-        "source_sha256": "623d2f31a9be5f04fe9be71eeaeb093696aa2d001d335dd2c35f5683f91c7f35"
+        "src": "/images/faction-game/TheLostAndTheDamned.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "6826b02aa6240e58ba37c30072025ff5699bb6161668d2da1ba884d32041c287",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_the_lost_and_the_damned_01"
       },
       "Thousand Sons": {
         "id": "ThousandSons",
-        "src": "/images/hero-filters/faction/ThousandSons.webp",
-        "width": 99,
-        "height": 96,
-        "source_sha256": "764eb6854f7344a623eb5a811dbdd6b710174c86f6942327f4e2ac3e01df9d24"
+        "src": "/images/faction-game/ThousandSons.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "af5b8273552a92757911ddb4a71ed0245dd66eae73372b26128a85c2f9e897fa",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_thousand_sons_01"
       },
       "Tyranids": {
         "id": "Tyranids",
-        "src": "/images/hero-filters/faction/Tyranids.webp",
-        "width": 100,
-        "height": 101,
-        "source_sha256": "973d2307243fad0576865941f5f4606afc46d744170102f39aa66922e142a503"
+        "src": "/images/faction-game/Tyranids.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "f11e23a093404b758d9d9b7200842f48c367f789ac9b3508b26e8dc0a3976041",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_tyranids_01"
       },
       "Ultramarines": {
         "id": "Ultramarines",
-        "src": "/images/hero-filters/faction/Ultramarines.webp",
-        "width": 85,
-        "height": 77,
-        "source_sha256": "3c21dd399725e5340d2895ae4f5509cd927422476b4fbfd9f13859847b114d97"
+        "src": "/images/faction-game/Ultramarines.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "95966fe67fb86c4ad1bb61d3502c1586634d32380d4eba3279e1864305ea91ef",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_ultramarine_01"
       },
       "World Eaters": {
         "id": "WorldEaters",
-        "src": "/images/hero-filters/faction/WorldEaters.webp",
-        "width": 64,
-        "height": 64,
-        "source_sha256": "2d5858234cd9c405507bcda2f94f12af73ddfb8b4bf601a85703d52970565009"
+        "src": "/images/faction-game/WorldEaters.webp",
+        "width": 256,
+        "height": 256,
+        "source_sha256": "63d880a132370e8cfeafc00d4ce8ec7a138cf0af1af97730f00056ffecd5b290",
+        "source_app_version": "1.44.120",
+        "sprite_name": "ui_icon_faction_world_eaters_01"
       }
     },
     "traits": {

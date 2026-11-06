@@ -9,10 +9,10 @@ const { exclude } = Astro.props;
     const guide = campaignEvents.find(guide => guide.slug === event.slug)!;
     return <a class="event-card" href={`/campaign-event/${event.slug}/`}>
       <img class="preview" src={`/images/thumbnails/ce-${event.slug}-thumb.png`} alt={`${event.name} Campaign Event infographic preview`} width="400" height="225" loading="lazy" />
-      <div class="card-body"><h3><img src={`/images/factions/${event.icon}.png`} alt="" width="34" height="34" loading="lazy" />{event.name}<span aria-hidden="true">↗</span></h3>
+      <div class="card-body"><h3><img src={`/images/faction-clear/${event.icon}.webp`} alt="" width="34" height="34" loading="lazy" />{event.name}<span aria-hidden="true">↗</span></h3>
       <p>{event.description}</p>
       <div class="required-label">Required trio</div><div class="required-trio">{guide.requiredHeroIds.map(id => <div><img src={eventCharacters[id].portrait} alt="" width="44" height="44" loading="lazy" /><span>{eventCharacters[id].name}</span></div>)}</div>
-      <div class="factions">{event.factions.map(faction => <span><img src={`/images/factions/${factionIcons[faction]}.png`} alt="" width="22" height="22" loading="lazy" />{faction}</span>)}</div>
+      <div class="factions">{event.factions.map(faction => <span><img src={`/images/faction-clear/${factionIcons[faction]}.webp`} alt="" width="22" height="22" loading="lazy" />{faction}</span>)}</div>
       </div>
     </a>;
   })}

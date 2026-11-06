@@ -6,6 +6,7 @@ import filterIconSource from '../../data/heroes/filter-icons.json';
 import GameIcon from './GameIcon.astro';
 import StatPicker from './StatPicker.astro';
 import Relics from './Relics.astro';
+import Faction from './Faction.astro';
 import type { Hero } from '../../lib/hero-types';
 interface Props { hero: Hero; }
 interface Icon {src:string;width:number;height:number;count?:number}
@@ -40,6 +41,7 @@ const traits = hero.traits.filter(trait => trait.id !== 'Hero');
     <article class="combat-card movement-card"><h3><GameIcon icon={icons.stats.movement} />Movement</h3><strong class="movement-value">{hero.movement ?? '—'}</strong><span class="muted">hexes</span></article>
     {hero.weapons.map(weapon => <article class="combat-card"><h3><GameIcon icon={icons.stats[weapon.kind]} />{weapon.kind === 'melee' ? 'Melee' : 'Ranged'}</h3><div class="weapon-damage"><GameIcon icon={filterIcons.damage[weapon.damage_type]} /><strong>{weapon.damage_type}</strong></div><dl class="attack-facts"><div><dt><GameIcon icon={icons.stats.hits} />Hits</dt><dd>{weapon.hits}</dd></div><div><dt>Range</dt><dd>{weapon.range}</dd></div><div><dt><GameIcon icon={icons.stats.pierce} />Pierce</dt><dd>{weapon.pierce}%</dd></div></dl></article>)}
   </div>
+  <Faction hero={hero} />
   {traits.length > 0 && <><h3>Traits</h3><div class="trait-card-grid">{traits.map(trait => <details class="ability-card trait-card reference-disclosure"><summary class="ability-heading"><GameIcon icon={filterIcons.traits[trait.name]} class="trait-card-icon" /><h4>{trait.name}</h4><span class="disclosure-chevron" aria-hidden="true"></span></summary><p>{traitDescription(trait)}</p></details>)}</div></>}
   <h3>Abilities</h3>
   <div class="ability-grid">{hero.abilities.map(ability => <details class="ability-card reference-disclosure" data-ability>

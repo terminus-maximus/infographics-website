@@ -1,0 +1,45 @@
+---
+import { heroes, heroHref } from '../../lib/heroes.mjs';
+import factionArtwork from '../../data/heroes/faction-artwork.json';
+import roundPortraitSource from '../../data/heroes/round-portraits.json';
+import GameIcon from './GameIcon.astro';
+import type { Hero } from '../../lib/hero-types';
+interface Props { hero: Hero; }
+interface Icon { src: string; width: number; height: number; }
+const { hero } = Astro.props;
+const factionIcons: Record<string, Icon> = factionArtwork.icons;
+const portraits: Record<string, Icon> = roundPortraitSource;
+const members = heroes.filter(member => member.faction_id === hero.faction_id);
+---
+<h3 id="faction-heading">Faction</h3>
+<details class="ability-card reference-disclosure faction-card" data-hero-faction>
+  <summary class="ability-heading">
+    <GameIcon icon={factionIcons[hero.faction_id]} class="faction-icon" />
+    <div><h4>{hero.faction}</h4><span class="muted">{members.length} {members.length === 1 ? 'hero' : 'heroes'}</span></div>
+    <span class="disclosure-chevron" aria-hidden="true"></span>
+  </summary>
+  <ul class="faction-members" aria-label={`${hero.faction} heroes`}>
+    {members.map(member => <li>
+      <a href={heroHref(member)} aria-current={member.unit_id === hero.unit_id ? 'page' : undefined}>
+        <img src={portraits[member.unit_id].src} width={portraits[member.unit_id].width} height={portraits[member.unit_id].height} alt="" loading="lazy" />
+        <span>{member.name}</span>
+      </a>
+    </li>)}
+  </ul>
+</details>
+<style>
+  .faction-card { margin: .8rem 0 1.8rem; }
+  .faction-card :global(.faction-icon img) { width: 48px; height: 48px; }
+  .faction-members { display: flex; flex-wrap: wrap; gap: 1rem .75rem; list-style: none; margin: 0; padding: 1.2rem; }
+  .faction-members li { flex: 0 0 112px; min-width: 0; }
+  .faction-members a { display: flex; flex-direction: column; align-items: center; gap: .6rem; padding: .5rem; border-radius: 8px; color: #e1dfd7; text-decoration: none; text-align: center; font-size: .78rem; line-height: 1.4; overflow-wrap: anywhere; }
+  .faction-members img { display: block; width: 72px; height: 72px; object-fit: contain; border-radius: 50%; }
+  .faction-members a:hover, .faction-members a:focus-visible { color: #efce72; background: #ffffff08; }
+  .faction-members a:focus-visible { outline: 2px solid #efce72; outline-offset: 3px; }
+  .faction-members a[aria-current="page"] { color: #efce72; }
+  .faction-members a[aria-current="page"] img { outline: 2px solid #c6ad68; outline-offset: 2px; }
+  @media (max-width: 600px) {
+    .faction-members { padding: 1rem; }
+    .faction-card :global(.faction-icon img) { width: 42px; height: 42px; }
+  }
+</style>

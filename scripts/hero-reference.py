@@ -62,16 +62,11 @@ def write_changed(path, content):
 
 
 def filter_icon_assets(local, catalog, images, characters, image_module):
-    """Reuse exact 1.43 icon mappings; preserve the source alpha and dimensions."""
-    datamine = local / "data/datamine_update"
-    latest = read(datamine / "latest.json")
-    if latest["status"] != "complete":
-        raise ValueError("Faction asset export is not complete")
-    manifest = read(datamine / "runs" / latest["run_id"] / "manifest.json")
-    if any(manifest["game"][key] != catalog["snapshot"][key] for key in ("app_version", "config_full_hash")):
-        raise ValueError("Faction icon snapshot differs from the reference catalog")
-    factions = {r["entity_id"]: r for r in manifest["records"] if r["category"] == "factions"}
-    stage = datamine / "stages" / manifest["fingerprint"]
+    """Keep reviewed faction badges and frozen trait/damage artwork on refresh."""
+    # Faction artwork is an independent presentation choice. Reuse the committed
+    # lossless Game badges rather than restoring the datamine's Clear symbols.
+    faction_artwork = read(SITE / "src/data/heroes/faction-artwork.json")
+    factions = faction_artwork["icons"]
     wanted = {"faction": {}, "traits": {}, "damage": {}}
     for hero in characters.values():
         wanted["faction"][hero["faction_id"]] = hero["faction_name"]
@@ -85,9 +80,13 @@ def filter_icon_assets(local, catalog, images, characters, image_module):
     for category, entries in wanted.items():
         icons[category] = {}
         for key, label in sorted(entries.items()):
+            folder = "faction-game" if category == "faction" else f"hero-filters/{category}"
+            web_path = f"/images/{folder}/{key}.webp"
             if category == "faction":
                 source = factions[key]
-                path, digest = stage / source["staged_path"], source["output_sha256"]
+                if source["src"] != web_path:
+                    raise ValueError(f"Faction badge path disagrees: {key}")
+                path, digest = SITE / "public" / web_path.lstrip("/"), source["sha256"]
             else:
                 source = images["traits" if category == "traits" else "damage_profiles"][key]
                 path, digest = local / "reports" / source["path"], source["sha256"]
@@ -96,14 +95,22 @@ def filter_icon_assets(local, catalog, images, characters, image_module):
             with image_module.open(path) as picture:
                 if picture.size != (source["width"], source["height"]):
                     raise ValueError(f"Icon dimensions disagree: {category}/{key}")
-                buffer = io.BytesIO()
-                picture.convert("RGBA").save(buffer, format="WEBP", lossless=True, method=6, exact=True)
-                web_path = f"/images/hero-filters/{category}/{key}.webp"
-                assets[web_path] = buffer.getvalue()
+                if category == "faction":
+                    if picture.format != "WEBP":
+                        raise ValueError(f"Expected a reviewed WebP faction badge: {key}")
+                    assets[web_path] = path.read_bytes()
+                else:
+                    buffer = io.BytesIO()
+                    picture.convert("RGBA").save(buffer, format="WEBP", lossless=True, method=6, exact=True)
+                    assets[web_path] = buffer.getvalue()
             if label in icons[category]:
                 raise ValueError(f"Ambiguous filter label: {category}/{label}")
             icons[category][label] = {"id": key, "src": web_path, "width": source["width"],
-                                      "height": source["height"], "source_sha256": digest}
+                                      "height": source["height"],
+                                      "source_sha256": source["source_sha256"] if category == "faction" else digest}
+            if category == "faction":
+                icons[category][label].update(source_app_version=faction_artwork["app_version"],
+                                              sprite_name=source["sprite_name"])
     return {"app_version": catalog["snapshot"]["app_version"], "icons": icons}, assets
 
 
