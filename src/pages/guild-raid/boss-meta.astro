@@ -1,5 +1,4 @@
 ---
-import GuideHeroLinks from "../../components/heroes/GuideHeroLinks.astro";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import InfographicUpdated from "../../components/InfographicUpdated.astro";
@@ -95,6 +94,7 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
       Replay counts and damage statistics cover the looping stages: <strong>L4, L5, M1, M2 and M3</strong>.
       Examples prioritize those stages, with L1–L3 replays filling available places when fewer than ten looping-stage examples exist. These extra examples do not affect the statistics.
     </p>
+    <p class="hero-guide-note"><strong><a href="/heroes/">Hero Guides</a>:</strong> Select a hero’s name or portrait in a Meta or Alternate team summary for stats, abilities, traits and ratings.</p>
     <BossMetaResults />
   </section>
 
@@ -217,13 +217,13 @@ const imageAlt = "Guild Raid Boss Meta Infographic";
   </section>
 
   <RecommendationSections />
-  <GuideHeroLinks />
   </main>
 
   <Footer />
 </Layout>
 
 <style>
+  .hero-guide-note { margin: 0 0 1.5rem; font-size: .85rem; line-height: 1.7; }
   :global(body) {
     background-color: #121212;
     color: #f5f5f5;

@@ -1,6 +1,8 @@
 ---
 import ReplayIcon from "./ReplayIcon.astro";
 import { formatReplayDamage } from "../../lib/replayLibrary";
+import { heroes as guideHeroes, heroById, heroHrefById } from "../../lib/heroes.mjs";
+import { heroResolver } from "../../../scripts/hero-team-links.mjs";
 
 interface TeamSummary {
   meta_choice: "META" | "ALTERNATE";
@@ -21,7 +23,11 @@ interface Props {
 }
 
 const { summary, headingId } = Astro.props;
-const heroes = [summary.hero_1, summary.hero_2, summary.hero_3, summary.hero_4, summary.hero_5];
+const resolveHero = heroResolver(guideHeroes);
+const heroes = [summary.hero_1, summary.hero_2, summary.hero_3, summary.hero_4, summary.hero_5].map(token => {
+  const id = resolveHero(token);
+  return { token, id, name: heroById.get(id)!.name, href: heroHrefById(id) };
+});
 const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLocaleString("en-US");
 ---
 
@@ -32,7 +38,10 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
     <div class="team-lineup" aria-label={`${summary.meta_choice === "META" ? "Meta" : "Alternate"} team lineup`}>
       <div class="hero-lineup" aria-label={`Five heroes and Machine of War ${summary.mow}`}>
         {heroes.map((hero) => (
-          <ReplayIcon type="heroes" value={hero} title={hero} className="labeled-icon-wrap team-summary-icon" />
+          <a class="summary-hero-link" href={hero.href} title={`${hero.name} Hero Guide`} aria-label={`${hero.name} Hero Guide`} data-unit-id={hero.id} data-hero-guide-link>
+            <ReplayIcon type="heroes" value={hero.token} title={hero.name} className="team-summary-icon" />
+            <span class="summary-hero-name">{hero.name}</span>
+          </a>
         ))}
         <ReplayIcon type="mow" value={summary.mow} title={summary.mow} className="labeled-icon-wrap team-summary-icon team-summary-mow-icon" />
       </div>
@@ -102,9 +111,35 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
   }
 
   .hero-lineup {
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
+
+  .summary-hero-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    width: 82px;
+    min-height: 44px;
+    border-radius: 6px;
+    color: #e4c55e;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .summary-hero-name {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .summary-hero-link:hover { color: #ffe39a; }
+  .summary-hero-link:hover :global(.replay-icon) { border-color: #e4c55e; }
+  .summary-hero-link:focus-visible { outline: 2px solid #e4c55e; outline-offset: 4px; }
 
   .team-stats {
     display: grid;
@@ -164,6 +199,8 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
     .hero-lineup {
       gap: 0.15rem;
     }
+
+    .summary-hero-link { width: 64px; }
 
     .team-stats {
       grid-template-columns: 1fr;
