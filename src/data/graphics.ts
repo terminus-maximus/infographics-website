@@ -234,19 +234,19 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "legendary"
     },
     {
-      title: "Farsight LRE",
-      href: "/lre/farsight",
-      description: "Be ready for the Tau Legendary on Dec 13",
-      image: "/images/farsight-lre.png",
-      thumbnail: "/images/thumbnails/lre-thumb.png",
+      title: "Lysander LRE",
+      href: "/lre/lysander",
+      description: "Be ready for the First Captain on Dec 13",
+      image: "/images/lysander-lre.png",
+      thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
       category: "legendary"
     },
     {
-      title: "Lysander LRE",
-      href: "/lre/lysander",
-      description: "Be ready for the First Captain on Jan 17",
-      image: "/images/lysander-lre.png",
-      thumbnail: "/images/thumbnails/lysander-lre-thumb.png",
+      title: "Farsight LRE",
+      href: "/lre/farsight",
+      description: "Be ready for the Tau Legendary on Jan 17",
+      image: "/images/farsight-lre.png",
+      thumbnail: "/images/thumbnails/lre-thumb.png",
       category: "legendary"
     },
     {

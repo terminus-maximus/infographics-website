@@ -2,6 +2,7 @@
 import type { Hero, GuideRelationship } from '../../lib/hero-types';
 import thumbnailSource from '../../data/heroes/guide-thumbnails.json';
 import roundPortraitSource from '../../data/heroes/round-portraits.json';
+import { discoveryGraphics } from '../../data/graphics';
 import ModeText from './ModeText.astro';
 interface Props { hero: Hero; }
 const { hero } = Astro.props;
@@ -9,8 +10,12 @@ const roundPortraits: Record<string,{src:string;width:number;height:number}> = r
 const portrait=roundPortraits[hero.unit_id];
 const roleLabel = (role:string) => role.replace(/\b\w/g,letter=>letter.toUpperCase());
 const categoryOrder: Record<string,number> = {raid:0,war:1,horde:2,lre:3,campaign:4,event_campaign:4,incursion:5};
+const lreOrder = new Map(discoveryGraphics.filter(g => g.category === 'legendary')
+  .map((g, index) => [g.href.replace(/\/+$/, ''), index]));
+const lrePosition = (guide: GuideRelationship) => lreOrder.get(guide.url.replace(/\/+$/, '')) ?? lreOrder.size;
 const links = [...new Map(hero.guides.map(g => [`${g.url}:${g.role}`, g])).values()]
-  .sort((a,b)=>(categoryOrder[a.category] ?? 6)-(categoryOrder[b.category] ?? 6));
+  .sort((a,b)=>(categoryOrder[a.category] ?? 6)-(categoryOrder[b.category] ?? 6)
+    || (a.category === 'lre' && b.category === 'lre' ? lrePosition(a)-lrePosition(b) : 0));
 const orderedAppearances = (guide:GuideRelationship) => [...(guide.appearances || [])]
   .sort((a,b)=>guide.category==='raid' ? Number(!a.url.endsWith('-meta-team'))-Number(!b.url.endsWith('-meta-team')) : 0);
 const thumbnails: Record<string,{src:string;alt:string;width:number;height:number}> = thumbnailSource;

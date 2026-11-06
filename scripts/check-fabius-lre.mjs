@@ -66,7 +66,7 @@ assert(!eligibleCharacters(data.characters, 'alpha').some(character => character
 
 // Public promotion: global navigation, ordered landing cards and recommendation eligibility.
 const htmlFiles = readdirSync(resolve(root, 'dist'), { recursive: true }).filter(path => path.endsWith('index.html'));
-const lreOrder = ['/lre/fabius', '/lre/farsight', '/lre/lysander', '/lre/uthar'];
+const lreOrder = ['/lre/fabius', '/lre/lysander', '/lre/farsight', '/lre/uthar'];
 let navigationPages = 0;
 for (const path of htmlFiles) {
   const html = read(`dist/${path}`);
@@ -76,11 +76,13 @@ for (const path of htmlFiles) {
   assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match => match[1]), lreOrder, `Wrong LRE navigation order in ${path}`);
   navigationPages++;
 }
-const home = read('dist/index.html');
+const home = read('dist/index.html').replace(/<!--[\s\S]*?-->/g, '');
 const homeSections = [...home.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)].map(match => match[1]);
-assert(homeSections[1].includes('href="/campaign-event"'));
-assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeSections[3]), 'Fabius must follow Campaign Event and HRE as the fourth homepage block, including the hero');
-assert(homeSections[3].includes('Be ready for his first event November 8'));
+const homeFeatures = [...home.matchAll(/<section\b[^>]*class="content-section"[^>]*>([\s\S]*?)<\/section>/g)].map(match => match[1]);
+assert.equal(homeFeatures.length, 2, 'The homepage must have exactly two features');
+assert(homeFeatures[0].includes('href="/heroes/top-10/"'), 'Top 10 Heroes must be the first homepage feature');
+assert(/<h2\b[^>]*>Fabius Bile LRE Guide<\/h2>/.test(homeFeatures[1]), 'Fabius must be the second homepage feature');
+assert(homeFeatures[1].includes('Be ready for his first event November 8'));
 const legendarySection = homeSections.find(section => section.includes('Legendary Guides'));
 assert(legendarySection);
 const cardRoutes = html => [...html.matchAll(/<a class="card" href="([^"]+)"/g)].map(match => match[1]);
