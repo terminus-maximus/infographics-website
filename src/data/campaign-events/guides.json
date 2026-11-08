@@ -3,7 +3,7 @@
   "snapshot": {
     "id": "ce-2026-10-12-e30-safe-bet-placeholders",
     "status": "editorial_pending",
-    "updatedAt": "2026-10-15",
+    "updatedAt": "2026-11-07",
     "characterBuild": "1.43.130",
     "contentHash": null
   },
@@ -5858,6 +5858,14 @@
           "kind": "community",
           "author": "VAE〙Gaunt",
           "publishedAt": null
+        },
+        {
+          "id": "death-guard-e30-cpunerd-gold1",
+          "title": "E30 · cpunerd (kharnage)",
+          "url": "https://starlit-blini-47a3c3.netlify.app/",
+          "kind": "clear",
+          "author": "cpunerd (kharnage)",
+          "publishedAt": null
         }
       ],
       "infographic": null,
@@ -5866,26 +5874,26 @@
         "lowestSeen": {
           "scope": "E30 · Three medals",
           "recordIds": [
-            "forgotten-saber-2026-08-death-guard"
+            "death-guard-e30-cpunerd-gold1"
           ],
-          "context": "With Celestine D3 17/50 + Helbrecht A1 50/50. Relic: Venerable Battle Mark.",
+          "context": "With Celestine G1 35/35 + Helbrecht D3 44/50. The submitted E30 replay and walkthrough retain Roswitha at G1 48/35; Vindicta and Isabella are D3. The author reports three medals and a lightning victory against Mortarion.",
           "heroes": [
             {
               "heroId": "adeptRetributor",
               "rank": {
-                "value": "D2",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "D3",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "active": {
-                "value": "47",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "50",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "passive": {
-                "value": "47",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "50",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "reportedRank": null,
               "unassignedAbilities": null,
@@ -5898,42 +5906,42 @@
               "heroId": "adeptHospitaller",
               "rank": {
                 "value": "D3",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "active": {
-                "value": "35",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "44",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "passive": {
                 "value": "50",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "reportedRank": null,
               "unassignedAbilities": null,
               "missingAbilities": null,
               "notes": [],
               "rarity": "Legendary",
-              "stars": "3 red stars"
+              "stars": "4 red stars"
             },
             {
               "heroId": "adeptCanoness",
               "rank": {
-                "value": "D2",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "G1",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "active": {
-                "value": "36",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "value": "48",
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "passive": {
                 "value": "35",
-                "basis": "creator_recommended",
-                "sourceUrl": "https://discord.com/channels/874393406531596419/1478398043106578624/1536387096716124242"
+                "basis": "observed",
+                "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
               },
               "reportedRank": null,
               "unassignedAbilities": null,
@@ -7290,6 +7298,150 @@
               "approvedBy": "Dan",
               "approvedAt": "2026-10-12"
             }
+          },
+          {
+            "id": "death-guard-e30-cpunerd-gold1",
+            "kind": "clear",
+            "title": "E30 · cpunerd (kharnage)",
+            "stageId": "30",
+            "stageBasis": "player_reported",
+            "environment": "No QA label seen; live status unverified",
+            "environmentKind": "unverified",
+            "outcome": "three_medal",
+            "resultBasis": "player_reported",
+            "lightning": true,
+            "teamComplete": true,
+            "dependencyNote": "With Celestine G1 35/35 + Helbrecht D3 44/50. The submitted E30 replay and walkthrough retain Roswitha at G1 48/35; Vindicta and Isabella are D3. The author reports three medals and a lightning victory against Mortarion.",
+            "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/",
+            "sourceLabel": "cpunerd (kharnage)",
+            "heroes": [
+              {
+                "heroId": "adeptRetributor",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "active": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "passive": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              },
+              {
+                "heroId": "adeptHospitaller",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "active": {
+                  "value": "44",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "passive": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "4 red stars"
+              },
+              {
+                "heroId": "adeptCanoness",
+                "rank": {
+                  "value": "G1",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "active": {
+                  "value": "48",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "passive": {
+                  "value": "35",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              },
+              {
+                "heroId": "adeptCelestine",
+                "rank": {
+                  "value": "G1",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "active": {
+                  "value": "35",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "passive": {
+                  "value": "35",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              },
+              {
+                "heroId": "templHelbrecht",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "active": {
+                  "value": "44",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "passive": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://starlit-blini-47a3c3.netlify.app/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              }
+            ],
+            "notes": [
+              "Reviewed November 7, 2026: the walkthrough labels this replay Death Guard Extremis Battle 30 and reports a three-star clear and lightning victory against Mortarion.",
+              "The linked Raidman replay identifies cpunerd (kharnage), game version 1.43.94.5464 and the Mortarion Space Hulk map. Its final move defeats Mortarion and records a victory; the medal and lightning claims come from the walkthrough.",
+              "Rank icons in the walkthrough show D3 for Vindicta, Isabella and Helbrecht and G1 for Roswitha and Celestine. All ten abilities match the E30 replay roster. This complete team replaces the previous benchmark without combining individual minima."
+            ],
+            "resultSourceUrl": "https://tacticus-raidman.com/public/replays/4dc8cb1b7a2248d91f17bdbdd1c964e22b5f6fc2d5fdeee07b87cecb0f4bb045"
           }
         ],
         "safeBetApproved": true,
@@ -7298,9 +7450,10 @@
             "id": "death-guard-celestine-helbrecht",
             "title": "Celestine + Helbrecht",
             "recordIds": [
+              "death-guard-e30-cpunerd-gold1",
               "forgotten-saber-2026-08-death-guard"
             ],
-            "context": "With Celestine D3 17/50 + Helbrecht A1 50/50. Relic: Venerable Battle Mark."
+            "context": "With Celestine G1 35/35 + Helbrecht D3 44/50. The submitted E30 replay and walkthrough retain Roswitha at G1 48/35; Vindicta and Isabella are D3. The author reports three medals and a lightning victory against Mortarion. Earlier builds remain separate alternatives with their own investments."
           },
           {
             "id": "death-guard-morvenn-helbrecht",
@@ -7382,7 +7535,10 @@
               "stars": "1 blue star"
             }
           ]
-        }
+        },
+        "previousLowestSeenRecordIds": [
+          "forgotten-saber-2026-08-death-guard"
+        ]
       },
       "rewards": {
         "source": {
@@ -7445,7 +7601,8 @@
           }
         ],
         "finalUpgrade": "Venerable Battle Mark"
-      }
+      },
+      "evidenceUpdatedAt": "2026-11-07"
     },
     {
       "id": "admech",
@@ -11326,92 +11483,97 @@
           "kind": "community",
           "author": "ChronoMonkeyX",
           "publishedAt": null
+        },
+        {
+          "id": "tyranids-e30-mtz3r0",
+          "title": "E30 · MtZ3r0",
+          "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/",
+          "kind": "community",
+          "author": "MtZ3r0",
+          "publishedAt": null
         }
       ],
       "infographic": null,
       "research": {
         "eventId": "tyranids",
         "lowestSeen": {
-          "scope": "E30 · Three medals",
+          "scope": "E30 · Three medals · Reported",
           "recordIds": [
-            "tyranids-e30-131Zxf-1b_E-attempt1"
+            "tyranids-e30-mtz3r0"
           ],
-          "context": "With Dante A1 38/56 and Mephiston D3 41/50. This is the observed July E30 three-medal build; Incisus, Dante and Mephiston have Mythic crit items at levels 1, 1 and 5. The Calgar + Lucien alternative below has its own reported abilities.",
+          "context": "With Dante D3 44/53 + Mephiston D3 44/50. MtZ3r0’s six-image post shows three medals on E30 and the five hero profiles, including Titus G2 41/41. The team-to-clear association is player-reported; no battle replay is supplied.",
           "heroes": [
             {
-              "heroId": "ultraApothecary",
-              "notes": [
-                "Rarity: Mythic; star count not transcribed.",
-                "Equipped slot levels: 1, 11, 1."
-              ],
-              "unassignedAbilities": null,
-              "missingAbilities": null,
-              "reportedRank": null,
-              "rank": {
-                "value": "D3",
-                "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2200s"
-              },
-              "active": {
-                "value": "50",
-                "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2200s"
-              },
-              "passive": {
-                "value": "38",
-                "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2200s"
-              }
-            },
-            {
               "heroId": "ultraInceptorSgt",
-              "notes": [
-                "Rarity: Legendary; star count not transcribed.",
-                "Equipped slot levels: 11, 11, 1."
-              ],
-              "unassignedAbilities": null,
-              "missingAbilities": null,
-              "reportedRank": null,
               "rank": {
                 "value": "D3",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2198s"
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
               },
               "active": {
                 "value": "50",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2198s"
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
               },
               "passive": {
-                "value": "38",
+                "value": "36",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2198s"
-              }
-            },
-            {
-              "heroId": "ultraTitus",
-              "notes": [
-                "Rarity: Legendary; star count not transcribed.",
-                "Equipped slot levels: 11, 11, 4."
-              ],
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+              },
+              "reportedRank": null,
               "unassignedAbilities": null,
               "missingAbilities": null,
-              "reportedRank": null,
+              "notes": [],
+              "rarity": "Legendary",
+              "stars": "5 red stars"
+            },
+            {
+              "heroId": "ultraApothecary",
               "rank": {
                 "value": "D3",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2202s"
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
               },
               "active": {
-                "value": "38",
+                "value": "45",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2202s"
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
               },
               "passive": {
                 "value": "44",
                 "basis": "observed",
-                "sourceUrl": "https://www.youtube.com/watch?v=131Zxf-1b_E&t=2202s"
-              }
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+              },
+              "reportedRank": null,
+              "unassignedAbilities": null,
+              "missingAbilities": null,
+              "notes": [],
+              "rarity": "Legendary",
+              "stars": "3 red stars"
+            },
+            {
+              "heroId": "ultraTitus",
+              "rank": {
+                "value": "G2",
+                "basis": "observed",
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+              },
+              "active": {
+                "value": "41",
+                "basis": "observed",
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+              },
+              "passive": {
+                "value": "41",
+                "basis": "observed",
+                "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+              },
+              "reportedRank": null,
+              "unassignedAbilities": null,
+              "missingAbilities": null,
+              "notes": [],
+              "rarity": "Legendary",
+              "stars": "3 red stars"
             }
           ]
         },
@@ -12524,6 +12686,150 @@
               "approvedBy": "Dan",
               "approvedAt": "2026-10-12"
             }
+          },
+          {
+            "id": "tyranids-e30-mtz3r0",
+            "kind": "player_report",
+            "title": "E30 · MtZ3r0",
+            "stageId": "30",
+            "stageBasis": "observed",
+            "environment": "No QA label seen; live status unverified",
+            "environmentKind": "unverified",
+            "outcome": "three_medal",
+            "resultBasis": "observed",
+            "lightning": false,
+            "teamComplete": true,
+            "dependencyNote": "With Dante D3 44/53 + Mephiston D3 44/50. MtZ3r0’s six-image post shows three medals on E30 and the five hero profiles, including Titus G2 41/41. The team-to-clear association is player-reported; no battle replay is supplied.",
+            "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/",
+            "sourceLabel": "MtZ3r0",
+            "heroes": [
+              {
+                "heroId": "ultraInceptorSgt",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "active": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "passive": {
+                  "value": "36",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "5 red stars"
+              },
+              {
+                "heroId": "ultraApothecary",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "active": {
+                  "value": "45",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "passive": {
+                  "value": "44",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              },
+              {
+                "heroId": "ultraTitus",
+                "rank": {
+                  "value": "G2",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "active": {
+                  "value": "41",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "passive": {
+                  "value": "41",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "3 red stars"
+              },
+              {
+                "heroId": "bloodDante",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "active": {
+                  "value": "44",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "passive": {
+                  "value": "53",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Mythic",
+                "stars": "1 blue star"
+              },
+              {
+                "heroId": "bloodMephiston",
+                "rank": {
+                  "value": "D3",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "active": {
+                  "value": "44",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "passive": {
+                  "value": "50",
+                  "basis": "observed",
+                  "sourceUrl": "https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/"
+                },
+                "reportedRank": null,
+                "unassignedAbilities": null,
+                "missingAbilities": null,
+                "notes": [],
+                "rarity": "Legendary",
+                "stars": "4 red stars"
+              }
+            ],
+            "notes": [
+              "Reviewed November 7, 2026. Gallery image 1 shows the Tyranids Extremis map with three medals on the final Hive Tyrant battle and no lightning medal. Images 2–6 show Titus, Incisus, Bellator, Dante and Mephiston respectively.",
+              "All ranks and active/passive levels were transcribed from the five profile screenshots; the author identifies those five as the deployed team. No battle replay is supplied.",
+              "The later edit about a second crown with D1 Lucien is a separate clear without a complete five-hero profile and is not combined with this team.",
+              "The southwest-corner and turn-two Bellator advice answers a question about E24, not E30."
+            ]
           }
         ],
         "safeBetApproved": true,
@@ -12532,10 +12838,11 @@
             "id": "tyranids-dante-mephiston",
             "title": "Dante + Mephiston",
             "recordIds": [
+              "tyranids-e30-mtz3r0",
               "tyranids-e30-131Zxf-1b_E-attempt1",
               "tyranids-e30-tinuva450"
             ],
-            "context": "Observed A1 Dante build and a separate all-D3 boss report. Keep each ability profile with its own team."
+            "context": "With Dante D3 44/53 + Mephiston D3 44/50. MtZ3r0’s six-image post shows three medals on E30 and the five hero profiles, including Titus G2 41/41. The team-to-clear association is player-reported; no battle replay is supplied. Earlier builds remain separate alternatives with their own investments."
           },
           {
             "id": "tyranids-calgar-lucien",
@@ -12610,7 +12917,10 @@
               }
             }
           ]
-        }
+        },
+        "previousLowestSeenRecordIds": [
+          "tyranids-e30-131Zxf-1b_E-attempt1"
+        ]
       },
       "rewards": {
         "source": {
@@ -12678,7 +12988,8 @@
           }
         ],
         "finalUpgrade": "Mutant Form"
-      }
+      },
+      "evidenceUpdatedAt": "2026-11-07"
     },
     {
       "id": "tau",

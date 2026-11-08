@@ -13,6 +13,7 @@ The hub is `/campaign-event/`; six static guides live at `/campaign-event/{slug}
 - Faction icons use `/images/faction-clear/{factionId}.webp`. This shared library contains all 23 factions, converted losslessly from `Tacticus/Infographics/Icons/Faction Clear` with original dimensions and transparency. The current Campaign Event pages use 13 of these icons. The matching Game-style library is `/images/faction-game/`, using the same faction IDs; see `docs/hero-guides.md` for source and conversion details. Character, ability, and rank icons reuse the website’s existing assets.
 - Reward equipment and upgrade icons in `public/images/campaign-events/rewards/` are original assets copied from `LocalDatabase/research/campaign-events/assets/`. `reward-icons.json` maps the localized reward names using that project's `analysis.json` and `assets.json` (game version 1.43.130). Chest rewards reuse character portraits.
 - `snapshot.updatedAt` in `guides.json` is the content revision shown on the guides. The overview retains its PNG revision date through the existing site component.
+- When new evidence replaces a headline team, retain the old build in `research.e30Teams` and `research.builds`, and list its ID in `research.previousLowestSeenRecordIds`. It renders first under Alternate Options with a Previous Lowest Seen label. Set the guide's `evidenceUpdatedAt` when the table has newer evidence than the infographic; the caption links readers to the updated table while the artwork keeps its actual revision date.
 
 The shared layout renders the infographic, maintained team targets, alternate E30 builds, earlier-stage replays, support tiers, battle tips, rewards, and collapsed credits. QA/test-server footage stays labelled. The UI does not repeat per-field provenance links, but those remain in the data. Current pages are indexable and included in the discovery catalog; a local build does not publish them.
 
@@ -43,3 +44,20 @@ The six supplied infographics were compared visually with all 180 maintained ran
 The T’au guide deliberately retains the maintained Xybia D1 value. The original QA replay observation preserves D2, with the creator's D1 report in its build notes. Do not overwrite the original replay observation. Keep raw unordered ability pairs unassigned in alternate builds.
 
 Production deployment has not been performed by this integration.
+
+## Lower-investment E30 updates — November 7, 2026
+
+Both new submissions replace the complete Lowest Seen team. Each guide now has four alternate cards: the previous benchmark first, followed by all three existing alternatives. Existing research builds, Safe Bet values, and the other four guides are preserved.
+
+| Guide | Source | Lowest Seen team (rank, active/passive) |
+| --- | --- | --- |
+| Death Guard (Sisters vs Death Guard) | [cpunerd / Kharnage walkthrough](https://starlit-blini-47a3c3.netlify.app/) · [E30 replay](https://tacticus-raidman.com/public/replays/4dc8cb1b7a2248d91f17bdbdd1c964e22b5f6fc2d5fdeee07b87cecb0f4bb045) | Vindicta D3 50/50; Isabella D3 44/50; Roswitha G1 48/35; Celestine G1 35/35; Helbrecht D3 44/50 |
+| Tyranids | [MtZ3r0's six-image clear report](https://www.reddit.com/r/WH40KTacticus/comments/1x83ctp/tyranids_ce_extremis_30_cleared/) | Bellator D3 50/36; Incisus D3 45/44; Titus G2 41/41; Dante D3 44/53; Mephiston D3 44/50 |
+
+The Death Guard walkthrough labels E30 and reports three medals plus lightning. The Raidman replay was inspected through its final move: Mortarion is defeated and a victory is recorded. The replay identifies cpunerd (kharnage), game version 1.43.94.5464; no QA label is shown. Rank icons and abilities match the walkthrough's E30 roster. The earlier QA Godswyl replay remains a separate alternative. The previous ForgottenSaber / Hyojin recommendation retains its original investment and attribution.
+
+The Tyranids gallery shows the final Hive Tyrant stage with three medals, followed by profiles for Titus, Incisus, Bellator, Dante and Mephiston. The screenshots establish the values; the author's report associates those five with the clear. No replay is supplied, so the page labels it Player report. The later D1 Lucien / second-crown edit does not supply a complete team and is not folded into the benchmark. The author's southwest-corner advice answers an E24 question and is not presented as an E30 tactic. Caoryn's previous E30 replay remains the first alternate, with its original build and result timestamp.
+
+The supplied PNG/WebP artwork is unchanged. Both captions explicitly identify the newer team evidence and link to the maintained tables. Existing Safe Bet targets are retained, including Roswitha's D3 46/50 recommendation; these are editorial targets, not a field-by-field maximum of reported builds.
+
+Validation: the 180-page build and `npm run check:campaign-events` pass. Checks cover all ten submitted hero profiles, source links, first-alternate ordering and retention of all existing cards. A comparison against the prior revision confirms every existing research build and Safe Bet value is unchanged. Browser review at 1280px, 390px and 320px found no horizontal overflow, missing team images or console errors. `git -c core.whitespace=cr-at-eol diff --check` passes with the existing CSV line endings. Changes are local; no deployment was performed.

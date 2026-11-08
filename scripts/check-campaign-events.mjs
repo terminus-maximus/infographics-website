@@ -25,8 +25,8 @@ assert.equal(data.snapshot.characterBuild, canonical.characterBuild, 'Roster mus
 // Hash editorial content only: approval state and later artwork metadata do not alter copy.
 assert.equal(data.snapshot.contentHash, contentDigest(data), 'Content hash covers the assembled CSV and guide data');
 const researchBuilds = data.events.flatMap(event => event.research.builds);
-assert.equal(researchBuilds.filter(build => build.kind === 'clear').length, 21, 'All reviewed attempts remain available');
-assert.equal(researchBuilds.filter(build => build.kind === 'clear').flatMap(build => build.heroes).length, 95, 'All visually recovered hero observations remain available');
+assert.equal(researchBuilds.filter(build => build.kind === 'clear').length, 22, 'All reviewed attempts remain available, including the new cpunerd replay');
+assert.equal(researchBuilds.filter(build => build.kind === 'clear').flatMap(build => build.heroes).length, 100, 'All visually recovered hero observations remain available');
 const creatorRecommendations = researchBuilds.filter(build => build.kind === 'recommendation');
 assert.equal(creatorRecommendations.length, 6, 'One infographic panel per event, without duplicate source records');
 assert.equal(creatorRecommendations.flatMap(build => build.heroes).length, 31, 'All infographic rows remain available, including the Tyranid support pool');
@@ -81,7 +81,7 @@ assert.equal(classifySupportHero(tierCase, 'tyranWingedPrime').tier, 'C', 'A fai
 const tyranidTierCase = structuredClone(data.events.find(event => event.id === 'tyranids'));
 assert.equal(classifySupportHero(tyranidTierCase, 'ultraCalgar').tier, 'A', 'Calgar remains an E30 alternative outside the five-hero Lowest Seen team');
 assert.equal(classifySupportHero(tyranidTierCase, 'bloodIntercessor').tier, 'B', 'Historical community use is retained without assigning a current stage');
-assert.deepEqual(tyranidTierCase.research.lowestSeen.recordIds, ['tyranids-e30-131Zxf-1b_E-attempt1']);
+assert.deepEqual(tyranidTierCase.research.lowestSeen.recordIds, ['tyranids-e30-mtz3r0']);
 tyranidTierCase.research.builds = [tyranidPool];
 assert.equal(classifySupportHero(tyranidTierCase, 'ultraCalgar').tier, 'A', 'The accepted infographic pool alone supports A, never S');
 assert.match(classifySupportHero(tyranidTierCase, 'ultraCalgar').rationale, /pair is unspecified/);
@@ -91,6 +91,29 @@ assert.equal(classifySupportHero(data.events.find(event => event.id === 'admech'
 const serialize = rows => [requiredHeroColumns, ...rows.map(row => requiredHeroColumns.map(key => row[key]))].map(row => row.map(value => /[",\r\n]/.test(value) ? '"' + value.replaceAll('"', '""') + '"' : value).join(',')).join('\r\n') + '\r\n';
 const rows = parseRequiredHeroes(csv);
 assert.equal(rows.length, 30);
+const updatedBenchmarks = {
+  'death-guard': {
+    primary: 'death-guard-e30-cpunerd-gold1', previous: 'forgotten-saber-2026-08-death-guard',
+    alternatives: ['forgotten-saber-2026-08-death-guard', 'death-guard-e30-nVUWrm03pmM-attempt1', 'death-guard-e30-T4dIqaN1gQM-attempt1', 'death-guard-e30-packet-DG-01'],
+    values: [['Vindicta', 'D3', '50', '50'], ['Isabella', 'D3', '44', '50'], ['Roswitha', 'G1', '48', '35'], ['Celestine', 'G1', '35', '35'], ['Helbrecht', 'D3', '44', '50']],
+  },
+  tyranids: {
+    primary: 'tyranids-e30-mtz3r0', previous: 'tyranids-e30-131Zxf-1b_E-attempt1',
+    alternatives: ['tyranids-e30-131Zxf-1b_E-attempt1', 'tyranids-e30-seventhsolar', 'tyranids-e30-tinuva450', 'forgotten-saber-2026-08-tyranids'],
+    values: [['Bellator', 'D3', '50', '36'], ['Incisus', 'D3', '45', '44'], ['Titus', 'G2', '41', '41'], ['Dante', 'D3', '44', '53'], ['Mephiston', 'D3', '44', '50']],
+  },
+};
+for (const [id, update] of Object.entries(updatedBenchmarks)) {
+  const guide = data.events.find(event => event.id === id);
+  assert.deepEqual(guide.research.lowestSeen.recordIds, [update.primary]);
+  assert.deepEqual(guide.research.previousLowestSeenRecordIds, [update.previous]);
+  const build = guide.research.builds.find(build => build.id === update.primary);
+  assert.deepEqual(build.heroes.map(hero => [data.characters[hero.heroId].name, hero.rank.value, hero.active.value, hero.passive.value]), update.values, `${id}: preserve the submitted five-hero build`);
+  for (const [name, rank, active, passive] of update.values) {
+    const row = rows.find(row => row.Campaign === guide.displayTitle && row.Hero === name);
+    assert.deepEqual([row.LowestSeenRank, row.LowestSeenActive, row.LowestSeenPassive, row.LowestSeenSource], [rank, active, passive, build.sourceUrl], `${id}/${name}: maintained values match the new evidence`);
+  }
+}
 for (const event of data.events) {
   const supportIds = lowestSeenSupportIds(event);
   const eventRows = rows.filter(row => row.Campaign === event.displayTitle);
@@ -332,6 +355,15 @@ if (process.argv.includes('--built')) {
       }
     }
     const primaryBuild = guide.research.builds.find(build => guide.research.lowestSeen.recordIds.includes(build.id));
+    if (updatedBenchmarks[guide.id]) {
+      const update = updatedBenchmarks[guide.id];
+      const alternates = html.match(/id="alternates"[^>]*>([\s\S]*?)<\/section>/)?.[1] || '';
+      const cards = [...alternates.matchAll(/data-build="([^"]+)"/g)].map(match => match[1]);
+      assert.equal(cards[0], update.previous, `${guide.id}: previous benchmark is the first alternate`);
+      assert.deepEqual([...cards].sort(), [...update.alternatives].sort(), `${guide.id}: every existing alternate remains alongside the previous benchmark`);
+      assert.ok(alternates.includes('Previous Lowest Seen'), `${guide.id}: former benchmark is labelled`);
+      assert.ok(html.includes('Team evidence updated') && html.includes('datetime="2026-11-07"'), `${guide.id}: distinguish new evidence from older artwork`);
+    }
     const primaryCredit = html.match(/class="team-credit"[^>]*>([\s\S]*?)<\/div>/)?.[1] || '';
     const encodedHref = build => (build.resultSourceUrl || build.sourceUrl).replaceAll('&', '&amp;');
     assert.ok(primaryCredit.includes(`href="${encodedHref(primaryBuild)}"`), `${guide.id}: main team links to the clear`);

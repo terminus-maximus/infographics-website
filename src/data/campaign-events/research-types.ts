@@ -56,6 +56,7 @@ export interface ResearchTarget {
 export interface EventResearch {
   eventId: string;
   lowestSeen: ResearchTarget;
+  previousLowestSeenRecordIds?: string[];
   safeBetProposal: ResearchTarget | null;
   supportSafeBetProposal?: ResearchTarget;
   safeBetApproved: boolean;

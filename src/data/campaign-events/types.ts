@@ -113,6 +113,7 @@ export interface CampaignEventGuide {
   slug: string;
   title: string;
   displayTitle: string;
+  evidenceUpdatedAt?: string;
   enemyFaction: string;
   playableFactions: string[];
   requiredHeroIds: string[];

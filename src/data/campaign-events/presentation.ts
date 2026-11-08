@@ -18,7 +18,7 @@ export const eventNotes: Record<string, { teamSummary: string; tips: { stage: st
     teamSummary: 'Keep Vindicta and Roswitha close to Isabella, using Vindicta’s fire to control the approach. Save Helbrecht’s melee buff for the attack on Mortarion.',
     tips: [
       { stage: 'E25–26', title: 'Fight from a healing formation', text: 'Keep the required trio close to Isabella. Approach from the right and use Vindicta’s fire to limit the routes enemies can take into your team.' },
-      { stage: 'E30', title: 'Set up your burst turn', text: 'The Godswyl + Helbrecht report clears the Poxwalkers first, then uses Roswitha and Vindicta’s abilities. Save Helbrecht’s melee buff for the attack on Mortarion and use high ground when available.' },
+      { stage: 'E30', title: 'Set up your burst turn', text: 'In cpunerd’s Celestine + Helbrecht replay, clear the opening enemies and reposition before attacking Mortarion. Use Roswitha’s active, then Vindicta’s active and attack; activate Helbrecht’s buff before Isabella and Celestine attack.' },
     ],
   },
   sisters: {
