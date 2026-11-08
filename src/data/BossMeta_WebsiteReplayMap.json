@@ -307,12 +307,12 @@
   {
     "boss_clean": "Ghaz",
     "meta_choice": "ALTERNATE",
-    "video_id": "LtFlCqw47N4"
+    "video_id": "SC1gnyINOn8"
   },
   {
     "boss_clean": "Ghaz",
     "meta_choice": "ALTERNATE",
-    "video_id": "tWWRFdfnwtw"
+    "video_id": "LtFlCqw47N4"
   },
   {
     "boss_clean": "Ghaz",
@@ -422,6 +422,11 @@
   {
     "boss_clean": "Lion",
     "meta_choice": "ALTERNATE",
+    "video_id": "rGr8a1yepWE"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "ALTERNATE",
     "video_id": "hG12XkVlPyg"
   },
   {
@@ -456,13 +461,13 @@
   },
   {
     "boss_clean": "Lion",
-    "meta_choice": "ALTERNATE",
-    "video_id": "HZ1RPudt08g"
+    "meta_choice": "META",
+    "video_id": "dneJZbQNzgk"
   },
   {
     "boss_clean": "Lion",
     "meta_choice": "META",
-    "video_id": "dneJZbQNzgk"
+    "video_id": "WLcYi5zCOIk"
   },
   {
     "boss_clean": "Lion",
@@ -503,11 +508,6 @@
     "boss_clean": "Lion",
     "meta_choice": "META",
     "video_id": "Bj8yBH2ALrE"
-  },
-  {
-    "boss_clean": "Lion",
-    "meta_choice": "META",
-    "video_id": "KIisvILkEWI"
   },
   {
     "boss_clean": "Magnus",
@@ -652,6 +652,21 @@
   {
     "boss_clean": "Mortarion",
     "meta_choice": "META",
+    "video_id": "o6UCtIaegd8"
+  },
+  {
+    "boss_clean": "Mortarion",
+    "meta_choice": "META",
+    "video_id": "ST1zNncrKJ0"
+  },
+  {
+    "boss_clean": "Mortarion",
+    "meta_choice": "META",
+    "video_id": "jzvmQhv2MM0"
+  },
+  {
+    "boss_clean": "Mortarion",
+    "meta_choice": "META",
     "video_id": "yIQN4eNg_FY"
   },
   {
@@ -683,21 +698,6 @@
     "boss_clean": "Mortarion",
     "meta_choice": "META",
     "video_id": "mKklG-BPM_Y"
-  },
-  {
-    "boss_clean": "Mortarion",
-    "meta_choice": "META",
-    "video_id": "1XCjGb4cILo"
-  },
-  {
-    "boss_clean": "Mortarion",
-    "meta_choice": "META",
-    "video_id": "_3oF1faM61o"
-  },
-  {
-    "boss_clean": "Mortarion",
-    "meta_choice": "META",
-    "video_id": "YcWzYwgqLaQ"
   },
   {
     "boss_clean": "Riptide",
@@ -892,6 +892,11 @@
   {
     "boss_clean": "Szarekh",
     "meta_choice": "META",
+    "video_id": "SZBf4O5Ti2s"
+  },
+  {
+    "boss_clean": "Szarekh",
+    "meta_choice": "META",
     "video_id": "s5jcqHD4nYI"
   },
   {
@@ -907,7 +912,17 @@
   {
     "boss_clean": "Szarekh",
     "meta_choice": "META",
+    "video_id": "h8rQeze473I"
+  },
+  {
+    "boss_clean": "Szarekh",
+    "meta_choice": "META",
     "video_id": "m0FGENS2Pf8"
+  },
+  {
+    "boss_clean": "Szarekh",
+    "meta_choice": "META",
+    "video_id": "jWtVYTOXJxA"
   },
   {
     "boss_clean": "Szarekh",
@@ -923,21 +938,6 @@
     "boss_clean": "Szarekh",
     "meta_choice": "META",
     "video_id": "pS0D8UQ_kv4"
-  },
-  {
-    "boss_clean": "Szarekh",
-    "meta_choice": "META",
-    "video_id": "cQflEzkx3Sw"
-  },
-  {
-    "boss_clean": "Szarekh",
-    "meta_choice": "META",
-    "video_id": "f-QOlT_gwgU"
-  },
-  {
-    "boss_clean": "Szarekh",
-    "meta_choice": "META",
-    "video_id": "X0jHkCgAFM8"
   },
   {
     "boss_clean": "Tervigon",
