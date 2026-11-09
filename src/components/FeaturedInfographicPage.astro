@@ -17,6 +17,7 @@ const {
   basicsContent,
   basicsDetailsContent,
   noIndex = false,
+  infographicId,
   resources = []
 } = Astro.props;
 
@@ -49,7 +50,7 @@ const displayImageSrc =
     )}
   </section>
 
-  <section class="infographic-section">
+  <section class="infographic-section" id={infographicId}>
     <h2>Featured Infographic</h2>
 
     <a

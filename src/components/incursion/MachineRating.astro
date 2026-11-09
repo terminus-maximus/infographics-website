@@ -1,0 +1,13 @@
+---
+interface Props { rating: number | null; }
+const { rating } = Astro.props;
+---
+<span class="machine-rating" aria-label={rating === null ? 'Not yet rated' : `${rating} out of 5 stars`}>
+  {rating === null ? 'Not yet rated' : <><span aria-hidden="true" class="rating-stars"><span>{'★'.repeat(rating)}</span><span class="empty-stars">{'☆'.repeat(5 - rating)}</span></span><span aria-hidden="true" class="rating-number">{rating} / 5</span></>}
+</span>
+<style>
+  .machine-rating { display: inline-flex; align-items: center; flex-wrap: wrap; gap: .2rem .7rem; }
+  .rating-stars { color: #f1c95c; letter-spacing: .09em; font-size: 1.3em; line-height: 1.3; white-space: nowrap; }
+  .empty-stars { color: #8d815d; }
+  .rating-number { color: #ddd6c3; font-size: .8em; font-variant-numeric: tabular-nums; }
+</style>

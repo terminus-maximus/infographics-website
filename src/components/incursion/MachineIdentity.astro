@@ -1,0 +1,33 @@
+---
+import type { Machine } from '../../lib/machine-types';
+import Portrait from '../heroes/Portrait.astro';
+import MachineRating from './MachineRating.astro';
+import { machineRatingSource } from '../../lib/machines.mjs';
+import { getInfographicRevision } from '../../lib/infographicDates';
+interface Props { machine: Machine; hasGuide: boolean; }
+const { machine, hasGuide } = Astro.props;
+const revision = getInfographicRevision(machineRatingSource);
+---
+<header class="hero-identity machine-identity">
+  <Portrait hero={machine} large />
+  <div>
+    <p class="eyebrow">{machine.alliance} · {machine.faction}</p>
+    <h1>{machine.name}</h1>
+    <p class="hero-title">{machine.title}</p>
+    <div class="machine-identity-rating"><span>My Rating</span><MachineRating rating={machine.rating} /></div>
+    <p class="machine-verdict">{machine.verdict}</p>
+    <p class="machine-rating-source">From the <a href="/incursion-mow/#infographic">Incursion: MoW Guide</a> · <time datetime={revision.updatedOn}>{revision.formattedDate}</time></p>
+  </div>
+</header>
+<div class="machine-intro">
+  <p>{machine.description}</p>
+  <dl class="machine-recommendations">
+    <div><dt>Unlock with</dt><dd>{machine.unlock_with}</dd></div>
+    <div><dt>Invest in</dt><dd>{machine.invest_in}</dd></div>
+  </dl>
+</div>
+<nav class="machine-jump-links" aria-label="On this page">
+  <a href="#abilities">Abilities</a>
+  {hasGuide && <><a href="#unlock-guide">Unlock infographic</a><a href="#strategies">Unlock strategies</a></>}
+  <a href="/incursion-mow/#machines">All Machines of War</a>
+</nav>

@@ -1,0 +1,111 @@
+---
+import type { Machine, MachineIcon } from '../../lib/machine-types';
+import { machineReference } from '../../lib/machines.mjs';
+import StatPicker from '../heroes/StatPicker.astro';
+import GameIcon from '../heroes/GameIcon.astro';
+import profileIcons from '../../data/heroes/profile-icons.json';
+interface Props { machine: Machine; }
+const { machine } = Astro.props;
+const contexts = machine.progression;
+const initial = contexts.find(p => p.index === machine.default_progression)!;
+const compact = (group:Record<string,MachineIcon>) => Object.fromEntries(Object.entries(group).map(([key,{src,width,height,count}]) => [key,{src,width,height,...(count === undefined ? {} : {count})}]));
+const icons = {rarity:compact(profileIcons.rarities),stars:compact(profileIcons.stars)};
+const payload = {contexts,initial:initial.index,icons,abilities:machine.abilities.map(({icon,description,...ability}) => ability)};
+---
+<section class="hero-section machine-abilities" id="abilities" data-machine-abilities aria-labelledby="abilities-heading">
+  <div class="section-heading"><h2 id="abilities-heading">Abilities</h2><span class="tag">Game {machineReference.snapshot.app_version}</span></div>
+  <p class="muted">Explore Active and Passive levels independently. Rarity and stars apply to all three abilities.</p>
+  <div class="stat-controls" hidden data-machine-controls>
+    <StatPicker id="rarity" label="Rarity" value={initial.rarity} options={[...new Set(contexts.map(p => p.rarity))].map(rarity => ({value:rarity,label:rarity,icon:icons.rarity[rarity]}))} />
+    <StatPicker id="stars" label="Stars" value={initial.index} options={contexts.filter(p => p.rarity === initial.rarity).map(p => ({value:p.index,label:p.star_label,icon:icons.stars[p.stars]}))} />
+    <button type="button" class="machine-reset" data-machine-reset>Reset to maximum</button>
+  </div>
+  <p class="machine-state" data-machine-state aria-live="polite" aria-atomic="true">Mythic · Mythic wings · Active 60 · Passive 60</p>
+  <div class="ability-grid machine-ability-grid">{machine.abilities.map(ability => <article class:list={['ability-card',{'mythic-card':ability.kind === 'mythic'}]} data-machine-ability={ability.id}>
+    <header class="ability-heading"><GameIcon icon={ability.icon} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h3>{ability.name}</h3></div></header>
+    {ability.kind !== 'mythic' && <div class="ability-level-control" data-machine-level hidden>
+      <label for={`level-${ability.id}`}>{ability.kind === 'active' ? 'Active' : 'Passive'} level <output for={`level-${ability.id}`} data-level-output>60</output></label>
+      <div class="ability-range"><span aria-hidden="true">1</span><input id={`level-${ability.id}`} type="range" min="1" max="60" step="1" value="60" aria-label={`${ability.kind === 'active' ? 'Active' : 'Passive'} ability level`} /><span aria-hidden="true">60</span></div>
+    </div>}
+    <p data-ability-description>{ability.description}</p>
+    <p class="muted machine-ability-note" data-ability-note hidden={ability.kind !== 'mythic'}>{ability.kind === 'mythic' ? 'Scales with Mythic promotions · Mythic wings' : ''}</p>
+  </article>)}</div>
+  <script is:inline type="application/json" data-machine-json set:html={JSON.stringify(payload).replace(/</g,'\u003c')} />
+</section>
+<script>
+import { machineAbilityDescription, machineAbilityNote, selectMachineRarity } from '../../lib/machine-reference.mjs';
+import type { MachineAbility, MachineProgression, MachineIcon } from '../../lib/machine-types';
+type Option = {value:string|number;label:string;icon?:MachineIcon};
+document.querySelectorAll<HTMLElement>('[data-machine-abilities]').forEach(root => {
+  const data = JSON.parse(root.querySelector('[data-machine-json]')!.textContent!);
+  const contexts:MachineProgression[] = data.contexts;
+  let context = contexts.find(p => p.index === data.initial)!;
+  const pickers = Object.fromEntries(['rarity','stars'].map(key => [key,root.querySelector<HTMLDetailsElement>(`[data-picker="${key}"]`)!]));
+  const entries = (data.abilities as MachineAbility[]).map(ability => {
+    const panel=root.querySelector<HTMLElement>(`[data-machine-ability="${ability.id}"]`)!;
+    return {ability,panel,slider:panel.querySelector<HTMLInputElement>('input[type=range]')};
+  });
+  const iconContent = (parent:Element, icon?:MachineIcon) => {
+    parent.replaceChildren();
+    for(let i=0;icon && i<(icon.count ?? 1);i++) {
+      const image=document.createElement('img');
+      image.src=icon.src; image.width=icon.width; image.height=icon.height; image.alt=''; parent.append(image);
+    }
+  };
+  const updatePicker = (key:string, options:Option[], value:string|number) => {
+    const picker=pickers[key], selected=options.find(option => String(option.value) === String(value))!;
+    picker.querySelector('[data-picker-label]')!.textContent=selected.label;
+    picker.querySelector('summary')!.setAttribute('aria-label',`${key === 'rarity' ? 'Rarity' : 'Stars'}: ${selected.label}`);
+    iconContent(picker.querySelector('summary .game-icon')!,selected.icon);
+    const fieldset=picker.querySelector('fieldset')!;
+    const inputs=[...fieldset.querySelectorAll<HTMLInputElement>('input')];
+    if(inputs.length===options.length && inputs.every((input,index)=>input.value===String(options[index].value))) {
+      inputs.forEach(input=>input.checked=input.value===String(value));
+      return;
+    }
+    fieldset.querySelectorAll('label').forEach(label => label.remove());
+    for(const option of options) {
+      const label=document.createElement('label'), input=document.createElement('input'), icon=document.createElement('span'), text=document.createElement('span');
+      input.type='radio'; input.name=`hero-${key}`; input.value=String(option.value); input.checked=String(option.value)===String(value);
+      icon.className=`game-icon picker-icon ${key}-icon`; icon.setAttribute('aria-hidden','true'); iconContent(icon,option.icon);
+      text.textContent=option.label; label.append(input,icon,text); fieldset.append(label);
+    }
+  };
+  const update = (refreshPickers = false) => {
+    if(refreshPickers) {
+      updatePicker('rarity',[...new Set(contexts.map(p=>p.rarity))].map(rarity=>({value:rarity,label:rarity,icon:data.icons.rarity[rarity]})),context.rarity);
+      updatePicker('stars',contexts.filter(p=>p.rarity===context.rarity).map(p=>({value:p.index,label:p.star_label,icon:data.icons.stars[p.stars]})),context.index);
+    }
+    entries.forEach(({ability,panel,slider}) => {
+      const level=Number(slider?.value ?? 60);
+      panel.querySelector('[data-ability-description]')!.textContent=machineAbilityDescription(ability,context.index,level);
+      if(slider) panel.querySelector('[data-level-output]')!.textContent=String(level);
+      const note=panel.querySelector<HTMLElement>('[data-ability-note]')!;
+      note.textContent=machineAbilityNote(ability,context,level); note.hidden=!note.textContent;
+    });
+    root.querySelector('[data-machine-state]')!.textContent=`${context.rarity} · ${context.star_label} · Active ${entries[0].slider!.value} · Passive ${entries[1].slider!.value}`;
+  };
+  Object.entries(pickers).forEach(([key,picker]) => {
+    picker.addEventListener('change',event => {
+      const input=event.target as HTMLInputElement;
+      if(input.type!=='radio') return;
+      context=key==='rarity' ? selectMachineRarity(contexts,context,input.value) : contexts.find(p=>p.index===Number(input.value))!;
+      update(true); picker.open=false; picker.querySelector('summary')!.focus();
+    });
+    picker.addEventListener('toggle',()=>{if(picker.open)Object.values(pickers).filter(p=>p!==picker).forEach(p=>p.open=false);});
+    picker.addEventListener('keydown',event=>{if(event.key==='Escape'){picker.open=false;picker.querySelector('summary')!.focus();}});
+  });
+  entries.forEach(({panel,slider})=>{
+    if(!slider) return;
+    panel.querySelector<HTMLElement>('[data-machine-level]')!.hidden=false;
+    slider.addEventListener('input',()=>update());
+  });
+  root.querySelector('[data-machine-reset]')!.addEventListener('click',()=>{
+    context=contexts.find(p=>p.index===data.initial)!;
+    entries.forEach(({slider})=>{if(slider)slider.value='60';});
+    Object.values(pickers).forEach(picker=>picker.open=false); update(true);
+  });
+  document.addEventListener('click',event=>Object.values(pickers).forEach(picker=>{if(!picker.contains(event.target as Node))picker.open=false;}));
+  root.querySelector<HTMLElement>('[data-machine-controls]')!.hidden=false;
+});
+</script>

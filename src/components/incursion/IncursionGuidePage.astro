@@ -1,10 +1,14 @@
 ---
 import "../../styles/campaign-layout.css";
+import "../../styles/heroes.css";
 import "../../styles/incursion-guide.css";
+import "../../styles/machine-profiles.css";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../Header.astro";
 import Footer from "../Footer.astro";
-import CampaignHero from "../campaign/CampaignHero.astro";
+import MachineIdentity from "./MachineIdentity.astro";
+import MachineAbilities from "./MachineAbilities.astro";
+import InfographicUpdated from "../InfographicUpdated.astro";
 import FeaturedInfographic from "../FeaturedInfographic.astro";
 import StrategyCard from "./StrategyCard.astro";
 import PowerUpPriorities from "./PowerUpPriorities.astro";
@@ -12,24 +16,32 @@ import ResearchEvidence from "./ResearchEvidence.astro";
 import TierCapsRewards from "./TierCapsRewards.astro";
 import StageTips from "./StageTips.astro";
 import type { IncursionGuide } from "../../data/incursion/types";
+import type { Machine } from "../../lib/machine-types";
+import { machineHref } from "../../lib/machines.mjs";
 
-interface Props { guide: IncursionGuide }
-const { guide } = Astro.props;
-const tocGroups = [
+interface Props { machine: Machine; guide?: IncursionGuide }
+const { machine, guide } = Astro.props;
+const trail = [{name:'Home',url:'/'},{name:'Incursion',url:'/incursion-mow/'},{name:machine.name,url:machineHref(machine)}];
+const breadcrumbs = {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:trail.map((crumb,index)=>({'@type':'ListItem',position:index+1,name:crumb.name,item:`https://terminusmaximus.com${crumb.url}`}))};
+const tocGroups = guide ? [
   { title: "Guide", links: [{ label: "Overview", href: "#overview" }, { label: "Team Strategies", href: "#strategies" }, { label: "Power-Up Priorities", href: "#power-ups" }] },
   { title: "Team Strategies", links: guide.strategies.map((strategy) => ({ label: strategy.name, href: `#${strategy.id}` })) },
   { title: "Tips & Evidence", links: [{ label: "Rules for Success", href: "#rules" }, ...(guide.stageTips ? [{ label: "Stage-Specific Tips", href: "#stage-tips" }] : []), ...(guide.tierRewards?.length ? [{ label: "Tier Caps & Shard Rewards", href: "#tier-caps-rewards" }] : []), { label: "Creator Evidence", href: "#research" }] },
-];
+] : [];
 ---
-<Layout title={guide.seoTitle} description={guide.description}
-  image={guide.infographic?.src} url={`https://terminusmaximus.com/incursion-mow/${guide.slug}`}>
+<Layout title={`${machine.name} Machine of War Guide — Abilities & Rating | Terminus Maximus`} description={`${machine.name}: Active, Passive and Mythic abilities, adjustable levels and promotions, and Terminus Maximus's star rating.${guide ? ' Includes the Incursion unlock infographic and team strategies.' : ''}`}
+  image={guide?.infographic?.src ?? machine.portrait.src} url={`https://terminusmaximus.com${machineHref(machine)}`}>
+  <Fragment slot="head"><script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbs).replace(/</g,'\u003c')} /></Fragment>
   <Header />
-  <main class="campaign-page incursion-guide" id="guide-content">
-    <CampaignHero title={guide.title} subtitle={guide.subtitle} infographicSrc={guide.infographic?.fullSizeSrc} updatedAt={!guide.infographic ? guide.updatedAt : undefined}
-      backHref="/incursion-mow" backLabel="Incursion & Machine of War" />
+  <main class="campaign-page heroes-page incursion-guide mow-profile" id="guide-content">
+    <nav class="hero-breadcrumbs" aria-label="Breadcrumb">{trail.map((crumb,index) => <><a href={crumb.url} aria-current={index === trail.length - 1 ? 'page' : undefined}>{crumb.name}</a>{index < trail.length - 1 && <span aria-hidden="true">/</span>}</>)}</nav>
+    <MachineIdentity machine={machine} hasGuide={!!guide} />
 
-    {guide.infographic && <FeaturedInfographic title={`${guide.machine} Strategy Infographic`} asset={guide.infographic} />}
+    {guide?.infographic && <div id="unlock-guide"><FeaturedInfographic title={`${machine.name} Unlock Guide`} asset={guide.infographic} /><InfographicUpdated imageSrc={guide.infographic.fullSizeSrc} /></div>}
 
+    <MachineAbilities machine={machine} />
+
+    {guide && <>
     <nav class="table-of-contents guide-panel" aria-labelledby="table-of-contents-heading">
       <h2 id="table-of-contents-heading">Table of Contents</h2>
       <div class="toc-grid">
@@ -79,6 +91,8 @@ const tocGroups = [
     <nav class="guide-next" aria-label="Related guides">
       {guide.relatedGuides.map((link) => <a href={link.url}>{link.label}</a>)}
     </nav>
+    </>}
+    <nav class="machine-bottom-nav" aria-label="Machine of War navigation"><a href="/incursion-mow/#machines">← All Machines of War</a><a href="/heroes/">Explore Hero Guides →</a></nav>
   </main>
   <Footer />
 </Layout>

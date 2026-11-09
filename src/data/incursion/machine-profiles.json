@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "released_as_of": "2026-11-09",
+  "rating_source": "/images/incursion-mow.png",
+  "rating_scale": 5,
+  "rating_source_sha256": "3008655c0b2fc8625e28d13baad0623537063b948c4bd3047a5a98a3e08d0f4a",
+  "review_note": "Released roster, My Rating stars, verdicts, unlock alliances and investment notes visually transcribed from the October 26, 2026 Incursion: MoW Guide. No community ratings or calculated scores.",
+  "machines": [
+    {"unit_id":"tyranBiovore","slug":"biovore","rating":5,"verdict":"The GOAT of MoWs","unlock_with":"Chaos","invest_in":"Both"},
+    {"unit_id":"adeptExorcist","slug":"exorcist","rating":2,"verdict":"Neuro Raids if not Mythic","unlock_with":"Xenos","invest_in":"Active"},
+    {"unit_id":"blackForgefiend","slug":"forgefiend","rating":3,"verdict":"Delete summons with Active","unlock_with":"Imperial","invest_in":"Depends"},
+    {"unit_id":"ultraDreadnought","slug":"galatian","rating":2,"verdict":"Did not keep up with Mythic","unlock_with":"Chaos","invest_in":"Active"},
+    {"unit_id":"astraOrdnanceBattery","slug":"malleus-rocket-launcher","rating":1,"verdict":"Okay in Onslaught, I guess","unlock_with":"Xenos","invest_in":"Can be 1/1"},
+    {"unit_id":"deathCrawler","slug":"plagueburst-crawler","rating":4,"verdict":"Best against Tyranids and Ghaz","unlock_with":"Xenos","invest_in":"Passive"},
+    {"unit_id":"necroReanimator","slug":"reanimator","rating":4,"verdict":"New hotness for Mechs & Battlesuits","unlock_with":"Chaos","invest_in":"Passive, or Both"},
+    {"unit_id":"orksRukkatrukk","slug":"rukkatrukk","rating":2,"verdict":"Okay in Arena & Guild War","unlock_with":"Marines-only","invest_in":"Passive"},
+    {"unit_id":"darkaStormSpeeder","slug":"storm-speeder","rating":2,"verdict":"Also okay in Arena & Guild War","unlock_with":"Chaos","invest_in":"Passive"},
+    {"unit_id":"tauBroadside","slug":"tsonji","rating":1,"verdict":"Has a single use in Guild War","unlock_with":"Marines-only","invest_in":"Something Else"},
+    {"unit_id":"thousDaemonPrince","slug":"zkar","rating":4,"verdict":"Mythic Neuro Must-Have","unlock_with":"Xenos","invest_in":"Active"}
+  ]
+}

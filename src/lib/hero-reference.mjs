@@ -12,7 +12,7 @@ export function relicDescription(relic, rank) {
   return sourceDescription(relic.template, values);
 }
 
-function sourceDescription(template, sourceValues) {
+export function sourceDescription(template, sourceValues) {
   const values = Object.fromEntries(Object.entries(sourceValues).map(([key,value]) => [key.trim(),value]));
   let text = template;
   for (let pass = 0; pass < 8; pass++) {

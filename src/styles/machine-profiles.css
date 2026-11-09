@@ -1,0 +1,48 @@
+.mow-profile .machine-identity { margin-bottom: 1.5rem; }
+.mow-profile .machine-identity-rating { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
+.mow-profile .machine-identity-rating > span:first-child { font-size: .85rem; color: #c8c1ad; }
+.mow-profile .machine-verdict { font-size: 1.05rem; color: #f4e6bc; margin: .7rem 0 .35rem; }
+.mow-profile .machine-rating-source { font-size: .75rem; color: #aaa; margin: 0; }
+.mow-profile .machine-intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: start; margin-bottom: 1.5rem; }
+.mow-profile .machine-intro > p { margin: 0; max-width: 780px; color: #c6c6c6; font-size: .9rem; }
+.mow-profile .machine-recommendations { display: flex; gap: 2rem; margin: 0; padding: .7rem 1rem; background: #1e1e1e; border: 1px solid #3b3525; border-radius: 8px; }
+.mow-profile .machine-recommendations dt { color: #aaa; font-size: .72rem; }
+.mow-profile .machine-recommendations dd { margin: .3rem 0 0; color: #ecd58d; font-size: .85rem; }
+.mow-profile .machine-jump-links { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 2rem; }
+.mow-profile .machine-jump-links a { display: block; padding: .5rem .9rem; background: #211f19; border: 1px solid #51462b; border-radius: 6px; text-decoration: none; font-size: .8rem; }
+.mow-profile #unlock-guide { scroll-margin-top: 6rem; margin-bottom: 2rem; }
+.mow-profile #unlock-guide .featured-infographic { margin-bottom: .5rem; }
+.mow-profile #unlock-guide .last-updated { text-align: center; font-size: .8rem !important; }
+.mow-profile .machine-abilities { margin: 0 0 3rem; padding: 1.5rem; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; }
+.mow-profile .machine-abilities .section-heading h2 { margin: 0; border: 0; padding: 0; }
+.mow-profile .machine-abilities .section-heading { flex-wrap: wrap; gap: .6rem; }
+.mow-profile .machine-abilities > .muted { font-size: .85rem; }
+.mow-profile .machine-abilities .stat-controls { align-items: end; }
+.mow-profile .machine-reset { color: #e9d99f; border: 1px solid #655735; background: #26231b; border-radius: 7px; padding: .8rem; min-height: 46px; margin-bottom: 11px; font-size: .8rem; }
+.mow-profile .machine-state { color: #d5c99f; font-size: .8rem; }
+.mow-profile .machine-ability-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.mow-profile .machine-ability-grid .mythic-card { grid-column: 1/-1; border-color: #78573f; background: linear-gradient(120deg,#302824,#201e20); }
+.mow-profile .machine-ability-grid .ability-heading h3 { margin: 0; font-size: 1.15rem; line-height: 1.35; }
+.mow-profile .machine-ability-grid .ability-heading > div { min-width: 0; overflow-wrap: anywhere; }
+.mow-profile .machine-ability-grid .ability-heading .eyebrow { font-size: .65rem; }
+.mow-profile .machine-ability-grid .machine-ability-note { color: #d5c59b; font-size: .78rem; }
+.mow-profile .machine-bottom-nav { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .85rem; margin-top: 2rem; }
+@media (max-width: 800px) {
+  .mow-profile .machine-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .mow-profile .machine-recommendations { justify-content: flex-start; }
+}
+@media (max-width: 600px) {
+  .mow-profile .machine-ability-grid { grid-template-columns: 1fr; }
+  .mow-profile .machine-abilities { padding: 1rem; }
+  .mow-profile .machine-reset { margin: 0; }
+  .mow-profile .machine-identity { align-items: flex-start; }
+  .mow-profile .machine-identity .hero-portrait.large { width: 82px; }
+  .mow-profile .machine-rating-source { line-height: 1.7; }
+}
+@media (max-width: 400px) {
+  .mow-profile .machine-ability-grid .ability-heading h3 { font-size: 1rem; }
+  .mow-profile .machine-ability-grid .ability-icon img { width: 48px; height: 48px; }
+  .mow-profile .machine-identity { grid-template-columns: 72px minmax(0,1fr); gap: .8rem; }
+  .mow-profile .machine-identity .hero-portrait.large { width: 72px; }
+  .mow-profile .machine-identity-rating { font-size: .85rem; }
+}

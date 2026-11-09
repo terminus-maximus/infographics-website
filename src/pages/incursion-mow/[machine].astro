@@ -1,13 +1,15 @@
 ---
 import IncursionGuidePage from "../../components/incursion/IncursionGuidePage.astro";
 import { incursionGuides } from "../../data/incursion";
+import { machines } from "../../lib/machines.mjs";
+import type { Machine } from "../../lib/machine-types";
 import type { IncursionGuide } from "../../data/incursion/types";
 
 export function getStaticPaths() {
-  return incursionGuides.map((guide) => ({ params: { machine: guide.slug }, props: { guide } }));
+  return machines.map((machine) => ({ params: { machine: machine.slug }, props: { machine, guide: incursionGuides.find(guide => guide.slug === machine.slug) } }));
 }
 
-interface Props { guide: IncursionGuide }
-const { guide } = Astro.props;
+interface Props { machine: Machine; guide?: IncursionGuide }
+const { machine, guide } = Astro.props;
 ---
-<IncursionGuidePage guide={guide} />
+<IncursionGuidePage machine={machine} guide={guide} />
