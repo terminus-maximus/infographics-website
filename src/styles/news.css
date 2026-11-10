@@ -16,7 +16,7 @@ body { background: #121212; color: #f5f5f5; font-family: 'Lexend', sans-serif; m
 .news-page p { margin: 0 0 1rem; }
 .news-page strong { color: #f5f5f5; }
 .news-page .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 320px)); gap: 1.5rem; }
-.news-page .infographic-figure { margin: 0; }
+.news-page .infographic-figure { max-width: 700px; margin: 0 auto; }
 .news-page .infographic-figure img { width: 100%; height: auto; display: block; border: 1px solid #333; border-radius: 12px; }
 .news-page .infographic-figure figcaption { text-align: center; margin-top: 1rem; font-size: .9rem; }
 .news-page .jump-links { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 3rem; }
