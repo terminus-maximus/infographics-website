@@ -406,7 +406,7 @@ if (process.argv.includes('--built')) {
     if (guide.evidenceStatus === 'awaiting-clears') {
       assert.ok(html.includes('No E30 clear recorded yet') && html.includes('No replays are available yet'));
       assert.ok(html.includes('Safe Bet · provisional'));
-      assert.ok(!/Marketing \/ QA|1\.44|datamin/i.test(html), 'Blood Angels public copy omits datamine references');
+      assert.ok(!/\bmarketing\b|\bdatamin/i.test(html), 'Blood Angels public copy omits private-source labels');
       assert.ok(!html.includes('Watch replay') && !html.includes('Forgotten Saber'));
       assert.ok(!html.includes('Lowest Seen E30 team') && !html.includes('Other E30 three-medal options'));
       assert.ok(html.includes('Relic Power Fist') && html.includes('Vitarus'));
