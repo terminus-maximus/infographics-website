@@ -2,16 +2,17 @@
 import type { CampaignEventGuide } from '../../data/campaign-events/types';
 import { eventCharacters } from '../../lib/campaign-events';
 import { heroHrefById } from '../../lib/heroes.mjs';
-import { lowestSeenSupportIds } from '../../lib/campaign-events-validation.mjs';
+import { investmentSupportIds } from '../../lib/campaign-events-validation.mjs';
 import { buildAction, buildLabel, environmentLabel } from '../../lib/campaign-event-display';
 import HeroStats from './HeroStats.astro';
 interface Props { guide: CampaignEventGuide; }
 const { guide } = Astro.props;
-const supportIds: string[] = lowestSeenSupportIds(guide);
+const awaitingClears = guide.evidenceStatus === 'awaiting-clears';
+const supportIds: string[] = investmentSupportIds(guide);
 const heroes = [...guide.requiredHeroes, ...supportIds.map(id => guide.supportingHeroes.find(hero => hero.heroId === id)!)];
-const build = guide.research.builds.find(build => guide.research.lowestSeen.recordIds.includes(build.id))!;
+const build = guide.research.builds.find(build => guide.research.lowestSeen.recordIds.includes(build.id));
 ---
-<div class="investment-legend"><p><strong>Lowest Seen</strong><span>The selected E30 three-medal team.</span></p><p><strong>Safe Bet</strong><span>Our recommended investment targets.</span></p></div>
+<div class="investment-legend"><p><strong>Lowest Seen</strong><span>{awaitingClears ? 'No E30 clear recorded yet. Dashes mean unknown.' : 'The selected E30 three-medal team.'}</span></p><p><strong>Safe Bet{awaitingClears && ' · provisional'}</strong><span>{awaitingClears ? 'Planning targets from the new infographic; not yet validated by a clear.' : 'Our recommended investment targets.'}</span></p></div>
 <div class="investment-table" role="table" aria-label={`${guide.displayTitle} Lowest Seen and Safe Bet investment`}>
   <div class="investment-head" role="row"><span role="columnheader">Your five-hero team</span><span role="columnheader">Lowest Seen</span><span role="columnheader">Safe Bet</span></div>
   {heroes.map((hero, index) => {
@@ -24,7 +25,7 @@ const build = guide.research.builds.find(build => guide.research.lowestSeen.reco
     </div>;
   })}
 </div>
-<div class="team-credit"><span>{buildLabel(build)} · {build.sourceLabel}</span>{environmentLabel(build) && <span class="badge">{environmentLabel(build)}</span>}<a href={build.resultSourceUrl || build.sourceUrl} target="_blank" rel="noopener noreferrer">{buildAction(build)} ↗</a></div>
+{build && <div class="team-credit"><span>{buildLabel(build)} · {build.sourceLabel}</span>{environmentLabel(build) && <span class="badge">{environmentLabel(build)}</span>}<a href={build.resultSourceUrl || build.sourceUrl} target="_blank" rel="noopener noreferrer">{buildAction(build)} ↗</a></div>}
 <style>
   .investment-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
   .investment-legend p { margin: 0; padding: .8rem 1rem; border-left: 2px solid #d4af37; background: #252218; font-size: .84rem; line-height: 1.6; }

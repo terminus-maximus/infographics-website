@@ -1,22 +1,24 @@
+type ReplayDamageInput = string | number | null | undefined;
+
 type ReplayRecord = {
   creator?: string;
   video_id?: string;
   video_url?: string;
   tier_final?: string;
   boss_final?: string;
-  damage_guess?: number;
-  damage_final?: string | number;
+  damage_guess?: ReplayDamageInput;
+  damage_final?: ReplayDamageInput;
   published_at?: string;
   review_status?: string;
-  agent_review?: "LEGACY_REVIEW" | "STRONG_RESULT" | "NEED_HUMAN";
+  agent_review?: string;
   map?: string | null;
   team_archetype?: string;
-  hero_1?: string;
-  hero_2?: string;
-  hero_3?: string;
-  hero_4?: string;
-  hero_5?: string;
-  MoW?: string;
+  hero_1?: string | null;
+  hero_2?: string | null;
+  hero_3?: string | null;
+  hero_4?: string | null;
+  hero_5?: string | null;
+  MoW?: string | null;
 };
 
 type BossRecord = {
@@ -68,10 +70,17 @@ export type ReplayLibraryData = {
   heroesByTeam: Record<string, string[]>;
 };
 
-export function parseReplayDamage(value: string | number | undefined, fallback?: number) {
-  if (typeof value === "number") return value;
-  const parsed = Number(String(value || "").replace(/[^\d.]/g, ""));
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback || 0;
+export function parseReplayDamage(value: ReplayDamageInput, fallback?: ReplayDamageInput): number {
+  const parse = (input: ReplayDamageInput): number => {
+    if (input === null || input === undefined) return 0;
+    // Both export columns can contain comma-formatted text. Convert the fallback
+    // too, so sorting and damage labels always receive a finite positive number.
+    const text = typeof input === "string" ? input.replace(/[,\s]/g, "") : String(input);
+    if (!/^\d+(?:\.\d+)?$/.test(text)) return 0;
+    const parsed = Number(text);
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+  };
+  return parse(value) || parse(fallback);
 }
 
 export function formatReplayDamage(value: number) {

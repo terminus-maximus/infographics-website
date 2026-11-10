@@ -1,5 +1,12 @@
 ---
 import teamArchetypes from "../../data/replay-library/team_archetype.json";
+import type { ReplayLibraryData } from "../../lib/replayLibrary";
+
+interface Props {
+  bosses?: ReplayLibraryData["bosses"];
+  teams?: string[];
+  tiers?: string[];
+}
 
 const { bosses = [], teams = [], tiers = [] } = Astro.props;
 
@@ -7,7 +14,7 @@ const teamIconByName = Object.fromEntries(
   teamArchetypes.map((team) => [team.team_archetype, team.team_icon])
 );
 
-const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
+const getBossIconName = (boss: ReplayLibraryData["bosses"][number]) => boss.value.replaceAll(" ", "_");
 ---
 
 <section class="content-section replay-library-panel replay-library-filters" aria-labelledby="replay-filters-heading">
@@ -35,7 +42,7 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
               height="28"
               alt=""
               loading="lazy"
-              onerror="this.hidden=true;"
+              onerror="this.setAttribute('hidden', '');"
             />
             <span>{boss.label}</span>
           </button>
@@ -68,7 +75,7 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
               height="28"
               alt=""
               loading="lazy"
-              onerror="this.hidden=true;"
+              onerror="this.setAttribute('hidden', '');"
             />
             <span>{team}</span>
           </button>
@@ -131,7 +138,7 @@ const getBossIconName = (boss) => boss.value.replaceAll(" ", "_");
               height="28"
               alt=""
               loading="lazy"
-              onerror="this.hidden=true;"
+              onerror="this.setAttribute('hidden', '');"
             />
             <span>{tier}</span>
           </label>

@@ -1,10 +1,10 @@
 # Campaign Event guides
 
-The hub is `/campaign-event/`; six static guides live at `/campaign-event/{slug}/`. The hub, Events page, and related CE links use the alphabetical catalog in `src/data/campaign-events/catalog.ts`. CE Guides lives inside Menu, between Campaign Guides and Guild Raid, with AdMech, Tyranids, and Explore All Guides linking to the hub. The homepage features three standard cards: AdMech CE, Tyranids CE, and Explore All CE with the overview graphic. Individual guide cards on the homepage and in More to Explore have a thumbnail, short gold title, and three required-hero portraits. The CE overview keeps all six expanded cards.
+The hub is `/campaign-event/`; seven static guides live at `/campaign-event/{slug}/`. The hub, Events page, and related CE links use the alphabetical catalog in `src/data/campaign-events/catalog.ts`. CE Guides lives inside Menu, between Campaign Guides and Guild Raid, with AdMech, Blood Angels, Tyranids, and Explore All Guides linking to the hub. The homepage features three standard cards: Blood Angels CE, Tyranids CE, and Explore All CE with the overview graphic. Individual guide cards on the homepage and in More to Explore have a thumbnail, short gold title, and three required-hero portraits. The CE overview keeps all seven expanded cards.
 
 ## Maintaining content
 
-- `src/data/campaign-events/required-heroes.csv` owns all Lowest Seen and Safe Bet ranks and active/passive levels for 30 heroes: three required heroes and two supports per event. Keep the column headers. Blank values stay blank; never fill them from an older research estimate.
+- `src/data/campaign-events/required-heroes.csv` owns all Lowest Seen and Safe Bet ranks and active/passive levels for 35 heroes: three required heroes and two supports per event. Keep the column headers. Blank values stay blank; never fill them from an older research estimate.
 - `guides.json` retains the research, individual replay builds, provenance, support eligibility, and rewards. The original evidence is preserved even when maintained guide values differ. Keep the original five-hero configurations together. Tyranids’ six-hero community recommendation is an explicitly labelled support pool.
 - The legacy research field `recommendation.relic` names the event's final Mythic upgrade reward, not equipment used by the team. Keep it in the imported record, but do not display it as a team requirement; the correctly labelled item appears in Rewards.
 - `presentation.ts` contains concise player-facing team summaries and Battle Tips. Each summary beneath the investment table draws only on tips that apply to the five Lowest Seen heroes; keep alternate-team tactics in their own context. Update it when a support pair or strategy changes. Numerical tables come from the CSV, not this prose.
@@ -17,7 +17,7 @@ The hub is `/campaign-event/`; six static guides live at `/campaign-event/{slug}
 
 The shared layout renders the infographic, maintained team targets, alternate E30 builds, earlier-stage replays, support tiers, battle tips, rewards, and collapsed credits. QA/test-server footage stays labelled. The UI does not repeat per-field provenance links, but those remain in the data. Current pages are indexable and included in the discovery catalog; a local build does not publish them.
 
-Each individual CE guide ends with one Related Guides section: the CE overview first, then the other five CE guides in alphabetical order. These pages omit More to Explore and the duplicate CE link list. Other site pages retain their existing discovery sections.
+Each individual CE guide ends with one Related Guides section: the CE overview first, then the other six CE guides in alphabetical order. These pages omit More to Explore and the duplicate CE link list. Other site pages retain their existing discovery sections.
 
 ## Verification
 
@@ -61,3 +61,22 @@ The Tyranids gallery shows the final Hive Tyrant stage with three medals, follow
 The supplied PNG/WebP artwork is unchanged. Both captions explicitly identify the newer team evidence and link to the maintained tables. Existing Safe Bet targets are retained, including Roswitha's D3 46/50 recommendation; these are editorial targets, not a field-by-field maximum of reported builds.
 
 Validation: the 180-page build and `npm run check:campaign-events` pass. Checks cover all ten submitted hero profiles, source links, first-alternate ordering and retention of all existing cards. A comparison against the prior revision confirms every existing research build and Safe Bet value is unchanged. Browser review at 1280px, 390px and 320px found no horizontal overflow, missing team images or console errors. `git -c core.whitespace=cr-at-eol diff --check` passes with the existing CSV line endings. Changes are local; no deployment was performed.
+
+
+## Blood Angels / Armageddon launch preview — November 9, 2026
+
+Added `/campaign-event/blood-angels/` using the shared CE template, with the supplied PNG, WebP and thumbnail. Discovery, the Events hub, homepage, menu, sitemap and related-guide lists include the seventh guide. The overview uses the refreshed artwork. Its eighth “What if?” panel is explicitly speculative and does not create another route.
+
+The required trio is Snotflogga, Tanksmasha and Zapspitta. The supplied Safe Bet targets are D3 50/50, D3 1/36 and D3 50/50 respectively, with Gulgortz A2 60/60 and Gibbascrapz D3 50/50 as planned supports. All fifteen Lowest Seen fields remain null. `evidenceStatus: awaiting-clears` and `plannedSupportHeroIds` support launch previews without inventing a build, source, observed clear or S-tier placement. These CSV targets remain provisional. Snappawrecka is the third eligible support. Remove the awaiting-clears status and provide a complete qualified E30 build when real evidence establishes a headline team.
+
+Rules and rewards were checked against `LocalDatabase/research/blood-angels-ce/marketing-gameconfig.json`, **Marketing / QA 1.44.120**, event `eventCampaign7`. Configuration SHA-256: `f5f8dda968d7ef0a71d7c1a156948d0ee03126bbbde3bdb89a0ad6ff2614023a`. The 29 pointers in that research directory's `source-records.json` matched the configuration. The website labels this material as a preview, not verified live behavior. The shared roster snapshot remains 1.43.130; all six existing Orks are eligible in the 1.44 event configuration.
+
+- 33 Extremis stages: 30 main plus 3B, 13B and 25B. Caps are Epic E1–11, Legendary E12–22 and Mythic E23–30, including the corresponding branches. The expandable table retains each deployment limit and lightning timer. E23 and E26 require the trio; E24 permits five heroes.
+- Regular/Mythic shard farms: Mataneo E6/E25, Lucien E11/E26, Nicodemus E17/E27, Cezare E22/E28, Mephiston E24/E29.
+- Progress chests: 290 Mephiston shards across 14 initial chests through 2,200 points, then 10 per 500 points.
+- E25B gold milestone: Relic Power Fist, absent from the supplied infographic. E30 gold milestone: Vitarus, Mephiston's relic. E30 repeatable drop: Ancient Inscription. The two new relic icons were copied from the research assets; Ancient Inscription reuses the existing matching asset.
+- E30's configured boss is Yarrick, supported by a Malleus Rocket Launcher and mixed Imperial units. Blood Angels is the guide/reward-faction label; Armageddon is the in-game campaign name.
+
+Dan supplied corrected Blood Angels artwork on November 9: the full-size PNG, 700 × 392 WebP preview and 600 × 336 PNG thumbnail all show “Blood Angels CE Guide” in the top banner. The existing page and discovery paths use these corrected assets; all three were visually checked against the new full-size artwork and copied into the rebuilt site. Dan subsequently authorized a local commit of the two full-size PNGs: `b2b061dae7dcdb6aaab660275a2a507cba25b509`, committed Nov 9, 2026 at 14:55:43 America/Los_Angeles. Both page dates now read **Last updated on Nov 9, 2026** and cite that commit.
+
+Validation: the 189-page build and Campaign Event checks pass. The check covers all 35 maintained heroes, blank preview thresholds, provisional targets, preview rewards, navigation, related guides, image paths and preserved replay destinations. The prior six guide records and all their CSV values are unchanged. Browser checks covered desktop and phone layouts, stage-table expansion, reward and hero images, and console errors. Only the two approved full-size PNGs have been committed locally. The page and date updates remain uncommitted; no push or deployment was performed.

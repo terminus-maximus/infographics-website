@@ -11,6 +11,7 @@ const { exclude } = Astro.props;
       <img class="preview" src={`/images/thumbnails/ce-${event.slug}-thumb.png`} alt={`${event.name} Campaign Event infographic preview`} width="400" height="225" loading="lazy" />
       <div class="card-body"><h3><img src={`/images/faction-clear/${event.icon}.webp`} alt="" width="34" height="34" loading="lazy" />{event.name}<span aria-hidden="true">↗</span></h3>
       <p>{event.description}</p>
+      {guide.evidenceStatus === 'awaiting-clears' && <p class="preview-status">New · awaiting clear evidence</p>}
       <div class="required-label">Required trio</div><div class="required-trio">{guide.requiredHeroIds.map(id => <div><img src={eventCharacters[id].portrait} alt="" width="44" height="44" loading="lazy" /><span>{eventCharacters[id].name}</span></div>)}</div>
       <div class="factions">{event.factions.map(faction => <span><img src={`/images/faction-clear/${factionIcons[faction]}.webp`} alt="" width="22" height="22" loading="lazy" />{faction}</span>)}</div>
       </div>
@@ -27,6 +28,7 @@ const { exclude } = Astro.props;
   h3 span { margin-left: auto; font-size: 1rem; }
   h3 img, .factions img { object-fit: contain; }
   p { color: #bbb; font-size: .8rem; line-height: 1.65; margin: .65rem 0 1rem; }
+  .preview-status { color: #e4c55e; font-size: .7rem; margin: 0 0 1rem; }
   .required-label { color: #aaa; text-transform: uppercase; font-size: .6rem; letter-spacing: .08em; margin-top: auto; margin-bottom: .7rem; }
   .required-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
   .required-trio > div { display: grid; justify-items: center; gap: .35rem; text-align: center; }

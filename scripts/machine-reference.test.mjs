@@ -38,8 +38,8 @@ test('rarity changes select valid promotions and communicate level caps', () => 
   assert.throws(()=>selectMachineRarity(contexts,common,'Unknown'));
 });
 
-test('all released machines have complete, resolved ability data at every promotion and level', () => {
-  assert.equal(machines.length,11);
+test('all registered machines have complete, resolved ability data at every promotion and level', () => {
+  assert.equal(machines.length,12);
   for(const machine of machines) {
     assert.equal(machine.progression.length,20);
     for(const context of machine.progression) {

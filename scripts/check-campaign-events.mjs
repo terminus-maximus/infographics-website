@@ -3,13 +3,14 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { assembleCampaignEvents, contentDigest, parseRequiredHeroes, requiredHeroColumns } from '../src/lib/campaign-events-editorial.mjs';
-import { classifySupportHero, lowestSeenSupportIds, observationCoverage, qualifiesForThreshold, qualifiesForE30Team, qualifiesForE30Target, validateCampaignEvents } from '../src/lib/campaign-events-validation.mjs';
+import { classifySupportHero, lowestSeenSupportIds, investmentSupportIds, observationCoverage, qualifiesForThreshold, qualifiesForE30Team, qualifiesForE30Target, validateCampaignEvents } from '../src/lib/campaign-events-validation.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = (path) => readFileSync(resolve(root, path), 'utf8');
 const base = JSON.parse(read('src/data/campaign-events/guides.json'));
 const csv = read('src/data/campaign-events/required-heroes.csv');
 const data = assembleCampaignEvents(base, csv);
+const infographicRevisions = JSON.parse(read('src/data/infographicRevisions.json'));
 const canonical = JSON.parse(read('src/data/lre/fabius.json'));
 // Frozen rule-manifest identities; these are distinct from ordinary campaign requirements.
 const requiredByEvent = {
@@ -19,6 +20,7 @@ const requiredByEvent = {
   admech: ['deathBlightlord', 'deathBlightbringer', 'deathPutrifier'],
   tyranids: ['ultraInceptorSgt', 'ultraApothecary', 'ultraTitus'],
   tau: ['genesBiophagus', 'genesMagus', 'genesKelermorph'],
+  'blood-angels': ['orksRuntherd', 'orksNob', 'orksWeirdboy'],
 };
 assert.deepEqual(validateCampaignEvents(data), [], 'Public guide content must satisfy the evidence contract');
 assert.equal(data.snapshot.characterBuild, canonical.characterBuild, 'Roster must identify its canonical character build');
@@ -55,6 +57,28 @@ const xybia = tauResearch.builds.find(build => build.stageId === '30').heroes.fi
 assert.equal(xybia.rank.value, 'D2');
 assert.equal(xybia.reportedRank.value, 'D1', 'Conflicting written rank stays separately attributed');
 
+// Launch previews preserve unknown thresholds and never manufacture clear-backed tiers.
+const bloodAngels = data.events.find(event => event.id === 'blood-angels');
+assert.equal(bloodAngels.evidenceStatus, 'awaiting-clears');
+assert.deepEqual(lowestSeenSupportIds(bloodAngels), []);
+assert.deepEqual(investmentSupportIds(bloodAngels), ['orksWarboss', 'orksBigMek']);
+assert.deepEqual(bloodAngels.research.builds, []);
+assert.deepEqual(bloodAngels.observations, []);
+assert.ok([...bloodAngels.requiredHeroes, ...bloodAngels.supportingHeroes].every(hero => Object.values(hero.lowestSeen).every(field => field.value === null)));
+assert.ok(bloodAngels.supportingHeroes.every(hero => hero.tier === 'C' && hero.tierRecordIds.length === 0));
+assert.ok(bloodAngels.requiredHeroes.every(hero => hero.safeBetScenarios[0].provisional));
+assert.deepEqual(bloodAngels.requiredHeroes.map(hero => [hero.heroId, ...['rank', 'active', 'passive'].map(key => hero.safeBetScenarios[0].investment[key].value)]), [
+  ['orksRuntherd', 'D3', 50, 50], ['orksNob', 'D3', 1, 36], ['orksWeirdboy', 'D3', 50, 50],
+]);
+assert.equal(bloodAngels.rewards.source.gameVersion, '1.44.120');
+assert.equal(bloodAngels.rewards.source.preview, true);
+assert.deepEqual(bloodAngels.rewards.chestShards, [{ hero: 'Mephiston', initialTotal: 290, repeatQuantity: 10 }]);
+assert.deepEqual(bloodAngels.rewards.equipment.map(item => [item.name, item.stage]), [['Relic Power Fist', '25B'], ['Vitarus', '30']]);
+assert.equal(bloodAngels.stageRules.find(stage => stage.stageId === '23').deploymentLimit, 3);
+assert.equal(bloodAngels.stageRules.find(stage => stage.stageId === '24').deploymentLimit, 5);
+assert.equal(bloodAngels.stageRules.find(stage => stage.stageId === '26').deploymentLimit, 3);
+assert.equal(bloodAngels.stageRules.find(stage => stage.stageId === '30').lightningVictoryRounds, 5);
+
 // Source format does not change tier eligibility; E30 still requires three medals.
 const tierCase = structuredClone(data.events.find(event => event.id === 'tau'));
 const earlierVideo = tierCase.research.builds.find(build => build.id === 'tau-e24-e2D-4AcrIwY-attempt1');
@@ -90,7 +114,7 @@ assert.equal(classifySupportHero(data.events.find(event => event.id === 'admech'
 // CSV owns the required trio and Lowest Seen support pair; edits and blanks survive.
 const serialize = rows => [requiredHeroColumns, ...rows.map(row => requiredHeroColumns.map(key => row[key]))].map(row => row.map(value => /[",\r\n]/.test(value) ? '"' + value.replaceAll('"', '""') + '"' : value).join(',')).join('\r\n') + '\r\n';
 const rows = parseRequiredHeroes(csv);
-assert.equal(rows.length, 30);
+assert.equal(rows.length, 35);
 const updatedBenchmarks = {
   'death-guard': {
     primary: 'death-guard-e30-cpunerd-gold1', previous: 'forgotten-saber-2026-08-death-guard',
@@ -115,7 +139,7 @@ for (const [id, update] of Object.entries(updatedBenchmarks)) {
   }
 }
 for (const event of data.events) {
-  const supportIds = lowestSeenSupportIds(event);
+  const supportIds = investmentSupportIds(event);
   const eventRows = rows.filter(row => row.Campaign === event.displayTitle);
   assert.equal(supportIds.length, 2);
   assert.equal(eventRows.length, 5, `${event.id}: three required plus two Lowest Seen supports`);
@@ -204,6 +228,13 @@ const rejected = (label, mutate, pattern) => {
   mutate(copy);
   assert.ok(validateCampaignEvents(copy).some((message) => pattern.test(message)), label);
 };
+rejected('A launch preview cannot acquire a made-up Lowest Seen value', copy => {
+  const guide = copy.events.find(event => event.id === 'blood-angels');
+  Object.assign(guide.requiredHeroes[0].lowestSeen.rank, { value: 'D3', status: 'editorial', scope: 'E30' });
+}, /awaiting-clears Lowest Seen must stay blank/);
+rejected('A planned support pair must remain eligible', copy => {
+  copy.events.find(event => event.id === 'blood-angels').plannedSupportHeroIds[0] = 'ultraCalgar';
+}, /two eligible planned supports/);
 rejected('A required hero cannot come from an enemy faction', (copy) => copy.events[0].requiredHeroIds[0] = 'ultraInceptorSgt', /ineligible|eligibility|exactly match/);
 for (const tier of ['D', 'F', null]) rejected(`Support tier ${tier} is not allowed`, copy => {
   copy.events[0].supportingHeroes[0].tier = tier;
@@ -331,21 +362,29 @@ if (process.argv.includes('--built')) {
   const menuLinks = [...menu.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map((match) => [match[1], match[2].trim()]);
   assert.deepEqual(menuLinks, [
     ['/campaign-event/admech/', 'AdMech'],
+    ['/campaign-event/blood-angels/', 'Blood Angels'],
     ['/campaign-event/tyranids/', 'Tyranids'],
     ['/campaign-event/', 'Explore All Guides'],
   ]);
   const homepageCards = read('dist/index.html').match(/id="ce-guides"[^>]*>([\s\S]*?)<\/section>/)?.[1] || '';
   assert.deepEqual([...homepageCards.matchAll(/<a[^>]+href="([^"]+)"/g)].map(match => match[1]), [
-    '/campaign-event/admech/', '/campaign-event/tyranids/', '/campaign-event',
+    '/campaign-event/blood-angels/', '/campaign-event/tyranids/', '/campaign-event',
   ]);
   for (const guide of alphabetical) {
     const html = read(`dist/campaign-event/${guide.slug}/index.html`);
     for (const id of ['lowest-seen', 'alternates', 'replays', 'supports', 'tactics', 'rewards']) assert.ok(html.includes(`id="${id}"`), `${guide.id}: section ${id}`);
     assert.ok(html.includes(`/images/web/ce-${guide.slug}.webp`), `${guide.id}: event artwork`);
     assert.ok(html.includes(`/images/ce-${guide.slug}.png`), `${guide.id}: original artwork`);
+    const revision = infographicRevisions[`/images/ce-${guide.slug}.png`];
+    if (revision.status === 'unverified') {
+      assert.ok(html.includes('Infographic update date unverified'), `${guide.id}: uncommitted artwork stays unverified`);
+    } else {
+      assert.ok(html.includes('Last updated on ') && html.includes(`datetime="${revision.updatedOn}"`), `${guide.id}: date follows the committed PNG revision`);
+      assert.ok(!html.includes('Infographic update date unverified'), `${guide.id}: committed artwork has a verified date`);
+    }
     assert.ok(!html.includes('noindex'), `${guide.id}: ready for site discovery`);
     assert.equal(html.split('data-investment-hero=').length - 1, 5, `${guide.id}: exactly five maintained heroes`);
-    for (const hero of [...guide.requiredHeroes, ...lowestSeenSupportIds(guide).map(id => guide.supportingHeroes.find(hero => hero.heroId === id))]) {
+    for (const hero of [...guide.requiredHeroes, ...investmentSupportIds(guide).map(id => guide.supportingHeroes.find(hero => hero.heroId === id))]) {
       const row = html.split(`data-investment-hero="${hero.heroId}"`)[1]?.split('data-investment-hero=')[0];
       assert.ok(row, `${guide.id}: hero ${hero.heroId}`);
       for (const [column, investment] of [['lowest', hero.lowestSeen], ['safe', hero.safeBetScenarios[0].investment]]) {
@@ -364,15 +403,25 @@ if (process.argv.includes('--built')) {
       assert.ok(alternates.includes('Previous Lowest Seen'), `${guide.id}: former benchmark is labelled`);
       assert.ok(html.includes('Team evidence updated') && html.includes('datetime="2026-11-07"'), `${guide.id}: distinguish new evidence from older artwork`);
     }
+    if (guide.evidenceStatus === 'awaiting-clears') {
+      assert.ok(html.includes('No E30 clear recorded yet') && html.includes('No replays are available yet'));
+      assert.ok(html.includes('Safe Bet · provisional'));
+      assert.ok(!/Marketing \/ QA|1\.44|datamin/i.test(html), 'Blood Angels public copy omits datamine references');
+      assert.ok(!html.includes('Watch replay') && !html.includes('Forgotten Saber'));
+      assert.ok(!html.includes('Lowest Seen E30 team') && !html.includes('Other E30 three-medal options'));
+      assert.ok(html.includes('Relic Power Fist') && html.includes('Vitarus'));
+      const rules = html.match(/<table aria-label="Blood Angels configured Extremis stage rules"[^>]*>([\s\S]*?)<\/table>/)?.[1] || '';
+      assert.equal((rules.match(/scope="row"/g) || []).length, 33);
+    }
     const primaryCredit = html.match(/class="team-credit"[^>]*>([\s\S]*?)<\/div>/)?.[1] || '';
     const encodedHref = build => (build.resultSourceUrl || build.sourceUrl).replaceAll('&', '&amp;');
-    assert.ok(primaryCredit.includes(`href="${encodedHref(primaryBuild)}"`), `${guide.id}: main team links to the clear`);
+    if (primaryBuild) assert.ok(primaryCredit.includes(`href="${encodedHref(primaryBuild)}"`), `${guide.id}: main team links to the clear`);
     for (const build of guide.research.builds.filter(build => build.kind === 'clear')) {
       const card = guide.research.lowestSeen.recordIds.includes(build.id) ? primaryCredit : html.split(`data-build="${build.id}"`)[1]?.split('</article>')[0] || '';
       assert.ok(card.includes(`href="${encodedHref(build)}"`), `${guide.id}/${build.id}: reviewed replay remains linked at its clear timestamp`);
     }
     const related = html.match(/<section id="related-guides"[^>]*>([\s\S]*?)<\/section>/)?.[1] || '';
-    assert.deepEqual([...related.matchAll(/data-recommendation-route="([^"]+)"/g)].map(match => match[1]), ['/campaign-event', ...alphabetical.filter(other => other.slug !== guide.slug).map(other => `/campaign-event/${other.slug}/`)], `${guide.id}: overview and five alphabetical CE guides`);
+    assert.deepEqual([...related.matchAll(/data-recommendation-route="([^"]+)"/g)].map(match => match[1]), ['/campaign-event', ...alphabetical.filter(other => other.slug !== guide.slug).map(other => `/campaign-event/${other.slug}/`)], `${guide.id}: overview and six alphabetical CE guides`);
     assert.ok(!/<section[^>]*data-recommendation-section="more-to-explore"/.test(html), `${guide.id}: no extra discovery section`);
     assert.equal(html.split('data-reward="character-shards"').length - 1, 5);
     for (const match of html.matchAll(/(?:src|href)="(\/images\/[^"#?]+)"/g)) asset(decodeURI(match[1]));
@@ -382,4 +431,4 @@ if (process.argv.includes('--built')) {
     assert.ok(read('dist/beginner-guide/index.html').includes(`data-recommendation-route="/campaign-event/${guide.slug}/"`));
   }
 }
-console.log('Campaign Events: research invariants, 30 maintained heroes, complete teams, artwork, navigation, discovery, and built-page checks passed.');
+console.log('Campaign Events: research invariants, 35 maintained heroes, complete teams, artwork, navigation, discovery, and built-page checks passed.');

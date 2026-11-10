@@ -1,0 +1,71 @@
+body { background: #121212; color: #f5f5f5; font-family: 'Lexend', sans-serif; margin: 0; }
+.news-page { max-width: 1200px; margin: 0 auto; padding: 2rem; line-height: 1.7; }
+.news-page * { box-sizing: border-box; }
+.news-page a { color: #d4af37; text-underline-offset: .2em; }
+.news-page a:focus-visible, .news-page summary:focus-visible, .news-page [tabindex]:focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }
+.news-page .news-hero { text-align: center; margin: 0 auto 3rem; max-width: 850px; }
+.news-page h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: .75rem 0 1rem; }
+.news-page .news-hero > p { color: #ccc; font-size: 1.1rem; }
+.news-page .news-hero .news-meta { font-size: .85rem; color: #aaa; }
+.news-page .news-hero .news-period { color: #d4af37; font-size: 1rem; }
+.news-page .back-link { display: inline-block; margin-bottom: 1rem; font-size: .9rem; }
+.news-page section { margin-bottom: 3rem; scroll-margin-top: 1.5rem; }
+.news-page h2 { font-size: clamp(1.35rem, 3vw, 1.65rem); color: #d4af37; border-bottom: 1px solid #333; padding-bottom: .6rem; margin: 0 0 1.25rem; line-height: 1.3; }
+.news-page h3 { font-size: 1.15rem; line-height: 1.4; margin: .5rem 0 1rem; color: #f5f5f5; }
+.news-page p, .news-page li { color: #ccc; }
+.news-page p { margin: 0 0 1rem; }
+.news-page strong { color: #f5f5f5; }
+.news-page .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 320px)); gap: 1.5rem; }
+.news-page .infographic-figure { margin: 0; }
+.news-page .infographic-figure img { width: 100%; height: auto; display: block; border: 1px solid #333; border-radius: 12px; }
+.news-page .infographic-figure figcaption { text-align: center; margin-top: 1rem; font-size: .9rem; }
+.news-page .jump-links { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 3rem; }
+.news-page .jump-links a { padding: .45rem .85rem; border: 1px solid #444; border-radius: 8px; text-decoration: none; font-size: .85rem; background: #1e1e1e; }
+.news-page .jump-links a:hover { border-color: #d4af37; }
+.news-page .news-panel { background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 1.5rem; min-width: 0; }
+.news-page .news-panel > :last-child { margin-bottom: 0; }
+.news-page .two-column { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.news-page .event-label { color: #d4af37; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .75rem; }
+.news-page .portrait-heading { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.news-page .portrait-heading img { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; }
+.news-page .portrait-heading h3, .news-page .portrait-heading p { margin: 0; }
+.news-page .shard-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.news-page .shard-totals div { background: #121212; border-radius: 8px; padding: 1rem; text-align: center; }
+.news-page .shard-totals dt { font-size: .9rem; color: #ccc; }
+.news-page .shard-totals dd { margin: .3rem 0 0; font-size: 2rem; font-weight: 700; color: #d4af37; }
+.news-page .table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid #333; border-radius: 10px; margin: 1rem 0; }
+.news-page table { border-collapse: collapse; width: 100%; font-size: .9rem; text-align: left; }
+.news-page th, .news-page td { padding: .9rem 1rem; border-bottom: 1px solid #333; vertical-align: top; min-width: 120px; }
+.news-page thead th { color: #d4af37; background: #252525; font-weight: 500; }
+.news-page tbody th { color: #f5f5f5; font-weight: 500; }
+.news-page td { color: #ccc; }
+.news-page tr:last-child > * { border-bottom: 0; }
+.news-page tbody tr:nth-child(even) { background: #191919; }
+.news-page td small, .news-page th small { display: block; font-weight: 400; color: #aaa; }
+.news-page .date-cell { white-space: nowrap; }
+.news-page .note { font-size: .85rem; color: #aaa; }
+.news-page .callout { border-left: 3px solid #d4af37; padding: .75rem 1rem; background: #1e1e1e; margin: 1.5rem 0; }
+.news-page details { margin-top: 1.5rem; border-top: 1px solid #333; padding-top: 1rem; }
+.news-page summary { color: #d4af37; cursor: pointer; padding: .4rem 0; }
+.news-page details[open] summary { margin-bottom: 1rem; }
+.news-page .guide-links { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
+.news-page .eligible-factions { border-block: 1px solid #333; margin: 1.25rem 0; padding: 1rem 0; }
+.news-page .eligible-factions > p { margin-bottom: .5rem; }
+.news-page .eligible-factions > p:last-child { margin-bottom: 0; }
+.news-page .quest-table th, .news-page .quest-table td { text-align: center; vertical-align: middle; }
+.news-page .quest-table .quest-date { color: #d4af37; white-space: nowrap; }
+.news-page .reward-icons-cell { width: 150px; min-width: 150px; vertical-align: middle; }
+.news-page .requisition-table .featured-units { min-width: 370px; vertical-align: middle; }
+.news-page .raid-table td, .news-page .raid-table thead th:not(:first-child) { min-width: 82px; text-align: center; vertical-align: middle; }
+.news-page .raid-table th:first-child { min-width: 150px; }
+@media(max-width: 700px) {
+  .news-page { padding: 1.25rem; }
+  .news-page .news-hero { margin-bottom: 2rem; }
+  .news-page .news-grid, .news-page .two-column { grid-template-columns: minmax(0, 1fr); }
+  .news-page .news-panel { padding: 1rem; }
+  .news-page .shard-totals { gap: .5rem; }
+  .news-page .shard-totals div { padding: .75rem .35rem; }
+  .news-page .shard-totals dt { font-size: .75rem; }
+  .news-page .shard-totals dd { font-size: 1.6rem; }
+  .news-page th, .news-page td { padding: .75rem; }
+}

@@ -3,7 +3,7 @@
   "snapshot": {
     "id": "ce-2026-10-12-e30-safe-bet-placeholders",
     "status": "editorial_pending",
-    "updatedAt": "2026-11-07",
+    "updatedAt": "2026-11-09",
     "characterBuild": "1.43.130",
     "contentHash": null
   },
@@ -325,6 +325,42 @@
       "name": "Xybia",
       "faction": "Genestealer Cults",
       "portrait": "/images/heroes/Xybia.webp"
+    },
+    "orksBigMek": {
+      "id": "orksBigMek",
+      "name": "Gibbascrapz",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Gibba.webp"
+    },
+    "orksWarboss": {
+      "id": "orksWarboss",
+      "name": "Gulgortz",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Boss.webp"
+    },
+    "orksKillaKan": {
+      "id": "orksKillaKan",
+      "name": "Snappawrecka",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Snappa.webp"
+    },
+    "orksRuntherd": {
+      "id": "orksRuntherd",
+      "name": "Snotflogga",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Snot.webp"
+    },
+    "orksNob": {
+      "id": "orksNob",
+      "name": "Tanksmasha",
+      "faction": "Orks",
+      "portrait": "/images/heroes/Tank.webp"
+    },
+    "orksWeirdboy": {
+      "id": "orksWeirdboy",
+      "name": "Zapspitta",
+      "faction": "Orks",
+      "portrait": "/images/lre/portraits/orksWeirdboy.png"
     }
   },
   "events": [
@@ -15208,6 +15244,658 @@
           }
         ],
         "finalUpgrade": "Ancient Inscription"
+      }
+    },
+    {
+      "id": "blood-angels",
+      "slug": "blood-angels",
+      "title": "Blood Angels Extremis Guide",
+      "displayTitle": "Blood Angels",
+      "enemyFaction": "Blood Angels",
+      "playableFactions": [
+        "Orks"
+      ],
+      "requiredHeroIds": [
+        "orksRuntherd",
+        "orksNob",
+        "orksWeirdboy"
+      ],
+      "supportingHeroIds": [
+        "orksBigMek",
+        "orksKillaKan",
+        "orksWarboss"
+      ],
+      "evidenceStatus": "awaiting-clears",
+      "plannedSupportHeroIds": [
+        "orksWarboss",
+        "orksBigMek"
+      ],
+      "objective": "Plan for three medals on Extremis 30; no qualifying clear is recorded yet.",
+      "ruleNote": "Rules and rewards come from Marketing / QA build 1.44.120 and may change in the live release.",
+      "rosterNote": "Orks only. The required trio and three eligible supports are confirmed in the 1.44.120 configuration; Machines of War are excluded.",
+      "versionNote": "Armageddon is the in-game campaign name. Blood Angels identifies the reward faction; the campaign includes mixed Imperial enemies.",
+      "requiredHeroes": [
+        {
+          "heroId": "orksRuntherd",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": []
+        },
+        {
+          "heroId": "orksNob",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": []
+        },
+        {
+          "heroId": "orksWeirdboy",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": []
+        }
+      ],
+      "supportingHeroes": [
+        {
+          "heroId": "orksBigMek",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": [],
+          "tier": "C",
+          "basis": "editorial",
+          "provisional": false,
+          "rationale": "No qualifying clear in the current evidence.",
+          "sourceIds": [],
+          "tierRecordIds": []
+        },
+        {
+          "heroId": "orksKillaKan",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": [],
+          "tier": "C",
+          "basis": "editorial",
+          "provisional": false,
+          "rationale": "No qualifying clear in the current evidence.",
+          "sourceIds": [],
+          "tierRecordIds": []
+        },
+        {
+          "heroId": "orksWarboss",
+          "lowestSeen": {
+            "rank": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "active": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            },
+            "passive": {
+              "value": null,
+              "status": "unknown",
+              "scope": null,
+              "scopeKind": null,
+              "stageIds": [],
+              "sourceIds": [],
+              "clearIds": [],
+              "note": null
+            }
+          },
+          "safeBetScenarios": [],
+          "tier": "C",
+          "basis": "editorial",
+          "provisional": false,
+          "rationale": "No qualifying clear in the current evidence.",
+          "sourceIds": [],
+          "tierRecordIds": []
+        }
+      ],
+      "stageRules": [
+        {
+          "stageId": "1",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 2,
+          "boardId": "C2_28",
+          "sourceIds": []
+        },
+        {
+          "stageId": "2",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 2,
+          "boardId": "MC2_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "3",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_31",
+          "sourceIds": []
+        },
+        {
+          "stageId": "3B",
+          "branch": "B",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "CE7_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "4",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_19",
+          "sourceIds": []
+        },
+        {
+          "stageId": "5",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "CE3_02",
+          "sourceIds": []
+        },
+        {
+          "stageId": "6",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_35",
+          "sourceIds": []
+        },
+        {
+          "stageId": "7",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "LE2_06",
+          "sourceIds": []
+        },
+        {
+          "stageId": "8",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_18b",
+          "sourceIds": []
+        },
+        {
+          "stageId": "9",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_73",
+          "sourceIds": []
+        },
+        {
+          "stageId": "10",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_32",
+          "sourceIds": []
+        },
+        {
+          "stageId": "11",
+          "branch": "main",
+          "rarityCap": "Epic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_64",
+          "sourceIds": []
+        },
+        {
+          "stageId": "12",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "LHE_temp_02",
+          "sourceIds": []
+        },
+        {
+          "stageId": "13",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_34",
+          "sourceIds": []
+        },
+        {
+          "stageId": "13B",
+          "branch": "B",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "CE7_05",
+          "sourceIds": []
+        },
+        {
+          "stageId": "14",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_30",
+          "sourceIds": []
+        },
+        {
+          "stageId": "15",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_67",
+          "sourceIds": []
+        },
+        {
+          "stageId": "16",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "CE7_02",
+          "sourceIds": []
+        },
+        {
+          "stageId": "17",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "CE7_03",
+          "sourceIds": []
+        },
+        {
+          "stageId": "18",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_41",
+          "sourceIds": []
+        },
+        {
+          "stageId": "19",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "LE2_05",
+          "sourceIds": []
+        },
+        {
+          "stageId": "20",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 5,
+          "boardId": "C2_20",
+          "sourceIds": []
+        },
+        {
+          "stageId": "21",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "CE7_04",
+          "sourceIds": []
+        },
+        {
+          "stageId": "22",
+          "branch": "main",
+          "rarityCap": "Legendary",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "SyncPvp_Temperate_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "23",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "CE7_06",
+          "sourceIds": []
+        },
+        {
+          "stageId": "24",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 2,
+          "boardId": "CE3_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "25",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_54",
+          "sourceIds": []
+        },
+        {
+          "stageId": "25B",
+          "branch": "B",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "CE7_07",
+          "sourceIds": []
+        },
+        {
+          "stageId": "26",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "PVP_temperate_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "27",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "survival_01",
+          "sourceIds": []
+        },
+        {
+          "stageId": "28",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_50",
+          "sourceIds": []
+        },
+        {
+          "stageId": "29",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 5,
+          "boardId": "C2_59",
+          "sourceIds": []
+        },
+        {
+          "stageId": "30",
+          "branch": "main",
+          "rarityCap": "Mythic",
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 5,
+          "boardId": "CE7_08",
+          "sourceIds": []
+        }
+      ],
+      "stages": [],
+      "observations": [],
+      "sources": [],
+      "infographic": null,
+      "rewards": {
+        "source": {
+          "gameVersion": "1.44.120",
+          "verifiedAt": "2026-11-09",
+          "configSha256": "f5f8dda968d7ef0a71d7c1a156948d0ee03126bbbde3bdb89a0ad6ff2614023a",
+          "campaignId": "eventCampaign7",
+          "preview": true
+        },
+        "shardFarms": [
+          {
+            "hero": "Mataneo",
+            "regularStage": "6",
+            "mythicStage": "25"
+          },
+          {
+            "hero": "Lucien",
+            "regularStage": "11",
+            "mythicStage": "26"
+          },
+          {
+            "hero": "Nicodemus",
+            "regularStage": "17",
+            "mythicStage": "27"
+          },
+          {
+            "hero": "Cezare",
+            "regularStage": "22",
+            "mythicStage": "28"
+          },
+          {
+            "hero": "Mephiston",
+            "regularStage": "24",
+            "mythicStage": "29"
+          }
+        ],
+        "chestShards": [
+          {
+            "hero": "Mephiston",
+            "initialTotal": 290,
+            "repeatQuantity": 10
+          }
+        ],
+        "chestTrack": {
+          "initialChestCount": 14,
+          "finalChestPoints": 2200,
+          "repeatPoints": 500
+        },
+        "equipment": [
+          {
+            "name": "Relic Power Fist",
+            "stage": "25B",
+            "kind": "relic",
+            "exclusiveHero": null
+          },
+          {
+            "name": "Vitarus",
+            "stage": "30",
+            "kind": "relic",
+            "exclusiveHero": "Mephiston"
+          }
+        ],
+        "finalUpgrade": "Ancient Inscription"
+      },
+      "research": {
+        "eventId": "blood-angels",
+        "lowestSeen": {
+          "scope": "E30 · three medals",
+          "recordIds": [],
+          "context": "No qualifying clear is available. Lowest Seen remains unknown.",
+          "heroes": []
+        },
+        "safeBetProposal": null,
+        "safeBetApproved": false,
+        "e30Teams": [],
+        "safeBetGap": "The supplied infographic gives provisional editorial targets, not observed clear thresholds.",
+        "gaps": [
+          "No Lowest Seen clear, alternate team, or replay is recorded.",
+          "Stage-specific positioning and battle tactics await clear evidence.",
+          "Configuration is from Marketing / QA 1.44.120; verify against the live event."
+        ],
+        "builds": []
       }
     }
   ]

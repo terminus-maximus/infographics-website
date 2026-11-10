@@ -23,7 +23,7 @@ const payload = {contexts,ranks:reference.ranks.map(r => ({...r,name:rankName(r)
 const traits = hero.traits.filter(trait => trait.id !== 'Hero');
 ---
 <section class="hero-section reference-section" id="reference" aria-labelledby="reference-heading" data-hero-reference>
-  <div class="section-heading"><h2 id="reference-heading">Hero Stats</h2><span class="tag">Game {reference.snapshot.app_version}</span></div>
+  <div class="section-heading"><h2 id="reference-heading">Hero Stats</h2><span class="tag">Game Version {hero.game_version ?? reference.snapshot.app_version}</span></div>
   <div data-reference-stats>
     <div class="stat-controls" hidden data-stat-controls>
       <StatPicker id="rarity" label="Rarity" value={initial.rarity} options={rarities.map(rarity => ({value:rarity,label:rarity,icon:icons.rarities[rarity]}))} />
@@ -45,7 +45,7 @@ const traits = hero.traits.filter(trait => trait.id !== 'Hero');
   {traits.length > 0 && <><h3>Traits</h3><div class="trait-card-grid">{traits.map(trait => <details class="ability-card trait-card reference-disclosure"><summary class="ability-heading"><GameIcon icon={filterIcons.traits[trait.name]} class="trait-card-icon" /><h4>{trait.name}</h4><span class="disclosure-chevron" aria-hidden="true"></span></summary><p>{traitDescription(trait)}</p></details>)}</div></>}
   <h3>Abilities</h3>
   <div class="ability-grid">{hero.abilities.map(ability => <details class="ability-card reference-disclosure" data-ability>
-    <summary class="ability-heading"><GameIcon icon={icons.abilities[ability.id]} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h4>{ability.name}</h4></div><span class="disclosure-chevron" aria-hidden="true"></span></summary>
+    <summary class="ability-heading"><GameIcon icon={ability.icon ?? icons.abilities[ability.id]} class="ability-icon" /><div><span class="eyebrow">{ability.kind} ability</span><h4>{ability.name}</h4></div><span class="disclosure-chevron" aria-hidden="true"></span></summary>
     <div class="ability-level-control" data-level-control hidden><label for={`level-${ability.id}`}>Level <output data-level-output for={`level-${ability.id}`}>60</output></label><div class="ability-range"><span aria-hidden="true">1</span><input type="range" id={`level-${ability.id}`} aria-label={`${ability.name} level`} min="1" max="60" step="1" value="60" /><span aria-hidden="true">60</span></div></div>
     <p data-ability-description>{ability.description}</p><p class="muted" data-ability-note hidden></p>
     <script is:inline type="application/json" data-ability-json set:html={JSON.stringify({id:ability.id,template:ability.template,levels_by_rarity:ability.levels_by_rarity,unlock_progression:ability.unlock_progression}).replace(/</g,'\u003c')} />

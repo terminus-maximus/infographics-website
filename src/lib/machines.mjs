@@ -1,6 +1,7 @@
 import source from '../data/incursion/machine-reference.json' with { type: 'json' };
 import profiles from '../data/incursion/machine-profiles.json' with { type: 'json' };
 import { machineAbilityDescription } from './machine-reference.mjs';
+import { updateMachines } from './game-update-profiles.mjs';
 
 export const machineReference = source;
 export const machineRatingSource = profiles.rating_source;
@@ -9,12 +10,12 @@ export const machines = profiles.machines.map(profile => {
   const reference = source.machines.find(machine => machine.unit_id === profile.unit_id);
   if (!reference) throw new Error(`Missing released MoW: ${profile.unit_id}`);
   return {...reference, ...profile};
-}).sort((a, b) => a.name.localeCompare(b.name, 'en'));
+}).concat(updateMachines).sort((a, b) => a.name.localeCompare(b.name, 'en'));
 export const machineHref = machine => `/incursion-mow/${machine.slug}/`;
 
 if (new Set(machines.map(m => m.unit_id)).size !== machines.length ||
     new Set(machines.map(m => m.slug)).size !== machines.length ||
-    source.machines.length !== machines.length) throw new Error('Duplicate or unregistered MoW');
+    source.machines.length + updateMachines.length !== machines.length) throw new Error('Duplicate or unregistered MoW');
 for (const machine of machines) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(machine.slug)) throw new Error('Invalid MoW slug');
   if (machine.rating !== null && (!Number.isInteger(machine.rating) || machine.rating < 1 || machine.rating > 5)) throw new Error('Invalid My Rating stars');

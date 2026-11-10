@@ -17,7 +17,7 @@ export function popularityBenchmark(heroes) {
 /** Presentation only: percentages do not change the independently normalized score. */
 export function popularityInsight(assessment, benchmark) {
   if (!benchmark || !['G1','D3','A2'].every(key => Number.isFinite(assessment.counts?.[key]))) {
-    return 'Popularity is pending because Planner milestone counts are unavailable.';
+    return 'Assessment pending';
   }
   const percentage = count => {
     const value = count / benchmark.count * 100;

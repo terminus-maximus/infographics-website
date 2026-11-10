@@ -42,4 +42,97 @@ Reaching higher promotion levels requires a stronger roster, careful preparation
 Players pursuing Legendary promotions should expect to plan ahead, optimize mission completion, and potentially invest additional resources.
 
 `}
-/>
+>
+  <section slot="guides" class="daras-guide" aria-labelledby="daras-guide-heading">
+    <a href="/heroes/daras/" class="daras-guide-link" data-hero-guide-link>
+      <img
+        src="/images/hero-round/Daras.webp"
+        alt=""
+        width="80"
+        height="80"
+        loading="lazy"
+      />
+      <div>
+        <h2 id="daras-guide-heading">Daras Hero Guide</h2>
+        <p>Explore Daras’s stats, abilities and hero assessment.</p>
+      </div>
+      <span class="guide-arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+</FeaturedInfographicPage>
+
+<style>
+  .daras-guide {
+    margin-bottom: 4rem;
+  }
+
+  .daras-guide-link {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #685930;
+    border-radius: 12px;
+    background: #1e1e1e;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .daras-guide-link:hover,
+  .daras-guide-link:focus-visible {
+    border-color: #d4af37;
+  }
+
+  .daras-guide-link:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 4px;
+  }
+
+  .daras-guide-link img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  .daras-guide-link h2 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .daras-guide-link p {
+    margin: 0.4rem 0 0;
+    line-height: 1.5;
+  }
+
+  .guide-arrow {
+    color: #d4af37;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .daras-guide {
+      margin-bottom: 3rem;
+    }
+
+    .daras-guide-link {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .daras-guide-link img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .guide-arrow {
+      display: none;
+    }
+  }
+</style>

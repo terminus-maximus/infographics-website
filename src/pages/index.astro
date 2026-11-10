@@ -3,7 +3,44 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
+import { gameUpdate144, newsArticles } from "../data/news";
 import { discoveryGraphics } from "../data/graphics";
+
+const gameUpdateCaption = "Details about the newest heroes & game events";
+const featuredContent = [
+  {
+    title: gameUpdate144.title,
+    description: gameUpdateCaption,
+    href: gameUpdate144.href,
+    image: gameUpdate144.webImage,
+    imageAlt: "Game Update 1.44 infographic",
+    height: 393,
+  },
+  {
+    title: "Top 10 Hero Guide",
+    description: "Current rankings based on performance data",
+    href: "/heroes/top-10/",
+    image: "/images/web/top-10.webp",
+    imageAlt: "Top 10 Tacticus Heroes infographic",
+    height: 393,
+  },
+  {
+    title: "Campaign Event Guide",
+    description: "Next CE begins Nov 19",
+    href: "/campaign-event",
+    image: "/images/web/campaign-event.webp",
+    imageAlt: "Campaign Event Guide infographic",
+    height: 392,
+  },
+  {
+    title: "Daras HRE Guide",
+    description: "Unlock the new Night Lords hero on Nov 22",
+    href: "/hre",
+    image: "/images/web/hre.webp",
+    imageAlt: "Daras Hero Release Event guide infographic",
+    height: 393,
+  },
+];
 
 const startHere = discoveryGraphics.filter((g) => g.category === "start");
 const campaignGuides = discoveryGraphics.filter(
@@ -16,12 +53,11 @@ const campaignGuides = discoveryGraphics.filter(
     ].includes(g.href),
 );
 const ceGuides = [
-  "/campaign-event/admech/",
+  "/campaign-event/blood-angels/",
   "/campaign-event/tyranids/",
   "/campaign-event",
 ].map((href) => {
-  const graphic = discoveryGraphics.find((graphic) => graphic.href === href)!;
-  return { ...graphic, title: href === "/campaign-event" ? "Explore All CE" : graphic.title };
+  return discoveryGraphics.find((graphic) => graphic.href === href)!;
 });
 const guildRaids = discoveryGraphics.filter(
   (g) => g.category === "raid" && g.href !== "/guild-raid/archive",
@@ -53,91 +89,53 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
   </p>
 </section>
 
-<section class="content-section">
-  <header class="content-section-heading">
-    <a href="/heroes/top-10/">
-      <h2>Top 10 Hero Guide</h2>
-      <p class="top-10-subtitle">Current rankings based on performance data</p>
-    </a>
-  </header>
-
-  <a href="/heroes/top-10/" class="image-link">
-    <img
-      src="/images/web/top-10.webp"
-      alt="Top 10 Tacticus Heroes infographic"
-      class="infographic"
-      width="700"
-      height="393"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/heroes/top-10/" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<section class="content-section">
-  <header class="content-section-heading">
-    <a href="/lre/fabius">
-      <h2>Fabius Bile LRE Guide</h2>
-      <p class="fabius-subtitle">Be ready for his first event November 8</p>
-    </a>
-  </header>
-
-  <a href="/lre/fabius" class="image-link">
-    <img
-      src="/images/web/fabius-lre.webp"
-      alt="Fabius Bile LRE Guide"
-      class="infographic"
-      loading="lazy"
-    />
-  </a>
-
-  <p class="caption">
-    <a href="/lre/fabius" class="caption-link">
-      LEARN MORE
-    </a>
-  </p>
-</section>
-
-<!--
-This entire block is commented out.
-
-<section class="content-section">
-  <h2>What's New</h2>
-    <ul class="whats-new-list">
-
-    <li>
-      <a class="whats-new-title" href="/campaign-event">
-        Campaign Event Guide
+{featuredContent.map((feature) => (
+  <section class="content-section">
+    <header class="content-section-heading">
+      <a href={feature.href}>
+        <h2>{feature.title}</h2>
+        <p>{feature.description}</p>
       </a>
-      &mdash;
-      choose your path wisely on Aug 6
-    </li>
+    </header>
 
-    <li>
-      <a class="whats-new-title" href="/campaign-event">
-        Heroic Release Event
-      </a>
-      &mdash;
-      complete these Missions to help unlock Sekhetar on Aug 9
-    </li>
+    <a href={feature.href} class="image-link">
+      <img
+        src={feature.image}
+        alt={feature.imageAlt}
+        class="infographic"
+        width="700"
+        height={feature.height}
+        loading="lazy"
+      />
+    </a>
 
-    <li>
-      <a class="whats-new-title" href="/lre/lysander">
-        Lysander LRE Guide
-      </a>
-      --
-      Get ready for his first Legendary Release Event on August 29
-    </li>
+    <p class="caption">
+      <a href={feature.href} class="caption-link">LEARN MORE</a>
+    </p>
+  </section>
+))}
 
-  </ul>
-</section>
--->
-
+  <section id="news" data-ga4-nav-location="home_news">
+    <h2><a class="news-heading-link" href="/news/" data-ga4-nav-section="news">News</a></h2>
+    <div class="card-grid">
+      {newsArticles.map((article) => (
+        <a class="card" href={article.href} data-ga4-nav-section="news">
+          <div class="card-image-wrap">
+            <img
+              src={article.thumbnail}
+              alt={`${article.title} infographic preview`}
+              class="card-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-title-row">
+            <h3>{article.title}</h3>
+          </div>
+          <p>{article.href === gameUpdate144.href ? gameUpdateCaption : article.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
 
   <section>
     <h2>New Player Guides</h2>
@@ -373,6 +371,8 @@ This entire block is commented out.
 </Layout>
 
 <style>
+  .news-heading-link { color: inherit; text-decoration: none; }
+  .news-heading-link:hover { text-decoration: underline; text-underline-offset: .2em; }
   :global(body) {
     background-color: #121212;
     color: #f5f5f5;
@@ -469,13 +469,9 @@ This entire block is commented out.
   }
 
   .card p {
-    color: #cccccc;
+    color: #ffffff;
     line-height: 1.5;
     margin-bottom: 0;
-  }
-
-  .hero-guides-section .card p {
-    color: #f5f5f5;
   }
 
   /* Mobile refinements */
@@ -578,37 +574,12 @@ This entire block is commented out.
 
 .content-section-heading p {
   margin: 0.35rem 0 0;
-  color: #e0e0e0;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
-.content-section-heading .guild-wars-subtitle,
-.content-section-heading .top-10-subtitle,
-.content-section-heading .fabius-subtitle {
-  color: #ffffff;
-}
-
-.whats-new-list {
-  color: #cccccc;
-  line-height: 1.8;
-  padding-left: 1.25rem;
-  text-align: left;
-}
-
-.whats-new-list li {
-  margin-bottom: 0.75rem;
-}
-
-.whats-new-list a {
-  color: #d4af37;
-  text-decoration: none;
-}
-
-.whats-new-list a:hover {
-  text-decoration: underline;
-}
 .image-link {
   display: block;
   text-align: center;

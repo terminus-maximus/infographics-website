@@ -1,6 +1,6 @@
 ---
 import { heroes, heroById, heroHref } from '../../lib/heroes.mjs';
-import roundPortraitSource from '../../data/heroes/round-portraits.json';
+import roundPortraitSource from '../../lib/hero-round-portraits.mjs';
 import type { HeroProfileGroup } from '../../lib/campaign-hero-profiles';
 interface Props { groups?: HeroProfileGroup[]; orderNote?: string; }
 const { groups, orderNote = 'Required heroes first, with the carry highlighted. Top supports lead the supporting options.' } = Astro.props;

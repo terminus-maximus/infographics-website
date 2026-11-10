@@ -4,6 +4,7 @@ import Portrait from '../heroes/Portrait.astro';
 import MachineRating from './MachineRating.astro';
 import { machineRatingSource } from '../../lib/machines.mjs';
 import { getInfographicRevision } from '../../lib/infographicDates';
+import { readableDate } from '../../lib/heroes.mjs';
 interface Props { machine: Machine; hasGuide: boolean; }
 const { machine, hasGuide } = Astro.props;
 const revision = getInfographicRevision(machineRatingSource);
@@ -16,7 +17,7 @@ const revision = getInfographicRevision(machineRatingSource);
     <p class="hero-title">{machine.title}</p>
     <div class="machine-identity-rating"><span>My Rating</span><MachineRating rating={machine.rating} /></div>
     <p class="machine-verdict">{machine.verdict}</p>
-    <p class="machine-rating-source">From the <a href="/incursion-mow/#infographic">Incursion: MoW Guide</a> · <time datetime={revision.updatedOn}>{revision.formattedDate}</time></p>
+    <p class="machine-rating-source">{machine.rating_updated_on ? <>Rating updated: <time datetime={machine.rating_updated_on}>{readableDate(machine.rating_updated_on)}</time></> : <>From the <a href="/incursion-mow/#infographic">Incursion: MoW Guide</a> · <time datetime={revision.updatedOn}>{revision.formattedDate}</time></>}</p>
   </div>
 </header>
 <div class="machine-intro">

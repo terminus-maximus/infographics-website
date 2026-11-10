@@ -11,10 +11,11 @@ for(const machine of machines) {
   }
 }
 if(process.argv.includes('--built')) {
-  const hub=readFileSync('dist/incursion-mow/index.html','utf8');
-  const sitemap=readFileSync('dist/sitemap.xml','utf8');
+  const buildRoot=process.env.TM_BUILD_DIR || 'dist';
+  const hub=readFileSync(`${buildRoot}/incursion-mow/index.html`,'utf8');
+  const sitemap=readFileSync(`${buildRoot}/sitemap.xml`,'utf8');
   for(const machine of machines) {
-    const path=machineHref(machine), html=readFileSync(`dist${path}index.html`,'utf8');
+    const path=machineHref(machine), html=readFileSync(`${buildRoot}${path}index.html`,'utf8');
     assert.equal((html.match(/<h1(?:\s|>)/g)||[]).length,1,`${path} H1 count`);
     assert.equal((html.match(/data-machine-ability=/g)||[]).length,3,`${path} ability count`);
     assert.equal((html.match(/type="range"/g)||[]).length,2,`${path} slider count`);

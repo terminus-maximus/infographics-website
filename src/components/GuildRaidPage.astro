@@ -21,6 +21,33 @@ import {
   parseReplayDamage,
   parseReplayPublishedAt
 } from "../lib/replayLibrary";
+import type { ReplayLibraryReplay } from "../lib/replayLibrary";
+
+interface GuildRaidGuide {
+  title: string;
+  imageSrc: string;
+  webImageSrc?: string;
+  imageAlt: string;
+  imageAvailable?: boolean;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  sectionTitle: string;
+  // Seasons 97–101 have infographic-only pages and no curated replay dataset.
+  seasonNumber?: string | number;
+  guides?: GuildRaidGuide[];
+}
+
+type SeasonReplay = ReplayLibraryReplay & { seasonTier: string };
+interface ReplayGroup {
+  tier: string;
+  boss: string;
+  bossName: string;
+  headingId: string;
+  replays: SeasonReplay[];
+}
 
 const {
   title,
@@ -41,9 +68,9 @@ const pageImage = pageImageGuide?.webImageSrc || pageImageGuide?.imageSrc;
 
 // Future season pages only need their `seasonNumber` and image paths updated;
 // curated Mythic/Legendary replay picks come from GR-replays-v2.csv by video_id.
-function parseCsv(csv) {
-  const rows = [];
-  let row = [];
+function parseCsv(csv: string): Record<string, string>[] {
+  const rows: string[][] = [];
+  let row: string[] = [];
   let field = "";
   let inQuotes = false;
 
@@ -74,7 +101,7 @@ function parseCsv(csv) {
 
   if (field || row.length) rows.push([...row, field]);
 
-  const headers = rows.shift();
+  const headers = rows.shift() ?? [];
 
   return rows.map((values) => {
     const record: Record<string, string> = {};
@@ -87,7 +114,7 @@ function parseCsv(csv) {
   });
 }
 
-const tierOrder = {
+const tierOrder: Record<string, number> = {
   M3: 1, M2: 2, M1: 3,
   L5: 4, L4: 5, L3: 6, L2: 7, L1: 8,
   E5: 9, E4: 10, E3: 11, E2: 12, E1: 13
@@ -113,8 +140,9 @@ const rawReplayByVideoId = Object.fromEntries(
   replayRows.map((replay) => [replay.video_id || extractYouTubeVideoId(replay.video_url || ""), replay])
 );
 
-function createMinimalReplay(row) {
+function createMinimalReplay(row: Record<string, string>): ReplayLibraryReplay | null {
   const videoId = row.video_id?.trim();
+  if (!videoId) return null;
   const replay = rawReplayByVideoId[videoId];
 
   if (!replay) return null;
@@ -132,7 +160,7 @@ function createMinimalReplay(row) {
     tier: replay.tier_final || "",
     damage,
     damageLabel: damage > 0 ? formatReplayDamage(damage) : "-",
-    heroes: [replay.hero_1, replay.hero_2, replay.hero_3, replay.hero_4, replay.hero_5].filter(Boolean),
+    heroes: [replay.hero_1, replay.hero_2, replay.hero_3, replay.hero_4, replay.hero_5].filter((hero): hero is string => Boolean(hero)),
     mow: replay.MoW || "",
     creator: replay.creator || "Unknown",
     videoUrl: replay.video_url || `https://www.youtube.com/watch?v=${videoId}`,
@@ -143,7 +171,7 @@ function createMinimalReplay(row) {
 }
 
 const seasonReplayRefs = parseCsv(replayCsv)
-  .filter((row) => String(row.SEASON || row.Season) === String(seasonNumber))
+  .filter((row) => seasonNumber !== undefined && String(row.SEASON || row.Season) === String(seasonNumber))
   .sort((a, b) => {
     const tierDiff = (tierOrder[a.TIER || a.Tier] || 99) - (tierOrder[b.TIER || b.Tier] || 99);
     return tierDiff;
@@ -174,7 +202,7 @@ const seasonReplays = seasonReplayRefs
       tier: replay.tier || "Unknown"
     };
   })
-  .filter((replay) => Boolean(replay));
+  .filter((replay) => replay !== null);
 
 const mythicReplays = seasonReplays.filter((replay) => replay.seasonTier.startsWith("M"));
 const legendaryReplays = seasonReplays.filter((replay) => replay.seasonTier.startsWith("L"));
@@ -183,19 +211,21 @@ const guideReplaySections = guides.map((guide) => {
   const isLegendary = guide.title.includes("Legendary");
   const replays = isMythic ? mythicReplays : isLegendary ? legendaryReplays : [];
 
-  const groups = new Map();
+  const groups = new Map<string, ReplayGroup>();
   for (const replay of replays) {
     const key = `${replay.seasonTier}:${replay.boss}`;
-    if (!groups.has(key)) {
-      groups.set(key, {
+    let group = groups.get(key);
+    if (!group) {
+      group = {
         tier: replay.seasonTier,
         boss: replay.boss,
         bossName: replay.bossLongName || replay.boss,
         headingId: `season-${seasonNumber}-${isMythic ? "mythic" : "legendary"}-replays-${groups.size + 1}`,
         replays: []
-      });
+      };
+      groups.set(key, group);
     }
-    groups.get(key).replays.push(replay);
+    group.replays.push(replay);
   }
 
   return { guide, replayGroups: [...groups.values()] };

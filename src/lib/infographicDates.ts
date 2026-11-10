@@ -13,7 +13,11 @@ export function formatInfographicDate(isoDate: string) {
 }
 
 export function getInfographicRevision(imageSrc: string) {
-  const revision = (revisions as Record<string, { updatedOn: string; commit: string }>)[imageSrc];
+  const revision = (revisions as Record<string, { updatedOn: string | null; commit: string | null; status?: string }>)[imageSrc];
   if (!revision) throw new Error(`Missing PNG revision date for ${imageSrc}; update src/data/infographicRevisions.json from Git history.`);
+  if (revision.status === 'unverified' && revision.updatedOn === null && revision.commit === null) {
+    return { ...revision, formattedDate: null };
+  }
+  if (!revision.updatedOn || !revision.commit) throw new Error(`Incomplete PNG revision for ${imageSrc}`);
   return { ...revision, formattedDate: formatInfographicDate(revision.updatedOn) };
 }

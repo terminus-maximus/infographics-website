@@ -1,5 +1,14 @@
 /** Team summaries draw only on Battle Tips that apply to the five Lowest Seen heroes. Numerical investment stays in required-heroes.csv. */
 export const eventNotes: Record<string, { teamSummary: string; tips: { stage: string; title: string; text: string }[] }> = {
+  'blood-angels': {
+    teamSummary: 'Start with Snotflogga, Tanksmasha, and Zapspitta. The infographic recommends Gulgortz and Gibbascrapz as supports; these targets remain provisional until a complete E30 clear is available.',
+    tips: [
+      { stage: 'Getting started', title: 'Own the required trio for Extremis', text: 'Finish Normal and own Snotflogga, Tanksmasha, and Zapspitta before starting Extremis. Borrowed heroes are available only on Normal.' },
+      { stage: 'E23 / E26', title: 'Prepare for three-hero battles', text: 'Both stages allow only the required trio at the Mythic rarity cap. Supports cannot join these battles. E24 allows five heroes in this campaign.' },
+      { stage: 'E25B / E30', title: 'Relics require the gold milestone', text: 'The configured Lightning Victory limits are four rounds at E25B and five at E30. Finish within the limit with no characters lost to earn the Relic Power Fist or Vitarus.' },
+      { stage: 'E30', title: 'Yarrick leads the final fight', text: 'The configured boss is Yarrick, with a Malleus Rocket Launcher supporting the enemy. The roster includes Nubari and other Imperial units. Opening moves and ability timing still await replay evidence.' },
+    ],
+  },
   admech: {
     teamSummary: 'Keep Corrodius and Pestillian behind Maladus and Rotbone. Group your Death Guard around Rotbone while Khârn advances on Cawl.',
     tips: [

@@ -1,5 +1,10 @@
 # Machine of War profiles
 
+The November 9 Game Version 1.44.120 addition brings the hub to 12 profiles,
+including Boudicari with Dan's two-star rating. Its version-specific import and
+editorial ownership are documented in [Game update profiles](game-update-profiles.md).
+The original 11-profile implementation below remains the base import.
+
 Implemented locally on November 9, 2026. The Incursion hub stays at
 `/incursion-mow/`. All 11 released MoWs have profiles beneath it. Biovore,
 Plagueburst Crawler and Z’Kar retain their existing URLs, featured unlock

@@ -6,6 +6,7 @@ import requiredRecommendations from "./campaigns/required-recs.json";
 import guildWars from "./guild-wars/editorial.json";
 import guildWarsDefend from "./guild-wars/defend-editorial.json";
 import { incursionGuides } from "./incursion";
+import { newsArticles } from "./news";
 
 export interface RequiredHeroIcon {
   name: string;
@@ -53,6 +54,14 @@ type GraphicDefinition = Omit<Graphic, "recommendationImage" | "lifecycle"> & {
 };
 
 const graphicDefinitions: GraphicDefinition[] = [
+    ...newsArticles.map(article => ({
+      title: article.title,
+      href: article.href,
+      description: article.description,
+      image: article.image,
+      thumbnail: article.thumbnail,
+      category: "news",
+    })),
     ...campaignEventCatalog.map(event => ({
       title: `${event.name} CE`,
       href: `/campaign-event/${event.slug}/`,
@@ -267,9 +276,9 @@ const graphicDefinitions: GraphicDefinition[] = [
       lifecycle: "retired"
     },
     {
-      title: "Campaign Event Guides",
+      title: "Campaign Event Guide",
       href: "/campaign-event",
-      description: "Explore all six CE paths, teams, replays, and Extremis rewards.",
+      description: "Next CE begins Nov 19",
       image: "/images/campaign-event.png",
       thumbnail: "/images/thumbnails/campaign-event-thumb.png",
       category: "event"
@@ -277,7 +286,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Hero Release Events",
       href: "/hre",
-      description: "Next HRE begins Oct 18",
+      description: "Next HRE begins Nov 22",
       image: "/images/hre.png",
       thumbnail: "/images/thumbnails/hre-thumb.png",
       category: "event"
@@ -285,7 +294,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Incursion / MoW",
       href: "/incursion-mow",
-      description: "Next Incursion begins Nov 2",
+      description: "Next Incursion begins Dec 7",
       image: "/images/incursion-mow.png",
       thumbnail: "/images/thumbnails/incursion-mow-thumb.png",
       category: "event"

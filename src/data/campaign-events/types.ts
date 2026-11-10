@@ -88,6 +88,8 @@ export interface StageRule {
   branch: "main" | "B";
   rarityCap: string;
   deploymentLimit: number;
+  lightningVictoryRounds?: number;
+  boardId?: string;
   sourceIds: string[];
 }
 export interface Infographic {
@@ -99,7 +101,7 @@ export interface Infographic {
   snapshotId: string;
 }
 export interface EventRewards {
-  source: { gameVersion: string; verifiedAt: string; configSha256: string; campaignId: string };
+  source: { gameVersion: string; verifiedAt: string; configSha256: string; campaignId: string; preview?: boolean };
   shardFarms: { hero: string; regularStage: string; mythicStage: string }[];
   chestShards: { hero: string; initialTotal: number; repeatQuantity: number }[];
   chestTrack: { initialChestCount: number; finalChestPoints: number; repeatPoints: number };
@@ -107,6 +109,9 @@ export interface EventRewards {
   finalUpgrade: string;
 }
 export interface CampaignEventGuide {
+  /** Launch previews keep editorial planning separate from clear evidence. */
+  evidenceStatus?: 'awaiting-clears';
+  plannedSupportHeroIds?: string[];
   research: EventResearch;
   rewards: EventRewards;
   id: string;

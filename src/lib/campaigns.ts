@@ -1,7 +1,4 @@
-// The project does not currently include @types/node, though Astro executes this module at build time.
-// @ts-expect-error Node's runtime module is available during the Astro build.
 import { existsSync } from "node:fs";
-// @ts-expect-error Node's runtime module is available during the Astro build.
 import { resolve } from "node:path";
 
 import characterSource from "../data/campaigns/characters.json";
@@ -15,8 +12,6 @@ import octariusReplaySource from "../data/campaigns/octarius.json";
 import octariusMirrorReplaySource from "../data/campaigns/octarius-mirror.json";
 import saimHannReplaySource from "../data/campaigns/saim-hann.json";
 import saimHannMirrorReplaySource from "../data/campaigns/saim-hann-mirror.json";
-
-declare const process: { cwd: () => string };
 
 export interface CharacterReference {
   id: string;

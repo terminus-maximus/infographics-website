@@ -6,7 +6,7 @@ const { imageSrc } = Astro.props;
 const { updatedOn, formattedDate } = getInfographicRevision(imageSrc);
 ---
 
-<p class="last-updated">Last updated on <time datetime={updatedOn}>{formattedDate}</time></p>
+<p class="last-updated">{updatedOn && formattedDate ? <>Last updated on <time datetime={updatedOn}>{formattedDate}</time></> : 'Infographic update date unverified'}</p>
 
 <style>
   .last-updated {

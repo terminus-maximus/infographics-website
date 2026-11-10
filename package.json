@@ -7,11 +7,15 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/check-heroes.mjs && node scripts/check-machines.mjs",
+    "check": "astro check",
+    "check:replays": "node --experimental-strip-types --test scripts/replay-library.test.mjs",
+    "prebuild": "node scripts/check-heroes.mjs && node scripts/check-machines.mjs && node --test scripts/update-144.test.mjs",
     "build": "astro build",
     "import:heroes": "python3 scripts/hero-reference.py && python3 scripts/hero-profile-assets.py && python3 scripts/hero-round-portraits.py && python3 scripts/hero-relics.py && python3 scripts/import-heroes.py",
     "import:hero-relics": "python3 scripts/hero-relics.py",
     "import:machines": "python3 scripts/mow-reference.py",
+    "import:update-144": "python3 scripts/update-144-reference.py",
+    "check:update-144": "node --test scripts/update-144.test.mjs",
     "check:machines": "node --test scripts/machine-reference.test.mjs && node scripts/check-machines.mjs",
     "check:heroes": "node --test scripts/hero-scoring.test.mjs scripts/hero-reference.test.mjs scripts/hero-team-links.test.mjs scripts/hero-summaries.test.mjs scripts/hero-popularity.test.mjs && node scripts/check-heroes.mjs",
     "check:heroes:sources": "python3 scripts/import-heroes.py --check",
@@ -29,6 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@types/node": "^22.20.5",
     "typescript": "^6.0.3"
   }
 }

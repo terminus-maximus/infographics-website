@@ -1,0 +1,35 @@
+---
+import type { NewsIcon } from '../../data/news/icons';
+interface Props {
+  items: NewsIcon[];
+  labels?: boolean;
+  size?: number;
+  center?: boolean;
+}
+const { items, labels = true, size = 52, center = false } = Astro.props;
+---
+
+<ul class:list={['news-icons', { 'icons-only': !labels, centered: center }]} style={`--news-icon-size: ${size}px`}>
+  {items.map(icon => {
+    const Tag = icon.href ? 'a' : 'span';
+    return <li>
+      <Tag href={icon.href} class="news-icon" title={icon.label}>
+        <img src={icon.src} alt={labels ? '' : icon.label} width={size} height={size} loading="lazy" />
+        {labels && <span class="icon-label">{icon.label}</span>}
+      </Tag>
+    </li>;
+  })}
+</ul>
+
+<style>
+  .news-icons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .9rem .65rem; list-style: none; padding: 0; margin: .75rem 0 1rem; }
+  .news-icons.centered { justify-content: center; }
+  .news-icons li { width: 80px; margin: 0; padding: 0; }
+  .news-icon { display: flex; flex-direction: column; align-items: center; gap: .4rem; text-align: center; text-decoration: none; }
+  .news-icon img { display: block; width: var(--news-icon-size); height: var(--news-icon-size); object-fit: contain; flex-shrink: 0; }
+  .news-icons .icon-label { color: #ccc; font-size: .7rem; line-height: 1.4; overflow-wrap: anywhere; }
+  a.news-icon:hover .icon-label { color: #d4af37; }
+  a.news-icon:hover img { filter: brightness(1.15); }
+  .icons-only { gap: .55rem; margin: 0; align-items: center; }
+  .icons-only li { width: var(--news-icon-size); }
+</style>

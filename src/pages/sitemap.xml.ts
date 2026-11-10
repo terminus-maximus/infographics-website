@@ -1,10 +1,9 @@
-// @ts-expect-error Node is available in Astro's build runtime; this repo has no @types/node.
 import { readdirSync } from 'node:fs';
 import { heroes } from '../lib/heroes.mjs';
 import { campaignEvents } from '../lib/campaign-events';
 import { machines } from '../lib/machines.mjs';
 export function GET() {
-  const files: string[] = readdirSync('src/pages', { recursive: true });
+  const files = readdirSync('src/pages', { recursive: true, encoding: 'utf8' });
   const staticPaths = files.filter(file => file.endsWith('.astro') && !file.includes('[')).map(file => '/' + file.replace(/(?:^|\/)index\.astro$/, '/').replace(/\.astro$/, '/').replace(/^\//, ''));
   const paths = [...new Set([...staticPaths, ...heroes.map(hero => `/heroes/${hero.slug}/`), ...campaignEvents.map(guide => `/campaign-event/${guide.slug}/`), ...machines.map(machine => `/incursion-mow/${machine.slug}/`)])].sort();
   const escape = (text: string) => text.replace(/&/g,'&amp;').replace(/</g,'&lt;');

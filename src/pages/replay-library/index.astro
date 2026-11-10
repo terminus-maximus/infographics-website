@@ -150,7 +150,7 @@ const teamIconMap = Object.fromEntries(
     <RecommendationSections />
   </main>
 
-  <script define:vars={{ replayLibraryData, teamIconMap }}>
+  <script is:inline define:vars={{ replayLibraryData, teamIconMap }}>
     // Public query-string names intentionally differ from some internal state names.
     const FILTER_QUERY_PARAMS = Object.freeze({
       boss: "boss",
@@ -364,7 +364,7 @@ const teamIconMap = Object.fromEntries(
       `;
     };
 
-    const choiceIconHtml = (filterName, value, label = value) => {
+    const choiceIconHtml = (filterName, value) => {
       if (!value) {
         return '<span class="choice-icon choice-icon-empty" aria-hidden="true"></span>';
       }
@@ -392,7 +392,7 @@ const teamIconMap = Object.fromEntries(
       if (!value && filterName === "map") {
         return `
           <span class="choice-toggle-content">
-            ${choiceIconHtml(filterName, "", placeholder)}
+            ${choiceIconHtml(filterName, "")}
             <span>${escapeHtml(placeholder)}</span>
           </span>
         `;
@@ -400,7 +400,7 @@ const teamIconMap = Object.fromEntries(
       if (!value) return `<span class="choice-placeholder">${escapeHtml(placeholder)}</span>`;
       return `
         <span class="choice-toggle-content">
-          ${choiceIconHtml(filterName, value, label)}
+          ${choiceIconHtml(filterName, value)}
           <span>${escapeHtml(label)}</span>
         </span>
       `;
@@ -441,7 +441,7 @@ const teamIconMap = Object.fromEntries(
       choiceMenus[filterName].innerHTML = [
         `
           <button class="choice-option" type="button" data-choice-option="${filterName}" data-value="">
-            ${choiceIconHtml(filterName, "", placeholder)}
+            ${choiceIconHtml(filterName, "")}
             <span>${escapeHtml(placeholder)}</span>
           </button>
         `,

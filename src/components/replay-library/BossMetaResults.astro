@@ -13,15 +13,23 @@ import mapRows from "../../data/replay-library/maps_directory.json";
 import teamTemplateRows from "../../data/replay-library/team_templates.json";
 import teamArchetypeRows from "../../data/replay-library/team_archetype.json";
 import { createReplayLibraryData, getReplayIconPath } from "../../lib/replayLibrary";
+import type { ComponentProps } from "astro/types";
+
+type TeamSummary = ComponentProps<typeof BossMetaTeamSummary>["summary"];
+type ReplayReference = (typeof replayMapRows)[number];
 
 const choices = ["META", "ALTERNATE"];
 const knownBosses = new Set(bossRows.map((boss) => boss.Boss));
 const bossLongNames = Object.fromEntries(bossRows.map((boss) => [boss.Boss, boss["Long Name"] || boss.Boss]));
 const bossOrder = [...new Set(teamSummaryRows.map((row) => row.boss_clean))];
-const summaryByKey = new Map();
+const summaryByKey = new Map<string, TeamSummary>();
 
 for (const summary of teamSummaryRows) {
   const key = `${summary.boss_clean}|${summary.meta_choice}`;
+  if (summary.meta_choice !== "META" && summary.meta_choice !== "ALTERNATE") {
+    console.warn(`Boss Meta: unrecognized team choice in ${key}; the record will be skipped.`);
+    continue;
+  }
   if (!knownBosses.has(summary.boss_clean)) {
     console.warn(`Boss Meta: team summary references unknown boss "${summary.boss_clean}".`);
   }
@@ -29,7 +37,7 @@ for (const summary of teamSummaryRows) {
     console.warn(`Boss Meta: duplicate team summary for ${key}; the first record will be used.`);
     continue;
   }
-  summaryByKey.set(key, summary);
+  summaryByKey.set(key, { ...summary, meta_choice: summary.meta_choice });
 }
 
 const replayLibraryData = createReplayLibraryData(
@@ -41,7 +49,7 @@ const replayLibraryData = createReplayLibraryData(
 );
 const replayByVideoId = new Map(replayLibraryData.replays.map((replay) => [replay.videoId, replay]));
 const teamIconMap = Object.fromEntries(teamArchetypeRows.map((team) => [team.team_archetype, team.team_icon]));
-const replayRefsByKey = new Map();
+const replayRefsByKey = new Map<string, ReplayReference[]>();
 
 for (const ref of replayMapRows) {
   const key = `${ref.boss_clean}|${ref.meta_choice}`;
@@ -59,7 +67,7 @@ for (const [key, refs] of replayRefsByKey) {
   if (refs.length > 10) console.warn(`Boss Meta: ${key} has ${refs.length} replay rows; only the first 10 will render.`);
 }
 
-function assetExists(type, value) {
+function assetExists(type: Parameters<typeof getReplayIconPath>[0], value: string) {
   if (!value) return false;
   return existsSync(resolve(process.cwd(), "public", getReplayIconPath(type, value).replace(/^\//, "")));
 }
@@ -100,7 +108,7 @@ const bosses = bossOrder.map((boss) => {
     id: boss.toLowerCase().replaceAll(" ", "-"),
     teams
   };
-}).filter(Boolean);
+}).filter((boss) => boss !== null);
 ---
 
 <div id="boss-jump-nav">

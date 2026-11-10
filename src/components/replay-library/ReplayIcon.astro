@@ -33,7 +33,7 @@ const classes = ["replay-icon-wrap", className].filter(Boolean).join(" ");
       alt={title}
       title={title}
       loading="lazy"
-      onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+      onerror="this.setAttribute('hidden', ''); this.nextElementSibling.removeAttribute('hidden');"
     />
     <span class="icon-fallback" hidden>{value}</span>
     {preview && (

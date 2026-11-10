@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import NewsCard from '../../components/news/NewsCard.astro';
+import { newsArticles } from '../../data/news';
+import '../../styles/news.css';
+---
+
+<Layout title="News | Terminus Maximus" description="Tacticus game updates, new characters, event dates, and infographics from Terminus Maximus." image={newsArticles[0].webImage} url="/news/">
+  <Header />
+  <main class="news-page">
+    <header class="news-hero">
+      <h1>News</h1>
+      <p>Game updates, new arrivals, and what’s coming next in Tacticus.</p>
+    </header>
+    <section aria-labelledby="latest-heading">
+      <h2 id="latest-heading">Latest Updates</h2>
+      <div class="news-grid" data-ga4-nav-location="news_landing">
+        {newsArticles.map(article => <NewsCard article={article} />)}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

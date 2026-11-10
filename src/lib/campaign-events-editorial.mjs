@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { classifySupportHero, lowestSeenSupportIds } from './campaign-events-validation.mjs';
+import { classifySupportHero, investmentSupportIds } from './campaign-events-validation.mjs';
 
 export const requiredHeroColumns = ['Campaign', 'Hero', 'LowestSeenRank', 'LowestSeenActive', 'LowestSeenPassive', 'LowestSeenScope', 'LowestSeenSource', 'SafeBetRank', 'SafeBetActive', 'SafeBetPassive', 'SafeBetNotes'];
 
@@ -65,8 +65,8 @@ export function assembleCampaignEvents(base, csv) {
     return Number(value);
   };
   for (const event of data.events) {
-    const supportIds = lowestSeenSupportIds(event);
-    if (supportIds.length !== 2) throw new Error(`${event.displayTitle}: Lowest Seen must identify exactly two support heroes for the CSV`);
+    const supportIds = investmentSupportIds(event);
+    if (supportIds.length !== 2) throw new Error(`${event.displayTitle}: investment table must identify exactly two support heroes for the CSV`);
     const csvHeroes = [...event.requiredHeroes, ...supportIds.map(id => event.supportingHeroes.find(hero => hero.heroId === id))];
     for (const hero of csvHeroes) {
       if (!hero) throw new Error(`${event.displayTitle}: Lowest Seen support hero is missing from the eligible roster`);
@@ -95,7 +95,7 @@ export function assembleCampaignEvents(base, csv) {
       }));
       hero.lowestSeen = investment('LowestSeen');
       const safeBet = investment('SafeBet');
-      hero.safeBetScenarios = (Object.values(safeBet).some(field => field.value !== null) || row.SafeBetNotes) ? [{ id: `dan-${hero.heroId}`, label: '', objective: '', teamIds: [], conditions: row.SafeBetNotes ? [row.SafeBetNotes] : [], investment: safeBet, rationale: '', provisional: Object.values(safeBet).some(field => Boolean(field.note)) }] : [];
+      hero.safeBetScenarios = (Object.values(safeBet).some(field => field.value !== null) || row.SafeBetNotes) ? [{ id: `dan-${hero.heroId}`, label: '', objective: '', teamIds: [], conditions: row.SafeBetNotes ? [row.SafeBetNotes] : [], investment: safeBet, rationale: '', provisional: event.evidenceStatus === 'awaiting-clears' || Object.values(safeBet).some(field => Boolean(field.note)) }] : [];
     }
     for (const hero of event.supportingHeroes) Object.assign(hero, classifySupportHero(event, hero.heroId));
   }

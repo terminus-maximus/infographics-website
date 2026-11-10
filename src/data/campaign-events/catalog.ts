@@ -1,6 +1,7 @@
 /** Shared alphabetical navigation and discovery metadata. */
 export const campaignEventCatalog = [
   { slug: 'admech', name: 'AdMech', icon: 'AdeptusMechanicus', factions: ['Death Guard', 'World Eaters'], description: 'Let Rotbone and Khârn carry the fight while your required trio stays safe.' },
+  { slug: 'blood-angels', name: 'Blood Angels', icon: 'BloodAngels', factions: ['Orks'], description: 'Lead Snotflogga, Tanksmasha, and Zapspitta through Armageddon. Preview team targets and Blood Angels rewards.' },
   { slug: 'dark-angels', name: 'Dark Angels', icon: 'DarkAngels', factions: ['Necrons'], description: 'Build around Necron healing, summons, and a strong supporting pair.' },
   { slug: 'death-guard', name: 'Death Guard', icon: 'DeathGuard', factions: ['Adepta Sororitas', 'Black Templars'], description: 'Keep Isabella close, control the battlefield with fire, and take down Mortarion.' },
   { slug: 'sisters', name: 'Sisters', icon: 'Sisterhood', factions: ['World Eaters', 'Black Legion'], description: 'Protect your required trio with shields, summons, and Khârn’s damage.' },
@@ -11,5 +12,5 @@ export const campaignEventCatalog = [
 export const factionIcons: Record<string, string> = {
   'Death Guard': 'DeathGuard', 'World Eaters': 'WorldEaters', Necrons: 'Necrons',
   'Adepta Sororitas': 'Sisterhood', 'Black Templars': 'BlackTemplars', 'Black Legion': 'BlackLegion',
-  'Genestealer Cults': 'Genestealers', Tyranids: 'Tyranids', Ultramarines: 'Ultramarines', 'Blood Angels': 'BloodAngels',
+  'Genestealer Cults': 'Genestealers', Tyranids: 'Tyranids', Ultramarines: 'Ultramarines', 'Blood Angels': 'BloodAngels', Orks: 'Orks',
 };

@@ -10,10 +10,13 @@ import { popularityBenchmark, popularityInsight } from '../src/lib/hero-populari
 import topSummaries from '../src/data/heroes/top-10-summaries.json' with { type: 'json' };
 import { highPointsHeroMatches } from './hero-lre-links.mjs';
 import { loadTeamGuideRelationships } from './hero-team-links.mjs';
+import { updateHeroes } from '../src/lib/game-update-profiles.mjs';
+import roundPortraits from '../src/lib/hero-round-portraits.mjs';
 const root = resolve(import.meta.dirname,'..');
+const buildRoot = process.env.TM_BUILD_DIR || resolve(root,'dist');
 const built = process.argv.includes('--built');
 const sha = value => createHash('sha256').update(value).digest('hex');
-const pathForUrl = url => resolve(root,'dist',url.split('#')[0].replace(/^\//,''),'index.html');
+const pathForUrl = url => resolve(buildRoot,url.split('#')[0].replace(/^\//,''),'index.html');
 const coverage = {roster:heroes.length,ranked:heroes.filter(h=>h.overall.final_score!==null).length,pending:heroes.filter(h=>h.overall.final_score===null).length,bonus:heroes.filter(h=>h.overall.guide_bonus>0).length};
 const icons = JSON.parse(readFileSync(resolve(root,'src/data/heroes/profile-icons.json'),'utf8'));
 const relicData = JSON.parse(readFileSync(resolve(root,'src/data/heroes/relics.json'),'utf8'));
@@ -29,7 +32,6 @@ for (const relic of relicData.relics) {
   assert(sha(readFileSync(resolve(root,'public',relic.icon.src.slice(1))))===relic.icon.sha256,`Relic icon hash mismatch: ${relic.id}`);
 }
 const thumbnails = JSON.parse(readFileSync(resolve(root,'src/data/heroes/guide-thumbnails.json'),'utf8'));
-const roundPortraits = JSON.parse(readFileSync(resolve(root,'src/data/heroes/round-portraits.json'),'utf8'));
 const lreSources = JSON.parse(readFileSync(resolve(root,'src/data/lre/sources.json'),'utf8'));
 const lreMatches = Object.fromEntries(Object.keys(lreSources.events).map(slug=>[slug,highPointsHeroMatches(JSON.parse(readFileSync(resolve(root,`src/data/lre/${slug}.json`),'utf8')))]));
 const teamLinks = loadTeamGuideRelationships();
@@ -40,7 +42,7 @@ assert(isDeepStrictEqual(Object.keys(icons.ranks),reference.ranks.map(rank=>Stri
 for (const group of ['rarities','stars','ranks','stats','abilities','modes']) for (const icon of Object.values(icons[group])) {
   assert(icon.src.endsWith('.webp') && existsSync(resolve(root,'public',icon.src.slice(1))),`Missing WebP icon: ${icon.src}`);
 }
-assert(heroes.length === reference.coverage.heroes, 'Reference coverage mismatch');
+assert(heroes.length === reference.coverage.heroes + updateHeroes.length, 'Reference coverage mismatch');
 assert(isDeepStrictEqual(Object.keys(overallSummaries).sort(),heroes.map(hero=>hero.unit_id).sort()),'Overall summary roster mismatch');
 for (const hero of heroes) {
   overallSummary(hero.unit_id,hero.overall.final_score);
@@ -78,7 +80,7 @@ for (const hero of heroes) {
     if(links.length) assert(links[0].role==='high points combination' && JSON.stringify(links[0].evidence[0].combinations)===JSON.stringify(matches[hero.unit_id]),`Wrong LRE combination evidence: ${hero.unit_id}/${slug}`);
   }
   for (const ability of hero.abilities) {
-    assert(icons.abilities[ability.id],`Ability icon missing: ${ability.id}`);
+    assert(ability.icon ?? icons.abilities[ability.id],`Ability icon missing: ${ability.id}`);
     assert(ability.level === 60 && abilityDescription(ability,'Mythic',60) === ability.description,`Wrong default ability: ${ability.id}`);
     for (const rarity of new Set(contexts.map(p=>p.rarity))) {
       assert(ability.levels_by_rarity[rarity]?.length === 60,`Incomplete ability levels: ${ability.id}/${rarity}`);
@@ -108,7 +110,7 @@ for (const name of readdirSync(releases).filter(n=>n.endsWith('.json'))) {
 if (!graphicValid) console.log('Publishing note: monthly infographic is not available; HTML ranking retained.');
 if (built) {
   const index = readFileSync(pathForUrl('/heroes/'),'utf8');
-  const sitemap = readFileSync(resolve(root,'dist/sitemap.xml'),'utf8');
+  const sitemap = readFileSync(resolve(buildRoot,'sitemap.xml'),'utf8');
   for (const hero of heroes) {
     const url = `/heroes/${hero.slug}/`;
     assert(index.includes(`href="${url}"`),`Not crawlable in directory: ${url}`);

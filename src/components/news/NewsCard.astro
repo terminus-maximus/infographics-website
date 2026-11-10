@@ -1,0 +1,28 @@
+---
+import type { NewsArticle } from '../../data/news';
+interface Props { article: NewsArticle }
+const { article } = Astro.props;
+---
+
+<a class="news-card" href={article.href} data-ga4-nav-section="news">
+  <div class="news-card-image">
+    <img src={article.thumbnail} alt={`${article.title} infographic preview`} width="600" height="337" loading="lazy" />
+  </div>
+  <p class="news-card-date"><time datetime={article.published}>{article.publishedLabel}</time></p>
+  <h3>{article.title}</h3>
+  <p>{article.description}</p>
+  <span class="news-card-action">Read update <span aria-hidden="true">→</span></span>
+</a>
+
+<style>
+  .news-card { display: block; padding: 1.5rem; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; color: #ccc; text-decoration: none; transition: border-color .2s ease; }
+  .news-card:hover, .news-card:focus-visible { border-color: #d4af37; }
+  .news-card:focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }
+  .news-card-image { height: 120px; overflow: hidden; background: #121212; border: 1px solid #333; border-radius: 8px; }
+  .news-card img { width: 100%; height: 100%; object-fit: contain; object-position: top; display: block; }
+  .news-card h3 { color: #d4af37; font-size: 1.1rem; line-height: 1.3; margin: .5rem 0; }
+  .news-card p { line-height: 1.6; margin: .5rem 0 1rem; }
+  .news-card .news-card-date { color: #aaa; font-size: .8rem; margin: 1rem 0 .5rem; }
+  .news-card-action { color: #d4af37; font-size: .9rem; }
+  @media(max-width: 700px) { .news-card { padding: 1rem; } }
+</style>

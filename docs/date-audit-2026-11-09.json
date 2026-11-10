@@ -1,0 +1,2746 @@
+{
+  "timezone": "America/Los_Angeles",
+  "git_head": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+  "audited_at": "2026-11-09T14:56:34.526790-08:00",
+  "local_routes_scanned": 189,
+  "local_counts": {
+    "no_update_label": 19,
+    "compliant": 32,
+    "redirect": 1,
+    "excluded_time_bound_guide": 18,
+    "label_without_png": 119
+  },
+  "live_counts_raw": {
+    "no_update_label": 21,
+    "compliant": 27,
+    "out_of_compliance": 2,
+    "unverified": 1,
+    "redirect": 1,
+    "excluded_time_bound_guide": 18,
+    "label_without_png": 119
+  },
+  "direct_scope_count": 32,
+  "local_direct_scope": {
+    "compliant": 32,
+    "mismatched": 0,
+    "unverified": 0
+  },
+  "live_direct_scope_reviewed": {
+    "compliant": 27,
+    "mismatched": 2,
+    "missing_infographic_date": 1,
+    "unverified_artwork_revision": 1,
+    "guide_not_deployed": 1
+  },
+  "routes": [
+    {
+      "route": "/beginner-guide/",
+      "before": {
+        "title": "Beginner Guide",
+        "labels": [
+          "Last updated on Jun 4, 2026"
+        ],
+        "pngs": [
+          "/images/beginner-guide.png"
+        ],
+        "web_images": [
+          "/images/web/beginner-guide.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Beginner Guide",
+        "labels": [
+          "Last updated on Jun 4, 2026"
+        ],
+        "pngs": [
+          "/images/beginner-guide.png"
+        ],
+        "web_images": [
+          "/images/web/beginner-guide.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/beginner-guide/",
+        "title": "Beginner Guide",
+        "labels": [
+          "Last updated on Jun 4, 2026"
+        ],
+        "pngs": [
+          "/images/beginner-guide.png"
+        ],
+        "web_images": [
+          "/images/web/beginner-guide.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/beginner-guide.png",
+        "exists": true,
+        "sha256": "57e6c3f1ccd074bb4360f5a1e50260031c3e4418dfb75b2e4a07b12d42efe404",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+          "authored_at": "2026-06-04T15:13:42-07:00",
+          "committed_at": "2026-06-04T15:13:42-07:00",
+          "subject": "Beginner Guide Icon Fix",
+          "date": "2026-06-04",
+          "path_status": [
+            "M\tpublic/images/beginner-guide.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "e9d939e56c9149d6fd9ace3df40cb754c7dc5a85",
+          "authored_at": "2026-06-04T15:13:42-07:00",
+          "committed_at": "2026-06-04T15:13:42-07:00",
+          "subject": "Beginner Guide Icon Fix",
+          "date": "2026-06-04",
+          "path_status": [
+            "M\tpublic/images/beginner-guide.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/beginner-guide.png",
+        "sha256": "57e6c3f1ccd074bb4360f5a1e50260031c3e4418dfb75b2e4a07b12d42efe404",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/admech/",
+      "before": {
+        "title": "AdMech CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-admech.png"
+        ],
+        "web_images": [
+          "/images/web/ce-admech.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "AdMech CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-admech.png"
+        ],
+        "web_images": [
+          "/images/web/ce-admech.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/admech/",
+        "title": "AdMech CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-admech.png"
+        ],
+        "web_images": [
+          "/images/web/ce-admech.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-admech.png",
+        "exists": true,
+        "sha256": "b859b3215e614eef26c446bb66a60aa5564f3ba178e66420b72bd97bbc9443c2",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-admech.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-admech.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-admech.png",
+        "sha256": "b859b3215e614eef26c446bb66a60aa5564f3ba178e66420b72bd97bbc9443c2",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/blood-angels/",
+      "before": {
+        "title": "Blood Angels CE Guide",
+        "labels": [
+          "Infographic update date unverified"
+        ],
+        "pngs": [
+          "/images/ce-blood-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-blood-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Blood Angels CE Guide",
+        "labels": [
+          "Last updated on Nov 9, 2026"
+        ],
+        "pngs": [
+          "/images/ce-blood-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-blood-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/blood-angels/",
+        "title": "",
+        "labels": [],
+        "pngs": [],
+        "web_images": [],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-blood-angels.png",
+        "exists": true,
+        "sha256": "1539f8aa2ddd29157ad0287010a06fac10ce5f66d2c659cb2c15481f8c9c649c",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+          "authored_at": "2026-11-09T14:55:43-08:00",
+          "committed_at": "2026-11-09T14:55:43-08:00",
+          "subject": "Update campaign overview and add corrected Blood Angels artwork",
+          "date": "2026-11-09",
+          "path_status": [
+            "A\tpublic/images/ce-blood-angels.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+          "authored_at": "2026-11-09T14:55:43-08:00",
+          "committed_at": "2026-11-09T14:55:43-08:00",
+          "subject": "Update campaign overview and add corrected Blood Angels artwork",
+          "date": "2026-11-09",
+          "path_status": [
+            "A\tpublic/images/ce-blood-angels.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-blood-angels.png",
+        "sha256": "556dfb95de7c3fb768db03283609cfc0286ce3d2cdbb9bd05bbae1894ab3faa3",
+        "matches_local": false
+      }
+    },
+    {
+      "route": "/campaign-event/dark-angels/",
+      "before": {
+        "title": "Dark Angels CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-dark-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-dark-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Dark Angels CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-dark-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-dark-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/dark-angels/",
+        "title": "Dark Angels CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-dark-angels.png"
+        ],
+        "web_images": [
+          "/images/web/ce-dark-angels.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-dark-angels.png",
+        "exists": true,
+        "sha256": "9afb4450051533574bb1a3a683c9219de7bb0cc76b88e81b60b9c0118286e942",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-dark-angels.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-dark-angels.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-dark-angels.png",
+        "sha256": "9afb4450051533574bb1a3a683c9219de7bb0cc76b88e81b60b9c0118286e942",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/death-guard/",
+      "before": {
+        "title": "Death Guard CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-death-guard.png"
+        ],
+        "web_images": [
+          "/images/web/ce-death-guard.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Death Guard CE Guide",
+        "labels": [
+          "Last updated on Nov 8, 2026"
+        ],
+        "pngs": [
+          "/images/ce-death-guard.png"
+        ],
+        "web_images": [
+          "/images/web/ce-death-guard.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/death-guard/",
+        "title": "Death Guard CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-death-guard.png"
+        ],
+        "web_images": [
+          "/images/web/ce-death-guard.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-death-guard.png",
+        "exists": true,
+        "sha256": "0f696af86833d46820742232e0ec87e487d68147b30e2de42f98ea018e7bcd08",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "d016f6654c39791fe558124650a2e9a19f2d57c4",
+          "authored_at": "2026-11-08T12:24:29-08:00",
+          "committed_at": "2026-11-08T12:24:29-08:00",
+          "subject": "Replay JSON & CE guide new lowest",
+          "date": "2026-11-08",
+          "path_status": [
+            "M\tpublic/images/ce-death-guard.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "d016f6654c39791fe558124650a2e9a19f2d57c4",
+          "authored_at": "2026-11-08T12:24:29-08:00",
+          "committed_at": "2026-11-08T12:24:29-08:00",
+          "subject": "Replay JSON & CE guide new lowest",
+          "date": "2026-11-08",
+          "path_status": [
+            "M\tpublic/images/ce-death-guard.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-death-guard.png",
+        "sha256": "0f696af86833d46820742232e0ec87e487d68147b30e2de42f98ea018e7bcd08",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/",
+      "before": {
+        "title": "Campaign Event Guides",
+        "labels": [
+          "Infographic update date unverified"
+        ],
+        "pngs": [
+          "/images/campaign-event.png"
+        ],
+        "web_images": [
+          "/images/web/campaign-event.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Campaign Event Guides",
+        "labels": [
+          "Last updated on Nov 9, 2026"
+        ],
+        "pngs": [
+          "/images/campaign-event.png"
+        ],
+        "web_images": [
+          "/images/web/campaign-event.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/",
+        "title": "Campaign Event Guides",
+        "labels": [
+          "Last updated on Oct 11, 2026"
+        ],
+        "pngs": [
+          "/images/campaign-event.png"
+        ],
+        "web_images": [
+          "/images/web/campaign-event.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/campaign-event.png",
+        "exists": true,
+        "sha256": "3faef0e69d5eb19dd1cc4a1fb1b0c0a8998db02e5ed94544c9ae5eac921ad27d",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+          "authored_at": "2026-11-09T14:55:43-08:00",
+          "committed_at": "2026-11-09T14:55:43-08:00",
+          "subject": "Update campaign overview and add corrected Blood Angels artwork",
+          "date": "2026-11-09",
+          "path_status": [
+            "M\tpublic/images/campaign-event.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+          "authored_at": "2026-11-09T14:55:43-08:00",
+          "committed_at": "2026-11-09T14:55:43-08:00",
+          "subject": "Update campaign overview and add corrected Blood Angels artwork",
+          "date": "2026-11-09",
+          "path_status": [
+            "M\tpublic/images/campaign-event.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/campaign-event.png",
+        "sha256": "3397f2b53e7f3f2b8cafafeb6512f9bb48cd54b89d0ae3afe524d9c28635db69",
+        "matches_local": false
+      }
+    },
+    {
+      "route": "/campaign-event/sisters/",
+      "before": {
+        "title": "Sisters CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-sisters.png"
+        ],
+        "web_images": [
+          "/images/web/ce-sisters.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Sisters CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-sisters.png"
+        ],
+        "web_images": [
+          "/images/web/ce-sisters.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/sisters/",
+        "title": "Sisters CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-sisters.png"
+        ],
+        "web_images": [
+          "/images/web/ce-sisters.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-sisters.png",
+        "exists": true,
+        "sha256": "893d0b9ea5efe36e6bcd558b3d38864764ff9a876f8500c271762714afcd67c6",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-sisters.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-sisters.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-sisters.png",
+        "sha256": "893d0b9ea5efe36e6bcd558b3d38864764ff9a876f8500c271762714afcd67c6",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/tau/",
+      "before": {
+        "title": "T’au CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tau.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tau.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "T’au CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tau.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tau.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/tau/",
+        "title": "T’au CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tau.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tau.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-tau.png",
+        "exists": true,
+        "sha256": "3b4972a6f96a4a1e9235196c1db1653cf60518c1521d3ca76a1436a88f421319",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-tau.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "3bef96f5735844c939ca34d89f3dd2f758110dbb",
+          "authored_at": "2026-10-15T14:32:44-07:00",
+          "committed_at": "2026-10-15T14:32:44-07:00",
+          "subject": "CE Extremis Guides launch",
+          "date": "2026-10-15",
+          "path_status": [
+            "A\tpublic/images/ce-tau.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-tau.png",
+        "sha256": "3b4972a6f96a4a1e9235196c1db1653cf60518c1521d3ca76a1436a88f421319",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaign-event/tyranids/",
+      "before": {
+        "title": "Tyranids CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tyranids.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tyranids.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tyranids CE Guide",
+        "labels": [
+          "Last updated on Nov 8, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tyranids.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tyranids.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaign-event/tyranids/",
+        "title": "Tyranids CE Guide",
+        "labels": [
+          "Last updated on Oct 15, 2026"
+        ],
+        "pngs": [
+          "/images/ce-tyranids.png"
+        ],
+        "web_images": [
+          "/images/web/ce-tyranids.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/ce-tyranids.png",
+        "exists": true,
+        "sha256": "b334db82030da428bc2b0997cb8e14fbd3087a00a8a236f739fcf12f7583c3e5",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "d016f6654c39791fe558124650a2e9a19f2d57c4",
+          "authored_at": "2026-11-08T12:24:29-08:00",
+          "committed_at": "2026-11-08T12:24:29-08:00",
+          "subject": "Replay JSON & CE guide new lowest",
+          "date": "2026-11-08",
+          "path_status": [
+            "M\tpublic/images/ce-tyranids.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "d016f6654c39791fe558124650a2e9a19f2d57c4",
+          "authored_at": "2026-11-08T12:24:29-08:00",
+          "committed_at": "2026-11-08T12:24:29-08:00",
+          "subject": "Replay JSON & CE guide new lowest",
+          "date": "2026-11-08",
+          "path_status": [
+            "M\tpublic/images/ce-tyranids.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/ce-tyranids.png",
+        "sha256": "b334db82030da428bc2b0997cb8e14fbd3087a00a8a236f739fcf12f7583c3e5",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/fall-of-cadia/",
+      "before": {
+        "title": "Tacticus Fall of Cadia Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Fall of Cadia Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/fall-of-cadia/",
+        "title": "Tacticus Fall of Cadia Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/fall-of-cadia.png",
+        "exists": true,
+        "sha256": "346e6f0a32078ee0676a613d926fd8754200e4603681188e026dad0a7c372fdd",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+          "authored_at": "2026-09-16T16:03:34-07:00",
+          "committed_at": "2026-09-16T16:03:34-07:00",
+          "subject": "Campaign Guide error fixes",
+          "date": "2026-09-16",
+          "path_status": [
+            "M\tpublic/images/fall-of-cadia.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+          "authored_at": "2026-09-16T16:03:34-07:00",
+          "committed_at": "2026-09-16T16:03:34-07:00",
+          "subject": "Campaign Guide error fixes",
+          "date": "2026-09-16",
+          "path_status": [
+            "M\tpublic/images/fall-of-cadia.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/fall-of-cadia.png",
+        "sha256": "346e6f0a32078ee0676a613d926fd8754200e4603681188e026dad0a7c372fdd",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/fall-of-cadia-mirror/",
+      "before": {
+        "title": "Tacticus Fall of Cadia Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 10, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Fall of Cadia Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 10, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/fall-of-cadia-mirror/",
+        "title": "Tacticus Fall of Cadia Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 10, 2026"
+        ],
+        "pngs": [
+          "/images/fall-of-cadia-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/fall-of-cadia-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/fall-of-cadia-mirror.png",
+        "exists": true,
+        "sha256": "d19c2a7e7bfca72243606d7249e007ae72edf7df75d622476ae300b109092bdf",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+          "authored_at": "2026-08-10T21:51:13-07:00",
+          "committed_at": "2026-08-10T21:51:13-07:00",
+          "subject": "FoC Mirror",
+          "date": "2026-08-10",
+          "path_status": [
+            "A\tpublic/images/fall-of-cadia-mirror.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "7f4614d021cdc3788dbb9680beb059ed816d39ad",
+          "authored_at": "2026-08-10T21:51:13-07:00",
+          "committed_at": "2026-08-10T21:51:13-07:00",
+          "subject": "FoC Mirror",
+          "date": "2026-08-10",
+          "path_status": [
+            "A\tpublic/images/fall-of-cadia-mirror.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/fall-of-cadia-mirror.png",
+        "sha256": "d19c2a7e7bfca72243606d7249e007ae72edf7df75d622476ae300b109092bdf",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/indomitus/",
+      "before": {
+        "title": "Tacticus Indomitus Campaign Guide",
+        "labels": [
+          "Last updated on Aug 4, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Indomitus Campaign Guide",
+        "labels": [
+          "Last updated on Aug 4, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/indomitus/",
+        "title": "Tacticus Indomitus Campaign Guide",
+        "labels": [
+          "Last updated on Aug 4, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/indomitus.png",
+        "exists": true,
+        "sha256": "025184bb8cc558d5969460f3cb386ae9fb59b99e7db5dbbeae2d7c52b6b98af7",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+          "authored_at": "2026-08-04T15:31:06-07:00",
+          "committed_at": "2026-08-04T15:31:06-07:00",
+          "subject": "Indomitus equipment",
+          "date": "2026-08-04",
+          "path_status": [
+            "M\tpublic/images/indomitus.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8c28ff641a7f04f504bef83374aac81a029bba0a",
+          "authored_at": "2026-08-04T15:31:06-07:00",
+          "committed_at": "2026-08-04T15:31:06-07:00",
+          "subject": "Indomitus equipment",
+          "date": "2026-08-04",
+          "path_status": [
+            "M\tpublic/images/indomitus.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/indomitus.png",
+        "sha256": "025184bb8cc558d5969460f3cb386ae9fb59b99e7db5dbbeae2d7c52b6b98af7",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/indomitus-mirror/",
+      "before": {
+        "title": "Tacticus Indomitus Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 5, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Indomitus Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 5, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/indomitus-mirror/",
+        "title": "Tacticus Indomitus Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 5, 2026"
+        ],
+        "pngs": [
+          "/images/indomitus-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/indomitus-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/indomitus-mirror.png",
+        "exists": true,
+        "sha256": "87d05c42c854c715fd418995fa1d3c16e64174333c263b95e69080593259da7d",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+          "authored_at": "2026-08-05T11:28:40-07:00",
+          "committed_at": "2026-08-05T11:28:40-07:00",
+          "subject": "Revised necron graphic",
+          "date": "2026-08-05",
+          "path_status": [
+            "M\tpublic/images/indomitus-mirror.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "f785c0cfc2db0abab641cf8f83469dbf82fa73ab",
+          "authored_at": "2026-08-05T11:28:40-07:00",
+          "committed_at": "2026-08-05T11:28:40-07:00",
+          "subject": "Revised necron graphic",
+          "date": "2026-08-05",
+          "path_status": [
+            "M\tpublic/images/indomitus-mirror.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/indomitus-mirror.png",
+        "sha256": "87d05c42c854c715fd418995fa1d3c16e64174333c263b95e69080593259da7d",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/octarius/",
+      "before": {
+        "title": "Tacticus Octarius Campaign Guide",
+        "labels": [
+          "Last updated on Aug 15, 2026"
+        ],
+        "pngs": [
+          "/images/octarius.png"
+        ],
+        "web_images": [
+          "/images/web/octarius.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Octarius Campaign Guide",
+        "labels": [
+          "Last updated on Aug 15, 2026"
+        ],
+        "pngs": [
+          "/images/octarius.png"
+        ],
+        "web_images": [
+          "/images/web/octarius.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/octarius/",
+        "title": "Tacticus Octarius Campaign Guide",
+        "labels": [
+          "Last updated on Aug 15, 2026"
+        ],
+        "pngs": [
+          "/images/octarius.png"
+        ],
+        "web_images": [
+          "/images/web/octarius.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/octarius.png",
+        "exists": true,
+        "sha256": "96ebe23f2cebdefe5338a46b8f6df72e60d4942e419ba4da26fbd01a6825fbe5",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+          "authored_at": "2026-08-15T10:46:04-07:00",
+          "committed_at": "2026-08-15T10:46:04-07:00",
+          "subject": "Octarius campaign page",
+          "date": "2026-08-15",
+          "path_status": [
+            "A\tpublic/images/octarius.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "b368e7775caa66c37f73afe22b4bfd530bbf15d7",
+          "authored_at": "2026-08-15T10:46:04-07:00",
+          "committed_at": "2026-08-15T10:46:04-07:00",
+          "subject": "Octarius campaign page",
+          "date": "2026-08-15",
+          "path_status": [
+            "A\tpublic/images/octarius.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/octarius.png",
+        "sha256": "96ebe23f2cebdefe5338a46b8f6df72e60d4942e419ba4da26fbd01a6825fbe5",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/octarius-mirror/",
+      "before": {
+        "title": "Tacticus Octarius Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 17, 2026"
+        ],
+        "pngs": [
+          "/images/octarius-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/octarius-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Octarius Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 17, 2026"
+        ],
+        "pngs": [
+          "/images/octarius-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/octarius-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/octarius-mirror/",
+        "title": "Tacticus Octarius Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Aug 17, 2026"
+        ],
+        "pngs": [
+          "/images/octarius-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/octarius-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/octarius-mirror.png",
+        "exists": true,
+        "sha256": "5cad8014d88182487895fb8d33b4c68b695e6a6cc3e11fb2920e9a09fa08d94e",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+          "authored_at": "2026-08-17T14:08:34-07:00",
+          "committed_at": "2026-08-17T14:08:34-07:00",
+          "subject": "Octarius Mirror page and references",
+          "date": "2026-08-17",
+          "path_status": [
+            "A\tpublic/images/octarius-mirror.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "f59ca5efffd15d8c49a118308d5ee9f73ffa4ac1",
+          "authored_at": "2026-08-17T14:08:34-07:00",
+          "committed_at": "2026-08-17T14:08:34-07:00",
+          "subject": "Octarius Mirror page and references",
+          "date": "2026-08-17",
+          "path_status": [
+            "A\tpublic/images/octarius-mirror.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/octarius-mirror.png",
+        "sha256": "5cad8014d88182487895fb8d33b4c68b695e6a6cc3e11fb2920e9a09fa08d94e",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/saim-hann/",
+      "before": {
+        "title": "Tacticus Saim-Hann Campaign Guide",
+        "labels": [
+          "Last updated on Aug 19, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Saim-Hann Campaign Guide",
+        "labels": [
+          "Last updated on Aug 19, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/saim-hann/",
+        "title": "Tacticus Saim-Hann Campaign Guide",
+        "labels": [
+          "Last updated on Aug 19, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/saim-hann.png",
+        "exists": true,
+        "sha256": "cf1464bd5a7eef6ee8585ccb6e3f6f494945d0522f88f933b820e9846852ee4b",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+          "authored_at": "2026-08-19T19:15:07-07:00",
+          "committed_at": "2026-08-19T19:15:07-07:00",
+          "subject": "Saim-Hann and new Homepage",
+          "date": "2026-08-19",
+          "path_status": [
+            "A\tpublic/images/saim-hann.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "5f9004188af38478da232cb4b70a72ddcbd098ad",
+          "authored_at": "2026-08-19T19:15:07-07:00",
+          "committed_at": "2026-08-19T19:15:07-07:00",
+          "subject": "Saim-Hann and new Homepage",
+          "date": "2026-08-19",
+          "path_status": [
+            "A\tpublic/images/saim-hann.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/saim-hann.png",
+        "sha256": "cf1464bd5a7eef6ee8585ccb6e3f6f494945d0522f88f933b820e9846852ee4b",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/campaigns/saim-hann-mirror/",
+      "before": {
+        "title": "Tacticus Saim-Hann Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Tacticus Saim-Hann Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/campaigns/saim-hann-mirror/",
+        "title": "Tacticus Saim-Hann Mirror Campaign Guide",
+        "labels": [
+          "Last updated on Sept 16, 2026"
+        ],
+        "pngs": [
+          "/images/saim-hann-mirror.png"
+        ],
+        "web_images": [
+          "/images/web/saim-hann-mirror.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/saim-hann-mirror.png",
+        "exists": true,
+        "sha256": "05071a2eb9a7b8460c81cf17fcb8c65b36fe420216e1cdc1e29707e1d773af05",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+          "authored_at": "2026-09-16T16:03:34-07:00",
+          "committed_at": "2026-09-16T16:03:34-07:00",
+          "subject": "Campaign Guide error fixes",
+          "date": "2026-09-16",
+          "path_status": [
+            "M\tpublic/images/saim-hann-mirror.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8c65762982fa7f75ded04d73e0d5c0fe8ac7c772",
+          "authored_at": "2026-09-16T16:03:34-07:00",
+          "committed_at": "2026-09-16T16:03:34-07:00",
+          "subject": "Campaign Guide error fixes",
+          "date": "2026-09-16",
+          "path_status": [
+            "M\tpublic/images/saim-hann-mirror.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/saim-hann-mirror.png",
+        "sha256": "05071a2eb9a7b8460c81cf17fcb8c65b36fe420216e1cdc1e29707e1d773af05",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/elite-campaigns/",
+      "before": {
+        "title": "Elite Campaigns",
+        "labels": [
+          "Last updated on Jul 8, 2026"
+        ],
+        "pngs": [
+          "/images/elite-campaigns.png"
+        ],
+        "web_images": [
+          "/images/web/elite-campaigns.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Elite Campaigns",
+        "labels": [
+          "Last updated on Jul 8, 2026"
+        ],
+        "pngs": [
+          "/images/elite-campaigns.png"
+        ],
+        "web_images": [
+          "/images/web/elite-campaigns.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/elite-campaigns/",
+        "title": "Elite Campaigns",
+        "labels": [
+          "Last updated on Jul 8, 2026"
+        ],
+        "pngs": [
+          "/images/elite-campaigns.png"
+        ],
+        "web_images": [
+          "/images/web/elite-campaigns.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/elite-campaigns.png",
+        "exists": true,
+        "sha256": "75049f3c0c205d7d7135b04a0e51fca2c387174dd91b0cb62e789378a221f29f",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+          "authored_at": "2026-07-08T12:27:27-07:00",
+          "committed_at": "2026-07-08T12:27:27-07:00",
+          "subject": "Elite Campaigns",
+          "date": "2026-07-08",
+          "path_status": [
+            "M\tpublic/images/elite-campaigns.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "2bf9344c81ca5fa2002a414196614f76ce203f8b",
+          "authored_at": "2026-07-08T12:27:27-07:00",
+          "committed_at": "2026-07-08T12:27:27-07:00",
+          "subject": "Elite Campaigns",
+          "date": "2026-07-08",
+          "path_status": [
+            "M\tpublic/images/elite-campaigns.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/elite-campaigns.png",
+        "sha256": "75049f3c0c205d7d7135b04a0e51fca2c387174dd91b0cb62e789378a221f29f",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/guild-raid/boss-meta/",
+      "before": {
+        "title": "Guild Raid Boss Meta Guide",
+        "labels": [
+          "Last updated on Oct 24, 2026"
+        ],
+        "pngs": [
+          "/images/boss-meta.png"
+        ],
+        "web_images": [
+          "/images/web/boss-meta.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Guild Raid Boss Meta Guide",
+        "labels": [
+          "Last updated on Oct 24, 2026"
+        ],
+        "pngs": [
+          "/images/boss-meta.png"
+        ],
+        "web_images": [
+          "/images/web/boss-meta.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/guild-raid/boss-meta/",
+        "title": "Guild Raid Boss Meta Guide",
+        "labels": [
+          "Last updated on Oct 24, 2026"
+        ],
+        "pngs": [
+          "/images/boss-meta.png"
+        ],
+        "web_images": [
+          "/images/web/boss-meta.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/boss-meta.png",
+        "exists": true,
+        "sha256": "fd21c1d5534a873cb4c9caf9be80e41d283954991fd0b8bc98c0299f84a0fe84",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+          "authored_at": "2026-10-24T15:18:04-07:00",
+          "committed_at": "2026-10-24T15:18:04-07:00",
+          "subject": "Update October Boss Meta infographic",
+          "date": "2026-10-24",
+          "path_status": [
+            "M\tpublic/images/boss-meta.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "e0184bf309c11a39f2ff94792320d976f0c83bc8",
+          "authored_at": "2026-10-24T15:18:04-07:00",
+          "committed_at": "2026-10-24T15:18:04-07:00",
+          "subject": "Update October Boss Meta infographic",
+          "date": "2026-10-24",
+          "path_status": [
+            "M\tpublic/images/boss-meta.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/boss-meta.png",
+        "sha256": "fd21c1d5534a873cb4c9caf9be80e41d283954991fd0b8bc98c0299f84a0fe84",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/guild-wars/attack/",
+      "before": {
+        "title": "Guild War Top 10 Attack Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-attack.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-attack.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Guild War Top 10 Attack Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-attack.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-attack.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/guild-wars/attack/",
+        "title": "Guild War Top 10 Attack Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-attack.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-attack.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/guild-wars-attack.png",
+        "exists": true,
+        "sha256": "7d7e28727497f7e61ce820840128822fd2e09a064c6fcf94e809b66a6d585e82",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+          "authored_at": "2026-10-19T17:04:43-07:00",
+          "committed_at": "2026-10-19T17:04:43-07:00",
+          "subject": "Update October Guild Wars infographics",
+          "date": "2026-10-19",
+          "path_status": [
+            "M\tpublic/images/guild-wars-attack.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+          "authored_at": "2026-10-19T17:04:43-07:00",
+          "committed_at": "2026-10-19T17:04:43-07:00",
+          "subject": "Update October Guild Wars infographics",
+          "date": "2026-10-19",
+          "path_status": [
+            "M\tpublic/images/guild-wars-attack.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/guild-wars-attack.png",
+        "sha256": "7d7e28727497f7e61ce820840128822fd2e09a064c6fcf94e809b66a6d585e82",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/guild-wars/defend/",
+      "before": {
+        "title": "Guild War Top 10 Defend Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-defend.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-defend.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Guild War Top 10 Defend Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-defend.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-defend.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/guild-wars/defend/",
+        "title": "Guild War Top 10 Defend Teams",
+        "labels": [
+          "Last updated on Oct 19, 2026"
+        ],
+        "pngs": [
+          "/images/guild-wars-defend.png"
+        ],
+        "web_images": [
+          "/images/web/guild-wars-defend.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/guild-wars-defend.png",
+        "exists": true,
+        "sha256": "837f8480f922ed330975940c7d5dc3d4f1dce4fad9f91ef10400ae541e2c35c3",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+          "authored_at": "2026-10-19T17:04:43-07:00",
+          "committed_at": "2026-10-19T17:04:43-07:00",
+          "subject": "Update October Guild Wars infographics",
+          "date": "2026-10-19",
+          "path_status": [
+            "M\tpublic/images/guild-wars-defend.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "0b124029e4e1abd9233f4a23143e318fa5efcb4a",
+          "authored_at": "2026-10-19T17:04:43-07:00",
+          "committed_at": "2026-10-19T17:04:43-07:00",
+          "subject": "Update October Guild Wars infographics",
+          "date": "2026-10-19",
+          "path_status": [
+            "M\tpublic/images/guild-wars-defend.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/guild-wars-defend.png",
+        "sha256": "837f8480f922ed330975940c7d5dc3d4f1dce4fad9f91ef10400ae541e2c35c3",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/heroes/top-10/",
+      "before": {
+        "title": "Best Tacticus Heroes — Top 10",
+        "labels": [],
+        "pngs": [
+          "/images/top-10.png"
+        ],
+        "web_images": [
+          "/images/web/top-10.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Best Tacticus Heroes — Top 10",
+        "labels": [
+          "Last updated on Nov 3, 2026"
+        ],
+        "pngs": [
+          "/images/top-10.png"
+        ],
+        "web_images": [
+          "/images/web/top-10.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/heroes/top-10/",
+        "title": "Best Tacticus Heroes — Top 10",
+        "labels": [],
+        "pngs": [
+          "/images/top-10.png"
+        ],
+        "web_images": [
+          "/images/web/top-10.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/top-10.png",
+        "exists": true,
+        "sha256": "5f7154da9c17b02b2cf60525190ba12203e6b99cf39e68ea138725f56fc4c395",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "90b68877619b63fdf296fe9a63ededfba7fa1335",
+          "authored_at": "2026-11-03T15:04:55-08:00",
+          "committed_at": "2026-11-03T15:04:55-08:00",
+          "subject": "Add Hero Guides and feature November Top 10 rankings",
+          "date": "2026-11-03",
+          "path_status": [
+            "A\tpublic/images/top-10.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "90b68877619b63fdf296fe9a63ededfba7fa1335",
+          "authored_at": "2026-11-03T15:04:55-08:00",
+          "committed_at": "2026-11-03T15:04:55-08:00",
+          "subject": "Add Hero Guides and feature November Top 10 rankings",
+          "date": "2026-11-03",
+          "path_status": [
+            "A\tpublic/images/top-10.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/top-10.png",
+        "bytes": 7154511,
+        "sha256": "5f7154da9c17b02b2cf60525190ba12203e6b99cf39e68ea138725f56fc4c395",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/hre/",
+      "before": {
+        "title": "Hero Release Events",
+        "labels": [
+          "Last updated on Oct 12, 2026"
+        ],
+        "pngs": [
+          "/images/hre.png"
+        ],
+        "web_images": [
+          "/images/web/hre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Hero Release Events",
+        "labels": [
+          "Last updated on Oct 12, 2026"
+        ],
+        "pngs": [
+          "/images/hre.png"
+        ],
+        "web_images": [
+          "/images/web/hre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/hre/",
+        "title": "Hero Release Events",
+        "labels": [
+          "Last updated on Oct 12, 2026"
+        ],
+        "pngs": [
+          "/images/hre.png"
+        ],
+        "web_images": [
+          "/images/web/hre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/hre.png",
+        "exists": true,
+        "sha256": "1894e70149e5d2d4521757e45fcfd1ddbfa6828f026db240e4d7f81625e29270",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+          "authored_at": "2026-10-12T17:09:03-07:00",
+          "committed_at": "2026-10-12T17:09:03-07:00",
+          "subject": "HRE Guide",
+          "date": "2026-10-12",
+          "path_status": [
+            "M\tpublic/images/hre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "88fdfb32c59de512bfbc427eb1b5f5976cbd9568",
+          "authored_at": "2026-10-12T17:09:03-07:00",
+          "committed_at": "2026-10-12T17:09:03-07:00",
+          "subject": "HRE Guide",
+          "date": "2026-10-12",
+          "path_status": [
+            "M\tpublic/images/hre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/hre.png",
+        "sha256": "1894e70149e5d2d4521757e45fcfd1ddbfa6828f026db240e4d7f81625e29270",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "before": {
+        "title": "Biovore",
+        "labels": [
+          "Last updated on Sept 23, 2026"
+        ],
+        "pngs": [
+          "/images/mow-biovore.png"
+        ],
+        "web_images": [
+          "/images/web/mow-biovore.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Biovore",
+        "labels": [
+          "Last updated on Sept 23, 2026"
+        ],
+        "pngs": [
+          "/images/mow-biovore.png"
+        ],
+        "web_images": [
+          "/images/web/mow-biovore.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/incursion-mow/biovore/",
+        "title": "Biovore",
+        "labels": [
+          "Last updated on Sept 23, 2026"
+        ],
+        "pngs": [
+          "/images/mow-biovore.png"
+        ],
+        "web_images": [
+          "/images/web/mow-biovore.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/mow-biovore.png",
+        "exists": true,
+        "sha256": "575fc8f776c18d59ec82defe39fad95f7ac30d64a7064f55be6240a1689244cd",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+          "authored_at": "2026-09-23T16:09:31-07:00",
+          "committed_at": "2026-09-23T16:09:31-07:00",
+          "subject": "MoW update and Biovore guide",
+          "date": "2026-09-23",
+          "path_status": [
+            "A\tpublic/images/mow-biovore.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "44097643468cb78ab4e81e5c2a55f1cf9c675f39",
+          "authored_at": "2026-09-23T16:09:31-07:00",
+          "committed_at": "2026-09-23T16:09:31-07:00",
+          "subject": "MoW update and Biovore guide",
+          "date": "2026-09-23",
+          "path_status": [
+            "A\tpublic/images/mow-biovore.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/mow-biovore.png",
+        "sha256": "575fc8f776c18d59ec82defe39fad95f7ac30d64a7064f55be6240a1689244cd",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/incursion-mow/",
+      "before": {
+        "title": "Incursion & Machine of War",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/incursion-mow.png"
+        ],
+        "web_images": [
+          "/images/web/incursion-mow.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Incursion & Machine of War",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/incursion-mow.png"
+        ],
+        "web_images": [
+          "/images/web/incursion-mow.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/incursion-mow/",
+        "title": "Incursion & Machine of War",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/incursion-mow.png"
+        ],
+        "web_images": [
+          "/images/web/incursion-mow.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/incursion-mow.png",
+        "exists": true,
+        "sha256": "3008655c0b2fc8625e28d13baad0623537063b948c4bd3047a5a98a3e08d0f4a",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "M\tpublic/images/incursion-mow.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "M\tpublic/images/incursion-mow.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/incursion-mow.png",
+        "sha256": "3008655c0b2fc8625e28d13baad0623537063b948c4bd3047a5a98a3e08d0f4a",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/incursion-mow/plagueburst-crawler/",
+      "before": {
+        "title": "Plagueburst Crawler",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-pbc.png"
+        ],
+        "web_images": [
+          "/images/web/mow-pbc.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Plagueburst Crawler",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-pbc.png"
+        ],
+        "web_images": [
+          "/images/web/mow-pbc.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/incursion-mow/plagueburst-crawler/",
+        "title": "Plagueburst Crawler",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-pbc.png"
+        ],
+        "web_images": [
+          "/images/web/mow-pbc.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/mow-pbc.png",
+        "exists": true,
+        "sha256": "0c720fec63bb40c46ef995909d05b01aeddba75622b775b5a1c0d7eca426c5e9",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "A\tpublic/images/mow-pbc.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "A\tpublic/images/mow-pbc.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/mow-pbc.png",
+        "sha256": "0c720fec63bb40c46ef995909d05b01aeddba75622b775b5a1c0d7eca426c5e9",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/incursion-mow/zkar/",
+      "before": {
+        "title": "Z'Kar",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-zkar.png"
+        ],
+        "web_images": [
+          "/images/web/mow-zkar.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Z'Kar",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-zkar.png"
+        ],
+        "web_images": [
+          "/images/web/mow-zkar.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/incursion-mow/zkar/",
+        "title": "Z'Kar",
+        "labels": [
+          "Last updated on Oct 26, 2026"
+        ],
+        "pngs": [
+          "/images/mow-zkar.png"
+        ],
+        "web_images": [
+          "/images/web/mow-zkar.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/mow-zkar.png",
+        "exists": true,
+        "sha256": "9213ac819ef51df0dd1e2deeb0626a982be29c013dfdf034dbf63619bf591f0a",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "A\tpublic/images/mow-zkar.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "8feacfb126a95f76984793c18e5b7de29a0dcfa1",
+          "authored_at": "2026-10-26T16:12:34-07:00",
+          "committed_at": "2026-10-26T16:12:34-07:00",
+          "subject": "Add Zkar and PBC Incursion artwork and refresh overview",
+          "date": "2026-10-26",
+          "path_status": [
+            "A\tpublic/images/mow-zkar.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/mow-zkar.png",
+        "sha256": "9213ac819ef51df0dd1e2deeb0626a982be29c013dfdf034dbf63619bf591f0a",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/lre/fabius/",
+      "before": {
+        "title": "Fabius Bile Legendary Release Event",
+        "labels": [
+          "Last updated on Oct 5, 2026"
+        ],
+        "pngs": [
+          "/images/fabius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/fabius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Fabius Bile Legendary Release Event",
+        "labels": [
+          "Last updated on Oct 5, 2026"
+        ],
+        "pngs": [
+          "/images/fabius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/fabius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/lre/fabius/",
+        "title": "Fabius Bile Legendary Release Event",
+        "labels": [
+          "Last updated on Oct 5, 2026"
+        ],
+        "pngs": [
+          "/images/fabius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/fabius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/fabius-lre.png",
+        "exists": true,
+        "sha256": "b5aa6ab8254b556b0a0baa0cf2111bda6fcd82e32127a3cc4a2495299421c060",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+          "authored_at": "2026-10-05T16:53:41-07:00",
+          "committed_at": "2026-10-05T16:53:41-07:00",
+          "subject": "Add unlisted Fabius Bile LRE guide and planner",
+          "date": "2026-10-05",
+          "path_status": [
+            "A\tpublic/images/fabius-lre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "3cf365ba851ed91a0fc1b4f08c60cc0ccde5ec76",
+          "authored_at": "2026-10-05T16:53:41-07:00",
+          "committed_at": "2026-10-05T16:53:41-07:00",
+          "subject": "Add unlisted Fabius Bile LRE guide and planner",
+          "date": "2026-10-05",
+          "path_status": [
+            "A\tpublic/images/fabius-lre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/fabius-lre.png",
+        "sha256": "b5aa6ab8254b556b0a0baa0cf2111bda6fcd82e32127a3cc4a2495299421c060",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/lre/farsight/",
+      "before": {
+        "title": "Farsight Legendary Release Event",
+        "labels": [
+          "Last updated on May 30, 2026"
+        ],
+        "pngs": [
+          "/images/farsight-lre.png"
+        ],
+        "web_images": [
+          "/images/web/farsight-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Farsight Legendary Release Event",
+        "labels": [
+          "Last updated on May 30, 2026"
+        ],
+        "pngs": [
+          "/images/farsight-lre.png"
+        ],
+        "web_images": [
+          "/images/web/farsight-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/lre/farsight/",
+        "title": "Farsight Legendary Release Event",
+        "labels": [
+          "Last updated on May 30, 2026"
+        ],
+        "pngs": [
+          "/images/farsight-lre.png"
+        ],
+        "web_images": [
+          "/images/web/farsight-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/farsight-lre.png",
+        "exists": true,
+        "sha256": "72ce7cb88d103cb88f9ca7607e8241064381e569d11696d7f3ee2492d7f96336",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "6af06ae6581a16b19f29d9b336d5c872bd80df03",
+          "authored_at": "2026-06-01T08:56:23-07:00",
+          "committed_at": "2026-06-01T08:56:23-07:00",
+          "subject": "Thumbnails",
+          "date": "2026-06-01",
+          "path_status": [
+            "C100\tpublic/images/lre.png\tpublic/images/farsight-lre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "7d601b2f99c7fabf271251af5272117430d7751a",
+          "authored_at": "2026-05-30T16:14:13-07:00",
+          "committed_at": "2026-05-30T16:14:13-07:00",
+          "subject": "Add infographic pages and reusable layout",
+          "date": "2026-05-30",
+          "path_status": [
+            "A\tpublic/images/lre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": [
+          {
+            "sha": "6af06ae6581a16b19f29d9b336d5c872bd80df03",
+            "authored_at": "2026-06-01T08:56:23-07:00",
+            "committed_at": "2026-06-01T08:56:23-07:00",
+            "subject": "Thumbnails",
+            "date": "2026-06-01",
+            "path_status": [
+              "C100\tpublic/images/lre.png\tpublic/images/farsight-lre.png"
+            ]
+          }
+        ]
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/farsight-lre.png",
+        "sha256": "72ce7cb88d103cb88f9ca7607e8241064381e569d11696d7f3ee2492d7f96336",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/lre/lucius/",
+      "before": {
+        "title": "Lucius Legendary Release Event",
+        "labels": [
+          "Last updated on Jun 23, 2026"
+        ],
+        "pngs": [
+          "/images/lucius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lucius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Lucius Legendary Release Event",
+        "labels": [
+          "Last updated on Jun 23, 2026"
+        ],
+        "pngs": [
+          "/images/lucius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lucius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/lre/lucius/",
+        "title": "Lucius Legendary Release Event",
+        "labels": [
+          "Last updated on Jun 23, 2026"
+        ],
+        "pngs": [
+          "/images/lucius-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lucius-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/lucius-lre.png",
+        "exists": true,
+        "sha256": "4d439450c8f60615899eb9008cd89ccb07ba1b9e6e486ac46c72746666085498",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+          "authored_at": "2026-06-23T15:50:37-07:00",
+          "committed_at": "2026-06-23T15:50:37-07:00",
+          "subject": "Refreshed Lucius graphic",
+          "date": "2026-06-23",
+          "path_status": [
+            "M\tpublic/images/lucius-lre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "323bc2d238c1f98ed194c5c1df85adf5fabb3f1e",
+          "authored_at": "2026-06-23T15:50:37-07:00",
+          "committed_at": "2026-06-23T15:50:37-07:00",
+          "subject": "Refreshed Lucius graphic",
+          "date": "2026-06-23",
+          "path_status": [
+            "M\tpublic/images/lucius-lre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/lucius-lre.png",
+        "sha256": "4d439450c8f60615899eb9008cd89ccb07ba1b9e6e486ac46c72746666085498",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/lre/lysander/",
+      "before": {
+        "title": "Lysander Legendary Release Event",
+        "labels": [
+          "Last updated on Jul 26, 2026"
+        ],
+        "pngs": [
+          "/images/lysander-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lysander-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Lysander Legendary Release Event",
+        "labels": [
+          "Last updated on Jul 26, 2026"
+        ],
+        "pngs": [
+          "/images/lysander-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lysander-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/lre/lysander/",
+        "title": "Lysander Legendary Release Event",
+        "labels": [
+          "Last updated on Jul 26, 2026"
+        ],
+        "pngs": [
+          "/images/lysander-lre.png"
+        ],
+        "web_images": [
+          "/images/web/lysander-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/lysander-lre.png",
+        "exists": true,
+        "sha256": "84d9d0ae5c541544fb73c4032edf716bbf95e754c206a2a515ad869ed1995470",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+          "authored_at": "2026-07-26T09:25:05-07:00",
+          "committed_at": "2026-07-26T09:25:05-07:00",
+          "subject": "revised s106 and lysander assets",
+          "date": "2026-07-26",
+          "path_status": [
+            "A\tpublic/images/lysander-lre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "9e859ca1b0009ee3c985b769de3dc46236109e69",
+          "authored_at": "2026-07-26T09:25:05-07:00",
+          "committed_at": "2026-07-26T09:25:05-07:00",
+          "subject": "revised s106 and lysander assets",
+          "date": "2026-07-26",
+          "path_status": [
+            "A\tpublic/images/lysander-lre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/lysander-lre.png",
+        "sha256": "84d9d0ae5c541544fb73c4032edf716bbf95e754c206a2a515ad869ed1995470",
+        "matches_local": true
+      }
+    },
+    {
+      "route": "/lre/uthar/",
+      "before": {
+        "title": "Uthar Legendary Release Event",
+        "labels": [
+          "Last updated on Sept 9, 2026"
+        ],
+        "pngs": [
+          "/images/uthar-lre.png"
+        ],
+        "web_images": [
+          "/images/web/uthar-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "after": {
+        "title": "Uthar Legendary Release Event",
+        "labels": [
+          "Last updated on Sept 9, 2026"
+        ],
+        "pngs": [
+          "/images/uthar-lre.png"
+        ],
+        "web_images": [
+          "/images/web/uthar-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "classification": "compliant",
+      "live": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/lre/uthar/",
+        "title": "Uthar Legendary Release Event",
+        "labels": [
+          "Last updated on Sept 9, 2026"
+        ],
+        "pngs": [
+          "/images/uthar-lre.png"
+        ],
+        "web_images": [
+          "/images/web/uthar-lre.webp"
+        ],
+        "redirect": null,
+        "noindex": false
+      },
+      "png": {
+        "path": "public/images/uthar-lre.png",
+        "exists": true,
+        "sha256": "ec51237526cb831d2ef600828e083c3cfaac268d9a2f2d53443dddb5e27e4c59",
+        "working_tree_status": "",
+        "latest_commit": {
+          "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+          "authored_at": "2026-09-09T16:28:43-07:00",
+          "committed_at": "2026-09-09T16:28:43-07:00",
+          "subject": "Sekehtar Uthar LRE",
+          "date": "2026-09-09",
+          "path_status": [
+            "M\tpublic/images/uthar-lre.png"
+          ]
+        },
+        "content_commit": {
+          "sha": "745f01051f786e7c2d2929e9ce1296d9ba4186dc",
+          "authored_at": "2026-09-09T16:28:43-07:00",
+          "committed_at": "2026-09-09T16:28:43-07:00",
+          "subject": "Sekehtar Uthar LRE",
+          "date": "2026-09-09",
+          "path_status": [
+            "M\tpublic/images/uthar-lre.png"
+          ]
+        },
+        "skipped_identical_copies_or_renames": []
+      },
+      "live_png": {
+        "status": 200,
+        "url": "https://terminusmaximus.com/images/uthar-lre.png",
+        "sha256": "ec51237526cb831d2ef600828e083c3cfaac268d9a2f2d53443dddb5e27e4c59",
+        "matches_local": true
+      }
+    }
+  ],
+  "excluded_routes": [
+    "/guild-raid/next-season/",
+    "/guild-raid/s097/",
+    "/guild-raid/s098/",
+    "/guild-raid/s099/",
+    "/guild-raid/s100/",
+    "/guild-raid/s101/",
+    "/guild-raid/s102/",
+    "/guild-raid/s103/",
+    "/guild-raid/s104/",
+    "/guild-raid/s105/",
+    "/guild-raid/s106/",
+    "/guild-raid/s107/",
+    "/guild-raid/s108/",
+    "/guild-raid/s109/",
+    "/guild-raid/s110/",
+    "/guild-raid/s111/",
+    "/guild-raid/s112/",
+    "/guild-raid/s113/"
+  ],
+  "other_route_counts": {
+    "score_dated_hero_profiles": 119,
+    "pages_without_dedicated_date": 19,
+    "redirects": 1
+  },
+  "lre_versions": {
+    "farsight": [
+      "1.43.130"
+    ],
+    "uthar": [
+      "1.43.130"
+    ],
+    "lysander": [
+      "1.43.130"
+    ],
+    "fabius": [
+      "1.43.130"
+    ],
+    "lucius": []
+  },
+  "request_errors": [],
+  "asset_request_errors": [],
+  "live_supplement": {
+    "/campaign-event/blood-angels/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/campaign-event/blood-angels/",
+      "bytes": 40787,
+      "sha256": "556dfb95de7c3fb768db03283609cfc0286ce3d2cdbb9bd05bbae1894ab3faa3",
+      "title": "",
+      "response_excerpt": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-sckkx6r4> <head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"generator\" content=\"Astro v6.4.2\"><link rel=\"canonical\" href=\"https://terminusmaximus.com/\"><script>\n\t\t\t// Keep duplicate trailing slashes from splitting the same page in GA4.\n\t\t\tif (window.location.pathname !== \"/\" && /\\/{2,}$/.test(window.location.pathname)) {\n\t\t\t\tconst canonicalPath = window.location.pathname.replace(/\\/+$/, \"/\");\n"
+    },
+    "/images/top-10.png": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/images/top-10.png",
+      "bytes": 7154511,
+      "sha256": "5f7154da9c17b02b2cf60525190ba12203e6b99cf39e68ea138725f56fc4c395",
+      "matches_local": true
+    },
+    "/lre/farsight/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/lre/farsight/",
+      "bytes": 192637,
+      "sha256": "cb1ca110daac03201ae17d24fce4e8f20c02a1ad89fedec13e8a81a323e86bb5",
+      "title": "Farsight Legendary Release Event",
+      "roster_versions": [
+        "1.43.130"
+      ]
+    },
+    "/lre/uthar/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/lre/uthar/",
+      "bytes": 193058,
+      "sha256": "b9a785ee6b62b53533fbb5da6ad40c0442f4a4d624649e2f32ed2ec26475c25e",
+      "title": "Uthar Legendary Release Event",
+      "roster_versions": [
+        "1.43.130"
+      ]
+    },
+    "/lre/lysander/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/lre/lysander/",
+      "bytes": 188075,
+      "sha256": "f4558c52bdcc3bad5720a13cb60eba9a4cb82c324afde9167246ee392ad2bd43",
+      "title": "Lysander Legendary Release Event",
+      "roster_versions": [
+        "1.43.130"
+      ]
+    },
+    "/lre/fabius/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/lre/fabius/",
+      "bytes": 191406,
+      "sha256": "970e65760ba99a88ea09e40e466e42dba6eaea73b0720821129b18d031a31b6d",
+      "title": "Fabius Bile Legendary Release Event",
+      "roster_versions": [
+        "1.43.130"
+      ]
+    },
+    "/lre/lucius/": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/lre/lucius/",
+      "bytes": 59249,
+      "sha256": "60994ae969614c01b458294c29db84fc272ba28f1c2c381b9c7f0d95e48959b3",
+      "title": "Lucius Legendary Release Event",
+      "roster_versions": []
+    }
+  },
+  "live_observation_at": "2026-11-09T14:34:05.496018-08:00",
+  "authorized_asset_commit": {
+    "sha": "b2b061dae7dcdb6aaab660275a2a507cba25b509",
+    "files": [
+      "public/images/campaign-event.png",
+      "public/images/ce-blood-angels.png"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "game_version": "1.44.120",
+  "reviewed_on": "2026-11-09",
+  "heroes": [
+    {
+      "unit_id": "lostaFearmonger",
+      "slug": "daras",
+      "summary": "Poison and anti-heal pressure are Daras’s main draw for Guild Wars. Damage reduction is the part of his kit to watch for Guild Raids."
+    }
+  ],
+  "machines": [
+    {
+      "unit_id": "custoDreadnought",
+      "slug": "boudicari",
+      "rating": 2,
+      "verdict": "The passive is Boudicari’s main draw for Guild Wars. The active is less impressive; the Mythic bonus adds damage.",
+      "unlock_with": "Chaos",
+      "invest_in": "Passive"
+    }
+  ]
+}

@@ -33,6 +33,11 @@ export function lowestSeenSupportIds(guide) {
     .flatMap(build => build.heroes.map(hero => hero.heroId).filter(id => !guide.requiredHeroIds.includes(id))))];
 }
 
+/** Planned supports may populate Safe Bet without claiming a Lowest Seen clear. */
+export function investmentSupportIds(guide) {
+  return guide.evidenceStatus === 'awaiting-clears' ? guide.plannedSupportHeroIds || [] : lowestSeenSupportIds(guide);
+}
+
 /** Apply Dan's support-tier hierarchy to existing records, without estimating hero strength. */
 export function classifySupportHero(guide, heroId) {
   const includesHero = build => build.heroes.some(hero => hero.heroId === heroId);
@@ -89,7 +94,7 @@ export function validateCampaignEvents(data) {
   const errors = [];
   const check = (condition, message) => { if (!condition) errors.push(message); };
   const unique = (items) => new Set(items).size === items.length;
-  const expected = ['dark-angels', 'sisters', 'death-guard', 'admech', 'tyranids', 'tau'];
+  const expected = ['dark-angels', 'sisters', 'death-guard', 'admech', 'tyranids', 'tau', 'blood-angels'];
   const expectedStageIds = [...Array.from({ length: 30 }, (_, i) => String(i + 1)), '3B', '13B', '25B'];
   const publicUrl = (value) => {
     // Dan explicitly supplied this infographic citation for use on the guides.
@@ -115,13 +120,22 @@ export function validateCampaignEvents(data) {
   check(['editorial_pending', 'approved'].includes(data.snapshot.status), 'Invalid snapshot status');
   check(Boolean(data.snapshot.id), 'Snapshot ID is required');
   check(data.snapshot.status !== 'approved' || /^[a-f0-9]{64}$/.test(data.snapshot.contentHash || ''), 'Approved snapshot needs a content hash');
-  check(data.events.length === 6 && expected.every((id) => data.events.some((g) => g.id === id)), 'Exactly six expected events are required');
+  check(data.events.length === expected.length && expected.every((id) => data.events.some((g) => g.id === id)), 'Exactly seven expected events are required');
   check(unique(data.events.map((g) => g.slug)), 'Guide slugs must be unique');
   for (const guide of data.events) {
     const label = guide.id;
     check(guide.slug === guide.id && expected.includes(guide.slug), `${label}: unexpected route`);
     const eligibleIds = [...guide.requiredHeroIds, ...guide.supportingHeroIds];
     const research = guide.research;
+    const awaitingClears = guide.evidenceStatus === 'awaiting-clears';
+    check(guide.evidenceStatus === undefined || awaitingClears, `${label}: invalid evidence status`);
+    if (awaitingClears) {
+      check(research.lowestSeen.recordIds.length === 0 && research.lowestSeen.heroes.length === 0 && research.e30Teams.length === 0 && research.builds.length === 0 && guide.observations.length === 0, `${label}: awaiting-clears guide cannot claim clear evidence`);
+      check(research.safeBetProposal === null && !research.supportSafeBetProposal && !research.safeBetApproved, `${label}: launch targets must remain editorial, without claimed clear-backed approval`);
+      const planned = investmentSupportIds(guide);
+      check(planned.length === 2 && unique(planned) && planned.every(id => guide.supportingHeroIds.includes(id)), `${label}: preview must identify two eligible planned supports`);
+      check([...guide.requiredHeroes, ...guide.supportingHeroes].every(hero => Object.values(hero.lowestSeen).every(field => field.value === null)), `${label}: awaiting-clears Lowest Seen must stay blank`);
+    }
     check(research?.eventId === guide.id, `${label}: investment research must match its event`);
     if (research) {
       check(unique(research.builds.map((build) => build.id)), `${label}: duplicate research build`);
@@ -154,6 +168,7 @@ export function validateCampaignEvents(data) {
         }
       }
       for (const target of [research.lowestSeen, research.safeBetProposal, research.supportSafeBetProposal].filter(Boolean)) {
+        if (awaitingClears && target === research.lowestSeen) continue;
         const supportTarget = target === research.supportSafeBetProposal;
         const editorial = target !== research.lowestSeen;
         const adjustment = field => editorial && (field.basis === 'editorial' || field.basis === 'inferred' && Boolean(field.rationale?.trim()));

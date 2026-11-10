@@ -14,5 +14,7 @@
   "Relic Bolt Pistol": "/images/campaign-events/rewards/R_Crit_RelicBoltPistol.png",
   "Signature Pulse Pistol": "/images/campaign-events/rewards/I_Crit_M009.png",
   "The Ardent Blade": "/images/campaign-events/rewards/R_Crit_TheArdentBlade.png",
-  "Venerable Battle Mark": "/images/campaign-events/rewards/upgHpM004.png"
+  "Venerable Battle Mark": "/images/campaign-events/rewards/upgHpM004.png",
+  "Relic Power Fist": "/images/campaign-events/rewards/R_Crit_RelicPowerFist.png",
+  "Vitarus": "/images/campaign-events/rewards/R_Crit_Vitarus.png"
 }

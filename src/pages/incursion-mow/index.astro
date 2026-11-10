@@ -7,7 +7,7 @@ import MachineRating from "../../components/incursion/MachineRating.astro";
 
 <FeaturedInfographicPage
   title="Incursion & Machine of War"
-  description="Explore every released Machine of War: my star ratings, adjustable abilities, and Incursion unlock guides."
+  description="Explore the Machines of War: my star ratings, adjustable abilities, and Incursion unlock guides."
   imageSrc="/images/incursion-mow.png"
   imageAlt="Incursion and Machine of War Infographic"
   infographicId="infographic"
@@ -61,7 +61,7 @@ Because your Machine of War choice is locked for the event, it is worth reviewin
 `}
 >
   <section slot="guides" class="machine-guides" id="machines" aria-labelledby="machine-guides-heading">
-    <div class="directory-heading"><div><span class="directory-eyebrow">The Machine of War roster</span><h2 id="machine-guides-heading">Choose your Machine of War</h2></div><span class="roster-count">{machines.length} released MoWs</span></div>
+    <div class="directory-heading"><div><span class="directory-eyebrow">The Machine of War roster</span><h2 id="machine-guides-heading">Choose your Machine of War</h2></div><span class="roster-count">{machines.length} MoWs</span></div>
     <p class="directory-intro">My ratings from the infographic above. Open a profile to explore its Active, Passive and Mythic abilities at any promotion, with independent ability levels from 1–60.</p>
     <div class="machine-guide-grid">
       {machines.map(machine => {

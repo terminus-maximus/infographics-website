@@ -1,5 +1,10 @@
 # Hero Guides: sources, maintenance and launch checks
 
+Daras was added on November 9 from Game Version 1.44.120 with all ratings
+Pending, bringing the directory to 120 heroes. See [Game update profiles](game-update-profiles.md)
+for the separate reference import and editorial instructions. The scoring
+release and historical snapshots described below remain unchanged.
+
 **Maintenance entry points:** [current scoring contract](../../HeroDatabase/CURRENT_CONTEXT.md), [score-update workflow](hero-score-update-workflow.md), and [Hero Score Refresh skill](/Users/danfoster01/.codex/skills/hero-score-refresh/SKILL.md). Follow the source registry rather than dated path examples.
 
 ## Applied Popularity fourth score — November 3, 2026

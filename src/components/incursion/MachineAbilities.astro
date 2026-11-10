@@ -13,7 +13,7 @@ const icons = {rarity:compact(profileIcons.rarities),stars:compact(profileIcons.
 const payload = {contexts,initial:initial.index,icons,abilities:machine.abilities.map(({icon,description,...ability}) => ability)};
 ---
 <section class="hero-section machine-abilities" id="abilities" data-machine-abilities aria-labelledby="abilities-heading">
-  <div class="section-heading"><h2 id="abilities-heading">Abilities</h2><span class="tag">Game {machineReference.snapshot.app_version}</span></div>
+  <div class="section-heading"><h2 id="abilities-heading">Abilities</h2><span class="tag">Game Version {machine.game_version ?? machineReference.snapshot.app_version}</span></div>
   <p class="muted">Explore Active and Passive levels independently. Rarity and stars apply to all three abilities.</p>
   <div class="stat-controls" hidden data-machine-controls>
     <StatPicker id="rarity" label="Rarity" value={initial.rarity} options={[...new Set(contexts.map(p => p.rarity))].map(rarity => ({value:rarity,label:rarity,icon:icons.rarity[rarity]}))} />

@@ -23,7 +23,7 @@ const {
 } = Astro.props;
 
 const getTeamIcon = (team: string) => teamIconMap[team] || team;
-const tierSortRank = { M3: 0, M2: 1, M1: 2, L5: 3, L4: 4, L3: 5, L2: 6, L1: 7 };
+const tierSortRank: Record<string, number> = { M3: 0, M2: 1, M1: 2, L5: 3, L4: 4, L3: 5, L2: 6, L1: 7 };
 const displayReplays = sortable && !preserveOrder ? [...replays].sort((a, b) => b.damage - a.damage) : replays;
 ---
 
@@ -141,14 +141,14 @@ const displayReplays = sortable && !preserveOrder ? [...replays].sort((a, b) => 
 </div>
 
 <script>
-  document.querySelectorAll("[data-curated-sortable]").forEach((wrapper) => {
+  document.querySelectorAll<HTMLElement>("[data-curated-sortable]").forEach((wrapper) => {
     if (wrapper.dataset.sortEnhanced === "true") return;
     wrapper.dataset.sortEnhanced = "true";
 
     const table = wrapper.querySelector("table");
     const body = table?.querySelector("tbody");
-    const buttons = Array.from(wrapper.querySelectorAll("[data-curated-sort-key]"));
-    const headers = Array.from(wrapper.querySelectorAll("[data-curated-sort-header]"));
+    const buttons = Array.from(wrapper.querySelectorAll<HTMLButtonElement>("[data-curated-sort-key]"));
+    const headers = Array.from(wrapper.querySelectorAll<HTMLTableCellElement>("[data-curated-sort-header]"));
     if (!body) return;
 
     const sortState = { key: wrapper.dataset.curatedInitialSort === "none" ? "" : "damage", direction: "desc" };
@@ -164,7 +164,7 @@ const displayReplays = sortable && !preserveOrder ? [...replays].sort((a, b) => 
       });
     };
 
-    const sortRows = (columnIndex) => {
+    const sortRows = (columnIndex: number) => {
       const rows = Array.from(body.querySelectorAll("tr"));
       rows.sort((rowA, rowB) => {
         const valueA = rowA.cells[columnIndex]?.dataset.sortValue || "";
@@ -202,11 +202,11 @@ const displayReplays = sortable && !preserveOrder ? [...replays].sort((a, b) => 
     updateHeaders();
   });
 
-  document.querySelectorAll("[data-replay-url]").forEach((row) => {
+  document.querySelectorAll<HTMLTableRowElement>("[data-replay-url]").forEach((row) => {
     if (row.dataset.replayRowEnhanced === "true") return;
     row.dataset.replayRowEnhanced = "true";
     row.addEventListener("click", (event) => {
-      if (event.target.closest("a")) return;
+      if (!(event.target instanceof Element) || event.target.closest("a")) return;
       const replayUrl = row.dataset.replayUrl;
       if (replayUrl) window.open(replayUrl, "_blank", "noopener,noreferrer");
     });

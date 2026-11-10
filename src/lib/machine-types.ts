@@ -9,6 +9,7 @@ export interface MachineAbility {
   values_by_progression: Record<string, Record<string, string | number> | Record<string, string | number>[]>;
 }
 export interface Machine {
+  game_version?: string; rating_updated_on?: string;
   unit_id: string; slug: string; name: string; full_name: string; title: string;
   description: string; faction_id: string; faction: string; alliance: string;
   portrait: MachineIcon; rating: number | null; verdict: string; unlock_with: string; invest_in: string;

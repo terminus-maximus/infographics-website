@@ -20,7 +20,7 @@ const description = `${hero.name}, ${hero.faction} (${hero.alliance}). Reference
       <h1>{hero.name}</h1>
       <p class="hero-title">{hero.title}</p>
       <a class="identity-rating" href="#analysis">Overall hero rating <strong>{formatOverall(hero.overall.final_score)}{hero.overall.final_score !== null && ' / 10'}</strong></a>
-      <p class="muted score-updated">{hero.availability_status?.includes('preview') || hero.availability_status?.includes('upcoming') ? 'Preview record · ' : ''}Score updated: {readableDate(currentRelease.date)}</p>
+      <p class="muted score-updated">{!hero.updated_on && (hero.availability_status?.includes('preview') || hero.availability_status?.includes('upcoming')) ? 'Preview record · ' : ''}{hero.updated_on ? 'Guide updated' : 'Score updated'}: {readableDate(hero.updated_on ?? currentRelease.date)}</p>
     </div>
   </header>
   <ScorePanel hero={hero} />

@@ -65,6 +65,14 @@ export const campaignHeroProfileGroups: Record<string, HeroProfileGroup[]> = {
 };
 
 export function eventHeroProfileGroups(guide: CampaignEventGuide): HeroProfileGroup[] {
+  if (guide.evidenceStatus === 'awaiting-clears') {
+    const planned = guide.plannedSupportHeroIds || [];
+    return [
+      { id: 'required', title: 'Required heroes', rows: guide.requiredHeroes.map(hero => ({ heroId: hero.heroId, role: 'Required' })) },
+      { id: 'planned', title: 'Planned supports · provisional', rows: planned.map(heroId => ({ heroId, role: 'Planned support' })) },
+      { id: 'eligible', title: 'Other eligible Orks', rows: guide.supportingHeroIds.filter(id => !planned.includes(id)).map(heroId => ({ heroId, role: 'Eligible' })) },
+    ];
+  }
   const selectedSupports: string[] = lowestSeenSupportIds(guide);
   const tiers = [
     ['S', 'Lowest Seen E30 team'], ['A', 'Other E30 three-medal options'],

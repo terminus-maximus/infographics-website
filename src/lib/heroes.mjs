@@ -5,6 +5,7 @@ import { Marked } from 'marked';
 import referenceData from '../data/heroes/reference.json' with { type: 'json' };
 import relicData from '../data/heroes/relics.json' with { type: 'json' };
 import researchData from '../data/heroes/research.json' with { type: 'json' };
+import { updateHeroes } from './game-update-profiles.mjs';
 import { assert, validateRelease, nameOrder, MODES } from './hero-scoring.mjs';
 const dataRoot = resolve(process.cwd(), 'src/data/heroes');
 const read = name => JSON.parse(readFileSync(resolve(dataRoot,name),'utf8'));
@@ -27,7 +28,8 @@ export const heroes = research.identity.map(identity => {
   assert(ref && score && research.assessments[identity.unit_id], `Missing hero: ${identity.unit_id}`);
   for (const mode of MODES) assert(research.assessments[identity.unit_id][mode].recommended_score === score[mode], `Current mode mismatch: ${identity.unit_id}/${mode}`);
   return { ...ref, ...identity, relics:relicData.relics.filter(relic => relic.hero_ids.includes(identity.unit_id)), overall:score, assessments:research.assessments[identity.unit_id], guides:research.relationships[identity.unit_id] };
-}).sort(nameOrder);
+}).concat(updateHeroes).sort(nameOrder);
+assert(new Set(heroes.map(h => h.unit_id)).size === heroes.length, 'Duplicate hero ID across game versions');
 assert(new Set(heroes.map(h => h.slug)).size === heroes.length && heroes.every(h => !['top-10','factions','index','scoring'].includes(h.slug)), 'Duplicate/reserved slugs');
 export const heroById = new Map(heroes.map(h => [h.unit_id,h]));
 export const heroHref = hero => `/heroes/${hero.slug}/`;

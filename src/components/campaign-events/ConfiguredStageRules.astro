@@ -1,0 +1,23 @@
+---
+import type { CampaignEventGuide } from '../../data/campaign-events/types';
+interface Props { guide: CampaignEventGuide; }
+const { guide } = Astro.props;
+---
+<details class="stage-rules">
+  <summary>All Extremis stage caps, deployment limits &amp; lightning timers</summary>
+  <p>Stages allowing three heroes use only Snotflogga, Tanksmasha, and Zapspitta. B stages are side branches.</p>
+  <table aria-label={`${guide.displayTitle} configured Extremis stage rules`}>
+    <thead><tr><th scope="col">Stage</th><th scope="col">Rarity cap</th><th scope="col">Heroes</th><th scope="col">Lightning rounds</th></tr></thead>
+    <tbody>{guide.stageRules.map(rule => <tr><th scope="row">E{rule.stageId}</th><td>{rule.rarityCap}</td><td>{rule.deploymentLimit}</td><td>{rule.lightningVictoryRounds ?? '—'}</td></tr>)}</tbody>
+  </table>
+</details>
+<style>
+  .stage-rules { margin-top: 1.5rem; border: 1px solid #414141; border-radius: 10px; padding: 1rem; }
+  summary { color: #e4c55e; cursor: pointer; line-height: 1.6; font-size: .85rem; }
+  p { color: #bbb; font-size: .8rem; line-height: 1.7; }
+  table { width: 100%; border-collapse: collapse; text-align: left; font-size: .8rem; }
+  th, td { padding: .65rem .4rem; border-bottom: 1px solid #393939; }
+  thead { color: #e4c55e; }
+  tbody th { font-weight: 500; }
+  @media (max-width: 400px) { .stage-rules { padding: .75rem; } table { font-size: .7rem; } th, td { padding: .6rem .2rem; } }
+</style>

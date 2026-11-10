@@ -25,7 +25,7 @@ const rewardIcon = (name: string) => {
   return icon;
 };
 ---
-<p class="intro">Repeatable shard farms and key Extremis rewards.</p>
+<p class="intro">Repeatable shard farms and key Extremis rewards.{rewards.source.preview && ' Preview rewards; live rewards may change.'}</p>
 <div class="shard-grid">{rewards.shardFarms.map(shard => <article class="shard-card" data-reward="character-shards"><a class="shard-hero-link ce-hero-link" href={rewardHeroHref(shard.hero)} title={`${shard.hero} Hero Guide`} data-hero-guide-link><img src={portrait(shard.hero)} alt="" width="54" height="54" loading="lazy" /><h3 class="hero-link-name">{shard.hero}</h3></a><p><strong>E{shard.regularStage}</strong><span>Regular shards</span></p><p><strong>E{shard.mythicStage}</strong><span>Mythic shards</span></p></article>)}</div>
 <table aria-label={`${eventName} Extremis rewards`}>
   <thead><tr><th scope="col">Reward</th><th scope="col">Where to earn it</th></tr></thead>
@@ -49,7 +49,7 @@ const rewardIcon = (name: string) => {
   </tbody>
 </table>
 <p class="reward-note"><strong>Gold milestone:</strong> Lightning Victory with no characters lost and no borrowed heroes. Shard rows list repeatable drops; one-time shard bonuses are additional. Chest quantities are base rewards.</p>
-<p class="source">Source: Tacticus game data {rewards.source.gameVersion} · verified {rewards.source.verifiedAt}.</p>
+{!rewards.source.preview && <p class="source">Source: Tacticus game data {rewards.source.gameVersion} · verified {rewards.source.verifiedAt}.</p>}
 <style>
   .shard-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1.5rem; }
   .shard-card { text-align: center; border: 1px solid #3b3b3b; border-radius: 9px; padding: 1rem .5rem; background: #151515; }

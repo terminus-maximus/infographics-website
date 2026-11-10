@@ -1,6 +1,6 @@
 # Infographic update dates
 
-All 30 evergreen infographic guide pages use the PNG's Git revision date and the same public wording, for example: **Last updated on Oct 26, 2026**. Month names are Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov, Dec. Dates always include the day and year.
+Every dedicated infographic guide page uses the PNG's Git revision date and the same public wording, for example: **Last updated on Oct 26, 2026**. Month names are Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov, Dec. Dates always include the day and year. Explicitly uncommitted artwork remains unverified until its content revision is committed.
 
 This policy was selected by Dan on October 13, 2026. It intentionally replaces campaign replay-data, Biovore research, and LRE page-update dates in the header. Those underlying provenance fields remain available in their source datasets; the public header consistently refers to the infographic.
 
@@ -51,3 +51,36 @@ The pre-change findings are retained in [the October 13 audit](date-audit-2026-1
 October 24 local validation: 56 routes built, all 28 evergreen guide dates match PNG history and standard wording. The six individual Campaign Event guides now use the shared header component and registry; their dates remain Oct 15, 2026. Boss Meta reflects its newly committed Oct 24 graphic. All 17 season/preview exclusions and all four roster-version labels were preserved. See [the October 24 audit](date-audit-2026-10-24.md). This refresh is prepared locally and has not been pushed.
 
 October 13 local validation: all 49 routes built; all 22 dates matched PNG history and standardized wording; 16 season/preview routes remained undated. The four roster-version lines matched their datasets and all 384 LRE filter states passed existing checks. Browser review confirmed the LRE two-line header and matching date typography on campaign, Biovore, and Guild War layouts. [Validation inventory](date-standardization-2026-10-13-validation.json). These changes have not been deployed.
+
+
+November 9 Campaign Event preview: `/images/campaign-event.png` and
+`/images/ce-blood-angels.png` are new, uncommitted artwork revisions. Their registry
+entries use `{ updatedOn: null, commit: null, status: "unverified" }`, rendered as
+**Infographic update date unverified** with no invented `<time>` value. Once the
+actual PNG revisions are committed, replace these entries with the content
+commit and its Los Angeles revision date. Other registry entries retain their
+committed evidence. Missing entries and incomplete non-preview entries still fail.
+
+The local November 9 audit scanned 189 routes: 27 committed infographic dates
+matched, these two new revisions were unverified, and two pre-existing labels
+(Death Guard and Tyranids) still showed Oct 15 against Nov 8 PNG revisions.
+Those separate guide-date corrections were not included in this launch update.
+The audit also identified 18 excluded season/preview routes, one redirect, 20
+routes without an update label, and 119 hero pages without a dedicated PNG.
+
+The subsequent [full November 9 audit](date-audit-2026-11-09.md) corrected Death
+Guard and Tyranids to Nov 8, 2026, and added the missing Top 10 infographic date,
+Nov 3, 2026. Its ranking publication date remains separate. All 189 local routes
+were checked: 32 direct-scope pages, of which 30 dates match committed PNG
+revisions and two new artwork revisions remain unverified. All four LRE roster
+versions match their source manifests, and all 18 Guild Raid exclusions remain
+undated. Live findings and revision evidence are retained in the linked report.
+
+
+After Dan authorized committing the two new PNGs, commit
+`b2b061dae7dcdb6aaab660275a2a507cba25b509` recorded both at
+`2026-11-09T14:55:43-08:00`. Their unverified entries are now resolved to
+**Last updated on Nov 9, 2026**. The final local audit covers all 189 routes:
+32 compliant infographic dates, zero mismatches and zero unverified revisions;
+18 excluded Guild Raid routes and 139 other routes. Build, CE and LRE checks
+pass. Only the two PNGs were committed; no push or deployment was performed.

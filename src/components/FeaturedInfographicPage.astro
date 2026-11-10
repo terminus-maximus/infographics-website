@@ -6,6 +6,21 @@ import RecommendationSections from "./RecommendationSections.astro";
 import InfographicUpdated from "./InfographicUpdated.astro";
 import { marked } from "marked";
 
+interface Props {
+  title: string;
+  description: string;
+  imageSrc: string;
+  webImageSrc?: string;
+  imageAlt: string;
+  rosterVersion?: string;
+  basicsTitle?: string;
+  basicsContent?: string;
+  basicsDetailsContent?: string;
+  noIndex?: boolean;
+  infographicId?: string;
+  resources?: { url: string; title: string }[];
+}
+
 const {
   title,
   description,

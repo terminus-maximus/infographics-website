@@ -1,0 +1,268 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import NewsIcons from '../../components/news/NewsIcons.astro';
+import { gameUpdate144 as article } from '../../data/news';
+import { heroIcon, factionIcon, bossIcon, rewardIcon, darasIcon, boudicariIcon, tsonjiIcon, ancientInscription, mutantForm, relicBoltPistol } from '../../data/news/icons';
+import '../../styles/news.css';
+
+const sections = [
+  ['battle-pass', 'Battle Pass'], ['new-arrivals', 'New Arrivals'],
+  ['campaign-event', 'Armageddon'], ['survival', 'Survival'],
+  ['quests', 'Quests'], ['guilds', 'Guild Raid Rotation'],
+  ['home-events', 'Home Screen Events'], ['requisitions', 'Blessed Requisitions'],
+  ['guild-war', 'Guild War'],
+  ['more-events', 'More Events'],
+];
+
+const homeEvents = [
+  { name: 'Training Rush', dates: 'Nov 15', note: 'Final day of the Nov 12–15 event', progress: 'Defeat enemies for 3 Training Points, or 5 in Elite campaigns. Summons are excluded; campaign raids count.', rewards: 'Battle XP boosts of 2.5×–5× by character rarity, coins, XP books, and regular and Blessed Requisitions.' },
+  { name: 'Squig Smash', dates: 'Nov 18–20', progress: 'Kill Squigs for 1 Squig Toof each. Extra Squigs appear in Arena, Onslaught and Salvage Run.', rewards: 'Ability-badge drafts, XP books and Imperial equipment.' },
+  { name: 'Blood Tithe', dates: 'Nov 23–28', note: 'Global community event', progress: 'Defeat non-summoned enemies with World Eaters in Arena, Onslaught or Salvage Run. All players contribute together.', rewards: 'Claimed Skulls, energy, regular and Blessed Requisitions. Repeat rewards give 5 random World Eater shards.' },
+  { name: 'Faction Boost: World Eaters', dates: 'Nov 23–28', note: 'Individual event', progress: 'Chaos kills give 2 points; World Eater kills add 1. Arena, Onslaught and Salvage Run only; summons are excluded.', rewards: 'Claimed Skulls and a Requisition Order, then repeat coin rewards. World Eaters also receive Arena stat and same-faction XP bonuses.' },
+  { name: 'Against the Tide', dates: 'Dec 3–9', progress: 'Clear enemy waves in Salvage Run, Onslaught or Survival: 1 point per wave.', rewards: 'Imperial equipment, regular and Blessed Requisitions, and Machine Spirit Resurgent currency. The high-tier track includes a Relic Bolt Pistol.' },
+  { name: 'Training Rush', dates: 'Dec 12–15', progress: 'Defeat enemies for 3 Training Points, or 5 in Elite campaigns. Summons are excluded; campaign raids count.', rewards: 'Battle XP boosts of 2.5×–5× by character rarity, coins, XP books, and regular and Blessed Requisitions.' },
+];
+
+const requisitions = [
+  { dates: 'Nov 15–19', pool: 'Deep Strike', units: ['angrax', 'aethana', 'mataneo', 'arjac', 'deathleaper', 'dante'].map(slug => heroIcon(slug)) },
+  { dates: 'Nov 20–25', pool: 'T’au Empire', units: [...['aunshi', 'shadowsun', 'darkstrider', 'revas', 'shosyl'].map(slug => heroIcon(slug)), tsonjiIcon] },
+  { dates: 'Nov 26 – Dec 1', pool: 'Terrifying', units: ['atlacoya', 'azkor', 'asmodai', 'tjark', 'deathleaper', 'maugan-ra'].map(slug => heroIcon(slug)) },
+  { dates: 'Dec 2–6', pool: 'Machine Spirit Resurgent', units: ['vindicta', 'tyrith', 'tan-gida', 'ammuk', 'kimm', 'dreir'].map(slug => heroIcon(slug)) },
+  { dates: 'Dec 7–11', pool: 'Dreadnought Incursion', units: ['toth', 'archimatos', 'corrodius', 'abraxas', 'nauseous', 'lucius'].map(slug => heroIcon(slug, slug === 'nauseous' ? 'Rotbone' : undefined)) },
+  { dates: 'Dec 12–17', pool: 'Lysander Squad', units: ['gibbascrapz', 'shiron', 'thaddeus', 'volk', 'kariyan', 'ragnar'].map(slug => heroIcon(slug)) },
+];
+
+const raidSeasons = [
+  ['114', 'Nov 18–30', 'Riptide', 'Belisarius Cawl', 'Lion El’Jonson', 'Szarekh', 'Mortarion'],
+  ['115', 'Dec 2–14', 'Rogal Dorn', 'Avatar of Khaine', 'Belisarius Cawl', 'Ghazghkull', 'Lion El’Jonson'],
+  ['116', 'From Dec 16', 'Avatar of Khaine', 'Mortarion', 'Ghazghkull', 'Belisarius Cawl', 'Magnus'],
+];
+
+const actusFactions = ['Adeptus Mechanicus', 'Astra Militarum', 'Adepta Sororitas', 'Adeptus Custodes', 'Ultramarines', 'Adeptus Astartes', 'Leagues of Votann'].map(factionIcon);
+const cezareFactions = ['Blood Angels', 'Ultramarines', 'Black Templars', 'Dark Angels', 'Space Wolves', 'Adeptus Astartes'].map(factionIcon);
+const quests = [
+  { hero: heroIcon('zapspitta'), date: 'Nov 25', roster: ['Orks'].map(factionIcon), enemies: ['T’au Empire'].map(factionIcon), material: ancientInscription },
+  { hero: heroIcon('parasite-of-mortrex'), date: 'Dec 16', roster: ['Tyranids', 'Genestealer Cults'].map(factionIcon), enemies: ['Black Templars'].map(factionIcon), material: mutantForm },
+];
+const homeRewardIcons: Record<string, ReturnType<typeof rewardIcon>[]> = {
+  'Training Rush': [rewardIcon('coins')],
+  'Squig Smash': [rewardIcon('ability-badge-draft')],
+  'Blood Tithe': ['requisition', 'energy', 'claimed-skulls', 'blessed-requisition'].map(rewardIcon),
+  'Faction Boost: World Eaters': [rewardIcon('claimed-skulls')],
+  'Against the Tide': [rewardIcon('imperial-equipment'), relicBoltPistol],
+};
+
+const actusWaves = [
+  ['Necrons', '1, 8, 14, 20'], ['Orks', '2, 13'], ['Aeldari', '3, 11'],
+  ['T’au Empire', '4, 17'], ['Black Legion', '5, 18'], ['Thousand Sons', '6, 15'],
+  ['Tyranids', '7'], ['Death Guard', '9'], ['World Eaters', '10, 19'], ['Genestealer Cults', '12'],
+];
+const cezareWaves = [
+  ['Black Legion', '1, 2, 3, 6, 9, 11, 14, 17, 20'],
+  ['Thousand Sons', '4, 7, 10, 13, 15, 18, 20'],
+  ['Death Guard', '5, 8, 12, 16, 19, 20'],
+];
+
+const moreEvents = [
+  ['Nov 18', 'Tournament Arena: Faction War Conquest', '80 hours, Legendary cap, no Machines of War.'],
+  ['Nov 23–29', 'Skull Harvest', 'Earn Claimed Skulls from missions, milestones, Zapspitta’s Quest, Blood Tithe, Faction Boost and calendar offers. Spend them on World Eater shards, Chaos equipment and progression resources. Spending milestones unlock additional shards and an event theme.'],
+  ['Nov 26', 'Skull Harvest calendar & Guild offer', 'A free Avatar Frame, a separate Avatar offer, and a social offer with rewards to share with guildmates.'],
+  ['Nov 30', 'Cyber Monday', 'A special Cyber Monday offer.'],
+  ['Dec 1', 'Tournament Arena: Power-Ups', '80 hours, Legendary cap, Machines of War allowed. Reward crates include Armageddon Supplies.'],
+  ['Dec 1–24', 'Happy Holidays', 'Daily offers through December 24.'],
+  ['Dec 3–9', 'Machine Spirit Resurgent offers', 'Free and paid bundles during Actus Survival.'],
+];
+---
+
+<Layout title={`${article.title} | Terminus Maximus`} description={article.description} image={article.webImage} url={article.href}>
+  <Header />
+  <main class="news-page">
+    <a class="back-link" href="/news/">← All news</a>
+    <article>
+      <header class="news-hero">
+        <p class="news-meta">Tacticus news · <time datetime={article.published}>{article.publishedLabel}</time></p>
+        <h1>{article.title}</h1>
+        <p>Ahriman takes the battle-pass spotlight, Daras Carrow joins the roster, and the Custodes bring a new Dreadnought to Incursion.</p>
+        <p class="news-period">Event window: {article.period} · All dates UTC</p>
+      </header>
+
+      <section aria-labelledby="infographic-heading">
+        <h2 id="infographic-heading">The Update at a Glance</h2>
+        <figure class="infographic-figure">
+          <a href={article.image} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={article.title} data-ga4-link-source="image">
+            <img src={article.webImage} width="700" height="393" alt="Game Update 1.44 infographic covering Ahriman’s battle pass, Daras Carrow, Boudicari, Armageddon, Survival and the event calendar. Details follow below." fetchpriority="high" />
+          </a>
+          <figcaption><a href={article.image} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={article.title} data-ga4-link-source="caption">Open full-size infographic ↗</a></figcaption>
+        </figure>
+      </section>
+
+      <nav class="jump-links" aria-label="On this page">
+        {sections.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+      </nav>
+
+      <section id="battle-pass" class="news-panel" aria-labelledby="battle-pass-heading">
+        <h2 id="battle-pass-heading">Ahriman’s Legendary Battle Pass</h2>
+        <div class="portrait-heading">
+          <img src={heroIcon('ahriman').src} alt="" width="72" height="72" loading="lazy" />
+          <div><p class="event-label">Season 43 · Nov 15 – Dec 19</p><h3>Ahriman</h3></div>
+        </div>
+        <p>The Legendary edition adds ten reward tiers and a dedicated mission chain. Complete the pass to earn these Ahriman shard totals:</p>
+        <dl class="shard-totals">
+          <div><dt>Free</dt><dd>65</dd></div>
+          <div><dt>Premium Pass</dt><dd>240</dd></div>
+          <div><dt>Ultimate Pass</dt><dd>500</dd></div>
+        </dl>
+        <p class="note">Premium and Ultimate totals include all lower reward tracks. The pass ends December 20 at 00:00 UTC.</p>
+      </section>
+
+      <section id="new-arrivals" aria-labelledby="arrivals-heading">
+        <h2 id="arrivals-heading">New Arrivals & a Legendary Return</h2>
+        <div class="two-column">
+          <div class="news-panel">
+            <p class="event-label">Hero Release Event · Nov 22</p>
+            <div class="portrait-heading"><img src={darasIcon.src} alt="" width="72" height="72" loading="lazy" /><h3>Daras Carrow</h3></div>
+            <p><strong>Nemesis Claw Fearmonger · The Lost and the Damned</strong></p>
+            <p>Veterans of the Long War introduces this Uncommon Chaos character. The Night Lords fighter combines Overwatch, Camouflage and Terrifying with poison and debuffs.</p>
+            <p>His active hits every adjacent enemy, triggers resulting Battle Fatigue twice and lets him move again. His melee attacks apply poison, reduce enemy damage and reduce healing received.</p>
+            <p><strong>My take:</strong> poison and anti-heal pressure are Daras’s main draw for Guild Wars. Damage reduction is the part of his kit to watch for Guild Raids.</p>
+            <a href="/heroes/daras/">Daras Hero Guide →</a>
+          </div>
+          <div class="news-panel">
+            <p class="event-label">Incursion · Dec 7</p>
+            <div class="portrait-heading"><img src={boudicariIcon.src} alt="" width="72" height="72" loading="lazy" /><h3>Boudicari Feldorus</h3></div>
+            <p><strong>Adeptus Custodes · Contemptor-Achillus Dreadnought</strong></p>
+            <p>A new Machine of War arrives through Incursion. This route uses <strong>Chaos characters</strong>, so prepare your Chaos roster for the run.</p>
+            <p>The new Crit Reduction enhancement halves incoming critical damage to a selected character for the run.</p>
+            <p><strong>My take:</strong> the passive is Boudicari’s main draw for Guild Wars. The active is less impressive; the Mythic bonus adds damage.</p>
+            <a href="/incursion-mow/boudicari/">Boudicari MoW Guide →</a>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="portrait-heading">
+            <img src={heroIcon('lysander').src} alt="" width="72" height="72" loading="lazy" />
+            <div><p class="event-label">Legendary Release Event · Dec 13</p><h3>Lysander returns</h3></div>
+          </div>
+          <p>Heroes of the Chapter returns for its <strong>second event</strong>. Plan your teams for the Imperial Fists Captain with the <a href="/lre/lysander">Lysander LRE guide</a>.</p>
+        </div>
+      </section>
+
+      <section id="campaign-event" class="news-panel" aria-labelledby="campaign-heading">
+        <h2 id="campaign-heading">Armageddon Campaign Event</h2>
+        <p class="event-label">Begins Nov 19</p>
+        <NewsIcons items={['tanksmasha', 'snotflogga', 'zapspitta'].map(slug => heroIcon(slug))} size={64} />
+        <p>Lead <strong>Tanksmasha, Snotflogga and Zapspitta</strong> against Imperial forces, with other Orks available for support. Rewards include Blood Angels shards, the Power Fist and Vitarus relics, Ancient Inscription, and upgrade resources.</p>
+        <p>Existing campaigns remain selectable for the season. Review the <a href="/campaign-event/">Campaign Event guide</a> before choosing your path.</p>
+      </section>
+
+      <section id="survival" aria-labelledby="survival-heading">
+        <h2 id="survival-heading">Two Survival Events</h2>
+        <p>Survival sends a featured hero and your eligible roster through 20 escalating waves. Pickups bring reinforcements and power-ups, while rarity caps rise as you advance.</p>
+        <div class="two-column">
+          <div class="news-panel">
+            <p class="event-label">Dec 3–9 · Actus</p>
+            <div class="portrait-heading"><img src={heroIcon('actus').src} alt="" width="72" height="72" loading="lazy" /><h3>Machine Spirit Resurgent</h3></div>
+            <p><strong>Last Stand:</strong> hold both Strategic Points to repair non-Mechanical units. Battlefield reinforcements summon Adeptus Mechanicus support.</p>
+            <div class="eligible-factions"><p><strong>Eligible factions</strong></p><NewsIcons items={actusFactions} /><p class="note">No Machines of War.</p></div>
+            <p><strong>Enemies:</strong> ten Xenos and Chaos factions. Wave 16 is a clone wave; wave 20 is Necrons.</p>
+            <p><strong>Rewards:</strong> Cyrus shards, Imperial upgrades and ability badges, coins, Forge Badges, and an exclusive theme at crate 30. Against the Tide runs alongside Survival and supplies event currency.</p>
+          </div>
+          <div class="news-panel">
+            <p class="event-label">Dec 19–25 · Cezare</p>
+            <div class="portrait-heading"><img src={heroIcon('cezare').src} alt="" width="72" height="72" loading="lazy" /><h3>Terminus</h3></div>
+            <p><strong>Hold the line:</strong> spend Forces to deploy Guardsmen. The cost increases per summon and resets at each rarity, with up to 20 Guardsmen per rarity.</p>
+            <div class="eligible-factions"><p><strong>Eligible factions</strong></p><NewsIcons items={cezareFactions} /><p class="note">No Machines of War.</p></div>
+            <p><strong>Enemies:</strong> Black Legion, Thousand Sons and Death Guard. All enemies are Chaos, with all three factions in wave 20 and no clone wave.</p>
+            <p><strong>Rewards:</strong> 35 reward crates, including coins and XP books. Daily missions provide Forces. Requires Power Level 20.</p>
+          </div>
+        </div>
+        <details>
+          <summary>Survival enemy factions by wave</summary>
+          <div class="two-column">
+            {[['Actus · Machine Spirit Resurgent', actusWaves], ['Cezare · Terminus', cezareWaves]].map(([title, waves]) => (
+              <div>
+                <h3>{title as string}</h3>
+                <div class="table-scroll" tabindex="0" role="region" aria-label={`${title} waves`}>
+                  <table><thead><tr><th scope="col">Enemy faction</th><th scope="col">Waves</th></tr></thead>
+                    <tbody>{(waves as string[][]).map(([faction, numbers]) => <tr><th scope="row">{faction}</th><td>{numbers}</td></tr>)}</tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="note">Actus: wave 16 is a clone wave; wave 20 has 6 Necron Warriors and 6 Ophydian Destroyers. Cezare: wave 20 has 4 Havocs, 4 Rubric Marines and 4 Plague Marines.</p>
+        </details>
+      </section>
+
+      <section id="quests" aria-labelledby="quests-heading">
+        <h2 id="quests-heading">Character Quests</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Character quest schedule and rewards">
+          <table class="quest-table">
+            <thead><tr><th scope="col">Hero / start</th><th scope="col">Your roster</th><th scope="col">Enemies</th><th scope="col">Final-stage material</th></tr></thead>
+            <tbody>
+              {quests.map(quest => <tr>
+                <th scope="row"><NewsIcons items={[quest.hero]} size={60} center /><small class="quest-date">{quest.date}</small></th>
+                <td><NewsIcons items={quest.roster} center /></td>
+                <td><NewsIcons items={quest.enemies} center /></td>
+                <td><NewsIcons items={[quest.material]} size={60} center /></td>
+              </tr>)}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="guilds" aria-labelledby="guilds-heading">
+        <h2 id="guilds-heading">Guild Raid Rotation</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Guild Raid Rotation">
+          <table class="raid-table">
+            <thead><tr><th scope="col">Season</th><th scope="col">L4</th><th scope="col">L5</th><th scope="col">M1</th><th scope="col">M2</th><th scope="col">M3</th></tr></thead>
+            <tbody>{raidSeasons.map(([season, dates, ...bosses]) => <tr><th scope="row">Season {season}<small>{dates}</small></th>{bosses.map(boss => <td><NewsIcons items={[bossIcon(boss)]} labels={false} size={58} center /></td>)}</tr>)}</tbody>
+          </table>
+        </div>
+        <p><a href="/guild-raid/">Guild Raid teams and replays →</a></p>
+      </section>
+
+      <section id="home-events" aria-labelledby="home-events-heading">
+        <h2 id="home-events-heading">Home Screen Events</h2>
+        <p>Complete each event’s objectives to collect its rewards.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Home Screen Event dates, objectives and rewards">
+          <table class="home-events-table">
+            <thead><tr><th scope="col">Event / dates</th><th scope="col">How to progress</th><th scope="col">Reward icons</th><th scope="col">Rewards</th></tr></thead>
+            <tbody>{homeEvents.map(event => <tr><th scope="row">{event.name}<small>{event.dates}</small>{event.note && <small>{event.note}</small>}</th><td>{event.progress}</td><td class="reward-icons-cell"><NewsIcons items={homeRewardIcons[event.name]} labels={false} center /></td><td>{event.rewards}</td></tr>)}</tbody>
+          </table>
+        </div>
+        <div class="callout"><p><strong>Against the Tide relic:</strong> reach <strong>385 wave points on the high-tier track</strong> to earn a Relic Bolt Pistol. This Mythic critical-hit item boosts melee pierce ratio and ranged critical damage, with both bonuses doubled against Chaos or Xenos.</p></div>
+      </section>
+
+      <section id="requisitions" aria-labelledby="requisitions-heading">
+        <h2 id="requisitions-heading">Blessed Requisition Calendar</h2>
+        <p>Six boosted units in every pool.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Blessed Requisition featured pools">
+          <table class="requisition-table">
+            <thead><tr><th scope="col">Dates</th><th scope="col">Pool</th><th scope="col">Featured units</th></tr></thead>
+            <tbody>{requisitions.map(({ dates, pool, units }) => <tr><td class="date-cell">{dates}</td><th scope="row">{pool}</th><td class="featured-units"><NewsIcons items={units} labels={false} size={48} /></td></tr>)}</tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="guild-war" class="news-panel" aria-labelledby="guild-war-heading">
+        <h2 id="guild-war-heading">Guild War Season 29</h2>
+        <p><strong>Enlistment:</strong> November 25, 09:30 UTC.<br /><strong>First battle:</strong> November 28, 09:30 UTC.</p>
+        <a href="/guild-wars/">Guild War team guides →</a>
+      </section>
+
+      <section id="more-events" aria-labelledby="more-events-heading">
+        <h2 id="more-events-heading">More Dates for Your Calendar</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Additional event dates">
+          <table>
+            <thead><tr><th scope="col">Dates</th><th scope="col">Event</th><th scope="col">What to expect</th></tr></thead>
+            <tbody>{moreEvents.map(([dates, event, description]) => <tr><td class="date-cell">{dates}</td><th scope="row">{event}</th><td>{description}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </section>
+      <nav class="guide-links" aria-label="More news and event guides"><a href="/news/">← All news</a><a href="/events/">Event guides →</a><a href="#infographic-heading">Back to infographic ↑</a></nav>
+    </article>
+  </main>
+  <Footer />
+</Layout>

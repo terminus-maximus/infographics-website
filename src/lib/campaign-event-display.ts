@@ -1,5 +1,7 @@
 import ranks from '../data/campaigns/ranks.json';
 import { eventCharacters } from './campaign-events';
+import { heroById } from './heroes.mjs';
+import profileIcons from '../data/heroes/profile-icons.json';
 import type { ResearchBuild } from '../data/campaign-events/research-types';
 
 export function rankDisplay(value: string | number | null) {
@@ -9,6 +11,13 @@ export function rankDisplay(value: string | number | null) {
   return { label: raw || '—', name: rank?.name || raw || 'Not recorded', src: rank ? `/images/ranks/${rank.badge}` : null };
 }
 export function abilityIcon(heroId: string, kind: 'Active' | 'Passive') {
+  // New roster portraits may be PNGs outside the legacy /heroes/ alias library.
+  if (!eventCharacters[heroId].portrait.startsWith('/images/heroes/')) {
+    const ability = heroById.get(heroId)?.abilities.find(ability => ability.kind === kind.toLowerCase());
+    const icon = ability && (profileIcons.abilities as Record<string, { src: string }>)[ability.id];
+    if (icon) return icon.src;
+    throw new Error(`Missing ${kind} ability icon for ${heroId}`);
+  }
   return eventCharacters[heroId].portrait.replace('/heroes/', '/abilities/').replace('.webp', `-${kind}.webp`);
 }
 export const buildLabel = (build: ResearchBuild) => build.kind === 'recommendation' ? 'Community recommendation' : build.kind === 'player_report' ? 'Player report' : 'Replay';

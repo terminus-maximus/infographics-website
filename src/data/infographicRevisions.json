@@ -8,20 +8,24 @@
     "commit": "e0184bf309c11a39f2ff94792320d976f0c83bc8"
   },
   "/images/campaign-event.png": {
-    "updatedOn": "2026-10-11",
-    "commit": "dcf2df798ada569a68f83c281a732c54218e93c9"
+    "updatedOn": "2026-11-09",
+    "commit": "b2b061dae7dcdb6aaab660275a2a507cba25b509"
   },
   "/images/ce-admech.png": {
     "updatedOn": "2026-10-15",
     "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+  },
+  "/images/ce-blood-angels.png": {
+    "updatedOn": "2026-11-09",
+    "commit": "b2b061dae7dcdb6aaab660275a2a507cba25b509"
   },
   "/images/ce-dark-angels.png": {
     "updatedOn": "2026-10-15",
     "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
   },
   "/images/ce-death-guard.png": {
-    "updatedOn": "2026-10-15",
-    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+    "updatedOn": "2026-11-08",
+    "commit": "d016f6654c39791fe558124650a2e9a19f2d57c4"
   },
   "/images/ce-sisters.png": {
     "updatedOn": "2026-10-15",
@@ -32,8 +36,8 @@
     "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
   },
   "/images/ce-tyranids.png": {
-    "updatedOn": "2026-10-15",
-    "commit": "3bef96f5735844c939ca34d89f3dd2f758110dbb"
+    "updatedOn": "2026-11-08",
+    "commit": "d016f6654c39791fe558124650a2e9a19f2d57c4"
   },
   "/images/elite-campaigns.png": {
     "updatedOn": "2026-07-08",
@@ -114,6 +118,10 @@
   "/images/saim-hann.png": {
     "updatedOn": "2026-08-19",
     "commit": "5f9004188af38478da232cb4b70a72ddcbd098ad"
+  },
+  "/images/top-10.png": {
+    "updatedOn": "2026-11-03",
+    "commit": "90b68877619b63fdf296fe9a63ededfba7fa1335"
   },
   "/images/uthar-lre.png": {
     "updatedOn": "2026-09-09",

@@ -2,7 +2,12 @@ import type referenceData from '../data/heroes/reference.json';
 import type relicData from '../data/heroes/relics.json';
 export type Relic = (typeof relicData.relics)[number];
 export type Mode = 'raid' | 'war' | 'horde' | 'popularity';
-export type HeroReference = Omit<(typeof referenceData.heroes)[number], 'portrait'> & {portrait:{src:string|null;width:number;height:number;source_sha256:string|null}};
+export type HeroReference = Omit<(typeof referenceData.heroes)[number], 'portrait'|'abilities'> & {
+  portrait:{src:string|null;width:number;height:number;source_sha256:string|null};
+  abilities:((typeof referenceData.heroes)[number]['abilities'][number] & {icon?:{src:string;width:number;height:number}})[];
+  game_version?:string;
+  updated_on?:string;
+};
 export interface Assessment {
   recommended_score: number | null;
   display_score?: number | null;

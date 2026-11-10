@@ -1,6 +1,7 @@
 ---
 import HeroLayout from '../../layouts/HeroLayout.astro';
 import FeaturedInfographic from '../../components/FeaturedInfographic.astro';
+import InfographicUpdated from '../../components/InfographicUpdated.astro';
 import Portrait from '../../components/heroes/Portrait.astro';
 import ModeRatings from '../../components/heroes/ModeRatings.astro';
 import RatingGauge from '../../components/heroes/RatingGauge.astro';
@@ -21,7 +22,7 @@ for (const hero of ranked) {
 ---
 <HeroLayout title="Best Tacticus Heroes — Top 10 Rankings | Terminus Maximus" description="Monthly Tacticus Top 10 hero rankings, with Guild Raid, Guild War, Horde and Popularity scores, concise explanations and links to hero guides." image={publicationGraphic ? publicationGraphic.src : undefined} path="/heroes/top-10/" crumbs={[{name:'Top 10',url:'/heroes/top-10/'}]}>
   <header class="directory-heading top-ranking-heading"><h1>Best Tacticus Heroes — Top 10</h1></header>
-  {publication && publicationGraphic && <FeaturedInfographic title={`${monthLabel(publication.month)} Top 10 Heroes`} asset={publicationGraphic} />}
+  {publication && publicationGraphic && <><FeaturedInfographic title={`${monthLabel(publication.month)} Top 10 Heroes`} asset={publicationGraphic} /><InfographicUpdated imageSrc={publicationGraphic.fullSizeSrc} /></>}
   <div class="top-ranking-meta">{publication && <p class="muted">{monthLabel(publication.month)} rankings · Published {readableDate(publication.published_date)}</p>}<a href="/heroes/#scoring">How scoring works</a></div>
   {publication ? <>
     {ranked.length > publication.cutoff_count && <p class="muted">{ranked.length} heroes share this edition’s Top {publication.cutoff_count}, including ties.</p>}
