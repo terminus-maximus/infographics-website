@@ -1,69 +1,41 @@
-# Game Version 1.44.120 profiles
+# Game update profiles: production 1.44
 
-Daras (`/heroes/daras/`) and Boudicari (`/incursion-mow/boudicari/`) use the
-existing Hero Guide and Machine of War templates. Both are included in their
-directories, faction/navigation links and sitemap. The Game Update 1.44 news
-article links directly to them.
+Daras (`/heroes/daras/`) and Boudicari (`/incursion-mow/boudicari/`) now use the same **production 1.44.88** imports as the rest of the roster. The former 1.44.120 reference payload and importer have been removed. See the [full live-data audit](game-data-1.44-live-audit.md).
 
-## Data and editorial ownership
+## Data ownership
 
-`src/data/updates/1.44.120-reference.json` contains the two approved units from
-the local 1.44.120 configuration and full English localization. The importer
-verifies the version and source hashes, reuses LocalDatabase's existing
-progression, stat and ability helpers, and exports lossless WebP artwork from
-the Infographics folder. It checks decoded RGBA equality and records asset
-hashes. Public labels read **Game Version 1.44.120**. Internal paths and source
-labels are excluded from the generated payload.
+`src/data/heroes/reference.json` contains all 120 heroes; `src/data/incursion/machine-reference.json` contains all 12 Machines of War. These exports use the live LocalDatabase catalog, localization, calculation helpers and native artwork, with matching source hashes. Shared poison constants now resolve from the production configuration. There is no version-specific gameplay overlay.
 
-`src/data/updates/1.44.120-profiles.json` owns Dan's November 9 instructions:
-Daras has Pending overall, Guild Raid, Guild War, Horde and Popularity ratings,
-with his full news-page assessment; Boudicari has two stars, the news-page
-verdict, Chaos eligibility and Passive investment. The new hero's longer
-approved summary is retained instead of shortening it to the usual 15 words.
-Boudicari's rating date refers to this editorial review, not the older MoW
-overview infographic.
+`src/data/updates/profile-additions.json` contains only Dan's November 9 editorial instructions: Daras remains Pending in all rating categories with his approved assessment; Boudicari keeps two stars, his verdict, Chaos eligibility and Passive investment. The review date remains November 9. Production build provenance is separate from an editorial review or an event availability date.
 
-The additions merge in `src/lib/game-update-profiles.mjs`. They leave the
-119-hero base reference, existing assessments, ranking release and monthly
-Top 10 intact. The live directory now contains 120 heroes (111 ranked and 9
-Pending), and the MoW hub contains 12 profiles. Round portraits merge through
-`src/lib/hero-round-portraits.mjs`; Daras's ability icons travel with his reference
-record, so refreshing the base import cannot erase the addition's artwork map.
+`src/lib/game-update-profiles.mjs` joins those editorial fields to canonical live reference records, portraits, relics and guide relationships. The scoring roster remains 119 assessed records, with Daras added as Pending: 120 rendered heroes, 111 ranked and 9 Pending. The current Overall release is `2026-11-13-live-144`; the published November Top 10 edition remains frozen.
 
-Daras retains the standard Mythic wings / Adamantine II default, legal stat
-progressions, separate ability levels 1–60, physical melee and Bolter ranged
-attacks, and Toxic ability effects. No Relic is assigned in this version.
-Boudicari uses the existing Active/Passive/Mythic labels and promotion controls.
-His four Mythic entries map to stars 11–14 without applying the regular ability
-multiplier a second time. The importer resolves the shared poison hit count and
-ability-damage explanation from the same version's full files.
+Daras retains the standard Mythic wings / Adamantine II default, separate ability levels 1–60 and no assigned Relic. Boudicari uses the standard Active/Passive/Mythic controls and promotion scaling. Artwork is exported losslessly from the production app and checked by source/output hashes and decoded RGBA equality. News, HRE and Replay Library portraits use the same live generation.
 
-## Refresh and verification
+## Refresh order
+
+First refresh LocalDatabase from the verified production app. Regenerate its Campaign Event package before site reward/artwork imports. From the website checkout, use the LocalDatabase virtual environment for Python commands that require UnityPy/Pillow:
 
 ```sh
-npm run import:update-144
+../LocalDatabase/.venv/bin/python scripts/hero-reference.py
+../LocalDatabase/.venv/bin/python scripts/hero-profile-assets.py
+../LocalDatabase/.venv/bin/python scripts/hero-relics.py
+../LocalDatabase/.venv/bin/python scripts/mow-reference.py
+../LocalDatabase/.venv/bin/python scripts/game-artwork.py
+../LocalDatabase/.venv/bin/python scripts/hero-round-portraits.py
+python3 scripts/campaign-event-reference.py
+python3 scripts/incursion-reference.py
+npm run import:lre -- ../LocalDatabase/data/processed/lre/index.json
+python3 scripts/import-heroes.py
+npm run check:game-data
 npm run check:update-144
 npm run check:heroes
 npm run check:machines
+npm run check
 npm run build
 node scripts/check-heroes.mjs --built
 node scripts/check-machines.mjs --built
+npm run check:campaign-events
 ```
 
-The importer reads local sources without changing them. Repeating it is
-idempotent. Tests cover the requested ratings, preservation of every existing
-score, representative stat/ability values, Mythic promotion scaling and WebP
-hashes. Existing validators cover all profiles, routes, assets and ability
-curves. When a later base import includes these IDs, explicitly reconcile and
-retire the corresponding additions; duplicate-ID checks prevent silent overlap.
-
-The built-page validators also accept `TM_BUILD_DIR` for a build produced with
-Astro's `--outDir` option. The completed 193-page build passed all profile,
-news-link and public-copy checks; 35 focused tests passed. Browser checks
-covered both guides at desktop and mobile widths, the controls, portraits and
-Mythic lock/reset behavior. The subsequent November 9 typecheck cleanup resolved
-all 66 existing errors and the follow-up cleanup resolved all 9 informational
-hints. `npm run check` now reports 0 errors, 0 warnings and 0 hints. The
-193-page production build, 38 unit tests, seasonal
-checks and built Hero/MoW validators pass. Replay sorting and boss filtering
-were also verified in the browser.
+A future build changes the reviewed source guards deliberately. Compare raid encounter fingerprints before changing a season binding. Refresh required-hero bonus evidence in a new Overall release when Campaign/Event Campaign membership changes; do not manufacture new performance ratings or overwrite a published monthly edition. Prebuild now rejects mixed current source versions and restored preview dependencies.

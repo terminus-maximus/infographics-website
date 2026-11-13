@@ -1,0 +1,1516 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "1.44.88",
+  "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+  "verifiedAt": "2026-11-13",
+  "capSource": "Production tier rarity and heroProgressionSteps.maxRank, limited to the established website Adamantine II display ceiling (index 19).",
+  "nativeRankCaps": {
+    "Common": 3,
+    "Uncommon": 6,
+    "Rare": 9,
+    "Epic": 12,
+    "Legendary": 17,
+    "Mythic": 20
+  },
+  "displayRankCeiling": 19,
+  "rewardBasis": "Maximum shards along one legal route, including all star rewards and route chests. Exclusive branches are alternatives. Raid-only counts come from raidAllChestId.",
+  "machines": {
+    "custoDreadnought": {
+      "allowedFactions": [
+        "BlackLegion",
+        "DeathGuard",
+        "ThousandSons",
+        "WorldEaters",
+        "EmperorsChildren",
+        "TheLostAndTheDamned"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 39,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 35,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 29,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 28,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 27,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 21,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 22,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "tauBroadside": {
+      "allowedFactions": [
+        "Ultramarines",
+        "Sisterhood",
+        "AstraMilitarum",
+        "BlackTemplars",
+        "SpaceWolves",
+        "DarkAngels",
+        "AdeptusMechanicus",
+        "BloodAngels",
+        "Custodes",
+        "AdeptusAstartes"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 27,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 26,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 22,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "necroReanimator": {
+      "allowedFactions": [
+        "BlackLegion",
+        "DeathGuard",
+        "ThousandSons",
+        "WorldEaters",
+        "EmperorsChildren",
+        "TheLostAndTheDamned"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 27,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 26,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 22,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "astraOrdnanceBattery": {
+      "allowedFactions": [
+        "Necrons",
+        "Tyranids",
+        "Orks",
+        "Aeldari",
+        "Tau",
+        "Genestealers",
+        "LeaguesOfVotann"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 39,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 35,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 29,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 28,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 27,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 21,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 22,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "darkaStormSpeeder": {
+      "allowedFactions": [
+        "BlackLegion",
+        "DeathGuard",
+        "ThousandSons",
+        "WorldEaters",
+        "EmperorsChildren",
+        "TheLostAndTheDamned"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 27,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 26,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 22,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "thousDaemonPrince": {
+      "allowedFactions": [
+        "Necrons",
+        "Tyranids",
+        "Orks",
+        "Aeldari",
+        "Tau",
+        "Genestealers",
+        "LeaguesOfVotann"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 41,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 36,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 34,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 31,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 29,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 29,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 28,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 24,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 17,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 17,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "orksRukkatrukk": {
+      "allowedFactions": [
+        "Ultramarines",
+        "BlackTemplars",
+        "SpaceWolves",
+        "DarkAngels",
+        "BloodAngels",
+        "Custodes"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 39,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 35,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 29,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 28,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 27,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 21,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 22,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "blackForgefiend": {
+      "allowedFactions": [
+        "Ultramarines",
+        "Sisterhood",
+        "AstraMilitarum",
+        "BlackTemplars",
+        "SpaceWolves",
+        "DarkAngels",
+        "AdeptusMechanicus",
+        "BloodAngels",
+        "Custodes",
+        "AdeptusAstartes"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 27,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 26,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 22,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "ultraDreadnought": {
+      "allowedFactions": [
+        "BlackLegion",
+        "DeathGuard",
+        "ThousandSons",
+        "WorldEaters",
+        "EmperorsChildren",
+        "TheLostAndTheDamned"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 41,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 36,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 34,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 31,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 29,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 29,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 28,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 24,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 17,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 17,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "adeptExorcist": {
+      "allowedFactions": [
+        "Necrons",
+        "Tyranids",
+        "Orks",
+        "Aeldari",
+        "Tau",
+        "Genestealers",
+        "LeaguesOfVotann"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 27,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 26,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 22,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 20,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 21,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "tyranBiovore": {
+      "allowedFactions": [
+        "BlackLegion",
+        "DeathGuard",
+        "ThousandSons",
+        "WorldEaters",
+        "EmperorsChildren",
+        "TheLostAndTheDamned"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 19
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 18
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 48,
+          "initialClearMinimum": 41,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 36,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 34,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 30,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 28,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 39,
+          "initialClearMinimum": 29,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 28,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 39,
+          "initialClearMinimum": 24,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 22,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 36,
+          "initialClearMinimum": 23,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 20,
+          "raidOnly": 15
+        }
+      ]
+    },
+    "deathCrawler": {
+      "allowedFactions": [
+        "Necrons",
+        "Tyranids",
+        "Orks",
+        "Aeldari",
+        "Tau",
+        "Genestealers",
+        "LeaguesOfVotann"
+      ],
+      "tierRewards": [
+        {
+          "tier": 14,
+          "cap": "Adamantine2",
+          "initialClear": 8,
+          "initialClearMinimum": 8,
+          "raidOnly": 8,
+          "shardType": "Mythic",
+          "extraRegularShards": 21
+        },
+        {
+          "tier": 13,
+          "cap": "Adamantine2",
+          "initialClear": 6,
+          "initialClearMinimum": 6,
+          "raidOnly": 6,
+          "shardType": "Mythic",
+          "extraRegularShards": 21
+        },
+        {
+          "tier": 12,
+          "cap": "Diamond3",
+          "initialClear": 50,
+          "initialClearMinimum": 38,
+          "raidOnly": 33
+        },
+        {
+          "tier": 11,
+          "cap": "Diamond3",
+          "initialClear": 45,
+          "initialClearMinimum": 37,
+          "raidOnly": 31
+        },
+        {
+          "tier": 10,
+          "cap": "Diamond3",
+          "initialClear": 43,
+          "initialClearMinimum": 33,
+          "raidOnly": 29
+        },
+        {
+          "tier": 9,
+          "cap": "Gold1",
+          "initialClear": 42,
+          "initialClearMinimum": 34,
+          "raidOnly": 27
+        },
+        {
+          "tier": 8,
+          "cap": "Gold1",
+          "initialClear": 41,
+          "initialClearMinimum": 32,
+          "raidOnly": 25
+        },
+        {
+          "tier": 7,
+          "cap": "Gold1",
+          "initialClear": 40,
+          "initialClearMinimum": 30,
+          "raidOnly": 23
+        },
+        {
+          "tier": 6,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 28,
+          "raidOnly": 21
+        },
+        {
+          "tier": 5,
+          "cap": "Silver1",
+          "initialClear": 37,
+          "initialClearMinimum": 24,
+          "raidOnly": 19
+        },
+        {
+          "tier": 4,
+          "cap": "Bronze1",
+          "initialClear": 34,
+          "initialClearMinimum": 25,
+          "raidOnly": 18
+        },
+        {
+          "tier": 3,
+          "cap": "Bronze1",
+          "initialClear": 34,
+          "initialClearMinimum": 24,
+          "raidOnly": 17
+        },
+        {
+          "tier": 2,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 25,
+          "raidOnly": 16
+        },
+        {
+          "tier": 1,
+          "cap": "Iron1",
+          "initialClear": 34,
+          "initialClearMinimum": 25,
+          "raidOnly": 15
+        }
+      ]
+    }
+  },
+  "enhancements": {
+    "Resurrect_01": {
+      "type": "Resurrect",
+      "unitAmount": 1,
+      "stacks": false
+    },
+    "Heal_01": {
+      "type": "Heal",
+      "unitAmount": 3,
+      "stacks": false
+    },
+    "LifeSteal_01": {
+      "type": "LifeSteal",
+      "unitAmount": 1,
+      "abilityId": "EnhancementLifeSteal",
+      "stacks": false
+    },
+    "Summons_01": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Harlequin",
+      "stacks": true
+    },
+    "HitBoost_01": {
+      "type": "HitBoost",
+      "unitAmount": 1,
+      "abilityId": "EnhancementHitBoost",
+      "stacks": false
+    },
+    "Regeneration_01": {
+      "type": "Regeneration",
+      "abilityId": "EnhancementRegeneration",
+      "stacks": true
+    },
+    "Summons_02": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Havoc",
+      "stacks": true
+    },
+    "Summons_03": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Warrior",
+      "stacks": true
+    },
+    "AddTrait_01": {
+      "type": "AddTrait",
+      "unitAmount": 1,
+      "abilityId": "EnhancementAddTrait:MkXGravis",
+      "stacks": false
+    },
+    "AddTrait_02": {
+      "type": "AddTrait",
+      "unitAmount": 1,
+      "abilityId": "EnhancementAddTrait:RapidAssault",
+      "stacks": false
+    },
+    "Summons_04": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Electropriest",
+      "stacks": true
+    },
+    "DamageBoost_01": {
+      "type": "DamageBoost",
+      "unitAmount": 1,
+      "abilityId": "EnhancementDamageBoost",
+      "stacks": true
+    },
+    "Summons_05": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Eliminator",
+      "stacks": true
+    },
+    "AddTrait_03": {
+      "type": "AddTrait",
+      "unitAmount": 1,
+      "abilityId": "EnhancementAddTrait:Resilient",
+      "stacks": false
+    },
+    "PierceBoost_01": {
+      "type": "PierceBoost",
+      "unitAmount": 1,
+      "abilityId": "EnhancementPierceBoost",
+      "stacks": true
+    },
+    "AddTrait_04": {
+      "type": "AddTrait",
+      "unitAmount": 1,
+      "abilityId": "EnhancementAddTrait:Infiltrate",
+      "stacks": false
+    },
+    "Summons_06": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:DeathPlagueMarine",
+      "stacks": true
+    },
+    "CritBoost_01": {
+      "type": "CritBoost",
+      "unitAmount": 1,
+      "abilityId": "EnhancementCritBoost",
+      "stacks": false
+    },
+    "Summons_07": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:Inceptor",
+      "stacks": true
+    },
+    "CritReduction_01": {
+      "type": "CritReduction",
+      "unitAmount": 1,
+      "abilityId": "EnhancementCritReduction",
+      "stacks": false
+    },
+    "Summons_08": {
+      "type": "Summons",
+      "abilityId": "EnhancementSummon:PinkHorror",
+      "stacks": true
+    }
+  }
+}

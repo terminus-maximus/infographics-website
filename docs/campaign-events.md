@@ -1,5 +1,7 @@
 # Campaign Event guides
 
+**November 13 live-data refresh.** All seven guides now use production **1.44.88**: 231 Extremis stage rules, eligibility, shard farms, chest tracks and equipment rewards were rebuilt from live data. Blood Angels no longer carries preview-configuration warnings. Its Lowest Seen and Safe Bet gaps remain evidence gaps. Maintained investments and every observed clear are preserved. The historical sections below retain their original dates. [Audit and validation](game-data-1.44-live-audit.md).
+
 The hub is `/campaign-event/`; seven static guides live at `/campaign-event/{slug}/`. The hub, Events page, and related CE links use the alphabetical catalog in `src/data/campaign-events/catalog.ts`. CE Guides lives inside Menu, between Campaign Guides and Guild Raid, with AdMech, Blood Angels, Tyranids, and Explore All Guides linking to the hub. The homepage features three standard cards: Blood Angels CE, Tyranids CE, and Explore All CE with the overview graphic. Individual guide cards on the homepage and in More to Explore have a thumbnail, short gold title, and three required-hero portraits. The CE overview keeps all seven expanded cards.
 
 ## Maintaining content

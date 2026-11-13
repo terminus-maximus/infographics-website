@@ -1,5 +1,7 @@
 # Incursion guides
 
+**November 13 live-data refresh.** All 12 MoW references and 168 tier records now use production **1.44.88**. The three unlock guides consume separate live reward tables. Rewards are the maximum along one legal route with all stars; mutually exclusive branches are not summed. Mythic tiers also show regular shards. Rank limits derive from live tier rarity/progression with the established Adamantine II display ceiling; native Mythic maxRank is 20. Original infographic reward figures remain historical and the pages explicitly direct readers to the current table. Stage videos and recommendations retain their original research dates. [Audit and validation](game-data-1.44-live-audit.md).
+
 ## Machine of War profiles — November 9, 2026
 
 All 11 released MoWs now have combined profiles at `/incursion-mow/[machine]/`.

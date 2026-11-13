@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "source": {
     "channel": "production",
-    "appVersion": "1.43.157",
+    "appVersion": "1.44.88",
     "bundleId": "com.snowprintstudios.tacticus",
-    "configFullHash": "ccec4d5496d257c538029205d22e45c4",
-    "globalConfigSha256": "6a9d568eb4c398862e1c5a6934515f6fa4293c99bf9477351cc02e942382d22c",
-    "resourcesSha256": "e6d156c59c313f4bce3f42b73ea114a12da698d0a93293b8886b759e773985d8",
-    "globalConfigObjectId": "36"
+    "configFullHash": "9bdc534d9850e21cd133d4951d9e46b6",
+    "globalConfigSha256": "3cef89777a0560c3da0b4f474bd0f77df3d5cd6d2f57873c87154c20f8e9d8c1",
+    "resourcesSha256": "069032368a6e9207a797cd91d20e01619474b9f502a10b2ac38a02faba14619c",
+    "globalConfigObjectId": "35"
   },
   "seasonDurationSeconds": 1209600,
   "rotation": [
@@ -20,7 +20,7 @@
   "configurations": [
     {
       "configId": "guild_boss_season_config_1",
-      "fingerprint": "134311eeb3f0b2314134220f2573176c88582cf0b6ccd60c749e0cb7b37b01be",
+      "fingerprint": "1b8ce77a3e7130ae487a860184e38aa9eb0305a61c3f879604ab9401783f8419",
       "slots": [
         {
           "tierIndex": 0,
@@ -53,71 +53,71 @@
         {
           "tierIndex": 1,
           "setIndex": 0,
-          "bossType": "TervigonKronos",
+          "bossType": "HiveTyrantKronos",
           "boardId": "GB_06",
-          "unitId": "GuildBoss1Boss2TyranTervigonKronos:5"
+          "unitId": "GuildBoss2Boss2TyranHiveTyrantKronos:5"
         },
         {
           "tierIndex": 1,
           "setIndex": 1,
-          "bossType": "HiveTyrantLeviathan",
+          "bossType": "TervigonLeviathan",
           "boardId": "GB_05",
-          "unitId": "GuildBoss2Boss1TyranHiveTyrantLeviathan:6"
+          "unitId": "GuildBoss1Boss1TyranTervigonLeviathan:6"
         },
         {
           "tierIndex": 1,
           "setIndex": 2,
-          "bossType": "TervigonGorgon",
+          "bossType": "HiveTyrantGorgon",
           "boardId": "GB_04",
-          "unitId": "GuildBoss1Boss3TyranTervigonGorgon:7"
+          "unitId": "GuildBoss2Boss3TyranHiveTyrantGorgon:7"
         },
         {
           "tierIndex": 1,
           "setIndex": 3,
           "bossType": "ScreamerKiller",
-          "boardId": "GB_Screamer_01",
+          "boardId": "GB_Screamer_03",
           "unitId": "GuildBoss6Boss1TyranScreamerKiller:8"
         },
         {
           "tierIndex": 2,
           "setIndex": 0,
-          "bossType": "Riptide",
-          "boardId": "GB_Riptide_01",
-          "unitId": "GuildBoss11Boss1TauRiptide:9"
+          "bossType": "HiveTyrantLeviathan",
+          "boardId": "GB_02",
+          "unitId": "GuildBoss2Boss1TyranHiveTyrantLeviathan:9"
         },
         {
           "tierIndex": 2,
           "setIndex": 1,
-          "bossType": "RogalDorn",
-          "boardId": "GB_RogalDorn_02",
-          "unitId": "GuildBoss7Boss1AstraRogaldorn:10"
+          "bossType": "Riptide",
+          "boardId": "GB_Riptide_02",
+          "unitId": "GuildBoss11Boss1TauRiptide:10"
         },
         {
           "tierIndex": 2,
           "setIndex": 2,
-          "bossType": "AvatarOfKhaine",
-          "boardId": "GB_Khaine_01",
-          "unitId": "GuildBoss8Boss1EldarAvatar:11"
+          "bossType": "RogalDorn",
+          "boardId": "GB_RogalDorn_05",
+          "unitId": "GuildBoss7Boss1AstraRogaldorn:11"
         },
         {
           "tierIndex": 2,
           "setIndex": 3,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_02",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:12"
+          "bossType": "AvatarOfKhaine",
+          "boardId": "GB_Khaine_01",
+          "unitId": "GuildBoss8Boss1EldarAvatar:12"
         },
         {
           "tierIndex": 3,
           "setIndex": 0,
           "bossType": "ScreamerKiller",
-          "boardId": "GB_Screamer_03",
+          "boardId": "GB_Screamer_04",
           "unitId": "GuildBoss6Boss1TyranScreamerKiller:13"
         },
         {
           "tierIndex": 3,
           "setIndex": 1,
           "bossType": "Riptide",
-          "boardId": "GB_Riptide_02",
+          "boardId": "GB_Riptide_03",
           "unitId": "GuildBoss11Boss1TauRiptide:14"
         },
         {
@@ -137,29 +137,29 @@
         {
           "tierIndex": 3,
           "setIndex": 4,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_03",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:17"
+          "bossType": "Ghazghkull",
+          "boardId": "GB_Dakka_02",
+          "unitId": "GuildBoss4Boss1OrksGhazghkull:17"
         },
         {
           "tierIndex": 4,
           "setIndex": 0,
-          "bossType": "ScreamerKiller",
-          "boardId": "GB_Screamer_04",
-          "unitId": "GuildBoss6Boss1TyranScreamerKiller:18"
+          "bossType": "TervigonGorgon",
+          "boardId": "GB_05",
+          "unitId": "GuildBoss1Boss3TyranTervigonGorgon:18"
         },
         {
           "tierIndex": 4,
           "setIndex": 1,
-          "bossType": "TervigonLeviathan",
-          "boardId": "GB_01",
-          "unitId": "GuildBoss1Boss1TyranTervigonLeviathan:19"
+          "bossType": "ScreamerKiller",
+          "boardId": "GB_Screamer_01",
+          "unitId": "GuildBoss6Boss1TyranScreamerKiller:19"
         },
         {
           "tierIndex": 4,
           "setIndex": 2,
           "bossType": "Riptide",
-          "boardId": "GB_Riptide_03",
+          "boardId": "GB_Riptide_01",
           "unitId": "GuildBoss11Boss1TauRiptide:20"
         },
         {
@@ -179,23 +179,23 @@
         {
           "tierIndex": 5,
           "setIndex": 0,
-          "bossType": "ScreamerKiller",
-          "boardId": "GB_Screamer_01",
-          "unitId": "GuildBoss6Boss1TyranScreamerKiller:23"
+          "bossType": "BelisariusRW",
+          "boardId": "GB_Belisarius_03",
+          "unitId": "GuildBoss10Boss1AdmecBelisarius:23"
         },
         {
           "tierIndex": 5,
           "setIndex": 1,
           "bossType": "Ghazghkull",
-          "boardId": "GB_Dakka_02",
+          "boardId": "GB_Dakka_01",
           "unitId": "GuildBoss4Boss1OrksGhazghkull:24"
         },
         {
           "tierIndex": 5,
           "setIndex": 2,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_04",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:25"
+          "bossType": "Lion",
+          "boardId": "GB_Lion_01",
+          "unitId": "GuildBoss12Boss1DarkaLion:25"
         }
       ],
       "loop": [
@@ -223,7 +223,7 @@
     },
     {
       "configId": "guild_boss_season_config_2",
-      "fingerprint": "518387471882644f4b2a7e2c5b225c5d33f602c57b4824c521fd44d967f6bfd4",
+      "fingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
       "slots": [
         {
           "tierIndex": 0,
@@ -256,148 +256,148 @@
         {
           "tierIndex": 1,
           "setIndex": 0,
-          "bossType": "HiveTyrantKronos",
+          "bossType": "TervigonKronos",
           "boardId": "GB_06",
-          "unitId": "GuildBoss2Boss2TyranHiveTyrantKronos:5"
+          "unitId": "GuildBoss1Boss2TyranTervigonKronos:5"
         },
         {
           "tierIndex": 1,
           "setIndex": 1,
-          "bossType": "TervigonLeviathan",
+          "bossType": "HiveTyrantLeviathan",
           "boardId": "GB_05",
-          "unitId": "GuildBoss1Boss1TyranTervigonLeviathan:6"
+          "unitId": "GuildBoss2Boss1TyranHiveTyrantLeviathan:6"
         },
         {
           "tierIndex": 1,
           "setIndex": 2,
-          "bossType": "HiveTyrantGorgon",
+          "bossType": "TervigonGorgon",
           "boardId": "GB_04",
-          "unitId": "GuildBoss2Boss3TyranHiveTyrantGorgon:7"
+          "unitId": "GuildBoss1Boss3TyranTervigonGorgon:7"
         },
         {
           "tierIndex": 1,
           "setIndex": 3,
-          "bossType": "AvatarOfKhaine",
-          "boardId": "GB_Khaine_01",
-          "unitId": "GuildBoss8Boss1EldarAvatar:8"
+          "bossType": "BelisariusRW",
+          "boardId": "GB_Belisarius_03",
+          "unitId": "GuildBoss10Boss1AdmecBelisarius:8"
         },
         {
           "tierIndex": 2,
           "setIndex": 0,
           "bossType": "RogalDorn",
-          "boardId": "GB_RogalDorn_05",
+          "boardId": "GB_RogalDorn_02",
           "unitId": "GuildBoss7Boss1AstraRogaldorn:9"
         },
         {
           "tierIndex": 2,
           "setIndex": 1,
-          "bossType": "Ghazghkull",
-          "boardId": "GB_Dakka_05",
-          "unitId": "GuildBoss4Boss1OrksGhazghkull:10"
+          "bossType": "ScreamerKiller",
+          "boardId": "GB_Screamer_04",
+          "unitId": "GuildBoss6Boss1TyranScreamerKiller:10"
         },
         {
           "tierIndex": 2,
           "setIndex": 2,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_02",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:11"
-        },
-        {
-          "tierIndex": 2,
-          "setIndex": 3,
-          "bossType": "AvatarOfKhaine",
-          "boardId": "GB_Khaine_01",
-          "unitId": "GuildBoss8Boss1EldarAvatar:12"
-        },
-        {
-          "tierIndex": 3,
-          "setIndex": 0,
           "bossType": "Riptide",
           "boardId": "GB_Riptide_01",
-          "unitId": "GuildBoss11Boss1TauRiptide:13"
+          "unitId": "GuildBoss11Boss1TauRiptide:11"
+        },
+        {
+          "tierIndex": 2,
+          "setIndex": 3,
+          "bossType": "HiveTyrantKronos",
+          "boardId": "GB_06",
+          "unitId": "GuildBoss2Boss2TyranHiveTyrantKronos:12"
         },
         {
           "tierIndex": 3,
-          "setIndex": 1,
+          "setIndex": 0,
           "bossType": "RogalDorn",
           "boardId": "GB_RogalDorn_01",
-          "unitId": "GuildBoss7Boss1AstraRogaldorn:14"
+          "unitId": "GuildBoss7Boss1AstraRogaldorn:13"
+        },
+        {
+          "tierIndex": 3,
+          "setIndex": 1,
+          "bossType": "ScreamerKiller",
+          "boardId": "GB_Screamer_01",
+          "unitId": "GuildBoss6Boss1TyranScreamerKiller:14"
         },
         {
           "tierIndex": 3,
           "setIndex": 2,
-          "bossType": "Ghazghkull",
-          "boardId": "GB_Dakka_02",
-          "unitId": "GuildBoss4Boss1OrksGhazghkull:15"
-        },
-        {
-          "tierIndex": 3,
-          "setIndex": 3,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_01",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:16"
-        },
-        {
-          "tierIndex": 3,
-          "setIndex": 4,
           "bossType": "AvatarOfKhaine",
           "boardId": "GB_Khaine_05",
-          "unitId": "GuildBoss8Boss1EldarAvatar:17"
+          "unitId": "GuildBoss8Boss1EldarAvatar:15"
+        },
+        {
+          "tierIndex": 3,
+          "setIndex": 3,
+          "bossType": "Ghazghkull",
+          "boardId": "GB_Dakka_05",
+          "unitId": "GuildBoss4Boss1OrksGhazghkull:16"
+        },
+        {
+          "tierIndex": 3,
+          "setIndex": 4,
+          "bossType": "BelisariusRW",
+          "boardId": "GB_Belisarius_02",
+          "unitId": "GuildBoss10Boss1AdmecBelisarius:17"
         },
         {
           "tierIndex": 4,
           "setIndex": 0,
-          "bossType": "Riptide",
-          "boardId": "GB_Riptide_03",
-          "unitId": "GuildBoss11Boss1TauRiptide:18"
+          "bossType": "RogalDorn",
+          "boardId": "GB_RogalDorn_03",
+          "unitId": "GuildBoss7Boss1AstraRogaldorn:18"
         },
         {
           "tierIndex": 4,
           "setIndex": 1,
-          "bossType": "RogalDorn",
-          "boardId": "GB_RogalDorn_03",
-          "unitId": "GuildBoss7Boss1AstraRogaldorn:19"
+          "bossType": "Riptide",
+          "boardId": "GB_Riptide_03",
+          "unitId": "GuildBoss11Boss1TauRiptide:19"
         },
         {
           "tierIndex": 4,
           "setIndex": 2,
-          "bossType": "Ghazghkull",
-          "boardId": "GB_Dakka_01",
-          "unitId": "GuildBoss4Boss1OrksGhazghkull:20"
+          "bossType": "ScreamerKiller",
+          "boardId": "GB_Screamer_03",
+          "unitId": "GuildBoss6Boss1TyranScreamerKiller:20"
         },
         {
           "tierIndex": 4,
           "setIndex": 3,
-          "bossType": "BelisariusRW",
-          "boardId": "GB_Belisarius_03",
-          "unitId": "GuildBoss10Boss1AdmecBelisarius:21"
+          "bossType": "AvatarOfKhaine",
+          "boardId": "GB_Khaine_02",
+          "unitId": "GuildBoss8Boss1EldarAvatar:21"
         },
         {
           "tierIndex": 4,
           "setIndex": 4,
-          "bossType": "Lion",
-          "boardId": "GB_Lion_01",
-          "unitId": "GuildBoss12Boss1DarkaLion:22"
+          "bossType": "Mortarion",
+          "boardId": "GB_Mortarion_01",
+          "unitId": "GuildBoss5Boss1DeathMortarion:22"
         },
         {
           "tierIndex": 5,
           "setIndex": 0,
-          "bossType": "Riptide",
-          "boardId": "GB_Riptide_02",
-          "unitId": "GuildBoss11Boss1TauRiptide:23"
+          "bossType": "Ghazghkull",
+          "boardId": "GB_Dakka_02",
+          "unitId": "GuildBoss4Boss1OrksGhazghkull:23"
         },
         {
           "tierIndex": 5,
           "setIndex": 1,
-          "bossType": "AvatarOfKhaine",
-          "boardId": "GB_Khaine_04",
-          "unitId": "GuildBoss8Boss1EldarAvatar:24"
+          "bossType": "BelisariusRW",
+          "boardId": "GB_Belisarius_01",
+          "unitId": "GuildBoss10Boss1AdmecBelisarius:24"
         },
         {
           "tierIndex": 5,
           "setIndex": 2,
           "bossType": "Magnus",
-          "boardId": "GB_Magnus_02",
+          "boardId": "GB_Magnus_04",
           "unitId": "GuildBoss9Boss1ThousMagnus:25"
         }
       ],

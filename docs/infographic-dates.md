@@ -24,7 +24,7 @@ When replacing an infographic, inspect its PNG history after committing the asse
 
 ## LRE roster versions
 
-The four active LRE planner datasets (`farsight`, `uthar`, `lysander`, `fabius`) currently contain `characterBuild: "1.43.130"`, matching their entries in `src/data/lre/sources.json`. Their hero's second line reads **Roster data as of Version 1.43.130**. The version comes directly from the same dataset that powers that page's planner, so subsequent imports update the label without separate page edits. It is the character roster build, not necessarily the event-configuration build.
+The four active LRE planner datasets (`farsight`, `uthar`, `lysander`, `fabius`) currently contain `characterBuild: "1.44.88"`, matching their entries in `src/data/lre/sources.json`. Their hero's second line reads **Roster data as of Version 1.44.88**. The version comes directly from the same dataset that powers that page's planner, so subsequent imports update the label without separate page edits. It is the character roster build, not necessarily the event-configuration build.
 
 Lucius has no roster backend or planner, so no roster version is displayed on its legacy page. Its infographic update date is standardized with the others.
 

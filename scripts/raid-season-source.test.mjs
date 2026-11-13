@@ -14,7 +14,7 @@ const chosen = selectConfiguration(catalog, binding.configFingerprint);
 
 test('S114 production import preserves every pre-migration encounter', () => {
   const { lineup } = loadSeasonSource(114, { frozen: true, localDatabase: '/does-not-exist' });
-  assert.equal(lineup.source.appVersion, '1.43.157');
+  assert.equal(lineup.source.appVersion, '1.44.88');
   assert.equal(lineup.source.channel, 'production');
   assert.equal(lineup.config, 'guild_boss_season_config_5');
   assert.equal(sha256(canonical({ loop: lineup.loop, slots: lineup.slots })), binding.expectedLineupSha256);

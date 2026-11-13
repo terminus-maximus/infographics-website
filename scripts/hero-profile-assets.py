@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import Hero Stats and mode tokens using the LocalDatabase 1.43 registry.
+"""Import Hero Stats and mode tokens using the LocalDatabase production registry.
 
 Existing rarity and rank WebPs retain their public paths. Ability WebPs are
 reused only with a canonical name/legacy alias match and verified image content.
@@ -94,8 +94,8 @@ def main():
     images = read(local / "data/processed/image-assets.json")
     manifest = read(local / "data/raw/manifest.json")
     aliases = read(local / "data/processed/legacy-aliases.json")["aliases"]
-    if catalog["snapshot"] != images["snapshot"] or catalog["snapshot"]["app_version"] != "1.43.130":
-        raise ValueError("Reviewed 1.43.130 reference snapshot required")
+    if catalog["snapshot"] != images["snapshot"] or catalog["snapshot"]["app_version"] != "1.44.88":
+        raise ValueError("Reviewed 1.44.88 reference snapshot required")
     if any(manifest[key] != catalog["snapshot"][key] for key in ("app_version", "config_full_hash")):
         raise ValueError("Raw asset snapshot differs from catalog")
     warnings.filterwarnings("ignore", message="No valid Unity version found.*")
@@ -122,11 +122,11 @@ def main():
     registry_record = next(s for s in manifest["sources"] if s["role"] == "asset_references")
     registry_file = frozen_file(registry_record)
     main_record = images["bundle_sources"]["atlases/main"]
-    # The 1.43 registry identifies War's entry token in a separate bundle.
-    # Pin the reviewed 1.43.157 cache bytes, as with LocalDatabase's other bundles.
+    war_files = list(registry_file.parent.glob(WAR_BUNDLE + "_*.resource"))
+    if len(war_files) != 1:
+        raise ValueError("Expected one Guild War token bundle in the selected production app")
     bundle_records = {"atlases/main": main_record, WAR_BUNDLE: {
-        "path": str(registry_file.parent / "ui/guild_war/currency_7007f76ce9b08e77481a8c02af62a1f5.resource"),
-        "sha256": "f8404a64763b73a4a906ebb7606831ea1aa66846714792376754f5c8853e390c",
+        "path": str(war_files[0]), "sha256": sha(war_files[0]),
     }}
     needed_sprites = set(STAR_SPRITES.values()) | set(MODE_SPRITES.values()) | {f"ui_icon_checkbox_{r.lower()}" for r in RARITIES[:4]}
     registry = {}
@@ -161,7 +161,7 @@ def main():
             "mapping_method": "exact frozen game sprite name"})
 
     modes = {mode: atlas_icon(name, f"/images/hero-profile/modes/{mode}.webp") for mode, name in MODE_SPRITES.items()}
-    modes["war"]["source_app_version"] = "1.43.157"
+    modes["war"]["source_app_version"] = manifest["app_version"]
     modes["popularity"] = existing("/images/ranks/energy.webp",
         {"mapping_method": "existing game Energy (Stamina) icon, selected for Popularity"})
 

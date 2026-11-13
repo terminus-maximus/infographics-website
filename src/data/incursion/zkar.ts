@@ -1,5 +1,6 @@
+import { incursionTierRewards } from "./game-rules";
 import type { IncursionGuide } from "./types";
-import { mechanicalCore, mechanicalCoreSummary, xenosRules, xenosPowerNotes, xenosMechanics, xenosTierRewards } from "./xenos";
+import { mechanicalCore, mechanicalCoreSummary, xenosRules, xenosPowerNotes, xenosMechanics } from "./xenos";
 import { zkarStages } from "./xenos-stages";
 
 // Source review and coverage qualifications: docs/incursion-guides.md.
@@ -111,7 +112,7 @@ export const zkarGuide: IncursionGuide = {
     caveat: "The source uses Re’vas, Aleph, Boss, Snot, and Sho. Battles 5 and 9 contain inserted follow-up attempts. Enemy strength, your power-ups, and your chosen branch can change the result; copy the positioning idea only after checking your own map.",
     stages: zkarStages,
   },
-  tierRewards: xenosTierRewards,
+  tierRewards: incursionTierRewards("thousDaemonPrince"),
   relatedGuides: [
     { label: "← Incursion & Machine of War basics", url: "/incursion-mow" },
     { label: "Shared Xenos core: Plagueburst Crawler →", url: "/incursion-mow/plagueburst-crawler/" },
@@ -174,6 +175,6 @@ export const zkarGuide: IncursionGuide = {
       },
     ],
     references: [...xenosMechanics, { label: "Z’Kar", url: "https://tacticus.wiki.gg/wiki/Z%27Kar" }, { label: "Fire & other hex effects", url: "https://tacticus.wiki.gg/wiki/Hex_Effect" }],
-    limitations: "Research checked October 26, 2026. Footage spans December 2025–October 2026; updates may change damage thresholds and enemy behaviour. Stage notes combine reviewed footage, transcripts, and current mechanics. No source establishes a cheapest team, universal rank threshold, or guaranteed opening. The tier-cap and shard-reward table is transcribed from the supplied Z’Kar infographic.",
+    limitations: "Research checked October 26, 2026. Footage spans December 2025–October 2026; updates may change damage thresholds and enemy behaviour. Stage notes combine reviewed footage, transcripts, and current mechanics. No source establishes a cheapest team, universal rank threshold, or guaranteed opening. Shard rewards use production 1.44.88; rank limits use the live rarity rules and the guide’s Adamantine II display ceiling.",
   },
 };

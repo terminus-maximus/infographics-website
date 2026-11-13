@@ -16817,6 +16817,104 @@
         ]
       }
     ],
+    "lostaFearmonger": [
+      {
+        "category": "lre",
+        "slug": "fabius",
+        "title": "Fabius LRE Guide",
+        "url": "/lre/fabius/",
+        "role": "high points combination",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "high_points_combination",
+            "path": "highPointsCombinations",
+            "combinations": [
+              {
+                "track": "beta",
+                "requirements": [
+                  "beta_1",
+                  "beta_4"
+                ],
+                "points": 90
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "lre",
+        "slug": "farsight",
+        "title": "Farsight LRE Guide",
+        "url": "/lre/farsight/",
+        "role": "high points combination",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "high_points_combination",
+            "path": "highPointsCombinations",
+            "combinations": [
+              {
+                "track": "beta",
+                "requirements": [
+                  "beta_1",
+                  "beta_4"
+                ],
+                "points": 120
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "lre",
+        "slug": "lysander",
+        "title": "Lysander LRE Guide",
+        "url": "/lre/lysander/",
+        "role": "high points combination",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "high_points_combination",
+            "path": "highPointsCombinations",
+            "combinations": [
+              {
+                "track": "beta",
+                "requirements": [
+                  "beta_0",
+                  "beta_4"
+                ],
+                "points": 125
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "lre",
+        "slug": "uthar",
+        "title": "Uthar LRE Guide",
+        "url": "/lre/uthar/",
+        "role": "high points combination",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "high_points_combination",
+            "path": "highPointsCombinations",
+            "combinations": [
+              {
+                "track": "beta",
+                "requirements": [
+                  "beta_0",
+                  "beta_1"
+                ],
+                "points": 115
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "necroChronomancer": [
       {
         "category": "event_campaign",
@@ -17795,6 +17893,20 @@
         ]
       },
       {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "supporting",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "structured_role",
+            "path": "supportingHeroIds.0"
+          }
+        ]
+      },
+      {
         "category": "incursion",
         "slug": "plagueburst-crawler",
         "title": "Plagueburst Crawler Incursion Guide",
@@ -17947,6 +18059,20 @@
         ]
       },
       {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "supporting",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "structured_role",
+            "path": "supportingHeroIds.1"
+          }
+        ]
+      },
+      {
         "category": "lre",
         "slug": "fabius",
         "title": "Fabius LRE Guide",
@@ -18094,6 +18220,20 @@
     ],
     "orksNob": [
       {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "required",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "required_hero",
+            "path": "player_content.requiredHeroIds.1"
+          }
+        ]
+      },
+      {
         "category": "lre",
         "slug": "farsight",
         "title": "Farsight LRE Guide",
@@ -18216,6 +18356,20 @@
       }
     ],
     "orksRuntherd": [
+      {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "required",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "required_hero",
+            "path": "player_content.requiredHeroIds.0"
+          }
+        ]
+      },
       {
         "category": "incursion",
         "slug": "plagueburst-crawler",
@@ -18393,6 +18547,20 @@
           {
             "kind": "required_hero",
             "path": "player_content.requiredHeroContent.0.characterId"
+          }
+        ]
+      },
+      {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "supporting",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "structured_role",
+            "path": "supportingHeroIds.2"
           }
         ]
       },
@@ -18741,6 +18909,20 @@
       }
     ],
     "orksWeirdboy": [
+      {
+        "category": "event_campaign",
+        "slug": "blood-angels",
+        "title": "Blood Angels Event Campaign",
+        "url": "/campaign-event/blood-angels/",
+        "role": "required",
+        "status": "current",
+        "evidence": [
+          {
+            "kind": "required_hero",
+            "path": "player_content.requiredHeroIds.2"
+          }
+        ]
+      },
       {
         "category": "lre",
         "slug": "fabius",
@@ -24981,10 +25163,10 @@
     ]
   },
   "release": {
-    "id": "2026-11-03-popularity-v3",
+    "id": "2026-11-13-live-144",
     "policy": "overall-popularity-3.0",
-    "date": "2026-11-03",
-    "generated_at": "2026-11-03T09:59:46-08:00",
+    "date": "2026-11-13",
+    "generated_at": "2026-11-13T10:02:25-08:00",
     "rank_convention": "competition",
     "coverage": {
       "roster": 119,
@@ -24994,7 +25176,7 @@
       "popularity": 118,
       "ranked": 111,
       "pending": 8,
-      "bonus": 39
+      "bonus": 42
     },
     "inputs": {
       "mode_exports": {
@@ -25018,9 +25200,9 @@
       "roster_sha256": "ef6c8c902ba2ba96998bdc624abe2cfe498499072f184ef60716d15c2f3f517a",
       "policy_sha256": "eab638cd19d5c7307ec2d20f746fea11204251656670a26d97617049d8843656"
     },
-    "scores_sha256": "269b79950d9ffa9b40f522ce87e7c7ae2072aef78f30196c44ff840f461cc6d3",
-    "guide_evidence_sha256": "c9e69a2ed82c5c50a0818d75a2d4822dceb28576802d255a2ac2813847d0ed1b",
-    "source_manifest_sha256": "33b615635e30b064378dfc4725082eeaefced49a7b068b8fb7b54b52e0a1e370",
+    "scores_sha256": "2570008a9f793294d50d0f79a5035aa28cf187abb6c43e132bac1fbe39bc6c4c",
+    "guide_evidence_sha256": "26b72c1a8fb49aeb0feba633cc2f371f36154cc2ff8be162abeff4950bb9aa79",
+    "source_manifest_sha256": "01d9bb86803e021fdbc081bfddd7ee4967bc24f97aa92141ecfaaa6d96e373e2",
     "heroes": [
       {
         "unit_id": "custoBladeChampion",
@@ -25160,6 +25342,32 @@
         "rank": 7
       },
       {
+        "unit_id": "orksRuntherd",
+        "name": "Snotflogga",
+        "raid": 4,
+        "war": 8.0,
+        "horde": 9.0,
+        "popularity": 7.582728048647494,
+        "equal_weight_average": 7.145682012161874,
+        "guide_bonus": 0.25,
+        "final_score": 7.395682012161874,
+        "display_score": 7.4,
+        "status": "scored",
+        "missing_modes": [],
+        "guide_categories": [
+          "event_campaign"
+        ],
+        "guides": [
+          {
+            "category": "event_campaign",
+            "slug": "blood-angels",
+            "title": "Blood Angels Event Campaign",
+            "url": "https://terminusmaximus.com/campaign-event/blood-angels/"
+          }
+        ],
+        "rank": 8
+      },
+      {
         "unit_id": "blackAbaddon",
         "name": "Abaddon",
         "raid": 7,
@@ -25174,7 +25382,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 8
+        "rank": 9
       },
       {
         "unit_id": "admecMarshall",
@@ -25191,7 +25399,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 9
+        "rank": 10
       },
       {
         "unit_id": "blackPossession",
@@ -25217,23 +25425,6 @@
             "url": "https://terminusmaximus.com/campaigns/fall-of-cadia/"
           }
         ],
-        "rank": 10
-      },
-      {
-        "unit_id": "orksRuntherd",
-        "name": "Snotflogga",
-        "raid": 4,
-        "war": 8.0,
-        "horde": 9.0,
-        "popularity": 7.582728048647494,
-        "equal_weight_average": 7.145682012161874,
-        "guide_bonus": 0,
-        "final_score": 7.145682012161874,
-        "display_score": 7.15,
-        "status": "scored",
-        "missing_modes": [],
-        "guide_categories": [],
-        "guides": [],
         "rank": 11
       },
       {
@@ -26648,6 +26839,32 @@
         "rank": 79
       },
       {
+        "unit_id": "orksNob",
+        "name": "Tanksmasha",
+        "raid": 4,
+        "war": 7.0,
+        "horde": 3.0,
+        "popularity": 3.2397905291923674,
+        "equal_weight_average": 4.309947632298092,
+        "guide_bonus": 0.25,
+        "final_score": 4.559947632298092,
+        "display_score": 4.56,
+        "status": "scored",
+        "missing_modes": [],
+        "guide_categories": [
+          "event_campaign"
+        ],
+        "guides": [
+          {
+            "category": "event_campaign",
+            "slug": "blood-angels",
+            "title": "Blood Angels Event Campaign",
+            "url": "https://terminusmaximus.com/campaign-event/blood-angels/"
+          }
+        ],
+        "rank": 80
+      },
+      {
         "unit_id": "astraPrimarisPsy",
         "name": "Sibyll",
         "raid": 6,
@@ -26671,7 +26888,7 @@
             "url": "https://terminusmaximus.com/campaigns/fall-of-cadia-mirror/"
           }
         ],
-        "rank": 80
+        "rank": 81
       },
       {
         "unit_id": "necroPlasmancer",
@@ -26697,7 +26914,7 @@
             "url": "https://terminusmaximus.com/campaign-event/dark-angels/"
           }
         ],
-        "rank": 81
+        "rank": 82
       },
       {
         "unit_id": "worldEightbound",
@@ -26723,7 +26940,7 @@
             "url": "https://terminusmaximus.com/campaign-event/sisters/"
           }
         ],
-        "rank": 82
+        "rank": 83
       },
       {
         "unit_id": "worldExecutions",
@@ -26749,7 +26966,7 @@
             "url": "https://terminusmaximus.com/campaign-event/sisters/"
           }
         ],
-        "rank": 83
+        "rank": 84
       },
       {
         "unit_id": "necroChronomancer",
@@ -26766,7 +26983,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 84
+        "rank": 85
       },
       {
         "unit_id": "tauShadowsun",
@@ -26783,7 +27000,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 85
+        "rank": 86
       },
       {
         "unit_id": "spaceWulfen",
@@ -26796,23 +27013,6 @@
         "guide_bonus": 0,
         "final_score": 4.318567186775306,
         "display_score": 4.32,
-        "status": "scored",
-        "missing_modes": [],
-        "guide_categories": [],
-        "guides": [],
-        "rank": 86
-      },
-      {
-        "unit_id": "orksNob",
-        "name": "Tanksmasha",
-        "raid": 4,
-        "war": 7.0,
-        "horde": 3.0,
-        "popularity": 3.2397905291923674,
-        "equal_weight_average": 4.309947632298092,
-        "guide_bonus": 0,
-        "final_score": 4.309947632298092,
-        "display_score": 4.31,
         "status": "scored",
         "missing_modes": [],
         "guide_categories": [],
@@ -27425,7 +27625,7 @@
         "horde": 4.0,
         "popularity": 1.0466989403983573,
         "equal_weight_average": null,
-        "guide_bonus": 0,
+        "guide_bonus": 0.25,
         "final_score": null,
         "display_score": null,
         "status": "pending",
@@ -27433,8 +27633,17 @@
           "raid",
           "war"
         ],
-        "guide_categories": [],
-        "guides": [],
+        "guide_categories": [
+          "event_campaign"
+        ],
+        "guides": [
+          {
+            "category": "event_campaign",
+            "slug": "blood-angels",
+            "title": "Blood Angels Event Campaign",
+            "url": "https://terminusmaximus.com/campaign-event/blood-angels/"
+          }
+        ],
         "rank": null
       }
     ]

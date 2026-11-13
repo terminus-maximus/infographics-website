@@ -1,42 +1,42 @@
 {
   "schemaVersion": 2,
-  "generation": "89eccc64132a0d6679bb",
+  "generation": "0b8762223d00ef057331",
   "events": {
     "farsight": {
       "eventId": "legendary_hero_event_13",
-      "eventBuild": "1.43.130",
+      "eventBuild": "1.44.88",
       "eventSource": "production",
-      "characterBuild": "1.43.130",
+      "characterBuild": "1.44.88",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "05c00fbeac79ce550d8b21453fa8e699bbe86939ae4259f2e3b219c6a6e3590a"
+      "sha256": "dcd57127203c6df4dc6b773be4dba268e1949889081bce4840aea993ad3f2f3f"
     },
     "uthar": {
       "eventId": "legendary_hero_event_14",
-      "eventBuild": "1.43.130",
+      "eventBuild": "1.44.88",
       "eventSource": "production",
-      "characterBuild": "1.43.130",
+      "characterBuild": "1.44.88",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "61258dc9ab2524d04a3a700f412db7d594e05195d3ff2a9fbf61473042e831e4"
+      "sha256": "67234e548bac540761d4c6256565d5552c8036ab1434df8e97ddda2fc4bc468d"
     },
     "lysander": {
       "eventId": "legendary_hero_event_15",
-      "eventBuild": "1.43.130",
+      "eventBuild": "1.44.88",
       "eventSource": "production",
-      "characterBuild": "1.43.130",
+      "characterBuild": "1.44.88",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "daed70cbb6139dbab31e4d8ca3035eab35dbc3af1540fef0a0d7ceb8416aa468"
+      "sha256": "2be0b592230d5128eb56291f0f4e5ae82734575bcb9d64a7e3265e0a27850c47"
     },
     "fabius": {
       "eventId": "legendary_hero_event_16",
-      "eventBuild": "1.43.130",
+      "eventBuild": "1.44.88",
       "eventSource": "production",
-      "characterBuild": "1.43.130",
+      "characterBuild": "1.44.88",
       "snapshot": "local",
       "mode": "regular",
-      "sha256": "9ac1d50957b6175339b3cacbb01219596e1dc3a9ae9c0ed2b11d8c6ad8cf1ec2"
+      "sha256": "86d28a7efb17eeb4eccb127961b18971cb6ae6c58ee17c35e373eb7b20d29681"
     }
   }
 }

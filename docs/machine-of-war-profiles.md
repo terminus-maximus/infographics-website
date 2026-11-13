@@ -1,9 +1,8 @@
 # Machine of War profiles
 
-The November 9 Game Version 1.44.120 addition brings the hub to 12 profiles,
-including Boudicari with Dan's two-star rating. Its version-specific import and
-editorial ownership are documented in [Game update profiles](game-update-profiles.md).
-The original 11-profile implementation below remains the base import.
+All **12** profiles now use the canonical production **1.44.88** reference, including Boudicari. The import exports 12 full portraits, 12 round portraits and 36 ability icons. The separate preview gameplay payload is retired; approved ratings remain editorial. Current regular ability curves cover 28,800 level/context combinations (24 abilities × 20 progression steps × 60 levels). The three unlock-guide reward tables now use machine-specific live routes. See [live-data audit](game-data-1.44-live-audit.md).
+
+The following records the original November 9 implementation; current build/coverage and reward sources above supersede its historical counts.
 
 Implemented locally on November 9, 2026. The Incursion hub stays at
 `/incursion-mow/`. All 11 released MoWs have profiles beneath it. Biovore,

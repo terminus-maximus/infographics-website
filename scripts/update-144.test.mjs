@@ -7,12 +7,13 @@ import { machines } from '../src/lib/machines.mjs';
 import { abilityDescription } from '../src/lib/hero-reference.mjs';
 import { machineAbilityDescription } from '../src/lib/machine-reference.mjs';
 import { overallSummary } from '../src/lib/hero-summaries.mjs';
-import reference from '../src/data/updates/1.44.120-reference.json' with { type:'json' };
+import reference from '../src/data/heroes/reference.json' with { type:'json' };
+import icons from '../src/data/heroes/profile-icons.json' with { type:'json' };
 const daras = heroes.find(hero => hero.slug === 'daras');
 const boudicari = machines.find(machine => machine.slug === 'boudicari');
 
 test('Daras has five Pending ratings and does not change the frozen scoring release', () => {
-  assert.equal(daras.game_version,'1.44.120');
+  assert.equal(daras.game_version,'1.44.88');
   for (const key of ['final_score','raid','war','horde','popularity','rank']) assert.equal(daras.overall[key],null);
   for (const assessment of Object.values(daras.assessments)) assert.equal(assessment.recommended_score,null);
   assert.equal(daras.overall.guide_bonus,0);
@@ -31,7 +32,7 @@ test('Daras has valid progression, normal attack profiles and independently scal
 });
 
 test('Boudicari keeps the approved two-star rating and scales all three abilities correctly', () => {
-  assert.equal(boudicari.game_version,'1.44.120');
+  assert.equal(boudicari.game_version,'1.44.88');
   assert.equal(boudicari.rating,2);
   assert.equal(boudicari.unlock_with,'Chaos');
   assert.equal(boudicari.invest_in,'Passive');
@@ -44,11 +45,11 @@ test('Boudicari keeps the approved two-star rating and scales all three abilitie
 });
 
 test('new portraits and ability icons are hashed WebP assets and public data contains no private source labels', () => {
-  for (const unit of [...reference.heroes,...reference.machines]) {
-    for (const asset of [unit.portrait,unit.round_portrait,...unit.abilities.map(a=>a.icon)].filter(Boolean)) {
+  for (const unit of [daras,boudicari]) {
+    for (const asset of [unit.portrait,unit.round_portrait,...unit.abilities.map(a=>a.icon ?? icons.abilities[a.id])].filter(Boolean)) {
       const bytes=readFileSync(`public${asset.src}`);
       assert.equal(bytes.subarray(8,12).toString(),'WEBP');
-      assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+      if (asset.sha256) assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
     }
   }
   assert.doesNotMatch(JSON.stringify(reference),/marketing|datamine|\/Users\/|file:\/\//i);

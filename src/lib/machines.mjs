@@ -15,7 +15,7 @@ export const machineHref = machine => `/incursion-mow/${machine.slug}/`;
 
 if (new Set(machines.map(m => m.unit_id)).size !== machines.length ||
     new Set(machines.map(m => m.slug)).size !== machines.length ||
-    source.machines.length + updateMachines.length !== machines.length) throw new Error('Duplicate or unregistered MoW');
+    source.machines.length !== machines.length) throw new Error('Duplicate or unregistered MoW');
 for (const machine of machines) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(machine.slug)) throw new Error('Invalid MoW slug');
   if (machine.rating !== null && (!Number.isInteger(machine.rating) || machine.rating < 1 || machine.rating > 5)) throw new Error('Invalid My Rating stars');

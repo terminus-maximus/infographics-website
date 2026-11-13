@@ -6,9 +6,9 @@
       "startDate": "2026-11-18",
       "status": "Design preview",
       "channel": "production",
-      "generation": "d745fbef9160d7007d5c",
-      "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
-      "appVersion": "1.43.157",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "appVersion": "1.44.88",
       "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
       "expectedLineupSha256": "5e04ddd49fc9efb1e29982e3b3e1a998e242ed21129426080f0ff174c7d8860c",
       "dateEvidence": {

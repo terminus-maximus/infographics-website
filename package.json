@@ -9,13 +9,12 @@
     "dev": "astro dev",
     "check": "astro check",
     "check:replays": "node --experimental-strip-types --test scripts/replay-library.test.mjs",
-    "prebuild": "node scripts/check-heroes.mjs && node scripts/check-machines.mjs && node --test scripts/update-144.test.mjs && node scripts/check-raid-season.mjs",
+    "prebuild": "node scripts/check-game-data.mjs && node scripts/check-heroes.mjs && node scripts/check-machines.mjs && node --test scripts/update-144.test.mjs && node scripts/check-raid-season.mjs",
     "check:raid-season": "node --test scripts/raid-season-source.test.mjs scripts/raid-season-guide.test.mjs && node scripts/check-raid-season.mjs",
     "build": "astro build",
     "import:heroes": "python3 scripts/hero-reference.py && python3 scripts/hero-profile-assets.py && python3 scripts/hero-round-portraits.py && python3 scripts/hero-relics.py && python3 scripts/import-heroes.py",
     "import:hero-relics": "python3 scripts/hero-relics.py",
     "import:machines": "python3 scripts/mow-reference.py",
-    "import:update-144": "python3 scripts/update-144-reference.py",
     "check:update-144": "node --test scripts/update-144.test.mjs",
     "check:machines": "node --test scripts/machine-reference.test.mjs && node scripts/check-machines.mjs",
     "check:heroes": "node --test scripts/hero-scoring.test.mjs scripts/hero-reference.test.mjs scripts/hero-team-links.test.mjs scripts/hero-summaries.test.mjs scripts/hero-popularity.test.mjs && node scripts/check-heroes.mjs",
@@ -26,7 +25,10 @@
     "check:guild-raid-next-season": "node scripts/check-guild-raid-next-season.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check:campaign-events": "node scripts/check-campaign-events.mjs --built"
+    "check:campaign-events": "node scripts/check-campaign-events.mjs --built",
+    "import:campaign-events": "python3 scripts/campaign-event-reference.py",
+    "import:incursion-rules": "python3 scripts/incursion-reference.py",
+    "check:game-data": "python3 scripts/test_incursion_reference.py && node scripts/check-game-data.mjs"
   },
   "dependencies": {
     "astro": "^6.4.2",

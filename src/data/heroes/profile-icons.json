@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "app_version": "1.43.130",
-  "config_full_hash": "ec6666201ed35fbf38dfd837c97cc6c9",
+  "app_version": "1.44.88",
+  "config_full_hash": "9bdc534d9850e21cd133d4951d9e46b6",
   "rarities": {
     "Common": {
       "src": "/images/hero-profile/rarities/common.webp",
@@ -11,7 +11,7 @@
       "sprite_name": "ui_icon_checkbox_common",
       "guid": "cc90a18a9d7224ac199302302d9d7e67",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "Uncommon": {
@@ -22,7 +22,7 @@
       "sprite_name": "ui_icon_checkbox_uncommon",
       "guid": "54233917a6a484687b10d3a1499c9364",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "Rare": {
@@ -33,7 +33,7 @@
       "sprite_name": "ui_icon_checkbox_rare",
       "guid": "fbc2a89e5648241fca9f906b05780cce",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "Epic": {
@@ -44,7 +44,7 @@
       "sprite_name": "ui_icon_checkbox_epic",
       "guid": "6952fbf34bc9a4e1fb1b6a36ec59ddf1",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "Legendary": {
@@ -71,7 +71,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 0
     },
@@ -83,7 +83,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 1
     },
@@ -95,7 +95,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 2
     },
@@ -107,7 +107,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 3
     },
@@ -119,7 +119,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 4
     },
@@ -131,7 +131,7 @@
       "sprite_name": "ui_icon_star_herodetail_01",
       "guid": "6e28b2b64a6d9534f808c714790c4a11",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 5
     },
@@ -143,7 +143,7 @@
       "sprite_name": "ui_icon_star_herodetail_epic_01",
       "guid": "bfe19bef33c90cc4881f00c4ad4b2ac8",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 1
     },
@@ -155,7 +155,7 @@
       "sprite_name": "ui_icon_star_herodetail_epic_01",
       "guid": "bfe19bef33c90cc4881f00c4ad4b2ac8",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 2
     },
@@ -167,7 +167,7 @@
       "sprite_name": "ui_icon_star_herodetail_epic_01",
       "guid": "bfe19bef33c90cc4881f00c4ad4b2ac8",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 3
     },
@@ -179,7 +179,7 @@
       "sprite_name": "ui_icon_star_herodetail_epic_01",
       "guid": "bfe19bef33c90cc4881f00c4ad4b2ac8",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 4
     },
@@ -191,7 +191,7 @@
       "sprite_name": "ui_icon_star_herodetail_epic_01",
       "guid": "bfe19bef33c90cc4881f00c4ad4b2ac8",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 5
     },
@@ -203,7 +203,7 @@
       "sprite_name": "ui_icon_star_legendary_01",
       "guid": "48ab8aaae82bec543b5d47f794f8bede",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 1
     },
@@ -215,7 +215,7 @@
       "sprite_name": "ui_icon_star_legendary_01",
       "guid": "48ab8aaae82bec543b5d47f794f8bede",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 2
     },
@@ -227,7 +227,7 @@
       "sprite_name": "ui_icon_star_legendary_01",
       "guid": "48ab8aaae82bec543b5d47f794f8bede",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 3
     },
@@ -239,7 +239,7 @@
       "sprite_name": "ui_icon_star_mythic_large_01",
       "guid": "e72fdaecd2cdb88429fe8baa28accbce",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name",
       "count": 1
     }
@@ -3271,6 +3271,26 @@
       "guid": "1c0a02a82fb04f844a209a1da3510848",
       "mapping_method": "exact ability ID in sprite name (case-insensitive)"
     },
+    "ProclivityForMurder": {
+      "src": "/images/hero-profile/abilities/ProclivityForMurder.webp",
+      "width": 174,
+      "height": 174,
+      "sha256": "1b62d337d641f06265f0c37b22ab281c89838136ef7fad4a05618245592e865f",
+      "source_sha256": "d88cd657d3a1ec72cb0722688fe026a3c3c6c7fe764943c34e27a992a3225188",
+      "sprite_name": "ui_icon_ability2_ProclivityForMurder",
+      "guid": "a545700319a784032b58dcd791fa05ed",
+      "mapping_method": "exact ability ID in sprite name (case-insensitive)"
+    },
+    "TerrorchemPoison": {
+      "src": "/images/hero-profile/abilities/TerrorchemPoison.webp",
+      "width": 174,
+      "height": 174,
+      "sha256": "083ea6a2b78423dd28a353f71153a2d8877a9bde1f5c569ce292475cd6e24b3b",
+      "source_sha256": "c74374dc38526fa0b6e74a9f4ff27d63de8de7c7171045cf7f49e7fb447d3dc2",
+      "sprite_name": "ui_icon_ability2_TerrorchemPoison",
+      "guid": "d834f6e1625664efabd731d6410046fd",
+      "mapping_method": "exact ability ID in sprite name (case-insensitive)"
+    },
     "PrimeTestSubject": {
       "src": "/images/hero-profile/abilities/PrimeTestSubject.webp",
       "width": 174,
@@ -3301,7 +3321,7 @@
       "sprite_name": "ui_icon_resource_token_battle_guildboss",
       "guid": "50a90d6aa6966064da3503b39aa7cb77",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "war": {
@@ -3314,7 +3334,7 @@
       "source_bundle": "ui/guild_war/currency",
       "source_sha256": "f8404a64763b73a4a906ebb7606831ea1aa66846714792376754f5c8853e390c",
       "mapping_method": "exact frozen game sprite name",
-      "source_app_version": "1.43.157"
+      "source_app_version": "1.44.88"
     },
     "horde": {
       "src": "/images/hero-profile/modes/horde.webp",
@@ -3324,7 +3344,7 @@
       "sprite_name": "ui_icon_resource_token_battle_waves",
       "guid": "548b90b70ab544f37ac29ab9c9fce2dd",
       "source_bundle": "atlases/main",
-      "source_sha256": "c7af762d65a17bf3bade83898911d06c8564bf12c8d4105433eaae662e257f62",
+      "source_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
       "mapping_method": "exact frozen game sprite name"
     },
     "popularity": {

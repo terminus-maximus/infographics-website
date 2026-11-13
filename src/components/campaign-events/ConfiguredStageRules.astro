@@ -1,11 +1,13 @@
 ---
 import type { CampaignEventGuide } from '../../data/campaign-events/types';
+import { eventCharacters } from '../../lib/campaign-events';
 interface Props { guide: CampaignEventGuide; }
 const { guide } = Astro.props;
+const requiredNames = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' }).format(guide.requiredHeroIds.map(id => eventCharacters[id].name));
 ---
 <details class="stage-rules">
   <summary>All Extremis stage caps, deployment limits &amp; lightning timers</summary>
-  <p>Stages allowing three heroes use only Snotflogga, Tanksmasha, and Zapspitta. B stages are side branches.</p>
+  <p>Stages allowing three heroes use only {requiredNames}. B stages are side branches. Source: game data {guide.rewards.source.gameVersion}, verified {guide.rewards.source.verifiedAt}.</p>
   <table aria-label={`${guide.displayTitle} configured Extremis stage rules`}>
     <thead><tr><th scope="col">Stage</th><th scope="col">Rarity cap</th><th scope="col">Heroes</th><th scope="col">Lightning rounds</th></tr></thead>
     <tbody>{guide.stageRules.map(rule => <tr><th scope="row">E{rule.stageId}</th><td>{rule.rarityCap}</td><td>{rule.deploymentLimit}</td><td>{rule.lightningVictoryRounds ?? '—'}</td></tr>)}</tbody>

@@ -1,5 +1,6 @@
 import research from '../heroes/research.json';
 import portraits from '../heroes/round-portraits.json';
+import machines from '../incursion/machine-reference.json';
 
 export interface NewsIcon {
   label: string;
@@ -16,9 +17,14 @@ export function heroIcon(slug: string, label?: string): NewsIcon {
   return { label: label || hero.name, src: portrait.src, href: `/heroes/${slug}/` };
 }
 
-export const darasIcon: NewsIcon = { label: 'Daras Carrow', src: '/images/hero-round/Daras.webp', href: '/heroes/daras/' };
-export const boudicariIcon: NewsIcon = { label: 'Boudicari Feldorus', src: '/images/machines/round/Boudicari.webp', href: '/incursion-mow/boudicari/' };
-export const tsonjiIcon: NewsIcon = { label: 'Tson’ji (Machine of War)', src: '/images/machines/round/tauBroadside.webp', href: '/incursion-mow/tsonji/' };
+export const darasIcon: NewsIcon = { label: 'Daras Carrow', src: portraits.lostaFearmonger.src, href: '/heroes/daras/' };
+const machinePortrait = (id: string) => {
+  const machine = machines.machines.find(machine => machine.unit_id === id);
+  if (!machine?.round_portrait) throw new Error(`Missing live machine portrait: ${id}`);
+  return machine.round_portrait.src;
+};
+export const boudicariIcon: NewsIcon = { label: 'Boudicari Feldorus', src: machinePortrait('custoDreadnought'), href: '/incursion-mow/boudicari/' };
+export const tsonjiIcon: NewsIcon = { label: 'Tson’ji (Machine of War)', src: machinePortrait('tauBroadside'), href: '/incursion-mow/tsonji/' };
 
 const factionFiles: Record<string, string> = {
   'Adeptus Mechanicus': 'AdeptusMechanicus',

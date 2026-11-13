@@ -3,8 +3,8 @@
   "snapshot": {
     "id": "ce-2026-10-12-e30-safe-bet-placeholders",
     "status": "editorial_pending",
-    "updatedAt": "2026-11-09",
-    "characterBuild": "1.43.130",
+    "updatedAt": "2026-11-13",
+    "characterBuild": "1.44.88",
     "contentHash": null
   },
   "characters": {
@@ -360,7 +360,7 @@
       "id": "orksWeirdboy",
       "name": "Zapspitta",
       "faction": "Orks",
-      "portrait": "/images/lre/portraits/orksWeirdboy.png"
+      "portrait": "/images/hero-round/orksWeirdboy.webp"
     }
   },
   "events": [
@@ -384,8 +384,8 @@
         "necroChronomancer"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
       "versionNote": "The featured E30 clear was published 28 May 2026 and explicitly uses the test server. Its A1 team is a recorded reference, not a verified current-live minimum; numerical ability levels are unknown.",
       "requiredHeroes": [
         {
@@ -667,297 +667,297 @@
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 2,
+          "boardId": "desert_concept_02",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_14",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_70",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
-          "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_05",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C1_73",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_04",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "MC1_75",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_62",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_67",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EMC1_07",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_61",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "EMC1_03",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_75",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC1_03",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_08",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C1_44",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_56",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_14",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "PVP_desert_04",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_13",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_63",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "survival_03",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_74",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EC1_10",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_64",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "PVP_desert_05",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_62",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "PVP_desert_02",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_67",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC1_70",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "PVP_desert_08",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "MC1_56",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 8,
+          "boardId": "CE6_boss",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -2118,10 +2118,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign6"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign6",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -2209,8 +2210,8 @@
         "blackObliterator"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
       "versionNote": "The featured E30 clear was published 25 March 2026 with a visible Loki QA header. Its D3 core and A1 supporting pair are a recorded reference, not a verified current-live minimum.",
       "requiredHeroes": [
         {
@@ -2720,297 +2721,297 @@
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 2,
+          "boardId": "C3_58",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_13",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_17",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "MC3_53",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_07",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_27",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C3_47",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_18",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_16",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC3_05",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EC3_10",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_52",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_09",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC3_02",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC3_45",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_75",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC3_08",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EC3_11",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_73",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EMC3_05",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "EMC3_04",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C3_54",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EMC3_03",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_71",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "EC3_07",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_62",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC3_75",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C3_69",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC3_04",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_67",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C3_51",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C3_74",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C3_55",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -4708,10 +4709,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign5"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign5",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -4794,9 +4796,9 @@
         "templAncient"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
-      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; exact current game build is not established.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
+      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; the stage rules below use production 1.44.88.",
       "requiredHeroes": [
         {
           "heroId": "adeptRetributor",
@@ -5218,297 +5220,297 @@
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 2,
+          "boardId": "C6_01",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C6_02",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_03",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_04",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_04",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_03",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_06",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_06",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_08",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_09",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_08",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_11",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C6_12",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C6_13",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_06",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_14",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C6_13",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_12",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_17",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_18",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_09",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_18",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_17",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_22",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C6_23",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_24",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_25",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 6,
+          "boardId": "C6_11",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 6,
+          "boardId": "C6_26",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 6,
+          "boardId": "C6_24",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 6,
+          "boardId": "C6_26",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C6_23",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "GB_Mortarion_05",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -7578,10 +7580,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign4"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign4",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -7665,9 +7668,9 @@
         "worldTerminator"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
-      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; exact current game build is not established.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
+      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; the stage rules below use production 1.44.88.",
       "requiredHeroes": [
         {
           "heroId": "deathBlightlord",
@@ -8084,297 +8087,297 @@
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_01",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_02",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_03",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_05",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_03",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_05",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_06",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_07",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_08",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_09",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_10",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_10",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_12",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_13",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_20",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_14",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_15",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_16",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_17",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_18",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_20",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_19",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_20",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_22",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_23",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_02",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_05",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C5_26",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_26",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C5_15",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_18",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C5_22",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "GB_Belisarius_01",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -10392,10 +10395,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign1"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign1",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -10480,9 +10484,9 @@
         "ultraTigurius"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
-      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; exact current game build is not established.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
+      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; the stage rules below use production 1.44.88.",
       "requiredHeroes": [
         {
           "heroId": "ultraInceptorSgt",
@@ -11025,298 +11029,298 @@
           "stageId": "1",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_13",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "LHE_Desert_04",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "MC1_51",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_09",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "EC1_09",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "EMC1_05",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "CE2_06",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "PVP_desert_09",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_65",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_53",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "EMC1_06",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC1_09",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_03",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C1_13",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_16",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_02",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "CE2_01",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_09",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_20",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_23",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_01",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_18",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 3,
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_14",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "Waves_Xenos_04",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_Xenos_12",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_05",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "CE2_01",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "Waves_Xenos_13",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_11",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
-          "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 4,
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_10",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_16",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "Waves_Xenos_21",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 6,
+          "boardId": "CE2_boss",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -12960,10 +12964,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign2"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign2",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -13052,9 +13057,9 @@
         "tyranWingedPrime"
       ],
       "objective": "E30 completion with three medals. Earlier-stage medals do not affect this target.",
-      "ruleNote": "Eligibility and stage restrictions are provisional: the existing overview agrees with indexed wiki text, but the full rules page was not available for inspection. Confirm the current in-game requirements before investing.",
-      "rosterNote": "All eligible supports for the playable factions in character build 1.43.130 are listed. Names were cross-checked against the public character list on 11 October 2026; Machines of War are excluded.",
-      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; exact current game build is not established.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
+      "versionNote": "Treat pre-August 2025 footage at E23+ as historical. AdMech E14+ and Tyranids/Tau E13+ were rebalanced with Mythic introduction; the stage rules below use production 1.44.88.",
       "requiredHeroes": [
         {
           "heroId": "genesBiophagus",
@@ -13480,297 +13485,297 @@
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_02",
+          "sourceIds": []
         },
         {
           "stageId": "2",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_20",
+          "sourceIds": []
         },
         {
           "stageId": "3",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_45",
+          "sourceIds": []
         },
         {
           "stageId": "3B",
           "branch": "B",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_05",
+          "sourceIds": []
         },
         {
           "stageId": "4",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "GB_RogalDorn_support_04",
+          "sourceIds": []
         },
         {
           "stageId": "5",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "Waves_14",
+          "sourceIds": []
         },
         {
           "stageId": "6",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_64",
+          "sourceIds": []
         },
         {
           "stageId": "7",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC2_02",
+          "sourceIds": []
         },
         {
           "stageId": "8",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_04",
+          "sourceIds": []
         },
         {
           "stageId": "9",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_10",
+          "sourceIds": []
         },
         {
           "stageId": "10",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "GB_RogalDorn_support_01",
+          "sourceIds": []
         },
         {
           "stageId": "11",
           "branch": "main",
           "rarityCap": "Epic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "EC2_06",
+          "sourceIds": []
         },
         {
           "stageId": "12",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_28",
+          "sourceIds": []
         },
         {
           "stageId": "13",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_21",
+          "sourceIds": []
         },
         {
           "stageId": "13B",
           "branch": "B",
           "rarityCap": "Legendary",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C2_14",
+          "sourceIds": []
         },
         {
           "stageId": "14",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_17",
+          "sourceIds": []
         },
         {
           "stageId": "15",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_54",
+          "sourceIds": []
         },
         {
           "stageId": "16",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "CE3_01",
+          "sourceIds": []
         },
         {
           "stageId": "17",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "CE3_01",
+          "sourceIds": []
         },
         {
           "stageId": "18",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_60",
+          "sourceIds": []
         },
         {
           "stageId": "19",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_15",
+          "sourceIds": []
         },
         {
           "stageId": "20",
           "branch": "main",
           "rarityCap": "Legendary",
-          "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "deploymentLimit": 5,
+          "lightningVictoryRounds": 4,
+          "boardId": "MC2_45",
+          "sourceIds": []
         },
         {
           "stageId": "21",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C2_72",
+          "sourceIds": []
         },
         {
           "stageId": "22",
           "branch": "main",
           "rarityCap": "Legendary",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "CE3_02",
+          "sourceIds": []
         },
         {
           "stageId": "23",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 4,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "MC2_01",
+          "sourceIds": []
         },
         {
           "stageId": "24",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_20",
+          "sourceIds": []
         },
         {
           "stageId": "25",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_70",
+          "sourceIds": []
         },
         {
           "stageId": "25B",
           "branch": "B",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_14",
+          "sourceIds": []
         },
         {
           "stageId": "26",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "C2_50",
+          "sourceIds": []
         },
         {
           "stageId": "27",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 3,
+          "boardId": "C2_43",
+          "sourceIds": []
         },
         {
           "stageId": "28",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 3,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "C2_30",
+          "sourceIds": []
         },
         {
           "stageId": "29",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 4,
+          "boardId": "CE3_03",
+          "sourceIds": []
         },
         {
           "stageId": "30",
           "branch": "main",
           "rarityCap": "Mythic",
           "deploymentLimit": 5,
-          "sourceIds": [
-            "event-rules"
-          ]
+          "lightningVictoryRounds": 5,
+          "boardId": "GB_Riptide_01",
+          "sourceIds": []
         }
       ],
       "stages": [
@@ -15185,10 +15190,11 @@
       },
       "rewards": {
         "source": {
-          "gameVersion": "1.43.130",
-          "verifiedAt": "2026-10-11",
-          "configSha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-          "campaignId": "eventCampaign3"
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+          "campaignId": "eventCampaign3",
+          "preview": false
         },
         "shardFarms": [
           {
@@ -15271,8 +15277,8 @@
         "orksBigMek"
       ],
       "objective": "Plan for three medals on Extremis 30; no qualifying clear is recorded yet.",
-      "ruleNote": "Rules and rewards come from Marketing / QA build 1.44.120 and may change in the live release.",
-      "rosterNote": "Orks only. The required trio and three eligible supports are confirmed in the 1.44.120 configuration; Machines of War are excluded.",
+      "ruleNote": "Eligibility, deployment limits, rarity caps and rewards are verified against production game data 1.44.88. Lowest Seen remains unknown until clear evidence is available.",
+      "rosterNote": "All eligible supports for the playable factions in character build 1.44.88 are listed. Machines of War are excluded.",
       "versionNote": "Armageddon is the in-game campaign name. Blood Angels identifies the reward faction; the campaign includes mixed Imperial enemies.",
       "requiredHeroes": [
         {
@@ -15817,11 +15823,11 @@
       "infographic": null,
       "rewards": {
         "source": {
-          "gameVersion": "1.44.120",
-          "verifiedAt": "2026-11-09",
-          "configSha256": "f5f8dda968d7ef0a71d7c1a156948d0ee03126bbbde3bdb89a0ad6ff2614023a",
+          "gameVersion": "1.44.88",
+          "verifiedAt": "2026-11-13",
+          "configSha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
           "campaignId": "eventCampaign7",
-          "preview": true
+          "preview": false
         },
         "shardFarms": [
           {
@@ -15892,8 +15898,7 @@
         "safeBetGap": "The supplied infographic gives provisional editorial targets, not observed clear thresholds.",
         "gaps": [
           "No Lowest Seen clear, alternate team, or replay is recorded.",
-          "Stage-specific positioning and battle tactics await clear evidence.",
-          "Configuration is from Marketing / QA 1.44.120; verify against the live event."
+          "Stage-specific positioning and battle tactics await clear evidence."
         ],
         "builds": []
       }

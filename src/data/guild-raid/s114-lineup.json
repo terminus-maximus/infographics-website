@@ -7,12 +7,12 @@
     "system": "LocalDatabase",
     "schemaVersion": 1,
     "channel": "production",
-    "appVersion": "1.43.157",
-    "generation": "d745fbef9160d7007d5c",
-    "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+    "appVersion": "1.44.88",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
     "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
     "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
-    "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+    "seasonBindingSha256": "c331327fa00cdb240c2d72bc6f637d4a89d8ad753933388840b7f82720a62432"
   },
   "loop": [
     "M3",

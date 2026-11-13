@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "app_version": "1.43.130",
-    "config_full_hash": "ec6666201ed35fbf38dfd837c97cc6c9",
-    "extracted_at": "2026-10-11T15:17:00.715766+00:00",
+    "app_version": "1.44.88",
+    "config_full_hash": "9bdc534d9850e21cd133d4951d9e46b6",
+    "extracted_at": "2026-11-13T17:57:47.589392+00:00",
     "snapshot_files": {
-      "balance.json": "b066455101f0b72df181717053b5d6c8582718d7851387492fef1156a9f76ba5",
-      "localization.en.json": "59a7af0831244a25eb54e3eccab8b72511ab979ee7fc219456e6356acf37486b",
-      "visuals.json": "cb1b94db73e778b048d8d4283d7abb6bf877dcc7e8be54fedafad377706db510",
-      "lre.json": "bbd68da4298964a95e4fd3973fdb6eddd98f2c8a6ae71a29d6a16f2cd1ec4808"
+      "balance.json": "0496c3de2fb34530fea90eb26fef3627d5d67f1b09ba776a70ac9b4fcf6c5367",
+      "localization.en.json": "61357abd7292e7aa94205394c5fcd8e153a1840ebeda9c640e8f581c36a6d7a5",
+      "visuals.json": "29f980748719b9774635c0471a936c7556c7a13e07999082e855c2338871347d",
+      "lre.json": "607309e0f59fc237e9140dc638dcc366722b310e213f2f746f68fd2a6ac57c4f"
     }
   },
   "source_hashes": {
-    "data/raw/manifest.json": "278885c33131e4a5940a32b788a08f785f98b23964933bf78b5790d2b77d8e3b",
-    "data/raw/balance.json": "b066455101f0b72df181717053b5d6c8582718d7851387492fef1156a9f76ba5",
-    "data/raw/localization.en.json": "59a7af0831244a25eb54e3eccab8b72511ab979ee7fc219456e6356acf37486b",
-    "data/processed/catalog.json": "800e378288d103ec5aa43715f87f9b1f1e4c97b6646be7b91fff5b06fe32fadc",
+    "data/raw/manifest.json": "55c0d34758ccce4b43f443992ae75102069e9f2b92d82b5e2448b7bc232f188c",
+    "data/raw/balance.json": "0496c3de2fb34530fea90eb26fef3627d5d67f1b09ba776a70ac9b4fcf6c5367",
+    "data/raw/localization.en.json": "61357abd7292e7aa94205394c5fcd8e153a1840ebeda9c640e8f581c36a6d7a5",
+    "data/processed/catalog.json": "b9b44a5c48b4263072d773364af2158c66c6d6e73b7d9a4994b9baa57f839582",
     "scripts/build.py": "7ef66668a4e5a82c1a1b06fa413bb17b4eafd6024ee19c4e3dcd46171d0f2792"
   },
-  "game_config_sha256": "92e580134b625d90b8a02ba8ab77a68c4869d54bc9e3d134038ad9c43c786f05",
-  "asset_registry_sha256": "89d83255686b02ad283dd051b013f02a33a1714c029f48fc98eec50409e4d87e",
+  "game_config_sha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+  "asset_registry_sha256": "a40a6f43542ce983fa8d3781061c1f3ab101ad9fe30d0fa81707f23cd9bffa6f",
   "rank_policy": "Ranks 1–10 use corresponding Relic ability entries without character rarity multipliers; default rank 10.",
   "coverage": {
     "relics": 35,
@@ -92,7 +92,7 @@
         "guid": "78dd97788c0f0431db196019f4a8d03a",
         "source_bundle": "items/r_block_daemonfleshplate",
         "source_sha256": "a1884ed769431e4a6add4676fabdaf3c7fe9881a7a6ff19af898d0f4d9a05ff6",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Block_DaemonfleshPlate"
     },
@@ -159,7 +159,7 @@
         "guid": "0e4b71cab755fe547934f65a7af465b2",
         "source_bundle": "items/r_booster_block_lionhelmrelic",
         "source_sha256": "6da64927adaf23684b8afcb90533f56a1d25d530640b8f4b3a0e29497ad09ef4",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Block_LionHelmRelic"
     },
@@ -216,7 +216,7 @@
         "guid": "436917ab5209ba74083695087a9b5e23",
         "source_bundle": "items/r_booster_block_norncrown",
         "source_sha256": "4c7f5b6cd3534307888b779ce55bf21a060b6adf6c0fa574a5a254ad52df98c8",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Block_NornCrown"
     },
@@ -273,7 +273,7 @@
         "guid": "daf462d9cfeed6440b6b4c5a34093dbc",
         "source_bundle": "items/r_booster_block_phoenixgem",
         "source_sha256": "2a688b42baedf175dfda2cc603856e4635dd3fc13ce61b0780c4835fb0136d5f",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Block_PhoenixGem"
     },
@@ -332,7 +332,7 @@
         "guid": "ad929096428044b70a34ded38c0c6dac",
         "source_bundle": "items/r_booster_crit_amuletofthevoidwyrm",
         "source_sha256": "53d46762458f9f0c19592de1045ba2280ce8ffa1c37b079076914e583969b6ee",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_AmuletOfTheVoidwyrm"
     },
@@ -391,7 +391,7 @@
         "guid": "2f3d9e9bfdc20514cbdda7b23c0baae3",
         "source_bundle": "items/r_booster_crit_bookoffate",
         "source_sha256": "0dd52f65666fba1e2f39efc0476aa42fd37a4ed8b443ee1b38bd25557694d45e",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_BookOfFate"
     },
@@ -458,7 +458,7 @@
         "guid": "3dd61f0d6e4c848e2926a47f93146d3d",
         "source_bundle": "items/r_booster_crit_chaliceofbaal",
         "source_sha256": "23b57c6aef2a027642895cb056a114cfb392f9dc54ffc44099ec040d2056093d",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_ChaliceOfBaal"
     },
@@ -518,7 +518,7 @@
         "guid": "faac28ef34e2c0c409d1346a99d871ad",
         "source_bundle": "items/r_booster_crit_intoxicatingelixir",
         "source_sha256": "1c73e40b5532b067aa8da216c874e68732af92140f94ce42340866dee52c50cd",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_IntoxicatingElixir"
     },
@@ -577,7 +577,7 @@
         "guid": "c73c21aeeed65754da6d319dad92a12f",
         "source_bundle": "items/r_booster_crit_kardiocoregalvanus",
         "source_sha256": "42676333a6ab67b9dd57227bd2442f82a40fe534ea4f15d6295b686683b334df",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_KardiocoreGalvanus"
     },
@@ -646,7 +646,7 @@
         "guid": "6e7b9a2f0b9648845b406970d3750a92",
         "source_bundle": "items/r_booster_crit_netherrealmcasket",
         "source_sha256": "54fa6f96e70852fe170ccb862222c559a08df142c9db1614bc05e3286f3f0254",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_NetherRealmCasket"
     },
@@ -715,7 +715,7 @@
         "guid": "13b733f67ac3d6342aab6fbbefab0215",
         "source_bundle": "items/r_booster_crit_orbsofdecay",
         "source_sha256": "f765de3e03d517cce3afbceb4a44eb4173e60cc941e5c93e56dd489a689c2922",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_OrbsOfDecay"
     },
@@ -792,7 +792,7 @@
         "guid": "8b311d46a2355b04591c56cd95d6b806",
         "source_bundle": "items/r_booster_crit_phasalsubjugator",
         "source_sha256": "8fe330600a2cbd5cdfffb15f38c35bec3647a2ce330669f312e22187f911146e",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_PhasalSubjugator"
     },
@@ -851,7 +851,7 @@
         "guid": "f7564dff2d6418d4f942498bdd6534d5",
         "source_bundle": "items/r_booster_crit_talismanofrage",
         "source_sha256": "4c397cad997225c79c1bffe9bc6735db84ffdcc4cc178d7132f6ecdc1947fa2f",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_TalismanOfRage"
     },
@@ -908,7 +908,7 @@
         "guid": "97599fdc6e2002e45b7071f58a18eeb5",
         "source_bundle": "items/r_booster_crit_wyrdmakershelm",
         "source_sha256": "750ac26094426471b049a0cc1fe86f4030fd5a12dd9f8acb1cd62abc3531d697",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Booster_Crit_WyrdmakersHelm"
     },
@@ -975,7 +975,7 @@
         "guid": "8b98c68cc3f34d344ad33c5e4d0e6055",
         "source_bundle": "items/r_crit_bladeoftheancestors",
         "source_sha256": "7079dc9943e6f6a64c29962038d45e29e60f2801a55de634fc5c2baa131bf599",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_BladeOfTheAncestors"
     },
@@ -1042,7 +1042,7 @@
         "guid": "6014ba246d4657d44afca99b81af7f38",
         "source_bundle": "items/r_crit_dawnblade",
         "source_sha256": "db18cf11031609631f0b2a3e6569cf2cbadb521bec759582e7d84a46ab13757a",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_DawnBlade"
     },
@@ -1109,7 +1109,7 @@
         "guid": "330c00db6456360479bb2d1b77dd3df1",
         "source_bundle": "items/r_crit_dw02advancedburstcannon",
         "source_sha256": "22fbb68d64133d58439eaa6e7725f5838cbcb85dfb167942d13ba2571eb42a6b",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Dw02AdvancedBurstCannon"
     },
@@ -1186,7 +1186,7 @@
         "guid": "1fb40a7f02de7ca47919d0e48432e51c",
         "source_bundle": "items/r_crit_fidelity",
         "source_sha256": "1b842a915e270a6e0f3758860afb4c7a75228748024304bd8a774f402f93118b",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Fidelity"
     },
@@ -1243,7 +1243,7 @@
         "guid": "58d91fb1b3e4944c1b66552ebe704c68",
         "source_bundle": "items/r_crit_headwoppaskillchoppa",
         "source_sha256": "0517e6f86f80c51c6d8ee99f19dd76e23a909b78e3f86b72096a05d2c31d41c2",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_HeadwoppasKillchoppa"
     },
@@ -1310,7 +1310,7 @@
         "guid": "abb88431c052e1b44ab42edba168288a",
         "source_bundle": "items/r_crit_helspear",
         "source_sha256": "2910fbf19c32c66653c1c73e3bdcb918a64646444108d54cd02fbfbe8b2ac9f6",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Helspear"
     },
@@ -1377,7 +1377,7 @@
         "guid": "abbcd9878901dce4eb92903457c2ec21",
         "source_bundle": "items/r_crit_lakrimae",
         "source_sha256": "59fa8485b1424571ba3972f35b561135dc9a421d3b075ae8077108a3ceccb7fd",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Lakrimae"
     },
@@ -1444,7 +1444,7 @@
         "guid": "f73ed625fa0959d43858a3bcef6f106e",
         "source_bundle": "items/r_crit_maugetar",
         "source_sha256": "31c66ac0cabf321dcd4ce8bbf0bd23143eb92f02dd5142657ba80023c3725f17",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Maugetar"
     },
@@ -1504,7 +1504,7 @@
         "guid": "409730f8281a74f23b9b0d847009858f",
         "source_bundle": "items/r_crit_mawclawsofthyrax",
         "source_sha256": "5ec7317426cdc73e580faa1fdd8160be0efa05b28214d35ca8fabdac77c7ef1c",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_MawClawsOfThyrax"
     },
@@ -1581,7 +1581,7 @@
         "guid": "f9ae7bd0fb99ab3418fec6c77ea40ddd",
         "source_bundle": "items/r_crit_monsterslayerofcaliban",
         "source_sha256": "fbce7f885a3f6ee5a7f9d8697e31d77283de465e76372741ed9398baa736ed82",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_MonsterSlayerOfCaliban"
     },
@@ -1648,7 +1648,7 @@
         "guid": "31d670640b4b8954ba4d115716cf950f",
         "source_bundle": "items/r_crit_paragonspear",
         "source_sha256": "e949f177cbb1ad786c5c1d8ff15d44d505155fca22e173f4666f4fae465e6b0c",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_ParagonSpear"
     },
@@ -1721,7 +1721,7 @@
         "guid": "276d6be89b2d3406a8633e4960a37dc6",
         "source_bundle": "items/r_crit_relicboltpistol",
         "source_sha256": "fc8488bd8cda912e7f7f45a925fe009d01a0d7960cc579df20199f75aedfd3ea",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_RelicBoltPistol"
     },
@@ -1790,7 +1790,7 @@
         "guid": "b00851266a21f44f2a31193b1b6494e1",
         "source_bundle": "items/r_crit_relicpowerfist",
         "source_sha256": "969d8296bab5f07870420c5526317cac730ae6290d50924e174d40196611ffe3",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_RelicPowerFist"
     },
@@ -1847,7 +1847,7 @@
         "guid": "44943917c41f3f0428a94aaa7ff4faa4",
         "source_bundle": "items/r_crit_sabreofsacrifice",
         "source_sha256": "d22cd85cf62978beff293bd1efe30249e65199d9b021411793ca027660007811",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_SabreOfSacrifice"
     },
@@ -1914,7 +1914,7 @@
         "guid": "c79d2b88bf71c9b4fb0ad0e7b312656b",
         "source_bundle": "items/r_crit_talonofhorus",
         "source_sha256": "323c40d807374ff284d30f7564b1cd1e8a5f46991c6ef3319bbe34b29543c6b9",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_TalonOfHorus"
     },
@@ -1971,7 +1971,7 @@
         "guid": "1f7a1a64198004c75aab70c5dd2b63dd",
         "source_bundle": "items/r_crit_theardentblade",
         "source_sha256": "d5d54f72326b55a4a4a4a26fc24955687cfffebcb8e614ab926fd60a43205f54",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_TheArdentBlade"
     },
@@ -2028,7 +2028,7 @@
         "guid": "05354e3a626b3418a82a26a425fe3ce0",
         "source_bundle": "items/r_crit_vitarus",
         "source_sha256": "22bdc4c1a3364ae9bc17f4614e5c7a1e3ef5d4597a24f4c3360bde1416c164ec",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_Vitarus"
     },
@@ -2095,7 +2095,7 @@
         "guid": "0c235b65058612e4a81647ebe73682f5",
         "source_bundle": "items/r_crit_volummsmasterartifice",
         "source_sha256": "c648e10282ffa2657374a53da0579c6aeab317886d8d2e9711e3c4988d8ca50e",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Crit_VolummsMasterArtifice"
     },
@@ -2174,7 +2174,7 @@
         "guid": "646eb23c0847d25489b921cbc4023ac2",
         "source_bundle": "items/r_defensive_relicoflostcadia",
         "source_sha256": "5af17095ddd0484d2077c36c2450a3a59dbe040e5e11788dc45ddb1b25a6a6dd",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Defensive_RelicOfLostCadia"
     },
@@ -2233,7 +2233,7 @@
         "guid": "48f98f8f7174141f98487c7c897abb80",
         "source_bundle": "items/r_defensive_supacyborkbody",
         "source_sha256": "d4867bf3ab894514e6ee15b0faca53de3be4b93e33cc6d8f733756f86a11a507",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Defensive_SupaCyborkBody"
     },
@@ -2242,7 +2242,7 @@
       "ability_id": "Thrydderghyre",
       "name": "Thrydderghyre",
       "rarity": "Mythic",
-      "unique": false,
+      "unique": true,
       "hero_ids": [
         "thousTzaangor"
       ],
@@ -2290,7 +2290,7 @@
         "guid": "cc49f9a3eac0e9f4d9178ace035b7a93",
         "source_bundle": "items/r_defensive_thrydderghyre",
         "source_sha256": "ae76e5ca1d1adae9e29abfdab7b83eeab40d17f32182716582d49b883cb9daa9",
-        "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"
+        "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"
       },
       "source_pointer": "/clientGameConfig/items/R_Defensive_Thrydderghyre"
     }

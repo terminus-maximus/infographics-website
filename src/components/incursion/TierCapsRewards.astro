@@ -2,6 +2,7 @@
 import RankBadge from "../campaign/RankBadge.astro";
 import { rankReferences } from "../../lib/campaigns";
 import type { IncursionTierReward } from "../../data/incursion/types";
+import { incursionGameVersion } from "../../data/incursion/game-rules";
 
 interface Props { rows: IncursionTierReward[] }
 const { rows } = Astro.props;
@@ -9,7 +10,8 @@ const { rows } = Astro.props;
 
 <section class="guide-panel" id="tier-caps-rewards" aria-labelledby="tier-caps-rewards-heading">
   <h2 id="tier-caps-rewards-heading">Tier Caps &amp; Shard Rewards</h2>
-  <p class="section-intro">Compare rank caps and shard rewards for initial clears and raids at each Incursion tier.</p>
+  <p class="section-intro">Shard rewards verified against game version {incursionGameVersion}. Initial clears show the maximum from one route with all star rewards; your chosen branches can give fewer shards. Ranks are shown through Adamantine II.</p>
+  <p class="section-intro">Use this table for current rewards; the infographic above retains its original reward figures.</p>
   <div class="rewards-table">
     <table aria-labelledby="tier-caps-rewards-heading">
       <colgroup><col class="tier-column" /><col class="cap-column" /><col /><col /></colgroup>
@@ -26,7 +28,7 @@ const { rows } = Astro.props;
           <tr>
             <th scope="row">{row.tier}</th>
             <td class="tier-cap"><RankBadge rank={rankReferences[row.cap]} showLabel={false} /></td>
-            <td><span class="reward-amount">{row.initialClear}</span>{row.shardType && <> <span class="shard-type">{row.shardType}</span></>}</td>
+            <td><span class="reward-amount">{row.initialClear}</span>{row.shardType && <> <span class="shard-type">{row.shardType}</span></>}{row.extraRegularShards && <span class="reward-heading">+ up to {row.extraRegularShards} regular</span>}</td>
             <td><span class="reward-amount">{row.raidOnly}</span>{row.shardType && <> <span class="shard-type">{row.shardType}</span></>}</td>
           </tr>
         ))}

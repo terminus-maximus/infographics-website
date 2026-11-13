@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import build 1.43.130 Relics and original item sprites, without changing LocalDatabase."""
+"""Import build 1.44.88 Relics and original item sprites, without changing LocalDatabase."""
 from __future__ import annotations
 
 import argparse
@@ -45,8 +45,8 @@ def main():
     manifest = read(local / "data/raw/manifest.json")
     catalog = read(local / "data/processed/catalog.json")
     reference = read(SITE / "src/data/heroes/reference.json")
-    if catalog["snapshot"] != reference["snapshot"] or manifest["app_version"] != "1.43.130":
-        raise ValueError("Relics require the same reviewed 1.43.130 snapshot as the hero reference")
+    if catalog["snapshot"] != reference["snapshot"] or manifest["app_version"] != "1.44.88":
+        raise ValueError("Relics require the same reviewed 1.44.88 snapshot as the hero reference")
     for key in ("app_version", "config_full_hash", "extracted_at"):
         if manifest[key] != catalog["snapshot"][key]:
             raise ValueError(f"Relic snapshot mismatch: {key}")
@@ -61,7 +61,7 @@ def main():
     heroes = {h["unit_id"]: h for h in reference["heroes"]}
     items = {key: value for key, value in config["items"].items() if value.get("isRelic")}
     if len(items) != 35:
-        raise ValueError("Reviewed 1.43.130 Relic inventory changed")
+        raise ValueError("Reviewed 1.44.88 Relic inventory changed")
 
     warnings.filterwarnings("ignore", message="No valid Unity version found.*")
     UnityPy.config.FALLBACK_UNITY_VERSION = manifest["unity_version"]
@@ -79,12 +79,12 @@ def main():
                     raise ValueError(f"Ambiguous Relic sprite: {iid}")
                 registry[iid] = entry
     if set(registry) != set(items):
-        raise ValueError("Missing Relic sprite in the frozen 1.43.130 registry")
+        raise ValueError("Missing Relic sprite in the frozen 1.44.88 registry")
 
     output = SITE / "src/data/heroes/relics.json"
     # Retain the first reviewed bundle hashes across future cache relocations.
     previous = read(output) if output.exists() else {}
-    pinned_icons = {r["id"]: r["icon"] for r in previous.get("relics", [])}
+    pinned_icons = {r["id"]: r["icon"] for r in previous.get("relics", [])} if previous.get("snapshot") == catalog["snapshot"] else {}
     relics, generated, assigned = [], {}, set()
     for iid, item in sorted(items.items()):
         aid = item["abilityId"]
@@ -137,7 +137,7 @@ def main():
         icon = {"src": relative, "width": picture.width, "height": picture.height,
                 "sha256": assets.hashlib.sha256(buffer.getvalue()).hexdigest(),
                 "sprite_name": name, "guid": entry["guid"], "source_bundle": bundle,
-                "source_sha256": sha(bundle_file), "mapping_method": "Exact item ID in frozen 1.43.130 sprite registry"}
+                "source_sha256": sha(bundle_file), "mapping_method": "Exact item ID in frozen 1.44.88 sprite registry"}
         relics.append({"id": iid, "ability_id": aid,
                        "name": build.plain(terms.get(f"Items/{iid}_name", ability["name"])),
                        "rarity": item["rarity"], "unique": item["isUniqueRelic"], "hero_ids": owners,
@@ -145,7 +145,7 @@ def main():
                        "icon": icon, "source_pointer": f"/clientGameConfig/items/{iid}"})
 
     if len(assigned) != 68:
-        raise ValueError("Reviewed 1.43.130 Relic hero coverage changed")
+        raise ValueError("Reviewed 1.44.88 Relic hero coverage changed")
     result = {"schema_version": 1, "snapshot": catalog["snapshot"], "source_hashes": source_hashes,
               "game_config_sha256": sources["balance"]["sha256"],
               "asset_registry_sha256": sources["asset_references"]["sha256"],

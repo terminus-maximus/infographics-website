@@ -142,5 +142,11 @@
     "alt": "Uthar Legendary Release Event Infographic",
     "width": 700,
     "height": 394
+  },
+  "/campaign-event/blood-angels/": {
+    "src": "/images/web/ce-blood-angels.webp",
+    "alt": "Blood Angels Event Campaign infographic",
+    "width": 700,
+    "height": 392
   }
 }

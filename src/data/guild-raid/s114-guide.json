@@ -7,12 +7,12 @@
     "system": "LocalDatabase",
     "schemaVersion": 1,
     "channel": "production",
-    "appVersion": "1.43.157",
-    "generation": "d745fbef9160d7007d5c",
-    "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+    "appVersion": "1.44.88",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
     "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
     "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
-    "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+    "seasonBindingSha256": "c331327fa00cdb240c2d72bc6f637d4a89d8ad753933388840b7f82720a62432"
   },
   "loop": [
     "M3",
@@ -5992,7 +5992,7 @@
     "maximumTierDistance": 2,
     "maximumArchetypes": 3
   },
-  "eligibleReplayCount": 2211,
+  "eligibleReplayCount": 2226,
   "rejected": [
     {
       "videoId": "tCe07HgytEk",
@@ -6024,20 +6024,20 @@
     }
   ],
   "provenance": {
-    "generatedAt": "2026-11-13T03:49:27.303Z",
-    "masterSha256": "dc64f02bc7eb54a330e63ff38b095233a12a80ae7350cb6c59d14d08faa6d579",
-    "lineupSha256": "3833b847e795585114261d7f9ea07c3e92df1dbf469f22c06d2791fd41ff089c",
+    "generatedAt": "2026-11-13T18:02:03.645Z",
+    "masterSha256": "8ede9181225c1bf4284d5e4edd33c7ad29620ae8690dd6223420e6d93df27456",
+    "lineupSha256": "17a44257e386858c02926fa20cc164e49e50c71924580fbb372de04fb302aeaa",
     "source": "Reviewed Replay Library master",
     "lineupSource": {
       "system": "LocalDatabase",
       "schemaVersion": 1,
       "channel": "production",
-      "appVersion": "1.43.157",
-      "generation": "d745fbef9160d7007d5c",
-      "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+      "appVersion": "1.44.88",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
       "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
       "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
-      "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+      "seasonBindingSha256": "c331327fa00cdb240c2d72bc6f637d4a89d8ad753933388840b7f82720a62432"
     },
     "policyVersion": 1
   }

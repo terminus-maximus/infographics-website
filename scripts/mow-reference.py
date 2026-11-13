@@ -41,13 +41,15 @@ def main():
     catalog = read(local / "data/processed/catalog.json")
     images = read(local / "data/processed/image-assets.json")
     profiles = read(SITE / "src/data/incursion/machine-profiles.json")
+    additions = read(SITE / "src/data/updates/profile-additions.json")
+    profiles["machines"] += additions["machines"]
     if len({p["unit_id"] for p in profiles["machines"]}) != len(profiles["machines"]) or len({p["slug"] for p in profiles["machines"]}) != len(profiles["machines"]):
         raise ValueError("Duplicate machine identity or slug")
     if any(p["rating"] is not None and (type(p["rating"]) is not int or not 1 <= p["rating"] <= 5) for p in profiles["machines"]):
         raise ValueError("Ratings must be reviewed 1–5 stars or explicitly unrated")
     if sha(SITE / "public" / profiles["rating_source"].lstrip("/")) != profiles["rating_source_sha256"]:
         raise ValueError("Rating infographic changed; visually review profiles and update their approved source hash first.")
-    if catalog["snapshot"]["app_version"] != "1.43.130" or images["snapshot"] != catalog["snapshot"]:
+    if catalog["snapshot"]["app_version"] != "1.44.88" or images["snapshot"] != catalog["snapshot"]:
         raise ValueError("Review changes to the production snapshot before importing.")
     units = {c["id"]: c for c in catalog["characters"] if c["kind"] == "machine_of_war"}
     abilities = {a["id"]: a for a in catalog["abilities"]}
@@ -131,7 +133,7 @@ def main():
         machines.append({"unit_id": uid, "name": c["short_name"], "full_name": c["full_name"],
                          "title": c["title"], "description": c["description"],
                          "faction_id": c["faction_id"], "faction": c["faction_name"], "alliance": c["alliance_id"],
-                         "portrait": asset("portraits", uid), "default_progression": default["index"],
+                         "portrait": asset("portraits", uid), "round_portrait": asset("round_portraits", uid), "default_progression": default["index"],
                          "progression": [{key: p[key] for key in ("index", "rarity", "stars", "max_ability_level", "ability_multiplier_pct")} |
                                          {"star_label": helpers.star_label(p["stars"])} for p in unlocked], "abilities": records})
     result = {"schema_version": 1, "snapshot": catalog["snapshot"], "source_hashes": hashes,

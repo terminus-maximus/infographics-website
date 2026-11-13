@@ -1,5 +1,6 @@
+import { incursionTierRewards } from "./game-rules";
 import type { IncursionGuide } from "./types";
-import { mechanicalCore, mechanicalCoreSummary, xenosRules, xenosPowerNotes, xenosMechanics, xenosTierRewards } from "./xenos";
+import { mechanicalCore, mechanicalCoreSummary, xenosRules, xenosPowerNotes, xenosMechanics } from "./xenos";
 import { pbcStages } from "./xenos-stages";
 
 // Source review and coverage qualifications: docs/incursion-guides.md.
@@ -102,7 +103,7 @@ export const plagueburstCrawlerGuide: IncursionGuide = {
     caveat: "The March 2025 source uses Re’vas, Aleph, Boss, Calandis, and Maugan. Battle 6 is an inserted alternate branch with Restoration. Apply the positioning lessons to your current roster and map; these are not verified current-Mythic openings.",
     stages: pbcStages,
   },
-  tierRewards: xenosTierRewards,
+  tierRewards: incursionTierRewards("deathCrawler"),
   relatedGuides: [
     { label: "← Incursion & Machine of War basics", url: "/incursion-mow" },
     { label: "Shared Xenos core: Z’Kar →", url: "/incursion-mow/zkar/" },
@@ -142,6 +143,6 @@ export const plagueburstCrawlerGuide: IncursionGuide = {
       },
     ],
     references: [...xenosMechanics, { label: "Contagions of Nurgle", url: "https://tacticus.wiki.gg/wiki/Contagions_of_Nurgle" }, { label: "Contamination & other hex effects", url: "https://tacticus.wiki.gg/wiki/Hex_Effect" }, { label: "Plague Marines", url: "https://tacticus.wiki.gg/wiki/Plague_Marine_%28NPC%29" }],
-    limitations: "Research checked October 26, 2026. The reviewed videos are from March 2025; later Mythic claims are written community reports. Positioning and roster-preservation lessons are better supported than current damage breakpoints. No minimum ranks, guaranteed openings, or universal five are established. The tier-cap and shard-reward table is transcribed from the supplied PBC infographic.",
+    limitations: "Research checked October 26, 2026. The reviewed videos are from March 2025; later Mythic claims are written community reports. Positioning and roster-preservation lessons are better supported than current damage breakpoints. No minimum ranks, guaranteed openings, or universal five are established. Shard rewards use production 1.44.88; rank limits use the live rarity rules and the guide’s Adamantine II display ceiling.",
   },
 };

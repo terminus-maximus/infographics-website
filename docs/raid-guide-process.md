@@ -1,5 +1,7 @@
 # Guild Raid guide process — v2
 
+**November 13 live-data refresh.** S114 is now bound to production **1.44.88**, generation `08c5721cbf6ec4ed5e6a`, catalog SHA-256 `aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4`. All 25 normalized encounter/map fingerprints and the repeat loop match the previous binding. Team selections and damage averages are unchanged. The editorial Design preview status and season date are separate from the live game source and remain unchanged. [Audit and validation](game-data-1.44-live-audit.md).
+
 The season page becomes the complete guide. One graphic summarizes the five loop bosses, displayed in descending order: M3, M2, M1, L5, L4. Both use the same season snapshot; no image is required to build or use the page.
 
 This is the go-forward workflow from S114, implemented by the local `guild_raid_v2` skill at `/Users/danfoster01/.codex/skills/guild_raid_v2/SKILL.md`. S114 is the reference implementation at `/guild-raid/previews/s114/`; accepting this process does not publish it or switch the live season. The older `raid_guide_replays` skill remains available for explicitly requested legacy CSV work. V2 does not update the replay master or historical curated CSVs.

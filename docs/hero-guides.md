@@ -1,9 +1,6 @@
 # Hero Guides: sources, maintenance and launch checks
 
-Daras was added on November 9 from Game Version 1.44.120 with all ratings
-Pending, bringing the directory to 120 heroes. See [Game update profiles](game-update-profiles.md)
-for the separate reference import and editorial instructions. The scoring
-release and historical snapshots described below remain unchanged.
+Current game reference: **production 1.44.88**, 120 heroes, November 13, 2026. Daras uses the canonical live import with Pending ratings. The current Overall release is `analysis/overall/2026-11-13-live-144/scores.json`: 42 required-hero bonuses, 111 ranked and 9 Pending on the website. The November monthly edition is preserved. See [live-data audit](game-data-1.44-live-audit.md) and [profile imports](game-update-profiles.md). Dated scoring sections below describe their original releases.
 
 **Maintenance entry points:** [current scoring contract](../../HeroDatabase/CURRENT_CONTEXT.md), [score-update workflow](hero-score-update-workflow.md), and [Hero Score Refresh skill](/Users/danfoster01/.codex/skills/hero-score-refresh/SKILL.md). Follow the source registry rather than dated path examples.
 

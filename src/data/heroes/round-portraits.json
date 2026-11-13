@@ -3,12 +3,12 @@
     "src": "/images/heroes/Rosie.webp",
     "width": 128,
     "height": 128,
-    "sha256": "34b4f6937316887f95b3ad60eb3e39a45383bd7e4975a537bb05f98d18918e4f",
+    "sha256": "780287ac382b8f0417648b76854e6b3f5ededdbeece10588372342b144193b30",
     "source_sha256": "beb4d65cf292d57133c84dae7ee24d44a3874c4291247dcc00a37b6d88109045",
     "source_sprite": "ui_image_RoundPortrait_adept_canoness_01",
     "source_guid": "989c2e60932091c4799bc4ef49e1594e",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -17,22 +17,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      9.549385,
-      7.35086,
-      10.15861,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "adeptCelestine": {
     "src": "/images/heroes/Cele.webp",
     "width": 128,
     "height": 128,
-    "sha256": "8778aa85937c67f433d388f753ec92620628113bf0aa00bdbb3f16498ba74883",
+    "sha256": "cfdb8901ec93160e6100b78e677bf909488a76ac32fcdc70fd75e6c01275e411",
     "source_sha256": "a9701d64c36aaffa54dc842ed7e4ae5d988ac406eba24a3983c571b94af2f297",
     "source_sprite": "ui_image_RoundPortrait_adept_celestine_01",
     "source_guid": "3a7058443fd34f846bfaec7d0315df45",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -41,22 +41,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.30097,
-      10.52617,
-      11.591294,
-      1.467068
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "adeptHospitaller": {
     "src": "/images/heroes/Isa.webp",
     "width": 128,
     "height": 128,
-    "sha256": "1722063667d89c2d5afefbd07a177bd4d3892332dba43f0a5fa4b6de77c6ab2b",
+    "sha256": "cf479136e8a61d80d8ec22db69bf4cb7a7069e7eac2fc1c9040e8f438f69b87e",
     "source_sha256": "5d75da65b1d8153223550731d3776b53e2b76030504d87a3b2223eca5e65fad9",
     "source_sprite": "ui_image_RoundPortrait_adept_hospitaller_01",
     "source_guid": "7a786317b2e6d254e8d8822305806f64",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -65,22 +65,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.880014,
-      12.237394,
-      13.233101,
-      1.377006
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "adeptMorvenn": {
     "src": "/images/heroes/Morvenn.webp",
     "width": 128,
     "height": 128,
-    "sha256": "15527772102f4d7389d8cdcc04f2427ba54a71da68ecbcfe4a630a9403ae4005",
-    "source_sha256": "5cb6ea55c2093d907ec09294e938dd7e123764a363776ab44778229f3428c4b9",
+    "sha256": "90b86021d389841024cb92139bf53e392eba094bd7200408a16f501884a29314",
+    "source_sha256": "94e714b45aa80647b7e7b15687358f39c1c3bdc38e4f3d0150ec451f0fb978e6",
     "source_sprite": "ui_image_RoundPortrait_adept_morvenn_01",
     "source_guid": "190d72fa75442c64099f176d370f2389",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -89,22 +89,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.824662,
-      9.263115,
-      10.128901,
-      1.311844
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "adeptRetributor": {
     "src": "/images/heroes/Vindi.webp",
     "width": 128,
     "height": 128,
-    "sha256": "569024a5be648e535fb779a6163e67df61acb1daec2edc128a22582e0174f88a",
-    "source_sha256": "ec9a4d69fcb5ff25004c340cca8fe5c8d1b739e0717388583c903fcdd18be355",
+    "sha256": "adc6b6ed83d73be087170ee2f8a5ee3e8023462844dfbcf883f60dc6da900da0",
+    "source_sha256": "a782483d5cd012a560bb49645c7d6199461169477801450f10eab27a5a0db1c1",
     "source_sprite": "ui_image_RoundPortrait_adept_retributor_01",
     "source_guid": "f475103d203190d47a9d7815691c4f10",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -113,34 +113,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.259088,
-      10.442917,
-      11.416533,
-      1.306736
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "admecDestroyer": {
-    "src": "/images/hero-round/admecDestroyer.webp",
+    "src": "/images/heroes/Sygex.webp",
     "width": 128,
     "height": 128,
-    "sha256": "1de7b70efcfbece76013bf1f9b4bda012d6e01543ec36df9364bef55fdd4682c",
-    "source_sha256": "6f6b22c28934f3c7b8fd2ba4d97ea534932026682b2ec4e8ad10eee90893c384",
+    "sha256": "1c7ab5082bab5c03c5698a707899cf0a7bfa460520785105713621ac11957a25",
+    "source_sha256": "98725161726ca65c13923249e994a4c3f61f4d96ae60b94cc47e5552536f7622",
     "source_sprite": "ui_image_RoundPortrait_admec_destroyer_01",
     "source_guid": "22af579ee72dca247b86b413cdc82c0d",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "admecDominus": {
     "src": "/images/heroes/Vitru.webp",
     "width": 128,
     "height": 128,
-    "sha256": "ccbbfb0a211af059e204aefae2ae901da9910bfa587b3927bd019316428d8cec",
+    "sha256": "82a3b74e28c0ba84080501a8c25cd37d773b68ca10ece46774ebcfe43d353a6d",
     "source_sha256": "c3ee66c13f5df294ac22a36a79b34edee2d8326f0c1ead6ef96edff8b397338d",
     "source_sprite": "ui_image_RoundPortrait_admec_dominus_01",
     "source_guid": "cc42dc660a39a6548a75db55772b31df",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -149,34 +161,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.580633,
-      12.588744,
-      13.957288,
-      1.297156
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "admecManipulus": {
-    "src": "/images/hero-round/admecManipulus.webp",
+    "src": "/images/heroes/Actus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "6bb5097e9dcd72038e7279380a74ed2de94f1798133f41b6e28ab7195f6c4b59",
-    "source_sha256": "6ceae41750454ef4f8db4acfbcdf5ff9a1157d1898347667f151859949d31aa7",
+    "sha256": "8320b777eb658fc83c3c360420fd735a67f9dff738ca48510dc80da9dfc69312",
+    "source_sha256": "d5df52b730302a377809e6ee951e7ed9ca5e88150d939e872973d5d6c7a14e32",
     "source_sprite": "ui_image_RoundPortrait_admec_manipulus_01",
     "source_guid": "0fe1ba6d88f7ab148bd62dff371462f4",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "admecMarshall": {
     "src": "/images/heroes/Tan.webp",
     "width": 128,
     "height": 128,
-    "sha256": "2620f4bf4b0b7d57fa585d91062b13ba3e670c73e7a4e9da57c5b5105db68eb8",
-    "source_sha256": "c9c75e213677b1f40a00258dfd62e5b1f1df2875b38c8c5ec4ad46ffed9751cc",
+    "sha256": "7ab1db3717e84e64d5a52a4fb16072a38bca862a19bc28c2fbb087a29b0b7584",
+    "source_sha256": "a3593e33eebc2dd40eb7e71625af9ba763f018b90a50233c901df75463ab888c",
     "source_sprite": "ui_image_RoundPortrait_admec_marshall_01",
     "source_guid": "ea86d7ab8d4d87b40b9a6f8d5539bfcf",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -185,34 +209,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.676822,
-      13.293693,
-      14.52761,
-      1.435552
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "admecRuststalker": {
-    "src": "/images/hero-round/admecRuststalker.webp",
+    "src": "/images/heroes/Rho.webp",
     "width": 128,
     "height": 128,
-    "sha256": "03035649b48c7754807eddd7d25befa2ac33cf29f1f0e37155dd45b0d78dc2eb",
-    "source_sha256": "cc9cf6fd0c638ead74bf3692d789a8d55529fd256da1116c373c0eb78a3e9ba6",
+    "sha256": "9ac75792215462a41ea4c15ab1db8018b35a42547ae9f17afd84758c8addb212",
+    "source_sha256": "dd082b808abb0197832b0f25b133ea24849bd4adf331d9616600f3d833f8c93c",
     "source_sprite": "ui_image_RoundPortrait_admec_ruststalker_01",
     "source_guid": "ef01fead9654e634681787f3f4006cc6",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "astarCyrus": {
     "src": "/images/heroes/Cyrus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "dda41e738eb7af3105714009de1733a210280bdf2119704d4f6b93aa8d52628f",
-    "source_sha256": "05af81e24ca69a85caf2217c66392f7358408396c65aa46509a3c6515ea63a1c",
+    "sha256": "527b563a5dae1163306d95859d261cfadbe3871a574781e0253fcf8e060c4bb1",
+    "source_sha256": "d0ce070ce8b604d37f42b27a5f857bb510dd78493ea04e60c9bd60bd84d1e0ed",
     "source_sprite": "ui_image_RoundPortrait_astar_cyrus_01",
     "source_guid": "8cb9f1cb1184de64c941e1de52fdb2df",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -221,34 +257,34 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.083062,
-      12.637516,
-      14.786308,
-      1.295682
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astarEradicator": {
     "src": "/images/hero-round/astarEradicator.webp",
     "width": 128,
     "height": 128,
-    "sha256": "26423a425fe961ce87fbbbe7a14f77680bf62785c89d350cdba6da4d30b018b1",
-    "source_sha256": "5007d1dffec5e7641c1637a3cba8ee9c27e0f742f06db3e66055081f93d54af1",
+    "sha256": "11860f866f079eb0a368a1fd9fb1ef18493bada0cad8b17b72fe344d6ee1849c",
+    "source_sha256": "acd495ed9b892136a734a530cbb7d2062909547a5f03ee4e08bae1fe9fe8606d",
     "source_sprite": "ui_image_RoundPortrait_astar_eradicator_01",
     "source_guid": "fba8e37ae3461734dba745feed06c7f3",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
   },
   "astarLysander": {
     "src": "/images/heroes/Lysander.webp",
     "width": 128,
     "height": 128,
-    "sha256": "a82af02175182ee6a3db494fe5d93f2a86bc42faf9587f9a3d77c2daffd6a976",
-    "source_sha256": "8668a6374090980655dffb3c224aab1a33f5055593170d1ccd74fafd692befad",
+    "sha256": "3bf8c8b7067e403e813f49e59c07d322f8bde13a7381c1f3ce44026af6d10c69",
+    "source_sha256": "6edbc4d58016e847d4aab68bdc810cfc352e00459d7158feec9184f520349328",
     "source_sprite": "ui_image_RoundPortrait_astar_lysander_01",
     "source_guid": "b883179f79d3dc34aa967367787461cc",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -257,22 +293,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.069262,
-      9.25289,
-      13.444227,
-      0.803594
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astraBullgryn": {
     "src": "/images/heroes/Kut.webp",
     "width": 128,
     "height": 128,
-    "sha256": "9a7b380c1cc03fe5b466876f8a5456ce5b680230df87e961c204669be5a6a1ad",
+    "sha256": "332bbc5f52d6fc675ee90551e772cb3d15e13fa940f064701aa2513001618153",
     "source_sha256": "8c6e33f1e64cde49db4b54403feb05327c814acb87ed01078b457780c11c75dc",
     "source_sprite": "ui_image_RoundPortrait_astra_bullgryn_01",
     "source_guid": "2f1b5ff544de51b40a5ab8173305e99a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -281,22 +317,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.164371,
-      10.912509,
-      12.674043,
-      1.343269
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astraCreed": {
     "src": "/images/heroes/Creed.webp",
     "width": 128,
     "height": 128,
-    "sha256": "fe685a34d1f6691e39f33eced0a387bf97fc8e1d4e5927aded9eec119f41fe37",
+    "sha256": "6edcf8d27e6f7c2c4e316c33d6c9fdbc13a6b98d2e99cd08a4d8b3cc924527c2",
     "source_sha256": "f1035d98ed78e7200f9bcd84585bc786c2cc68b1f34c2a88b579e9d8b96a2f3f",
     "source_sprite": "ui_image_RoundPortrait_astra_creed_01",
     "source_guid": "b9e7ada26893db54abb922f5d6c83e04",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -305,9 +341,9 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      7.167646,
-      3.648646,
-      5.475383,
+      0.0,
+      0.0,
+      0.0,
       0.0
     ]
   },
@@ -315,12 +351,12 @@
     "src": "/images/heroes/Dreir.webp",
     "width": 128,
     "height": 128,
-    "sha256": "821972fa880034455990503f16ff6a5df550de2997fc39d91dad5aa128b12d25",
+    "sha256": "29b4dec529dd608dd45f821d2916929acc9640f42337fc800084078ddd212928",
     "source_sha256": "32a7b2027b0fa203bdcc8098e1187e7bae009b660a19cec1d4b50e7a3cb07301",
     "source_sprite": "ui_image_RoundPortrait_astra_dreir_01",
     "source_guid": "324295a719a24914bb55af3ebda99650",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -329,22 +365,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.80463,
-      12.204497,
-      14.134443,
-      1.4777
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astraOrdnance": {
     "src": "/images/heroes/Thad.webp",
     "width": 128,
     "height": 128,
-    "sha256": "ec5008e3e195d4d3d93c124f05d7058e5009b5882f2c4a2273837c49b62e4d03",
-    "source_sha256": "3b620e398b5244b7baae96fcc27fa516ae5ddc261bbb2e5eeb324e5a21428b19",
+    "sha256": "10fcbf40b882c1ecfcb0cfd2d421262100114a6be7cf3a9d2747eea9dd182174",
+    "source_sha256": "a6069634846b55ddb7593e81309a62ecac02751f5b6c32a082502bf0fb7ddb91",
     "source_sprite": "ui_image_RoundPortrait_astra_ordnance_01",
     "source_guid": "e4fdc0be002175f449f89ff1bf49d039",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -353,22 +389,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      9.331632,
-      7.77886,
-      8.997533,
-      1.24212
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astraPrimarisPsy": {
     "src": "/images/heroes/Sibyll.webp",
     "width": 128,
     "height": 128,
-    "sha256": "5d9f72402f9b57f4c76d775ca266197e84618e43ed0d5740131eb16c0bdfe584",
+    "sha256": "12929f68455ce2798512a6e325406f963502c5a7c13132b4ef8ae50224e03ac7",
     "source_sha256": "3ad52f0c7aa7319c4c77b0075c3c4c9df59690ff81264dd52d48151fee4557ba",
     "source_sprite": "ui_image_RoundPortrait_astra_psyker_01",
     "source_guid": "3858bdb1730bd2a4f916b14e4d2454de",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -377,22 +413,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.848148,
-      10.459697,
-      12.588297,
-      1.217791
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "astraYarrick": {
     "src": "/images/heroes/Yarrick.webp",
     "width": 128,
     "height": 128,
-    "sha256": "815ac7b954f6972cb7e746d138e3fb8728174bb7ad07bfcc350eb38ec793c2e2",
+    "sha256": "3f1559ccf8ce138e05efa31c6fa1e428aee71265be54a136378830f5de6ed4bc",
     "source_sha256": "fe43aafdfc156b0cbc856aa67314cdc50ede0c8235a2d54cd44a19d3ffb733b6",
     "source_sprite": "ui_image_RoundPortrait_astra_yarrick_01",
     "source_guid": "5a21658459732a244a047d5b42a2b79f",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -401,22 +437,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.700754,
-      13.270766,
-      13.100327,
-      1.468471
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "blackAbaddon": {
     "src": "/images/heroes/Abaddon.webp",
     "width": 128,
     "height": 128,
-    "sha256": "ddb20354e7c3489d0652cc439b8dc6f258f98edf84313a8e68161218fed9a500",
-    "source_sha256": "ffbd573470540ed1bd5f239cee79fadeecb327d4b0cccad5299f167e130ce854",
+    "sha256": "5dd36aba3e392fe04a4a3a81ab4b15be2501e15c8e6298bbfeea8901de6f9bec",
+    "source_sha256": "51a481a672a1a35c4365ba171c1a8be748afee1a88bf39b52df3467a1db5daa6",
     "source_sprite": "ui_image_RoundPortrait_black_abaddon_01",
     "source_guid": "9c9553a8337ed6d468fc681b90020486",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -425,22 +461,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.8605,
-      9.192361,
-      9.866096,
-      1.41063
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "blackHaarken": {
     "src": "/images/heroes/Haarken.webp",
     "width": 128,
     "height": 128,
-    "sha256": "2c538801017532467471a09560ed63b22a18f7e17ddff45d618dd3f9b00d7924",
-    "source_sha256": "496e6332b37c8a39899b28de23389ad88ee084a028d26a84ff21c9d0ab8b5c2f",
+    "sha256": "5d0b9270a8acd27e9c26b26a136d8c3c1e9401e256c9878ace93cf31d90f7114",
+    "source_sha256": "1c125a069c5b428bdc8cda189a7a20c3353d885f7decb02003ed4361156dcbfa",
     "source_sprite": "ui_image_RoundPortrait_black_haarken_01",
     "source_guid": "d2ac829b68ceeb646888551dbd306cc0",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -449,22 +485,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.619582,
-      11.871236,
-      12.980483,
-      1.397195
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "blackObliterator": {
     "src": "/images/heroes/Volk.webp",
     "width": 128,
     "height": 128,
-    "sha256": "a28424d5603646b48ac1bc0fc199b0dc146fde917d3232d1fbd6bff5b80d2e46",
+    "sha256": "be4e7f56c73b152f7a32bdcd29683f963d64581261b7ef8bb8c176d584addc4b",
     "source_sha256": "f7875d622185cb98b1ec5227291424b08eed84b21eeed5b045d0e0b5b2ead444",
     "source_sprite": "ui_image_RoundPortrait_black_obliterator_01",
     "source_guid": "d253e3c7cc0a43749bb709ba033ff934",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -473,22 +509,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.69273,
-      8.670477,
-      11.182587,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "blackPossession": {
     "src": "/images/heroes/Archi.webp",
     "width": 128,
     "height": 128,
-    "sha256": "3022d3c6a69a63ffef6410f2b9047b5d3d6b50aac68c314562ed483637eb0d8e",
+    "sha256": "f38f68fdf4663f6a73059eb322e7c3288a63849376af2309e4e41be1fb3213c8",
     "source_sha256": "3d3eb1b61af0f06e696d00c90cafef9d8e8b4e1257b9db6b2c6fa49f0710daf1",
     "source_sprite": "ui_image_RoundPortrait_black_possession_01",
     "source_guid": "a5ae5bf2d651e8d4ea2c24a6616652d5",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -497,22 +533,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.623797,
-      13.26344,
-      14.626412,
-      1.495554
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "blackTerminator": {
     "src": "/images/heroes/Angrax.webp",
     "width": 128,
     "height": 128,
-    "sha256": "5387cd5aac671d042628a62bad5999d630671cd3b4898a6fbde793acc1f68d9b",
+    "sha256": "a1b96aed6442dfa99187141377f21ad55b1486befd7b073b160bb8b7ee70eda5",
     "source_sha256": "e2cd9a2d839399a6eee7e499352b104a6728d184c0c868bdaa01fded7a935a03",
     "source_sprite": "ui_image_RoundPortrait_black_terminator_01",
     "source_guid": "f951804469450384f878dfe1c46d4f2a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -521,14 +557,14 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      8.025445,
-      6.790658,
-      8.47094,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "bloodDante": {
-    "src": "/images/hero-round/bloodDante.webp",
+    "src": "/images/heroes/Dante.webp",
     "width": 128,
     "height": 128,
     "sha256": "27fed30e4be805e6132ee4907c75a3164ad7a12a90f3d8297023e89b9af7da1f",
@@ -536,19 +572,7 @@
     "source_sprite": "ui_image_RoundPortrait_blood_dante_01",
     "source_guid": "70e11828175c65a42a149067eed129d2",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "bloodDeathCompany": {
-    "src": "/images/heroes/Lucien.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "c93b1ac58af71a37631d8da14e186d38f9fef125c7d504f88b72c6bfc4d6393d",
-    "source_sha256": "57c43167494354ade7c55578fff51bb7ad47461454be4fb9f2fc6e34728da29b",
-    "source_sprite": "ui_image_RoundPortrait_blood_deathcompany_01",
-    "source_guid": "696995a7c24b7bd498be08be30a5ed15",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -557,22 +581,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.574101,
-      10.681986,
-      11.491868,
-      1.416706
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "bloodDeathCompany": {
+    "src": "/images/heroes/Lucien.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "f864df6ed300339519a438680cef62deb76c9a0e68017792a1399e583093e532",
+    "source_sha256": "57c43167494354ade7c55578fff51bb7ad47461454be4fb9f2fc6e34728da29b",
+    "source_sprite": "ui_image_RoundPortrait_blood_deathcompany_01",
+    "source_guid": "696995a7c24b7bd498be08be30a5ed15",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "bloodIntercessor": {
     "src": "/images/heroes/Mataneo.webp",
     "width": 128,
     "height": 128,
-    "sha256": "f7260ffa5fdc5ba576d4e35f5e5eb72c9d6fc15befab4e1c19eea85ad011b994",
-    "source_sha256": "5ffc908882884cf33b2d6c988ba93adc5323da55770d405a9f68cd1bf7a9e33f",
+    "sha256": "bb30b57918b0162f40343ee33067c70ea4ffd4ec81f53f0367a76d30108c67dc",
+    "source_sha256": "ee9deaef9058e08c7541246008e5783c56d22a84b386cd81a8183f351350353f",
     "source_sprite": "ui_image_RoundPortrait_blood_intercessor_01",
     "source_guid": "40d2ca1e88610c449a24f22312b6edb5",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -581,22 +629,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.850908,
-      11.156728,
-      12.45144,
-      1.199636
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "bloodMephiston": {
     "src": "/images/heroes/Meph.webp",
     "width": 128,
     "height": 128,
-    "sha256": "eb8d18933658da29aaea5dbe354b1ab429538b1f3c4edb57fa5a716e107c12f3",
+    "sha256": "ec1eab374468c136bbde406c31765169b6f3d1e6af1701418f3dd88e148c37d3",
     "source_sha256": "e28b3c16e400b46ddc34408f50b0a672cc98db05514128305bc16a808f140f01",
     "source_sprite": "ui_image_RoundPortrait_blood_mephiston_01",
     "source_guid": "71c8935683a1ad9499f2110d5413cc25",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -605,22 +653,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.308227,
-      8.275764,
-      11.085374,
-      1.273785
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "bloodSanguinary": {
     "src": "/images/heroes/Nico.webp",
     "width": 128,
     "height": 128,
-    "sha256": "64eb90462f3e0bd95c2e3efd138a0fd4f9aa8430a1735d9a7caf5412ebe75d15",
+    "sha256": "824995baed4e636a1c71f56f0575ff51dc25c8544102bde6306c3eebe43227f7",
     "source_sha256": "088c27bff1e0dffd0e81ec5f4bad6b79a7f2de4be343dd162f2096eb48912b26",
     "source_sprite": "ui_image_RoundPortrait_blood_sanguinary_01",
     "source_guid": "0d21735391b335c45a6894329d008677",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -629,22 +677,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.773624,
-      10.913124,
-      12.55504,
-      1.452606
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "bloodTerminator": {
     "src": "/images/heroes/Cezare.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c52121cdb6e9ceabc96055ef12eae44714fcdb827abfef0d433dd393e7a2aea1",
-    "source_sha256": "287306724ecc68801f9f9836fedd59334579441cdd6261d1525b8041a2e6c01a",
+    "sha256": "da0934a8988648306fb80089a0fa7f757912b4df418d9589eea51ff219b68a2e",
+    "source_sha256": "36838a83a6d5e13f7c6f02a29451875f8d82942fa217e0a7f3467bd2b46e7270",
     "source_sprite": "ui_image_RoundPortrait_blood_terminator_01",
     "source_guid": "9839f1b9045f17848bf6706a12875d18",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -653,22 +701,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.974732,
-      11.332549,
-      11.496007,
-      0.784423
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "custoAtlacoya": {
     "src": "/images/heroes/Atla.webp",
     "width": 128,
     "height": 128,
-    "sha256": "0aa07a43f2adb0ed0e9d33312efdeefa5e02a520ff533074af1a964b706bb324",
-    "source_sha256": "441d21c0f0c5762632b38c5a6743cd26d8e0faed0c5fc00bf5c30ac37a6f1701",
+    "sha256": "631874aadfc03c5704dffdb3cc1d39effc3083570844e7023f9b02b8cf1a67bd",
+    "source_sha256": "39abd27a2d7d25464733d550a2ef7ec993f7ac0a1ce8fafda6ea5987d7fc833d",
     "source_sprite": "ui_image_RoundPortrait_custo_atlacoya_01",
     "source_guid": "e81115da4de03cc4692e78471fd12411",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -677,14 +725,14 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.746938,
-      11.509182,
-      12.469875,
-      1.431324
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "custoBladeChampion": {
-    "src": "/images/hero-round/custoBladeChampion.webp",
+    "src": "/images/heroes/Kari.webp",
     "width": 128,
     "height": 128,
     "sha256": "3c034cee26720b1ba89e6de7530df288139aae4b6a64b80b87928f6af870b7af",
@@ -692,11 +740,23 @@
     "source_sprite": "ui_image_RoundPortrait_custo_bladechampion_01",
     "source_guid": "70d95ef65e23ffe43bf84f738d5e6578",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "custoKyrus": {
-    "src": "/images/hero-round/custoKyrus.webp",
+    "src": "/images/heroes/Tyrith.webp",
     "width": 128,
     "height": 128,
     "sha256": "b831cdbf77532e75fc9155219e4778fd134adcdf68e41a439cf7d3bd0c9239e8",
@@ -704,19 +764,7 @@
     "source_sprite": "ui_image_RoundPortrait_custo_kyrus_01",
     "source_guid": "7d77aff1fc379f44d8d10c39e8b517da",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "custoTrajann": {
-    "src": "/images/heroes/Traj.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "51451d0580fb2e17cf784314a60c2f30c4e7132595850236027a29b0236ecf1d",
-    "source_sha256": "da1ea70d3e398bcc8865d84d10a83b2b7b12745330274c131770ba68aad861ac",
-    "source_sprite": "ui_image_RoundPortrait_custo_trajann_01",
-    "source_guid": "62eed78f0450faf45aaa05563cb5fc80",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -725,22 +773,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.466166,
-      9.708267,
-      10.920276,
-      1.505533
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "custoTrajann": {
+    "src": "/images/heroes/Traj.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "5c2b4974eddb39391ad25f52738f5abcbc40aa30c725d0bf5f39f19ffe9e4f5f",
+    "source_sha256": "5d2d2ef150c1d820516829c985688c6257208e18e985399973b26b7baf843e83",
+    "source_sprite": "ui_image_RoundPortrait_custo_trajann_01",
+    "source_guid": "62eed78f0450faf45aaa05563cb5fc80",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "custoVexilusPraetor": {
     "src": "/images/heroes/Aesoth.webp",
     "width": 128,
     "height": 128,
-    "sha256": "b1e841eaafe87f91fd83e6b3bc91128acc550e607ddd0a3b92f5a515b7fc68b1",
-    "source_sha256": "4ab75029fa3c861565991f3749bd87bd47f22f4f91421776d4ab64705863eb4c",
+    "sha256": "87a5546b0a0ea8a09c1364b86b6923f07ad5a368dc6d7ffd48ebf94b796021b4",
+    "source_sha256": "c61bf86192eb66624232ebb7722f7ab6a90869506d5ec928ba5e5340aa2f3100",
     "source_sprite": "ui_image_RoundPortrait_custo_vexilus_01",
     "source_guid": "002184fcdb9509346b608eeb4a18a607",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -749,22 +821,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.150239,
-      9.043522,
-      12.965074,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "darkaAsmodai": {
     "src": "/images/heroes/Asmo.webp",
     "width": 128,
     "height": 128,
-    "sha256": "59cf1b7765bf00e08e7a677409e80214a6bfbcb194df9a6b6a7139688c64560a",
+    "sha256": "9a5cc3209bb8da13eed53cb6c84b003e5b96ab122705d3773085949bfa336ecf",
     "source_sha256": "75dcd7352671186634c452681ea49b0e81786fd85d2cb404e06a8e49045c619f",
     "source_sprite": "ui_image_RoundPortrait_darka_asmodai_01",
     "source_guid": "5ee218b25fb5378419008fb27ec68e1d",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -773,34 +845,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.763075,
-      10.959557,
-      12.925717,
-      1.364397
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "darkaAzrael": {
-    "src": "/images/hero-round/darkaAzrael.webp",
+    "src": "/images/heroes/Azrael.webp",
     "width": 128,
     "height": 128,
-    "sha256": "26656d9ee584a7ce22be22677eb73d7246deacc24fd2e672de3883b22c6ad352",
-    "source_sha256": "bd3f0d7e7c64b91d85d1daf32958de19898e6979e62a1d0eda0dff4769e5825d",
+    "sha256": "a411dcb5e1d2aaefd1954d710e92d1c83253c62c19d8d258136cabcdbd32218f",
+    "source_sha256": "e4a87212589dbcdaea2544c9e1c0711da34a5f8e38fd0ea4cd1fa06ada968a6b",
     "source_sprite": "ui_image_RoundPortrait_darka_azrael_01",
     "source_guid": "56dedc2cb297a5e478db37f068a7cb2a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "darkaCompanion": {
     "src": "/images/heroes/Forcas.webp",
     "width": 128,
     "height": 128,
-    "sha256": "2814da28bbcf8cb7b07b895c6d07be0fd94fd886213faf69c2d2af2adb269b35",
+    "sha256": "f71540d7d18bec88f542e51b1986c20d4a6600ea555f607ae60897841db09c7a",
     "source_sha256": "cce815706ed4809bf3ad38d5ddcdab6b31cff669c3dad60ad4e4a3bba0ed94f4",
     "source_sprite": "ui_image_RoundPortrait_darka_companion_01",
     "source_guid": "80d77b8419bce1945884199651e9f27c",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -809,22 +893,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.273663,
-      11.588304,
-      11.762975,
-      1.519931
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "darkaHellblaster": {
     "src": "/images/heroes/Sarq.webp",
     "width": 128,
     "height": 128,
-    "sha256": "5ca0b1095daaab54ae911411e221c7fbf71ecb9ac788e73fe84bccec628848f2",
+    "sha256": "5f92749e1e6be070fb4d049d0b607d21bf12050a9272d703b78bb9a79391c4ba",
     "source_sha256": "ac633f48ef3304443a387910c640c2176d2692b51b45b7c5f2ba5368039b382f",
     "source_sprite": "ui_image_RoundPortrait_darka_hellblaster_01",
     "source_guid": "1a7b13488fa62b7479fa8349e4ca6ce6",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -833,22 +917,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.389837,
-      13.752328,
-      14.779457,
-      1.416706
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "darkaSternguard": {
     "src": "/images/heroes/Ramus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "f1cb8f9007894f62f1d1f60f9113af9c77455070b40034b038f42c82452ca936",
-    "source_sha256": "1a5c187b17f3eb1fcb0ce6e148be1467a2f86ddcd4855ed1dbcb5cf0ec25c7c7",
+    "sha256": "06a692e3da274f6dcb4b6fc1351f08f3b08525c22cf4cd01d48fac6a45c51f40",
+    "source_sha256": "89a5dc95b3449147463b68b7032c4d4b4de4e50ff159b7c9908f2d1bbdee4896",
     "source_sprite": "ui_image_RoundPortrait_darka_sternguard_01",
     "source_guid": "7e013eefd00015847990cb863d02e0f9",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -857,22 +941,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.638449,
-      9.194381,
-      10.869671,
-      0.921261
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "darkaTerminator": {
     "src": "/images/heroes/Barq.webp",
     "width": 128,
     "height": 128,
-    "sha256": "3a13d27c7cf15b88fc4acdd7b6dd3d5c098df6a185919154fc26156dcce97508",
+    "sha256": "8e47d1797c2f38519dbaa055820568c9eb5c7d7de30582508e82859362ae0397",
     "source_sha256": "e07dcfa91975311b4ebf71ede93ecdab11d09ba80419484f17c51d3cd604d994",
     "source_sprite": "ui_image_RoundPortrait_darka_terminator_01",
     "source_guid": "a59397165219cc941ae522b407eb4d47",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -881,22 +965,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.279558,
-      8.628631,
-      13.317117,
-      0.851235
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "deathBlightbringer": {
     "src": "/images/heroes/Corro.webp",
     "width": 128,
     "height": 128,
-    "sha256": "3447f250381fb2d485201834085a532b371a03797155fdf3c4cd1bda9a108245",
-    "source_sha256": "0c0c10453d4e082339bbad9dac564c3f9bb0069da33bbd4ca6c08f3aa34993a8",
+    "sha256": "e1dfd4445efb079af07a1f63283b7e305d998b9db5b7197b9536b85399a327f1",
+    "source_sha256": "8189304f2e31cbf849007f1cd65483b6efc7dde017214ad9f2393edf2a95914c",
     "source_sprite": "ui_image_RoundPortrait_death_blightbringer_01",
     "source_guid": "8889a3eb5dc0ed34098f7e037ae91a4b",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -905,22 +989,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.75126,
-      11.520992,
-      12.490288,
-      1.497736
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "deathBlightlord": {
     "src": "/images/heroes/Maladus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "24628876272a1fcbc5c4bb9e560297f6e7a5af6448cf6be42dc3166abb7fe541",
+    "sha256": "4621d93ae6a752c18696f43cc70dfd2000ac91a461c0eedd539ceef85396e26f",
     "source_sha256": "b43eee8711c758cc43ae5e00b33f9118fc6ef34a3a77f7ef12aab1cdd6179bf7",
     "source_sprite": "ui_image_RoundPortrait_death_blightlord_01",
     "source_guid": "c8a0aa677988f9349bbca805fa8f91cc",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -929,22 +1013,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.060811,
-      8.022896,
-      9.38122,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "deathPutrifier": {
     "src": "/images/heroes/Pesti.webp",
     "width": 128,
     "height": 128,
-    "sha256": "d75561a79e534c44f30223452973c4fb441f31ba9e2cd00120e4eb9d8bff0146",
-    "source_sha256": "698c6481fe9a2805e34fda5453d1fba31dcea11f30b154978076ec3386ae028f",
+    "sha256": "08243218ff3a7d547442a3b060a69bd9a62199f46c14673a83217887b1bf0db8",
+    "source_sha256": "1a5ad50453b6bb46cc69d3ca4860184ee6de8494fab78c865a3bf88224a61452",
     "source_sprite": "ui_image_RoundPortrait_death_putrifier_01",
     "source_guid": "b4a0a2b7d945b1c478b1035b019bd0f4",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -953,22 +1037,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.629107,
-      12.319349,
-      12.978498,
-      1.458021
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "deathRotbone": {
     "src": "/images/heroes/Rotbone.webp",
     "width": 128,
     "height": 128,
-    "sha256": "5e5cd74b32d3d31c048263670bff7f123c65ff7c71a228b1a34225d095a24cf6",
+    "sha256": "52d64b284638f070f33c230e12e03275337e9c95f9eddad1903a8dbb78383cee",
     "source_sha256": "cac3bb21aac93a97168fe8666bdfacdeaebbec93003ac8e64160ffe3ddbe21fb",
     "source_sprite": "ui_image_RoundPortrait_death_rotbone_01",
     "source_guid": "d190209ab89dfa7488f3a08628cda410",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -977,22 +1061,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      7.995246,
-      5.444253,
-      6.597529,
-      0.851235
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "deathTyphus": {
     "src": "/images/heroes/Typhus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "846be465c905a320aa0c06c251d15bf1bc8cd14f981145b1f4470ed1fa034003",
-    "source_sha256": "f4db66aff40c53c49aa542cdc88ca0b99d5d955551c7c165a24ce7ce0e179f1c",
+    "sha256": "35e9ba7af72f0e7aada5c2f0a5ac469cae1b206d67a5fb1f52cb3402e1fc69c7",
+    "source_sha256": "6c6fa7c18ef9b551a57eede654cf5ad0166f5a5190fea03014b00f3133778445",
     "source_sprite": "ui_image_RoundPortrait_death_typhus_01",
     "source_guid": "759b77be587c5674ab4d27f65b973cc5",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1001,22 +1085,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.292389,
-      10.358357,
-      11.790815,
-      1.505967
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "eldarAutarch": {
     "src": "/images/heroes/Aethana.webp",
     "width": 128,
     "height": 128,
-    "sha256": "d570dc3b790a3cb61b1246823f4486941eb296cb52615744f0489a5fb5cb42c6",
-    "source_sha256": "c25662d7358e11fa6d58e2b55d5a1e707ed3fdbbd7dc3bf519f1c80c335a12e8",
+    "sha256": "4d1b324e5dce4a01a9f60461dcf14e2fb586e3b23b5387deea74450621a61571",
+    "source_sha256": "1dcafb87575e1cd03f0a7605233616db3b98af315626c4e72b1802ba4ed61020",
     "source_sprite": "ui_image_RoundPortrait_aelda_autarch_01",
     "source_guid": "a6ab270d1562ea74d9519652a9d64e1b",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1025,22 +1109,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.621955,
-      9.678516,
-      11.920695,
-      1.271254
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "eldarFarseer": {
     "src": "/images/heroes/Eldy.webp",
     "width": 128,
     "height": 128,
-    "sha256": "45155d5df3deff9016fca47ef0739c0cbef30ca723f0bcc47868dd2b4cc60f76",
+    "sha256": "c0953df8a585b4a1903706221f3f67a39f78bdd548bb228f851304a3e38dda2b",
     "source_sha256": "56ea1a43e364979afd0e38304d04af709257b6db4c01c3d56b16c0b8d2202f4b",
     "source_sprite": "ui_image_RoundPortrait_aelda_farseer_01",
     "source_guid": "3c728b6328f4326429a8f527fa0bb435",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1049,34 +1133,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.917849,
-      9.979859,
-      11.036989,
-      1.417436
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "eldarJainZar": {
-    "src": "/images/hero-round/eldarJainZar.webp",
+    "src": "/images/heroes/Jain.webp",
     "width": 128,
     "height": 128,
-    "sha256": "65356ef91780392d8fadfdba9a5d154b9659a88e2848a323edfe4c7c93b56fa8",
-    "source_sha256": "daa7fcc58c915f4746d3f75fc11c4b939fdbd1e9d804350173abfe45b8770af9",
+    "sha256": "a20b78b1289e2d001a30da713abe23a85d8b80706755b29d2cef87c144c396e6",
+    "source_sha256": "288fa69d65f3ce5cfc4c3348ba176f1ba75681b535229bc45f4e1bbc46a45db1",
     "source_sprite": "ui_image_RoundPortrait_aelda_jainzar_01",
     "source_guid": "1ba5db87a1aa4f947b1ee3b4902d5198",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "eldarLhykhis": {
     "src": "/images/heroes/Lhykhis.webp",
     "width": 128,
     "height": 128,
-    "sha256": "9ffec2ad75a88e8ef36847ddb22ceb118c372ed5e126be6fbd50b41b895b309d",
-    "source_sha256": "d3f2ed35236591e3a81adad5fe22bd0a30ac3d3673df59466677731a096a4baa",
+    "sha256": "35b0f685b5492debb5cf96504aef81e3ad6ea28a3d27d9340e134ef84ddc6f5f",
+    "source_sha256": "5a5317ba4c181334ea723ee52f6982ee84d35663c866c982cbfb497bf514a513",
     "source_sprite": "ui_image_RoundPortrait_aelda_lhykhis_01",
     "source_guid": "1584dd0762765ec40b225945f14c5c92",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1085,22 +1181,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.142399,
-      11.531824,
-      13.088483,
-      0.745081
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "eldarMauganRa": {
     "src": "/images/heroes/Maugan.webp",
     "width": 128,
     "height": 128,
-    "sha256": "90a2f88731890598ef2d33f28f828583750b4e102b6d73ba19a536c56d9a2bef",
-    "source_sha256": "06c46e7f3cd05bd241d01ba40325da5856d8b1e7c7cf89236a341d657c92f6e2",
+    "sha256": "c5557531f607e544c53507d4a67313f9fe8dc69b09f0e7fdb442ee6f2d508877",
+    "source_sha256": "27118721645097dbfdf6ea197b2e94db7dcc8e58355beb2fbd64c852365ecdfd",
     "source_sprite": "ui_image_RoundPortrait_aelda_maugan_01",
     "source_guid": "57f8058f984aa1449833dbb3c354b698",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1109,22 +1205,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.35966,
-      10.183796,
-      11.396905,
-      1.269836
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "eldarRanger": {
     "src": "/images/heroes/Calandis.webp",
     "width": 128,
     "height": 128,
-    "sha256": "29c4cbe822d0e90dcafd7a65f3018dca8597ca529dbcabede73fc2f4cfc2eecb",
-    "source_sha256": "e62842c1905e1f4c108d8ac93af3ad02caabe4d466166ba1bbe1fc74fbafc1fb",
+    "sha256": "36e39c37e4eb5fc5983198329766c2ac5556dd6b116191c6ca055b7a244b9e73",
+    "source_sha256": "07e4d95a52056b6addb0f82711687618373a9cc7cc501e795081ee4e0ac1b9ab",
     "source_sprite": "ui_image_RoundPortrait_aelda_ranger_01",
     "source_guid": "e463220630be08247bc42363b925296c",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1133,22 +1229,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.529704,
-      11.63907,
-      13.020318,
-      1.459302
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "emperExultant": {
     "src": "/images/heroes/Lav.webp",
     "width": 128,
     "height": 128,
-    "sha256": "4e4e6f28b8cfb285a29103d1cc91b929c31288fdbf21442709e1c8a04066e074",
+    "sha256": "94341045b40b4174ec2e315f7ef189edef4d2af79d536120cfc3b26a9fba944b",
     "source_sha256": "84021aebaa08c78cefe4bae8f2485d36271ac3e493e59188677e7bb24287ac6b",
     "source_sprite": "ui_image_RoundPortrait_emper_exultant_01",
     "source_guid": "683d95e693542d14492829d7fe9128af",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1157,22 +1253,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.750658,
-      10.440446,
-      11.7721,
-      1.222521
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "emperFlawlessBlade": {
     "src": "/images/heroes/Hascule.webp",
     "width": 128,
     "height": 128,
-    "sha256": "2271d354761e0aaf82622850e090666c38d209e9748a8dde7e66a79b9f822561",
+    "sha256": "7a1ed836b92e348c137c683236ebbe722d144c0409db25154fec92ee47b365e2",
     "source_sha256": "5bad3a83ab64f27a5b3474c45957eee21e68577990159e061afcb51a908aa0c9",
     "source_sprite": "ui_image_RoundPortrait_emper_blade_01",
     "source_guid": "d15e1f4174e449540bf8c752e15c1842",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1181,22 +1277,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.805299,
-      11.385071,
-      12.339924,
-      1.407937
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "emperKakophonist": {
     "src": "/images/heroes/Adamantar.webp",
     "width": 128,
     "height": 128,
-    "sha256": "fb82875e482616c62cee7c88dff54bbae31630b6873d44444e45da2db2619483",
-    "source_sha256": "425df237f57a54b34fafac36ea469edca5d975fe4c5a6e886dd18e3b12d16d5b",
+    "sha256": "ad6aa57671f55ff22e212585d4178eb0b1146c71bf9b12f0f35290a8e2075e26",
+    "source_sha256": "3b58abaff3d91c9f906b68bc955e95c5aeed11fe9b444bc2ddf3067645d0dba7",
     "source_sprite": "ui_image_RoundPortrait_emper_kakophonist_01",
     "source_guid": "ca2bc97caed819b4eba1c5b2ff3fa865",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1205,22 +1301,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.893571,
-      13.948834,
-      14.612703,
-      1.461064
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "emperLucius": {
     "src": "/images/heroes/Lucius.webp",
     "width": 128,
     "height": 128,
-    "sha256": "3e648857b863a57c5f42905a14c9818410ef7d9cfe9eca33789a12cc56a649f7",
-    "source_sha256": "2dac0094b75da5ebb77bf4377168b92406c7b8ad1f7f8cf608ef48febccd6072",
+    "sha256": "f9c42fae5334d238f192d4c937698048e61484637126b7873c7683e0b7c30807",
+    "source_sha256": "de3fb35b9fa7d0a76984b9559b6aed2fffa9dfdb6bb0767acc1066e6a50e9af2",
     "source_sprite": "ui_image_RoundPortrait_emper_lucius_01",
     "source_guid": "23b7b7372362c2140a8c5ddef3685f89",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1229,22 +1325,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.853949,
-      14.108236,
-      14.682807,
-      1.308772
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "emperNoiseMarine": {
     "src": "/images/heroes/Shiron.webp",
     "width": 128,
     "height": 128,
-    "sha256": "6d757a08b5f6063b8783890fc51cad327bb91b6bf479ea2250fe2635e9465f10",
+    "sha256": "399ec58c38168fb381df3a9826e8fa5c1534614bf8f1f6a0ddc86ff4dec02a9b",
     "source_sha256": "59826ab825fd222c72910dc382f91f03162a6080a61d12e0cdfc3cffcbe3dafa",
     "source_sprite": "ui_image_RoundPortrait_emper_noisemarine_01",
     "source_guid": "09959d43ada7a584398a735687dc7fd6",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1253,22 +1349,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.800173,
-      11.644428,
-      12.310885,
-      1.407937
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "genesBiophagus": {
     "src": "/images/heroes/Hollan.webp",
     "width": 128,
     "height": 128,
-    "sha256": "042de5b8c197687eed408fc7467fa093fdaedd1df0d9c7f4979516dd3614001c",
-    "source_sha256": "25115edd35fc61c46f4262bf1037cb2ed9ff556b28748ade97159b8f9b055fd4",
+    "sha256": "b06885e1bb8ff51b30cf478bf19832e0fb76277d21fd570e87cdf548d599a6d0",
+    "source_sha256": "5399ff396c3fa20aa97fc6eb9fa6c3908d0a2e6decbc22d065c1bcbf65a81b96",
     "source_sprite": "ui_image_RoundPortrait_genes_biophagus_01",
     "source_guid": "d5a95ae4852a86340bb13bdc0d12c37c",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1277,22 +1373,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.717561,
-      13.857239,
-      15.899901,
-      1.443354
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "genesKelermorph": {
     "src": "/images/heroes/Judh.webp",
     "width": 128,
     "height": 128,
-    "sha256": "4c3cf5b66e0cc0a86101436a0cc358515a46148212800d237a4c232a3f85fc12",
+    "sha256": "7bd629fbee4de14ad86e161f8c5559eb213b5537b499aded2a40dfdbc33cdf4d",
     "source_sha256": "4cd2b72024a5c927e015ccc35eed44d40d6d83b8fe75a8b7d51dc0ac70d9828b",
     "source_sprite": "ui_image_RoundPortrait_genes_kelermorph_01",
     "source_guid": "ed39350a8b7937f458220122671bbdae",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1301,22 +1397,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.807697,
-      10.518905,
-      11.782149,
-      1.469472
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "genesMagus": {
     "src": "/images/heroes/Xybia.webp",
     "width": 128,
     "height": 128,
-    "sha256": "3ff253525c9a12c2f7558495f4aa8701e83bc41a5311f5ee3c0629076d7fcb37",
+    "sha256": "892c27a1ab99676029cf2d155545a1cfe8f43f756f9c154dc5194b83e7adabf1",
     "source_sha256": "b5e0bad31beba4fb349c6c46c265383af8b15f342036df0cff5e114b3a420e08",
     "source_sprite": "ui_image_RoundPortrait_genes_magus_01",
     "source_guid": "f3bbb7949dc762a479d2dbc07bf5d5ea",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1325,22 +1421,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      8.377617,
-      7.16137,
-      8.511304,
-      1.205166
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "genesPatriarch": {
     "src": "/images/heroes/Pater.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c1cbffd9999d295d99cd2e94836711f28e99282ae0037e487accf618b6869793",
-    "source_sha256": "dd5e547a1ec252234346e8878f31fcdb623e08818892c33de2907e6e1a04770b",
+    "sha256": "5ba533b060b75193ea6b6c6856719c9ed50f84e8975547bb6b9e2bb03d64b987",
+    "source_sha256": "14aa75b6d9bca686801b7ef3bc19886f88e97bce55346fbe27d2ffee82cb671a",
     "source_sprite": "ui_image_RoundPortrait_genes_patriarch_01",
     "source_guid": "533950454f0189e42919713e3ee07572",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1349,22 +1445,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.148293,
-      13.290249,
-      14.923238,
-      1.2484
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "genesPrimus": {
     "src": "/images/heroes/Isaak.webp",
     "width": 128,
     "height": 128,
-    "sha256": "84e27ac44dfebf7ffd1b2da5674ac02ffd9dddd617a658f9ec6567d36d6a97b2",
-    "source_sha256": "0f1705a0cd5cf346c10a5128d243345eca90bd431c5097efb6dc02c2fb488fcd",
+    "sha256": "8b2c4fc79b160bb924e62b1a7d276be9b676418ee5a2356889b917ab6035486c",
+    "source_sha256": "ef2bd2746cea62648e37bc7e194b5cabeaab58d4eacafc786ec31a95f3fe70fa",
     "source_sprite": "ui_image_RoundPortrait_genes_primus_01",
     "source_guid": "23a4778d3a6a5c345bb0bce034779687",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1373,34 +1469,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.229936,
-      12.142189,
-      13.878578,
-      1.307499
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "lostaBile": {
     "src": "/images/hero-round/lostaBile.webp",
     "width": 128,
     "height": 128,
-    "sha256": "eca38c18d4d7d15ed199b2366292aae3a3a6c459f513227ff231747d9d6d999f",
-    "source_sha256": "2c2a6343bfcd5b517de542dd6501b4652a72d48e926bb8280b1806f7f42e592d",
+    "sha256": "7ac23dca6bd4072024f7cdd9b321099e289c184b8bbb8b84fedc186170ec4f90",
+    "source_sha256": "819e89ae08c438acd2702f967b990dda2de11a2bac76c01dcf011874cc133669",
     "source_sprite": "ui_image_RoundPortrait_losta_bile_01",
     "source_guid": "c5599256214eb6044985525c95d7d58c",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+  },
+  "lostaFearmonger": {
+    "src": "/images/hero-round/lostaFearmonger.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "6923ccda61ebd293c3e157fb544654a37ace08c54b20a80ba93030f7e3be094d",
+    "source_sha256": "d0ffc4db6a0c80c333cf951b42e23b46f5f70b05ec4b4836d70fdb550c9b7573",
+    "source_sprite": "ui_image_RoundPortrait_losta_fearmonger_01",
+    "source_guid": "8ab5f4baaee6f124ea32f75bb2a910f8",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
   },
   "necroChronomancer": {
     "src": "/images/heroes/Thoth.webp",
     "width": 128,
     "height": 128,
-    "sha256": "02cf7f409b2eb78d9fd0a63510099a32f67db487a82f1196abb84f2a52e2e59a",
+    "sha256": "89edcbf313fa5bd1142e8fb0fdf1a80b431725810924773c652a9950c515ca7c",
     "source_sha256": "27425908fd8eb4f543e59e9e6ca6201f7c87227dfb935a348575d7ddc4a04fe9",
     "source_sprite": "ui_image_RoundPortrait_necro_chronomancer_01",
     "source_guid": "e715f0a7661f0644b890f44d1bfe2b79",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1409,46 +1517,70 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.97838,
-      8.574501,
-      10.505266,
-      1.199024
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "necroDestroyer": {
-    "src": "/images/hero-round/necroDestroyer.webp",
+    "src": "/images/heroes/Imo.webp",
     "width": 128,
     "height": 128,
-    "sha256": "be2e888b8bcf3d8b4a9db231024011bcd83a0557c93f0cb681933abfd85d79e3",
-    "source_sha256": "ae765ee10032d1e42b2c8b895c7d727152fd0dac158cfc1ee189b80c29b3988e",
+    "sha256": "86443cb7e52edc1bb74ba9547b0335198d75b2ae50da7969a05c4fe67990d479",
+    "source_sha256": "0283c8b1bcdf8eec1a2c3ea50d5cef1e2429625f7fade1b7bbb24304adf25779",
     "source_sprite": "ui_image_RoundPortrait_necro_hexmark_01",
     "source_guid": "598adbfc2741faa45ab1d45806077241",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "necroOverlord": {
-    "src": "/images/hero-round/necroOverlord.webp",
+    "src": "/images/heroes/Anu.webp",
     "width": 128,
     "height": 128,
-    "sha256": "2032ba2702b701678677f6e6482e97b7e6f48857ab507adaf65cd99af7abeeb8",
-    "source_sha256": "82cc5094dae32955df41017738c117aa41819b08fc331a6b2fa0fa7ce7ce2a5a",
+    "sha256": "17bca17779b1afded1ee39045f3bf92babfc89ddb89245392fd0cfa6b0c51a94",
+    "source_sha256": "ff9435cd672575922e2f409390d59c3aa2c1609c8359424c14e73cc7cee05bdc",
     "source_sprite": "ui_image_RoundPortrait_necro_overlord_01",
     "source_guid": "30c0e7fb334f4294b8d60e4fec3e5b86",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "necroPlasmancer": {
     "src": "/images/heroes/Thut.webp",
     "width": 128,
     "height": 128,
-    "sha256": "fda8bf72f8583662deea6c6d8afb5304227a2ce892aad5606a1a4157483188db",
+    "sha256": "8f6148e7fe84b088728334fcf6a62fffa0c4cb949c35ed0672df647d6f62fd86",
     "source_sha256": "cbb1b4b3f0c4b81104bce5cdb1bf79b03e4082a2fa337831f75c4feac7ec0b81",
     "source_sprite": "ui_image_RoundPortrait_necro_plasmancer_01",
     "source_guid": "045a92047969407488bf9edf4f5db0bd",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1457,14 +1589,14 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.724139,
-      12.001821,
-      13.208779,
-      1.30384
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "necroSpyder": {
-    "src": "/images/hero-round/necroSpyder.webp",
+    "src": "/images/heroes/Aleph.webp",
     "width": 128,
     "height": 128,
     "sha256": "ed5daa78418ab96c1d4ccc95f5a4d7c7c9c19a30d485665c1e414ddb60818efa",
@@ -1472,23 +1604,47 @@
     "source_sprite": "ui_image_RoundPortrait_necro_spyder_01",
     "source_guid": "dd66e60893792e1489c788600769d507",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "necroWarden": {
-    "src": "/images/hero-round/necroWarden.webp",
+    "src": "/images/heroes/Makho.webp",
     "width": 128,
     "height": 128,
-    "sha256": "7aceb4c87b38444038eb51b962031e65f0ff00972fc8cfc6b14e2d5a482f3b28",
-    "source_sha256": "0321f04feae48596b8350dadba5f1a9a61c1b9f1bc277aa26b7ad91c63730cfc",
+    "sha256": "9b511e5c38cc7896dcb19e0673dcbf4ac267629a9272364319f4cca986349348",
+    "source_sha256": "ff9590bfb6f5077318615b65cbd596dbb44b2b46d45ad8af9e248abeb4fcca75",
     "source_sprite": "ui_image_RoundPortrait_necro_warden_01",
     "source_guid": "2e786e299eac0d3439bc34638a669451",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "orksBigMek": {
-    "src": "/images/hero-round/orksBigMek.webp",
+    "src": "/images/heroes/Gibba.webp",
     "width": 128,
     "height": 128,
     "sha256": "89152ca1be42d62cfe29627cb0f495d48fa3e920b038b2836cfb22dad1c26409",
@@ -1496,19 +1652,7 @@
     "source_sprite": "ui_image_RoundPortrait_orkss_mek_01",
     "source_guid": "b3467896fedfb25409e79142029988c0",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "orksKillaKan": {
-    "src": "/images/heroes/Snappa.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "4b7fc50b94bb724137b22b4377c5de7c4fcf1f05f3849cfa93d48f64b7b397a9",
-    "source_sha256": "6e98f8846afec27e97f985ddc668dca05448660ba26649c6d6cffb581e71eb84",
-    "source_sprite": "ui_image_RoundPortrait_orkss_killakan_01",
-    "source_guid": "9a9bb35b829ceee479a34315b5be9a7b",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1517,22 +1661,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.701914,
-      9.417194,
-      15.866477,
-      0.862696
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "orksKillaKan": {
+    "src": "/images/heroes/Snappa.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "79552612d63579ca7fd8eb25e865e2507889eec659177d2be88828a8c495bc99",
+    "source_sha256": "ecf13d508a6210de5dc7fe57c4b4abbd6da0e2a23cb40967cc1cfabc3c5d028e",
+    "source_sprite": "ui_image_RoundPortrait_orkss_killakan_01",
+    "source_guid": "9a9bb35b829ceee479a34315b5be9a7b",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "orksNob": {
     "src": "/images/heroes/Tank.webp",
     "width": 128,
     "height": 128,
-    "sha256": "46f11e0c74325a938468a8b185b430455da5c71993df60650cf9deaac1498478",
-    "source_sha256": "8c7423f3af826bfdc267711b236c929fde50cde4d042b231be487f599ecba57e",
+    "sha256": "181fb94e8b7cc47b33624a1e9fd42b4c57876e3723187df99d3228a78e30bb53",
+    "source_sha256": "22cc53231f2c2015fe4c00a18f52ca6363783f7bc0f25da26017df4cdaba37db",
     "source_sprite": "ui_image_RoundPortrait_orkss_nob_01",
     "source_guid": "1fc8469ce7d1f834086ed4a2d951d92b",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1541,22 +1709,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.817796,
-      9.527141,
-      12.452192,
-      1.399953
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "orksRuntherd": {
     "src": "/images/heroes/Snot.webp",
     "width": 128,
     "height": 128,
-    "sha256": "81940941ea370f905cb78f77920a36c38985fc7f82e0baf93b6809d1179bbd4b",
-    "source_sha256": "6b72efc459fb1605ecde45d286f9e1419229abbd5b14e909dd60cf6b21902f3f",
+    "sha256": "3e56869322a388de694d5d06ace57d68ffb75e5c122c4fa52b1c58bd2f64e7ad",
+    "source_sha256": "a7f1815f32322bb35f463b14d5e562102d006491b24bad5fad95147c98abec30",
     "source_sprite": "ui_image_RoundPortrait_orkss_runtherd_01",
     "source_guid": "9b4261d5811d7224faf66bc0efc2b07a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1565,22 +1733,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.334754,
-      11.062342,
-      12.81586,
-      1.553605
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "orksWarboss": {
     "src": "/images/heroes/Boss.webp",
     "width": 128,
     "height": 128,
-    "sha256": "50ec7cbff9f762d1802bd0e3b0625ae64c089dd817ec7346f04f5672e8e92f3a",
+    "sha256": "e96c32dbd1ee56b2897b488e21dd94a3ba19bdd49513771935f8daf0e7e1f8f5",
     "source_sha256": "38b340badf59d333a764f9d096f089eb0de5a77d1e255c832b7d4874234310fd",
     "source_sprite": "ui_image_RoundPortrait_orkss_warboss_01",
     "source_guid": "4a2a7990357721042aeb05c15a2c236d",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1589,34 +1757,34 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.678184,
-      10.881176,
-      13.776416,
-      1.122518
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "orksWeirdboy": {
     "src": "/images/hero-round/orksWeirdboy.webp",
     "width": 128,
     "height": 128,
-    "sha256": "cee2fe8563ccbe494a8d79384dd2b2d978846d4fead9872ad8e07752c3ac0389",
-    "source_sha256": "27127c1f27ed7ad295884f7e468e22f1bf50464cc95509bb254a3945457c3c37",
+    "sha256": "fcef60a2428be658dccd5bdad2d10c920490c4f64e2e31acf1c46ea175893b99",
+    "source_sha256": "dcd2595b5319bb11d78db9b22e62933b7b50b95a06f3d76d990862a8982aa3e5",
     "source_sprite": "ui_image_RoundPortrait_orkss_weirdboy_01",
     "source_guid": "c64f0449bf67e664691a2e2e777939ca",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
   },
   "spaceBlackmane": {
     "src": "/images/heroes/Rag.webp",
     "width": 128,
     "height": 128,
-    "sha256": "b2ffca48cb3afbf84e65e6486f1a6095e729b660f4895ee493ef3c29b4a0d77b",
+    "sha256": "ac9eb1dd6c164efb702b1be6b862ce24cfcf8e08dcd924f695acc218f93f9626",
     "source_sha256": "fec324c2ed0b1732d78f9d29d6ee3af8f4a787ded62c820230503e3a7ff3f6a8",
     "source_sprite": "ui_image_RoundPortrait_space_ragnar_01",
     "source_guid": "41d8f7ccf68444546989a74b8ce9a30c",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1625,22 +1793,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.527351,
-      7.68533,
-      11.286349,
-      0.851235
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "spaceHound": {
     "src": "/images/heroes/Tjark.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c779c901460e22cc1d49594fd3b509b9f9a509583a8d8d4e36cc08ef60926134",
-    "source_sha256": "58a1b1c7f76beb185498b4d1799f6ff02e834fedf462d25251e8e84332111970",
+    "sha256": "d57998377f7199ea7210771750dbd0dcdb6a101a75187f968191650cbb8b9d6c",
+    "source_sha256": "7f6bfc2800fe00aed9348100bab196a90dae39749723d4a6cf64330ab9e96f9c",
     "source_sprite": "ui_image_RoundPortrait_space_hound_01",
     "source_guid": "64996fab5eade964497fe1291453f9bc",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1649,22 +1817,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.774793,
-      9.094064,
-      11.635106,
-      1.122518
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "spaceRockfist": {
     "src": "/images/heroes/Arjac.webp",
     "width": 128,
     "height": 128,
-    "sha256": "6fd3a7abcbf527ab143b9c4983f8abb5c6e27168a66c9bd026812eef09bf3664",
-    "source_sha256": "d4c59eb99ab3ed32e43e26d180cb99377a212cc4378393d0cdd925df1913c6e4",
+    "sha256": "4a29161042098187decaf7422bcb0d56779584e4c8480c69604ffdf95f119109",
+    "source_sha256": "e321d68e4663682ae34bac79f62092fee8b5b501d1df7575cbc2035986e849df",
     "source_sprite": "ui_image_RoundPortrait_space_arjac_01",
     "source_guid": "a9be852be8388fc42ad7fcda41b50577",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1673,22 +1841,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.867052,
-      9.157258,
-      10.900125,
-      1.122518
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "spaceStormcaller": {
     "src": "/images/heroes/Njal.webp",
     "width": 128,
     "height": 128,
-    "sha256": "dfa9cabf040e8c09eb08d51392b3b8a9bfe228b7793fbd4c8c04b954e71eee48",
+    "sha256": "e97abf4717603ea3a9852abd9ce9f8e6757df8bafa5b1aa9ec1c4f90fbdac403",
     "source_sha256": "003a2ba6dfd3d3fa0f6fc8446734403fb2953631308f248af0b723153ec4b592",
     "source_sprite": "ui_image_RoundPortrait_space_stormcaller_01",
     "source_guid": "81320044c7d869a46a583586e50792c7",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1697,22 +1865,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.872456,
-      9.326397,
-      10.385448,
-      1.259681
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "spaceWolfPriest": {
     "src": "/images/heroes/Baldr.webp",
     "width": 128,
     "height": 128,
-    "sha256": "6c9af56ee49196d22de5848edb85acbffcea43668954e27b387a0a10492b0def",
-    "source_sha256": "e575e4caca29a277210d231c1d5af6f071ea1e8ef8133214cd4887edd7117bb7",
+    "sha256": "ab7e118577c4ae90372237e5f42241f7a8310b6d28223a57336cc6001c600622",
+    "source_sha256": "ab700855606d5a1c9171497bd6c8e1b49f6876a9f53889a568a8c156b7efd7c8",
     "source_sprite": "ui_image_RoundPortrait_space_wolfpriest_01",
     "source_guid": "ff84b9cc99775aa41a7a8df6c8de8b31",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1721,22 +1889,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.182219,
-      9.376813,
-      10.191427,
-      1.122518
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "spaceWulfen": {
     "src": "/images/heroes/Ulf.webp",
     "width": 128,
     "height": 128,
-    "sha256": "abb06c9d0e2019d5c35e89a243818236fee509596db08c2ac6d0633e4500dce3",
-    "source_sha256": "81e9173bb7001d096ce45eb331e0469729fe3f39860a8b6f41d1627dc9e6d19f",
+    "sha256": "690016435546017d1e4a49bb71b3916e292a966c50160c823d85165b708fcbd7",
+    "source_sha256": "248b9f7feeb786e3005425e8439f687257fd2c21695d103035dd7910eda70b37",
     "source_sprite": "ui_image_RoundPortrait_space_wulfen_01",
     "source_guid": "547c9f5b8cebd054ab51653ab8926471",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1745,9 +1913,9 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      5.118231,
-      3.151218,
-      5.97621,
+      0.0,
+      0.0,
+      0.0,
       0.0
     ]
   },
@@ -1755,12 +1923,12 @@
     "src": "/images/heroes/Aunshi.webp",
     "width": 128,
     "height": 128,
-    "sha256": "90bcb02d39c31a7a9c89740a5903231789f46dbc43a86a089f997d8cd000a4d3",
+    "sha256": "7244b838064f09426da591582e6ecc68af00c5b4ec2a4ade11a36fbf5fc3a049",
     "source_sha256": "b7456ac0f0c0c94abef4ee24abcec5faf0de0b7d5d8a026ab4ee5091249c2116",
     "source_sprite": "ui_image_RoundPortrait_tauta_aunshi_01",
     "source_guid": "1579dfb7f8add194b879d3721abaee88",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1769,22 +1937,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.081428,
-      9.569394,
-      11.963719,
-      1.281885
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tauCrisis": {
     "src": "/images/heroes/Revas.webp",
     "width": 128,
     "height": 128,
-    "sha256": "cf34d3655288d7dbcad3dcbc57538b53de4850727322193b807afe4631835116",
+    "sha256": "130b51fa859bae6eba8861a031517683a74f09ce975e3078e0efe5f0a31577d8",
     "source_sha256": "91cb519af3cb6ac1c00b7019b2f0c5f30265e33cb439d3cf578848ea4a0e5461",
     "source_sprite": "ui_image_RoundPortrait_tauta_crisis_01",
     "source_guid": "d06404d8ff21649dcad9d4cb135a4f37",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1793,22 +1961,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.728657,
-      9.247867,
-      11.913608,
-      1.217791
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tauDarkstrider": {
     "src": "/images/heroes/Darkstrider.webp",
     "width": 128,
     "height": 128,
-    "sha256": "78a8e2b28dbf3c0eda4b69e96c7d730e62e09a0e303d0132f3f5fff184821714",
+    "sha256": "3a9e61437d1e174b5d2f178e0f36659a010738ff173d614a87c09d7d15d5680c",
     "source_sha256": "02d7f41617e8524807900ce14aec754ef32eda01b610ed2a1f8c0da961e3bc8d",
     "source_sprite": "ui_image_RoundPortrait_tauta_darkstrider_01",
     "source_guid": "871cb4297a5b8ab408f246e7619c7720",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1817,22 +1985,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.284325,
-      10.113925,
-      12.273839,
-      1.222521
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tauFarsight": {
     "src": "/images/heroes/Farsight.webp",
     "width": 128,
     "height": 128,
-    "sha256": "bf45cccf1b75c5d8acd3277c48bc7906320de2ce815e834d681a7f7c02f99cf8",
+    "sha256": "3b9ec655760104551a8997aabb405c4f8fd434d1833a09214db5ddcbb6994924",
     "source_sha256": "2a4de74ebcbcbb0fb155c613c4a1660661c01e6eea90858ab7d01588c819a53f",
     "source_sprite": "ui_image_RoundPortrait_tauta_farsight_01",
     "source_guid": "69eafb592c6d29d45af80d710b844606",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1841,22 +2009,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.890033,
-      11.978934,
-      12.444558,
-      1.465927
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tauMarksman": {
     "src": "/images/heroes/Sho.webp",
     "width": 128,
     "height": 128,
-    "sha256": "bc28c84cc08393f67afb822d687065f3c0f20068501cdbe1942c5a65cb83b541",
+    "sha256": "c4b4cb72b2f725b6e069a62d130132c38ac9f64ecc5ecbc6dcc3058e84f3666f",
     "source_sha256": "3a13958289aafbcbdec12ca480b0b40c6de4752fd4e693cacc9b447e845444f7",
     "source_sprite": "ui_image_RoundPortrait_tauta_marksman_01",
     "source_guid": "f3d71319465a4384a9eed9b2ac04807b",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1865,9 +2033,9 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      7.365137,
-      3.849314,
-      7.436126,
+      0.0,
+      0.0,
+      0.0,
       0.0
     ]
   },
@@ -1875,12 +2043,12 @@
     "src": "/images/heroes/SS.webp",
     "width": 128,
     "height": 128,
-    "sha256": "111ae23776734ce54044429f9351c4bb560e731d793d65d5247163e103bc1652",
+    "sha256": "a06d2dfd2492feddaf1af9cc5f7688604364e1e1281e4127e517cdddbeed3983",
     "source_sha256": "126c151405294f20ea3d1f2ef0e824456ded87a9beeee4f40d0c32b784a09f2b",
     "source_sprite": "ui_image_RoundPortrait_tauta_shadowsun_01",
     "source_guid": "92069cb6772f1fd40bca9cc9e7bab57f",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1889,22 +2057,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.231157,
-      12.111911,
-      13.647847,
-      1.32009
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "templAggressor": {
     "src": "/images/heroes/Burchard.webp",
     "width": 128,
     "height": 128,
-    "sha256": "931767a47b821fab5db39884e444ee5c141134618f28ce8069b060618567484c",
-    "source_sha256": "c85eb99c3cad55c8e896aa8d138b249276b02838695403fbae8c9d6b5eb03253",
+    "sha256": "1fc8322e95a2b8c928874418897dee9a4bea79503dfd1cb67659096006857236",
+    "source_sha256": "3c185668d16361b8249eae8ba11df1fa1962455f9c2d9335c38f804a9df050b2",
     "source_sprite": "ui_image_RoundPortrait_templ_aggressor_01",
     "source_guid": "5793339bf32805f408311acee84834b3",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1913,22 +2081,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.856279,
-      8.209588,
-      9.153343,
-      1.403019
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "templAncient": {
     "src": "/images/heroes/Thoread.webp",
     "width": 128,
     "height": 128,
-    "sha256": "9f4d6beae9e1b6d4cfa9308018733fd178c3466b42b44ee0333523057cd92894",
+    "sha256": "cffcb8cb0276613dae335d0c6df19d9985300b97599dd6489be4f6bd96d3d4b0",
     "source_sha256": "f06575fe03cad6d8eb7962b325b6cb795dd370d2ea7f60c984d32b202a20fd67",
     "source_sprite": "ui_image_RoundPortrait_templ_ancient_01",
     "source_guid": "e44883e97173b6942bdc02f14ed61ba8",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1937,22 +2105,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.83496,
-      10.938292,
-      12.393821,
-      1.343749
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "templChampion": {
     "src": "/images/heroes/Jaeger.webp",
     "width": 128,
     "height": 128,
-    "sha256": "a201596115f8ee74a3d8b3faaeea04fd8c5e427fa2fd8e785e3eb5fae79d286d",
+    "sha256": "565a1ec7ec50523d5a43aaf40ed4b9aa1d014c2959d15f2b410f9a903f0d9c58",
     "source_sha256": "64fcb0f9587f49805150f2ff771c77f77518eaa0f5fd76eb20d5e8ac93bb9263",
     "source_sprite": "ui_image_RoundPortrait_templ_champion_01",
     "source_guid": "3e3fc6894f5446646a3e245cfb2ec033",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1961,22 +2129,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.378842,
-      10.331195,
-      12.109345,
-      1.297156
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "templHelbrecht": {
     "src": "/images/heroes/Helb.webp",
     "width": 128,
     "height": 128,
-    "sha256": "7ab98fd94f9e1ec6a2638606d943bc1e979d260cfb024584457d2f5a975a82c2",
+    "sha256": "19a9c9fe68ea92c5091159d54132baa1d5ab5fca3c4baa212a3cfe4ceb5866eb",
     "source_sha256": "92d2369546e261fc2b65ba10fd622713cd43b3ab45a2c2329b1bc3bb4b66f0e4",
     "source_sprite": "ui_image_RoundPortrait_templ_helbrecht_01",
     "source_guid": "bdad4d82ca61a4f46bbab5c897b4d83a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -1985,22 +2153,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.691227,
-      11.79414,
-      12.81949,
-      1.297156
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "templSwordBrother": {
     "src": "/images/heroes/Godswyl.webp",
     "width": 128,
     "height": 128,
-    "sha256": "4861053c790194b90e4baf4d04460907143dc32866099305c18a724b1fb6450c",
+    "sha256": "ecbb6c570df1df84f06186242275eecc0be21f3e2f9f062eb8558fdf8eb74460",
     "source_sha256": "3c3902b6da15ecd36f9318bc104cff4c83c323fc3bb97249c3c6889f0dbfdcc3",
     "source_sprite": "ui_image_RoundPortrait_templ_brother_01",
     "source_guid": "a54587e75db6a3b448b80690341c1c25",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2009,22 +2177,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.308897,
-      10.359199,
-      11.640702,
-      1.344497
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "thousAhriman": {
     "src": "/images/heroes/Ahri.webp",
     "width": 128,
     "height": 128,
-    "sha256": "6ca672333ad5e23b544bc10297aeb3659796554e376924b67b23ca902270790c",
-    "source_sha256": "745de9e52a86a40b764ae9ab8570697e055bfee01d3ed8d406ed247f8e5a0688",
+    "sha256": "22f7a611c4872ae888dfb10e46928cc528832a42bdcdc1c4b37676643ac66425",
+    "source_sha256": "399bec72be486c37a24acc22ff577745f8eb2646472c38aacc1efd62ba07ca10",
     "source_sprite": "ui_image_RoundPortrait_thous_ahriman_01",
     "source_guid": "e0be984844a8541f6988cbd10a196012",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2033,22 +2201,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      15.268801,
-      13.735347,
-      15.172883,
-      1.452606
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "thousInfernalMaster": {
     "src": "/images/heroes/Abrax.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c27b07ab4d27c8ff54830b23cc24e240a65af646294ad9860c20ff4607ba3fbc",
+    "sha256": "ee64cfe7a04418cd15a3468cb28e93172337a9081e9e17f70c709e7cf3a9efb1",
     "source_sha256": "9804e4d905fcdcfc10d16543de3512449db151f4eeb2d0050f0110cdd8532afc",
     "source_sprite": "ui_image_RoundPortrait_thous_infernal_01",
     "source_guid": "e1796bd83039f5747b8566d810e5b550",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2057,22 +2225,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.40073,
-      8.933808,
-      13.376972,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "thousSekhetar": {
     "src": "/images/heroes/Sek.webp",
     "width": 128,
     "height": 128,
-    "sha256": "0c9208989cfb294467b51c4adccd3f46c6859536205267f17a00a9fbe3a554bd",
-    "source_sha256": "9293c74009e93826e18a0475deb41041ee7c27972e6a3162b187c3abe0f2cf82",
+    "sha256": "a877994b8b60701512895a431ed91cfa18278158a8ff292aa1446b338e05844d",
+    "source_sha256": "7f2f921377fbd68e90e3ccfcf883d8f8105358e5bdbfe63ba1b8de19017c15ec",
     "source_sprite": "ui_image_RoundPortrait_thous_sekhetar_01",
     "source_guid": "6040551f8118b6948a4d577c1e8ddd16",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2081,22 +2249,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      11.734199,
-      9.579636,
-      13.715129,
-      0.821542
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "thousSorcerer": {
     "src": "/images/heroes/Thaum.webp",
     "width": 128,
     "height": 128,
-    "sha256": "1d0e829188697d51b9ee42aff1548db1f1c11b1954640a00186c81a25e2a9d28",
+    "sha256": "b4264cabcb1c1046ba10d11865a0f25992223ffdd558cfa82198f3811a747d51",
     "source_sha256": "5b73e48edf5e9cab2c0a92e3b755d4b8521a590131187bcf9056826bd5c6c3c0",
     "source_sprite": "ui_image_RoundPortrait_thous_sorcerer_01",
     "source_guid": "5fafacb541dbb7f42b62f97dec958867",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2105,9 +2273,9 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      9.247837,
-      4.177362,
-      10.270961,
+      0.0,
+      0.0,
+      0.0,
       0.0
     ]
   },
@@ -2115,12 +2283,12 @@
     "src": "/images/heroes/Toth.webp",
     "width": 128,
     "height": 128,
-    "sha256": "e5f065f0bd010d1185b5544bdab5a2f027b830fd5f2f44bf85c5add8c1f3fb4d",
+    "sha256": "cb3052b9499f8f76b11e8e70d526d3a24fff84088d317a3528892ae0948e47a4",
     "source_sha256": "7caf26cc1b6f9cd45b5a44b73aa13a7b3516df380fe2e718c802aa54a0558b20",
     "source_sprite": "ui_image_RoundPortrait_thous_terminator_01",
     "source_guid": "69b10518d551448429ebe2f6c914ed56",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2129,14 +2297,14 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.958232,
-      12.598221,
-      15.218077,
-      1.284105
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "thousTzaangor": {
-    "src": "/images/hero-round/thousTzaangor.webp",
+    "src": "/images/heroes/Yaz.webp",
     "width": 128,
     "height": 128,
     "sha256": "ecebf9ebff75499cbab64f4d15d9a769a2381029fc92ea2b9ad9cd3eaf694993",
@@ -2144,31 +2312,7 @@
     "source_sprite": "ui_image_RoundPortrait_thous_tzaangor_01",
     "source_guid": "98b2ebd9b47a37d479572d1936cda6b3",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "tyranDeathleaper": {
-    "src": "/images/hero-round/tyranDeathleaper.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "c7f05e26937eaa12f93be2c03306d9493e76b0a526e41e30e6ece48cd69e3d2e",
-    "source_sha256": "1f64123b30f9bf67db1e9250d13c37dd1638b077c84ae78bd8a535b266239c9d",
-    "source_sprite": "ui_image_RoundPortrait_tyran_deathleaper_01",
-    "source_guid": "81c954ac02b23064dab6b674feeec69b",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "tyranNeurothrope": {
-    "src": "/images/heroes/Neuro.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "955425870f1be7180a0c1ef4c0ee79d7f71e2eda92cdafde060c28db695de8af",
-    "source_sha256": "6a757934942b82f038bbb0397a2730ae3253393fb56635e1248157822f8c6e65",
-    "source_sprite": "ui_image_RoundPortrait_tyran_neurothrope_01",
-    "source_guid": "f58556d0c1dd600408bf3c64ba0fd110",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2177,22 +2321,70 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.804828,
-      10.004875,
-      10.14398,
-      1.268277
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "tyranDeathleaper": {
+    "src": "/images/heroes/DL.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "308ddedceab9c63693bf12eabbc0f38f0422d86d3f37c0aa4e9676dd989ba5fa",
+    "source_sha256": "58970267e179ad22a2365e64f0a411eb753e2549d69e6223da170734ff298805",
+    "source_sprite": "ui_image_RoundPortrait_tyran_deathleaper_01",
+    "source_guid": "81c954ac02b23064dab6b674feeec69b",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "tyranNeurothrope": {
+    "src": "/images/heroes/Neuro.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "1278f57411299f81f9decbcf17f7ad37a7fef5248830fecfd1d34f3deb9d850c",
+    "source_sha256": "6a757934942b82f038bbb0397a2730ae3253393fb56635e1248157822f8c6e65",
+    "source_sprite": "ui_image_RoundPortrait_tyran_neurothrope_01",
+    "source_guid": "f58556d0c1dd600408bf3c64ba0fd110",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tyranParasite": {
     "src": "/images/heroes/Parasite.webp",
     "width": 128,
     "height": 128,
-    "sha256": "e1d75672eadcd9af7c90f7c17d54d869a56c5bc446eeae6fe052bc63fe14f2ce",
+    "sha256": "70082e9ca22c47cb25ee4ee50a109d18e7c47c25b731cfcdf04f0ec7a5d87e16",
     "source_sha256": "9db31e1c8ee0b8230116bf9421c86a5cb394921d149f50b672d9177a71e74dd3",
     "source_sprite": "ui_image_RoundPortrait_tyran_parasite_01",
     "source_guid": "4243b5d374b822e4c8bb302c8cd105d2",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2201,22 +2393,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.605819,
-      12.229708,
-      12.791357,
-      1.404638
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tyranTyrantGuard": {
     "src": "/images/heroes/TG.webp",
     "width": 128,
     "height": 128,
-    "sha256": "a29046455720faabe59ef161eee126de4e76430a7ee1ed60b6699e85683a1965",
-    "source_sha256": "2537afe01d82ca11fcb065d2e3847d8e5432a23eb2c44ba9cacdaa709424c502",
+    "sha256": "54a06d333852400654093f420120fab44ac87200282596dc836b2e53d8cdf4f9",
+    "source_sha256": "d6c81896145ed4d3782c2b98a0a17a2584efec88bca5c7b0474624e198bd84cf",
     "source_sprite": "ui_image_RoundPortrait_tyran_tyrantguard_01",
     "source_guid": "1b44366e58be5c541b6f47703910eefd",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2225,22 +2417,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.063652,
-      8.91221,
-      9.701725,
-      1.392065
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "tyranWingedPrime": {
     "src": "/images/heroes/Winged.webp",
     "width": 128,
     "height": 128,
-    "sha256": "7830d76f9d6bcc1b3d14bb1fea74836ccf136c9f05a4568ce58e4cf16501529e",
+    "sha256": "a8310dc44803ecf44973521bb08a04b6609ff96324ae64ae7d60b7cacc24cd20",
     "source_sha256": "0e8b14330e140d9e6d3a8f85cc44ac1f3eeebd42b210dbc9d04acb9473704c06",
     "source_sprite": "ui_image_RoundPortrait_tyran_wingedprime_01",
     "source_guid": "3b9d3db67211f7b469d10942b6644c5a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2249,22 +2441,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      8.976954,
-      7.69292,
-      9.106916,
-      0.846263
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "ultraApothecary": {
     "src": "/images/heroes/Incisus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "bdea4a56b75d3702245da06c79002b9cca38695bf8ec89c59c4e42ad88dabcc4",
-    "source_sha256": "0cbc4d6397feb713b73c390a0f59745b7b6750c380cc28869bb73a66be1339d8",
+    "sha256": "a7f80c7f5ee9b25f9677f6b9da95323c17bbdb4ea35cdd461259e6b5b245d798",
+    "source_sha256": "01aee6833beb80ad40275fcbb0c7be3ab8d8ca6b9e599856ab6493aac357a3dd",
     "source_sprite": "ui_image_RoundPortrait_ultra_apothecary_01",
     "source_guid": "986c685b409d44c459368dd485b497f5",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2273,22 +2465,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.59481,
-      9.929345,
-      12.455225,
-      1.44375
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "ultraCalgar": {
     "src": "/images/heroes/Calgar.webp",
     "width": 128,
     "height": 128,
-    "sha256": "7dada38c24adf45fbbb148fed9aa16f40d5bf7270cd4c6f711ace5d1cd0e1065",
+    "sha256": "c1cb809c97a7607dc5a0bc8c19704d40288edd343f925f84158e841b3056bcef",
     "source_sha256": "f20f09547904b5334f5442620b3203585e0f074b522f3086b6a40b64610c4838",
     "source_sprite": "ui_image_RoundPortrait_ultra_calgar_01",
     "source_guid": "44636510f5635bf4788f365ba7029580",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2297,9 +2489,9 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      6.48709,
-      3.401716,
-      7.546261,
+      0.0,
+      0.0,
+      0.0,
       0.0
     ]
   },
@@ -2307,12 +2499,12 @@
     "src": "/images/heroes/Certus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c93d58dbfb40f51ac635f7c850360803acfb794e71e48d79ed0755af40f4ae60",
+    "sha256": "e59b31a09a3fb41c28ef2a578e15efaf0a306ff5a30294d0b904d1c53205ecd0",
     "source_sha256": "63b5af4d38e5755cb2448601f6619e9ce5e979c25a9b2d5f0195face6dcb3947",
     "source_sprite": "ui_image_RoundPortrait_ultra_eliminator_01",
     "source_guid": "09345da0adba09c47b6a51afee65f31a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2321,22 +2513,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      10.920671,
-      7.500844,
-      9.30286,
-      0.851235
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "ultraInceptorSgt": {
     "src": "/images/heroes/Bella.webp",
     "width": 128,
     "height": 128,
-    "sha256": "4e28c03a8862696c9d924bbc8a08fb8a4fb90af5e1eaf88a2c881332f936e294",
+    "sha256": "0dd221890505cd64b588128bb1b0bb583717786acbcf0eb00b5fe2ceb9db1d69",
     "source_sha256": "8a918172f1237fdf3b0deb3ec5271295f164a4f21a649eb0f86bbf6ea448680f",
     "source_sprite": "ui_image_RoundPortrait_ultra_inceptor_01",
     "source_guid": "ad198613cadc86d4093b6bde03a19a27",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2345,22 +2537,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.656638,
-      10.63735,
-      11.79101,
-      1.217791
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "ultraTigurius": {
     "src": "/images/heroes/Tiggy.webp",
     "width": 128,
     "height": 128,
-    "sha256": "d785477dc2bc7a7211dc68adca67baf4beaf09fde84610499e69d95252294615",
+    "sha256": "c0eb1f2209d872f3987b1703d3faa0645eea7a0673fd92781ea086b284e8926d",
     "source_sha256": "e08842b766454e3e55c01b643ff1ebb81e4aad77bd8d26634a384dea0897bbd6",
     "source_sprite": "ui_image_RoundPortrait_ultra_tigurius_01",
     "source_guid": "6c13f1678ea937249b676671992309c0",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2369,22 +2561,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.458973,
-      10.346367,
-      12.763472,
-      1.206323
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "ultraTitus": {
     "src": "/images/heroes/Titus.webp",
     "width": 128,
     "height": 128,
-    "sha256": "a698cddde90e3498ae190b9557f4af13af48cd2d5166f52ac0dcbdff937fc426",
+    "sha256": "675f2b11b96a938f442e3c6a4f0eefe020452b59e5e1256754dedf7c0eea7928",
     "source_sha256": "b7ab6140b5ac72c85f762dead776c752a465b2f67eaebc51fb7f40387d0450d3",
     "source_sprite": "ui_image_RoundPortrait_ultra_titus_01",
     "source_guid": "c51991e43693e6648969da5839fa4db4",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2393,22 +2585,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.15732,
-      9.964877,
-      11.499647,
-      1.433491
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "votanBeserk": {
     "src": "/images/heroes/Havyr.webp",
     "width": 128,
     "height": 128,
-    "sha256": "57c8bc54899a0bf4e4a7bbdb663790e928d28f518b1a5a8672280096a9941b02",
+    "sha256": "6af39781bd03e358bcee70e11190a10a6fce882af7d2f9a228ba0ea56ba0360f",
     "source_sha256": "10362f7990121c2117f4d9f13353ec46ee114fd920250f719af0a941c51c6f03",
     "source_sprite": "ui_image_RoundPortrait_votan_beserk_01",
     "source_guid": "9bec79288a6625544a065902d303a922",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2417,22 +2609,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.72412,
-      11.008424,
-      13.183205,
-      1.216421
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "votanChampion": {
     "src": "/images/heroes/Kymm.webp",
     "width": 128,
     "height": 128,
-    "sha256": "fa6e1194ed145de6feb773a4d73db025c85e5a13a0832854a945b4142d0d9db3",
+    "sha256": "62714fec1c4818d5b6841a03422d8854800babefa9dd62c62dbd6031f5c21135",
     "source_sha256": "ca8bf7363e854eecec898c902e6b3c94af8cc91f1bdb6e7948ea734daec68903",
     "source_sprite": "ui_image_RoundPortrait_votan_champion_01",
     "source_guid": "3d251dc7f55c77948a7bf5ebc4e7adfd",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2441,34 +2633,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.415293,
-      9.803721,
-      11.614835,
-      1.273785
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "votanIronmaster": {
-    "src": "/images/hero-round/votanIronmaster.webp",
+    "src": "/images/heroes/Vynn.webp",
     "width": 128,
     "height": 128,
-    "sha256": "b143c5bb9c9a7f1e1178387c068278672928ad00067ce6cb33580de022643183",
-    "source_sha256": "c9779dba86fa0f4e51f24dbc12701f3789e0491de1c6e94e5eed0a94779a91ec",
+    "sha256": "7f82ca949cf80d7453ac0c145c2f8863b16e497d1e44e628f794fbe5911c48fe",
+    "source_sha256": "f3754ac52d5f8fab2198cb5eb7051e851ca5abc944e44274d4ec724faf8aa4f5",
     "source_sprite": "ui_image_RoundPortrait_votan_ironmaster_01",
     "source_guid": "d8496deacdc519040909bb010420b692",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
   },
   "votanMemnyr": {
     "src": "/images/heroes/Ammuk.webp",
     "width": 128,
     "height": 128,
-    "sha256": "83616724a85ae18bfe083efcb6f23643a5575a094b03e179f516ec058d4a7b87",
-    "source_sha256": "b0aceb4aa6cf2ac740f2e484c2784748a92874148ee9817d5a809ab7bb275ff2",
+    "sha256": "6d5189952eddc7f7f2cd5f1eac958390bf01fd52dcd66f20e0e304bafc34d9db",
+    "source_sha256": "cbda8915922ffe36736124099af2028007c734542ee3b642f600b29b369ca93f",
     "source_sprite": "ui_image_RoundPortrait_votan_memnyr_01",
     "source_guid": "2d80119a15172324b87a1ead6eb9611e",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2477,22 +2681,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.985406,
-      13.010337,
-      14.214549,
-      1.465246
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "votanUthar": {
     "src": "/images/heroes/Uthar.webp",
     "width": 128,
     "height": 128,
-    "sha256": "7efdb3d511d571a834acd90e9722cd0cc56054f0785aa1b34eb20af66cf12c16",
+    "sha256": "19924f1db73c1b251eab43ee4962f8e5e0953a8592d8aa465969e0b2b865a485",
     "source_sha256": "da1ecd4f0e14aba3e911a94fd9d2f839651dbd5e63ac796f2a952c91a447dc79",
     "source_sprite": "ui_image_RoundPortrait_votan_uthar_01",
     "source_guid": "0b9a9c77c9149a54081136fda15f378a",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2501,22 +2705,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.887193,
-      12.244804,
-      13.199681,
-      1.400364
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "worldEightbound": {
     "src": "/images/heroes/Azkor.webp",
     "width": 128,
     "height": 128,
-    "sha256": "c4319ad810d543c225cfbdd041492688611f31deb6e04be9ad6f33c8746e06ab",
+    "sha256": "23074e64a1849d0859d20766881c39aec2fcb99ce2bcf906d7f425746a01e880",
     "source_sha256": "082d078a105d5845805d967c1c16a9b08ce3cc9d4c6fdee7c9849b5a36fc119c",
     "source_sprite": "ui_image_RoundPortrait_world_eightbound_01",
     "source_guid": "2d8e1ba3a9209de4098e68bead0816ac",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2525,14 +2729,14 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      13.103252,
-      11.682613,
-      12.323569,
-      1.252478
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "worldExecutions": {
-    "src": "/images/hero-round/worldExecutions.webp",
+    "src": "/images/heroes/Tarvakh.webp",
     "width": 128,
     "height": 128,
     "sha256": "c754cc015ac7b981b76507df635939516c420dca09352c829587fc85f906ede6",
@@ -2540,19 +2744,7 @@
     "source_sprite": "ui_image_RoundPortrait_world_executions_01",
     "source_guid": "865f2f051419fcf429cd8917efde0935",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
-    "mapping_method": "canonical hero visual GUID to original round sprite; lossless WebP"
-  },
-  "worldJakhal": {
-    "src": "/images/heroes/Macer.webp",
-    "width": 128,
-    "height": 128,
-    "sha256": "6596b876b4d7099f90a198ed10644167f97b32a84947a2154f31676ad7c2d252",
-    "source_sha256": "412640fe2e866dff56609dda9c35ff125f68e8b6213d4c147a160e05b76f5847",
-    "source_sprite": "ui_image_RoundPortrait_world_jakhal_01",
-    "source_guid": "cb6c91a253ce8c145afaaa8b58442145",
-    "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2561,22 +2753,46 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.264068,
-      11.30639,
-      12.470145,
-      1.401907
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "worldJakhal": {
+    "src": "/images/heroes/Macer.webp",
+    "width": 128,
+    "height": 128,
+    "sha256": "588e131a478a28bef6df28a525062ec6635ed2c1dbd70664dfaf101ab967789b",
+    "source_sha256": "412640fe2e866dff56609dda9c35ff125f68e8b6213d4c147a160e05b76f5847",
+    "source_sprite": "ui_image_RoundPortrait_world_jakhal_01",
+    "source_guid": "cb6c91a253ce8c145afaaa8b58442145",
+    "source_kind": "round_portraits",
+    "app_version": "1.44.88",
+    "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
+    "mapping_sources": [
+      "src/data/lre/fabius.json",
+      "src/data/lre/farsight.json",
+      "src/data/lre/lysander.json",
+      "src/data/lre/uthar.json"
+    ],
+    "source_rms": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "worldKharn": {
     "src": "/images/heroes/Kharn.webp",
     "width": 128,
     "height": 128,
-    "sha256": "16b8ee805544f276b5966a32225abf50fab204e5f695df2a92a3ff6faff4ea4d",
-    "source_sha256": "240fb8ffad3255a09bdf00c53eccf64ab0c0a551a4e721bc2cbb44861c9c58fb",
+    "sha256": "2eac6ee6626f7e0905df33b63c05d47d15c08ef3d42b8935bed2bd2fca832a2f",
+    "source_sha256": "d0a5275890734c4bb791aedaee4f5f99758590e2e9bfb0e7c0f0b7da75739ee2",
     "source_sprite": "ui_image_RoundPortrait_world_kharn_01",
     "source_guid": "f99f829dc82adb540b027d236d574d4f",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2585,22 +2801,22 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      14.109327,
-      12.739352,
-      13.211018,
-      1.230339
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   },
   "worldTerminator": {
     "src": "/images/heroes/Wrask.webp",
     "width": 128,
     "height": 128,
-    "sha256": "df68b0b4cf93024ee6b402c60b2226290235cd9b594c6abd605b388c56d6b4e1",
-    "source_sha256": "1f9066b2674e299df4affdaabd02b540f223f5fb52a4cdd952fc90e86a64dbf2",
+    "sha256": "7112158bb23696364443cc175b43f41ed071b3143ba53aada671790cb3656b16",
+    "source_sha256": "bb2b66f47c2e24fc08634e3e53b835f67dd2f470cf14350a49f52b72e079e925",
     "source_sprite": "ui_image_RoundPortrait_world_terminator_01",
     "source_guid": "d6c7c9cbcc0b0d94da29a8377dc42b38",
     "source_kind": "round_portraits",
-    "app_version": "1.43.130",
+    "app_version": "1.44.88",
     "mapping_method": "canonical hero ID in existing LRE portrait mapping; checked against original round sprite",
     "mapping_sources": [
       "src/data/lre/fabius.json",
@@ -2609,10 +2825,10 @@
       "src/data/lre/uthar.json"
     ],
     "source_rms": [
-      12.500263,
-      9.256281,
-      9.534629,
-      1.361978
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ]
   }
 }

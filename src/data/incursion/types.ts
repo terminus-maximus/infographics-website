@@ -53,6 +53,8 @@ export interface IncursionTierReward {
   initialClear: number;
   raidOnly: number;
   shardType?: "Mythic";
+  extraRegularShards?: number;
+  initialClearMinimum?: number;
 }
 
 export interface IncursionStageTip {

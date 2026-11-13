@@ -90,9 +90,11 @@ def main():
     require(len(ids) == len(roster) == len(set(slugs)), 'Duplicate hero IDs or slugs')
     require(all(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', s) and s not in {'top-10', 'factions', 'index', 'scoring'} for s in slugs), 'Invalid or reserved hero slug')
     # Relationships are explicit structured roles, never text search or table membership.
-    relationships = {uid: [] for uid in ids}
+    additions = read(ROOT / 'src/data/updates/profile-additions.json')
+    relationship_ids = ids | {h['unit_id'] for h in additions['heroes']}
+    relationships = {uid: [] for uid in relationship_ids}
     def add(uid, guide, role, evidence, appearances=None):
-        require(uid in ids, f'Unknown relationship identity: {uid}')
+        require(uid in relationship_ids, f'Unknown relationship identity: {uid}')
         item = {k: guide[k] for k in ('category', 'slug', 'title')}
         item.update(url=guide['url'].removeprefix('https://terminusmaximus.com'), role=role, status='current', evidence=evidence)
         if appearances:

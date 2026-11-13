@@ -10,7 +10,6 @@ import { popularityBenchmark, popularityInsight } from '../src/lib/hero-populari
 import topSummaries from '../src/data/heroes/top-10-summaries.json' with { type: 'json' };
 import { highPointsHeroMatches } from './hero-lre-links.mjs';
 import { loadTeamGuideRelationships } from './hero-team-links.mjs';
-import { updateHeroes } from '../src/lib/game-update-profiles.mjs';
 import roundPortraits from '../src/lib/hero-round-portraits.mjs';
 const root = resolve(import.meta.dirname,'..');
 const buildRoot = process.env.TM_BUILD_DIR || resolve(root,'dist');
@@ -42,7 +41,7 @@ assert(isDeepStrictEqual(Object.keys(icons.ranks),reference.ranks.map(rank=>Stri
 for (const group of ['rarities','stars','ranks','stats','abilities','modes']) for (const icon of Object.values(icons[group])) {
   assert(icon.src.endsWith('.webp') && existsSync(resolve(root,'public',icon.src.slice(1))),`Missing WebP icon: ${icon.src}`);
 }
-assert(heroes.length === reference.coverage.heroes + updateHeroes.length, 'Reference coverage mismatch');
+assert(heroes.length === reference.coverage.heroes, 'Reference coverage mismatch');
 assert(isDeepStrictEqual(Object.keys(overallSummaries).sort(),heroes.map(hero=>hero.unit_id).sort()),'Overall summary roster mismatch');
 for (const hero of heroes) {
   overallSummary(hero.unit_id,hero.overall.final_score);

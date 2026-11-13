@@ -1,0 +1,30 @@
+{
+  "coins": {
+    "guid": "d86bf87918e7c4e3f91900a87e15f132",
+    "sprite_name": "ui_icon_resource_coin_medium"
+  },
+  "ability-badge-draft": {
+    "guid": "c6ddbb03a7a8546808ec649ca6f5bd1b",
+    "sprite_name": "ui_icon_droptable_draft_abilityTokensLegendary"
+  },
+  "claimed-skulls": {
+    "guid": "43e1f09d459386c4383fe999406d6e50",
+    "sprite_name": "ui_icon_resource_event_currency_november_2026"
+  },
+  "imperial-equipment": {
+    "guid": "50d9a6838122a624a8fed5a73af9f92f",
+    "sprite_name": "ui_icon_droptable_item_legendary"
+  },
+  "requisition": {
+    "guid": "08f7f52ec1389f84d8bd1bad2bc549cd",
+    "sprite_name": "ui_icon_resource_summoning_token"
+  },
+  "blessed-requisition": {
+    "guid": "7570ffc9696f44347affaa335da04cea",
+    "sprite_name": "ui_icon_resource_summoning_special"
+  },
+  "energy": {
+    "guid": "3873b38aa2d211c468d2f9ba508d8aab",
+    "sprite_name": "ui_icon_resource_stamina_medium"
+  }
+}

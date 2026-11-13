@@ -1,5 +1,5 @@
 {
-  "characterBuild": "1.43.130",
+  "characterBuild": "1.44.88",
   "tracks": [
     {
       "id": "alpha",
@@ -597,6 +597,22 @@
           "beta_4"
         ],
         "gamma": null
+      }
+    },
+    {
+      "id": "lostaFearmonger",
+      "name": "Daras",
+      "faction": "The Lost and the Damned",
+      "portrait": "/images/lre/portraits/lostaFearmonger.png",
+      "eligibility": {
+        "alpha": null,
+        "beta": [
+          "beta_1",
+          "beta_4"
+        ],
+        "gamma": [
+          "gamma_4"
+        ]
       }
     },
     {

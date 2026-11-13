@@ -1,5 +1,5 @@
 {
-  "app_version": "1.43.130",
+  "app_version": "1.44.88",
   "icons": {
     "faction": {
       "Adeptus Astartes": {
@@ -8,7 +8,7 @@
         "width": 256,
         "height": 243,
         "source_sha256": "a69caf0905fc7211190dc36c5513b19cfa3c91f01bf912b435beaefa54e1a4da",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_adeptus_astartes_01"
       },
       "Adeptus Mechanicus": {
@@ -17,7 +17,7 @@
         "width": 256,
         "height": 251,
         "source_sha256": "95ac3156d3eb9a39f18f91cf887b1b8ecbb22166f0e09a0f857f12d082f835c9",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_adeptus_mechanicus_01"
       },
       "Aeldari": {
@@ -26,7 +26,7 @@
         "width": 253,
         "height": 256,
         "source_sha256": "9a52c4054970de72d74fa0a90bf31c3db071f958e5367f0a8f9b9e6aacd2f593",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_aeldari_01"
       },
       "Astra Militarum": {
@@ -35,7 +35,7 @@
         "width": 256,
         "height": 247,
         "source_sha256": "945e250c4829ce3110fc58a8ffbe96a40a21c45b948ec584602afb9424fbc3fa",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_astra_militarum_01"
       },
       "Black Legion": {
@@ -44,7 +44,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "b32c255ef756a1c41f8a0852dc96f655898ec43505bb354a243cfaad56aaf980",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_black_legion_01"
       },
       "Black Templars": {
@@ -53,7 +53,7 @@
         "width": 256,
         "height": 234,
         "source_sha256": "f8e20557769e0a650ab5889407813f665bc3e0a1efc4b0e5a98a53df15664454",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_black_templars_01"
       },
       "Blood Angels": {
@@ -62,7 +62,7 @@
         "width": 247,
         "height": 215,
         "source_sha256": "6c56b688b73a48cda72693d5617b3f13c788a224a2ed91982addf329324c9af1",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_blood_angels_01"
       },
       "Adeptus Custodes": {
@@ -71,7 +71,7 @@
         "width": 246,
         "height": 214,
         "source_sha256": "72ebb63917fdbde12990e22179b92edce1a9967ff6417d732904b2c539ef5e50",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_custodes_01"
       },
       "Dark Angels": {
@@ -80,7 +80,7 @@
         "width": 256,
         "height": 237,
         "source_sha256": "6fd816b3e45ccfe317dc1f389c88d0c10abd8008b90e4d756fc83663582a1277",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_dark_angels_01"
       },
       "Death Guard": {
@@ -89,7 +89,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "561d7d82416acb2848407d3e66203a0c7ededaf82190dc3af95a7ba59d0a43d1",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_death_guard_01"
       },
       "Emperor's Children": {
@@ -98,7 +98,7 @@
         "width": 254,
         "height": 253,
         "source_sha256": "8bc5d23c35f203ae39a2f84911055be8b8ac465df491cd94ccd4daea19bf3bac",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_emperors_children_01"
       },
       "Genestealer Cults": {
@@ -107,7 +107,7 @@
         "width": 255,
         "height": 256,
         "source_sha256": "4849b6b5c5703d9d3f98885737bb3eea9b070ed96857daacf441c31edee26789",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_genestealers_01"
       },
       "Leagues of Votann": {
@@ -116,7 +116,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "0f96e8b0240f8b7aff439b570707a76450e86eeb75a0a201c88d12c3c1a34440",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_votann_01"
       },
       "Necrons": {
@@ -125,7 +125,7 @@
         "width": 254,
         "height": 254,
         "source_sha256": "2154fec0769ebf0a761175ba892607890e3a7651f06e1e82c3d1d9638eecb147",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_necron_01"
       },
       "Orks": {
@@ -134,7 +134,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "b2fdd1ad84c1f662b90462e61f8f6878586f4ca66ccec0b172b39f6c13dc7bcf",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_orks_01"
       },
       "Adepta Sororitas": {
@@ -143,7 +143,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "d1d1e156174aab9b9c218a748f9d01962801496baea1be470e26a1e1a759a1ff",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_adeptas_01"
       },
       "Space Wolves": {
@@ -152,7 +152,7 @@
         "width": 256,
         "height": 226,
         "source_sha256": "73dc2cfbbc2540c62aa1cad40c52e23eabdbd345d7afc67fcf0c76f4a35356dc",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_space_wolves_01"
       },
       "T'au Empire": {
@@ -161,7 +161,7 @@
         "width": 128,
         "height": 128,
         "source_sha256": "b7327145c7d459e59ec4d9cd455d3feda864840023674d9a4bc899ba5bad3820",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_tau_01"
       },
       "The Lost and the Damned": {
@@ -170,7 +170,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "6826b02aa6240e58ba37c30072025ff5699bb6161668d2da1ba884d32041c287",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_the_lost_and_the_damned_01"
       },
       "Thousand Sons": {
@@ -179,7 +179,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "af5b8273552a92757911ddb4a71ed0245dd66eae73372b26128a85c2f9e897fa",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_thousand_sons_01"
       },
       "Tyranids": {
@@ -188,7 +188,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "f11e23a093404b758d9d9b7200842f48c367f789ac9b3508b26e8dc0a3976041",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_tyranids_01"
       },
       "Ultramarines": {
@@ -197,7 +197,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "95966fe67fb86c4ad1bb61d3502c1586634d32380d4eba3279e1864305ea91ef",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_ultramarine_01"
       },
       "World Eaters": {
@@ -206,7 +206,7 @@
         "width": 256,
         "height": 256,
         "source_sha256": "63d880a132370e8cfeafc00d4ce8ec7a138cf0af1af97730f00056ffecd5b290",
-        "source_app_version": "1.44.120",
+        "source_app_version": "1.44.88",
         "sprite_name": "ui_icon_faction_world_eaters_01"
       }
     },

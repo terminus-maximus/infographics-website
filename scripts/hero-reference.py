@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import the local 1.43 character reference and rectangle portraits, read-only.
+"""Import the local production character reference and rectangle portraits, read-only.
 
 Rank statistics come from LocalDatabase's materialized rank_stat table. Ability
 descriptions use its existing renderer and ability_values implementation. This
@@ -132,8 +132,8 @@ def main():
     xref = read(processed / "character-xref.json")
     images = read(processed / "image-assets.json")
     aliases = read(processed / "legacy-aliases.json")["aliases"]
-    if catalog["snapshot"]["app_version"] != "1.43.130":
-        raise ValueError("This importer is reviewed for production build 1.43.130; review a new build explicitly.")
+    if catalog["snapshot"]["app_version"] != "1.44.88":
+        raise ValueError("This importer is reviewed for production build 1.44.88; review a new build explicitly.")
     for name, value in (("identities", xref), ("images", images)):
         if value["snapshot"] != catalog["snapshot"]:
             raise ValueError(f"Reference snapshot disagreement: {name}")
@@ -195,7 +195,8 @@ def main():
                     raise ValueError(f"WebP conversion dimensions disagree: {uid}")
             assets[uid] = image_bytes
             portrait = {"src": f"/images/heroes/{uid}.webp", "width": asset["width"],
-                        "height": asset["height"], "source_sha256": asset["sha256"]}
+                        "height": asset["height"], "source_sha256": asset["sha256"],
+                        "sha256": hashlib.sha256(image_bytes).hexdigest()}
         else:
             print(f"Portrait unavailable; neutral fallback: {uid}", file=sys.stderr)
 

@@ -15,11 +15,11 @@ export const reference = referenceData;
 /** @type {import('./hero-types').Release} */
 export const currentRelease = research.release;
 validateRelease(currentRelease, research.relationships);
-assert(reference.snapshot.app_version.startsWith('1.43.'), 'Unexpected reference version');
+assert(reference.snapshot.app_version === '1.44.88', 'Unexpected reference version');
 assert(relicData.snapshot.app_version === reference.snapshot.app_version && relicData.snapshot.config_full_hash === reference.snapshot.config_full_hash, 'Relic/reference snapshot mismatch');
 const referenceById = new Map(reference.heroes.map(h => [h.unit_id,h]));
 assert(referenceById.size === reference.heroes.length, 'Duplicate reference identities');
-assert(referenceById.size === research.identity.length, 'Reference/research roster mismatch');
+assert(referenceById.size === research.identity.length + updateHeroes.length, 'Reference/research roster mismatch');
 const scoresById = new Map(currentRelease.heroes.map(h => [h.unit_id,h]));
 /** @type {import('./hero-types').Hero[]} */
 export const heroes = research.identity.map(identity => {

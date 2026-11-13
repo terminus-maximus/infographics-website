@@ -12,6 +12,7 @@ const csv = read('src/data/campaign-events/required-heroes.csv');
 const data = assembleCampaignEvents(base, csv);
 const infographicRevisions = JSON.parse(read('src/data/infographicRevisions.json'));
 const canonical = JSON.parse(read('src/data/lre/fabius.json'));
+const livePortraits = JSON.parse(read('src/data/heroes/round-portraits.json'));
 // Frozen rule-manifest identities; these are distinct from ordinary campaign requirements.
 const requiredByEvent = {
   'dark-angels': ['necroSpyder', 'necroDestroyer', 'necroPlasmancer'],
@@ -70,8 +71,8 @@ assert.ok(bloodAngels.requiredHeroes.every(hero => hero.safeBetScenarios[0].prov
 assert.deepEqual(bloodAngels.requiredHeroes.map(hero => [hero.heroId, ...['rank', 'active', 'passive'].map(key => hero.safeBetScenarios[0].investment[key].value)]), [
   ['orksRuntherd', 'D3', 50, 50], ['orksNob', 'D3', 1, 36], ['orksWeirdboy', 'D3', 50, 50],
 ]);
-assert.equal(bloodAngels.rewards.source.gameVersion, '1.44.120');
-assert.equal(bloodAngels.rewards.source.preview, true);
+assert.equal(bloodAngels.rewards.source.gameVersion, '1.44.88');
+assert.equal(bloodAngels.rewards.source.preview, false);
 assert.deepEqual(bloodAngels.rewards.chestShards, [{ hero: 'Mephiston', initialTotal: 290, repeatQuantity: 10 }]);
 assert.deepEqual(bloodAngels.rewards.equipment.map(item => [item.name, item.stage]), [['Relic Power Fist', '25B'], ['Vitarus', '30']]);
 assert.equal(bloodAngels.stageRules.find(stage => stage.stageId === '23').deploymentLimit, 3);
@@ -206,7 +207,8 @@ const asset = (path) => {
 for (const hero of Object.values(data.characters)) {
   const source = canonical.characters.find((item) => item.id === hero.id);
   assert.ok(source, `Unknown canonical hero ${hero.id}`);
-  for (const key of ['name', 'faction', 'portrait']) assert.equal(hero[key], source[key], `${hero.id}: canonical ${key}`);
+  for (const key of ['name', 'faction']) assert.equal(hero[key], source[key], `${hero.id}: canonical ${key}`);
+  assert.equal(hero.portrait, livePortraits[hero.id].src, `${hero.id}: production portrait`);
   asset(hero.portrait);
 }
 for (const guide of data.events) {
@@ -372,6 +374,10 @@ if (process.argv.includes('--built')) {
   ]);
   for (const guide of alphabetical) {
     const html = read(`dist/campaign-event/${guide.slug}/index.html`);
+    const ruleTable = html.match(new RegExp(`<table aria-label="${guide.displayTitle} configured Extremis stage rules"[^>]*>([\\s\\S]*?)</table>`))?.[1] || '';
+    const ruleRows = [...ruleTable.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g)].slice(1).map(match =>
+      [...match[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/g)].map(cell => cell[1].replace(/<[^>]+>/g, '').trim()));
+    assert.deepEqual(ruleRows, guide.stageRules.map(rule => [`E${rule.stageId}`, rule.rarityCap, String(rule.deploymentLimit), String(rule.lightningVictoryRounds)]), `${guide.id}: every live stage rule is rendered`);
     for (const id of ['lowest-seen', 'alternates', 'replays', 'supports', 'tactics', 'rewards']) assert.ok(html.includes(`id="${id}"`), `${guide.id}: section ${id}`);
     assert.ok(html.includes(`/images/web/ce-${guide.slug}.webp`), `${guide.id}: event artwork`);
     assert.ok(html.includes(`/images/ce-${guide.slug}.png`), `${guide.id}: original artwork`);
@@ -410,8 +416,6 @@ if (process.argv.includes('--built')) {
       assert.ok(!html.includes('Watch replay') && !html.includes('Forgotten Saber'));
       assert.ok(!html.includes('Lowest Seen E30 team') && !html.includes('Other E30 three-medal options'));
       assert.ok(html.includes('Relic Power Fist') && html.includes('Vitarus'));
-      const rules = html.match(/<table aria-label="Blood Angels configured Extremis stage rules"[^>]*>([\s\S]*?)<\/table>/)?.[1] || '';
-      assert.equal((rules.match(/scope="row"/g) || []).length, 33);
     }
     const primaryCredit = html.match(/class="team-credit"[^>]*>([\s\S]*?)<\/div>/)?.[1] || '';
     const encodedHref = build => (build.resultSourceUrl || build.sourceUrl).replaceAll('&', '&amp;');

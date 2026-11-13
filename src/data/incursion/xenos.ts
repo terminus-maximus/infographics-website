@@ -1,4 +1,4 @@
-import type { IncursionCharacterId, IncursionGuide, IncursionTierReward } from "./types";
+import type { IncursionCharacterId, IncursionGuide } from "./types";
 
 // Shared recommendations from the October 26, 2026 Xenos review.
 // Keep machine-specific threats and the strength of each source in its own guide.
@@ -25,23 +25,4 @@ export const xenosMechanics = [
   { label: "Incursion rules & power-ups", url: "https://tacticus.wiki.gg/wiki/Incursion" },
   { label: "Re’vas", url: "https://tacticus.wiki.gg/wiki/Re%27vas" },
   { label: "Supa-Cybork Body", url: "https://tacticus.wiki.gg/wiki/Supa-Cybork_Body" },
-];
-
-// Matching tables visually transcribed from the user-supplied mow-zkar.png and
-// mow-pbc.png on October 26, 2026. Rank caps describe caps, not minimum builds.
-export const xenosTierRewards: IncursionTierReward[] = [
-  { tier: 14, cap: "Adamantine2", initialClear: 8, raidOnly: 8, shardType: "Mythic" },
-  { tier: 13, cap: "Adamantine2", initialClear: 6, raidOnly: 6, shardType: "Mythic" },
-  { tier: 12, cap: "Diamond3", initialClear: 48, raidOnly: 33 },
-  { tier: 11, cap: "Diamond3", initialClear: 45, raidOnly: 31 },
-  { tier: 10, cap: "Diamond3", initialClear: 43, raidOnly: 29 },
-  { tier: 9, cap: "Gold1", initialClear: 41, raidOnly: 27 },
-  { tier: 8, cap: "Gold1", initialClear: 40, raidOnly: 25 },
-  { tier: 7, cap: "Gold1", initialClear: 39, raidOnly: 23 },
-  { tier: 6, cap: "Silver1", initialClear: 36, raidOnly: 21 },
-  { tier: 5, cap: "Silver1", initialClear: 39, raidOnly: 19 },
-  { tier: 4, cap: "Bronze1", initialClear: 34, raidOnly: 18 },
-  { tier: 3, cap: "Bronze1", initialClear: 36, raidOnly: 17 },
-  { tier: 2, cap: "Iron1", initialClear: 34, raidOnly: 16 },
-  { tier: 1, cap: "Iron1", initialClear: 34, raidOnly: 15 },
 ];

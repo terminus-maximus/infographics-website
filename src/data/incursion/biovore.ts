@@ -1,3 +1,4 @@
+import { incursionTierRewards } from "./game-rules";
 import type { IncursionGuide } from "./types";
 
 // Based on the Biovore sections in the September 20 creator review.
@@ -115,23 +116,8 @@ export const biovoreGuide: IncursionGuide = {
     { title: "Favor survival over aggression", text: "Caoryn’s Mythic guide retreats and shields the roster with summons. Even that team has narrow survivals." },
     { title: "Plan your power-ups", text: "Havocs, Extra Hits, and sustain choices are part of the build, not incidental bonuses." },
   ],
-  // Transcribed from the supplied September 23, 2026 Tier Caps & Shard Rewards screenshot.
-  tierRewards: [
-    { tier: 14, cap: "Adamantine2", initialClear: 8, raidOnly: 8, shardType: "Mythic" },
-    { tier: 13, cap: "Adamantine2", initialClear: 6, raidOnly: 6, shardType: "Mythic" },
-    { tier: 12, cap: "Diamond3", initialClear: 48, raidOnly: 33 },
-    { tier: 11, cap: "Diamond3", initialClear: 45, raidOnly: 31 },
-    { tier: 10, cap: "Diamond3", initialClear: 43, raidOnly: 29 },
-    { tier: 9, cap: "Gold1", initialClear: 41, raidOnly: 27 },
-    { tier: 8, cap: "Gold1", initialClear: 40, raidOnly: 25 },
-    { tier: 7, cap: "Gold1", initialClear: 39, raidOnly: 23 },
-    { tier: 6, cap: "Silver1", initialClear: 36, raidOnly: 21 },
-    { tier: 5, cap: "Silver1", initialClear: 39, raidOnly: 19 },
-    { tier: 4, cap: "Bronze1", initialClear: 34, raidOnly: 18 },
-    { tier: 3, cap: "Bronze1", initialClear: 36, raidOnly: 17 },
-    { tier: 2, cap: "Iron1", initialClear: 34, raidOnly: 16 },
-    { tier: 1, cap: "Iron1", initialClear: 34, raidOnly: 15 },
-  ],
+  tierRewards: incursionTierRewards("tyranBiovore"),
+
   relatedGuides: [
     { label: "← Incursion & Machine of War basics", url: "/incursion-mow" },
     { label: "Build your Chaos roster: Fall of Cadia →", url: "/campaigns/fall-of-cadia/" },

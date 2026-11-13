@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # analytics workspaces and local query outputs belong outside the public site repository
 /analytics/
+
+# Python import helpers
+__pycache__/
+*.pyc

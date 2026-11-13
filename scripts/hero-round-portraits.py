@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map every canonical hero to a true 1.43 round portrait in WebP format.
+"""Map every canonical hero to a true production round portrait in WebP format.
 
 Reuse the site's stable-ID LRE portrait mappings only when their decoded image
 matches the canonical round source. Missing or divergent art is converted from
@@ -55,11 +55,11 @@ def main():
 
     catalog = read(local / "data/processed/catalog.json")
     assets = read(local / "data/processed/image-assets.json")
-    if catalog["snapshot"] != assets["snapshot"] or catalog["snapshot"]["app_version"] != "1.43.130":
-        raise ValueError("Reviewed 1.43.130 snapshot required")
+    if catalog["snapshot"] != assets["snapshot"] or catalog["snapshot"]["app_version"] != "1.44.88":
+        raise ValueError("Reviewed 1.44.88 snapshot required")
     roster = {hero["id"]: hero for hero in catalog["characters"] if hero["kind"] == "character"}
-    if len(roster) != 119:
-        raise ValueError("Canonical 1.43 roster differs from reviewed 119 heroes")
+    if len(roster) != 120:
+        raise ValueError("Canonical production roster differs from reviewed 120 heroes")
     existing = defaultdict(lambda: defaultdict(list))
     for file in sorted((SITE / "src/data/lre").glob("*.json")):
         for hero in read(file).get("characters", []):

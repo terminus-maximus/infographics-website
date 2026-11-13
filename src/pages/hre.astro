@@ -1,5 +1,6 @@
 ---
 import FeaturedInfographicPage from "../components/FeaturedInfographicPage.astro";
+import portraits from "../data/heroes/round-portraits.json";
 ---
 
 <FeaturedInfographicPage
@@ -46,7 +47,7 @@ Players pursuing Legendary promotions should expect to plan ahead, optimize miss
   <section slot="guides" class="daras-guide" aria-labelledby="daras-guide-heading">
     <a href="/heroes/daras/" class="daras-guide-link" data-hero-guide-link>
       <img
-        src="/images/hero-round/Daras.webp"
+        src={portraits.lostaFearmonger.src}
         alt=""
         width="80"
         height="80"

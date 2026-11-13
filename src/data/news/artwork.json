@@ -1,0 +1,168 @@
+{
+  "game_version": "1.44.88",
+  "icons": {
+    "coins": {
+      "src": "/images/news/rewards/coins.webp",
+      "width": 128,
+      "height": 128,
+      "sha256": "1a6fa3017cc76466d6b44543c29aac94b3ee31ecc39b7e0a6277d455d327ff49",
+      "guid": "d86bf87918e7c4e3f91900a87e15f132",
+      "sprite_name": "ui_icon_resource_coin_medium",
+      "source_bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482"
+    },
+    "ability-badge-draft": {
+      "src": "/images/news/rewards/ability-badge-draft.webp",
+      "width": 256,
+      "height": 237,
+      "sha256": "d8737e957c2ce514c91345dbb929086ba4af8335969e6771548e184234e767b2",
+      "guid": "c6ddbb03a7a8546808ec649ca6f5bd1b",
+      "sprite_name": "ui_icon_droptable_draft_abilityTokensLegendary",
+      "source_bundle_sha256": "ae6d8c48da3b504a4b1d9e7cd672c9edccbe3ab8741ad675a51ba26e88a62480"
+    },
+    "claimed-skulls": {
+      "src": "/images/news/rewards/claimed-skulls.webp",
+      "width": 226,
+      "height": 256,
+      "sha256": "8219d89755934d82faa8a01a1acc1f46364a010ec33bfbcfc5ba36c9674e1d72",
+      "guid": "43e1f09d459386c4383fe999406d6e50",
+      "sprite_name": "ui_icon_resource_event_currency_november_2026",
+      "source_bundle_sha256": "7fab088d5b2351ccb45ad2ab8c3b8a53d870eab20cd191836b30dbd390765b1b"
+    },
+    "imperial-equipment": {
+      "src": "/images/news/rewards/imperial-equipment.webp",
+      "width": 239,
+      "height": 246,
+      "sha256": "f955fc96fc791b9a7cf41d547fda5ab5e2d2e21c0250605c71e88d49b78cce88",
+      "guid": "50d9a6838122a624a8fed5a73af9f92f",
+      "sprite_name": "ui_icon_droptable_item_legendary",
+      "source_bundle_sha256": "d2cc5691d176749decd777880439803a97202f2ed0ab3955ca73d8328e032d1e"
+    },
+    "requisition": {
+      "src": "/images/news/rewards/requisition.webp",
+      "width": 238,
+      "height": 256,
+      "sha256": "58d1eefcc2aa71baf1531c37d426aca1b2f5355fb19153c40b8dfa59a0021767",
+      "guid": "08f7f52ec1389f84d8bd1bad2bc549cd",
+      "sprite_name": "ui_icon_resource_summoning_token",
+      "source_bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482"
+    },
+    "blessed-requisition": {
+      "src": "/images/news/rewards/blessed-requisition.webp",
+      "width": 255,
+      "height": 256,
+      "sha256": "7dd903ab9535c641a8e51957eb2d58bff98b3450a7095a401c1bab670f0ee0cd",
+      "guid": "7570ffc9696f44347affaa335da04cea",
+      "sprite_name": "ui_icon_resource_summoning_special",
+      "source_bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482"
+    },
+    "energy": {
+      "src": "/images/news/rewards/energy.webp",
+      "width": 128,
+      "height": 127,
+      "sha256": "4eb4e78c5dbbbc330b582820019ddf375e95ee136e33a1d36805aca3c496c6cb",
+      "guid": "3873b38aa2d211c468d2f9ba508d8aab",
+      "sprite_name": "ui_icon_resource_stamina_medium",
+      "source_bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482"
+    }
+  },
+  "clear_factions": {
+    "WorldEaters": {
+      "src": "/images/faction-clear/WorldEaters.webp",
+      "width": 64,
+      "height": 64,
+      "sha256": "0b299ed1a106d89522292f2f1829514ae9df5777451ee79cfbd6a7555ea793d1",
+      "source_sha256": "2d5858234cd9c405507bcda2f94f12af73ddfb8b4bf601a85703d52970565009"
+    },
+    "Tyranids": {
+      "src": "/images/faction-clear/Tyranids.webp",
+      "width": 100,
+      "height": 101,
+      "sha256": "b0c3711a0b0852d97e27240339dc4f66050ae1f2ffd59cc8526f1451b414859c",
+      "source_sha256": "973d2307243fad0576865941f5f4606afc46d744170102f39aa66922e142a503"
+    },
+    "Ultramarines": {
+      "src": "/images/faction-clear/Ultramarines.webp",
+      "width": 85,
+      "height": 77,
+      "sha256": "449696b5901f7336bcf8c5bdf3fa6bf3bb9f7de586ac88458ed84d83c2abb47c",
+      "source_sha256": "3c21dd399725e5340d2895ae4f5509cd927422476b4fbfd9f13859847b114d97"
+    },
+    "Tau": {
+      "src": "/images/faction-clear/Tau.webp",
+      "width": 77,
+      "height": 77,
+      "sha256": "2f0be597fd4b43a5fc0e19d2940139ecfb2fcfdda35f56465a472b51c8b35159",
+      "source_sha256": "082ca8a3518a72f264b5fdba168f636fde2fe68541098b00614466310f90cbe5"
+    },
+    "AdeptusMechanicus": {
+      "src": "/images/faction-clear/AdeptusMechanicus.webp",
+      "width": 77,
+      "height": 76,
+      "sha256": "291c0ac138274dcdd37d2f5367c8ef1b1994b4c14739463e5286436e43b676a7",
+      "source_sha256": "e3f938931c293b02230313044a9636ee5e0ae69092faf9a938988f48396122bd"
+    },
+    "BlackTemplars": {
+      "src": "/images/faction-clear/BlackTemplars.webp",
+      "width": 77,
+      "height": 77,
+      "sha256": "4b809fc0b01bd835a2abd126842196f00f69a2f9ad5b04bf71a8ea3eec1b0796",
+      "source_sha256": "4eef9e060963a14bde7820c0a8af935d58acba8be27e11a2d772379928b6fb59"
+    },
+    "DeathGuard": {
+      "src": "/images/faction-clear/DeathGuard.webp",
+      "width": 84,
+      "height": 90,
+      "sha256": "f7662d8a1ac10a23cc4d855803f9d1e150a625b5d50860a8ae0c7cc109e090bd",
+      "source_sha256": "385c53d973cdf060a9fb95761078d7c0be1f58972192ca04f63b0e752c3d4780"
+    },
+    "BloodAngels": {
+      "src": "/images/faction-clear/BloodAngels.webp",
+      "width": 64,
+      "height": 54,
+      "sha256": "d738eacd0cf4c2c6e6c6f8ce47e2f060376df193c917f7d8404a6b2cfc3cadee",
+      "source_sha256": "40663c741c766a0d6aee1760bf5298e4fe26c654be11a32a69c528562645c06d"
+    },
+    "Sisterhood": {
+      "src": "/images/faction-clear/Sisterhood.webp",
+      "width": 76,
+      "height": 75,
+      "sha256": "98f979eb936902c57f8792f0d21f86d8c28211af550e30099ee3738840dc7401",
+      "source_sha256": "861d7d07cba7b4e1a6ef77c4100d6b2d0559dbf08d72ea0aa2a52c18c6ad8b84"
+    },
+    "DarkAngels": {
+      "src": "/images/faction-clear/DarkAngels.webp",
+      "width": 101,
+      "height": 102,
+      "sha256": "9fccce98a1128efdd1b9993aba1b8c37945d1ff3228bb54944d814143c5ed8e4",
+      "source_sha256": "f062499219ec8be0bc5bfdccb5b2676d11a47e0b234b8e1289d6d2b67e0a5e4f"
+    },
+    "BlackLegion": {
+      "src": "/images/faction-clear/BlackLegion.webp",
+      "width": 82,
+      "height": 86,
+      "sha256": "2b2670c05ee0f4d93ffaca85d7eecf9530feee20d5561c2cdacc62abd3999c5d",
+      "source_sha256": "3250f6e9b15925b1fdb54d5334c160769d960e5c92a81aefb8f3c512bcc4ad1f"
+    },
+    "Genestealers": {
+      "src": "/images/faction-clear/Genestealers.webp",
+      "width": 61,
+      "height": 62,
+      "sha256": "0071ab4949e5c79ac8c222881268e1c860038786f57494942f002294310c40ac",
+      "source_sha256": "21dadeb9cb1a53442695cfa510ba7e0c5b87bcd878381da97a853c34e7c46399"
+    },
+    "Orks": {
+      "src": "/images/faction-clear/Orks.webp",
+      "width": 99,
+      "height": 104,
+      "sha256": "779cd7d0da47e178c81c906d2a287608daca7a5bc40e724cb44cc55dd4d08404",
+      "source_sha256": "8291694772e7c71491428afbd3efdc329a3591bb647ebf158bbb3050939b74e1"
+    },
+    "Necrons": {
+      "src": "/images/faction-clear/Necrons.webp",
+      "width": 72,
+      "height": 93,
+      "sha256": "ce6596a360137789a0a73cac7ef9c8c984ad6366a31e177c07c669c4b733fdfd",
+      "source_sha256": "9552f39f3dc9e4dfd0936afdbba0ef7c0dd9afb5780aad67c90f192ebf75c8ea"
+    }
+  }
+}
