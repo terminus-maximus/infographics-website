@@ -6,10 +6,11 @@ All 11 released MoWs now have combined profiles at `/incursion-mow/[machine]/`.
 The three existing unlock guides retain their URLs, featured infographics and
 strategy content. Profiles add the infographic's single five-star rating,
 game-derived Active/Passive/Mythic abilities, independent level sliders and
-shared rarity/stars controls. The hub and header link to the full released
-roster. See [profile sources, calculations and maintenance](machine-of-war-profiles.md).
-This supersedes the historical three-page registry and navigation descriptions
-below; unlock-guide data is still registered separately in `src/data/incursion/index.ts`.
+shared rarity/stars controls. The hub links to the full released roster. The
+header submenu is limited to Overview, Biovore, PBC, and Zkar.
+See [profile sources, calculations and maintenance](machine-of-war-profiles.md).
+This supersedes the historical three-page registry description below;
+unlock-guide data is still registered separately in `src/data/incursion/index.ts`.
 
 `src/pages/incursion-mow/[machine].astro` builds the guides registered in
 `src/data/incursion/index.ts`. Add a typed `IncursionGuide` data file and register

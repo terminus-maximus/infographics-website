@@ -10,7 +10,8 @@ Implemented locally on November 9, 2026. The Incursion hub stays at
 Plagueburst Crawler and Z’Kar retain their existing URLs, featured unlock
 infographics, strategies, power-ups, rewards, stage tips and creator evidence.
 Other machines have their identity, rating and abilities without an empty
-unlock-guide placeholder. Header navigation, the hub and sitemap cover all 11.
+unlock-guide placeholder. The hub and sitemap cover all 11. The header's
+Incursion submenu contains only Overview, Biovore, PBC, and Zkar.
 
 ## Sources and ownership
 

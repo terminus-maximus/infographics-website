@@ -1,6 +1,5 @@
 ---
 import { currentGuildRaidSeason } from "../data/guildRaid";
-import { machines, machineHref } from "../lib/machines.mjs";
 ---
 
 <header class="site-header" data-ga4-nav-location="header">
@@ -161,8 +160,9 @@ import { machines, machineHref } from "../lib/machines.mjs";
 
           <div class="submenu-menu" id="incursion-menu">
             <a href="/incursion-mow" data-ga4-nav-section="incursion">Overview</a>
-            <a href="/incursion-mow/#machines" data-ga4-nav-section="incursion">All Machines of War</a>
-            {machines.map(machine => <a href={machineHref(machine)} data-ga4-nav-section="incursion">{machine.name}</a>)}
+            <a href="/incursion-mow/biovore/" data-ga4-nav-section="incursion">Biovore</a>
+            <a href="/incursion-mow/plagueburst-crawler/" data-ga4-nav-section="incursion">PBC</a>
+            <a href="/incursion-mow/zkar/" data-ga4-nav-section="incursion">Zkar</a>
           </div>
         </div>
         <div class="submenu">
