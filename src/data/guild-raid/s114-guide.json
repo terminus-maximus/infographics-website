@@ -1,0 +1,6044 @@
+{
+  "season": 114,
+  "startDate": "2026-11-18",
+  "status": "Design preview",
+  "config": "guild_boss_season_config_5",
+  "source": {
+    "system": "LocalDatabase",
+    "schemaVersion": 1,
+    "channel": "production",
+    "appVersion": "1.43.157",
+    "generation": "d745fbef9160d7007d5c",
+    "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+    "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
+    "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+    "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+  },
+  "loop": [
+    "M3",
+    "M2",
+    "M1",
+    "L5",
+    "L4"
+  ],
+  "slots": [
+    {
+      "tier": "C1",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "map": "Tervigon_01",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 2550000,
+          "minimum": 2550000,
+          "maximum": 2550000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L2": 1
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "eAYpDnGIBN8",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "eAYpDnGIBN8",
+              "url": "https://www.youtube.com/watch?v=eAYpDnGIBN8",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Battlesuits",
+              "damage": 2550000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/23/2026 10:13 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "eAYpDnGIBN8"
+          ],
+          "maxDistance": 18
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 2545207,
+          "minimum": 2200000,
+          "maximum": 2890414,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "4Re2xNYFasg",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "4Re2xNYFasg",
+              "url": "https://www.youtube.com/watch?v=4Re2xNYFasg",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "AdMech",
+              "damage": 2890414,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "Malikyth",
+              "publishedAt": "9/26/2026 10:39 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "4Re2xNYFasg",
+            "qL1iJvWCDaA"
+          ],
+          "maxDistance": 18
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 2108500,
+          "minimum": 1627000,
+          "maximum": 2590000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "k5Y36AoYfNE",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "k5Y36AoYfNE",
+              "url": "https://www.youtube.com/watch?v=k5Y36AoYfNE",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Laviscus",
+              "damage": 2590000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, PBC",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Loknar",
+              "publishedAt": "9/23/2026 12:11 PM"
+            },
+            {
+              "videoId": "5vCMvh9-xqI",
+              "url": "https://www.youtube.com/watch?v=5vCMvh9-xqI",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Laviscus",
+              "damage": 1627000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "FF",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, FF",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Primarch Samrat",
+              "publishedAt": "9/23/2026 10:50 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "k5Y36AoYfNE",
+            "5vCMvh9-xqI"
+          ],
+          "maxDistance": 18
+        }
+      ]
+    },
+    {
+      "tier": "C2",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "map": "Hive_Tyrant_02",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1826667,
+          "minimum": 1460000,
+          "maximum": 2500000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Helb"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "WLcOHxY0gjA",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "WLcOHxY0gjA",
+              "url": "https://www.youtube.com/watch?v=WLcOHxY0gjA",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "AdMech",
+              "damage": 2500000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Helb"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Helb, Reanimator",
+              "teamKey": "Anu|Helb|Rho|Tan|Vit",
+              "creator": "Mawg",
+              "publishedAt": "9/9/2026 9:20 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "WLcOHxY0gjA",
+            "KqyEIJ386Ok",
+            "I6TE1SviXrw"
+          ],
+          "maxDistance": 16
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1780000,
+          "minimum": 1400000,
+          "maximum": 2340000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "phwXsxbhmbY",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "phwXsxbhmbY",
+              "url": "https://www.youtube.com/watch?v=phwXsxbhmbY",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Battlesuits",
+              "damage": 2340000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/10/2026 2:16 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "phwXsxbhmbY",
+            "04-7MH1xYn4",
+            "XH-9HkhkszE"
+          ],
+          "maxDistance": 16
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "other-map",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1582222,
+          "minimum": 1300000,
+          "maximum": 1940000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L1": 9
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "D6T29ec9uWI",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "D6T29ec9uWI",
+              "url": "https://www.youtube.com/watch?v=D6T29ec9uWI",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Laviscus",
+              "damage": 1940000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "Galatian",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, Galatian",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "3/30/2026 3:09 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "D6T29ec9uWI",
+            "yPTRQk8zkA8",
+            "KjAoKhrBt04",
+            "PRufHoz5RTU",
+            "NlqRSI55pzs",
+            "PKEoidz8_18",
+            "r7CmIHmwIuE",
+            "CXtgcZ8yfcw",
+            "sdUcPF5EiJE"
+          ],
+          "maxDistance": 16
+        }
+      ]
+    },
+    {
+      "tier": "C3",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "map": "Tervigon_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "other-map",
+          "sample": 11,
+          "exactSample": 0,
+          "average": 1955492,
+          "minimum": 1400000,
+          "maximum": 2890414,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01",
+            "Tervigon_04",
+            "Tervigon_05",
+            "Tervigon_06"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L2": 11
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "4Re2xNYFasg",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "4Re2xNYFasg",
+              "url": "https://www.youtube.com/watch?v=4Re2xNYFasg",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "AdMech",
+              "damage": 2890414,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "Malikyth",
+              "publishedAt": "9/26/2026 10:39 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "4Re2xNYFasg",
+            "qL1iJvWCDaA",
+            "NK5sd4-g5zg",
+            "BesZgSzIDhc",
+            "UIwSTRq7cIs",
+            "Viixw717Jvo",
+            "MuI8OWraSDw",
+            "el1LVWQJe5I",
+            "EcJl3NcG95s",
+            "Y6f-uUCYBeQ",
+            "ibLMlFU-tC0"
+          ],
+          "maxDistance": 16
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "other-map",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1847444,
+          "minimum": 1100000,
+          "maximum": 2780000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01",
+            "Tervigon_04",
+            "Tervigon_05"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L2": 9
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Helb"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "2Q-iQfjjOLw",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "2Q-iQfjjOLw",
+              "url": "https://www.youtube.com/watch?v=2Q-iQfjjOLw",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Laviscus",
+              "damage": 2780000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Helb"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Helb, PBC",
+              "teamKey": "Boss|Helb|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "5/13/2026 11:41 AM"
+            },
+            {
+              "videoId": "jfX1FQLAM-E",
+              "url": "https://www.youtube.com/watch?v=jfX1FQLAM-E",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Laviscus",
+              "damage": 2400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Helb"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Helb, PBC",
+              "teamKey": "Boss|Helb|Kari|Lav|Traj",
+              "creator": "Lyell",
+              "publishedAt": "5/14/2026 10:05 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "2Q-iQfjjOLw",
+            "k5Y36AoYfNE",
+            "jfX1FQLAM-E",
+            "3sogVZM5xDM",
+            "0WRjQRo5PZY",
+            "5vCMvh9-xqI",
+            "W2wtferkKbc",
+            "ZtGtkDIyUAs",
+            "JCMvElcmeQ4"
+          ],
+          "maxDistance": 16
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "other-map",
+          "sample": 4,
+          "exactSample": 0,
+          "average": 1815000,
+          "minimum": 1300000,
+          "maximum": 2550000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01",
+            "Tervigon_04",
+            "Tervigon_06"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L2": 4
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "eAYpDnGIBN8",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "eAYpDnGIBN8",
+              "url": "https://www.youtube.com/watch?v=eAYpDnGIBN8",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Battlesuits",
+              "damage": 2550000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/23/2026 10:13 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "eAYpDnGIBN8",
+            "2Y8RGy33NQ0",
+            "7bvYbzYufQA",
+            "2YvWVU58rzE"
+          ],
+          "maxDistance": 16
+        }
+      ]
+    },
+    {
+      "tier": "C4",
+      "rarity": "Common",
+      "boss": "Screamer",
+      "map": "Screamer_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 11,
+          "exactSample": 0,
+          "average": 2156364,
+          "minimum": 1300000,
+          "maximum": 3200000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "L1": 11
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "vATL6B1RExA",
+            "sample": 6
+          },
+          "examples": [
+            {
+              "videoId": "vATL6B1RExA",
+              "url": "https://www.youtube.com/watch?v=vATL6B1RExA",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "AdMech",
+              "damage": 3200000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Ammuk, Reanimator",
+              "teamKey": "Actus|Ammuk|Rho|Tan|Vit",
+              "creator": "BuretRD",
+              "publishedAt": "6/9/2026 6:40 PM"
+            },
+            {
+              "videoId": "CNLZt8TyNfQ",
+              "url": "https://www.youtube.com/watch?v=CNLZt8TyNfQ",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "AdMech",
+              "damage": 2550000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Ammuk, Reanimator",
+              "teamKey": "Actus|Ammuk|Rho|Tan|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "6/18/2026 6:07 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "vATL6B1RExA",
+            "CNLZt8TyNfQ",
+            "Gf__j0mwL50",
+            "7O-tMUwsBS0",
+            "bvqRKZkOsCs",
+            "zNoL_YsZCXM",
+            "xh2Uly-SOR0",
+            "kX3ncIq8hIs",
+            "EqtTKJAblGY",
+            "XNBmY0QT2QY",
+            "xmHBrAXkcEA"
+          ],
+          "maxDistance": 14
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 6,
+          "exactSample": 0,
+          "average": 1840000,
+          "minimum": 1400000,
+          "maximum": 2680000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 6,
+          "tierCounts": {
+            "L1": 6
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "0w8R1cLKUWA",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "0w8R1cLKUWA",
+              "url": "https://www.youtube.com/watch?v=0w8R1cLKUWA",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Laviscus",
+              "damage": 2680000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Baldrick",
+              "publishedAt": "11/4/2026 6:29 AM"
+            },
+            {
+              "videoId": "UeLI_8LDGAs",
+              "url": "https://www.youtube.com/watch?v=UeLI_8LDGAs",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Laviscus",
+              "damage": 2400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "GarviLoken",
+              "publishedAt": "6/17/2026 10:23 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "0w8R1cLKUWA",
+            "UeLI_8LDGAs",
+            "H6b3ofcOSTI",
+            "31w1vaSuZ0I",
+            "9ZIxkQKf2jo",
+            "k_F_Jwsx90Q"
+          ],
+          "maxDistance": 14
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1770000,
+          "minimum": 1400000,
+          "maximum": 2230000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "O5p_dKN6L4M",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "O5p_dKN6L4M",
+              "url": "https://www.youtube.com/watch?v=O5p_dKN6L4M",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Battlesuits",
+              "damage": 2230000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "11/5/2026 12:09 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "O5p_dKN6L4M",
+            "_eN3MlQePPo",
+            "FMMTtIF2Hzo"
+          ],
+          "maxDistance": 14
+        }
+      ]
+    },
+    {
+      "tier": "U1",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "map": "Tervigon_06",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 7,
+          "exactSample": 0,
+          "average": 1755714,
+          "minimum": 1400000,
+          "maximum": 2100000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_06"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L2": 7
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Traj"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "BesZgSzIDhc",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "BesZgSzIDhc",
+              "url": "https://www.youtube.com/watch?v=BesZgSzIDhc",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_06",
+              "archetype": "AdMech",
+              "damage": 2100000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Galatian",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Stringer de Los Redimidos",
+              "publishedAt": "5/15/2026 3:29 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "BesZgSzIDhc",
+            "Viixw717Jvo",
+            "MuI8OWraSDw",
+            "el1LVWQJe5I",
+            "EcJl3NcG95s",
+            "Y6f-uUCYBeQ",
+            "ibLMlFU-tC0"
+          ],
+          "maxDistance": 14
+        },
+        {
+          "archetype": "Custodes",
+          "kind": "distant-tier",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 1400000,
+          "minimum": 1400000,
+          "maximum": 1400000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_06"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Helb"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "_6Bd_L3ay3U",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "_6Bd_L3ay3U",
+              "url": "https://www.youtube.com/watch?v=_6Bd_L3ay3U",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_06",
+              "archetype": "Custodes",
+              "damage": 1400000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Rag",
+                "Helb"
+              ],
+              "mow": "Galatian",
+              "teamText": "Kari, Traj, Kharn, Rag, Helb, Galatian",
+              "teamKey": "Helb|Kari|Kharn|Rag|Traj",
+              "creator": "GarviLoken",
+              "publishedAt": "1/14/2026 9:40 AM"
+            },
+            {
+              "videoId": "STHC1VInOT8",
+              "url": "https://www.youtube.com/watch?v=STHC1VInOT8",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_06",
+              "archetype": "Custodes",
+              "damage": 1400000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Rag",
+                "Helb"
+              ],
+              "mow": "Galatian",
+              "teamText": "Kari, Traj, Kharn, Rag, Helb, Galatian",
+              "teamKey": "Helb|Kari|Kharn|Rag|Traj",
+              "creator": "Stringer de Los Redimidos",
+              "publishedAt": "1/14/2026 2:29 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "_6Bd_L3ay3U",
+            "STHC1VInOT8"
+          ],
+          "maxDistance": 14
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 1300000,
+          "minimum": 1300000,
+          "maximum": 1300000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_06"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L2": 1
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Eldy"
+            ],
+            "mow": "FF",
+            "sourceVideoId": "2YvWVU58rzE",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "2YvWVU58rzE",
+              "url": "https://www.youtube.com/watch?v=2YvWVU58rzE",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_06",
+              "archetype": "Battlesuits",
+              "damage": 1300000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "FF",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, FF",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "Lyell",
+              "publishedAt": "1/24/2026 2:41 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "2YvWVU58rzE"
+          ],
+          "maxDistance": 14
+        }
+      ]
+    },
+    {
+      "tier": "U2",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "map": "Hive_Tyrant_05",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1826667,
+          "minimum": 1460000,
+          "maximum": 2500000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Helb"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "WLcOHxY0gjA",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "WLcOHxY0gjA",
+              "url": "https://www.youtube.com/watch?v=WLcOHxY0gjA",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "AdMech",
+              "damage": 2500000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Helb"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Helb, Reanimator",
+              "teamKey": "Anu|Helb|Rho|Tan|Vit",
+              "creator": "Mawg",
+              "publishedAt": "9/9/2026 9:20 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "WLcOHxY0gjA",
+            "KqyEIJ386Ok",
+            "I6TE1SviXrw"
+          ],
+          "maxDistance": 12
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1780000,
+          "minimum": 1400000,
+          "maximum": 2340000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "phwXsxbhmbY",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "phwXsxbhmbY",
+              "url": "https://www.youtube.com/watch?v=phwXsxbhmbY",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Battlesuits",
+              "damage": 2340000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/10/2026 2:16 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "phwXsxbhmbY",
+            "04-7MH1xYn4",
+            "XH-9HkhkszE"
+          ],
+          "maxDistance": 12
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "other-map",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1582222,
+          "minimum": 1300000,
+          "maximum": 1940000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L1": 9
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "D6T29ec9uWI",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "D6T29ec9uWI",
+              "url": "https://www.youtube.com/watch?v=D6T29ec9uWI",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Laviscus",
+              "damage": 1940000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "Galatian",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, Galatian",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "3/30/2026 3:09 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "D6T29ec9uWI",
+            "yPTRQk8zkA8",
+            "KjAoKhrBt04",
+            "PRufHoz5RTU",
+            "NlqRSI55pzs",
+            "PKEoidz8_18",
+            "r7CmIHmwIuE",
+            "CXtgcZ8yfcw",
+            "sdUcPF5EiJE"
+          ],
+          "maxDistance": 12
+        }
+      ]
+    },
+    {
+      "tier": "U3",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "map": "Tervigon_04",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 5,
+          "exactSample": 0,
+          "average": 1980000,
+          "minimum": 1300000,
+          "maximum": 2780000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_04"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L2": 5
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Helb"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "2Q-iQfjjOLw",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "2Q-iQfjjOLw",
+              "url": "https://www.youtube.com/watch?v=2Q-iQfjjOLw",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Laviscus",
+              "damage": 2780000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Helb"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Helb, PBC",
+              "teamKey": "Boss|Helb|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "5/13/2026 11:41 AM"
+            },
+            {
+              "videoId": "jfX1FQLAM-E",
+              "url": "https://www.youtube.com/watch?v=jfX1FQLAM-E",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Laviscus",
+              "damage": 2400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Helb"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Helb, PBC",
+              "teamKey": "Boss|Helb|Kari|Lav|Traj",
+              "creator": "Lyell",
+              "publishedAt": "5/14/2026 10:05 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "2Q-iQfjjOLw",
+            "jfX1FQLAM-E",
+            "3sogVZM5xDM",
+            "0WRjQRo5PZY",
+            "ZtGtkDIyUAs"
+          ],
+          "maxDistance": 12
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 2190000,
+          "minimum": 2190000,
+          "maximum": 2190000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_04"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L2": 1
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Helb"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "NK5sd4-g5zg",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "NK5sd4-g5zg",
+              "url": "https://www.youtube.com/watch?v=NK5sd4-g5zg",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "AdMech",
+              "damage": 2190000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Helb"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Helb, Galatian",
+              "teamKey": "Actus|Helb|Rho|Tan|Vit",
+              "creator": "Machiep",
+              "publishedAt": "5/6/2026 8:39 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "NK5sd4-g5zg"
+          ],
+          "maxDistance": 12
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 1705000,
+          "minimum": 1700000,
+          "maximum": 1710000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_04"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Eldy"
+            ],
+            "mow": "Exo",
+            "sourceVideoId": "2Y8RGy33NQ0",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "2Y8RGy33NQ0",
+              "url": "https://www.youtube.com/watch?v=2Y8RGy33NQ0",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Battlesuits",
+              "damage": 1710000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "Exo",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, Exo",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "Dev",
+              "publishedAt": "5/15/2026 6:58 AM"
+            },
+            {
+              "videoId": "7bvYbzYufQA",
+              "url": "https://www.youtube.com/watch?v=7bvYbzYufQA",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_04",
+              "archetype": "Battlesuits",
+              "damage": 1700000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, PBC",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "5/6/2026 7:57 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "2Y8RGy33NQ0",
+            "7bvYbzYufQA"
+          ],
+          "maxDistance": 12
+        }
+      ]
+    },
+    {
+      "tier": "U4",
+      "rarity": "Uncommon",
+      "boss": "Riptide",
+      "map": "Riptide_01",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 15,
+          "exactSample": 0,
+          "average": 1331533,
+          "minimum": 876000,
+          "maximum": 1777000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_01"
+          ],
+          "creatorCount": 10,
+          "tierCounts": {
+            "L1": 15
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Traj"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "b7uGtHX4NSA",
+            "sample": 11
+          },
+          "examples": [
+            {
+              "videoId": "b7uGtHX4NSA",
+              "url": "https://www.youtube.com/watch?v=b7uGtHX4NSA",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "AdMech",
+              "damage": 1777000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Reanimator",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "7/9/2026 6:17 AM"
+            },
+            {
+              "videoId": "hjKR5GN77ic",
+              "url": "https://www.youtube.com/watch?v=hjKR5GN77ic",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "AdMech",
+              "damage": 1500000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Galatian",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Painhawk",
+              "publishedAt": "7/10/2026 3:54 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "b7uGtHX4NSA",
+            "-EMJ5hshW4k",
+            "k37Ca3a_SAM",
+            "hjKR5GN77ic",
+            "CemyXtub9Lg",
+            "hf9jH3tnvPE",
+            "Fu_6ms5HHtE",
+            "HozsULydwMk",
+            "cgzPZGRfyTY",
+            "al0_POMR6Cw",
+            "_3xOSaCOTP0",
+            "5frA--xoZO0",
+            "0USL-TybPT0",
+            "vQl1yHOQFTQ",
+            "uZXRVjZMP5I"
+          ],
+          "maxDistance": 10
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 4,
+          "exactSample": 0,
+          "average": 1260000,
+          "minimum": 1000000,
+          "maximum": 1470000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_01"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "L1": 4
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "Mrpiynu9dMM",
+            "sample": 3
+          },
+          "examples": [
+            {
+              "videoId": "Mrpiynu9dMM",
+              "url": "https://www.youtube.com/watch?v=Mrpiynu9dMM",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "Laviscus",
+              "damage": 1470000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Mawg",
+              "publishedAt": "7/1/2026 8:55 AM"
+            },
+            {
+              "videoId": "acAUmgKyTvI",
+              "url": "https://www.youtube.com/watch?v=acAUmgKyTvI",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "Laviscus",
+              "damage": 1430000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "UltraBrother",
+              "publishedAt": "7/2/2026 7:55 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "Mrpiynu9dMM",
+            "acAUmgKyTvI",
+            "2ZjxLkrMzZs",
+            "atIz869I-D0"
+          ],
+          "maxDistance": 10
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "distant-tier",
+          "sample": 8,
+          "exactSample": 0,
+          "average": 1066500,
+          "minimum": 800000,
+          "maximum": 1250000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_01"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L1": 8
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "EPfZRTgu9mQ",
+            "sample": 6
+          },
+          "examples": [
+            {
+              "videoId": "EPfZRTgu9mQ",
+              "url": "https://www.youtube.com/watch?v=EPfZRTgu9mQ",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "Neuro",
+              "damage": 1250000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "WongsKing",
+              "publishedAt": "11/4/2026 9:31 PM"
+            },
+            {
+              "videoId": "imd44xEf0kU",
+              "url": "https://www.youtube.com/watch?v=imd44xEf0kU",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_01",
+              "archetype": "Neuro",
+              "damage": 1200000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Un4given",
+              "publishedAt": "7/9/2026 2:14 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "EPfZRTgu9mQ",
+            "imd44xEf0kU",
+            "F_AQ70HJOkE",
+            "Kyx7FjHaIyI",
+            "3M8LaYqBDB8",
+            "-ZIH-rhR5bw",
+            "zspRmQQx5Gg",
+            "lrNc7JH9sQ4"
+          ],
+          "maxDistance": 10
+        }
+      ]
+    },
+    {
+      "tier": "R1",
+      "rarity": "Rare",
+      "boss": "Dorn",
+      "map": "Dorn_02",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Battlesuits",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1256667,
+          "minimum": 750000,
+          "maximum": 1620000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_06"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "hliq2KShbTQ",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "hliq2KShbTQ",
+              "url": "https://www.youtube.com/watch?v=hliq2KShbTQ",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Battlesuits",
+              "damage": 1620000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "10/22/2026 7:10 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "hliq2KShbTQ",
+            "pOZ1tzqoOAY",
+            "7B4oii-cjQo"
+          ],
+          "maxDistance": 9
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "other-map",
+          "sample": 21,
+          "exactSample": 0,
+          "average": 1253143,
+          "minimum": 861000,
+          "maximum": 1890000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_03",
+            "Dorn_06"
+          ],
+          "creatorCount": 13,
+          "tierCounts": {
+            "L1": 21
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "EYd3fcq-Wx4",
+            "sample": 8
+          },
+          "examples": [
+            {
+              "videoId": "EYd3fcq-Wx4",
+              "url": "https://www.youtube.com/watch?v=EYd3fcq-Wx4",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Laviscus",
+              "damage": 1890000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Mawg",
+              "publishedAt": "6/3/2026 8:13 AM"
+            },
+            {
+              "videoId": "KC2Nr37txI4",
+              "url": "https://www.youtube.com/watch?v=KC2Nr37txI4",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Laviscus",
+              "damage": 1700000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Ulf",
+              "publishedAt": "6/3/2026 12:23 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "EYd3fcq-Wx4",
+            "aOPz5RfXNqo",
+            "KC2Nr37txI4",
+            "b8hCGiZbDVE",
+            "Y-lazF0dqXw",
+            "Ir7pZpf2cQs",
+            "oaQk7S_alEQ",
+            "d1Q7mlXYE0c",
+            "27kOjbrlI6E",
+            "4zJTsZ_PFZU",
+            "K8ZaNJwUSi8",
+            "9h0kM6SbFGs",
+            "kbRyLGmxbXg",
+            "T_hwsSxYxJo",
+            "eRPmqHqARMs",
+            "r9UgTTQA50E",
+            "cV4P0UolBBw",
+            "YjuNZdKjBgw",
+            "nWoTFktMBok",
+            "wzyktaSDuog",
+            "z2ONkn-zO6s"
+          ],
+          "maxDistance": 9
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "other-map",
+          "sample": 13,
+          "exactSample": 0,
+          "average": 1090462,
+          "minimum": 877000,
+          "maximum": 1300000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_03",
+            "Dorn_06"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L1": 13
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "7ZtjxGwFdx8",
+            "sample": 12
+          },
+          "examples": [
+            {
+              "videoId": "7ZtjxGwFdx8",
+              "url": "https://www.youtube.com/watch?v=7ZtjxGwFdx8",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "AdMech",
+              "damage": 1300000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Sho"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Sho, Biovore",
+              "teamKey": "Actus|Rho|Sho|Tan|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "3/20/2026 8:12 PM"
+            },
+            {
+              "videoId": "gUDId8UNHGA",
+              "url": "https://www.youtube.com/watch?v=gUDId8UNHGA",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "AdMech",
+              "damage": 1260000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Sho"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Sho, Biovore",
+              "teamKey": "Actus|Rho|Sho|Tan|Vit",
+              "creator": "Machiep",
+              "publishedAt": "6/8/2026 8:42 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "7ZtjxGwFdx8",
+            "gUDId8UNHGA",
+            "rsYaAIsry4c",
+            "JAFE5FymsiM",
+            "Z5nS_cpT8hU",
+            "2MfS2IIxNsU",
+            "IeDn3Gir0mM",
+            "O97oX7S6K74",
+            "vGhkIMep_J8",
+            "ynnSuuP1YTg",
+            "W30N6p08pHI",
+            "NXDI1YOCZlk",
+            "Gou7JAUWJHY"
+          ],
+          "maxDistance": 9
+        }
+      ]
+    },
+    {
+      "tier": "R2",
+      "rarity": "Rare",
+      "boss": "Screamer",
+      "map": "Screamer_01",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 2672333,
+          "minimum": 2067000,
+          "maximum": 3600000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_01"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "0HEHAo7wk-Q",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "0HEHAo7wk-Q",
+              "url": "https://www.youtube.com/watch?v=0HEHAo7wk-Q",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_01",
+              "archetype": "AdMech",
+              "damage": 3600000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "BuretRD",
+              "publishedAt": "7/28/2026 6:59 AM"
+            },
+            {
+              "videoId": "n77jUc_PmpI",
+              "url": "https://www.youtube.com/watch?v=n77jUc_PmpI",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_01",
+              "archetype": "AdMech",
+              "damage": 2350000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "Lyell",
+              "publishedAt": "8/12/2026 10:07 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "0HEHAo7wk-Q",
+            "n77jUc_PmpI",
+            "Hzq0OY-ywr4"
+          ],
+          "maxDistance": 8
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 4,
+          "exactSample": 0,
+          "average": 2212500,
+          "minimum": 1780000,
+          "maximum": 2870000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_01"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "L1": 4
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "b_SdxyJBPEs",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "b_SdxyJBPEs",
+              "url": "https://www.youtube.com/watch?v=b_SdxyJBPEs",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_01",
+              "archetype": "Laviscus",
+              "damage": 2870000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Mawg",
+              "publishedAt": "8/12/2026 3:15 PM"
+            },
+            {
+              "videoId": "hKsfCeNedn4",
+              "url": "https://www.youtube.com/watch?v=hKsfCeNedn4",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_01",
+              "archetype": "Laviscus",
+              "damage": 2400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "WongsKing",
+              "publishedAt": "8/16/2026 12:34 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "b_SdxyJBPEs",
+            "hKsfCeNedn4",
+            "Tv79R2dlQPQ",
+            "y8_r2QTxYc8"
+          ],
+          "maxDistance": 8
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 2100000,
+          "minimum": 2100000,
+          "maximum": 2100000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_01"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 1
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Eldy"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "YOga6EexzN4",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "YOga6EexzN4",
+              "url": "https://www.youtube.com/watch?v=YOga6EexzN4",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_01",
+              "archetype": "Battlesuits",
+              "damage": 2100000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, PBC",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "8/13/2026 12:17 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "YOga6EexzN4"
+          ],
+          "maxDistance": 8
+        }
+      ]
+    },
+    {
+      "tier": "R3",
+      "rarity": "Rare",
+      "boss": "Riptide",
+      "map": "Riptide_02",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 5,
+          "exactSample": 0,
+          "average": 1237800,
+          "minimum": 969000,
+          "maximum": 1640000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "L1": 5
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Traj"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "gufvARmxxOE",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "gufvARmxxOE",
+              "url": "https://www.youtube.com/watch?v=gufvARmxxOE",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_02",
+              "archetype": "AdMech",
+              "damage": 1640000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Galatian",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Painhawk",
+              "publishedAt": "4/17/2026 4:44 AM"
+            },
+            {
+              "videoId": "78_c9nfzsWU",
+              "url": "https://www.youtube.com/watch?v=78_c9nfzsWU",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_02",
+              "archetype": "AdMech",
+              "damage": 1260000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Biovore",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Painhawk",
+              "publishedAt": "2/3/2026 12:53 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "gufvARmxxOE",
+            "78_c9nfzsWU",
+            "kxJEAUJX_Yw",
+            "u9WLh7z85j8",
+            "FRzhB1ovxOc"
+          ],
+          "maxDistance": 7
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 4,
+          "exactSample": 0,
+          "average": 858000,
+          "minimum": 780000,
+          "maximum": 932000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L1": 4
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Dante"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "GFCH8DAwOns",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "GFCH8DAwOns",
+              "url": "https://www.youtube.com/watch?v=GFCH8DAwOns",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_02",
+              "archetype": "Laviscus",
+              "damage": 932000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Galatian",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Galatian",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "UltraBrother",
+              "publishedAt": "4/20/2026 10:27 AM"
+            },
+            {
+              "videoId": "pAnFDfBtFXM",
+              "url": "https://www.youtube.com/watch?v=pAnFDfBtFXM",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_02",
+              "archetype": "Laviscus",
+              "damage": 920000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Kitty Bebop",
+              "publishedAt": "4/12/2026 4:33 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "GFCH8DAwOns",
+            "pAnFDfBtFXM",
+            "zvk7A5a-9to",
+            "y7HR65RoxGs"
+          ],
+          "maxDistance": 7
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 910000,
+          "minimum": 910000,
+          "maximum": 910000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 1
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "51Dua-Ii-eU",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "51Dua-Ii-eU",
+              "url": "https://www.youtube.com/watch?v=51Dua-Ii-eU",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_02",
+              "archetype": "Neuro",
+              "damage": 910000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "WongsKing",
+              "publishedAt": "8/16/2026 12:35 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "51Dua-Ii-eU"
+          ],
+          "maxDistance": 7
+        }
+      ]
+    },
+    {
+      "tier": "R4",
+      "rarity": "Rare",
+      "boss": "Cawl",
+      "map": "Cawl_02",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 5,
+          "exactSample": 0,
+          "average": 1135000,
+          "minimum": 885000,
+          "maximum": 1400000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Cawl_02"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "L1": 5
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "zjx4MbPxvcM",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "zjx4MbPxvcM",
+              "url": "https://www.youtube.com/watch?v=zjx4MbPxvcM",
+              "boss": "Cawl",
+              "tier": "L1",
+              "map": "Cawl_02",
+              "archetype": "Laviscus",
+              "damage": 1400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Ulf",
+              "publishedAt": "4/22/2026 11:01 AM"
+            },
+            {
+              "videoId": "lYzWvJs47m4",
+              "url": "https://www.youtube.com/watch?v=lYzWvJs47m4",
+              "boss": "Cawl",
+              "tier": "L1",
+              "map": "Cawl_02",
+              "archetype": "Laviscus",
+              "damage": 1200000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Kitty Bebop",
+              "publishedAt": "5/4/2026 9:37 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "zjx4MbPxvcM",
+            "lYzWvJs47m4",
+            "fycU2EkMVJo",
+            "OGX7UZ2HbI4",
+            "J8VnVaj_C9g"
+          ],
+          "maxDistance": 6
+        },
+        {
+          "archetype": "Custodes",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 1109000,
+          "minimum": 1109000,
+          "maximum": 1109000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Cawl_02"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 1
+          },
+          "team": {
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "sxonG8GaV1w",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "sxonG8GaV1w",
+              "url": "https://www.youtube.com/watch?v=sxonG8GaV1w",
+              "boss": "Cawl",
+              "tier": "L1",
+              "map": "Cawl_02",
+              "archetype": "Custodes",
+              "damage": 1109000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Rag",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Kari, Traj, Kharn, Rag, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+              "creator": "BuretRD",
+              "publishedAt": "4/22/2026 11:17 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "sxonG8GaV1w"
+          ],
+          "maxDistance": 6
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 1100000,
+          "minimum": 1100000,
+          "maximum": 1100000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Cawl_02"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 1
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "6lHOzCTbm4w",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "6lHOzCTbm4w",
+              "url": "https://www.youtube.com/watch?v=6lHOzCTbm4w",
+              "boss": "Cawl",
+              "tier": "L1",
+              "map": "Cawl_02",
+              "archetype": "Neuro",
+              "damage": 1100000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Stringer de Los Redimidos",
+              "publishedAt": "4/22/2026 9:57 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "6lHOzCTbm4w"
+          ],
+          "maxDistance": 6
+        }
+      ]
+    },
+    {
+      "tier": "E1",
+      "rarity": "Epic",
+      "boss": "Hive Tyrant",
+      "map": "Hive_Tyrant_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1826667,
+          "minimum": 1460000,
+          "maximum": 2500000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Helb"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "WLcOHxY0gjA",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "WLcOHxY0gjA",
+              "url": "https://www.youtube.com/watch?v=WLcOHxY0gjA",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "AdMech",
+              "damage": 2500000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Helb"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Helb, Reanimator",
+              "teamKey": "Anu|Helb|Rho|Tan|Vit",
+              "creator": "Mawg",
+              "publishedAt": "9/9/2026 9:20 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "WLcOHxY0gjA",
+            "KqyEIJ386Ok",
+            "I6TE1SviXrw"
+          ],
+          "maxDistance": 5
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "other-map",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1780000,
+          "minimum": 1400000,
+          "maximum": 2340000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "phwXsxbhmbY",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "phwXsxbhmbY",
+              "url": "https://www.youtube.com/watch?v=phwXsxbhmbY",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Battlesuits",
+              "damage": 2340000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/10/2026 2:16 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "phwXsxbhmbY",
+            "04-7MH1xYn4",
+            "XH-9HkhkszE"
+          ],
+          "maxDistance": 5
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "other-map",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1582222,
+          "minimum": 1300000,
+          "maximum": 1940000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Hive Tyrant_02",
+            "Hive Tyrant_06"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L1": 9
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "D6T29ec9uWI",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "D6T29ec9uWI",
+              "url": "https://www.youtube.com/watch?v=D6T29ec9uWI",
+              "boss": "Hive Tyrant",
+              "tier": "L1",
+              "map": "Hive Tyrant_06",
+              "archetype": "Laviscus",
+              "damage": 1940000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "Galatian",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, Galatian",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "3/30/2026 3:09 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "D6T29ec9uWI",
+            "yPTRQk8zkA8",
+            "KjAoKhrBt04",
+            "PRufHoz5RTU",
+            "NlqRSI55pzs",
+            "PKEoidz8_18",
+            "r7CmIHmwIuE",
+            "CXtgcZ8yfcw",
+            "sdUcPF5EiJE"
+          ],
+          "maxDistance": 5
+        }
+      ]
+    },
+    {
+      "tier": "E2",
+      "rarity": "Epic",
+      "boss": "Dorn",
+      "map": "Dorn_06",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1256667,
+          "minimum": 750000,
+          "maximum": 1620000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_06"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "hliq2KShbTQ",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "hliq2KShbTQ",
+              "url": "https://www.youtube.com/watch?v=hliq2KShbTQ",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Battlesuits",
+              "damage": 1620000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "10/22/2026 7:10 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "hliq2KShbTQ",
+            "pOZ1tzqoOAY",
+            "7B4oii-cjQo"
+          ],
+          "maxDistance": 4
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 16,
+          "exactSample": 0,
+          "average": 1236125,
+          "minimum": 861000,
+          "maximum": 1890000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_06"
+          ],
+          "creatorCount": 13,
+          "tierCounts": {
+            "L1": 16
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "EYd3fcq-Wx4",
+            "sample": 5
+          },
+          "examples": [
+            {
+              "videoId": "EYd3fcq-Wx4",
+              "url": "https://www.youtube.com/watch?v=EYd3fcq-Wx4",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Laviscus",
+              "damage": 1890000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Mawg",
+              "publishedAt": "6/3/2026 8:13 AM"
+            },
+            {
+              "videoId": "KC2Nr37txI4",
+              "url": "https://www.youtube.com/watch?v=KC2Nr37txI4",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "Laviscus",
+              "damage": 1700000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Ulf",
+              "publishedAt": "6/3/2026 12:23 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "EYd3fcq-Wx4",
+            "aOPz5RfXNqo",
+            "KC2Nr37txI4",
+            "b8hCGiZbDVE",
+            "Y-lazF0dqXw",
+            "d1Q7mlXYE0c",
+            "4zJTsZ_PFZU",
+            "kbRyLGmxbXg",
+            "T_hwsSxYxJo",
+            "eRPmqHqARMs",
+            "r9UgTTQA50E",
+            "cV4P0UolBBw",
+            "YjuNZdKjBgw",
+            "nWoTFktMBok",
+            "wzyktaSDuog",
+            "z2ONkn-zO6s"
+          ],
+          "maxDistance": 4
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1094889,
+          "minimum": 954000,
+          "maximum": 1300000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Dorn_06"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L1": 9
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "7ZtjxGwFdx8",
+            "sample": 8
+          },
+          "examples": [
+            {
+              "videoId": "7ZtjxGwFdx8",
+              "url": "https://www.youtube.com/watch?v=7ZtjxGwFdx8",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "AdMech",
+              "damage": 1300000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Sho"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Sho, Biovore",
+              "teamKey": "Actus|Rho|Sho|Tan|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "3/20/2026 8:12 PM"
+            },
+            {
+              "videoId": "gUDId8UNHGA",
+              "url": "https://www.youtube.com/watch?v=gUDId8UNHGA",
+              "boss": "Dorn",
+              "tier": "L1",
+              "map": "Dorn_06",
+              "archetype": "AdMech",
+              "damage": 1260000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Sho"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Sho, Biovore",
+              "teamKey": "Actus|Rho|Sho|Tan|Vit",
+              "creator": "Machiep",
+              "publishedAt": "6/8/2026 8:42 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "7ZtjxGwFdx8",
+            "gUDId8UNHGA",
+            "Z5nS_cpT8hU",
+            "2MfS2IIxNsU",
+            "IeDn3Gir0mM",
+            "vGhkIMep_J8",
+            "ynnSuuP1YTg",
+            "W30N6p08pHI",
+            "NXDI1YOCZlk"
+          ],
+          "maxDistance": 4
+        }
+      ]
+    },
+    {
+      "tier": "E3",
+      "rarity": "Epic",
+      "boss": "Screamer",
+      "map": "Screamer_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 11,
+          "exactSample": 0,
+          "average": 2156364,
+          "minimum": 1300000,
+          "maximum": 3200000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "L1": 11
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "vATL6B1RExA",
+            "sample": 6
+          },
+          "examples": [
+            {
+              "videoId": "vATL6B1RExA",
+              "url": "https://www.youtube.com/watch?v=vATL6B1RExA",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "AdMech",
+              "damage": 3200000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Ammuk, Reanimator",
+              "teamKey": "Actus|Ammuk|Rho|Tan|Vit",
+              "creator": "BuretRD",
+              "publishedAt": "6/9/2026 6:40 PM"
+            },
+            {
+              "videoId": "CNLZt8TyNfQ",
+              "url": "https://www.youtube.com/watch?v=CNLZt8TyNfQ",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "AdMech",
+              "damage": 2550000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Ammuk, Reanimator",
+              "teamKey": "Actus|Ammuk|Rho|Tan|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "6/18/2026 6:07 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "vATL6B1RExA",
+            "CNLZt8TyNfQ",
+            "Gf__j0mwL50",
+            "7O-tMUwsBS0",
+            "bvqRKZkOsCs",
+            "zNoL_YsZCXM",
+            "xh2Uly-SOR0",
+            "kX3ncIq8hIs",
+            "EqtTKJAblGY",
+            "XNBmY0QT2QY",
+            "xmHBrAXkcEA"
+          ],
+          "maxDistance": 3
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 6,
+          "exactSample": 0,
+          "average": 1840000,
+          "minimum": 1400000,
+          "maximum": 2680000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 6,
+          "tierCounts": {
+            "L1": 6
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "0w8R1cLKUWA",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "0w8R1cLKUWA",
+              "url": "https://www.youtube.com/watch?v=0w8R1cLKUWA",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Laviscus",
+              "damage": 2680000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Baldrick",
+              "publishedAt": "11/4/2026 6:29 AM"
+            },
+            {
+              "videoId": "UeLI_8LDGAs",
+              "url": "https://www.youtube.com/watch?v=UeLI_8LDGAs",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Laviscus",
+              "damage": 2400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "GarviLoken",
+              "publishedAt": "6/17/2026 10:23 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "0w8R1cLKUWA",
+            "UeLI_8LDGAs",
+            "H6b3ofcOSTI",
+            "31w1vaSuZ0I",
+            "9ZIxkQKf2jo",
+            "k_F_Jwsx90Q"
+          ],
+          "maxDistance": 3
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "distant-tier",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1770000,
+          "minimum": 1400000,
+          "maximum": 2230000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Screamer_03"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "O5p_dKN6L4M",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "O5p_dKN6L4M",
+              "url": "https://www.youtube.com/watch?v=O5p_dKN6L4M",
+              "boss": "Screamer",
+              "tier": "L1",
+              "map": "Screamer_03",
+              "archetype": "Battlesuits",
+              "damage": 2230000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "11/5/2026 12:09 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "O5p_dKN6L4M",
+            "_eN3MlQePPo",
+            "FMMTtIF2Hzo"
+          ],
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "tier": "E4",
+      "rarity": "Epic",
+      "boss": "Riptide",
+      "map": "Riptide_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "distant-tier",
+          "sample": 6,
+          "exactSample": 0,
+          "average": 1440295,
+          "minimum": 1100000,
+          "maximum": 2128023,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_03"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L1": 6
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "JJe2DQJG1oA",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "JJe2DQJG1oA",
+              "url": "https://www.youtube.com/watch?v=JJe2DQJG1oA",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_03",
+              "archetype": "AdMech",
+              "damage": 2128023,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "Malikyth",
+              "publishedAt": "10/12/2026 3:36 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "JJe2DQJG1oA",
+            "HnahjSFBR1k",
+            "REGZiCh0NCk",
+            "oGhbtHk-ZAA",
+            "kNaVZNdz4Mc",
+            "o7LuTi-xpf8"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1104333,
+          "minimum": 810000,
+          "maximum": 1370000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_03"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L1": 3
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "PtyaTWSy0l4",
+            "sample": 3
+          },
+          "examples": [
+            {
+              "videoId": "PtyaTWSy0l4",
+              "url": "https://www.youtube.com/watch?v=PtyaTWSy0l4",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_03",
+              "archetype": "Laviscus",
+              "damage": 1370000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Loknar",
+              "publishedAt": "10/7/2026 5:41 PM"
+            },
+            {
+              "videoId": "n8oxoinyXWU",
+              "url": "https://www.youtube.com/watch?v=n8oxoinyXWU",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_03",
+              "archetype": "Laviscus",
+              "damage": 1133000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Primarch Samrat",
+              "publishedAt": "10/7/2026 6:28 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "PtyaTWSy0l4",
+            "n8oxoinyXWU",
+            "ZIJIPmigRLg"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "distant-tier",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 1180000,
+          "minimum": 1150000,
+          "maximum": 1210000,
+          "tiers": [
+            "L1"
+          ],
+          "maps": [
+            "Riptide_03"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L1": 2
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "3qgSv-Zn768",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "3qgSv-Zn768",
+              "url": "https://www.youtube.com/watch?v=3qgSv-Zn768",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_03",
+              "archetype": "Neuro",
+              "damage": 1210000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Mawg",
+              "publishedAt": "8/26/2026 8:45 AM"
+            },
+            {
+              "videoId": "Q1FQXn_4_KM",
+              "url": "https://www.youtube.com/watch?v=Q1FQXn_4_KM",
+              "boss": "Riptide",
+              "tier": "L1",
+              "map": "Riptide_03",
+              "archetype": "Neuro",
+              "damage": 1150000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Peste",
+              "publishedAt": "8/26/2026 6:15 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "3qgSv-Zn768",
+            "Q1FQXn_4_KM"
+          ],
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "tier": "E5",
+      "rarity": "Epic",
+      "boss": "Cawl",
+      "map": "Cawl_03",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "distant-tier",
+          "sample": 4,
+          "exactSample": 0,
+          "average": 1558454,
+          "minimum": 1390000,
+          "maximum": 1893000,
+          "tiers": [
+            "L4"
+          ],
+          "maps": [
+            "Cawl_03"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "L4": 4
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "9plkWUjNCdg",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "9plkWUjNCdg",
+              "url": "https://www.youtube.com/watch?v=9plkWUjNCdg",
+              "boss": "Cawl",
+              "tier": "L4",
+              "map": "Cawl_03",
+              "archetype": "Laviscus",
+              "damage": 1893000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Baldrick",
+              "publishedAt": "10/18/2026 10:25 PM"
+            },
+            {
+              "videoId": "kqzc8IsGdHY",
+              "url": "https://www.youtube.com/watch?v=kqzc8IsGdHY",
+              "boss": "Cawl",
+              "tier": "L4",
+              "map": "Cawl_03",
+              "archetype": "Laviscus",
+              "damage": 1520000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "UltraBrother",
+              "publishedAt": "10/10/2026 6:42 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "9plkWUjNCdg",
+            "kqzc8IsGdHY",
+            "3XgGpp3wEzQ",
+            "3kNT-gyAgOc"
+          ],
+          "maxDistance": 4
+        },
+        {
+          "archetype": "Custodes",
+          "kind": "distant-tier",
+          "sample": 12,
+          "exactSample": 0,
+          "average": 1014917,
+          "minimum": 815000,
+          "maximum": 1260000,
+          "tiers": [
+            "L4"
+          ],
+          "maps": [
+            "Cawl_03"
+          ],
+          "creatorCount": 9,
+          "tierCounts": {
+            "L4": 12
+          },
+          "team": {
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Abaddon",
+              "Dante"
+            ],
+            "mow": "FF",
+            "sourceVideoId": "OgQYFulrwA8",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "OgQYFulrwA8",
+              "url": "https://www.youtube.com/watch?v=OgQYFulrwA8",
+              "boss": "Cawl",
+              "tier": "L4",
+              "map": "Cawl_03",
+              "archetype": "Custodes",
+              "damage": 1260000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Abaddon",
+                "Dante"
+              ],
+              "mow": "FF",
+              "teamText": "Kari, Traj, Kharn, Abaddon, Dante, FF",
+              "teamKey": "Abaddon|Dante|Kari|Kharn|Traj",
+              "creator": "HozzMidnight",
+              "publishedAt": "1/4/2026 6:57 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "OgQYFulrwA8",
+            "n0xJZlZHLhE",
+            "tFLPxtJTssk",
+            "O0WJnoEwvos",
+            "yQZMdmMYvDk",
+            "58dZlrX9dbA",
+            "euEpUnIjLOY",
+            "ExeG9HgFSAU",
+            "f4bdLx5tQCY",
+            "ITHbqSLMXhk",
+            "DbiJ-_6qhTU",
+            "ay5EIwFOW3c"
+          ],
+          "maxDistance": 4
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "distant-tier",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 1370000,
+          "minimum": 1370000,
+          "maximum": 1370000,
+          "tiers": [
+            "L4"
+          ],
+          "maps": [
+            "Cawl_03"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L4": 1
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "i7N_q_CFo3E",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "i7N_q_CFo3E",
+              "url": "https://www.youtube.com/watch?v=i7N_q_CFo3E",
+              "boss": "Cawl",
+              "tier": "L4",
+              "map": "Cawl_03",
+              "archetype": "Neuro",
+              "damage": 1370000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Un4given",
+              "publishedAt": "10/13/2026 2:47 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "i7N_q_CFo3E"
+          ],
+          "maxDistance": 4
+        }
+      ]
+    },
+    {
+      "tier": "L1",
+      "rarity": "Legendary",
+      "boss": "Tervigon",
+      "map": "Tervigon_01",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Battlesuits",
+          "kind": "pooled",
+          "sample": 1,
+          "exactSample": 0,
+          "average": 2550000,
+          "minimum": 2550000,
+          "maximum": 2550000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L2": 1
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "eAYpDnGIBN8",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "eAYpDnGIBN8",
+              "url": "https://www.youtube.com/watch?v=eAYpDnGIBN8",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Battlesuits",
+              "damage": 2550000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+              "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "9/23/2026 10:13 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "eAYpDnGIBN8"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "pooled",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 2545207,
+          "minimum": 2200000,
+          "maximum": 2890414,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "4Re2xNYFasg",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "4Re2xNYFasg",
+              "url": "https://www.youtube.com/watch?v=4Re2xNYFasg",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "AdMech",
+              "damage": 2890414,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Anu",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Anu, Vit, Ammuk, Reanimator",
+              "teamKey": "Ammuk|Anu|Rho|Tan|Vit",
+              "creator": "Malikyth",
+              "publishedAt": "9/26/2026 10:39 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "4Re2xNYFasg",
+            "qL1iJvWCDaA"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "pooled",
+          "sample": 2,
+          "exactSample": 0,
+          "average": 2108500,
+          "minimum": 1627000,
+          "maximum": 2590000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Tervigon_01"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 2
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "k5Y36AoYfNE",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "k5Y36AoYfNE",
+              "url": "https://www.youtube.com/watch?v=k5Y36AoYfNE",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Laviscus",
+              "damage": 2590000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, PBC",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Loknar",
+              "publishedAt": "9/23/2026 12:11 PM"
+            },
+            {
+              "videoId": "5vCMvh9-xqI",
+              "url": "https://www.youtube.com/watch?v=5vCMvh9-xqI",
+              "boss": "Tervigon",
+              "tier": "L2",
+              "map": "Tervigon_01",
+              "archetype": "Laviscus",
+              "damage": 1627000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "FF",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, FF",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Primarch Samrat",
+              "publishedAt": "9/23/2026 10:50 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "k5Y36AoYfNE",
+            "5vCMvh9-xqI"
+          ],
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "tier": "L2",
+      "rarity": "Legendary",
+      "boss": "Dorn",
+      "map": "Dorn_04",
+      "loop": false,
+      "exactCount": 31,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "exact",
+          "sample": 3,
+          "exactSample": 3,
+          "average": 1506667,
+          "minimum": 1150000,
+          "maximum": 1790000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Dorn_04"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 3
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Traj"
+            ],
+            "mow": "Reanimator",
+            "sourceVideoId": "GAyVRZE-t-Y",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "GAyVRZE-t-Y",
+              "url": "https://www.youtube.com/watch?v=GAyVRZE-t-Y",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "AdMech",
+              "damage": 1790000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Reanimator",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "7/22/2026 8:07 AM"
+            },
+            {
+              "videoId": "UqouUwUZC_M",
+              "url": "https://www.youtube.com/watch?v=UqouUwUZC_M",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "AdMech",
+              "damage": 1580000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Reanimator",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Reanimator",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "6/27/2026 4:50 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "GAyVRZE-t-Y",
+            "UqouUwUZC_M",
+            "dAGUHVochhk"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "exact",
+          "sample": 4,
+          "exactSample": 4,
+          "average": 1492500,
+          "minimum": 1300000,
+          "maximum": 1660000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Dorn_04"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L2": 4
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Aethana"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "jKIk_VbFk1o",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "jKIk_VbFk1o",
+              "url": "https://www.youtube.com/watch?v=jKIk_VbFk1o",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "Battlesuits",
+              "damage": 1660000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Aethana"
+              ],
+              "mow": "Biovore",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Aethana, Biovore",
+              "teamKey": "Actus|Aethana|Darkstrider|Farsight|Revas",
+              "creator": "2MuchPie",
+              "publishedAt": "7/30/2026 11:03 AM"
+            },
+            {
+              "videoId": "St0IjQLBPlc",
+              "url": "https://www.youtube.com/watch?v=St0IjQLBPlc",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "Battlesuits",
+              "damage": 1530000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Aethana"
+              ],
+              "mow": "Biovore",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Aethana, Biovore",
+              "teamKey": "Actus|Aethana|Darkstrider|Farsight|Revas",
+              "creator": "2MuchPie",
+              "publishedAt": "6/29/2026 8:07 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "jKIk_VbFk1o",
+            "St0IjQLBPlc",
+            "Pt42AsHk2_E",
+            "4QsfBDzrxBc"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "exact",
+          "sample": 23,
+          "exactSample": 23,
+          "average": 1299870,
+          "minimum": 800000,
+          "maximum": 1740000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Dorn_04"
+          ],
+          "creatorCount": 12,
+          "tierCounts": {
+            "L2": 23
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "Q8gU2_2L5AE",
+            "sample": 18
+          },
+          "examples": [
+            {
+              "videoId": "Q8gU2_2L5AE",
+              "url": "https://www.youtube.com/watch?v=Q8gU2_2L5AE",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "Laviscus",
+              "damage": 1740000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Mawg",
+              "publishedAt": "6/30/2026 4:44 AM"
+            },
+            {
+              "videoId": "ah_1SAeBttM",
+              "url": "https://www.youtube.com/watch?v=ah_1SAeBttM",
+              "boss": "Dorn",
+              "tier": "L2",
+              "map": "Dorn_04",
+              "archetype": "Laviscus",
+              "damage": 1640000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Vit"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Vit, Biovore",
+              "teamKey": "Boss|Kari|Lav|Traj|Vit",
+              "creator": "Best Replays",
+              "publishedAt": "6/27/2026 2:23 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "Q8gU2_2L5AE",
+            "ah_1SAeBttM",
+            "d8AYhQeOMMI",
+            "sr_1vZjD140",
+            "HKo5oXc2S2M",
+            "Eo8Dan2RbNI",
+            "LIZox-wKwQk",
+            "1WlicEKI1QE",
+            "w5IBYw1uH_w",
+            "T0T3QwKDS4A",
+            "0OZSP8-gn7U",
+            "DiJRVlyzh1c",
+            "21xrPoaD-PA",
+            "r3STQ1zIdq0",
+            "mpyul3Jbick",
+            "dDy85hRGn0I",
+            "m-kz7shKflo",
+            "HbnQlixfYKA",
+            "T-T8b2-pinA",
+            "lCwTDv49BRQ",
+            "rlxEZwVZZuE",
+            "a-wFHQdgRJk",
+            "B16pSVcakeI"
+          ],
+          "maxDistance": 0
+        }
+      ]
+    },
+    {
+      "tier": "L3",
+      "rarity": "Legendary",
+      "boss": "Screamer",
+      "map": "Screamer_04",
+      "loop": false,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "AdMech",
+          "kind": "pooled",
+          "sample": 9,
+          "exactSample": 0,
+          "average": 1736667,
+          "minimum": 1450000,
+          "maximum": 1940000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Screamer_04"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "L2": 9
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Traj"
+            ],
+            "mow": "Galatian",
+            "sourceVideoId": "Mw95t2KIuXY",
+            "sample": 6
+          },
+          "examples": [
+            {
+              "videoId": "Mw95t2KIuXY",
+              "url": "https://www.youtube.com/watch?v=Mw95t2KIuXY",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "AdMech",
+              "damage": 1940000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Galatian",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Loknar",
+              "publishedAt": "7/10/2026 10:31 AM"
+            },
+            {
+              "videoId": "iutVOId2dcE",
+              "url": "https://www.youtube.com/watch?v=iutVOId2dcE",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "AdMech",
+              "damage": 1800000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Traj"
+              ],
+              "mow": "Galatian",
+              "teamText": "Rho, Tan, Actus, Vit, Traj, Galatian",
+              "teamKey": "Actus|Rho|Tan|Traj|Vit",
+              "creator": "Primarch Samrat",
+              "publishedAt": "7/10/2026 4:48 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "Mw95t2KIuXY",
+            "oObsvio-hKE",
+            "VGuyyk_OaM0",
+            "iutVOId2dcE",
+            "_YQBiHgKxCg",
+            "jCF0izRvXC0",
+            "sauYCs3GSDM",
+            "O2hIkLd9BQc",
+            "GTQSVL3yDHs"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "Laviscus",
+          "kind": "pooled",
+          "sample": 7,
+          "exactSample": 0,
+          "average": 1607857,
+          "minimum": 1000000,
+          "maximum": 2390000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Screamer_04"
+          ],
+          "creatorCount": 5,
+          "tierCounts": {
+            "L2": 7
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "QKB70NiN4LQ",
+            "sample": 3
+          },
+          "examples": [
+            {
+              "videoId": "QKB70NiN4LQ",
+              "url": "https://www.youtube.com/watch?v=QKB70NiN4LQ",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "Laviscus",
+              "damage": 2390000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Painhawk",
+              "publishedAt": "7/10/2026 4:14 AM"
+            },
+            {
+              "videoId": "GLTKtlfoXVk",
+              "url": "https://www.youtube.com/watch?v=GLTKtlfoXVk",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "Laviscus",
+              "damage": 2000000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "PBC",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, PBC",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Don’t Call Me Shirley Tacticus Replays",
+              "publishedAt": "7/12/2026 12:12 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "QKB70NiN4LQ",
+            "GLTKtlfoXVk",
+            "Ikdm_nGlf6M",
+            "iI23Cjq3SV8",
+            "Mg8Yc2N_3Q8",
+            "V2qmdtNP17w",
+            "PGnLQN82SP4"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "Custodes",
+          "kind": "pooled",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1006667,
+          "minimum": 840000,
+          "maximum": 1130000,
+          "tiers": [
+            "L2"
+          ],
+          "maps": [
+            "Screamer_04"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L2": 3
+          },
+          "team": {
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "FF",
+            "sourceVideoId": "wATtbkO3Y5c",
+            "sample": 3
+          },
+          "examples": [
+            {
+              "videoId": "wATtbkO3Y5c",
+              "url": "https://www.youtube.com/watch?v=wATtbkO3Y5c",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "Custodes",
+              "damage": 1130000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Rag",
+                "Dante"
+              ],
+              "mow": "FF",
+              "teamText": "Kari, Traj, Kharn, Rag, Dante, FF",
+              "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+              "creator": "ge0desic",
+              "publishedAt": "12/31/2025 2:51 PM"
+            },
+            {
+              "videoId": "EKNSMYb9vTs",
+              "url": "https://www.youtube.com/watch?v=EKNSMYb9vTs",
+              "boss": "Screamer",
+              "tier": "L2",
+              "map": "Screamer_04",
+              "archetype": "Custodes",
+              "damage": 1050000,
+              "heroes": [
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Rag",
+                "Dante"
+              ],
+              "mow": "FF",
+              "teamText": "Kari, Traj, Kharn, Rag, Dante, FF",
+              "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+              "creator": "UltraBrother",
+              "publishedAt": "1/8/2026 6:11 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "wATtbkO3Y5c",
+            "EKNSMYb9vTs",
+            "I8Xz3vGLfQ0"
+          ],
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "tier": "L4",
+      "rarity": "Legendary",
+      "boss": "Riptide",
+      "map": "Riptide_02",
+      "loop": true,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "pooled",
+          "sample": 10,
+          "exactSample": 0,
+          "average": 1174000,
+          "minimum": 1020000,
+          "maximum": 1340000,
+          "tiers": [
+            "L3"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L3": 10
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "_-236VGuG-w",
+            "sample": 10
+          },
+          "examples": [
+            {
+              "videoId": "_-236VGuG-w",
+              "url": "https://www.youtube.com/watch?v=_-236VGuG-w",
+              "boss": "Riptide",
+              "tier": "L3",
+              "map": "Riptide_02",
+              "archetype": "Laviscus",
+              "damage": 1340000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Adeptus Gorditas",
+              "publishedAt": "6/24/2026 4:52 AM"
+            },
+            {
+              "videoId": "fRCGzD2rlXo",
+              "url": "https://www.youtube.com/watch?v=fRCGzD2rlXo",
+              "boss": "Riptide",
+              "tier": "L3",
+              "map": "Riptide_02",
+              "archetype": "Laviscus",
+              "damage": 1300000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Stringer de Los Redimidos",
+              "publishedAt": "6/27/2026 2:56 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "_-236VGuG-w",
+            "fRCGzD2rlXo",
+            "yy8X8TvHIdg",
+            "eZxttoKKzrE",
+            "UEArQ3n0XJ0",
+            "wxI3-mvOAe8",
+            "5379Xpyn7iw",
+            "PARVOo6u85w",
+            "0nYxi41lZRE",
+            "6LAeutQ0w20"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "pooled",
+          "sample": 14,
+          "exactSample": 0,
+          "average": 1158950,
+          "minimum": 775000,
+          "maximum": 1560000,
+          "tiers": [
+            "L2",
+            "L3",
+            "M1"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 8,
+          "tierCounts": {
+            "L2": 6,
+            "L3": 4,
+            "M1": 4
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Ammuk"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "XFta3pkqc_k",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "XFta3pkqc_k",
+              "url": "https://www.youtube.com/watch?v=XFta3pkqc_k",
+              "boss": "Riptide",
+              "tier": "L3",
+              "map": "Riptide_02",
+              "archetype": "AdMech",
+              "damage": 1560000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Ammuk"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Ammuk, Biovore",
+              "teamKey": "Actus|Ammuk|Rho|Tan|Vit",
+              "creator": "Yagyuu",
+              "publishedAt": "6/20/2026 2:13 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "XFta3pkqc_k",
+            "9BInbR7qdRs",
+            "HqbOrDj0VZ0",
+            "jfEPbuPMijM",
+            "YY8wcNG_TDU",
+            "TsGBrCRDKPw",
+            "I9oYhmLbx78",
+            "ags2uhYEtHo",
+            "OQmtLmsPXzs",
+            "-j7Otx32588",
+            "D9RTevw5SEI",
+            "ANcvDjysA4o",
+            "9ocCMVP4faQ",
+            "yxCHdmWznu8"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "pooled",
+          "sample": 12,
+          "exactSample": 0,
+          "average": 1095417,
+          "minimum": 750000,
+          "maximum": 1310000,
+          "tiers": [
+            "L3",
+            "M1"
+          ],
+          "maps": [
+            "Riptide_02"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "L3": 3,
+            "M1": 9
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "SXMzv89eYIA",
+            "sample": 11
+          },
+          "examples": [
+            {
+              "videoId": "SXMzv89eYIA",
+              "url": "https://www.youtube.com/watch?v=SXMzv89eYIA",
+              "boss": "Riptide",
+              "tier": "M1",
+              "map": "Riptide_02",
+              "archetype": "Neuro",
+              "damage": 1310000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Ulf",
+              "publishedAt": "10/13/2026 3:41 PM"
+            },
+            {
+              "videoId": "_efLMnAEP78",
+              "url": "https://www.youtube.com/watch?v=_efLMnAEP78",
+              "boss": "Riptide",
+              "tier": "M1",
+              "map": "Riptide_02",
+              "archetype": "Neuro",
+              "damage": 1270000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Erantar",
+              "publishedAt": "10/10/2026 4:36 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "SXMzv89eYIA",
+            "_efLMnAEP78",
+            "nB7Kws-pWhg",
+            "1qyGmoc2VE8",
+            "1JAoXGqzBRE",
+            "42NFQc2pNcs",
+            "v7oMwBQ2M6s",
+            "EhN4bVAd6G4",
+            "i17E250cM5g",
+            "4qIPeUTyUs4",
+            "UMCJZwPr9mo",
+            "nelBK4f2tDY"
+          ],
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "tier": "L5",
+      "rarity": "Legendary",
+      "boss": "Cawl",
+      "map": "Cawl_04",
+      "loop": true,
+      "exactCount": 22,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "exact",
+          "sample": 11,
+          "exactSample": 11,
+          "average": 1135455,
+          "minimum": 744000,
+          "maximum": 1500000,
+          "tiers": [
+            "L5"
+          ],
+          "maps": [
+            "Cawl_04"
+          ],
+          "creatorCount": 6,
+          "tierCounts": {
+            "L5": 11
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "8Ca1BRCa-Vg",
+            "sample": 7
+          },
+          "examples": [
+            {
+              "videoId": "8Ca1BRCa-Vg",
+              "url": "https://www.youtube.com/watch?v=8Ca1BRCa-Vg",
+              "boss": "Cawl",
+              "tier": "L5",
+              "map": "Cawl_04",
+              "archetype": "Laviscus",
+              "damage": 1500000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Un4given",
+              "publishedAt": "10/28/2026 5:27 AM"
+            },
+            {
+              "videoId": "IfW4SWpJ3-U",
+              "url": "https://www.youtube.com/watch?v=IfW4SWpJ3-U",
+              "boss": "Cawl",
+              "tier": "L5",
+              "map": "Cawl_04",
+              "archetype": "Laviscus",
+              "damage": 1400000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Kharn",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Kharn, Dante, Biovore",
+              "teamKey": "Dante|Kari|Kharn|Lav|Traj",
+              "creator": "Blackmane Gaming",
+              "publishedAt": "10/23/2026 3:36 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "8Ca1BRCa-Vg",
+            "IfW4SWpJ3-U",
+            "V0ISjTBJmwo",
+            "LX0_T2FainQ",
+            "XEvl4m0pjcY",
+            "cnG6-4IYs8s",
+            "fjfJqV8C9_o",
+            "jBGGeBhO_B4",
+            "vEmxZ1RFb-c",
+            "Gw5qH8n0zww",
+            "TLKpXfUVKmg"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "exact",
+          "sample": 10,
+          "exactSample": 10,
+          "average": 934000,
+          "minimum": 800000,
+          "maximum": 1190000,
+          "tiers": [
+            "L5"
+          ],
+          "maps": [
+            "Cawl_04"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "L5": 10
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "xyNcQezVtB4",
+            "sample": 4
+          },
+          "examples": [
+            {
+              "videoId": "xyNcQezVtB4",
+              "url": "https://www.youtube.com/watch?v=xyNcQezVtB4",
+              "boss": "Cawl",
+              "tier": "L5",
+              "map": "Cawl_04",
+              "archetype": "Neuro",
+              "damage": 1190000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Peste",
+              "publishedAt": "6/13/2026 6:48 AM"
+            },
+            {
+              "videoId": "cRuqZFVFDwM",
+              "url": "https://www.youtube.com/watch?v=cRuqZFVFDwM",
+              "boss": "Cawl",
+              "tier": "L5",
+              "map": "Cawl_04",
+              "archetype": "Neuro",
+              "damage": 1100000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "WongsKing",
+              "publishedAt": "10/22/2026 8:19 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "xyNcQezVtB4",
+            "cRuqZFVFDwM",
+            "q1i5HaBYBHI",
+            "Die5u3CaYvs",
+            "UYyI84ONBmg",
+            "Tgl-GV2f9b4",
+            "7SHrzOXypX0",
+            "AZh-SKj-HP0",
+            "cWvZ5QNtG34",
+            "sFqGjzcayVc"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "exact",
+          "sample": 1,
+          "exactSample": 1,
+          "average": 830000,
+          "minimum": 830000,
+          "maximum": 830000,
+          "tiers": [
+            "L5"
+          ],
+          "maps": [
+            "Cawl_04"
+          ],
+          "creatorCount": 1,
+          "tierCounts": {
+            "L5": 1
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Anu",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "FF",
+            "sourceVideoId": "m840ypSDeII",
+            "sample": 1
+          },
+          "examples": [
+            {
+              "videoId": "m840ypSDeII",
+              "url": "https://www.youtube.com/watch?v=m840ypSDeII",
+              "boss": "Cawl",
+              "tier": "L5",
+              "map": "Cawl_04",
+              "archetype": "Battlesuits",
+              "damage": 830000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Anu",
+                "Darkstrider",
+                "Lhykis"
+              ],
+              "mow": "FF",
+              "teamText": "Farsight, Revas, Anu, Darkstrider, Lhykis, FF",
+              "teamKey": "Anu|Darkstrider|Farsight|Lhykis|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "10/25/2026 10:13 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "m840ypSDeII"
+          ],
+          "maxDistance": 0
+        }
+      ]
+    },
+    {
+      "tier": "M1",
+      "rarity": "Mythic",
+      "boss": "Lion",
+      "map": "Lion_03",
+      "loop": true,
+      "exactCount": 40,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "exact",
+          "sample": 30,
+          "exactSample": 30,
+          "average": 798200,
+          "minimum": 400000,
+          "maximum": 1150000,
+          "tiers": [
+            "M1"
+          ],
+          "maps": [
+            "Lion_03"
+          ],
+          "creatorCount": 15,
+          "tierCounts": {
+            "M1": 30
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Aesoth",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "YutJy3WcLzI",
+            "sample": 5
+          },
+          "examples": [
+            {
+              "videoId": "YutJy3WcLzI",
+              "url": "https://www.youtube.com/watch?v=YutJy3WcLzI",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Laviscus",
+              "damage": 1150000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Aesoth",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Aesoth, Dante, Biovore",
+              "teamKey": "Aesoth|Dante|Kari|Lav|Traj",
+              "creator": "Jordan",
+              "publishedAt": "8/9/2026 12:21 AM"
+            },
+            {
+              "videoId": "ZCcm7k2Ihd0",
+              "url": "https://www.youtube.com/watch?v=ZCcm7k2Ihd0",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Laviscus",
+              "damage": 923000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Aesoth",
+                "Dante"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Aesoth, Dante, Biovore",
+              "teamKey": "Aesoth|Dante|Kari|Lav|Traj",
+              "creator": "zelots1991",
+              "publishedAt": "8/6/2026 10:48 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "YutJy3WcLzI",
+            "nsI_EyWjBlc",
+            "J1W3UKxpo-U",
+            "H5ulwKSektg",
+            "1H1VrYAHfbU",
+            "ZCcm7k2Ihd0",
+            "gi4EpevEQEc",
+            "X_xd94lMwio",
+            "XmTkD7AVqCo",
+            "wgDelnMm11Q",
+            "rkEdanPAFVo",
+            "-LmKaXOCSpk",
+            "ZTWVzn6qgR8",
+            "oDRIuIcJ4sc",
+            "4jXVZRN0xdY",
+            "hRwn-_J8fJc",
+            "JmnGV8Z3t1U",
+            "EfDB1ETvbzs",
+            "cLO2ZDSOF0k",
+            "WJi2d9OzOQM",
+            "4O0uF1P_z0U",
+            "OntxA7UxX5A",
+            "AV9nJs23REg",
+            "hPrIgMIQ_i0",
+            "gLu9VSh6Zzw",
+            "QLj2ILImqEA",
+            "DLMGWV_KHHc",
+            "euhen452Uck",
+            "-7LgJOVEAIc",
+            "Yx6Tz2UHCZ4"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "exact",
+          "sample": 5,
+          "exactSample": 5,
+          "average": 762600,
+          "minimum": 556000,
+          "maximum": 1010000,
+          "tiers": [
+            "M1"
+          ],
+          "maps": [
+            "Lion_03"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "M1": 5
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "f6qQjd92_nM",
+            "sample": 5
+          },
+          "examples": [
+            {
+              "videoId": "f6qQjd92_nM",
+              "url": "https://www.youtube.com/watch?v=f6qQjd92_nM",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Neuro",
+              "damage": 1010000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Peste",
+              "publishedAt": "8/4/2026 1:39 PM"
+            },
+            {
+              "videoId": "iRk7K7gYFAA",
+              "url": "https://www.youtube.com/watch?v=iRk7K7gYFAA",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Neuro",
+              "damage": 900000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Un4given",
+              "publishedAt": "8/8/2026 4:22 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "f6qQjd92_nM",
+            "iRk7K7gYFAA",
+            "m58LbWxKArw",
+            "xrh6gexykDk",
+            "dR9ZjH95CaE"
+          ],
+          "maxDistance": 0
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "exact",
+          "sample": 5,
+          "exactSample": 5,
+          "average": 584000,
+          "minimum": 488000,
+          "maximum": 712000,
+          "tiers": [
+            "M1"
+          ],
+          "maps": [
+            "Lion_03"
+          ],
+          "creatorCount": 3,
+          "tierCounts": {
+            "M1": 5
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Eldy"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "kTdLI7CC-zs",
+            "sample": 5
+          },
+          "examples": [
+            {
+              "videoId": "kTdLI7CC-zs",
+              "url": "https://www.youtube.com/watch?v=kTdLI7CC-zs",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Battlesuits",
+              "damage": 712000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "Biovore",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, Biovore",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "Kerygma",
+              "publishedAt": "8/8/2026 10:47 PM"
+            },
+            {
+              "videoId": "NExqfm61SIg",
+              "url": "https://www.youtube.com/watch?v=NExqfm61SIg",
+              "boss": "Lion",
+              "tier": "M1",
+              "map": "Lion_03",
+              "archetype": "Battlesuits",
+              "damage": 623000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "Biovore",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, Biovore",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "Kerygma",
+              "publishedAt": "8/1/2026 7:05 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "kTdLI7CC-zs",
+            "NExqfm61SIg",
+            "x9Bvn5xXJk0",
+            "620XFSJlkTw",
+            "m1NHKcBDd5I"
+          ],
+          "maxDistance": 0
+        }
+      ]
+    },
+    {
+      "tier": "M2",
+      "rarity": "Mythic",
+      "boss": "Szarekh",
+      "map": "Szarekh_01",
+      "loop": true,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "pooled",
+          "sample": 8,
+          "exactSample": 0,
+          "average": 1996000,
+          "minimum": 1200000,
+          "maximum": 2390000,
+          "tiers": [
+            "L5"
+          ],
+          "maps": [
+            "Szarekh_01"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "L5": 8
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Aesoth"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "MFPtN9-XI1c",
+            "sample": 5
+          },
+          "examples": [
+            {
+              "videoId": "MFPtN9-XI1c",
+              "url": "https://www.youtube.com/watch?v=MFPtN9-XI1c",
+              "boss": "Szarekh",
+              "tier": "L5",
+              "map": "Szarekh_01",
+              "archetype": "Laviscus",
+              "damage": 2390000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "Dev",
+              "publishedAt": "4/28/2026 1:36 AM"
+            },
+            {
+              "videoId": "KX-MIMi5EdM",
+              "url": "https://www.youtube.com/watch?v=KX-MIMi5EdM",
+              "boss": "Szarekh",
+              "tier": "L5",
+              "map": "Szarekh_01",
+              "archetype": "Laviscus",
+              "damage": 2330000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Aesoth"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Aesoth, Biovore",
+              "teamKey": "Aesoth|Boss|Kari|Lav|Traj",
+              "creator": "GarviLoken",
+              "publishedAt": "4/23/2026 5:29 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "MFPtN9-XI1c",
+            "KX-MIMi5EdM",
+            "slV4NF_zfQI",
+            "MOfbbt7MF7k",
+            "dvIRlrzoyT8",
+            "_ZKpGqk8nes",
+            "_n2mWvTjqaA",
+            "oQP5VxBPi5M"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "Battlesuits",
+          "kind": "pooled",
+          "sample": 3,
+          "exactSample": 0,
+          "average": 1390000,
+          "minimum": 1000000,
+          "maximum": 1870000,
+          "tiers": [
+            "L5"
+          ],
+          "maps": [
+            "Szarekh_01"
+          ],
+          "creatorCount": 2,
+          "tierCounts": {
+            "L5": 3
+          },
+          "team": {
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Eldy"
+            ],
+            "mow": "PBC",
+            "sourceVideoId": "hQmJYAH5zmE",
+            "sample": 3
+          },
+          "examples": [
+            {
+              "videoId": "hQmJYAH5zmE",
+              "url": "https://www.youtube.com/watch?v=hQmJYAH5zmE",
+              "boss": "Szarekh",
+              "tier": "L5",
+              "map": "Szarekh_01",
+              "archetype": "Battlesuits",
+              "damage": 1870000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, PBC",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "2MuchPie",
+              "publishedAt": "5/9/2026 1:48 PM"
+            },
+            {
+              "videoId": "tFaSYBcLato",
+              "url": "https://www.youtube.com/watch?v=tFaSYBcLato",
+              "boss": "Szarekh",
+              "tier": "L5",
+              "map": "Szarekh_01",
+              "archetype": "Battlesuits",
+              "damage": 1300000,
+              "heroes": [
+                "Farsight",
+                "Revas",
+                "Actus",
+                "Darkstrider",
+                "Eldy"
+              ],
+              "mow": "PBC",
+              "teamText": "Farsight, Revas, Actus, Darkstrider, Eldy, PBC",
+              "teamKey": "Actus|Darkstrider|Eldy|Farsight|Revas",
+              "creator": "JurassicKyle",
+              "publishedAt": "4/27/2026 7:08 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "hQmJYAH5zmE",
+            "tFaSYBcLato",
+            "U2EgbLjeSQw"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "pooled",
+          "sample": 7,
+          "exactSample": 0,
+          "average": 1382857,
+          "minimum": 1000000,
+          "maximum": 1900000,
+          "tiers": [
+            "M1"
+          ],
+          "maps": [
+            "Szarekh_01"
+          ],
+          "creatorCount": 4,
+          "tierCounts": {
+            "M1": 7
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Vit",
+              "Boss"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "GmTQDi0hZWc",
+            "sample": 6
+          },
+          "examples": [
+            {
+              "videoId": "GmTQDi0hZWc",
+              "url": "https://www.youtube.com/watch?v=GmTQDi0hZWc",
+              "boss": "Szarekh",
+              "tier": "M1",
+              "map": "Szarekh_01",
+              "archetype": "AdMech",
+              "damage": 1900000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Boss"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Boss, Biovore",
+              "teamKey": "Actus|Boss|Rho|Tan|Vit",
+              "creator": "Stringer de Los Redimidos",
+              "publishedAt": "12/26/2025 11:10 AM"
+            },
+            {
+              "videoId": "2GldN5FCMt8",
+              "url": "https://www.youtube.com/watch?v=2GldN5FCMt8",
+              "boss": "Szarekh",
+              "tier": "M1",
+              "map": "Szarekh_01",
+              "archetype": "AdMech",
+              "damage": 1400000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Vit",
+                "Boss"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Vit, Boss, Biovore",
+              "teamKey": "Actus|Boss|Rho|Tan|Vit",
+              "creator": "zelots1991",
+              "publishedAt": "12/30/2025 7:10 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "GmTQDi0hZWc",
+            "uq6XtkHbcHk",
+            "2GldN5FCMt8",
+            "B-7tZThCJCs",
+            "HyDCm6dFf4U",
+            "S7H2xokcwnQ",
+            "0GhFESsGAr4"
+          ],
+          "maxDistance": 1
+        }
+      ]
+    },
+    {
+      "tier": "M3",
+      "rarity": "Mythic",
+      "boss": "Mortarion",
+      "map": "Mortarion_04",
+      "loop": true,
+      "exactCount": 0,
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "kind": "pooled",
+          "sample": 19,
+          "exactSample": 0,
+          "average": 1578316,
+          "minimum": 876000,
+          "maximum": 1950000,
+          "tiers": [
+            "M2"
+          ],
+          "maps": [
+            "Mortarion_04"
+          ],
+          "creatorCount": 12,
+          "tierCounts": {
+            "M2": 19
+          },
+          "team": {
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Boss",
+              "Atla"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "w1aaDpkM9fA",
+            "sample": 17
+          },
+          "examples": [
+            {
+              "videoId": "w1aaDpkM9fA",
+              "url": "https://www.youtube.com/watch?v=w1aaDpkM9fA",
+              "boss": "Mortarion",
+              "tier": "M2",
+              "map": "Mortarion_04",
+              "archetype": "Laviscus",
+              "damage": 1950000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, Biovore",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Mawg",
+              "publishedAt": "8/2/2026 12:34 PM"
+            },
+            {
+              "videoId": "1XCjGb4cILo",
+              "url": "https://www.youtube.com/watch?v=1XCjGb4cILo",
+              "boss": "Mortarion",
+              "tier": "M2",
+              "map": "Mortarion_04",
+              "archetype": "Laviscus",
+              "damage": 1900000,
+              "heroes": [
+                "Lav",
+                "Kari",
+                "Traj",
+                "Boss",
+                "Atla"
+              ],
+              "mow": "Biovore",
+              "teamText": "Lav, Kari, Traj, Boss, Atla, Biovore",
+              "teamKey": "Atla|Boss|Kari|Lav|Traj",
+              "creator": "Adeptus Gorditas",
+              "publishedAt": "8/4/2026 6:29 AM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "w1aaDpkM9fA",
+            "1XCjGb4cILo",
+            "FvymD9tneQc",
+            "l0Nm_CUMmas",
+            "SltYBqKb_Os",
+            "xqpm-exyMzc",
+            "UzOIpXbQPgQ",
+            "641_2i2N_lo",
+            "eq2HjaeF3tQ",
+            "LJ3a_kW1fZw",
+            "Op_q9caeSAI",
+            "1RPPCCNoh0g",
+            "lu6ZUWNxslI",
+            "6s4kYQEG1YM",
+            "rRFuhr6r8gY",
+            "1Q4NbfwASe0",
+            "GhdE9-Esql0",
+            "ubDzjRCPPzQ",
+            "2tdLYpWYQmA"
+          ],
+          "maxDistance": 1
+        },
+        {
+          "archetype": "Neuro",
+          "kind": "pooled",
+          "sample": 13,
+          "exactSample": 0,
+          "average": 854077,
+          "minimum": 541000,
+          "maximum": 1200000,
+          "tiers": [
+            "M1",
+            "M2"
+          ],
+          "maps": [
+            "Mortarion_04"
+          ],
+          "creatorCount": 7,
+          "tierCounts": {
+            "M1": 10,
+            "M2": 3
+          },
+          "team": {
+            "heroes": [
+              "Neuro",
+              "Abrax",
+              "Ahri",
+              "Abaddon",
+              "Archi"
+            ],
+            "mow": "Zkar",
+            "sourceVideoId": "SU3U8s8CniE",
+            "sample": 2
+          },
+          "examples": [
+            {
+              "videoId": "SU3U8s8CniE",
+              "url": "https://www.youtube.com/watch?v=SU3U8s8CniE",
+              "boss": "Mortarion",
+              "tier": "M2",
+              "map": "Mortarion_04",
+              "archetype": "Neuro",
+              "damage": 1200000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Peste",
+              "publishedAt": "8/5/2026 6:24 AM"
+            },
+            {
+              "videoId": "GgxJo9miuok",
+              "url": "https://www.youtube.com/watch?v=GgxJo9miuok",
+              "boss": "Mortarion",
+              "tier": "M2",
+              "map": "Mortarion_04",
+              "archetype": "Neuro",
+              "damage": 1100000,
+              "heroes": [
+                "Neuro",
+                "Abrax",
+                "Ahri",
+                "Abaddon",
+                "Archi"
+              ],
+              "mow": "Zkar",
+              "teamText": "Neuro, Abrax, Ahri, Abaddon, Archi, Zkar",
+              "teamKey": "Abaddon|Abrax|Ahri|Archi|Neuro",
+              "creator": "Un4given",
+              "publishedAt": "8/1/2026 2:10 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "SU3U8s8CniE",
+            "GgxJo9miuok",
+            "2KKqlX4ciKQ",
+            "yDOfO0aEwXY",
+            "GSb3193QcIA",
+            "w_aO6Oiyu6o",
+            "2n6TYeWfwbM",
+            "vaAHcLgn_iU",
+            "fcDXsGxzJGQ",
+            "8cPtPtITd2w",
+            "WX5Osb-K1QY",
+            "fAL8pa7Rt_I",
+            "uAKU8rXuaWY"
+          ],
+          "maxDistance": 2
+        },
+        {
+          "archetype": "AdMech",
+          "kind": "pooled",
+          "sample": 11,
+          "exactSample": 0,
+          "average": 654545,
+          "minimum": 494000,
+          "maximum": 838000,
+          "tiers": [
+            "M1",
+            "M2"
+          ],
+          "maps": [
+            "Mortarion_04"
+          ],
+          "creatorCount": 6,
+          "tierCounts": {
+            "M1": 9,
+            "M2": 2
+          },
+          "team": {
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Actus",
+              "Helb",
+              "Aleph"
+            ],
+            "mow": "Biovore",
+            "sourceVideoId": "H1QN5woiaZY",
+            "sample": 11
+          },
+          "examples": [
+            {
+              "videoId": "H1QN5woiaZY",
+              "url": "https://www.youtube.com/watch?v=H1QN5woiaZY",
+              "boss": "Mortarion",
+              "tier": "M1",
+              "map": "Mortarion_04",
+              "archetype": "AdMech",
+              "damage": 838000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Helb",
+                "Aleph"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Helb, Aleph, Biovore",
+              "teamKey": "Actus|Aleph|Helb|Rho|Tan",
+              "creator": "HozzMidnight",
+              "publishedAt": "1/30/2026 2:04 PM"
+            },
+            {
+              "videoId": "XUALWFIT0Zw",
+              "url": "https://www.youtube.com/watch?v=XUALWFIT0Zw",
+              "boss": "Mortarion",
+              "tier": "M2",
+              "map": "Mortarion_04",
+              "archetype": "AdMech",
+              "damage": 800000,
+              "heroes": [
+                "Rho",
+                "Tan",
+                "Actus",
+                "Helb",
+                "Aleph"
+              ],
+              "mow": "Biovore",
+              "teamText": "Rho, Tan, Actus, Helb, Aleph, Biovore",
+              "teamKey": "Actus|Aleph|Helb|Rho|Tan",
+              "creator": "Machiep",
+              "publishedAt": "8/2/2026 8:48 PM"
+            }
+          ],
+          "evidenceVideoIds": [
+            "H1QN5woiaZY",
+            "XUALWFIT0Zw",
+            "nQoQ5hcL570",
+            "sAN9d90_Txg",
+            "84fT-ZOelWY",
+            "4IMSFAQNxiw",
+            "H09bkvLItlA",
+            "9xYbjfpEc9w",
+            "ott9MAR7-I0",
+            "tI5qe16aB28",
+            "M9vjdRZhOhk"
+          ],
+          "maxDistance": 2
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "minimumSample": 5,
+    "maximumTierDistance": 2,
+    "maximumArchetypes": 3
+  },
+  "eligibleReplayCount": 2211,
+  "rejected": [
+    {
+      "videoId": "tCe07HgytEk",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "T-NK9O9CCVs",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "VOJRHrofOtI",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "f8AzedwaS9Q",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "Nu5NMhP-IMM",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "B_E80nEo7N4",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "OH9oEgYEUyg",
+      "reason": "Incomplete five-hero team"
+    }
+  ],
+  "provenance": {
+    "generatedAt": "2026-11-13T03:49:27.303Z",
+    "masterSha256": "dc64f02bc7eb54a330e63ff38b095233a12a80ae7350cb6c59d14d08faa6d579",
+    "lineupSha256": "3833b847e795585114261d7f9ea07c3e92df1dbf469f22c06d2791fd41ff089c",
+    "source": "Reviewed Replay Library master",
+    "lineupSource": {
+      "system": "LocalDatabase",
+      "schemaVersion": 1,
+      "channel": "production",
+      "appVersion": "1.43.157",
+      "generation": "d745fbef9160d7007d5c",
+      "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+      "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
+      "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+      "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+    },
+    "policyVersion": 1
+  }
+}

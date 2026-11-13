@@ -3,6 +3,7 @@ import ReplayIcon from "./ReplayIcon.astro";
 import { formatReplayDamage } from "../../lib/replayLibrary";
 import { heroes as guideHeroes, heroById, heroHrefById } from "../../lib/heroes.mjs";
 import { heroResolver } from "../../../scripts/hero-team-links.mjs";
+import { terminusHeroName, replayMachineGuide } from "../../lib/replayUnitLabels";
 
 interface TeamSummary {
   meta_choice: "META" | "ALTERNATE";
@@ -20,30 +21,43 @@ interface TeamSummary {
 interface Props {
   summary: TeamSummary;
   headingId: string;
+  label?: string;
+  archetypeIcon?: string;
+  sourceLabel?: string;
+  compactNames?: boolean;
 }
 
-const { summary, headingId } = Astro.props;
+const { summary, headingId, label, archetypeIcon, sourceLabel, compactNames = false } = Astro.props;
+const teamLabel = label || (summary.meta_choice === "META" ? "Meta Team" : "Alternate Team");
 const resolveHero = heroResolver(guideHeroes);
 const heroes = [summary.hero_1, summary.hero_2, summary.hero_3, summary.hero_4, summary.hero_5].map(token => {
   const id = resolveHero(token);
-  return { token, id, name: heroById.get(id)!.name, href: heroHrefById(id) };
+  const name = heroById.get(id)!.name;
+  return { token, id, name, label: compactNames ? terminusHeroName(id, name) : name, href: heroHrefById(id) };
 });
+const mow = compactNames ? replayMachineGuide(summary.mow) : null;
 const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLocaleString("en-US");
 ---
 
-<header class:list={["team-summary", summary.meta_choice.toLowerCase()]}>
+<header class:list={["team-summary", summary.meta_choice.toLowerCase(), { 'compact-names': compactNames }]}>
   <div class="team-summary-topline">
-    <p class="team-choice-label">{summary.meta_choice === "META" ? "Meta Team" : "Alternate Team"}</p>
+    <div class="team-choice">
+      <p class="team-choice-label">{archetypeIcon && <ReplayIcon type="heroes" value={archetypeIcon} title={teamLabel} />}{teamLabel}</p>
+      {sourceLabel && <p class="team-source">{sourceLabel}</p>}
+    </div>
 
-    <div class="team-lineup" aria-label={`${summary.meta_choice === "META" ? "Meta" : "Alternate"} team lineup`}>
+    <div class="team-lineup" aria-label={`${teamLabel} lineup`}>
       <div class="hero-lineup" aria-label={`Five heroes and Machine of War ${summary.mow}`}>
         {heroes.map((hero) => (
           <a class="summary-hero-link" href={hero.href} title={`${hero.name} Hero Guide`} aria-label={`${hero.name} Hero Guide`} data-unit-id={hero.id} data-hero-guide-link>
             <ReplayIcon type="heroes" value={hero.token} title={hero.name} className="team-summary-icon" />
-            <span class="summary-hero-name">{hero.name}</span>
+            <span class="summary-hero-name">{hero.label}</span>
           </a>
         ))}
-        <ReplayIcon type="mow" value={summary.mow} title={summary.mow} className="labeled-icon-wrap team-summary-icon team-summary-mow-icon" />
+        {mow ? <a class="summary-hero-link summary-mow-link" href={mow.href} title={`${mow.name} Incursion Guide`} aria-label={`${mow.name} Incursion Guide`}>
+          <ReplayIcon type="mow" value={summary.mow} title={mow.name} className="team-summary-icon" />
+          <span class="summary-hero-name">{mow.label}</span>
+        </a> : <ReplayIcon type="mow" value={summary.mow} title={summary.mow} className="labeled-icon-wrap team-summary-icon team-summary-mow-icon" />}
       </div>
     </div>
   </div>
@@ -85,6 +99,9 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
   }
 
   .team-choice-label {
+    align-items: center;
+    display: flex;
+    gap: 0.65rem;
     color: #d4af37;
     flex: 0 0 auto;
     font-size: 1.15rem;
@@ -96,6 +113,13 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
 
   .alternate .team-choice-label {
     color: #d7dbe0;
+  }
+
+  .team-source {
+    color: #aaa;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 0;
   }
 
   .team-lineup,
@@ -136,6 +160,9 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
     text-decoration: underline;
     text-underline-offset: 0.2em;
   }
+
+  .compact-names .summary-hero-link { width: 64px; }
+  .compact-names .team-lineup { flex-shrink: 0; }
 
   .summary-hero-link:hover { color: #ffe39a; }
   .summary-hero-link:hover :global(.replay-icon) { border-color: #e4c55e; }
@@ -201,6 +228,10 @@ const formatWholeNumber = (value: number) => Math.round(Number(value) || 0).toLo
     }
 
     .summary-hero-link { width: 64px; }
+    .team-summary.compact-names { padding: 1rem 0.65rem; }
+    .compact-names .summary-hero-link { width: 40px; }
+    .compact-names .summary-hero-name { font-size: 0.7rem; }
+    .compact-names .team-lineup { max-width: 100%; }
 
     .team-stats {
       grid-template-columns: 1fr;

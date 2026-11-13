@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "bossTypes": {
+    "TervigonLeviathan": "Tervigon",
+    "TervigonKronos": "Tervigon",
+    "TervigonGorgon": "Tervigon",
+    "HiveTyrantLeviathan": "Hive Tyrant",
+    "HiveTyrantKronos": "Hive Tyrant",
+    "HiveTyrantGorgon": "Hive Tyrant",
+    "ScreamerKiller": "Screamer",
+    "RogalDorn": "Dorn",
+    "AvatarOfKhaine": "Avatar",
+    "BelisariusRW": "Cawl",
+    "Ghazghkull": "Ghaz",
+    "SilentKing": "Szarekh",
+    "Mortarion": "Mortarion",
+    "Magnus": "Magnus",
+    "Lion": "Lion",
+    "Riptide": "Riptide"
+  },
+  "mapsByBoss": {
+    "Tervigon": {
+      "GB_01": "Tervigon_01",
+      "GB_02": "Tervigon_02",
+      "GB_03": "Tervigon_03",
+      "GB_04": "Tervigon_04",
+      "GB_05": "Tervigon_05",
+      "GB_06": "Tervigon_06"
+    },
+    "Hive Tyrant": {
+      "GB_01": "Hive_Tyrant_01",
+      "GB_02": "Hive_Tyrant_02",
+      "GB_03": "Hive_Tyrant_03",
+      "GB_04": "Hive_Tyrant_04",
+      "GB_05": "Hive_Tyrant_05",
+      "GB_06": "Hive_Tyrant_06"
+    },
+    "Screamer": {
+      "GB_Screamer_01": "Screamer_01",
+      "GB_Screamer_02": "Screamer_02",
+      "GB_Screamer_03": "Screamer_03",
+      "GB_Screamer_04": "Screamer_04"
+    },
+    "Dorn": {
+      "GB_RogalDorn_01": "Dorn_01",
+      "GB_RogalDorn_02": "Dorn_02",
+      "GB_RogalDorn_03": "Dorn_03",
+      "GB_RogalDorn_04": "Dorn_04",
+      "GB_RogalDorn_05": "Dorn_05",
+      "GB_RogalDorn_06": "Dorn_06"
+    },
+    "Avatar": {
+      "GB_Khaine_01": "Avatar_01",
+      "GB_Khaine_02": "Avatar_02",
+      "GB_Khaine_03": "Avatar_03",
+      "GB_Khaine_04": "Avatar_04",
+      "GB_Khaine_05": "Avatar_05"
+    },
+    "Cawl": {
+      "GB_Belisarius_01": "Cawl_01",
+      "GB_Belisarius_02": "Cawl_02",
+      "GB_Belisarius_03": "Cawl_03",
+      "GB_Belisarius_04": "Cawl_04"
+    },
+    "Ghaz": {
+      "GB_Dakka_01": "Ghaz_01",
+      "GB_Dakka_02": "Ghaz_02",
+      "GB_Dakka_03": "Ghaz_03",
+      "GB_Dakka_03_1": "Ghaz_03_01",
+      "GB_Dakka_04": "Ghaz_04",
+      "GB_Dakka_05": "Ghaz_05"
+    },
+    "Szarekh": {
+      "GB_SK_01": "Szarekh_01",
+      "GB_SK_02": "Szarekh_02",
+      "GB_SK_03": "Szarekh_03",
+      "GB_SK_04": "Szarekh_04"
+    },
+    "Mortarion": {
+      "GB_Mortarion_01": "Mortarion_01",
+      "GB_Mortarion_02": "Mortarion_02",
+      "GB_Mortarion_02_1": "Mortarion_02_01",
+      "GB_Mortarion_03": "Mortarion_03",
+      "GB_Mortarion_04": "Mortarion_04"
+    },
+    "Magnus": {
+      "GB_Magnus_01": "Magnus_01",
+      "GB_Magnus_02": "Magnus_02",
+      "GB_Magnus_03": "Magnus_03",
+      "GB_Magnus_04": "Magnus_04"
+    },
+    "Lion": {
+      "GB_Lion_01": "Lion_01",
+      "GB_Lion_02": "Lion_02",
+      "GB_Lion_03": "Lion_03"
+    },
+    "Riptide": {
+      "GB_Riptide_01": "Riptide_01",
+      "GB_Riptide_02": "Riptide_02",
+      "GB_Riptide_03": "Riptide_03"
+    }
+  }
+}

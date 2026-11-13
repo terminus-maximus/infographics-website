@@ -1,0 +1,136 @@
+---
+import BossMetaTeamSummary from '../replay-library/BossMetaTeamSummary.astro';
+import CuratedReplayTable from '../replay-library/CuratedReplayTable.astro';
+import ReplayIcon from '../replay-library/ReplayIcon.astro';
+import archetypes from '../../data/replay-library/team_archetype.json';
+import bosses from '../../data/replay-library/bosses.json';
+import type { SeasonEncounter, SeasonRecommendation } from '../../lib/raidSeasonGuideTypes';
+import { formatReplayDamage, formatReplayPublishedAt, parseReplayPublishedAt, getReplayIconPath } from '../../lib/replayLibrary';
+import type { ReplayLibraryReplay } from '../../lib/replayLibrary';
+
+type Recommendation = SeasonRecommendation;
+interface Props { encounter: SeasonEncounter }
+const { encounter: slot } = Astro.props;
+const names: Record<string, string> = Object.fromEntries(bosses.map(b => [b.Boss, b['Long Name']]));
+const teamIconMap = Object.fromEntries(archetypes.map(a => [a.team_archetype, a.team_icon]));
+const fullName = names[slot.boss] || slot.boss;
+const shortName = slot.boss === 'Szarekh' ? 'Silent King' : slot.boss === 'Lion' ? 'The Lion' : slot.boss;
+const mapImage = getReplayIconPath('maps', slot.map);
+const isEarly = /^[CUR]/.test(slot.tier);
+const summaryFor = (rec: Recommendation) => ({
+  meta_choice: 'META' as const,
+  hero_1: rec.team.heroes[0], hero_2: rec.team.heroes[1], hero_3: rec.team.heroes[2],
+  hero_4: rec.team.heroes[3], hero_5: rec.team.heroes[4], mow: rec.team.mow,
+  replay_count: rec.sample, average_damage: rec.average, max_damage: rec.maximum,
+});
+const sourceLabel = (rec: Recommendation) => [
+  rec.kind === 'exact' ? '' : rec.kind === 'pooled' ? 'Nearby tiers' : slot.rarity === 'Epic' ? '' : 'Reference',
+  rec.tiers.join(' / '),
+  rec.kind === 'other-map' ? rec.maps.join(', ') : '',
+  rec.sample < 5 ? 'Small sample' : '',
+].filter(Boolean).join(' · ');
+const replayRows = (rec: Recommendation): ReplayLibraryReplay[] => rec.examples.map(r => ({
+  id: r.videoId, videoId: r.videoId, videoUrl: r.url, boss: r.boss, bossLongName: names[r.boss] || r.boss,
+  team: r.archetype, map: r.map, tier: r.tier, damage: r.damage, damageLabel: formatReplayDamage(r.damage),
+  heroes: r.heroes, mow: r.mow, creator: r.creator, publishedAt: r.publishedAt,
+  publishedAtLabel: formatReplayPublishedAt(r.publishedAt), publishedAtTimestamp: parseReplayPublishedAt(r.publishedAt),
+}));
+const libraryUrl = (rec: Recommendation) => {
+  const q = new URLSearchParams({ boss: slot.boss, team: rec.archetype });
+  if (rec.maps.length === 1) q.set('map', rec.maps[0]);
+  rec.tiers.forEach(t => q.append('tier', t));
+  return `/replay-library/?${q}`;
+};
+---
+
+<details class="boss-row" name="season-boss" id={`boss-${slot.tier.toLowerCase()}`} data-boss-row data-rarity={slot.rarity.toLowerCase()} data-loop={String(slot.loop)} data-search={`${slot.tier} ${slot.rarity} ${shortName} ${fullName} ${slot.recommendations.map(r => r.archetype).join(' ')}`.toLowerCase()}>
+  <summary>
+    <span class="tier">{slot.tier}</span>
+    <ReplayIcon type="bosses" value={slot.boss} title={fullName} className="season-boss-icon" />
+    <span class="boss-name"><strong>{shortName}</strong><small>{slot.map}</small></span>
+    <img class="map-thumb" src={mapImage} alt={slot.map} width="48" height="64" loading="lazy" />
+    {!isEarly && <span class="summary-teams">
+      {slot.recommendations.map(rec => <span class="summary-team">
+        <ReplayIcon type="heroes" value={teamIconMap[rec.archetype]} title={rec.archetype} />
+        <span><b>{rec.archetype}</b><strong>{slot.rarity === 'Epic' || ['exact', 'pooled'].includes(rec.kind) ? formatReplayDamage(rec.average) : 'Reference'}</strong><small>{rec.tiers.join('/')} · n={rec.sample}</small></span>
+      </span>)}
+    </span>}
+    <span class="expand-icon" aria-hidden="true">+</span>
+  </summary>
+  <div class="boss-content">
+    <div class="boss-tools">
+      <figure class="boss-map">
+        <img src={mapImage} alt={`${shortName} map ${slot.map}`} width="240" height="320" loading="lazy" />
+        <figcaption>{slot.map}</figcaption>
+      </figure>
+      <a class="boss-permalink" href={`#boss-${slot.tier.toLowerCase()}`} aria-label={`Link to ${slot.tier} ${shortName}`}>#</a>
+    </div>
+    {slot.recommendations.map(rec => {
+      const headingId = `${slot.tier.toLowerCase()}-${rec.archetype.toLowerCase()}-team`;
+      return <section class="season-team" aria-labelledby={headingId}>
+        <h3 class="visually-hidden" id={headingId}>{slot.tier} {shortName} — {rec.archetype}</h3>
+        <BossMetaTeamSummary summary={summaryFor(rec)} headingId={headingId} label={`${rec.archetype} vs ${shortName}`} archetypeIcon={teamIconMap[rec.archetype]} sourceLabel={sourceLabel(rec)} compactNames />
+        <CuratedReplayTable replays={replayRows(rec)} teamIconMap={teamIconMap} labelledBy={headingId} sortable showTierDividers={false} />
+        <p class="library-link"><a href={libraryUrl(rec)}>More {rec.archetype} replays ↗</a></p>
+      </section>;
+    })}
+  </div>
+</details>
+
+<style>
+  .boss-row { background:#1e1e1e; border:1px solid #333; border-radius:8px; margin-bottom:1rem; min-width:0; scroll-margin-top:20px; }
+  .boss-row[open] { border-color:#d4af37; }
+  .boss-row > summary { display:flex; align-items:center; gap:1rem; cursor:pointer; padding:1rem; list-style:none; }
+  .boss-row > summary::-webkit-details-marker { display:none; }
+  .boss-row > summary:hover { background:#252525; border-radius:8px; }
+  .tier { color:#d4af37; font-weight:800; font-size:1.15rem; min-width:2rem; }
+  :global(.season-boss-icon .replay-icon) { height:58px; width:58px; }
+  .boss-name { min-width:115px; }
+  .boss-name strong { display:block; color:#f5f5f5; font-size:1.1rem; }
+  .boss-name small { display:block; color:#aaa; font-size:.75rem; margin-top:.35rem; }
+  .map-thumb { object-fit:contain; border:1px solid #444; border-radius:6px; }
+  .summary-teams { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); flex:1; gap:1rem; margin-left:.5rem; }
+  .summary-team { display:flex; align-items:center; gap:.5rem; min-width:0; }
+  .summary-team b { display:block; color:#ccc; font-size:.75rem; font-weight:500; }
+  .summary-team strong { display:block; color:#d4af37; font-size:1rem; margin-top:.2rem; }
+  .summary-team small { display:block; color:#aaa; font-size:.65rem; margin-top:.25rem; }
+  .expand-icon { margin-left:auto; color:#d4af37; font-size:1.5rem; }
+  .boss-row[open] > summary .expand-icon { transform:rotate(45deg); }
+  .boss-content { border-top:1px solid #333; padding:1rem; min-width:0; }
+  .boss-tools { position:relative; display:flex; justify-content:center; margin-bottom:1.5rem; font-size:.85rem; }
+  .boss-map { margin:0; text-align:center; }
+  .boss-map img { display:block; width:240px; max-width:100%; height:320px; object-fit:contain; border-radius:6px; }
+  .boss-map figcaption { color:#aaa; margin-top:.5rem; font-size:.75rem; }
+  .boss-permalink { position:absolute; right:0; top:0; }
+  a { color:#d4af37; text-underline-offset:.2em; }
+  a:hover { color:#f5d76e; }
+  .season-team { min-width:0; margin-bottom:2rem; }
+  .season-team:last-child { margin-bottom:0; }
+  .season-team :global(.curated-replay-table-wrap) { margin-top:1rem; }
+  .library-link { text-align:right; margin:.75rem 0 0; font-size:.85rem; }
+  .visually-hidden { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+  :is(a,summary):focus-visible { outline:2px solid #d4af37; outline-offset:4px; }
+  @media(max-width:1050px) {
+    .boss-row > summary { flex-wrap:wrap; gap:.75rem; }
+    .summary-teams { flex-basis:100%; order:2; margin:0; border-top:1px solid #333; padding-top:.75rem; }
+    .map-thumb { margin-left:auto; }
+    .expand-icon { margin-left:.5rem; }
+  }
+  @media(max-width:700px) {
+    .boss-row > summary { padding:.75rem; gap:.5rem; }
+    :global(.season-boss-icon .replay-icon) { width:40px; height:40px; }
+    .boss-name { min-width:0; }
+    .boss-name strong { font-size:1rem; }
+    .boss-name small { font-size:.7rem; }
+    .tier { font-size:1rem; min-width:1.75rem; }
+    .map-thumb { width:34px; height:46px; }
+    .summary-teams { gap:.5rem; }
+    .summary-team { gap:.3rem; }
+    .summary-team :global(.replay-icon-wrap) { min-width:28px; min-height:28px; }
+    .summary-team :global(.replay-icon) { width:28px; height:28px; }
+    .summary-team b { font-size:.65rem; }
+    .summary-team small { font-size:.6rem; }
+    .boss-content { padding:.75rem; }
+    .boss-map img { width:200px; height:267px; }
+  }
+</style>

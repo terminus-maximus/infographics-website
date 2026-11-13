@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import SeasonBoss from './SeasonBoss.astro';
+import RecommendationSections from '../RecommendationSections.astro';
+import { guildRaidImageExists } from '../../lib/guildRaidAssets';
+import type { RaidSeasonGuide } from '../../lib/raidSeasonGuideTypes';
+import { TIERS } from '../../lib/raidSeasonGuide.mjs';
+
+interface Props { guide: RaidSeasonGuide; preview?: boolean }
+const { guide, preview = false } = Astro.props;
+const title = `Guild Raid Season ${guide.season}`;
+const imageSrc = `/images/guild-raid-s${guide.season}.png`;
+const webImageSrc = `/images/web/guild-raid-s${guide.season}.webp`;
+const imageAvailable = guildRaidImageExists(imageSrc);
+const displayImage = guildRaidImageExists(webImageSrc) ? webImageSrc : imageSrc;
+const infographicTitle = `${title} - Legendary 4 to Mythic 3`;
+const descending = <T extends { tier: string }>(slots: T[]) => [...slots].sort((a, b) => TIERS.indexOf(b.tier) - TIERS.indexOf(a.tier));
+const dateLabel = (date: string) => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });
+const sections = [
+  { id: 'repeat-loop', title: 'Repeat Loop', slots: descending(guide.slots.filter(s => s.loop)) },
+  { id: 'legendary', title: 'Legendary', slots: descending(guide.slots.filter(s => /^L[123]$/.test(s.tier))) },
+  { id: 'epic', title: 'Epic', slots: descending(guide.slots.filter(s => s.rarity === 'Epic')) },
+  { id: 'early-tiers', title: 'Common, Uncommon & Rare', slots: descending(guide.slots.filter(s => /^[CUR]/.test(s.tier))) },
+];
+---
+
+<Layout title={`${title} | Terminus Maximus Infographics`} description={`Boss maps, teams and replays for Guild Raid Season ${guide.season}.`} image={imageAvailable ? displayImage : undefined}>
+  {preview && <meta slot="head" name="robots" content="noindex,nofollow" />}
+  <Header />
+  <main>
+    <section class="infographic-section">
+      <header class="guide-heading">
+        <h1>Season {guide.season} Infographic</h1>
+        <p>{dateLabel(guide.startDate)}{preview ? ' · Preview' : ''}</p>
+      </header>
+      <div class="guide-card">
+        <h2>Legendary 4 – Mythic 3</h2>
+        {imageAvailable ? <>
+          <a href={imageSrc} target="_blank" rel="noopener noreferrer" class="image-link" data-ga4-infographic-open data-ga4-infographic-title={infographicTitle} data-ga4-link-source="image">
+            <img src={displayImage} alt={`${infographicTitle} Infographic`} class="infographic" loading="lazy" />
+          </a>
+          <p class="caption"><a href={imageSrc} target="_blank" rel="noopener noreferrer" class="caption-link" data-ga4-infographic-open data-ga4-infographic-title={infographicTitle} data-ga4-link-source="caption">CLICK FULL-SIZE INFOGRAPHIC</a></p>
+        </> : <p class="infographic-placeholder">Infographic in progress</p>}
+      </div>
+    </section>
+    <div class="guide-controls" data-guide-controls hidden>
+      <div class="filters" role="group" aria-label="Filter bosses">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="loop" aria-pressed="false">Repeat Loop</button>
+        <button type="button" data-filter="legendary" aria-pressed="false">Legendary</button>
+        <button type="button" data-filter="epic" aria-pressed="false">Epic</button>
+        <button type="button" data-filter="early" aria-pressed="false">Early Tiers</button>
+      </div>
+      <label class="search"><span class="visually-hidden">Find a boss, tier or archetype</span><input type="search" placeholder="Search bosses…" data-search /></label>
+      <button class="collapse-button" type="button" data-collapse>Collapse all</button>
+    </div>
+    <span class="visually-hidden" data-result-count aria-live="polite">{guide.slots.length} bosses</span>
+    <p class="empty-state" data-empty hidden>No matching bosses.</p>
+    {sections.map(section => <section class="boss-section" id={section.id} data-boss-section>
+      <h2>{section.title}</h2>
+      {section.slots.map(slot => <SeasonBoss encounter={slot} />)}
+    </section>)}
+    <details class="method" id="method">
+      <summary>Damage data</summary>
+      <p>Averages cover each archetype, across lineups and MoW. With fewer than {guide.policy.minimumSample} replays, up to {guide.policy.maximumTierDistance} nearby tiers are pooled on the same map. Source tiers are shown; reference replays use a more distant tier or another map. These are observed results, not damage predictions.</p>
+    </details>
+    <RecommendationSections pathname={`/guild-raid/s${guide.season}/`} />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const rows = [...document.querySelectorAll<HTMLDetailsElement>('[data-boss-row]')];
+  const input = document.querySelector<HTMLInputElement>('input[data-search]');
+  let filter = 'all';
+  const applyFilters = () => {
+    const query = (input?.value || '').trim().toLowerCase();
+    rows.forEach(row => {
+      const matches = filter === 'all' || (filter === 'loop' ? row.dataset.loop === 'true' : filter === 'early' ? ['common', 'uncommon', 'rare'].includes(row.dataset.rarity || '') : row.dataset.rarity === filter);
+      row.hidden = !matches || !(row.dataset.search || '').includes(query);
+    });
+    document.querySelectorAll<HTMLElement>('[data-boss-section]').forEach(section => { section.hidden = ![...section.querySelectorAll<HTMLElement>('[data-boss-row]')].some(row => !row.hidden); });
+    const count = rows.filter(row => !row.hidden).length;
+    const status = document.querySelector('[data-result-count]');
+    if (status) status.textContent = `${count} boss${count === 1 ? '' : 'es'}`;
+    const empty = document.querySelector<HTMLElement>('[data-empty]');
+    if (empty) empty.hidden = count > 0;
+    document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
+  };
+  document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.addEventListener('click', () => { filter = button.dataset.filter || 'all'; applyFilters(); }));
+  input?.addEventListener('input', applyFilters);
+  document.querySelector('[data-collapse]')?.addEventListener('click', () => rows.forEach(row => { row.open = false; }));
+  rows.forEach(row => row.addEventListener('toggle', () => {
+    if (!row.open) return;
+    requestAnimationFrame(() => {
+      if (!row.open || row.hidden) return;
+      const summary = row.querySelector('summary');
+      if (!summary) return;
+      const bounds = summary.getBoundingClientRect();
+      // Closing a tall preceding boss can move this heading out of view.
+      if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
+        row.scrollIntoView({ block: 'start', behavior: 'instant' });
+      }
+    });
+  }));
+  const openHash = () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (!(target instanceof HTMLDetailsElement)) return;
+    if (target.matches('[data-boss-row]')) { filter = 'all'; if (input) input.value = ''; applyFilters(); }
+    target.open = true;
+    requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+  };
+  window.addEventListener('hashchange', openHash);
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#boss-"]').forEach(link => link.addEventListener('click', () => { if (link.hash === location.hash) openHash(); }));
+  const controls = document.querySelector<HTMLElement>('[data-guide-controls]');
+  if (controls) controls.hidden = false;
+  openHash();
+</script>
+
+<style>
+  :global(body) { background:#121212; color:#f5f5f5; font-family:'Lexend',sans-serif; margin:0; }
+  :global([hidden]) { display:none!important; }
+  main { max-width:1200px; margin:0 auto; padding:2rem; }
+  .infographic-section { background:#1e1e1e; border:1px solid #333; border-radius:12px; padding:1.5rem; margin-bottom:2rem; }
+  .guide-heading { display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem 1rem; margin-bottom:1.25rem; }
+  .guide-heading h1 { color:#d4af37; font-size:1.5rem; margin:0; }
+  .guide-heading p { margin:0 0 0 auto; color:#aaa; font-size:.85rem; }
+  .guide-card { border-top:1px solid #333; padding-top:1.5rem; }
+  .guide-card h2 { font-size:1.17rem; border:0; padding:0; margin:0 0 1rem; }
+  .image-link { display:block; }
+  .infographic { max-width:700px; width:100%; height:auto; border-radius:8px; display:block; margin:0 auto; }
+  .infographic-placeholder { display:flex; align-items:center; justify-content:center; box-sizing:border-box; height:160px; max-width:700px; width:100%; margin:0 auto; padding:1rem; border:1px dashed #444; border-radius:8px; color:#ccc; text-align:center; }
+  .caption { margin:1rem 0 0; }
+  .caption-link { display:block; text-align:center; color:#d4af37; font-weight:700; letter-spacing:.05em; text-decoration:none; }
+  .caption-link:hover { text-decoration:underline; }
+  .guide-controls { display:flex; align-items:center; flex-wrap:wrap; gap:1rem; background:#1e1e1e; border:1px solid #333; border-radius:12px; padding:1rem; }
+  .filters { display:flex; flex-wrap:wrap; gap:.5rem; }
+  .filters button { background:#121212; border:1px solid #444; border-radius:999px; padding:.5rem .85rem; color:#d4af37; font:inherit; font-size:.85rem; font-weight:700; cursor:pointer; }
+  .filters button[aria-pressed=true] { background:#d4af37; border-color:#d4af37; color:#121212; }
+  .search { margin-left:auto; min-width:160px; flex:1; }
+  .search input { box-sizing:border-box; width:100%; background:#121212; border:1px solid #444; border-radius:6px; padding:.65rem .75rem; color:#f5f5f5; font:inherit; font-size:.9rem; }
+  .search input::placeholder { color:#aaa; }
+  .collapse-button { padding:.5rem 0; background:none; border:0; color:#d4af37; font:inherit; font-size:.8rem; cursor:pointer; }
+  .boss-section { margin-top:2rem; min-width:0; }
+  h2 { color:#d4af37; font-size:1.5rem; margin:0 0 1rem; padding-bottom:.5rem; border-bottom:1px solid #333; }
+  .method { margin-top:1.5rem; color:#ccc; font-size:.85rem; }
+  .method summary { color:#d4af37; cursor:pointer; }
+  .method p { line-height:1.7; max-width:800px; }
+  a { color:#d4af37; text-underline-offset:.2em; }
+  a:hover { color:#f5d76e; }
+  .empty-state { padding:2rem; text-align:center; color:#ccc; }
+  .visually-hidden { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+  :is(a,button,summary,input):focus-visible { outline:2px solid #d4af37; outline-offset:4px; }
+  @media(max-width:700px) {
+    main { padding:1.25rem; }
+    .infographic-section { padding:1.25rem; }
+    .guide-heading p { margin-left:0; }
+    .guide-controls { gap:.75rem; padding:.75rem; }
+    .filters { width:100%; gap:.4rem; }
+    .filters button { font-size:.75rem; padding:.45rem .65rem; }
+  }
+</style>

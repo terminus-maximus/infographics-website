@@ -1,0 +1,16 @@
+{
+  "season": 114,
+  "previousSource": "Config Joiner, based on advance 1.44 configuration",
+  "previousConfig": 5,
+  "previousLineupSha256": "5f14f576f5664a8935b042a01947d2bd181c3e44c353572aa28dad39b6fd5dfe",
+  "previousEncounterDataSha256": "5e04ddd49fc9efb1e29982e3b3e1a998e242ed21129426080f0ff174c7d8860c",
+  "productionGeneration": "d745fbef9160d7007d5c",
+  "productionVersion": "1.43.157",
+  "productionConfigId": "guild_boss_season_config_5",
+  "comparedSlots": 25,
+  "differences": [],
+  "note": "All boss identities, variants, maps and loop slots were compared during migration. Next Season was removed from the template at the user’s request.",
+  "recommendationsSha256Before": "cb49de3e8304ac7884f46d308909aeec8b65d436c7bcec0fe5745b753ff58b8f",
+  "recommendationsSha256After": "cb49de3e8304ac7884f46d308909aeec8b65d436c7bcec0fe5745b753ff58b8f",
+  "recommendationsUnchanged": true
+}

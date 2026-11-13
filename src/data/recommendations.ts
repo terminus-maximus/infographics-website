@@ -51,7 +51,10 @@ export const recommendationCatalog: Graphic[] = discoveryGraphics.filter(
 );
 
 export const getRelatedGuides = (pathname: string): Graphic[] => {
-  const routes = relatedGuideRoutes[normalizeRecommendationPath(pathname)] || [];
+  const route = normalizeRecommendationPath(pathname);
+  const routes = relatedGuideRoutes[route] || (/^\/guild-raid\/s\d+$/.test(route)
+    ? [guildRaidRoutes.bossMeta, guildRaidRoutes.replayLibrary, guildRaidRoutes.archive]
+    : []);
   const guides = routes.map((route) => catalogByRoute.get(route)).filter(Boolean) as Graphic[];
 
   return guides;

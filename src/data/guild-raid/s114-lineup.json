@@ -1,0 +1,201 @@
+{
+  "season": 114,
+  "startDate": "2026-11-18",
+  "status": "Design preview",
+  "config": "guild_boss_season_config_5",
+  "source": {
+    "system": "LocalDatabase",
+    "schemaVersion": 1,
+    "channel": "production",
+    "appVersion": "1.43.157",
+    "generation": "d745fbef9160d7007d5c",
+    "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+    "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
+    "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+    "seasonBindingSha256": "e3ca40236b387f0c6ec14380da4548aa01e30c096c760f573068b96b9ce30750"
+  },
+  "loop": [
+    "M3",
+    "M2",
+    "M1",
+    "L5",
+    "L4"
+  ],
+  "slots": [
+    {
+      "tier": "C1",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_01"
+    },
+    {
+      "tier": "C2",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_02"
+    },
+    {
+      "tier": "C3",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_03"
+    },
+    {
+      "tier": "C4",
+      "rarity": "Common",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "U1",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonKronos",
+      "map": "Tervigon_06"
+    },
+    {
+      "tier": "U2",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_05"
+    },
+    {
+      "tier": "U3",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_04"
+    },
+    {
+      "tier": "U4",
+      "rarity": "Uncommon",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_01"
+    },
+    {
+      "tier": "R1",
+      "rarity": "Rare",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_02"
+    },
+    {
+      "tier": "R2",
+      "rarity": "Rare",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_01"
+    },
+    {
+      "tier": "R3",
+      "rarity": "Rare",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_02"
+    },
+    {
+      "tier": "R4",
+      "rarity": "Rare",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_02"
+    },
+    {
+      "tier": "E1",
+      "rarity": "Epic",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantKronos",
+      "map": "Hive_Tyrant_03"
+    },
+    {
+      "tier": "E2",
+      "rarity": "Epic",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_06"
+    },
+    {
+      "tier": "E3",
+      "rarity": "Epic",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "E4",
+      "rarity": "Epic",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_03"
+    },
+    {
+      "tier": "E5",
+      "rarity": "Epic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_03"
+    },
+    {
+      "tier": "L1",
+      "rarity": "Legendary",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_01"
+    },
+    {
+      "tier": "L2",
+      "rarity": "Legendary",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_04"
+    },
+    {
+      "tier": "L3",
+      "rarity": "Legendary",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_04"
+    },
+    {
+      "tier": "L4",
+      "rarity": "Legendary",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_02"
+    },
+    {
+      "tier": "L5",
+      "rarity": "Legendary",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_04"
+    },
+    {
+      "tier": "M1",
+      "rarity": "Mythic",
+      "boss": "Lion",
+      "bossVariant": "Lion",
+      "map": "Lion_03"
+    },
+    {
+      "tier": "M2",
+      "rarity": "Mythic",
+      "boss": "Szarekh",
+      "bossVariant": "SilentKing",
+      "map": "Szarekh_01"
+    },
+    {
+      "tier": "M3",
+      "rarity": "Mythic",
+      "boss": "Mortarion",
+      "bossVariant": "Mortarion",
+      "map": "Mortarion_04"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "seasons": [
+    {
+      "season": 114,
+      "startDate": "2026-11-18",
+      "status": "Design preview",
+      "channel": "production",
+      "generation": "d745fbef9160d7007d5c",
+      "catalogSha256": "5aae58664234b04f84170e89fc3fee09022568ca61991cc0490d2feee6e2911d",
+      "appVersion": "1.43.157",
+      "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
+      "expectedLineupSha256": "5e04ddd49fc9efb1e29982e3b3e1a998e242ed21129426080f0ff174c7d8860c",
+      "dateEvidence": {
+        "kind": "published-artwork",
+        "file": "public/images/guild-raid-s113-coming-soon.png",
+        "sha256": "f299fb800aac4c68487960ac4deabaf1bbbf86f9168ffa5c9dcbfd402ef65d1f",
+        "note": "Published S113 coming-soon artwork explicitly identifies Season 114 and November 18, 2026."
+      }
+    }
+  ]
+}
