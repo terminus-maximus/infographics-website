@@ -412,12 +412,22 @@
   {
     "boss_clean": "Lion",
     "meta_choice": "ALTERNATE",
+    "video_id": "BAvR5P21jzk"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "ALTERNATE",
     "video_id": "GjGedjKf-XM"
   },
   {
     "boss_clean": "Lion",
     "meta_choice": "ALTERNATE",
     "video_id": "epOYnYypwC4"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "ALTERNATE",
+    "video_id": "ZrZ9BimnOLc"
   },
   {
     "boss_clean": "Lion",
@@ -451,16 +461,6 @@
   },
   {
     "boss_clean": "Lion",
-    "meta_choice": "ALTERNATE",
-    "video_id": "c7bhYPBRJi0"
-  },
-  {
-    "boss_clean": "Lion",
-    "meta_choice": "ALTERNATE",
-    "video_id": "hJpyaAgdW7M"
-  },
-  {
-    "boss_clean": "Lion",
     "meta_choice": "META",
     "video_id": "8Y3uka1G9b8"
   },
@@ -473,6 +473,21 @@
     "boss_clean": "Lion",
     "meta_choice": "META",
     "video_id": "dneJZbQNzgk"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "META",
+    "video_id": "ZQibHjZjKNY"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "META",
+    "video_id": "wn3frkdQdho"
+  },
+  {
+    "boss_clean": "Lion",
+    "meta_choice": "META",
+    "video_id": "9ON_CMYN0Ac"
   },
   {
     "boss_clean": "Lion",
@@ -493,21 +508,6 @@
     "boss_clean": "Lion",
     "meta_choice": "META",
     "video_id": "uaR3pfdiA0k"
-  },
-  {
-    "boss_clean": "Lion",
-    "meta_choice": "META",
-    "video_id": "qIQ5PO5DpPI"
-  },
-  {
-    "boss_clean": "Lion",
-    "meta_choice": "META",
-    "video_id": "e1Y-Rw__6j8"
-  },
-  {
-    "boss_clean": "Lion",
-    "meta_choice": "META",
-    "video_id": "sYffd3TCg28"
   },
   {
     "boss_clean": "Magnus",
@@ -657,7 +657,17 @@
   {
     "boss_clean": "Mortarion",
     "meta_choice": "META",
+    "video_id": "c9tT-Zfrhrs"
+  },
+  {
+    "boss_clean": "Mortarion",
+    "meta_choice": "META",
     "video_id": "P0vmtno9-mA"
+  },
+  {
+    "boss_clean": "Mortarion",
+    "meta_choice": "META",
+    "video_id": "xYEJasHRHXg"
   },
   {
     "boss_clean": "Mortarion",
@@ -688,16 +698,6 @@
     "boss_clean": "Mortarion",
     "meta_choice": "META",
     "video_id": "H1PooCACALo"
-  },
-  {
-    "boss_clean": "Mortarion",
-    "meta_choice": "META",
-    "video_id": "JFRJL4XzfT0"
-  },
-  {
-    "boss_clean": "Mortarion",
-    "meta_choice": "META",
-    "video_id": "w1aaDpkM9fA"
   },
   {
     "boss_clean": "Riptide",
@@ -902,6 +902,11 @@
   {
     "boss_clean": "Szarekh",
     "meta_choice": "META",
+    "video_id": "RdQJHz81H6M"
+  },
+  {
+    "boss_clean": "Szarekh",
+    "meta_choice": "META",
     "video_id": "s5jcqHD4nYI"
   },
   {
@@ -938,11 +943,6 @@
     "boss_clean": "Szarekh",
     "meta_choice": "META",
     "video_id": "WwyXmWZSVd8"
-  },
-  {
-    "boss_clean": "Szarekh",
-    "meta_choice": "META",
-    "video_id": "kSbGCxZqb-k"
   },
   {
     "boss_clean": "Tervigon",
