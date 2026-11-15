@@ -1,0 +1,133 @@
+---
+import data from '../data/hre/daras.json';
+import { missionResearch } from '../data/hre/research';
+
+const icons: Record<string, { src: string }> = data.assets;
+const missionId = (mission: typeof data.missions[number]) => mission.bonus ? 'mission-bonus' : `mission-${mission.number}`;
+const numberParts = (text: string) => text.split(/(\d[\d,]*)/g);
+---
+
+<section class="hre-missions" aria-labelledby="hre-missions-heading" id="missions">
+  <header class="missions-heading">
+    <a href="/heroes/daras/" class="hero-portrait" aria-label="Daras Hero Guide">
+      <img src={icons.daras.src} alt="" width="88" height="88" loading="lazy" />
+    </a>
+    <div>
+      <p class="eyebrow">{data.event.name}</p>
+      <h2 id="hre-missions-heading">Daras Carrow’s missions</h2>
+      <p class="event-meta"><time datetime={data.event.start_date}>Starts Nov 22, 2026</time><span aria-hidden="true">·</span>20 missions + bonus</p>
+    </div>
+  </header>
+  <nav class="mission-jumps" aria-label="Jump to mission">
+    <span>Jump to</span>
+    <a href="#mission-1">1–5</a><a href="#mission-6">6–10</a><a href="#mission-11">11–15</a><a href="#mission-16">16–20</a><a href="#mission-bonus">Bonus</a>
+  </nav>
+
+  <div class="mission-grid">
+    {data.missions.map(mission => {
+      const research = missionResearch[mission.id];
+      const label = mission.bonus ? 'Bonus mission' : `Mission ${mission.number}`;
+      return (
+        <article class:list={['mission-card', { 'bonus-card': mission.bonus }]} id={missionId(mission)} data-mission-id={mission.id} aria-labelledby={`${missionId(mission)}-title`}>
+          <div class="mission-overview">
+            <div class="mission-topline">
+              <h3 class="mission-title" id={`${missionId(mission)}-title`}><span class="mission-number" aria-hidden="true">{mission.bonus ? '★' : String(mission.number).padStart(2, '0')}</span><span>{label}</span></h3>
+            </div>
+            <span class="objectives" role="list" aria-label={`${label} objectives`}>
+              {mission.objectives.map(objective => (
+                <span class="objective" role="listitem">
+                  <img src={icons[objective.icon].src} alt="" width="44" height="44" loading="lazy" />
+                  <span>{numberParts(objective.text).map((part, i) => i % 2 ? <strong>{part}</strong> : part)}</span>
+                </span>
+              ))}
+            </span>
+            <span class="mission-footer">
+              <span class="reward">
+                {mission.bonus && <img src={icons.requisition.src} alt="" width="28" height="28" loading="lazy" />}
+                {mission.rewards.map(reward => <span><strong>{reward.quantity.toLocaleString('en-US')}</strong> {reward.name}</span>)}
+              </span>
+            </span>
+          </div>
+          {research?.sections.length > 0 && (
+              <details class="mission-research">
+                <summary>Research &amp; tips<span class="toggle" aria-hidden="true"><span class="plus">+</span><span class="minus">−</span></span></summary>
+                <div class="mission-content">
+                {research.sections.map(section => (
+                  <details class="research-section">
+                    <summary>{section.title}<span aria-hidden="true">+</span></summary>
+                    <div>{section.paragraphs.map(text => <p>{text}</p>)}
+                      {section.links?.length && <ul>{section.links.map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul>}
+                    </div>
+                  </details>
+                ))}
+                </div>
+              </details>
+          )}
+        </article>
+      );
+    })}
+  </div>
+  <p class="data-credit">Tacticus {data.source.app_version} · <a href="/data/hre/daras.json" download="daras-hre-missions.json">Download mission data</a></p>
+</section>
+
+<style>
+  .hre-missions { margin-bottom: 4rem; color: #e7e7e7; }
+  .missions-heading { display: flex; align-items: center; gap: 1.1rem; }
+  .hero-portrait { flex: 0 0 auto; border-radius: 50%; }
+  .hero-portrait img { display: block; object-fit: contain; }
+  .eyebrow { margin: 0 0 .35rem; color: #c1b185; font-size: .74rem; letter-spacing: .11em; text-transform: uppercase; }
+  h2 { margin: 0; color: #d4af37; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.25; }
+  .event-meta { display: flex; flex-wrap: wrap; gap: .4rem .65rem; margin: .6rem 0 0; font-size: .85rem; color: #bcbcbc; }
+  .mission-jumps { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 1.35rem 0 1.5rem; font-size: .8rem; }
+  .mission-jumps > span { margin-right: .3rem; color: #aaa; }
+  .mission-jumps a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 .9rem; border: 1px solid #424039; border-radius: 6px; color: #e2cf94; text-decoration: none; }
+  .mission-jumps a:hover { background: #302b1d; border-color: #d4af37; }
+  .mission-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 1rem; }
+  .mission-card { border: 1px solid #3d414c; border-radius: 12px; background: #1b1e25; overflow: hidden; scroll-margin-top: 110px; }
+  .mission-card:target { border-color: #d4af37; }
+  .mission-overview { padding: 1rem 1.2rem 0; }
+  summary::-webkit-details-marker { display: none; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #edcc63; outline-offset: -3px; border-radius: 5px; }
+  .mission-topline { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+  .mission-title { display: flex; gap: .7rem; align-items: center; margin: 0; color: #e4d7ae; font-size: .8rem; font-weight: 600; }
+  .mission-number { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #5a5140; border-radius: 7px; background: #2e2b24; color: #f1d47a; font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .toggle { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; border: 1px solid #57574e; border-radius: 50%; color: #dec15d; font-size: 1.5rem; font-weight: 400; }
+  .minus { display: none; }
+  .mission-research[open] > summary .plus { display: none; }
+  .mission-research[open] > summary .minus { display: inline; }
+  .objectives { display: grid; gap: .85rem; margin: 1.15rem 0; }
+  .objective { display: flex; gap: .85rem; align-items: center; min-height: 48px; font-size: .94rem; line-height: 1.55; }
+  .objective img { flex: 0 0 44px; object-fit: contain; }
+  .objective strong { color: #fff; font-weight: 700; }
+  .mission-footer { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: .5rem; padding: .7rem 0; border-top: 1px solid #343843; font-size: .72rem; }
+  .reward { display: flex; align-items: center; gap: .4rem; color: #bfb8a3; min-height: 28px; }
+  .reward strong { color: #dfca8b; }
+  .reward img { object-fit: contain; }
+  .bonus-card { grid-column: 1 / -1; border-color: #716036; background: #26231c; }
+  .bonus-card .objectives { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bonus-card .mission-footer { border-color: #484033; }
+  .mission-content { padding: 1rem 1.2rem 1.2rem; border-top: 1px solid #484033; background: linear-gradient(135deg, #2b271e, #211f1a); }
+  .research-section p, .research-section li { font-size: .82rem; line-height: 1.7; color: #bebfc4; margin: .55rem 0; }
+  .mission-content a, .data-credit a { color: #dcc26f; text-underline-offset: 3px; }
+  .mission-research { border-top: 1px solid #716036; background: linear-gradient(115deg, #3b3321, #2e291e 55%, #26231c); }
+  .mission-research > summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .8rem 1.2rem; font-size: .85rem; color: #dfc880; cursor: pointer; list-style: none; }
+  .mission-research > summary:hover { background: rgb(212 175 55 / 6%); }
+  .mission-research .toggle { border-color: #716036; background: rgb(212 175 55 / 6%); }
+  .research-section { margin-top: .75rem; border: 1px solid #5d5033; border-radius: 6px; background: rgb(0 0 0 / 12%); }
+  .research-section summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .8rem; font-size: .85rem; color: #dfc880; cursor: pointer; }
+  .research-section[open] > summary > span { transform: rotate(45deg); }
+  .research-section > div { padding: 0 .8rem .8rem; }
+  .data-credit { color: #a8a8a8; font-size: .75rem; line-height: 1.7; margin: 1.2rem 0 0; }
+  @media (max-width: 780px) {
+    .mission-grid { grid-template-columns: 1fr; }
+    .bonus-card .objectives { grid-template-columns: 1fr; }
+    .missions-heading { align-items: flex-start; gap: .8rem; }
+    .hero-portrait img { width: 64px; height: 64px; }
+    .eyebrow { font-size: .62rem; line-height: 1.5; }
+    .event-meta { font-size: .75rem; }
+    .mission-overview { padding: .9rem 1rem 0; }
+    .mission-content { padding: 1rem; }
+    .hre-missions { margin-bottom: 3rem; }
+  }
+  @media (prefers-reduced-motion: no-preference) { .mission-card, .mission-jumps a { transition: border-color .15s ease; } }
+</style>

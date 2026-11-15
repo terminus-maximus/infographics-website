@@ -1,6 +1,7 @@
 ---
 import FeaturedInfographicPage from "../components/FeaturedInfographicPage.astro";
 import portraits from "../data/heroes/round-portraits.json";
+import HreMissions from "../components/HreMissions.astro";
 ---
 
 <FeaturedInfographicPage
@@ -9,6 +10,8 @@ import portraits from "../data/heroes/round-portraits.json";
   imageSrc="/images/hre.png"
   imageAlt="Hero Release Event Infographic"
   basicsTitle="Hero Release Event Basics"
+  basicsCollapsed
+  basicsCaption="Event Timing, Goal, Progress, and Expectations"
   basicsContent={`
 ## Event Timing
 
@@ -60,6 +63,7 @@ Players pursuing Legendary promotions should expect to plan ahead, optimize miss
       <span class="guide-arrow" aria-hidden="true">→</span>
     </a>
   </section>
+  <HreMissions slot="after-basics" />
 </FeaturedInfographicPage>
 
 <style>

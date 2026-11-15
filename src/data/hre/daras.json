@@ -1,0 +1,1200 @@
+{
+  "schema_version": 1,
+  "event": {
+    "slug": "daras",
+    "event_id": "hero_release_event_2",
+    "hero_id": "lostaFearmonger",
+    "quest_group": "hre2",
+    "start_date": "2026-11-22",
+    "schedule_source": "https://apps.apple.com/kw/app/warhammer-40-000-tacticus/id1599937506",
+    "schedule_basis": "November 22 announced in the publisher's 1.44 release notes and confirmed by Dan; no start time inferred.",
+    "name": "Veterans of the Long War",
+    "hero_name": "Daras Carrow",
+    "main_mission_count": 20,
+    "bonus_mission_count": 1
+  },
+  "source": {
+    "app_version": "1.44.88",
+    "bundle_id": "com.snowprintstudios.tacticus",
+    "config_full_hash": "9bdc534d9850e21cd133d4951d9e46b6",
+    "config_sha256": "64367f2feeafea9c610cad71d2ccc3d9c34e9d0aafa4cc00e3b1efcd76678400",
+    "localization_sha256": "31db6689bb3f44c8fd595b79993c3c874bf876d4af9a0bec6e2f0edd56007336",
+    "asset_references_sha256": "a40a6f43542ce983fa8d3781061c1f3ab101ad9fe30d0fa81707f23cd9bffa6f",
+    "event_pointer": "/clientGameConfig/liveEvents/idunLiveEventConfigs/2041",
+    "group_pointer": "/clientGameConfig/quests/groups/hre2",
+    "extracted_at": "2026-11-13T17:57:47.589392+00:00",
+    "frozen_source_sha256": "6db05cc563aa5dc66c89cd7f6c028416da8ccb3c11fe9487f0b7a34d831f1171",
+    "export_sha256": "d40f3536e357813d616df9fa667a13726bbba1c982eece1066fab0b208947718"
+  },
+  "missions": [
+    {
+      "id": "hre2_q1",
+      "number": 1,
+      "bonus": false,
+      "predecessor_id": null,
+      "successor_ids": [
+        "hre2_q2"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "WinLightningVictories",
+          "target": 2,
+          "parameters": {},
+          "text": "Win 2 Lightning victories",
+          "help": "Win 2 Campaign battles before the turn indicator runs out.\n\nIt can be a battle you had won before. Lightning Victories give you additional Coins.",
+          "icon": "lightning",
+          "localization_key": "Quests/WinLightningVictories_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinLightningVictories_description"
+        },
+        {
+          "type": "SlayEnemiesWithMeleeAttacks",
+          "target": 5,
+          "parameters": {},
+          "text": "Defeat 5 enemies with melee attacks",
+          "help": "Defeat 5 enemy units with melee attacks in any game mode.\n\nYour units use melee attacks when they are in a hex adjacent to an enemy unit. Active abilities used to defeat enemy units in adjacent hexes also count.",
+          "icon": "melee",
+          "localization_key": "Quests/SlayEnemiesWithMeleeAttacks_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithMeleeAttacks_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/0"
+    },
+    {
+      "id": "hre2_q2",
+      "number": 2,
+      "bonus": false,
+      "predecessor_id": "hre2_q1",
+      "successor_ids": [
+        "hre2_q3"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "RaidBattles",
+          "target": 5,
+          "parameters": {},
+          "text": "Raid 5 Campaign battles",
+          "help": "Raid 5 Campaign battles.\n\nYou can raid any Campaign battles for which you have obtained all three medals. Doing so gives you the raid rewards instantly without the need to play the battle again.",
+          "icon": "raid",
+          "localization_key": "Quests/RaidBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_RaidBattles_description"
+        },
+        {
+          "type": "SlayEnemiesWithFactionTrait",
+          "target": 10,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Defeat 10 enemies with Chaos units",
+          "help": "Defeat 10 enemy units with your Chaos Characters or summons.\n\nDeploy Chaos Characters to do so. There might also be an event running in which you can play Chaos Characters even without owning them.",
+          "icon": "chaos-kills",
+          "localization_key": "Quests/SlayEnemiesWithFactionTrait_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithFactionTrait_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/1"
+    },
+    {
+      "id": "hre2_q3",
+      "number": 3,
+      "bonus": false,
+      "predecessor_id": "hre2_q2",
+      "successor_ids": [
+        "hre2_q4"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "WinCampaignBattles",
+          "target": 20,
+          "parameters": {},
+          "text": "Win 20 Campaign battles",
+          "help": "Win 20 Campaign battles. Winning or raiding already won battles also counts.",
+          "icon": "campaign",
+          "localization_key": "Quests/WinCampaignBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinCampaignBattles_description"
+        },
+        {
+          "type": "UseAbility",
+          "target": 30,
+          "parameters": {},
+          "text": "Use abilities 30 times with characters",
+          "help": "Use the active abilities of your Characters 30 times in any game mode.\n\nUse of the Heal or Repair actions does not count.",
+          "icon": "ability",
+          "localization_key": "Quests/UseAbility_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_UseAbility_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/2"
+    },
+    {
+      "id": "hre2_q4",
+      "number": 4,
+      "bonus": false,
+      "predecessor_id": "hre2_q3",
+      "successor_ids": [
+        "hre2_q5"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 4,
+          "parameters": {
+            "gameMode": "PvP"
+          },
+          "text": "Play 4 Arena battles",
+          "help": "Play 4 Arena battles. You can start these in the battle menu screen.",
+          "icon": "arena",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        },
+        {
+          "type": "SlayEnemiesWithRangedAttacks",
+          "target": 50,
+          "parameters": {},
+          "text": "Defeat 50 enemies with ranged attacks",
+          "help": "Defeat 50 enemy units with ranged attacks in any game mode.\n\nYour unit's attacks count as ranged when they use a ranged attack active ability, or when they perform a normal attack and don't have any enemy units in hexes adjacent to them. Not all Characters have ranged attacks.",
+          "icon": "ranged",
+          "localization_key": "Quests/SlayEnemiesWithRangedAttacks_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithRangedAttacks_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/3"
+    },
+    {
+      "id": "hre2_q5",
+      "number": 5,
+      "bonus": false,
+      "predecessor_id": "hre2_q4",
+      "successor_ids": [
+        "hre2_q6"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "DealAbilityDamage",
+          "target": 10000,
+          "parameters": {},
+          "text": "Deal 10,000 Damage using Abilities",
+          "help": "Deal 10,000 damage to enemy units in any game mode using active abilities of your Characters.\n\nNot all abilities deal damage. Damage done by summons does not count. Deploy Characters that have eligible abilities (e.g. like Tigurius).",
+          "icon": "ability-damage",
+          "localization_key": "Quests/DealAbilityDamage_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealAbilityDamage_description"
+        },
+        {
+          "type": "WinCampaignBattles",
+          "target": 100,
+          "parameters": {},
+          "text": "Win 100 Campaign battles",
+          "help": "Win 100 Campaign battles. Winning or raiding already won battles also counts.",
+          "icon": "campaign",
+          "localization_key": "Quests/WinCampaignBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinCampaignBattles_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/4"
+    },
+    {
+      "id": "hre2_q6",
+      "number": 6,
+      "bonus": false,
+      "predecessor_id": "hre2_q5",
+      "successor_ids": [
+        "hre2_q7"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "HealHealth",
+          "target": 2500,
+          "parameters": {},
+          "text": "Restore 2,500 Health in battle",
+          "help": "Restore 2,500 Health of your units during battles in any game mode. \n\nThe Living Metal trait of the Necrons automatically restores Health each turn.",
+          "icon": "heal",
+          "localization_key": "Quests/HealHealth_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_HealHealth_description"
+        },
+        {
+          "type": "WinBattlesWithoutUsingSummons",
+          "target": 10,
+          "parameters": {},
+          "text": "Win 10 battles without summoning any units",
+          "help": "Win 10 battles in any game mode while not using any active or passive abilities that bring in additional summons to the battlefield.\n\nRefrain from deploying Characters with such an ability (e.g. Archimatos).",
+          "icon": "no-summons",
+          "localization_key": "Quests/WinBattlesWithoutUsingSummons_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinBattlesWithoutUsingSummons_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/5"
+    },
+    {
+      "id": "hre2_q7",
+      "number": 7,
+      "bonus": false,
+      "predecessor_id": "hre2_q6",
+      "successor_ids": [
+        "hre2_q8"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "UseAbilityWithFactionTrait",
+          "target": 20,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Use abilities 20 times with Chaos characters",
+          "help": "Use the active abilities of your Chaos Characters 20 times in any game mode.\n\nUse of the Heal or Repair actions does not count.",
+          "icon": "chaos-ability",
+          "localization_key": "Quests/UseAbilityWithFactionTrait_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_UseAbilityWithFactionTrait_description"
+        },
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 2,
+          "parameters": {
+            "gameMode": "TreasureBeach"
+          },
+          "text": "Play 2 Salvage Run battles",
+          "help": "Play 2 Salvage Run battles. You can start these in the battle menu screen.",
+          "icon": "salvage",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/6"
+    },
+    {
+      "id": "hre2_q8",
+      "number": 8,
+      "bonus": false,
+      "predecessor_id": "hre2_q7",
+      "successor_ids": [
+        "hre2_q9"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 2,
+          "parameters": {
+            "gameMode": "GuildBoss"
+          },
+          "text": "Play 2 Guild Raids battles",
+          "help": "Play 2 Guild Raids battles. You can start these in the battle menu screen.",
+          "icon": "guild-raid",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        },
+        {
+          "type": "DealDamage",
+          "target": 20000,
+          "parameters": {},
+          "text": "Deal 20,000 Damage to enemies in battle",
+          "help": "Deal 20,000 damage to enemy units.\n\nYou can do this in any game mode and with any type of attack or ability.",
+          "icon": "damage",
+          "localization_key": "Quests/DealDamage_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealDamage_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/7"
+    },
+    {
+      "id": "hre2_q9",
+      "number": 9,
+      "bonus": false,
+      "predecessor_id": "hre2_q8",
+      "successor_ids": [
+        "hre2_q10"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "DealDamageOfProfileType",
+          "target": 7500,
+          "parameters": {
+            "damageProfileType": "Psychic"
+          },
+          "text": "Deal 7,500 Psychic Damage",
+          "help": "Deal 7,500 damage to enemy units in any game mode using attacks or abilities with the Psychic Damage damage type.\n\nCheck the damage type of your Characters' attacks and abilities in their detailed profile or when selecting units during battle.",
+          "icon": "psychic",
+          "localization_key": "Quests/DealDamageOfProfileType_Psychic_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealDamageOfProfileType_Psychic_description"
+        },
+        {
+          "type": "SlayEnemiesWithRangedAttacks",
+          "target": 75,
+          "parameters": {},
+          "text": "Defeat 75 enemies with ranged attacks",
+          "help": "Defeat 75 enemy units with ranged attacks in any game mode.\n\nYour unit's attacks count as ranged when they use a ranged attack active ability, or when they perform a normal attack and don't have any enemy units in hexes adjacent to them. Not all Characters have ranged attacks.",
+          "icon": "ranged",
+          "localization_key": "Quests/SlayEnemiesWithRangedAttacks_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithRangedAttacks_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/8"
+    },
+    {
+      "id": "hre2_q10",
+      "number": 10,
+      "bonus": false,
+      "predecessor_id": "hre2_q9",
+      "successor_ids": [
+        "hre2_q11"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "WinBattlesWithFactionTraitLineup",
+          "target": 15,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Win 15 battles using an all-Chaos character lineup",
+          "help": "Win 15 of battles in any game mode while only deploying Characters of the Chaos Faction.\n \n3-Character lineups are also eligible for this Mission.",
+          "icon": "chaos-lineup",
+          "localization_key": "Quests/WinBattlesWithFactionTraitLineup_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinBattlesWithFactionTraitLineup_description"
+        },
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 4,
+          "parameters": {
+            "gameMode": "PvP"
+          },
+          "text": "Play 4 Arena battles",
+          "help": "Play 4 Arena battles. You can start these in the battle menu screen.",
+          "icon": "arena",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/9"
+    },
+    {
+      "id": "hre2_q11",
+      "number": 11,
+      "bonus": false,
+      "predecessor_id": "hre2_q10",
+      "successor_ids": [
+        "hre2_q12"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "WinLightningVictories",
+          "target": 25,
+          "parameters": {},
+          "text": "Win 25 Lightning victories",
+          "help": "Win 25 Campaign battles before the turn indicator runs out.\n\nIt can be a battle you had won before. Lightning Victories give you additional Coins.",
+          "icon": "lightning",
+          "localization_key": "Quests/WinLightningVictories_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinLightningVictories_description"
+        },
+        {
+          "type": "SlayEnemiesOfFaction",
+          "target": 100,
+          "parameters": {
+            "factionId": "Necrons"
+          },
+          "text": "Defeat 100 units of the Necrons faction",
+          "help": "Defeat 100 enemy units of the Necrons Faction in any game mode.\n\nThe start screens of all game modes will show you which kind of enemies you will face in battle.",
+          "icon": "necrons",
+          "localization_key": "Quests/SlayEnemiesOfFaction_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesOfFaction_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/10"
+    },
+    {
+      "id": "hre2_q12",
+      "number": 12,
+      "bonus": false,
+      "predecessor_id": "hre2_q11",
+      "successor_ids": [
+        "hre2_q13"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "HealHealth",
+          "target": 5000,
+          "parameters": {},
+          "text": "Restore 5,000 Health in battle",
+          "help": "Restore 5,000 Health of your units during battles in any game mode. \n\nThe Living Metal trait of the Necrons automatically restores Health each turn.",
+          "icon": "heal",
+          "localization_key": "Quests/HealHealth_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_HealHealth_description"
+        },
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 1,
+          "parameters": {
+            "gameMode": "Waves"
+          },
+          "text": "Play 1 Onslaught battle",
+          "help": "Play 1 Onslaught battles. You can start these in the battle menu screen.",
+          "icon": "onslaught",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/11"
+    },
+    {
+      "id": "hre2_q13",
+      "number": 13,
+      "bonus": false,
+      "predecessor_id": "hre2_q12",
+      "successor_ids": [
+        "hre2_q14"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "SlayEnemies",
+          "target": 75,
+          "parameters": {},
+          "text": "Defeat 75 enemies",
+          "help": "Defeat 75 enemy units in any game mode.",
+          "icon": "kills",
+          "localization_key": "Quests/SlayEnemies_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemies_description"
+        },
+        {
+          "type": "UseAbilityWithFactionTrait",
+          "target": 50,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Use abilities 50 times with Chaos characters",
+          "help": "Use the active abilities of your Chaos Characters 50 times in any game mode.\n\nUse of the Heal or Repair actions does not count.",
+          "icon": "chaos-ability",
+          "localization_key": "Quests/UseAbilityWithFactionTrait_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_UseAbilityWithFactionTrait_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/12"
+    },
+    {
+      "id": "hre2_q14",
+      "number": 14,
+      "bonus": false,
+      "predecessor_id": "hre2_q13",
+      "successor_ids": [
+        "hre2_q15"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "WinBattlesWithFactionTraitLineup",
+          "target": 25,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Win 25 battles using an all-Chaos character lineup",
+          "help": "Win 25 of battles in any game mode while only deploying Characters of the Chaos Faction.\n \n3-Character lineups are also eligible for this Mission.",
+          "icon": "chaos-lineup",
+          "localization_key": "Quests/WinBattlesWithFactionTraitLineup_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinBattlesWithFactionTraitLineup_description"
+        },
+        {
+          "type": "DealDamage",
+          "target": 30000,
+          "parameters": {},
+          "text": "Deal 30,000 Damage to enemies in battle",
+          "help": "Deal 30,000 damage to enemy units.\n\nYou can do this in any game mode and with any type of attack or ability.",
+          "icon": "damage",
+          "localization_key": "Quests/DealDamage_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealDamage_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/13"
+    },
+    {
+      "id": "hre2_q15",
+      "number": 15,
+      "bonus": false,
+      "predecessor_id": "hre2_q14",
+      "successor_ids": [
+        "hre2_q16"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "UseAbility",
+          "target": 150,
+          "parameters": {},
+          "text": "Use abilities 150 times with characters",
+          "help": "Use the active abilities of your Characters 150 times in any game mode.\n\nUse of the Heal or Repair actions does not count.",
+          "icon": "ability",
+          "localization_key": "Quests/UseAbility_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_UseAbility_description"
+        },
+        {
+          "type": "PlayBattlesInGameMode",
+          "target": 4,
+          "parameters": {
+            "gameMode": "PvP"
+          },
+          "text": "Play 4 Arena battles",
+          "help": "Play 4 Arena battles. You can start these in the battle menu screen.",
+          "icon": "arena",
+          "localization_key": "Quests/PlayBattlesInGameMode_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_PlayBattlesInGameMode_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/14"
+    },
+    {
+      "id": "hre2_q16",
+      "number": 16,
+      "bonus": false,
+      "predecessor_id": "hre2_q15",
+      "successor_ids": [
+        "hre2_q17"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "SlayEnemiesWithFactionTrait",
+          "target": 100,
+          "parameters": {
+            "factionTrait": "Chaos"
+          },
+          "text": "Defeat 100 enemies with Chaos units",
+          "help": "Defeat 100 enemy units with your Chaos Characters or summons.\n\nDeploy Chaos Characters to do so. There might also be an event running in which you can play Chaos Characters even without owning them.",
+          "icon": "chaos-kills",
+          "localization_key": "Quests/SlayEnemiesWithFactionTrait_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithFactionTrait_description"
+        },
+        {
+          "type": "RaidBattles",
+          "target": 25,
+          "parameters": {},
+          "text": "Raid 25 Campaign battles",
+          "help": "Raid 25 Campaign battles.\n\nYou can raid any Campaign battles for which you have obtained all three medals. Doing so gives you the raid rewards instantly without the need to play the battle again.",
+          "icon": "raid",
+          "localization_key": "Quests/RaidBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_RaidBattles_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/15"
+    },
+    {
+      "id": "hre2_q17",
+      "number": 17,
+      "bonus": false,
+      "predecessor_id": "hre2_q16",
+      "successor_ids": [
+        "hre2_q18"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "DealDamage",
+          "target": 60000,
+          "parameters": {},
+          "text": "Deal 60,000 Damage to enemies in battle",
+          "help": "Deal 60,000 damage to enemy units.\n\nYou can do this in any game mode and with any type of attack or ability.",
+          "icon": "damage",
+          "localization_key": "Quests/DealDamage_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealDamage_description"
+        },
+        {
+          "type": "SlayEnemies",
+          "target": 75,
+          "parameters": {},
+          "text": "Defeat 75 enemies",
+          "help": "Defeat 75 enemy units in any game mode.",
+          "icon": "kills",
+          "localization_key": "Quests/SlayEnemies_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemies_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/16"
+    },
+    {
+      "id": "hre2_q18",
+      "number": 18,
+      "bonus": false,
+      "predecessor_id": "hre2_q17",
+      "successor_ids": [
+        "hre2_q19"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "DealAbilityDamage",
+          "target": 50000,
+          "parameters": {},
+          "text": "Deal 50,000 Damage using Abilities",
+          "help": "Deal 50,000 damage to enemy units in any game mode using active abilities of your Characters.\n\nNot all abilities deal damage. Damage done by summons does not count. Deploy Characters that have eligible abilities (e.g. like Tigurius).",
+          "icon": "ability-damage",
+          "localization_key": "Quests/DealAbilityDamage_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealAbilityDamage_description"
+        },
+        {
+          "type": "SlayEnemiesWithRangedAttacks",
+          "target": 250,
+          "parameters": {},
+          "text": "Defeat 250 enemies with ranged attacks",
+          "help": "Defeat 250 enemy units with ranged attacks in any game mode.\n\nYour unit's attacks count as ranged when they use a ranged attack active ability, or when they perform a normal attack and don't have any enemy units in hexes adjacent to them. Not all Characters have ranged attacks.",
+          "icon": "ranged",
+          "localization_key": "Quests/SlayEnemiesWithRangedAttacks_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithRangedAttacks_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/17"
+    },
+    {
+      "id": "hre2_q19",
+      "number": 19,
+      "bonus": false,
+      "predecessor_id": "hre2_q18",
+      "successor_ids": [
+        "hre2_q20"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "SlayEnemiesWithMeleeAttacks",
+          "target": 100,
+          "parameters": {},
+          "text": "Defeat 100 enemies with melee attacks",
+          "help": "Defeat 100 enemy units with melee attacks in any game mode.\n\nYour units use melee attacks when they are in a hex adjacent to an enemy unit. Active abilities used to defeat enemy units in adjacent hexes also count.",
+          "icon": "melee",
+          "localization_key": "Quests/SlayEnemiesWithMeleeAttacks_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_SlayEnemiesWithMeleeAttacks_description"
+        },
+        {
+          "type": "WinCampaignBattles",
+          "target": 75,
+          "parameters": {},
+          "text": "Win 75 Campaign battles",
+          "help": "Win 75 Campaign battles. Winning or raiding already won battles also counts.",
+          "icon": "campaign",
+          "localization_key": "Quests/WinCampaignBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinCampaignBattles_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/18"
+    },
+    {
+      "id": "hre2_q20",
+      "number": 20,
+      "bonus": false,
+      "predecessor_id": "hre2_q19",
+      "successor_ids": [
+        "hre2_bonus"
+      ],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "UseAbilityWithHero",
+          "target": 10,
+          "parameters": {
+            "heroId": "lostaFearmonger"
+          },
+          "text": "Use abilities 10 times with Daras",
+          "help": "Use the active ability of Daras 10 times.\n\nDeploy Daras in any battle to do so. There might also be an event running in which you can play Daras even without owning it. \nUse of the Heal or Repair actions does not count.",
+          "icon": "daras",
+          "localization_key": "Quests/UseAbilityWithHero_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_UseAbilityWithHero_description"
+        },
+        {
+          "type": "WinCampaignBattles",
+          "target": 250,
+          "parameters": {},
+          "text": "Win 250 Campaign battles",
+          "help": "Win 250 Campaign battles. Winning or raiding already won battles also counts.",
+          "icon": "campaign",
+          "localization_key": "Quests/WinCampaignBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinCampaignBattles_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hreCurrency",
+          "quantity": 100,
+          "name": "Dark Blessings"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/19"
+    },
+    {
+      "id": "hre2_bonus",
+      "number": null,
+      "bonus": true,
+      "predecessor_id": "hre2_q20",
+      "successor_ids": [],
+      "conditions": {
+        "minPowerLevel": 6
+      },
+      "quest_xp": 20,
+      "objectives": [
+        {
+          "type": "DealDamageWithHero",
+          "target": 15000,
+          "parameters": {
+            "heroId": "lostaFearmonger"
+          },
+          "text": "Deal 15,000 Damage with Daras",
+          "help": "Deal 15,000 damage to enemy units with with attacks or abilities of Daras.\n\nDeploy Daras in any game mode to do so. There might also be an event running in which you can play Daras even without owning it.",
+          "icon": "daras",
+          "localization_key": "Quests/DealDamageWithHero_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_DealDamageWithHero_description"
+        },
+        {
+          "type": "WinCampaignBattles",
+          "target": 250,
+          "parameters": {},
+          "text": "Win 250 Campaign battles",
+          "help": "Win 250 Campaign battles. Winning or raiding already won battles also counts.",
+          "icon": "campaign",
+          "localization_key": "Quests/WinCampaignBattles_description",
+          "help_localization_key": "MissionQuickLinks/TaskDetails_WinCampaignBattles_description"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "summoningToken",
+          "quantity": 1,
+          "name": "Requisition Order"
+        }
+      ],
+      "source_pointer": "/clientGameConfig/quests/groups/hre2/quests/20"
+    }
+  ],
+  "assets": {
+    "lightning": {
+      "path": "assets/hre/lightning.png",
+      "sha256": "87bf788246f61f5ad08e1fb8f9006a08a51b7ee6a8b26ac6e5f0b9b6b0ca7028",
+      "width": 245,
+      "height": 253,
+      "guid": "5b8ae25d8dd3d574f8b2df8f6a146edb",
+      "sprite_name": "ui_icon_quest_win_lightning_victory",
+      "bundle": "quests/icons/ui_icon_quest_win_lightning_victory",
+      "bundle_sha256": "d1a0169603c76b63b8d8274ed4527d099e135e158e25908f76114e0249f1b008",
+      "src": "/images/hre/missions/lightning.png"
+    },
+    "melee": {
+      "path": "assets/hre/melee.png",
+      "sha256": "67405b860fcd8e4050b99150dbede78adc17c00e4127a375ab8d3555b089cb30",
+      "width": 256,
+      "height": 243,
+      "guid": "80e57ecf3f7ac1b498220e2213d57f51",
+      "sprite_name": "ui_icon_quest_slay_with_melee",
+      "bundle": "quests/icons/ui_icon_quest_slay_with_melee",
+      "bundle_sha256": "050115a9bb300cc015b0d20eb314479ad36bdc3d226949b820166fa0241cc402",
+      "src": "/images/hre/missions/melee.png"
+    },
+    "raid": {
+      "path": "assets/hre/raid.png",
+      "sha256": "3224b977157ceab9f24991d595df685d46e936961c9838d99a73b188f2dc1818",
+      "width": 245,
+      "height": 256,
+      "guid": "657c2951199704fa0ab51d393976103f",
+      "sprite_name": "ui_icon_quest_campaign_raid_battle",
+      "bundle": "quests/icons/ui_icon_quest_campaign_raid_battle",
+      "bundle_sha256": "a2b70ec32777ab17d23324d61bb789b74f8ed2b73f5b1c9bdf1bd934446973bc",
+      "src": "/images/hre/missions/raid.png"
+    },
+    "chaos-kills": {
+      "path": "assets/hre/chaos-kills.png",
+      "sha256": "6fc4bc6774659fca9c72b45597d4ac7e7fc95ea95922f059fe95a7f55c599ad9",
+      "width": 256,
+      "height": 243,
+      "guid": "0a3cced04de00418d83f95606b31277b",
+      "sprite_name": "ui_icon_quest_slay_with_alliance_chaos",
+      "bundle": "quests/icons/ui_icon_quest_slay_with_alliance_chaos",
+      "bundle_sha256": "985b56a6b6c4babf16ec5d56232f731b292db5a7fd5fa707dffb73abf054cef7",
+      "src": "/images/hre/missions/chaos-kills.png"
+    },
+    "campaign": {
+      "path": "assets/hre/campaign.png",
+      "sha256": "cab434a4d7503dfb7d7ced0e70e055082b6b4d09002d016d6a3c28ae88a8388b",
+      "width": 245,
+      "height": 256,
+      "guid": "f1688f4bc882db74689e0b80a5f5313e",
+      "sprite_name": "ui_icon_quest_win_campaign",
+      "bundle": "quests/icons/ui_icon_quest_win_campaign",
+      "bundle_sha256": "3cfcea0266810f57adbbc18a2ef129875affeca2724c19d5386ce70548d6defd",
+      "src": "/images/hre/missions/campaign.png"
+    },
+    "ability": {
+      "path": "assets/hre/ability.png",
+      "sha256": "eefac7917e6ec22115863b639d09ae17bf1a2ac567da53c3c723c7b71dde97df",
+      "width": 212,
+      "height": 241,
+      "guid": "d6bcde3a715d9ab4b864f2744908b0eb",
+      "sprite_name": "ui_icon_quest_ability_use",
+      "bundle": "quests/icons/ui_icon_quest_ability_use",
+      "bundle_sha256": "f9eb38a571e53cd30c36a5ca450c40e2d7073839947e017bdbcbd74023cac344",
+      "src": "/images/hre/missions/ability.png"
+    },
+    "arena": {
+      "path": "assets/hre/arena.png",
+      "sha256": "0277395c9cab1cfed05a50f5510dded041f7767696d0f1081ac325c3c88486e2",
+      "width": 224,
+      "height": 253,
+      "guid": "0f82ff2044da64668a68eac01cb1eb5f",
+      "sprite_name": "ui_icon_resource_token_battle_pvp",
+      "bundle": "atlases/main",
+      "bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
+      "src": "/images/hre/missions/arena.png"
+    },
+    "salvage": {
+      "path": "assets/hre/salvage.png",
+      "sha256": "a4db98c4f9a045adf36b388b506087461205708f0623241270812ec4f4f43f50",
+      "width": 222,
+      "height": 253,
+      "guid": "2b5f01b29a3d747eda3c56d83dbe68b5",
+      "sprite_name": "ui_icon_resource_token_battle_treasureBeach",
+      "bundle": "atlases/main",
+      "bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
+      "src": "/images/hre/missions/salvage.png"
+    },
+    "guild-raid": {
+      "path": "assets/hre/guild-raid.png",
+      "sha256": "1c0c70192ee66bec92a04232128da4e61509782d159e82d3a05dc9257abe08df",
+      "width": 225,
+      "height": 253,
+      "guid": "50a90d6aa6966064da3503b39aa7cb77",
+      "sprite_name": "ui_icon_resource_token_battle_guildboss",
+      "bundle": "atlases/main",
+      "bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
+      "src": "/images/hre/missions/guild-raid.png"
+    },
+    "onslaught": {
+      "path": "assets/hre/onslaught.png",
+      "sha256": "ec456db676203e2ca4d8165ce95d4769ef42d805b28f207079eda6d75e62febb",
+      "width": 224,
+      "height": 254,
+      "guid": "548b90b70ab544f37ac29ab9c9fce2dd",
+      "sprite_name": "ui_icon_resource_token_battle_waves",
+      "bundle": "atlases/main",
+      "bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
+      "src": "/images/hre/missions/onslaught.png"
+    },
+    "requisition": {
+      "path": "assets/hre/requisition.png",
+      "sha256": "c2bd10c16921e34bb27eaea64ab6b26ecd9e6396bb62d0b837cab748bb7000f9",
+      "width": 238,
+      "height": 256,
+      "guid": "08f7f52ec1389f84d8bd1bad2bc549cd",
+      "sprite_name": "ui_icon_resource_summoning_token",
+      "bundle": "atlases/main",
+      "bundle_sha256": "f2a77d8c4125eee7685897477441487deb5e960b7904a9549f69c4d75a835482",
+      "src": "/images/hre/missions/requisition.png"
+    },
+    "ranged": {
+      "path": "assets/hre/ranged.png",
+      "sha256": "5405984aa8593af1fe0031349b3e6f1bb94d276091ba8d14ecff9f5dc14dfb35",
+      "width": 256,
+      "height": 243,
+      "guid": "22b74fd755a00c74fb030661cc19495c",
+      "sprite_name": "ui_icon_quest_slay_with_ranged",
+      "bundle": "quests/icons/ui_icon_quest_slay_with_ranged",
+      "bundle_sha256": "4fa443783c3034da8af0fdd5bb6a86d17490b9e24d87df6087317e670e55a071",
+      "src": "/images/hre/missions/ranged.png"
+    },
+    "ability-damage": {
+      "path": "assets/hre/ability-damage.png",
+      "sha256": "62ecf7973471ac166db4b9ae126523bd85c5848ebdee9525826186ab6afd2ef8",
+      "width": 214,
+      "height": 240,
+      "guid": "9804a64df2bbe4b19905e5425137b8e8",
+      "sprite_name": "ui_icon_quest_damage_ability",
+      "bundle": "quests/icons/ui_icon_quest_damage_ability",
+      "bundle_sha256": "e1bc3bc4e3cc6d882c0948600c34c916e876e1c79a335bc3d773c50ad6764d22",
+      "src": "/images/hre/missions/ability-damage.png"
+    },
+    "heal": {
+      "path": "assets/hre/heal.png",
+      "sha256": "04bfa9daa282242b083e9e5a823a18f69fb8aaf837447bc66cf7d62cebd4e0f1",
+      "width": 214,
+      "height": 217,
+      "guid": "0bb868c1593075343948a0b1aec48811",
+      "sprite_name": "ui_icon_quest_heal",
+      "bundle": "quests/icons/ui_icon_quest_heal",
+      "bundle_sha256": "d7462b94332f7e8591dca6c5aed69e4b85b18daaa18245856a8fd05b8e994f93",
+      "src": "/images/hre/missions/heal.png"
+    },
+    "no-summons": {
+      "path": "assets/hre/no-summons.png",
+      "sha256": "98c93bbb23bf01baf8f8c0354f426c0af06848fb4ac830ae333601834da52d7e",
+      "width": 245,
+      "height": 243,
+      "guid": "5d2bf954d558e4b6da611d2dfc1ba525",
+      "sprite_name": "ui_icon_quest_win_without_using_summons",
+      "bundle": "quests/icons/ui_icon_quest_win_without_using_summons",
+      "bundle_sha256": "d99f49e98570b1b02b09a0f2094141fe40d66d5dac047a54caae17470c8eaba4",
+      "src": "/images/hre/missions/no-summons.png"
+    },
+    "chaos-ability": {
+      "path": "assets/hre/chaos-ability.png",
+      "sha256": "09ad67ecf2daed55de62ed6bb7ece6e8cc0888d96b21961e098c6c683edc51f2",
+      "width": 212,
+      "height": 241,
+      "guid": "5ec049a62e2d64195b7c0b0df67eab80",
+      "sprite_name": "ui_icon_quest_use_ability_with_alliance_chaos",
+      "bundle": "quests/icons/ui_icon_quest_use_ability_with_alliance_chaos",
+      "bundle_sha256": "7a486c674f6a98e8a32e189662e5f26d2c2e3880287234c83eebba28c9cf546b",
+      "src": "/images/hre/missions/chaos-ability.png"
+    },
+    "damage": {
+      "path": "assets/hre/damage.png",
+      "sha256": "ba2ded122ae4bc8db7ab11168f80af406ddcadfc43cb1d7fded7f2dacf4638bc",
+      "width": 214,
+      "height": 240,
+      "guid": "6886a29284d4d1241b45ee6a016017d2",
+      "sprite_name": "ui_icon_quest_damage_ability_with_hero",
+      "bundle": "quests/icons/ui_icon_quest_damage_ability_with_hero",
+      "bundle_sha256": "eba1e54096473c38f3def76bd0f108fa9f74003b5847cc16b908d224697b6fd6",
+      "src": "/images/hero-profile/stats/damage.webp"
+    },
+    "psychic": {
+      "path": "assets/hre/psychic.png",
+      "sha256": "819cc0c765a393c0871e43b415d1f4fa16c608368f794705f5b0ed7c4fb880e2",
+      "width": 214,
+      "height": 240,
+      "guid": "52e371d8f870f4351b5bfecaca26d266",
+      "sprite_name": "ui_icon_quest_slay_with_damage_type_psychic",
+      "bundle": "quests/icons/ui_icon_quest_slay_with_damage_type_psychic",
+      "bundle_sha256": "2da1eecd65969f00aeefbd5815883439eb9948e065845ab15f884cb6c2fbf308",
+      "src": "/images/hre/missions/psychic.png"
+    },
+    "chaos-lineup": {
+      "path": "assets/hre/chaos-lineup.png",
+      "sha256": "251d66f90fe0f0b0a6b99adda7d2eb0047a75198c472eaae3145d786bd41109d",
+      "width": 245,
+      "height": 243,
+      "guid": "f6b76866c3d664aada7d5ba7d253e783",
+      "sprite_name": "ui_icon_quest_win_with_alliance_chaos",
+      "bundle": "quests/icons/ui_icon_quest_win_with_alliance_chaos",
+      "bundle_sha256": "feb78361e0c664cf6a7f711c7703d90215e00a814d6658ed7e6f1b1adab3e632",
+      "src": "/images/hre/missions/chaos-lineup.png"
+    },
+    "necrons": {
+      "path": "assets/hre/necrons.png",
+      "sha256": "459eaebcc8284fedfb681f5c74cf8bc585535a2a180e788754acc715b975e850",
+      "width": 231,
+      "height": 243,
+      "guid": "b8275cddee15e92499d785e1d27b3f29",
+      "sprite_name": "ui_icon_quest_slay_of_faction_necrons",
+      "bundle": "quests/icons/ui_icon_quest_slay_of_faction_necrons",
+      "bundle_sha256": "21da7f22651901e5a88f8d9670ea904edaaf6744b65a009b0239571ba67eb2c0",
+      "src": "/images/hre/missions/necrons.png"
+    },
+    "kills": {
+      "path": "assets/hre/kills.png",
+      "sha256": "4c8161222d04d01aa503335096545888ea73c145aa3faaf8da0196c2d9321885",
+      "width": 255,
+      "height": 243,
+      "guid": "798690b46aae3804eaa9f066924527d9",
+      "sprite_name": "ui_icon_quest_slay",
+      "bundle": "quests/icons/ui_icon_quest_slay",
+      "bundle_sha256": "f65a06f98c5133c783eafab893a5319d1831c8363c35ecfafe48efd3dc79c38a",
+      "src": "/images/hre/missions/kills.png"
+    },
+    "daras": {
+      "src": "/images/hero-round/lostaFearmonger.webp"
+    }
+  }
+}

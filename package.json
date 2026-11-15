@@ -21,6 +21,8 @@
     "check:heroes:sources": "python3 scripts/import-heroes.py --check",
     "publish:heroes": "node scripts/publish-heroes.mjs",
     "import:lre": "node scripts/import-lre.mjs",
+    "import:hre": "python3 scripts/import-hre.py",
+    "check:hre": "node scripts/check-hre.mjs",
     "check:lre": "node scripts/check-lre.mjs",
     "check:guild-raid-next-season": "node scripts/check-guild-raid-next-season.mjs",
     "preview": "astro preview",
