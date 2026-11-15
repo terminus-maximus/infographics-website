@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "season": 116,
+  "startDate": "2026-12-16",
+  "observedLocalDate": "2026-11-15",
+  "timeZone": "America/Los_Angeles",
+  "verification": {
+    "kind": "user-confirmation-and-published-news",
+    "source": "Dan’s explicit confirmation in the S116 local guide chat, corroborated by the published Game Update 1.44 Guild Raid Rotation table",
+    "question": "Can you confirm S116 starts December 16, 2026 with this loop: M3 Magnus (Magnus_04), M2 Cawl (Cawl_01), M1 Ghazghkull (Ghaz_02), L5 Mortarion (Mortarion_01), L4 Avatar (Avatar_02)? This matches production 1.44.88 Config 2; the existing source labels it projected.",
+    "answer": "Yes, confirmed, add a note to the skill to always check the /news section as the Game Update 1.44 data could confirm this too",
+    "news": {
+      "file": "src/pages/news/game-update-1-44.astro",
+      "sha256": "9b7e61d20416cb6353daed128ca160d0184d17d95f4a063fa92b1b697fd84a93",
+      "route": "/news/game-update-1-44/",
+      "section": "Guild Raid Rotation",
+      "seasonRow": [
+        "116",
+        "From Dec 16",
+        "Avatar of Khaine",
+        "Mortarion",
+        "Ghazghkull",
+        "Belisarius Cawl",
+        "Magnus"
+      ],
+      "tierOrder": [
+        "L4",
+        "L5",
+        "M1",
+        "M2",
+        "M3"
+      ]
+    }
+  },
+  "review": {
+    "note": "The season/date and loop association is user-confirmed and corroborated by the published news article. All 25 encounters below are normalized from the verified production LocalDatabase catalog. The complete Config 2 lineup was reviewed; all boss/map mappings and local map artwork exist. No rotation-number or calendar extrapolation establishes this binding.",
+    "appVersion": "1.44.88",
+    "channel": "production",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+    "configId": "guild_boss_season_config_2",
+    "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+    "normalizedLineupSha256": "d9df2e0c72723f61a93d1b06d23ba8f11d7d43777abab66edaab8c3137a7ae5a"
+  },
+  "loop": [
+    "M3",
+    "M2",
+    "M1",
+    "L5",
+    "L4"
+  ],
+  "slots": [
+    {
+      "tier": "C1",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_01"
+    },
+    {
+      "tier": "C2",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_02"
+    },
+    {
+      "tier": "C3",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantGorgon",
+      "map": "Hive_Tyrant_03"
+    },
+    {
+      "tier": "C4",
+      "rarity": "Common",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "U1",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonKronos",
+      "map": "Tervigon_06"
+    },
+    {
+      "tier": "U2",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_05"
+    },
+    {
+      "tier": "U3",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_04"
+    },
+    {
+      "tier": "U4",
+      "rarity": "Uncommon",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_03"
+    },
+    {
+      "tier": "R1",
+      "rarity": "Rare",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_02"
+    },
+    {
+      "tier": "R2",
+      "rarity": "Rare",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_04"
+    },
+    {
+      "tier": "R3",
+      "rarity": "Rare",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_01"
+    },
+    {
+      "tier": "R4",
+      "rarity": "Rare",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantKronos",
+      "map": "Hive_Tyrant_06"
+    },
+    {
+      "tier": "E1",
+      "rarity": "Epic",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_01"
+    },
+    {
+      "tier": "E2",
+      "rarity": "Epic",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_01"
+    },
+    {
+      "tier": "E3",
+      "rarity": "Epic",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_05"
+    },
+    {
+      "tier": "E4",
+      "rarity": "Epic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_05"
+    },
+    {
+      "tier": "E5",
+      "rarity": "Epic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_02"
+    },
+    {
+      "tier": "L1",
+      "rarity": "Legendary",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_03"
+    },
+    {
+      "tier": "L2",
+      "rarity": "Legendary",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_03"
+    },
+    {
+      "tier": "L3",
+      "rarity": "Legendary",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "L4",
+      "rarity": "Legendary",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_02"
+    },
+    {
+      "tier": "L5",
+      "rarity": "Legendary",
+      "boss": "Mortarion",
+      "bossVariant": "Mortarion",
+      "map": "Mortarion_01"
+    },
+    {
+      "tier": "M1",
+      "rarity": "Mythic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_02"
+    },
+    {
+      "tier": "M2",
+      "rarity": "Mythic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_01"
+    },
+    {
+      "tier": "M3",
+      "rarity": "Mythic",
+      "boss": "Magnus",
+      "bossVariant": "Magnus",
+      "map": "Magnus_04"
+    }
+  ]
+}

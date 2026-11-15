@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "season": 116,
+  "encounters": [
+    {
+      "tier": "M3",
+      "boss": "Magnus",
+      "map": "Magnus_04",
+      "scope": "all-maps-exact-tier",
+      "reason": "The scheduled Magnus_04 map has no eligible M3 evidence. Use all reviewed M3 Magnus records across maps to supply observed damage averages and infographic options.",
+      "approvedBy": "Dan",
+      "approvedOn": "2026-11-15",
+      "instruction": "For M3 Magnus, use all M3 replays across maps, like we did for Ghaz in S115, and update the page and infographic data."
+    }
+  ]
+}

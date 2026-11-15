@@ -1,0 +1,201 @@
+{
+  "season": 116,
+  "startDate": "2026-12-16",
+  "status": "Ready",
+  "config": "guild_boss_season_config_2",
+  "source": {
+    "system": "LocalDatabase",
+    "schemaVersion": 1,
+    "channel": "production",
+    "appVersion": "1.44.88",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+    "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+    "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+    "seasonBindingSha256": "e920fdfefd5ea3d0f1ccc2eee3d146daf59d625c32545ea130732c546c0b73c8"
+  },
+  "loop": [
+    "M3",
+    "M2",
+    "M1",
+    "L5",
+    "L4"
+  ],
+  "slots": [
+    {
+      "tier": "C1",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_01"
+    },
+    {
+      "tier": "C2",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_02"
+    },
+    {
+      "tier": "C3",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantGorgon",
+      "map": "Hive_Tyrant_03"
+    },
+    {
+      "tier": "C4",
+      "rarity": "Common",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "U1",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonKronos",
+      "map": "Tervigon_06"
+    },
+    {
+      "tier": "U2",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_05"
+    },
+    {
+      "tier": "U3",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_04"
+    },
+    {
+      "tier": "U4",
+      "rarity": "Uncommon",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_03"
+    },
+    {
+      "tier": "R1",
+      "rarity": "Rare",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_02"
+    },
+    {
+      "tier": "R2",
+      "rarity": "Rare",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_04"
+    },
+    {
+      "tier": "R3",
+      "rarity": "Rare",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_01"
+    },
+    {
+      "tier": "R4",
+      "rarity": "Rare",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantKronos",
+      "map": "Hive_Tyrant_06"
+    },
+    {
+      "tier": "E1",
+      "rarity": "Epic",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_01"
+    },
+    {
+      "tier": "E2",
+      "rarity": "Epic",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_01"
+    },
+    {
+      "tier": "E3",
+      "rarity": "Epic",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_05"
+    },
+    {
+      "tier": "E4",
+      "rarity": "Epic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_05"
+    },
+    {
+      "tier": "E5",
+      "rarity": "Epic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_02"
+    },
+    {
+      "tier": "L1",
+      "rarity": "Legendary",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_03"
+    },
+    {
+      "tier": "L2",
+      "rarity": "Legendary",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_03"
+    },
+    {
+      "tier": "L3",
+      "rarity": "Legendary",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "L4",
+      "rarity": "Legendary",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_02"
+    },
+    {
+      "tier": "L5",
+      "rarity": "Legendary",
+      "boss": "Mortarion",
+      "bossVariant": "Mortarion",
+      "map": "Mortarion_01"
+    },
+    {
+      "tier": "M1",
+      "rarity": "Mythic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_02"
+    },
+    {
+      "tier": "M2",
+      "rarity": "Mythic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_01"
+    },
+    {
+      "tier": "M3",
+      "rarity": "Mythic",
+      "boss": "Magnus",
+      "bossVariant": "Magnus",
+      "map": "Magnus_04"
+    }
+  ]
+}

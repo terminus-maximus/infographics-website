@@ -1,6 +1,7 @@
 import { campaignEventCatalog } from "./campaign-events/catalog";
 import eventData from "./campaign-events/guides.json";
 import { currentGuildRaidSeason } from "./guildRaid";
+import { nextGuildRaidSeason } from "./nextGuildRaidSeason";
 import characterSource from "./campaigns/characters.json";
 import requiredRecommendations from "./campaigns/required-recs.json";
 import guildWars from "./guild-wars/editorial.json";
@@ -179,6 +180,14 @@ const graphicDefinitions: GraphicDefinition[] = [
       category: "raid"
     },
     {
+      title: nextGuildRaidSeason.title,
+      href: nextGuildRaidSeason.href,
+      description: nextGuildRaidSeason.description,
+      image: nextGuildRaidSeason.image,
+      thumbnail: nextGuildRaidSeason.thumbnail,
+      category: "raid",
+    },
+    {
       title: "Boss Meta Guide",
       description: "Meta and alternate teams for every Guild Raid boss, backed by replay research.",
       href: "/guild-raid/boss-meta/",
@@ -229,7 +238,7 @@ const graphicDefinitions: GraphicDefinition[] = [
     {
       title: "Guild Raid Archive",
       href: "/guild-raid/archive",
-      description: "Browse past Guild Raid seasons and infographic archives.",
+      description: "Browse upcoming and past Guild Raid seasons and infographics.",
       image: currentGuildRaidSeason.image,
       thumbnail: "/images/thumbnails/guild-raid-s97-mythic-thumb.png",
       category: "raid"

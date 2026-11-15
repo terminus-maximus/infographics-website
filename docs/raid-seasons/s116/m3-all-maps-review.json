@@ -1,0 +1,628 @@
+{
+  "season": 116,
+  "tier": "M3",
+  "boss": "Magnus",
+  "scheduledMap": "Magnus_04",
+  "scope": "all-maps-exact-tier",
+  "requestedLocalDate": "2026-11-15",
+  "policyVersion": 2,
+  "masterSha256": "eb3c51cf5cf841d6151c792973e65f13ad8b95789b3b4b532f1c18dcd6e4e019",
+  "evidenceOverridesSha256": "80b1e177e6694aeb09138c0d930f4032e3f22069eef618920f0df5188abd1895",
+  "eligibleM3Records": 23,
+  "archetypeCounts": {
+    "AdMech": 4,
+    "Battlesuits": 6,
+    "Custodes": 12,
+    "Laviscus": 1
+  },
+  "before": {
+    "tier": "M3",
+    "rarity": "Mythic",
+    "boss": "Magnus",
+    "map": "Magnus_04",
+    "loop": true,
+    "exactCount": 0,
+    "recommendations": [
+      {
+        "archetype": "Custodes",
+        "kind": "other-map",
+        "sample": 12,
+        "exactSample": 0,
+        "average": 928417,
+        "minimum": 662000,
+        "maximum": 1360000,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 8,
+        "tierCounts": {
+          "M3": 12
+        },
+        "team": {
+          "heroes": [
+            "Kari",
+            "Traj",
+            "Kharn",
+            "Helb",
+            "Dante"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "qkHGtEWLI8Y",
+          "sample": 6
+        },
+        "examples": [
+          {
+            "videoId": "qkHGtEWLI8Y",
+            "url": "https://www.youtube.com/watch?v=qkHGtEWLI8Y",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "Custodes",
+            "damage": 1360000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Helb",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Helb, Dante, Biovore",
+            "teamKey": "Dante|Helb|Kari|Kharn|Traj",
+            "creator": "Ulf",
+            "publishedAt": "10/17/2026 2:54 AM"
+          },
+          {
+            "videoId": "qdyFJXLIr-4",
+            "url": "https://www.youtube.com/watch?v=qdyFJXLIr-4",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "Custodes",
+            "damage": 921000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Helb",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Helb, Dante, Biovore",
+            "teamKey": "Dante|Helb|Kari|Kharn|Traj",
+            "creator": "zelots1991",
+            "publishedAt": "10/18/2026 6:27 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "qkHGtEWLI8Y",
+          "FaS498GzPFw",
+          "fcmEhs3BYS0",
+          "VpFD5AHWyVY",
+          "iRQGloObq0E",
+          "qdyFJXLIr-4",
+          "7AvBMz3SRiE",
+          "vCq4tHydprI",
+          "QY9CYnc9J2A",
+          "b9UIpMdBII8",
+          "4lwsitnyC0U",
+          "9Mb9dSRhPMI"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "Battlesuits",
+        "kind": "other-map",
+        "sample": 6,
+        "exactSample": 0,
+        "average": 850000,
+        "minimum": 720000,
+        "maximum": 1000000,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 3,
+        "tierCounts": {
+          "M3": 6
+        },
+        "team": {
+          "heroes": [
+            "Farsight",
+            "Revas",
+            "Actus",
+            "Darkstrider",
+            "Lhykis"
+          ],
+          "mow": "Reanimator",
+          "sourceVideoId": "j0MYpwr4qj8",
+          "sample": 6
+        },
+        "examples": [
+          {
+            "videoId": "j0MYpwr4qj8",
+            "url": "https://www.youtube.com/watch?v=j0MYpwr4qj8",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_01",
+            "archetype": "Battlesuits",
+            "damage": 1000000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "Reanimator",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, Reanimator",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "11/9/2026 10:43 PM"
+          },
+          {
+            "videoId": "G492iZqWdAo",
+            "url": "https://www.youtube.com/watch?v=G492iZqWdAo",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_01",
+            "archetype": "Battlesuits",
+            "damage": 912000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "Reanimator",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, Reanimator",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "11/6/2026 9:15 PM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "j0MYpwr4qj8",
+          "G492iZqWdAo",
+          "ixeteNMMB-A",
+          "uR2qUG33fwc",
+          "8OavYgLev9w",
+          "uC0wBAzx1og"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "AdMech",
+        "kind": "other-map",
+        "sample": 4,
+        "exactSample": 0,
+        "average": 749925,
+        "minimum": 510000,
+        "maximum": 1019699,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 3,
+        "tierCounts": {
+          "M3": 4
+        },
+        "team": {
+          "heroes": [
+            "Rho",
+            "Tan",
+            "Anu",
+            "Helb",
+            "Sho"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "vj83S8G3Adw",
+          "sample": 4
+        },
+        "examples": [
+          {
+            "videoId": "vj83S8G3Adw",
+            "url": "https://www.youtube.com/watch?v=vj83S8G3Adw",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "AdMech",
+            "damage": 1019699,
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Helb",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "teamText": "Rho, Tan, Anu, Helb, Sho, Biovore",
+            "teamKey": "Anu|Helb|Rho|Sho|Tan",
+            "creator": "Yagyuu",
+            "publishedAt": "10/10/2026 8:47 PM"
+          },
+          {
+            "videoId": "AECjjD5NzFw",
+            "url": "https://www.youtube.com/watch?v=AECjjD5NzFw",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "AdMech",
+            "damage": 800000,
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Helb",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "teamText": "Rho, Tan, Anu, Helb, Sho, Biovore",
+            "teamKey": "Anu|Helb|Rho|Sho|Tan",
+            "creator": "Lyell",
+            "publishedAt": "10/18/2026 12:17 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "vj83S8G3Adw",
+          "AECjjD5NzFw",
+          "52TH7KhFnvM",
+          "P1yYhVBsdXA"
+        ],
+        "maxDistance": 0
+      }
+    ]
+  },
+  "after": {
+    "tier": "M3",
+    "rarity": "Mythic",
+    "boss": "Magnus",
+    "map": "Magnus_04",
+    "loop": true,
+    "exactCount": 0,
+    "recommendations": [
+      {
+        "archetype": "Custodes",
+        "kind": "cross-map",
+        "sample": 12,
+        "exactSample": 0,
+        "average": 928417,
+        "minimum": 662000,
+        "maximum": 1360000,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 8,
+        "tierCounts": {
+          "M3": 12
+        },
+        "team": {
+          "heroes": [
+            "Kari",
+            "Traj",
+            "Kharn",
+            "Helb",
+            "Dante"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "qkHGtEWLI8Y",
+          "sample": 6
+        },
+        "examples": [
+          {
+            "videoId": "qkHGtEWLI8Y",
+            "url": "https://www.youtube.com/watch?v=qkHGtEWLI8Y",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "Custodes",
+            "damage": 1360000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Helb",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Helb, Dante, Biovore",
+            "teamKey": "Dante|Helb|Kari|Kharn|Traj",
+            "creator": "Ulf",
+            "publishedAt": "10/17/2026 2:54 AM"
+          },
+          {
+            "videoId": "qdyFJXLIr-4",
+            "url": "https://www.youtube.com/watch?v=qdyFJXLIr-4",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "Custodes",
+            "damage": 921000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Helb",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Helb, Dante, Biovore",
+            "teamKey": "Dante|Helb|Kari|Kharn|Traj",
+            "creator": "zelots1991",
+            "publishedAt": "10/18/2026 6:27 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "qkHGtEWLI8Y",
+          "FaS498GzPFw",
+          "fcmEhs3BYS0",
+          "VpFD5AHWyVY",
+          "iRQGloObq0E",
+          "qdyFJXLIr-4",
+          "7AvBMz3SRiE",
+          "vCq4tHydprI",
+          "QY9CYnc9J2A",
+          "b9UIpMdBII8",
+          "4lwsitnyC0U",
+          "9Mb9dSRhPMI"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "Battlesuits",
+        "kind": "cross-map",
+        "sample": 6,
+        "exactSample": 0,
+        "average": 850000,
+        "minimum": 720000,
+        "maximum": 1000000,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 3,
+        "tierCounts": {
+          "M3": 6
+        },
+        "team": {
+          "heroes": [
+            "Farsight",
+            "Revas",
+            "Actus",
+            "Darkstrider",
+            "Lhykis"
+          ],
+          "mow": "Reanimator",
+          "sourceVideoId": "j0MYpwr4qj8",
+          "sample": 6
+        },
+        "examples": [
+          {
+            "videoId": "j0MYpwr4qj8",
+            "url": "https://www.youtube.com/watch?v=j0MYpwr4qj8",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_01",
+            "archetype": "Battlesuits",
+            "damage": 1000000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "Reanimator",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, Reanimator",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "11/9/2026 10:43 PM"
+          },
+          {
+            "videoId": "G492iZqWdAo",
+            "url": "https://www.youtube.com/watch?v=G492iZqWdAo",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_01",
+            "archetype": "Battlesuits",
+            "damage": 912000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "Reanimator",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, Reanimator",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "11/6/2026 9:15 PM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "j0MYpwr4qj8",
+          "G492iZqWdAo",
+          "ixeteNMMB-A",
+          "uR2qUG33fwc",
+          "8OavYgLev9w",
+          "uC0wBAzx1og"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "AdMech",
+        "kind": "cross-map",
+        "sample": 4,
+        "exactSample": 0,
+        "average": 749925,
+        "minimum": 510000,
+        "maximum": 1019699,
+        "tiers": [
+          "M3"
+        ],
+        "maps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "creatorCount": 3,
+        "tierCounts": {
+          "M3": 4
+        },
+        "team": {
+          "heroes": [
+            "Rho",
+            "Tan",
+            "Anu",
+            "Helb",
+            "Sho"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "vj83S8G3Adw",
+          "sample": 4
+        },
+        "examples": [
+          {
+            "videoId": "vj83S8G3Adw",
+            "url": "https://www.youtube.com/watch?v=vj83S8G3Adw",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "AdMech",
+            "damage": 1019699,
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Helb",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "teamText": "Rho, Tan, Anu, Helb, Sho, Biovore",
+            "teamKey": "Anu|Helb|Rho|Sho|Tan",
+            "creator": "Yagyuu",
+            "publishedAt": "10/10/2026 8:47 PM"
+          },
+          {
+            "videoId": "AECjjD5NzFw",
+            "url": "https://www.youtube.com/watch?v=AECjjD5NzFw",
+            "boss": "Magnus",
+            "tier": "M3",
+            "map": "Magnus_02",
+            "archetype": "AdMech",
+            "damage": 800000,
+            "heroes": [
+              "Rho",
+              "Tan",
+              "Anu",
+              "Helb",
+              "Sho"
+            ],
+            "mow": "Biovore",
+            "teamText": "Rho, Tan, Anu, Helb, Sho, Biovore",
+            "teamKey": "Anu|Helb|Rho|Sho|Tan",
+            "creator": "Lyell",
+            "publishedAt": "10/18/2026 12:17 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "vj83S8G3Adw",
+          "AECjjD5NzFw",
+          "52TH7KhFnvM",
+          "P1yYhVBsdXA"
+        ],
+        "maxDistance": 0
+      }
+    ]
+  },
+  "graphic": {
+    "tier": "M3",
+    "boss": "Magnus",
+    "map": "Magnus_04",
+    "bossIcon": "/images/replay-library/bosses/Magnus.webp",
+    "mapImage": "/images/replay-library/maps/Magnus_04.webp",
+    "recommendations": [
+      {
+        "archetype": "Custodes",
+        "archetypeIcon": "/images/replay-library/heroes/Kari.webp",
+        "averageDamage": 928417,
+        "sample": 12,
+        "sourceTiers": [
+          "M3"
+        ],
+        "kind": "cross-map",
+        "sourceMaps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "sourceLabel": "Other maps"
+      },
+      {
+        "archetype": "Battlesuits",
+        "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+        "averageDamage": 850000,
+        "sample": 6,
+        "sourceTiers": [
+          "M3"
+        ],
+        "kind": "cross-map",
+        "sourceMaps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "sourceLabel": "Other maps"
+      },
+      {
+        "archetype": "AdMech",
+        "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+        "averageDamage": 749925,
+        "sample": 4,
+        "sourceTiers": [
+          "M3"
+        ],
+        "kind": "cross-map",
+        "sourceMaps": [
+          "Magnus_01",
+          "Magnus_02"
+        ],
+        "sourceLabel": "Other maps"
+      }
+    ]
+  },
+  "unchangedEncounters": 24,
+  "checks": {
+    "completeExactTierPools": "passed",
+    "arithmeticMeans": "passed",
+    "sourceMapsAndTiers": "passed",
+    "scheduledLineupPreserved": "passed",
+    "existingSeasonsAndMasterPreserved": "passed",
+    "selectedTeamsAndExamplesPreserved": "passed",
+    "raidTests": 18,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "buildPages": 196,
+    "desktopAndMobile": "passed",
+    "desktopCssWidth": 1280,
+    "mobileCssWidth": 390,
+    "horizontalPageOverflow": false,
+    "consoleErrors": 0
+  }
+}

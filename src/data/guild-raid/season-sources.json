@@ -34,6 +34,23 @@
         "sha256": "a6933769690f9ae2a4c836198dac7575524f8809bdcc16cc3a1229009c1bc4e0",
         "note": "Dan explicitly confirmed December 2, 2026 and the S115 loop in this chat on November 14, 2026; the reviewed 25-encounter lineup matches production 1.44.88 Config 1."
       }
+    },
+    {
+      "season": 116,
+      "startDate": "2026-12-16",
+      "status": "Ready",
+      "channel": "production",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "appVersion": "1.44.88",
+      "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+      "expectedLineupSha256": "d9df2e0c72723f61a93d1b06d23ba8f11d7d43777abab66edaab8c3137a7ae5a",
+      "dateEvidence": {
+        "kind": "user-confirmed-and-published-news",
+        "file": "docs/raid-seasons/s116/season-evidence.json",
+        "sha256": "ac18a876a2d97bceffe0c2d87eb5cda559e63ecfe6600d1e66e51ebd395c8d71",
+        "note": "Dan confirmed December 16, 2026 and the S116 loop on November 15, 2026. The published Game Update 1.44 Guild Raid Rotation table corroborates the season/date/loop association; the reviewed 25-encounter lineup matches production 1.44.88 Config 2."
+      }
     }
   ]
 }

@@ -1,0 +1,98 @@
+{
+  "season": 116,
+  "status": "Ready",
+  "integratedAt": "2026-11-15T23:00:21.850Z",
+  "reason": "Dan supplied the final PNG, thumbnail and WebP and requested linking the artwork and integrating S116 into the site.",
+  "previousProvenance": {
+    "generatedAt": "2026-11-15T19:48:04.269Z",
+    "masterSha256": "eb3c51cf5cf841d6151c792973e65f13ad8b95789b3b4b532f1c18dcd6e4e019",
+    "lineupSha256": "99a12ffe1b0455cb5cf786212abc294a8d1ab9725611e3f1df153fd5fd64966f",
+    "source": "Reviewed Replay Library master",
+    "lineupSource": {
+      "system": "LocalDatabase",
+      "schemaVersion": 1,
+      "channel": "production",
+      "appVersion": "1.44.88",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+      "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+      "seasonBindingSha256": "d21c343618377389fa3a7279df56824055ad439371fac8ef7089acc1ddec2a85"
+    },
+    "policyVersion": 2,
+    "evidenceOverridesSha256": "80b1e177e6694aeb09138c0d930f4032e3f22069eef618920f0df5188abd1895"
+  },
+  "provenance": {
+    "generatedAt": "2026-11-15T19:48:04.269Z",
+    "masterSha256": "eb3c51cf5cf841d6151c792973e65f13ad8b95789b3b4b532f1c18dcd6e4e019",
+    "lineupSha256": "0a659843fd4cf5ea954844f8ebd08578e6da082a01d004b5e20fdab70940fc46",
+    "source": "Reviewed Replay Library master",
+    "lineupSource": {
+      "system": "LocalDatabase",
+      "schemaVersion": 1,
+      "channel": "production",
+      "appVersion": "1.44.88",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+      "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+      "seasonBindingSha256": "e920fdfefd5ea3d0f1ccc2eee3d146daf59d625c32545ea130732c546c0b73c8"
+    },
+    "policyVersion": 2,
+    "evidenceOverridesSha256": "80b1e177e6694aeb09138c0d930f4032e3f22069eef618920f0df5188abd1895"
+  },
+  "recommendationsSha256": "5608edf5269fd43e269f9071e84a5cd05180f2b4fff44487e5461b145885d245",
+  "replaySnapshotUnchanged": true,
+  "currentSeason": 113,
+  "nextSeason": 114,
+  "assets": [
+    {
+      "path": "public/images/guild-raid-s116.png",
+      "sha256": "83cb6f0b58c716f8b15c3bd061f0649b9fe682260f944876fe569b0201752698"
+    },
+    {
+      "path": "public/images/web/guild-raid-s116.webp",
+      "sha256": "db80906f46130e31d4e357163c9f1d83da81c16d2b42fb64406572026c0277e4"
+    },
+    {
+      "path": "public/images/thumbnails/guild-raid-s116-thumb.png",
+      "sha256": "824a1d30aab5414a1668e86c728e9676f939b4a97d0e3282d4307abf51fd6d27"
+    }
+  ],
+  "entryPoints": [
+    "Complete Archive",
+    "S115 Next Season navigation",
+    "Game Update 1.44 rotation table",
+    "Sitemap"
+  ],
+  "validation": {
+    "raidTests": 18,
+    "astroFiles": 245,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "buildPages": 196,
+    "nextSeasonChecks": "passed",
+    "builtEntryPoints": [
+      "/guild-raid/archive/",
+      "/guild-raid/s115/",
+      "/news/game-update-1-44/"
+    ],
+    "artworkHashesPreserved": true,
+    "all25Bosses": true,
+    "desktopWidth": 1365,
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": false,
+    "hubSeasonCardsUnique": true,
+    "sitemapIncludesS116": true,
+    "fullSizeLinks": 2,
+    "socialThumbnailVerified": true,
+    "discoverySeasonCards": [
+      "Current Season",
+      "Next Season"
+    ],
+    "numberedDiscoveryCards": 0,
+    "archiveDescending": true
+  },
+  "discoveryPolicy": "Homepage, Guild Raid hub and More to Explore use Current Season and Next Season only; the Archive provides the complete numbered season list, newest first.",
+  "correctionReason": "Dan requested removing the individual S114/S115/S116 discovery cards and preserving the established Current Season / Next Season navigation."
+}

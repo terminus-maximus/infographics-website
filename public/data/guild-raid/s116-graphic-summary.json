@@ -1,0 +1,221 @@
+{
+  "season": 116,
+  "provenance": {
+    "generatedAt": "2026-11-15T19:48:04.269Z",
+    "masterSha256": "eb3c51cf5cf841d6151c792973e65f13ad8b95789b3b4b532f1c18dcd6e4e019",
+    "lineupSha256": "0a659843fd4cf5ea954844f8ebd08578e6da082a01d004b5e20fdab70940fc46",
+    "source": "Reviewed Replay Library master",
+    "lineupSource": {
+      "system": "LocalDatabase",
+      "schemaVersion": 1,
+      "channel": "production",
+      "appVersion": "1.44.88",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+      "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+      "seasonBindingSha256": "e920fdfefd5ea3d0f1ccc2eee3d146daf59d625c32545ea130732c546c0b73c8"
+    },
+    "policyVersion": 2,
+    "evidenceOverridesSha256": "80b1e177e6694aeb09138c0d930f4032e3f22069eef618920f0df5188abd1895"
+  },
+  "policy": {
+    "minimumSample": 5,
+    "maximumTierDistance": 2,
+    "maximumArchetypes": 3
+  },
+  "note": "Observed arithmetic means across archetype variants. Pooled tiers are raw observations, not normalized predictions. Carry the source-tier label into the graphic. Only samples of at least three replays appear here; smaller samples remain visible on the page. Cross-map entries are authorized exact-tier observations from other maps: carry their Other maps label and source maps into the graphic; they are not scheduled-map predictions.",
+  "bosses": [
+    {
+      "tier": "M3",
+      "boss": "Magnus",
+      "map": "Magnus_04",
+      "bossIcon": "/images/replay-library/bosses/Magnus.webp",
+      "mapImage": "/images/replay-library/maps/Magnus_04.webp",
+      "recommendations": [
+        {
+          "archetype": "Custodes",
+          "archetypeIcon": "/images/replay-library/heroes/Kari.webp",
+          "averageDamage": 928417,
+          "sample": 12,
+          "sourceTiers": [
+            "M3"
+          ],
+          "kind": "cross-map",
+          "sourceMaps": [
+            "Magnus_01",
+            "Magnus_02"
+          ],
+          "sourceLabel": "Other maps"
+        },
+        {
+          "archetype": "Battlesuits",
+          "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+          "averageDamage": 850000,
+          "sample": 6,
+          "sourceTiers": [
+            "M3"
+          ],
+          "kind": "cross-map",
+          "sourceMaps": [
+            "Magnus_01",
+            "Magnus_02"
+          ],
+          "sourceLabel": "Other maps"
+        },
+        {
+          "archetype": "AdMech",
+          "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+          "averageDamage": 749925,
+          "sample": 4,
+          "sourceTiers": [
+            "M3"
+          ],
+          "kind": "cross-map",
+          "sourceMaps": [
+            "Magnus_01",
+            "Magnus_02"
+          ],
+          "sourceLabel": "Other maps"
+        }
+      ]
+    },
+    {
+      "tier": "M2",
+      "boss": "Cawl",
+      "map": "Cawl_01",
+      "bossIcon": "/images/replay-library/bosses/Cawl.webp",
+      "mapImage": "/images/replay-library/maps/Cawl_01.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 973706,
+          "sample": 17,
+          "sourceTiers": [
+            "M2"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 881500,
+          "sample": 6,
+          "sourceTiers": [
+            "M2"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Custodes",
+          "archetypeIcon": "/images/replay-library/heroes/Kari.webp",
+          "averageDamage": 632800,
+          "sample": 5,
+          "sourceTiers": [
+            "L5",
+            "M2"
+          ],
+          "kind": "pooled"
+        }
+      ]
+    },
+    {
+      "tier": "M1",
+      "boss": "Ghaz",
+      "map": "Ghaz_02",
+      "bossIcon": "/images/replay-library/bosses/Ghaz.webp",
+      "mapImage": "/images/replay-library/maps/Ghaz_02.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1344615,
+          "sample": 13,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Battlesuits",
+          "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+          "averageDamage": 1110000,
+          "sample": 6,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "exact"
+        }
+      ]
+    },
+    {
+      "tier": "L5",
+      "boss": "Mortarion",
+      "map": "Mortarion_01",
+      "bossIcon": "/images/replay-library/bosses/Mortarion.webp",
+      "mapImage": "/images/replay-library/maps/Mortarion_01.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 910000,
+          "sample": 4,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "AdMech",
+          "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+          "averageDamage": 837714,
+          "sample": 7,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 792000,
+          "sample": 3,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "exact"
+        }
+      ]
+    },
+    {
+      "tier": "L4",
+      "boss": "Avatar",
+      "map": "Avatar_02",
+      "bossIcon": "/images/replay-library/bosses/Avatar.webp",
+      "mapImage": "/images/replay-library/maps/Avatar_02.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1665818,
+          "sample": 22,
+          "sourceTiers": [
+            "L4"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 1150000,
+          "sample": 5,
+          "sourceTiers": [
+            "L4"
+          ],
+          "kind": "exact"
+        }
+      ]
+    }
+  ]
+}

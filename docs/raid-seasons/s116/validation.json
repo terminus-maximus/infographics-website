@@ -1,0 +1,181 @@
+{
+  "season": 116,
+  "reviewedLocalDate": "2026-11-15",
+  "status": "Local draft",
+  "config": "guild_boss_season_config_2",
+  "source": {
+    "system": "LocalDatabase",
+    "schemaVersion": 1,
+    "channel": "production",
+    "appVersion": "1.44.88",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+    "configFingerprint": "c5403d38b347ad8da75a3000d5958b79ad37fae70a9e7b3ee7745cff910de180",
+    "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+    "seasonBindingSha256": "d21c343618377389fa3a7279df56824055ad439371fac8ef7089acc1ddec2a85"
+  },
+  "masterSha256": "eb3c51cf5cf841d6151c792973e65f13ad8b95789b3b4b532f1c18dcd6e4e019",
+  "generatedAt": "2026-11-15T19:48:04.269Z",
+  "encounters": 25,
+  "recommendations": 75,
+  "examples": 115,
+  "eligibleMasterRecords": 2234,
+  "rejectedReviewedRecords": [
+    {
+      "videoId": "tCe07HgytEk",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "T-NK9O9CCVs",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "VOJRHrofOtI",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "f8AzedwaS9Q",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "Nu5NMhP-IMM",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "B_E80nEo7N4",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "OH9oEgYEUyg",
+      "reason": "Incomplete five-hero team"
+    }
+  ],
+  "loop": [
+    {
+      "tier": "M3",
+      "boss": "Magnus",
+      "map": "Magnus_04",
+      "graphicArchetypes": [
+        "Custodes",
+        "Battlesuits",
+        "AdMech"
+      ]
+    },
+    {
+      "tier": "M2",
+      "boss": "Cawl",
+      "map": "Cawl_01",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Neuro",
+        "Custodes"
+      ]
+    },
+    {
+      "tier": "M1",
+      "boss": "Ghaz",
+      "map": "Ghaz_02",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Battlesuits"
+      ]
+    },
+    {
+      "tier": "L5",
+      "boss": "Mortarion",
+      "map": "Mortarion_01",
+      "graphicArchetypes": [
+        "Laviscus",
+        "AdMech",
+        "Neuro"
+      ]
+    },
+    {
+      "tier": "L4",
+      "boss": "Avatar",
+      "map": "Avatar_02",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Neuro"
+      ]
+    }
+  ],
+  "coverageNotes": [
+    "M3 Magnus / Magnus_04 uses an explicit user-approved all-maps exact-M3 exception. All 23 eligible M3 Magnus records were evaluated: Custodes 928,417 (12 replays), Battlesuits 850,000 (6), and AdMech 749,925 (4) qualify for the graphic. Laviscus has one replay and is outside the three displayed archetypes. Source maps Magnus_01 and Magnus_02 remain labeled Other maps; these are not Magnus_04-specific damage averages.",
+    "M2 Cawl and L5 Mortarion each have three qualifying graphic archetypes; M1 Ghaz and L4 Avatar each have two.",
+    "M2 Cawl Custodes pools L5 and M2 on Cawl_01; actual source tiers and sample sizes remain visible.",
+    "Seven VALID_REPLAY rows were excluded for incomplete five-hero teams.",
+    "Epic and earlier-tier recommendations retain actual higher source tiers. No replay collection or video playback verification was performed."
+  ],
+  "checks": {
+    "generatorCheck": "passed",
+    "raidTests": {
+      "passed": 18,
+      "failed": 0
+    },
+    "portableSeasonCheck": {
+      "seasons": 3,
+      "result": "passed"
+    },
+    "astro": {
+      "files": 245,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "evidenceArithmeticAndExamples": "passed",
+    "graphicAgreement": "passed",
+    "preservedExistingSeasonSnapshotsAndMaster": "passed",
+    "build": {
+      "pages": 196,
+      "result": "passed"
+    },
+    "builtLocalTargets": {
+      "checked": 246,
+      "uniqueImages": 155,
+      "missing": [],
+      "sitemap": "passed"
+    },
+    "browser": {
+      "url": "http://127.0.0.1:4322/guild-raid/s116/",
+      "desktopCssWidth": 1365,
+      "mobileCssWidth": 390,
+      "horizontalPageOverflow": false,
+      "consoleErrors": 0,
+      "passed": [
+        "25 encounters and maps in descending tier order",
+        "M3 → M2 → M1 → L5 → L4 repeat loop",
+        "Magnus all-map exact-M3 averages, Other maps labels, source maps and actual replay tiers at desktop/mobile widths",
+        "Inline map artwork and five hero links plus MoW link per team",
+        "One boss open at a time; active boss can close; Collapse all",
+        "Epic averages retain actual source tiers without Reference labels",
+        "Epic and Repeat Loop filters; boss search; empty search state",
+        "Hash navigation clears filters and opens the requested boss",
+        "Replay damage sorting changes row order and aria-sort",
+        "Mobile team layout and horizontally scrollable replay tables",
+        "Damage data → Related Guides → More to Explore"
+      ],
+      "magnusOverrideReview": {
+        "desktopCssWidth": 1280,
+        "mobileCssWidth": 390,
+        "horizontalPageOverflow": false,
+        "consoleErrors": 0,
+        "result": "passed"
+      }
+    }
+  },
+  "skillUpdate": {
+    "file": "/Users/danfoster01/.codex/skills/guild_raid_v2/SKILL.md",
+    "change": "Always check published /news season evidence before requesting confirmation; matching Game Update 1.44 schedule can establish the association.",
+    "validation": "Existing guild_raid_v2 name fails the current hyphen-only naming rule. All remaining validator checks pass with only that name normalized in a temporary copy; installed name preserved."
+  },
+  "screenshots": {
+    "desktop": "/Users/danfoster01/.codex/visualizations/2026/11/15/01a1e0a6-49c4-70c3-b130-e96101f1018c/s116-desktop.png",
+    "mobile": "/Users/danfoster01/.codex/visualizations/2026/11/15/01a1e0a6-49c4-70c3-b130-e96101f1018c/s116-mobile.png",
+    "magnusDesktop": "/Users/danfoster01/.codex/visualizations/2026/11/15/01a1e0a6-49c4-70c3-b130-e96101f1018c/s116-m3-all-maps-desktop.png",
+    "magnusMobile": "/Users/danfoster01/.codex/visualizations/2026/11/15/01a1e0a6-49c4-70c3-b130-e96101f1018c/s116-m3-all-maps-mobile.png"
+  },
+  "evidenceOverridesSha256": "80b1e177e6694aeb09138c0d930f4032e3f22069eef618920f0df5188abd1895",
+  "policyVersion": 2,
+  "evidenceOverrideReview": "docs/raid-seasons/s116/m3-all-maps-review.json"
+}

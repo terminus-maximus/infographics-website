@@ -5,20 +5,10 @@ import Footer from "../../components/Footer.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
 import { guildRaidImageExists } from "../../lib/guildRaidAssets";
 import { guildRaidSeasonStartDate, formatGuildRaidStartDate } from "../../lib/guildRaidDates";
+import { readyGuildRaidSeasons } from "../../data/guildRaid";
 
 const seasons = [
-  {
-    title: "Season 115",
-    href: "/guild-raid/s115",
-    seasonNumber: 115,
-    thumbnail: "/images/thumbnails/guild-raid-s115-thumb.png"
-  },
-  {
-    title: "Season 114",
-    href: "/guild-raid/s114",
-    seasonNumber: 114,
-    thumbnail: "/images/thumbnails/guild-raid-s114-thumb.png"
-  },
+  ...[...readyGuildRaidSeasons].reverse(),
   {
     title: "Season 113",
     href: "/guild-raid/s113",
@@ -126,8 +116,8 @@ const seasons = [
 
 <Layout
   title="Guild Raid Archive | Terminus Maximus Infographics"
-  description="Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives."
-  image="/images/web/guild-raid-s105-mythic.webp"
+  description="Browse upcoming and past Guild Raid seasons, boss lineups, maps, and infographics."
+  image={seasons[0].thumbnail}
 >
   <Header />
 
@@ -135,7 +125,7 @@ const seasons = [
   <section class="hero">
     <h1>Guild Raid Archive</h1>
     <p>
-      Browse previous Guild Raid seasons, boss lineups, maps, and infographic archives.
+      Browse upcoming and past Guild Raid seasons, boss lineups, maps, and infographics.
     </p>
   </section>
 

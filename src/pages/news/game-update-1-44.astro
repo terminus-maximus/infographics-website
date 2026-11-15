@@ -6,6 +6,7 @@ import InfographicUpdated from '../../components/InfographicUpdated.astro';
 import RelatedDiscussions from '../../components/RelatedDiscussions.astro';
 import NewsIcons from '../../components/news/NewsIcons.astro';
 import { gameUpdate144 as article } from '../../data/news';
+import { readyGuildRaidSeasons } from '../../data/guildRaid';
 import { heroIcon, factionIcon, bossIcon, rewardIcon, darasIcon, boudicariIcon, tsonjiIcon, ancientInscription, mutantForm, relicBoltPistol } from '../../data/news/icons';
 import '../../styles/news.css';
 
@@ -219,7 +220,10 @@ const moreEvents = [
         <div class="table-scroll" tabindex="0" role="region" aria-label="Guild Raid Rotation">
           <table class="raid-table">
             <thead><tr><th scope="col">Season</th><th scope="col">L4</th><th scope="col">L5</th><th scope="col">M1</th><th scope="col">M2</th><th scope="col">M3</th></tr></thead>
-            <tbody>{raidSeasons.map(([season, dates, ...bosses]) => <tr><th scope="row">Season {season}<small>{dates}</small></th>{bosses.map(boss => <td><NewsIcons items={[bossIcon(boss)]} labels={false} size={58} center /></td>)}</tr>)}</tbody>
+            <tbody>{raidSeasons.map(([season, dates, ...bosses]) => {
+              const guide = readyGuildRaidSeasons.find(guide => guide.seasonNumber === Number(season));
+              return <tr><th scope="row">{guide ? <a href={guide.href}>Season {season}</a> : <>Season {season}</>}<small>{dates}</small></th>{bosses.map(boss => <td><NewsIcons items={[bossIcon(boss)]} labels={false} size={58} center /></td>)}</tr>;
+            })}</tbody>
           </table>
         </div>
         <p><a href="/guild-raid/">Guild Raid teams and replays →</a></p>
