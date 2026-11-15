@@ -6,6 +6,7 @@ import SeasonBoss from './SeasonBoss.astro';
 import SeasonPromo from './SeasonPromo.astro';
 import RecommendationSections from '../RecommendationSections.astro';
 import { guildRaidImageExists } from '../../lib/guildRaidAssets';
+import { formatGuildRaidStartDate } from '../../lib/guildRaidDates';
 import type { RaidSeasonGuide, RaidSeasonPromo } from '../../lib/raidSeasonGuideTypes';
 import { TIERS } from '../../lib/raidSeasonGuide.mjs';
 import { readFile } from 'node:fs/promises';
@@ -25,7 +26,6 @@ const displaySize = imageAvailable ? await imageMetadata(await readFile(resolve(
 const shareSize = imageAvailable ? await imageMetadata(await readFile(resolve('public', shareImage.slice(1)))) : undefined;
 const infographicTitle = `${title} - Legendary 4 to Mythic 3`;
 const descending = <T extends { tier: string }>(slots: T[]) => [...slots].sort((a, b) => TIERS.indexOf(b.tier) - TIERS.indexOf(a.tier));
-const dateLabel = (date: string) => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });
 const sections = [
   { id: 'repeat-loop', title: 'Repeat Loop', slots: descending(guide.slots.filter(s => s.loop)) },
   { id: 'legendary', title: 'Legendary', slots: descending(guide.slots.filter(s => /^L[123]$/.test(s.tier))) },
@@ -42,7 +42,7 @@ const sections = [
     <section class="infographic-section">
       <header class="guide-heading">
         <h1>Season {guide.season} Infographic</h1>
-        <p>{dateLabel(guide.startDate)}</p>
+        <p><time datetime={guide.startDate}>{formatGuildRaidStartDate(guide.startDate)}</time></p>
       </header>
       <div class="guide-card">
         <h2>Legendary 4 – Mythic 3</h2>

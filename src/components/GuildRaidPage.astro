@@ -6,6 +6,7 @@ import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
 import ReplayIcon from "./replay-library/ReplayIcon.astro";
 import RecommendationSections from "./RecommendationSections.astro";
 import { guildRaidImageExists } from "../lib/guildRaidAssets";
+import { guildRaidSeasonStartDate, formatGuildRaidStartDate } from "../lib/guildRaidDates";
 import replayCsv from "../data/GR-replays-v2.csv?raw";
 import replayRows from "../data/replay-library/PgC5E7jYNBPh8SoE9CGtXMH.json";
 import bossRows from "../data/replay-library/bosses.json";
@@ -35,8 +36,7 @@ interface Props {
   title: string;
   description: string;
   sectionTitle: string;
-  // Seasons 97–101 have infographic-only pages and no curated replay dataset.
-  seasonNumber?: string | number;
+  seasonNumber: string | number;
   guides?: GuildRaidGuide[];
 }
 
@@ -56,6 +56,7 @@ const {
   seasonNumber,
   guides: requestedGuides = []
 } = Astro.props;
+const startDate = guildRaidSeasonStartDate(seasonNumber);
 
 // Artwork appears automatically on the next build once the files are added.
 const guides = requestedGuides.map((guide) => ({
@@ -242,7 +243,10 @@ const guideReplaySections = guides.map((guide) => {
 
   <main>
   <section class="infographic-section">
-    <h2>{sectionTitle}</h2>
+    <header class="guide-heading">
+      <h2>{sectionTitle}</h2>
+      <p><time datetime={startDate}>{formatGuildRaidStartDate(startDate)}</time></p>
+    </header>
 
     <div class="guide-grid">
       {guideReplaySections.map(({ guide, replayGroups }) => (
@@ -371,6 +375,24 @@ const guideReplaySections = guides.map((guide) => {
     margin-top: 0;
   }
 
+  .guide-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .5rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .guide-heading h2 {
+    margin: 0;
+  }
+
+  .guide-heading p {
+    margin: 0 0 0 auto;
+    color: #aaa;
+    font-size: .85rem;
+  }
+
   .guide-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -430,6 +452,10 @@ const guideReplaySections = guides.map((guide) => {
     }
 
   @media (max-width: 700px) {
+    .guide-heading p {
+      margin-left: 0;
+    }
+
     main {
       padding: 1.25rem;
     }

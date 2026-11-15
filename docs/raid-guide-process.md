@@ -188,6 +188,7 @@ On November 14, 2026, Dan requested this exception for **S115 M2 Ghaz / Ghaz_01*
 
 ## Page experience
 
+- Season headers use a small gray start date, with white `S115 starts Dec 2, 2026` captions on archive cards. Both use `src/lib/guildRaidDates.ts` for formatting; registered seasons keep their verified dates. On November 15, 2026, Dan confirmed the exact 14-day cadence for historical display dates, anchored to S114 on November 18, 2026 (S113: November 4; S97: March 25). This display calculation does not establish lineup/configuration bindings.
 - `SeasonGuide.astro` supplies the reusable page; a season route passes only its saved guide. The page follows the existing Guild Raid title, typography, gold accent, gray panels and spacing.
 - All 25 encounters remain available. Display the loop M3, M2, M1, L5, L4, then earlier Legendary, Epic and early tiers in descending order. Search and filters narrow the list.
 - Collapsed rows contain boss icon/name, season tier, the canonical map name and thumbnail, and archetype averages with source tiers and sample sizes. Early tiers use lighter rows.

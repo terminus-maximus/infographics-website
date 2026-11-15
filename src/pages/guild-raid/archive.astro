@@ -4,123 +4,124 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import RecommendationSections from "../../components/RecommendationSections.astro";
 import { guildRaidImageExists } from "../../lib/guildRaidAssets";
+import { guildRaidSeasonStartDate, formatGuildRaidStartDate } from "../../lib/guildRaidDates";
 
 const seasons = [
   {
     title: "Season 115",
     href: "/guild-raid/s115",
-    description: "Guild Raid Season 115 maps, teams, replays and infographic.",
+    seasonNumber: 115,
     thumbnail: "/images/thumbnails/guild-raid-s115-thumb.png"
   },
   {
     title: "Season 114",
     href: "/guild-raid/s114",
-    description: "Guild Raid Season 114 maps, teams, replays and infographic.",
+    seasonNumber: 114,
     thumbnail: "/images/thumbnails/guild-raid-s114-thumb.png"
   },
   {
     title: "Season 113",
     href: "/guild-raid/s113",
-    description: "Guild Raid Season 113 infographics and boss lineup archive.",
+    seasonNumber: 113,
     thumbnail: "/images/web/guild-raid-s113-mythic.webp"
   },
   {
     title: "Season 112",
     href: "/guild-raid/s112",
-    description: "Guild Raid Season 112 infographics and boss lineup archive.",
+    seasonNumber: 112,
     thumbnail: "/images/thumbnails/guild-raid-s112-mythic-thumb.png"
   },
   {
     title: "Season 111",
     href: "/guild-raid/s111",
-    description: "Guild Raid Season 111 infographics and boss lineup archive.",
+    seasonNumber: 111,
     thumbnail: "/images/web/guild-raid-s111-mythic.webp"
   },
   {
     title: "Season 110",
     href: "/guild-raid/s110",
-    description: "Guild Raid Season 110 infographics and boss lineup archive.",
+    seasonNumber: 110,
     thumbnail: "/images/web/guild-raid-s110-mythic.webp"
   },
   {
     title: "Season 109",
     href: "/guild-raid/s109",
-    description: "Guild Raid Season 109 infographics and boss lineup archive.",
+    seasonNumber: 109,
     thumbnail: "/images/web/guild-raid-s109-mythic.webp"
   },
   {
     title: "Season 108",
     href: "/guild-raid/s108",
-    description: "Guild Raid Season 108 infographics and boss lineup archive.",
+    seasonNumber: 108,
     thumbnail: "/images/web/guild-raid-s108-mythic.webp"
   },
   {
     title: "Season 107",
     href: "/guild-raid/s107",
-    description: "Guild Raid Season 107 infographics and boss lineup archive.",
+    seasonNumber: 107,
     thumbnail: "/images/web/guild-raid-s107-mythic.webp"
   },
   {
     title: "Season 106",
     href: "/guild-raid/s106",
-    description: "Guild Raid Season 106 infographics and boss lineup archive.",
+    seasonNumber: 106,
     thumbnail: "/images/web/guild-raid-s106-mythic.webp"
   },
   {
     title: "Season 105",
     href: "/guild-raid/s105",
-    description: "Guild Raid Season 105 infographics and boss lineup archive.",
+    seasonNumber: 105,
     thumbnail: "/images/web/guild-raid-s105-mythic.webp"
   },
   {
     title: "Season 104",
     href: "/guild-raid/s104",
-    description: "Guild Raid Season 104 infographics and boss lineup archive.",
+    seasonNumber: 104,
     thumbnail: "/images/web/guild-raid-s104-mythic.webp"
   },
   {
     title: "Season 103",
     href: "/guild-raid/s103",
-    description: "Guild Raid Season 103 infographics and boss lineup archive.",
+    seasonNumber: 103,
     thumbnail: "/images/web/guild-raid-s103-mythic.webp"
   },
   {
     title: "Season 102",
     href: "/guild-raid/s102",
-    description: "Guild Raid Season 102 infographics and boss lineup archive.",
+    seasonNumber: 102,
     thumbnail: "/images/web/guild-raid-s102-mythic.webp"
   },
   {
     title: "Season 101",
     href: "/guild-raid/s101",
-    description: "Guild Raid Season 101 infographics and boss lineup archive.",
+    seasonNumber: 101,
     thumbnail: "/images/web/guild-raid-s101-mythic.webp"
   },
     {
     title: "Season 100",
     href: "/guild-raid/s100",
-    description: "Guild Raid Season 100 infographics and boss lineup archive.",
+    seasonNumber: 100,
     thumbnail: "/images/web/guild-raid-s100-mythic.webp"
   },
     {
     title: "Season 99",
     href: "/guild-raid/s099",
-    description: "Guild Raid Season 99 infographics and boss lineup archive.",
+    seasonNumber: 99,
     thumbnail: "/images/web/guild-raid-s99-mythic.webp"
   },
     {
     title: "Season 98",
     href: "/guild-raid/s098",
-    description: "Guild Raid Season 98 infographics and boss lineup archive.",
+    seasonNumber: 98,
     thumbnail: "/images/web/guild-raid-s98-mythic.webp"
   },
     {
     title: "Season 97",
     href: "/guild-raid/s097",
-    description: "Guild Raid Season 97 infographics and boss lineup archive.",
+    seasonNumber: 97,
     thumbnail: "/images/web/guild-raid-s97-mythic.webp"
   }
-];
+].map(season => ({ ...season, startDate: guildRaidSeasonStartDate(season.seasonNumber) }));
 ---
 
 <Layout
@@ -155,7 +156,7 @@ const seasons = [
 
           <div class="card-content">
             <h3>{season.title}</h3>
-            <p>{season.description}</p>
+            <p>S{season.seasonNumber} starts <time datetime={season.startDate}>{formatGuildRaidStartDate(season.startDate)}</time></p>
           </div>
         </a>
       ))}
@@ -259,7 +260,7 @@ const seasons = [
   }
 
   .card-content p {
-    color: #cccccc;
+    color: #ffffff;
     line-height: 1.5;
     margin-bottom: 0;
   }
