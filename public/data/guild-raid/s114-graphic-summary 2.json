@@ -1,0 +1,219 @@
+{
+  "season": 114,
+  "provenance": {
+    "generatedAt": "2026-11-13T18:02:03.645Z",
+    "masterSha256": "8ede9181225c1bf4284d5e4edd33c7ad29620ae8690dd6223420e6d93df27456",
+    "lineupSha256": "17a44257e386858c02926fa20cc164e49e50c71924580fbb372de04fb302aeaa",
+    "source": "Reviewed Replay Library master",
+    "lineupSource": {
+      "system": "LocalDatabase",
+      "schemaVersion": 1,
+      "channel": "production",
+      "appVersion": "1.44.88",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
+      "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+      "seasonBindingSha256": "c331327fa00cdb240c2d72bc6f637d4a89d8ad753933388840b7f82720a62432"
+    },
+    "policyVersion": 1
+  },
+  "policy": {
+    "minimumSample": 5,
+    "maximumTierDistance": 2,
+    "maximumArchetypes": 3
+  },
+  "note": "Observed arithmetic means across archetype variants. Pooled tiers are raw observations, not normalized predictions. Carry the source-tier label into the graphic. Only samples of at least three replays appear here; smaller samples remain visible on the page.",
+  "bosses": [
+    {
+      "tier": "M3",
+      "boss": "Mortarion",
+      "map": "Mortarion_04",
+      "bossIcon": "/images/replay-library/bosses/Mortarion.webp",
+      "mapImage": "/images/replay-library/maps/Mortarion_04.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1578316,
+          "sample": 19,
+          "sourceTiers": [
+            "M2"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 854077,
+          "sample": 13,
+          "sourceTiers": [
+            "M1",
+            "M2"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "AdMech",
+          "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+          "averageDamage": 654545,
+          "sample": 11,
+          "sourceTiers": [
+            "M1",
+            "M2"
+          ],
+          "kind": "pooled"
+        }
+      ]
+    },
+    {
+      "tier": "M2",
+      "boss": "Szarekh",
+      "map": "Szarekh_01",
+      "bossIcon": "/images/replay-library/bosses/Szarekh.webp",
+      "mapImage": "/images/replay-library/maps/Szarekh_01.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1996000,
+          "sample": 8,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "Battlesuits",
+          "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+          "averageDamage": 1390000,
+          "sample": 3,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "AdMech",
+          "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+          "averageDamage": 1382857,
+          "sample": 7,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "pooled"
+        }
+      ]
+    },
+    {
+      "tier": "M1",
+      "boss": "Lion",
+      "map": "Lion_03",
+      "bossIcon": "/images/replay-library/bosses/Lion.webp",
+      "mapImage": "/images/replay-library/maps/Lion_03.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 798200,
+          "sample": 30,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 762600,
+          "sample": 5,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Battlesuits",
+          "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+          "averageDamage": 584000,
+          "sample": 5,
+          "sourceTiers": [
+            "M1"
+          ],
+          "kind": "exact"
+        }
+      ]
+    },
+    {
+      "tier": "L5",
+      "boss": "Cawl",
+      "map": "Cawl_04",
+      "bossIcon": "/images/replay-library/bosses/Cawl.webp",
+      "mapImage": "/images/replay-library/maps/Cawl_04.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1135455,
+          "sample": 11,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "exact"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 934000,
+          "sample": 10,
+          "sourceTiers": [
+            "L5"
+          ],
+          "kind": "exact"
+        }
+      ]
+    },
+    {
+      "tier": "L4",
+      "boss": "Riptide",
+      "map": "Riptide_02",
+      "bossIcon": "/images/replay-library/bosses/Riptide.webp",
+      "mapImage": "/images/replay-library/maps/Riptide_02.webp",
+      "recommendations": [
+        {
+          "archetype": "Laviscus",
+          "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+          "averageDamage": 1174000,
+          "sample": 10,
+          "sourceTiers": [
+            "L3"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "AdMech",
+          "archetypeIcon": "/images/replay-library/heroes/Rho.webp",
+          "averageDamage": 1158950,
+          "sample": 14,
+          "sourceTiers": [
+            "L2",
+            "L3",
+            "M1"
+          ],
+          "kind": "pooled"
+        },
+        {
+          "archetype": "Neuro",
+          "archetypeIcon": "/images/replay-library/heroes/Neuro.webp",
+          "averageDamage": 1095417,
+          "sample": 12,
+          "sourceTiers": [
+            "L3",
+            "M1"
+          ],
+          "kind": "pooled"
+        }
+      ]
+    }
+  ]
+}

@@ -34,4 +34,16 @@ const padded = resolveNextGuildRaidSeason("97", ["../pages/guild-raid/s098.astro
 assert.equal(padded.href, "/guild-raid/s098");
 assert.equal(padded.webImage, "/images/web/guild-raid-s98-mythic.webp");
 
+const v2 = resolveNextGuildRaidSeason("113", ["../pages/guild-raid/s114.astro"], [114]);
+assert.equal(v2.fullGuideHref, "/guild-raid/s114");
+assert.equal(v2.image, "/images/guild-raid-s114.png");
+assert.equal(v2.webImage, "/images/web/guild-raid-s114.webp");
+assert.equal(v2.thumbnail, "/images/thumbnails/guild-raid-s114-thumb.png");
+assert.equal(v2.imageAlt, "Guild Raid Season 114 Infographic");
+
+// A saved binding alone must not create a public season link.
+const unpublished = resolveNextGuildRaidSeason("113", [], [114]);
+assert.equal(unpublished.fullGuideHref, null);
+assert.equal(unpublished.image, "/images/guild-raid-s113-coming-soon.png");
+
 console.log("Next Season checks passed: available guide, upcoming preview, new guide discovery, and exact season matching.");

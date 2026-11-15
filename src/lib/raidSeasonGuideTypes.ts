@@ -40,3 +40,8 @@ export interface RaidSeasonGuide {
   policy: { minimumSample: number; maximumTierDistance: number };
 }
 
+export interface RaidSeasonPromo {
+  code: string;
+  rewards: { amount: number; label: string; icon: string }[];
+}
+

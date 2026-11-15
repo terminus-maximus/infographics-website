@@ -1,17 +1,17 @@
 # Guild Raid guide process — v2
 
-**November 13 live-data refresh.** S114 is now bound to production **1.44.88**, generation `08c5721cbf6ec4ed5e6a`, catalog SHA-256 `aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4`. All 25 normalized encounter/map fingerprints and the repeat loop match the previous binding. Team selections and damage averages are unchanged. The editorial Design preview status and season date are separate from the live game source and remain unchanged. [Audit and validation](game-data-1.44-live-audit.md).
+**November 13 live-data refresh.** S114 is bound to production **1.44.88**, generation `08c5721cbf6ec4ed5e6a`, catalog SHA-256 `aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4`. All 25 normalized encounter/map fingerprints and the repeat loop match the previous binding. Team selections and damage averages are unchanged. [Audit and validation](game-data-1.44-live-audit.md). On November 14, the guide moved to its permanent route with editorial status `Ready`; this changed no replay evidence or season date.
 
 The season page becomes the complete guide. One graphic summarizes the five loop bosses, displayed in descending order: M3, M2, M1, L5, L4. Both use the same season snapshot; no image is required to build or use the page.
 
-This is the go-forward workflow from S114, implemented by the local `guild_raid_v2` skill at `/Users/danfoster01/.codex/skills/guild_raid_v2/SKILL.md`. S114 is the reference implementation at `/guild-raid/previews/s114/`; accepting this process does not publish it or switch the live season. The older `raid_guide_replays` skill remains available for explicitly requested legacy CSV work. V2 does not update the replay master or historical curated CSVs.
+This is the go-forward workflow from S114, implemented by the local `guild_raid_v2` skill at `/Users/danfoster01/.codex/skills/guild_raid_v2/SKILL.md`. S114 is the reference implementation at `/guild-raid/s114/`. The old S114 preview page is removed; Cloudflare redirects its old URL to the permanent guide. Creating a route locally does not publish it or switch the live season. The older `raid_guide_replays` skill remains available for explicitly requested legacy CSV work. V2 does not update the replay master or historical curated CSVs.
 
 ## The recurring work
 
 1. **Bind the season to LocalDatabase.** Capture the selected game build with LocalDatabase's `scripts/guild_raids.py` (see below). Register the season and verified start date in `src/data/guild-raid/season-sources.json`, pinning its immutable generation, channel, catalog checksum and configuration fingerprint. Match the actual boss/map lineup; config numbers are local to a game build. There is no Google Sheet input or implicit next-season projection.
 2. **Generate the guide snapshot.** Run `node scripts/build-raid-season.mjs --season 114`. This reads the pinned LocalDatabase catalog and reviewed Replay Library master, validates the mapping and assets, then writes the frozen source copy, all 25 lineup slots, guide JSON and compact graphic-summary JSON together. Use `--local-database /absolute/path/LocalDatabase` or `--master /absolute/path/replays_master.csv` when a source moves. The page consumes saved JSON; deploying it requires neither sibling project. `--frozen` explicitly rebuilds from the site's saved catalog; `--check` verifies generated outputs without writing them.
 3. **Review exceptions, not every row.** Check the rejected-record list, sparse samples, wrong-map references and the final loop archetypes. Counts and gaps are recalculated on each refresh. No editorial override input currently exists: add an explicit season-scoped mechanism and reason if an override is requested; do not hand-edit generated values.
-4. **Prepare the one image from the export when artwork is in scope.** Each loop boss supplies its name, boss icon path, map image path, archetype icon path, average and sample size. Carry the source-tier label into a footnote/caption. Aim for two or three options; surface evidence shortages instead of filling them with unsupported teams. No full hero roster needs to be transcribed onto the graphic. Save the full-size artwork to `public/images/guild-raid-sNNN.png` and its optional web copy to `public/images/web/guild-raid-sNNN.webp`. The next build replaces the placeholder automatically, with the standard full-size image/caption links and analytics.
+4. **Prepare the one image from the export when artwork is in scope.** Each loop boss supplies its name, boss icon path, map image path, archetype icon path, average and sample size. Carry the source-tier label into a footnote/caption. Aim for two or three options; surface evidence shortages instead of filling them with unsupported teams. No full hero roster needs to be transcribed onto the graphic. Save the full-size artwork to `public/images/guild-raid-sNNN.png`, its web copy to `public/images/web/guild-raid-sNNN.webp`, and its thumbnail to `public/images/thumbnails/guild-raid-sNNN-thumb.png`. The next build replaces the placeholder automatically: WebP displays on the page, image and caption link to the original PNG with the standard analytics, and the thumbnail supplies social-sharing previews. The page reads intrinsic image dimensions to reserve layout space. Discovery/archive cards use the thumbnail when those routes are integrated.
 5. **Validate the page and export together.** Run `npm run check:raid-season`, `npm run check`, and `npm run build`; preview mobile and desktop for new routes or UI changes. The normal build also checks frozen source/lineup/guide/graphic agreement without LocalDatabase or the replay master. A release uses the integration steps below and the repository's normal release workflow when publication is part of the request.
 
 A later replay refresh is the same generation command plus an exception review. Do not quietly regenerate published historical averages: save a new dated snapshot and update both page and graphic together, or visibly date a later page refresh so it is clear why the image differs.
@@ -35,7 +35,7 @@ Save the season/date evidence inside the repository, preferably under `docs/raid
 Use the following draft recipe; it writes only a temporary binding, leaving the repository unchanged. The values reproduce S114 as an example; replace **all season-specific values** for a new season. `GR_CATALOG` must point to the chosen immutable catalog, not a channel index. `GR_EVIDENCE` is relative to the site root.
 
 ```sh
-GR_CATALOG='../LocalDatabase/data/processed/guild-raids/generations/d745fbef9160d7007d5c/catalog.json'
+GR_CATALOG='../LocalDatabase/data/processed/guild-raids/generations/08c5721cbf6ec4ed5e6a/catalog.json'
 GR_CONFIG='guild_boss_season_config_5'
 GR_SEASON='114'
 GR_START='2026-11-18'
@@ -59,7 +59,7 @@ const evidencePath = resolve(evidence);
 if (relative(process.cwd(), evidencePath).startsWith('..')) throw new Error('Evidence must be inside the site');
 if (!note?.trim()) throw new Error('Record the verified season/date association');
 const binding = {
-  season: Number(season), startDate, status: 'Design preview',
+  season: Number(season), startDate, status: 'Draft',
   channel: catalog.source.channel,
   generation: sha256(canonical(catalog)).slice(0, 20),
   catalogSha256: sha256(text), appVersion: catalog.source.appVersion,
@@ -97,7 +97,9 @@ The generator validates first and writes these together:
 | `src/data/guild-raid/sNNN-guide.json` | Teams, averages, replay examples, evidence IDs and provenance |
 | `public/data/guild-raid/sNNN-graphic-summary.json` | Five loop bosses and eligible compact archetype summaries |
 
-Add `src/pages/guild-raid/previews/sNNN.astro`, using S114's thin wrapper and replacing its JSON import with the new season. The wrapper uses `../../../components/guild-raid/SeasonGuide.astro`, `../../../data/guild-raid/sNNN-guide.json`, and `<SeasonGuide guide={guide} preview />`. The preview is noindex and excluded from the sitemap. Do not copy all the component markup into each route. No image is needed; the placeholder is intentional until artwork is supplied.
+Add `src/pages/guild-raid/sNNN.astro`, using S114's thin wrapper and replacing its JSON import with the new season. The wrapper uses `../../components/guild-raid/SeasonGuide.astro`, `../../data/guild-raid/sNNN-guide.json`, and `<SeasonGuide guide={guide} />`. Review locally at the permanent path before release. There is no separate preview route or preview prop. The route enters the sitemap automatically. Do not copy all the component markup into each route. No image is needed; the placeholder is intentional until artwork is supplied.
+
+When the user supplies a season promo, save its explicit code and ordered rewards in `src/data/guild-raid/sNNN-promo.json` and pass it as `promo` to `SeasonGuide`. S114 uses `TERMINUS114`, 25 Ramus shards (`/images/heroes/Ramus.webp`), then 25 energy (`/images/news/rewards/energy.webp`, sourced from the stamina resource icon). Each amount appears to the left of its icon. Keep the code and rewards season-specific; do not infer a future code or reward. The copy button confirms success only after the clipboard write succeeds.
 
 ## Refresh an existing season
 
@@ -136,9 +138,9 @@ For new routes or UI changes, inspect desktop and mobile: all 25 boss maps/tiers
 
 When the request includes the public route or release:
 
-- Add `src/pages/guild-raid/sNNN.astro` with the same wrapper, using imports one level shallower (`../../components/...`, `../../data/...`) and omitting the `preview` prop. Keep preview status and the registry's editorial status consistent with the actual release stage; do not change status during an unrelated data refresh.
+- Use the permanent `src/pages/guild-raid/sNNN.astro` route. Mark its registry status `Ready` when approved for the site tree, and keep generated source metadata in sync. A route/status promotion must preserve the selected replay snapshot; do not refresh the master or alter averages unless requested separately.
 - Supply the one-image assets if ready. Full-size PNG is required for the standard full-size link; WebP is optional for the page. Set discovery/archive thumbnail references to assets that actually exist.
-- Switch `src/data/guildRaid.ts` only when the requested season should become current. Its legacy image fields use `-mythic`; update them to the one-image paths rather than changing just the season number. `src/data/graphics.ts`, the header and recommendations consume this current-season data.
+- Switch `src/data/guildRaid.ts` only when the requested season should become current. Its artwork paths and the next-season hub card recognize v2 seasons through the source registry and use the single-image assets. `src/data/graphics.ts`, the header and recommendations consume this current-season data. Publishing a forthcoming guide does not make it the active season early.
 - Add the correct archive entry in `src/pages/guild-raid/archive.astro` and verify the related/discovery cards. The route's Related Guides are provided automatically by the seasonal rule in `src/data/recommendations.ts`; do not hardcode another card list into the page.
 - The v2 template has no Next Season section. Older pages and the legacy hub/standalone next-season routing are separate existing features; do not copy them into new guides or fabricate coming-soon images to satisfy legacy paths. Reconcile those entry points deliberately when migrating the public hub.
 - Follow the repository's release instructions and existing authorization. Validate the final public route and images after release. Preserve historical guides unless migration of those seasons was requested.
@@ -181,6 +183,7 @@ The old skill's stronger-team exception, fixed Mythic pairs and season-wide crea
 - `SeasonGuide.astro` supplies the reusable page; a season route passes only its saved guide. The page follows the existing Guild Raid title, typography, gold accent, gray panels and spacing.
 - All 25 encounters remain available. Display the loop M3, M2, M1, L5, L4, then earlier Legendary, Epic and early tiers in descending order. Search and filters narrow the list.
 - Collapsed rows contain boss icon/name, season tier, the canonical map name and thumbnail, and archetype averages with source tiers and sample sizes. Early tiers use lighter rows.
+- Keep the clean collapsed summaries: no extra “Avg” label and no extra “1 replay” badge for Cawl. Existing sample counts and expanded source labels remain available.
 - Expanded bosses show an inline map, then the shared `BossMetaTeamSummary.astro` header, full five-hero lineup and MoW, damage statistics, and existing sortable `CuratedReplayTable.astro`. Gold titles include “vs” and the short boss name. Hero labels use the campaign character catalog's `shortName` (from `Terminus_name`) and link to Hero Guides; abbreviated MoW labels link to their Incursion guides. Each table row retains its actual tier, map and MoW.
 - Maps use local Replay Library artwork directly in expanded encounters, without source-image links. Keep private Discord/source-server links and Prime/support maps out of both the display and generated guide data.
 - Use brief source-tier and small-sample labels; keep calculation detail in the single collapsed Damage data note. Do not add instructional prose, “Example” headings, lineup-selection explanations or authoring JSON to the public page.

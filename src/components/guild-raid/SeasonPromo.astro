@@ -1,0 +1,59 @@
+---
+import type { RaidSeasonPromo } from '../../lib/raidSeasonGuideTypes';
+interface Props { promo: RaidSeasonPromo }
+const { promo } = Astro.props;
+---
+
+<div class="season-promo" data-season-promo aria-label="Season promo code and rewards">
+  <button type="button" class="promo-copy" data-promo-copy={promo.code} aria-label={`Copy promo code ${promo.code}`}>
+    <strong>{promo.code}</strong>
+    <span data-promo-copy-label>Copy</span>
+  </button>
+  <span class="promo-rewards">
+    {promo.rewards.map(reward => <span class="promo-reward" title={`${reward.amount} ${reward.label}`}>
+      <strong>{reward.amount}</strong>
+      <img src={reward.icon} alt={reward.label} width="36" height="36" />
+    </span>)}
+  </span>
+  <span class="promo-status" data-promo-status role="status"></span>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-season-promo]').forEach(promo => {
+    const button = promo.querySelector<HTMLButtonElement>('[data-promo-copy]');
+    const label = promo.querySelector<HTMLElement>('[data-promo-copy-label]');
+    const status = promo.querySelector<HTMLElement>('[data-promo-status]');
+    let timer: number | undefined;
+    button?.addEventListener('click', async () => {
+      const code = button.dataset.promoCopy;
+      if (!code) return;
+      window.clearTimeout(timer);
+      try {
+        await navigator.clipboard.writeText(code);
+        if (label) label.textContent = 'Copied!';
+        if (status) status.textContent = 'Promo code copied.';
+      } catch {
+        if (label) label.textContent = 'Copy';
+        if (status) status.textContent = `Copy unavailable. Select and copy ${code}.`;
+      }
+      timer = window.setTimeout(() => {
+        if (label) label.textContent = 'Copy';
+        if (status) status.textContent = '';
+      }, 3000);
+    });
+  });
+</script>
+
+<style>
+  .season-promo { position:relative; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:.75rem 1.25rem; margin-top:1.5rem; padding-top:1rem; border-top:1px solid #333; }
+  .promo-copy { display:inline-flex; align-items:center; gap:.85rem; min-height:44px; padding:.6rem .8rem; border:1px solid #555; border-radius:7px; background:#252525; color:#d4af37; font:inherit; cursor:pointer; }
+  .promo-copy strong { font-size:.9rem; letter-spacing:.03em; user-select:text; }
+  .promo-copy span { min-width:3.1rem; font-size:.75rem; color:#ccc; text-align:center; }
+  .promo-copy:hover { border-color:#d4af37; }
+  .promo-copy:focus-visible { outline:2px solid #d4af37; outline-offset:4px; }
+  .promo-rewards { display:inline-flex; align-items:center; gap:1rem; }
+  .promo-reward { display:inline-flex; align-items:center; gap:.4rem; color:#f5f5f5; }
+  .promo-reward strong { font-size:1rem; }
+  .promo-reward img { display:block; object-fit:contain; border-radius:5px; }
+  .promo-status { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+</style>

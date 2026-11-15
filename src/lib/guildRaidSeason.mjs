@@ -3,8 +3,9 @@
  * Without that guide, use the current season's preview of upcoming bosses.
  * @param {string} currentSeasonNumber
  * @param {string[]} seasonPagePaths
+ * @param {(string | number)[]} singleImageSeasons
  */
-export function resolveNextGuildRaidSeason(currentSeasonNumber, seasonPagePaths) {
+export function resolveNextGuildRaidSeason(currentSeasonNumber, seasonPagePaths, singleImageSeasons = []) {
   const seasonNumber = String(Number(currentSeasonNumber) + 1);
   const pagePath = seasonPagePaths.find((path) => {
     const match = path.match(/\/s(\d+)\.astro$/);
@@ -15,7 +16,8 @@ export function resolveNextGuildRaidSeason(currentSeasonNumber, seasonPagePaths)
     : null;
   const imageSeason = fullGuideHref ? seasonNumber : currentSeasonNumber;
   const imageKind = fullGuideHref ? "mythic" : "coming-soon";
-  const imageName = `guild-raid-s${imageSeason}-${imageKind}`;
+  const singleImage = Boolean(fullGuideHref && singleImageSeasons.map(String).includes(seasonNumber));
+  const imageName = `guild-raid-s${imageSeason}${singleImage ? '' : `-${imageKind}`}`;
 
   return {
     title: "Next Season",
@@ -25,9 +27,9 @@ export function resolveNextGuildRaidSeason(currentSeasonNumber, seasonPagePaths)
     href: fullGuideHref || "/guild-raid/next-season",
     image: `/images/${imageName}.png`,
     webImage: `/images/web/${imageName}.webp`,
-    thumbnail: `/images/web/${imageName}.webp`,
+    thumbnail: singleImage ? `/images/thumbnails/${imageName}-thumb.png` : `/images/web/${imageName}.webp`,
     imageAlt: fullGuideHref
-      ? `Guild Raid Season ${seasonNumber} Mythic Bosses Infographic`
+      ? `Guild Raid Season ${seasonNumber}${singleImage ? '' : ' Mythic Bosses'} Infographic`
       : `Guild Raid Season ${currentSeasonNumber} Coming Soon Infographic`,
   };
 }

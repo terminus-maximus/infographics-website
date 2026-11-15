@@ -3,18 +3,26 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../Header.astro';
 import Footer from '../Footer.astro';
 import SeasonBoss from './SeasonBoss.astro';
+import SeasonPromo from './SeasonPromo.astro';
 import RecommendationSections from '../RecommendationSections.astro';
 import { guildRaidImageExists } from '../../lib/guildRaidAssets';
-import type { RaidSeasonGuide } from '../../lib/raidSeasonGuideTypes';
+import type { RaidSeasonGuide, RaidSeasonPromo } from '../../lib/raidSeasonGuideTypes';
 import { TIERS } from '../../lib/raidSeasonGuide.mjs';
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { imageMetadata } from 'astro/assets/utils';
 
-interface Props { guide: RaidSeasonGuide; preview?: boolean }
-const { guide, preview = false } = Astro.props;
+interface Props { guide: RaidSeasonGuide; promo?: RaidSeasonPromo }
+const { guide, promo } = Astro.props;
 const title = `Guild Raid Season ${guide.season}`;
 const imageSrc = `/images/guild-raid-s${guide.season}.png`;
 const webImageSrc = `/images/web/guild-raid-s${guide.season}.webp`;
+const thumbnailSrc = `/images/thumbnails/guild-raid-s${guide.season}-thumb.png`;
 const imageAvailable = guildRaidImageExists(imageSrc);
 const displayImage = guildRaidImageExists(webImageSrc) ? webImageSrc : imageSrc;
+const shareImage = guildRaidImageExists(thumbnailSrc) ? thumbnailSrc : displayImage;
+const displaySize = imageAvailable ? await imageMetadata(await readFile(resolve('public', displayImage.slice(1)))) : undefined;
+const shareSize = imageAvailable ? await imageMetadata(await readFile(resolve('public', shareImage.slice(1)))) : undefined;
 const infographicTitle = `${title} - Legendary 4 to Mythic 3`;
 const descending = <T extends { tier: string }>(slots: T[]) => [...slots].sort((a, b) => TIERS.indexOf(b.tier) - TIERS.indexOf(a.tier));
 const dateLabel = (date: string) => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });
@@ -26,23 +34,25 @@ const sections = [
 ];
 ---
 
-<Layout title={`${title} | Terminus Maximus Infographics`} description={`Boss maps, teams and replays for Guild Raid Season ${guide.season}.`} image={imageAvailable ? displayImage : undefined}>
-  {preview && <meta slot="head" name="robots" content="noindex,nofollow" />}
+<Layout title={`${title} | Terminus Maximus Infographics`} description={`Boss maps, teams and replays for Guild Raid Season ${guide.season}.`} image={imageAvailable ? shareImage : undefined}>
+  {shareSize && <meta slot="head" property="og:image:width" content={String(shareSize.width)} />}
+  {shareSize && <meta slot="head" property="og:image:height" content={String(shareSize.height)} />}
   <Header />
   <main>
     <section class="infographic-section">
       <header class="guide-heading">
         <h1>Season {guide.season} Infographic</h1>
-        <p>{dateLabel(guide.startDate)}{preview ? ' · Preview' : ''}</p>
+        <p>{dateLabel(guide.startDate)}</p>
       </header>
       <div class="guide-card">
         <h2>Legendary 4 – Mythic 3</h2>
         {imageAvailable ? <>
           <a href={imageSrc} target="_blank" rel="noopener noreferrer" class="image-link" data-ga4-infographic-open data-ga4-infographic-title={infographicTitle} data-ga4-link-source="image">
-            <img src={displayImage} alt={`${infographicTitle} Infographic`} class="infographic" loading="lazy" />
+            <img src={displayImage} alt={`${infographicTitle}: bosses, maps, and archetype average and maximum damage.`} width={displaySize?.width} height={displaySize?.height} class="infographic" />
           </a>
           <p class="caption"><a href={imageSrc} target="_blank" rel="noopener noreferrer" class="caption-link" data-ga4-infographic-open data-ga4-infographic-title={infographicTitle} data-ga4-link-source="caption">CLICK FULL-SIZE INFOGRAPHIC</a></p>
         </> : <p class="infographic-placeholder">Infographic in progress</p>}
+        {promo && <SeasonPromo promo={promo} />}
       </div>
     </section>
     <div class="guide-controls" data-guide-controls hidden>

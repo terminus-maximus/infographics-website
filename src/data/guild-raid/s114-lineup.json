@@ -1,7 +1,7 @@
 {
   "season": 114,
   "startDate": "2026-11-18",
-  "status": "Design preview",
+  "status": "Ready",
   "config": "guild_boss_season_config_5",
   "source": {
     "system": "LocalDatabase",
@@ -12,7 +12,7 @@
     "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
     "configFingerprint": "a2b44afca670be6111c3273cf7cba9c13466810c8a0c8c299a88f4d30eb7e6ab",
     "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
-    "seasonBindingSha256": "c331327fa00cdb240c2d72bc6f637d4a89d8ad753933388840b7f82720a62432"
+    "seasonBindingSha256": "3babcd769a75a3b5af7e60d04748fcd2fdec74b2810789fba0cb53546570675c"
   },
   "loop": [
     "M3",

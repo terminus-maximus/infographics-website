@@ -1,0 +1,7 @@
+{
+  "code": "TERMINUS114",
+  "rewards": [
+    { "amount": 25, "label": "Ramus shards", "icon": "/images/heroes/Ramus.webp" },
+    { "amount": 25, "label": "Energy", "icon": "/images/news/rewards/energy.webp" }
+  ]
+}
