@@ -1,0 +1,75 @@
+{
+  "routes_scanned": 195,
+  "infographic_pages": 52,
+  "linked_pages": 49,
+  "rendered_links": 74,
+  "missing": 0,
+  "retire": 0,
+  "manual_review": 0,
+  "unresolved_links": 0,
+  "publication_labels_verified": true,
+  "author_age_rejections_distinct_ids_order_cap_verified": true,
+  "new_destinations": [
+    {
+      "id": "1xsra6k",
+      "title": "[Infographic] Patch Notes, Game Update 1.44 - My summary",
+      "titleVisible": true,
+      "authorVisible": true,
+      "pageUnavailable": false
+    },
+    {
+      "id": "1xomvdn",
+      "title": "[Infographic] Top 10 Heroes in Tacticus – November 2026",
+      "titleVisible": true,
+      "authorVisible": true,
+      "pageUnavailable": false
+    },
+    {
+      "id": "1xl9u7o",
+      "title": "[Infographic] Guild Raid Guide Season 113 - Magnus, again.",
+      "titleVisible": true,
+      "authorVisible": true,
+      "pageUnavailable": false
+    },
+    {
+      "id": "1xiscvt",
+      "title": "[Infographic] Incursion MoW Guide - choose your path Nov 2",
+      "titleVisible": true,
+      "authorVisible": true,
+      "pageUnavailable": false
+    },
+    {
+      "id": "1xf86nr",
+      "title": "[Infographic] Guild Raid Boss Meta Guide — Orktober update from 2000+ replay analysis",
+      "titleVisible": true,
+      "authorVisible": true,
+      "pageUnavailable": false
+    }
+  ],
+  "layout_checks": [
+    {
+      "route": "/heroes/top-10/",
+      "discussion": "Related DiscussionsReddit Discussion - Nov 5, 2026",
+      "documentWidth": 1321,
+      "links": [
+        {
+          "href": "https://www.reddit.com/r/WH40KTacticus/comments/1xomvdn/infographic_top_10_heroes_in_tacticus_november/",
+          "text": "Reddit Discussion - Nov 5, 2026"
+        }
+      ],
+      "width": 1321
+    },
+    {
+      "route": "/incursion-mow/biovore/",
+      "discussion": "Related DiscussionsReddit Discussion - Oct 29, 2026",
+      "documentWidth": 1321,
+      "links": [
+        {
+          "href": "https://www.reddit.com/r/WH40KTacticus/comments/1xiscvt/infographic_incursion_mow_guide_choose_your_path/",
+          "text": "Reddit Discussion - Oct 29, 2026"
+        }
+      ],
+      "width": 1321
+    }
+  ]
+}

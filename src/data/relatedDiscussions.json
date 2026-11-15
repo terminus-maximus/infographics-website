@@ -329,6 +329,36 @@
       "label": "Reddit Discussion - Zapspitta - Oct 14, 2026",
       "url": "https://www.reddit.com/r/WH40KTacticus/comments/1x5yri9/infographic_zapspitta_hre_mission_guide_begins/",
       "publishedAt": 1792001866
+    },
+    "1xf86nr": {
+      "title": "[Infographic] Guild Raid Boss Meta Guide — Orktober update from 2000+ replay analysis",
+      "label": "Reddit Discussion - Oct 25, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xf86nr/infographic_guild_raid_boss_meta_guide_orktober/",
+      "publishedAt": 1792948926
+    },
+    "1xl9u7o": {
+      "title": "[Infographic] Guild Raid Guide Season 113 - Magnus, again.",
+      "label": "Reddit Discussion - Nov 1, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xl9u7o/infographic_guild_raid_guide_season_113_magnus/",
+      "publishedAt": 1793556172
+    },
+    "1xomvdn": {
+      "title": "[Infographic] Top 10 Heroes in Tacticus – November 2026",
+      "label": "Reddit Discussion - Nov 5, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xomvdn/infographic_top_10_heroes_in_tacticus_november/",
+      "publishedAt": 1793895627
+    },
+    "1xiscvt": {
+      "title": "[Infographic] Incursion MoW Guide - choose your path Nov 2",
+      "label": "Reddit Discussion - Oct 29, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xiscvt/infographic_incursion_mow_guide_choose_your_path/",
+      "publishedAt": 1793299232
+    },
+    "1xsra6k": {
+      "title": "[Infographic] Patch Notes, Game Update 1.44 - My summary",
+      "label": "Reddit Discussion - Nov 10, 2026",
+      "url": "https://www.reddit.com/r/WH40KTacticus/comments/1xsra6k/infographic_patch_notes_game_update_144_my_summary/",
+      "publishedAt": 1794327890
     }
   },
   "pages": {
@@ -374,6 +404,7 @@
       "1lijpn8"
     ],
     "/guild-raid/boss-meta/": [
+      "1xf86nr",
       "1wqy5s1",
       "1uwat65"
     ],
@@ -439,11 +470,11 @@
       "1tolrbn"
     ],
     "/incursion-mow/": [
+      "1xiscvt",
       "1wp50n4",
       "1vtsem0",
       "1uz5c3s",
-      "1u0gkl6",
-      "1t5t52f"
+      "1u0gkl6"
     ],
     "/lre/fabius/": [
       "1x007bu"
@@ -484,6 +515,24 @@
     ],
     "/guild-raid/s112/": [
       "1x8kbe0"
+    ],
+    "/guild-raid/s113/": [
+      "1xl9u7o"
+    ],
+    "/heroes/top-10/": [
+      "1xomvdn"
+    ],
+    "/incursion-mow/biovore/": [
+      "1xiscvt"
+    ],
+    "/incursion-mow/plagueburst-crawler/": [
+      "1xiscvt"
+    ],
+    "/incursion-mow/zkar/": [
+      "1xiscvt"
+    ],
+    "/news/game-update-1-44/": [
+      "1xsra6k"
     ]
   }
 }

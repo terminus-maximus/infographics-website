@@ -1,0 +1,69 @@
+{
+  "news_png": {
+    "path": "public/images/Game-Update-144.png",
+    "exists": true,
+    "sha256": "d00d5758595972123897043ee5b33994c0d90417558d6ff3f34d68ed90a407b5",
+    "working_tree_status": "",
+    "latest_commit": {
+      "sha": "01f3d53b1dd67b888789952ba49095325a5fc26a",
+      "authored_at": "2026-11-10T03:46:41-08:00",
+      "committed_at": "2026-11-10T03:46:41-08:00",
+      "subject": "Publish Game Update 1.44 news, Daras and Boudicari guides, and site updates",
+      "date": "2026-11-10",
+      "path_status": [
+        "A\tpublic/images/Game-Update-144.png"
+      ]
+    },
+    "content_commit": {
+      "sha": "01f3d53b1dd67b888789952ba49095325a5fc26a",
+      "authored_at": "2026-11-10T03:46:41-08:00",
+      "committed_at": "2026-11-10T03:46:41-08:00",
+      "subject": "Publish Game Update 1.44 news, Daras and Boudicari guides, and site updates",
+      "date": "2026-11-10",
+      "path_status": [
+        "A\tpublic/images/Game-Update-144.png"
+      ]
+    },
+    "skipped_identical_copies_or_renames": [],
+    "live": {
+      "status": 200,
+      "url": "https://terminusmaximus.com/images/Game-Update-144.png",
+      "sha256": "d00d5758595972123897043ee5b33994c0d90417558d6ff3f34d68ed90a407b5",
+      "matches_local": true
+    }
+  },
+  "lre_versions": {
+    "farsight": {
+      "version": "1.44.88",
+      "source_manifest_matches": true,
+      "local_label_matches": true,
+      "live_label_matches": true,
+      "live_error": null
+    },
+    "uthar": {
+      "version": "1.44.88",
+      "source_manifest_matches": true,
+      "local_label_matches": true,
+      "live_label_matches": true,
+      "live_error": null
+    },
+    "lysander": {
+      "version": "1.44.88",
+      "source_manifest_matches": true,
+      "local_label_matches": true,
+      "live_label_matches": true,
+      "live_error": null
+    },
+    "fabius": {
+      "version": "1.44.88",
+      "source_manifest_matches": true,
+      "local_label_matches": true,
+      "live_label_matches": true,
+      "live_error": null
+    },
+    "lucius": {
+      "backend": false,
+      "local_version_absent": true
+    }
+  }
+}

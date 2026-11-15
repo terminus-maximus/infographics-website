@@ -88,3 +88,6 @@ pass. Only the two PNGs were committed; no push or deployment was performed.
 November 10 release: the updated Daras HRE and Lysander PNGs are committed in
 `01f3d53b1dd67b888789952ba49095325a5fc26a`. Both registry entries now use
 `2026-11-10`, the content commit’s date in America/Los_Angeles.
+
+
+November 15 hygiene audit: all 195 HTML routes were reviewed. The 32 existing infographic dates already matched Git history and live artwork. Added the missing Game Update 1.44 infographic date, Nov 10, 2026, using commit `01f3d53b1dd67b888789952ba49095325a5fc26a`. The final local build has 33 compliant direct-scope pages, 20 undated Guild Raid exclusions, and no unresolved dates. Four LRE roster versions remain 1.44.88. See [the full date audit](date-audit-2026-11-15.md); the new label awaits deployment.

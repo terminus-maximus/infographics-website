@@ -71,7 +71,7 @@ assert(!eligibleCharacters(data.characters, 'alpha').some(character => character
 
 // Public promotion: global navigation, ordered landing cards and recommendation eligibility.
 const htmlFiles = readdirSync(resolve(root, 'dist'), { recursive: true }).filter(path => path.endsWith('index.html'));
-const lreOrder = ['/lre/fabius', '/lre/lysander', '/lre/farsight', '/lre/uthar'];
+const lreOrder = ['/lre/lysander', '/lre/farsight', '/lre/uthar', '/lre/fabius'];
 let navigationPages = 0;
 for (const path of htmlFiles) {
   const html = read(`dist/${path}`);

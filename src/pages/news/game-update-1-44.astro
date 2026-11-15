@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import InfographicUpdated from '../../components/InfographicUpdated.astro';
+import RelatedDiscussions from '../../components/RelatedDiscussions.astro';
 import NewsIcons from '../../components/news/NewsIcons.astro';
 import { gameUpdate144 as article } from '../../data/news';
 import { heroIcon, factionIcon, bossIcon, rewardIcon, darasIcon, boudicariIcon, tsonjiIcon, ancientInscription, mutantForm, relicBoltPistol } from '../../data/news/icons';
@@ -85,6 +87,7 @@ const moreEvents = [
         <p class="news-meta">Tacticus news · <time datetime={article.published}>{article.publishedLabel}</time></p>
         <h1>{article.title}</h1>
         <p>Ahriman takes the battle-pass spotlight, Daras Carrow joins the roster, and the Custodes bring a new Dreadnought to Incursion.</p>
+        <InfographicUpdated imageSrc={article.image} />
       </header>
 
       <section aria-labelledby="infographic-heading">
@@ -262,6 +265,7 @@ const moreEvents = [
       </section>
       <nav class="guide-links" aria-label="More news and event guides"><a href="/news/">← All news</a><a href="/events/">Event guides →</a><a href="#infographic-heading">Back to infographic ↑</a></nav>
     </article>
+    <RelatedDiscussions />
   </main>
   <Footer />
 </Layout>

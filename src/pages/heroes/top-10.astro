@@ -2,6 +2,7 @@
 import HeroLayout from '../../layouts/HeroLayout.astro';
 import FeaturedInfographic from '../../components/FeaturedInfographic.astro';
 import InfographicUpdated from '../../components/InfographicUpdated.astro';
+import RelatedDiscussions from '../../components/RelatedDiscussions.astro';
 import Portrait from '../../components/heroes/Portrait.astro';
 import ModeRatings from '../../components/heroes/ModeRatings.astro';
 import RatingGauge from '../../components/heroes/RatingGauge.astro';
@@ -45,4 +46,5 @@ for (const hero of ranked) {
       <ModeRatings assessments={hero.assessments} bonus={hero.guide_bonus} bonusGuides={hero.guides} popularityBenchmark={benchmark} heroPortrait={{...portraits[hero.unit_id],name:hero.name}} headingLevel={3} showGauges />
     </article>; })}</div>
   </> : <p>No monthly snapshot has been published yet. <a href="/heroes/">Browse current hero assessments.</a></p>}
+  <RelatedDiscussions />
 </HeroLayout>

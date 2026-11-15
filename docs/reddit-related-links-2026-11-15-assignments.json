@@ -1,0 +1,78 @@
+{
+  "1sd8xns": {
+    "routes": [
+      "/guild-raid/s098/"
+    ],
+    "reason": "Post body explicitly states Season 98 runs April 8–20; title omits the season number."
+  },
+  "1wxjgky": {
+    "routes": [
+      "/guild-raid/s111/"
+    ],
+    "reason": "Main post and linked replay page concern Season 111. The speculative Season 112 teaser is excluded from the rolling next-season page by the saved rejected-pair policy."
+  },
+  "1xbs1ef": {
+    "routes": [
+      "/guild-wars/attack/",
+      "/guild-wars/defend/"
+    ],
+    "reason": "Post explicitly presents two Season 28 Guild War graphics covering attack and defend teams, using Seasons 25–27 battlefield 4–5 research."
+  },
+  "1x8kbe0": {
+    "routes": [
+      "/guild-raid/s112/"
+    ],
+    "reason": "Main subject, dates, and exact page link are Season 112. Incidental replay-library promotion and the Season 113 teaser are not separate topic assignments."
+  },
+  "1x70ax1": {
+    "routes": [
+      "/campaign-event/",
+      "/campaign-event/admech/",
+      "/campaign-event/dark-angels/",
+      "/campaign-event/death-guard/",
+      "/campaign-event/sisters/",
+      "/campaign-event/tau/",
+      "/campaign-event/tyranids/"
+    ],
+    "reason": "Post explicitly launches the six named Extremis guides, links each exact route, and explains expansion of the Campaign Event overview with E30 teams and replays."
+  },
+  "1x5yri9": {
+    "routes": [
+      "/hre/"
+    ],
+    "reason": "Zapspitta HRE mission guide is a direct match for the rolling HRE guide; label uses actual publication date and names Zapspitta."
+  },
+  "1xsra6k": {
+    "routes": [
+      "/news/game-update-1-44/"
+    ],
+    "reason": "The title is explicitly Game Update 1.44; its body describes the Ahriman Battle Pass summary and links the exact /news/game-update-1-44 page. Mentions of Daras, Boudicari, and Blood Angels are article highlights, not separate guide assignments."
+  },
+  "1xomvdn": {
+    "routes": [
+      "/heroes/top-10/"
+    ],
+    "reason": "The principal subject and image are the November 2026 Top 10 Heroes ranking. The body explains the four equally weighted ratings and campaign bonus used on the Top 10 infographic page. The hero directory is a hub; supporting links to Boss Meta, Guild War, and LRE are methodology citations, not separate subjects."
+  },
+  "1xl9u7o": {
+    "routes": [
+      "/guild-raid/s113/"
+    ],
+    "reason": "The title and body explicitly identify Season 113, November 4–16, and link the exact /guild-raid/s113 route. The rolling next-season route currently redirects to S114 and is not a match."
+  },
+  "1xiscvt": {
+    "routes": [
+      "/incursion-mow/",
+      "/incursion-mow/biovore/",
+      "/incursion-mow/zkar/",
+      "/incursion-mow/plagueburst-crawler/"
+    ],
+    "reason": "The post describes the broad November 2 Incursion choice guide and explicitly says the gallery includes unlock guides for Biovore, Z’Kar, and PBC with suggested teams and shard math. PBC is the existing Plagueburst Crawler guide alias."
+  },
+  "1xf86nr": {
+    "routes": [
+      "/guild-raid/boss-meta/"
+    ],
+    "reason": "The title identifies the Orktober Boss Meta update; the body discusses the META/ALTERNATE team overview and directly links /guild-raid/boss-meta. It is not a specific raid-season guide."
+  }
+}

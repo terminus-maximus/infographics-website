@@ -9,6 +9,7 @@ import Footer from "../Footer.astro";
 import MachineIdentity from "./MachineIdentity.astro";
 import MachineAbilities from "./MachineAbilities.astro";
 import InfographicUpdated from "../InfographicUpdated.astro";
+import RelatedDiscussions from "../RelatedDiscussions.astro";
 import FeaturedInfographic from "../FeaturedInfographic.astro";
 import StrategyCard from "./StrategyCard.astro";
 import PowerUpPriorities from "./PowerUpPriorities.astro";
@@ -92,6 +93,7 @@ const tocGroups = guide ? [
       {guide.relatedGuides.map((link) => <a href={link.url}>{link.label}</a>)}
     </nav>
     </>}
+    <RelatedDiscussions />
     <nav class="machine-bottom-nav" aria-label="Machine of War navigation"><a href="/incursion-mow/#machines">← All Machines of War</a><a href="/heroes/">Explore Hero Guides →</a></nav>
   </main>
   <Footer />

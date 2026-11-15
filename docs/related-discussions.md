@@ -38,3 +38,6 @@ There are **no pending ambiguous matches** from the initial audit. Explicit reje
 All 58 published links across 36 pages remain within the age limit on October 13, 2026; the oldest is June 18, 2025. No existing published discussion needs removal today.
 
 Validation: `node scripts/check-related-discussions.mjs`, the Python audit helper with `--as-of 2026-10-13`, and `npm run build`.
+
+
+November 15 hygiene refresh: read all 130 submissions in two current Reddit JSON pages; 117 fall within the inclusive May 15, 2025 cutoff. Added eight page links from five new submissions and moved one older Incursion link outside the newest-five cap. The local build has 74 discussion links across 49 pages. Top 10, News and the three machine unlock guides now render their new discussions using the shared component. All 195 routes were reviewed; the second audit proposes zero changes or unresolved matches. See [the final audit](reddit-related-links-2026-11-15.md) and its evidence. Changes remain local and undeployed.
