@@ -1,0 +1,77 @@
+---
+interface Props {
+  seasonNumber: string | number;
+}
+
+const currentSeason = Number(Astro.props.seasonNumber);
+// Read route names without importing the guides and their data or styles.
+const seasonPages = import.meta.glob('../../pages/guild-raid/s[0-9]*.astro', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+const seasons = Object.keys(seasonPages).flatMap(path => {
+  const match = path.match(/\/(s(\d+))\.astro$/);
+  return match ? [{ season: Number(match[2]), href: `/guild-raid/${match[1]}/` }] : [];
+}).sort((a, b) => a.season - b.season);
+const priorSeason = seasons.filter(({ season }) => season < currentSeason).at(-1);
+const nextSeason = seasons.find(({ season }) => season > currentSeason);
+---
+
+<nav class="season-navigation" aria-label="Guild Raid seasons" data-ga4-nav-location="guild-raid-season">
+  {priorSeason && <a class="prior-season" href={priorSeason.href} rel="prev" data-ga4-nav-section="prior-season">
+    <span aria-hidden="true">←</span>
+    <span>Prior Season</span>
+  </a>}
+  {priorSeason && <span class="separator" aria-hidden="true">•</span>}
+  <a class="season-archive" href="/guild-raid/archive/" data-ga4-nav-section="archive">Complete Archive</a>
+  {nextSeason && <span class="separator" aria-hidden="true">•</span>}
+  {nextSeason && <a class="next-season" href={nextSeason.href} rel="next" data-ga4-nav-section="next-season">
+    <span>Next Season</span>
+    <span aria-hidden="true">→</span>
+  </a>}
+</nav>
+
+<style>
+  .season-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    font-size: .85rem;
+    line-height: 1.5;
+  }
+
+  a {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: .35rem;
+    min-height: 44px;
+    color: #d4af37;
+    text-decoration: none;
+    text-underline-offset: .2em;
+  }
+
+  a:hover {
+    color: #f5d76e;
+    text-decoration: underline;
+  }
+
+  a:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  .separator { color: #888; }
+
+  @media (max-width: 700px) {
+    .season-navigation { font-size: .8rem; gap: .5rem; flex-wrap: nowrap; }
+    .season-archive { max-width: 5rem; }
+  }
+</style>

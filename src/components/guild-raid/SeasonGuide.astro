@@ -4,6 +4,7 @@ import Header from '../Header.astro';
 import Footer from '../Footer.astro';
 import SeasonBoss from './SeasonBoss.astro';
 import SeasonPromo from './SeasonPromo.astro';
+import SeasonNavigation from './SeasonNavigation.astro';
 import RecommendationSections from '../RecommendationSections.astro';
 import { guildRaidImageExists } from '../../lib/guildRaidAssets';
 import { formatGuildRaidStartDate } from '../../lib/guildRaidDates';
@@ -39,6 +40,7 @@ const sections = [
   {shareSize && <meta slot="head" property="og:image:height" content={String(shareSize.height)} />}
   <Header />
   <main>
+    <SeasonNavigation seasonNumber={guide.season} />
     <section class="infographic-section">
       <header class="guide-heading">
         <h1>Season {guide.season} Infographic</h1>

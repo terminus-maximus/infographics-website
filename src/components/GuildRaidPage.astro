@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import SeasonNavigation from "./guild-raid/SeasonNavigation.astro";
 import CuratedReplayTable from "./replay-library/CuratedReplayTable.astro";
 import ReplayIcon from "./replay-library/ReplayIcon.astro";
 import RecommendationSections from "./RecommendationSections.astro";
@@ -242,6 +243,7 @@ const guideReplaySections = guides.map((guide) => {
   <Header />
 
   <main>
+  <SeasonNavigation seasonNumber={seasonNumber} />
   <section class="infographic-section">
     <header class="guide-heading">
       <h2>{sectionTitle}</h2>
