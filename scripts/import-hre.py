@@ -39,12 +39,12 @@ def main():
     for origin, dest in copies:
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(origin, dest)
-    # Keep local machine paths out of the public JSON.
+    # Keep local machine paths out of the site build input.
     data['source'].pop('frozen_source')
     data['source']['export_sha256'] = sha(source)
-    for dest in [SITE / 'src/data/hre/daras.json', SITE / 'public/data/hre/daras.json']:
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+    dest = SITE / 'src/data/hre/daras.json'
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     print('Imported Daras: 20 missions + bonus, 42 objectives; editorial research preserved.')
 
 

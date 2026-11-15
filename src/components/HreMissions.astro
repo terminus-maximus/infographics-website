@@ -67,7 +67,6 @@ const numberParts = (text: string) => text.split(/(\d[\d,]*)/g);
       );
     })}
   </div>
-  <p class="data-credit">Tacticus {data.source.app_version} · <a href="/data/hre/daras.json" download="daras-hre-missions.json">Download mission data</a></p>
 </section>
 
 <style>
@@ -108,7 +107,7 @@ const numberParts = (text: string) => text.split(/(\d[\d,]*)/g);
   .bonus-card .mission-footer { border-color: #484033; }
   .mission-content { padding: 1rem 1.2rem 1.2rem; border-top: 1px solid #484033; background: linear-gradient(135deg, #2b271e, #211f1a); }
   .research-section p, .research-section li { font-size: .82rem; line-height: 1.7; color: #bebfc4; margin: .55rem 0; }
-  .mission-content a, .data-credit a { color: #dcc26f; text-underline-offset: 3px; }
+  .mission-content a { color: #dcc26f; text-underline-offset: 3px; }
   .mission-research { border-top: 1px solid #716036; background: linear-gradient(115deg, #3b3321, #2e291e 55%, #26231c); }
   .mission-research > summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .8rem 1.2rem; font-size: .85rem; color: #dfc880; cursor: pointer; list-style: none; }
   .mission-research > summary:hover { background: rgb(212 175 55 / 6%); }
@@ -117,7 +116,6 @@ const numberParts = (text: string) => text.split(/(\d[\d,]*)/g);
   .research-section summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .8rem; font-size: .85rem; color: #dfc880; cursor: pointer; }
   .research-section[open] > summary > span { transform: rotate(45deg); }
   .research-section > div { padding: 0 .8rem .8rem; }
-  .data-credit { color: #a8a8a8; font-size: .75rem; line-height: 1.7; margin: 1.2rem 0 0; }
   @media (max-width: 780px) {
     .mission-grid { grid-template-columns: 1fr; }
     .bonus-card .objectives { grid-template-columns: 1fr; }

@@ -40,8 +40,9 @@ snapshots are archived. An event slot reused for another hero fails explicitly.
 This is an independent HRE workflow; the character/LRE refresh does not
 automatically recapture it.
 
-The importer writes `src/data/hre/daras.json`, the matching downloadable
-`public/data/hre/daras.json`, and icons under `public/images/hre/missions/`.
+The importer writes `src/data/hre/daras.json` as a build input and icons under
+`public/images/hre/missions/`. Do not copy the mission JSON into `public/` or
+expose a download link on the site.
 It reuses the site’s canonical Daras portrait and damage stat icon. Ordinary
 site builds need neither LocalDatabase nor an installed game.
 
@@ -76,7 +77,7 @@ Daras objectives; passive ability-damage counting remains explicitly qualified.
 
 The initial implementation passed the full site build and Astro checks. The
 HRE check validates section placement, all 21 cards and 42 objectives, icon
-paths, the bonus reward and parity with the downloadable export. Backend tests
+paths, the bonus reward and the absence of a public JSON download. Backend tests
 check infographic targets, native chain ordering, cycles, changed event identity,
 localization and the queryable SQLite export. Browser QA covers two columns at
 desktop size and one column on mobile. The initial native objective-help panels
