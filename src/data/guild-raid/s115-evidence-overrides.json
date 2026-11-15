@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "season": 115,
+  "encounters": [
+    {
+      "tier": "M2",
+      "boss": "Ghaz",
+      "map": "Ghaz_01",
+      "scope": "all-maps-exact-tier",
+      "reason": "The scheduled Ghaz_01 map has no eligible M2 evidence. Use all reviewed M2 Ghazghkull records across maps to supply observed damage averages and infographic options.",
+      "approvedBy": "Dan",
+      "approvedOn": "2026-11-14",
+      "instruction": "Can we find more replays for M2 Ghazghkull to fill that gap? Let's ignore the map restriction and get some damage numbers"
+    }
+  ]
+}

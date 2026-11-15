@@ -24,9 +24,9 @@ const summaryFor = (rec: Recommendation) => ({
   replay_count: rec.sample, average_damage: rec.average, max_damage: rec.maximum,
 });
 const sourceLabel = (rec: Recommendation) => [
-  rec.kind === 'exact' ? '' : rec.kind === 'pooled' ? 'Nearby tiers' : slot.rarity === 'Epic' ? '' : 'Reference',
+  rec.kind === 'exact' ? '' : rec.kind === 'cross-map' ? 'Other maps' : rec.kind === 'pooled' ? 'Nearby tiers' : slot.rarity === 'Epic' ? '' : 'Reference',
   rec.tiers.join(' / '),
-  rec.kind === 'other-map' ? rec.maps.join(', ') : '',
+  ['other-map', 'cross-map'].includes(rec.kind) ? rec.maps.join(', ') : '',
   rec.sample < 5 ? 'Small sample' : '',
 ].filter(Boolean).join(' · ');
 const replayRows = (rec: Recommendation): ReplayLibraryReplay[] => rec.examples.map(r => ({
@@ -52,7 +52,7 @@ const libraryUrl = (rec: Recommendation) => {
     {!isEarly && <span class="summary-teams">
       {slot.recommendations.map(rec => <span class="summary-team">
         <ReplayIcon type="heroes" value={teamIconMap[rec.archetype]} title={rec.archetype} />
-        <span><b>{rec.archetype}</b><strong>{slot.rarity === 'Epic' || ['exact', 'pooled'].includes(rec.kind) ? formatReplayDamage(rec.average) : 'Reference'}</strong><small>{rec.tiers.join('/')} · n={rec.sample}</small></span>
+        <span><b>{rec.archetype}</b><strong>{slot.rarity === 'Epic' || ['exact', 'pooled', 'cross-map'].includes(rec.kind) ? formatReplayDamage(rec.average) : 'Reference'}</strong><small>{rec.tiers.join('/')} · n={rec.sample}</small>{rec.kind === 'cross-map' && <small>Other maps</small>}</span>
       </span>)}
     </span>}
     <span class="expand-icon" aria-hidden="true">+</span>

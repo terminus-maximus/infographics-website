@@ -38,6 +38,7 @@ export interface RaidSeasonGuide {
   startDate: string;
   slots: SeasonEncounter[];
   policy: { minimumSample: number; maximumTierDistance: number };
+  evidenceOverrides?: { encounters: { tier: string; boss: string; scope: string }[] };
 }
 
 export interface RaidSeasonPromo {

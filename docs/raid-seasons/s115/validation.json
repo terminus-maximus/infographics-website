@@ -1,0 +1,159 @@
+{
+  "season": 115,
+  "reviewedLocalDate": "2026-11-14",
+  "status": "Local draft",
+  "source": {
+    "system": "LocalDatabase",
+    "schemaVersion": 1,
+    "channel": "production",
+    "appVersion": "1.44.88",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+    "configFingerprint": "1b8ce77a3e7130ae487a860184e38aa9eb0305a61c3f879604ab9401783f8419",
+    "mappingsSha256": "cf061ce826d988e9a007b3c91dd6711fb6ee654fad41f1f1f3ea5a6f6a1b77df",
+    "seasonBindingSha256": "8b213aac9e099c16aa52ed8ea4714e25d485ee34caf1397ab4691d8f90a39fc0"
+  },
+  "masterSha256": "8ede9181225c1bf4284d5e4edd33c7ad29620ae8690dd6223420e6d93df27456",
+  "generatedAt": "2026-11-15T01:31:37.744Z",
+  "encounters": 25,
+  "recommendations": 75,
+  "examples": 117,
+  "eligibleMasterRecords": 2226,
+  "rejectedReviewedRecords": [
+    {
+      "videoId": "tCe07HgytEk",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "T-NK9O9CCVs",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "VOJRHrofOtI",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "f8AzedwaS9Q",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "Nu5NMhP-IMM",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "B_E80nEo7N4",
+      "reason": "Incomplete five-hero team"
+    },
+    {
+      "videoId": "OH9oEgYEUyg",
+      "reason": "Incomplete five-hero team"
+    }
+  ],
+  "loop": [
+    {
+      "tier": "M3",
+      "boss": "Lion",
+      "map": "Lion_01",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Neuro",
+        "Battlesuits"
+      ]
+    },
+    {
+      "tier": "M2",
+      "boss": "Ghaz",
+      "map": "Ghaz_01",
+      "graphicArchetypes": [
+        "Battlesuits",
+        "Laviscus"
+      ]
+    },
+    {
+      "tier": "M1",
+      "boss": "Cawl",
+      "map": "Cawl_03",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Neuro",
+        "Custodes"
+      ]
+    },
+    {
+      "tier": "L5",
+      "boss": "Avatar",
+      "map": "Avatar_05",
+      "graphicArchetypes": [
+        "Laviscus",
+        "Neuro"
+      ]
+    },
+    {
+      "tier": "L4",
+      "boss": "Dorn",
+      "map": "Dorn_06",
+      "graphicArchetypes": [
+        "AdMech",
+        "Laviscus"
+      ]
+    }
+  ],
+  "coverageNotes": [
+    "M2 Ghaz / Ghaz_01 uses an explicit user-approved all-maps exact-M2 exception: Battlesuits 1,721,538 (13 replays), Laviscus 1,662,385 (39), and Custodes 908,500 (2, page only). Source maps remain visible; two archetypes qualify for the graphic.",
+    "M3 Lion and M1 Cawl have three qualifying graphic archetypes; L5 Avatar and L4 Dorn each have two.",
+    "Seven VALID_REPLAY rows were excluded for incomplete five-hero teams.",
+    "Epic and earlier-tier recommendations retain their actual higher source tiers; no new footage was collected or playback-verified."
+  ],
+  "checks": {
+    "generatorCheck": "passed",
+    "raidTests": {
+      "passed": 18,
+      "failed": 0
+    },
+    "portableSeasonCheck": {
+      "seasons": 2,
+      "result": "passed"
+    },
+    "astro": {
+      "files": 239,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "build": {
+      "pages": 195,
+      "result": "passed"
+    },
+    "evidenceArithmeticAndExamples": "passed",
+    "graphicAgreement": "passed",
+    "sitemap": "passed",
+    "preservedS114AndMaster": "passed",
+    "builtLocalTargets": {
+      "checked": 237,
+      "uniqueImages": 150,
+      "missing": 0
+    },
+    "browser": {
+      "url": "http://localhost:4321/guild-raid/s115/",
+      "desktopCssWidth": 1309,
+      "mobileCssWidth": 354,
+      "horizontalPageOverflow": false,
+      "consoleErrors": 0,
+      "passed": [
+        "25 encounters in descending tier order",
+        "M3 → M2 → M1 → L5 → L4 loop",
+        "Inline map artwork and five hero links plus MoW link per team",
+        "Only one boss open at a time; active boss can close; Collapse all",
+        "Epic averages preserve source tiers without Reference labels",
+        "Epic and Repeat Loop filters",
+        "Boss search",
+        "Hash navigation clears filters and opens target",
+        "Replay damage sorting changes order and aria-sort",
+        "Mobile team and horizontally scrollable replay table layout",
+        "Damage data → Related Guides → More to Explore",
+        "M2 Ghaz Other maps labels, source maps, exact-M2 examples and damage summaries at desktop/mobile widths"
+      ]
+    }
+  },
+  "evidenceOverrideReview": "docs/raid-seasons/s115/m2-all-maps-review.json"
+}

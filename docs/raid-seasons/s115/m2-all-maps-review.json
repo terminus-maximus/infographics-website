@@ -1,0 +1,602 @@
+{
+  "season": 115,
+  "tier": "M2",
+  "boss": "Ghaz",
+  "scheduledMap": "Ghaz_01",
+  "scope": "all-maps-exact-tier",
+  "requestedLocalDate": "2026-11-14",
+  "policyVersion": 2,
+  "masterSha256": "8ede9181225c1bf4284d5e4edd33c7ad29620ae8690dd6223420e6d93df27456",
+  "evidenceOverridesSha256": "ed918e9d96aa44fe635a9ab5017e40c7ba7e8f91a17853388718400d4bbd6471",
+  "eligibleM2Records": 55,
+  "archetypeCounts": {
+    "Battlesuits": 13,
+    "Laviscus": 39,
+    "Neuro": 1,
+    "Custodes": 2
+  },
+  "before": {
+    "tier": "M2",
+    "rarity": "Mythic",
+    "boss": "Ghaz",
+    "map": "Ghaz_01",
+    "loop": true,
+    "exactCount": 0,
+    "recommendations": [
+      {
+        "archetype": "Battlesuits",
+        "kind": "distant-tier",
+        "sample": 3,
+        "exactSample": 0,
+        "average": 1573333,
+        "minimum": 1060000,
+        "maximum": 1960000,
+        "tiers": [
+          "L3"
+        ],
+        "maps": [
+          "Ghaz_01"
+        ],
+        "creatorCount": 3,
+        "tierCounts": {
+          "L3": 3
+        },
+        "team": {
+          "heroes": [
+            "Farsight",
+            "Revas",
+            "Actus",
+            "Darkstrider",
+            "Lhykis"
+          ],
+          "mow": "PBC",
+          "sourceVideoId": "TCxjEo6A-M0",
+          "sample": 2
+        },
+        "examples": [
+          {
+            "videoId": "TCxjEo6A-M0",
+            "url": "https://www.youtube.com/watch?v=TCxjEo6A-M0",
+            "boss": "Ghaz",
+            "tier": "L3",
+            "map": "Ghaz_01",
+            "archetype": "Battlesuits",
+            "damage": 1960000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "JurassicKyle",
+            "publishedAt": "10/10/2026 8:45 PM"
+          },
+          {
+            "videoId": "PFgC0YmW_EM",
+            "url": "https://www.youtube.com/watch?v=PFgC0YmW_EM",
+            "boss": "Ghaz",
+            "tier": "L3",
+            "map": "Ghaz_01",
+            "archetype": "Battlesuits",
+            "damage": 1700000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "Biovore",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, Biovore",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Un4given",
+            "publishedAt": "10/7/2026 11:57 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "TCxjEo6A-M0",
+          "PFgC0YmW_EM",
+          "AUKDDATGiGg"
+        ],
+        "maxDistance": 4
+      },
+      {
+        "archetype": "Laviscus",
+        "kind": "distant-tier",
+        "sample": 1,
+        "exactSample": 0,
+        "average": 1430000,
+        "minimum": 1430000,
+        "maximum": 1430000,
+        "tiers": [
+          "L2"
+        ],
+        "maps": [
+          "Ghaz_01"
+        ],
+        "creatorCount": 1,
+        "tierCounts": {
+          "L2": 1
+        },
+        "team": {
+          "heroes": [
+            "Lav",
+            "Kari",
+            "Traj",
+            "Aesoth",
+            "Vit"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "mdizWSEOWfg",
+          "sample": 1
+        },
+        "examples": [
+          {
+            "videoId": "mdizWSEOWfg",
+            "url": "https://www.youtube.com/watch?v=mdizWSEOWfg",
+            "boss": "Ghaz",
+            "tier": "L2",
+            "map": "Ghaz_01",
+            "archetype": "Laviscus",
+            "damage": 1430000,
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Aesoth",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "teamText": "Lav, Kari, Traj, Aesoth, Vit, Biovore",
+            "teamKey": "Aesoth|Kari|Lav|Traj|Vit",
+            "creator": "Painhawk",
+            "publishedAt": "2/8/2026 2:40 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "mdizWSEOWfg"
+        ],
+        "maxDistance": 5
+      },
+      {
+        "archetype": "Custodes",
+        "kind": "distant-tier",
+        "sample": 2,
+        "exactSample": 0,
+        "average": 936500,
+        "minimum": 923000,
+        "maximum": 950000,
+        "tiers": [
+          "L2"
+        ],
+        "maps": [
+          "Ghaz_01"
+        ],
+        "creatorCount": 2,
+        "tierCounts": {
+          "L2": 2
+        },
+        "team": {
+          "heroes": [
+            "Kari",
+            "Traj",
+            "Kharn",
+            "Rag",
+            "Dante"
+          ],
+          "mow": "Galatian",
+          "sourceVideoId": "oF_Gr2sHLD8",
+          "sample": 2
+        },
+        "examples": [
+          {
+            "videoId": "oF_Gr2sHLD8",
+            "url": "https://www.youtube.com/watch?v=oF_Gr2sHLD8",
+            "boss": "Ghaz",
+            "tier": "L2",
+            "map": "Ghaz_01",
+            "archetype": "Custodes",
+            "damage": 950000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "Galatian",
+            "teamText": "Kari, Traj, Kharn, Rag, Dante, Galatian",
+            "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+            "creator": "GarviLoken",
+            "publishedAt": "1/28/2026 12:13 PM"
+          },
+          {
+            "videoId": "Wpy5gLKHwJs",
+            "url": "https://www.youtube.com/watch?v=Wpy5gLKHwJs",
+            "boss": "Ghaz",
+            "tier": "L2",
+            "map": "Ghaz_01",
+            "archetype": "Custodes",
+            "damage": 923000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Rag, Dante, Biovore",
+            "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+            "creator": "UltraBrother",
+            "publishedAt": "1/29/2026 9:09 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "oF_Gr2sHLD8",
+          "Wpy5gLKHwJs"
+        ],
+        "maxDistance": 5
+      }
+    ]
+  },
+  "after": {
+    "tier": "M2",
+    "rarity": "Mythic",
+    "boss": "Ghaz",
+    "map": "Ghaz_01",
+    "loop": true,
+    "exactCount": 0,
+    "recommendations": [
+      {
+        "archetype": "Battlesuits",
+        "kind": "cross-map",
+        "sample": 13,
+        "exactSample": 0,
+        "average": 1721538,
+        "minimum": 1450000,
+        "maximum": 2060000,
+        "tiers": [
+          "M2"
+        ],
+        "maps": [
+          "Ghaz_02",
+          "Ghaz_05"
+        ],
+        "creatorCount": 7,
+        "tierCounts": {
+          "M2": 13
+        },
+        "team": {
+          "heroes": [
+            "Farsight",
+            "Revas",
+            "Actus",
+            "Darkstrider",
+            "Lhykis"
+          ],
+          "mow": "PBC",
+          "sourceVideoId": "KAC8QUH9CPk",
+          "sample": 6
+        },
+        "examples": [
+          {
+            "videoId": "KAC8QUH9CPk",
+            "url": "https://www.youtube.com/watch?v=KAC8QUH9CPk",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_02",
+            "archetype": "Battlesuits",
+            "damage": 2060000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "10/4/2026 1:34 AM"
+          },
+          {
+            "videoId": "HsaATtVyI7c",
+            "url": "https://www.youtube.com/watch?v=HsaATtVyI7c",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_02",
+            "archetype": "Battlesuits",
+            "damage": 1990000,
+            "heroes": [
+              "Farsight",
+              "Revas",
+              "Actus",
+              "Darkstrider",
+              "Lhykis"
+            ],
+            "mow": "PBC",
+            "teamText": "Farsight, Revas, Actus, Darkstrider, Lhykis, PBC",
+            "teamKey": "Actus|Darkstrider|Farsight|Lhykis|Revas",
+            "creator": "Lyell",
+            "publishedAt": "9/28/2026 12:32 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "KAC8QUH9CPk",
+          "HsaATtVyI7c",
+          "ht4z_M0THzw",
+          "MPdopNq60ds",
+          "wpNL-W6kR3U",
+          "Z0BAZ_tDEEM",
+          "ZRDvph842mo",
+          "z0KVejHSRCg",
+          "-mOGJqNuf9g",
+          "TJqW5UcMmk0",
+          "ULpLFfV4qwc",
+          "UZckU1_lUOs",
+          "xikMmqhDGi4"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "Laviscus",
+        "kind": "cross-map",
+        "sample": 39,
+        "exactSample": 0,
+        "average": 1662385,
+        "minimum": 830000,
+        "maximum": 2100000,
+        "tiers": [
+          "M2"
+        ],
+        "maps": [
+          "Ghaz_02",
+          "Ghaz_04",
+          "Ghaz_05"
+        ],
+        "creatorCount": 20,
+        "tierCounts": {
+          "M2": 39
+        },
+        "team": {
+          "heroes": [
+            "Lav",
+            "Kari",
+            "Traj",
+            "Aesoth",
+            "Vit"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "LtFlCqw47N4",
+          "sample": 33
+        },
+        "examples": [
+          {
+            "videoId": "LtFlCqw47N4",
+            "url": "https://www.youtube.com/watch?v=LtFlCqw47N4",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_02",
+            "archetype": "Laviscus",
+            "damage": 2100000,
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Aesoth",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "teamText": "Lav, Kari, Traj, Aesoth, Vit, Biovore",
+            "teamKey": "Aesoth|Kari|Lav|Traj|Vit",
+            "creator": "Un4given",
+            "publishedAt": "9/28/2026 10:01 AM"
+          },
+          {
+            "videoId": "BUA01eYt3BE",
+            "url": "https://www.youtube.com/watch?v=BUA01eYt3BE",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_02",
+            "archetype": "Laviscus",
+            "damage": 2041000,
+            "heroes": [
+              "Lav",
+              "Kari",
+              "Traj",
+              "Aesoth",
+              "Vit"
+            ],
+            "mow": "Biovore",
+            "teamText": "Lav, Kari, Traj, Aesoth, Vit, Biovore",
+            "teamKey": "Aesoth|Kari|Lav|Traj|Vit",
+            "creator": "Baldrick",
+            "publishedAt": "8/1/2026 1:46 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "LtFlCqw47N4",
+          "BUA01eYt3BE",
+          "BS1zeKkJgpI",
+          "HkQKEEQXe58",
+          "1cxu6gi0UFw",
+          "6sqZ2CSOF_s",
+          "iExkbpE0XzY",
+          "jBN3upBD5GI",
+          "M1ez3giLYYE",
+          "Bzcg-NhP16w",
+          "TqUgkJJr4hc",
+          "QUDrle-dxMg",
+          "8x7K8HDSAwA",
+          "-D21WSdwXEg",
+          "UEgmnzCfGHI",
+          "VHHeXFTjBRM",
+          "BHpgf-dI40U",
+          "CHQw1i4el2o",
+          "v5AUKbVmF_Q",
+          "9gYAn8aEw2E",
+          "hB1ure-Wna4",
+          "Iaups4wup00",
+          "a3DRnnCnygY",
+          "k0AcPokX4o4",
+          "p2CynrEGl8Y",
+          "06JihZ2vUq4",
+          "KHY7bthaGiE",
+          "r4NnD87H5Co",
+          "Mglg67whqBc",
+          "Zd2n7EwNfzs",
+          "YyipwMAFuGI",
+          "SSE2UZSSghE",
+          "E8Zs8oKmjLY",
+          "spfCsBkf7pk",
+          "bvykZQOVitg",
+          "rnpzzlNwelI",
+          "sQMHAQFgePg",
+          "QMCs7T6uofU",
+          "RUNrFYuUlF0"
+        ],
+        "maxDistance": 0
+      },
+      {
+        "archetype": "Custodes",
+        "kind": "cross-map",
+        "sample": 2,
+        "exactSample": 0,
+        "average": 908500,
+        "minimum": 824000,
+        "maximum": 993000,
+        "tiers": [
+          "M2"
+        ],
+        "maps": [
+          "Ghaz_05"
+        ],
+        "creatorCount": 2,
+        "tierCounts": {
+          "M2": 2
+        },
+        "team": {
+          "heroes": [
+            "Kari",
+            "Traj",
+            "Kharn",
+            "Rag",
+            "Dante"
+          ],
+          "mow": "Biovore",
+          "sourceVideoId": "Biqxk9DTmE8",
+          "sample": 2
+        },
+        "examples": [
+          {
+            "videoId": "Biqxk9DTmE8",
+            "url": "https://www.youtube.com/watch?v=Biqxk9DTmE8",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_05",
+            "archetype": "Custodes",
+            "damage": 993000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Rag, Dante, Biovore",
+            "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+            "creator": "Unessentials",
+            "publishedAt": "7/6/2026 9:40 AM"
+          },
+          {
+            "videoId": "dNJOFeZM6o8",
+            "url": "https://www.youtube.com/watch?v=dNJOFeZM6o8",
+            "boss": "Ghaz",
+            "tier": "M2",
+            "map": "Ghaz_05",
+            "archetype": "Custodes",
+            "damage": 824000,
+            "heroes": [
+              "Kari",
+              "Traj",
+              "Kharn",
+              "Rag",
+              "Dante"
+            ],
+            "mow": "Biovore",
+            "teamText": "Kari, Traj, Kharn, Rag, Dante, Biovore",
+            "teamKey": "Dante|Kari|Kharn|Rag|Traj",
+            "creator": "Azurite",
+            "publishedAt": "7/4/2026 4:23 AM"
+          }
+        ],
+        "evidenceVideoIds": [
+          "Biqxk9DTmE8",
+          "dNJOFeZM6o8"
+        ],
+        "maxDistance": 0
+      }
+    ]
+  },
+  "graphic": {
+    "tier": "M2",
+    "boss": "Ghaz",
+    "map": "Ghaz_01",
+    "bossIcon": "/images/replay-library/bosses/Ghaz.webp",
+    "mapImage": "/images/replay-library/maps/Ghaz_01.webp",
+    "recommendations": [
+      {
+        "archetype": "Battlesuits",
+        "archetypeIcon": "/images/replay-library/heroes/Farsight.webp",
+        "averageDamage": 1721538,
+        "sample": 13,
+        "sourceTiers": [
+          "M2"
+        ],
+        "kind": "cross-map",
+        "sourceMaps": [
+          "Ghaz_02",
+          "Ghaz_05"
+        ],
+        "sourceLabel": "Other maps"
+      },
+      {
+        "archetype": "Laviscus",
+        "archetypeIcon": "/images/replay-library/heroes/Lav.webp",
+        "averageDamage": 1662385,
+        "sample": 39,
+        "sourceTiers": [
+          "M2"
+        ],
+        "kind": "cross-map",
+        "sourceMaps": [
+          "Ghaz_02",
+          "Ghaz_04",
+          "Ghaz_05"
+        ],
+        "sourceLabel": "Other maps"
+      }
+    ]
+  },
+  "unchangedEncounters": 24,
+  "checks": {
+    "completeExactTierPools": "passed",
+    "arithmeticMeans": "passed",
+    "sourceMapsAndTiers": "passed",
+    "scheduledLineupPreserved": "passed",
+    "s114AndMasterPreserved": "passed",
+    "raidTests": 18,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "buildPages": 195,
+    "desktopAndMobile": "passed",
+    "horizontalPageOverflow": false
+  }
+}

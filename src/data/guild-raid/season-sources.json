@@ -17,6 +17,23 @@
         "sha256": "f299fb800aac4c68487960ac4deabaf1bbbf86f9168ffa5c9dcbfd402ef65d1f",
         "note": "Published S113 coming-soon artwork explicitly identifies Season 114 and November 18, 2026."
       }
+    },
+    {
+      "season": 115,
+      "startDate": "2026-12-02",
+      "status": "Ready",
+      "channel": "production",
+      "generation": "08c5721cbf6ec4ed5e6a",
+      "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+      "appVersion": "1.44.88",
+      "configFingerprint": "1b8ce77a3e7130ae487a860184e38aa9eb0305a61c3f879604ab9401783f8419",
+      "expectedLineupSha256": "0d00896f9f6fbae13b7d430f473a7b4cffcec6dacc3f2cb6fbc197446f4b8f37",
+      "dateEvidence": {
+        "kind": "user-confirmed",
+        "file": "docs/raid-seasons/s115/season-evidence.json",
+        "sha256": "a6933769690f9ae2a4c836198dac7575524f8809bdcc16cc3a1229009c1bc4e0",
+        "note": "Dan explicitly confirmed December 2, 2026 and the S115 loop in this chat on November 14, 2026; the reviewed 25-encounter lineup matches production 1.44.88 Config 1."
+      }
     }
   ]
 }

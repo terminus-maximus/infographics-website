@@ -75,6 +75,7 @@ const sections = [
     <details class="method" id="method">
       <summary>Damage data</summary>
       <p>Averages cover each archetype, across lineups and MoW. With fewer than {guide.policy.minimumSample} replays, up to {guide.policy.maximumTierDistance} nearby tiers are pooled on the same map. Source tiers are shown; reference replays use a more distant tier or another map. These are observed results, not damage predictions.</p>
+      {guide.evidenceOverrides && <p>Entries marked “Other maps” use all eligible replays at the displayed source tier across maps. Their source maps are listed with each team; these averages do not predict damage on the scheduled map.</p>}
     </details>
     <RecommendationSections pathname={`/guild-raid/s${guide.season}/`} />
   </main>

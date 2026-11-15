@@ -50,6 +50,28 @@ export function normalizeReplays(rows) {
 
 const distance = (a, b) => Math.abs(TIERS.indexOf(a) - TIERS.indexOf(b));
 const byDamage = (a, b) => b.damage - a.damage || a.videoId.localeCompare(b.videoId);
+
+export function validateEvidenceOverrides(lineup, overrides) {
+  if (overrides == null) return;
+  if (overrides.schemaVersion !== 1 || overrides.season !== lineup.season || !Array.isArray(overrides.encounters) || !overrides.encounters.length) {
+    throw new Error('Invalid season-scoped evidence overrides');
+  }
+  const seen = new Set();
+  for (const override of overrides.encounters) {
+    const slot = lineup.slots.find(s => s.tier === override.tier && s.boss === override.boss && s.map === override.map);
+    if (!slot || seen.has(override.tier)) throw new Error('Evidence override must match one unique configured encounter');
+    if (override.scope !== 'all-maps-exact-tier') throw new Error('Unsupported evidence override scope');
+    if (['reason', 'approvedBy', 'instruction'].some(key => typeof override[key] !== 'string' || !override[key].trim()) || !/^\d{4}-\d{2}-\d{2}$/.test(override.approvedOn || '')) {
+      throw new Error('Evidence override requires rationale and approval provenance');
+    }
+    seen.add(override.tier);
+  }
+}
+
+// Version 2 adds explicit season-scoped exceptions; ordinary snapshots retain v1.
+export const selectionPolicyVersion = overrides => overrides ? 2 : 1;
+export const graphicEligible = rec => ['exact', 'pooled', 'cross-map'].includes(rec.kind) && rec.sample >= 3;
+
 export function evidencePool(rows, slot, policy = POLICY) {
   const sameMap = rows.filter(r => r.boss === slot.boss && r.map === slot.map);
   // Legendary/Mythic may pool across their boundary. Epic and lower stay in
@@ -71,8 +93,11 @@ export function evidencePool(rows, slot, policy = POLICY) {
   return { rows: candidates.filter(r => r.tier === preferredTier), kind: sameMap.length ? 'distant-tier' : 'other-map', radius: nearest };
 }
 
-function summarizeArchetype(rows, slot, archetype) {
-  const evidence = evidencePool(rows.filter(r => r.archetype === archetype), slot);
+function summarizeArchetype(rows, slot, archetype, override) {
+  const candidates = rows.filter(r => r.archetype === archetype);
+  const evidence = override
+    ? { rows: candidates.filter(r => r.boss === slot.boss && r.tier === slot.tier), kind: 'cross-map' }
+    : evidencePool(candidates, slot);
   if (!evidence.rows.length) return null;
   const sorted = [...evidence.rows].sort(byDamage);
   const lead = sorted[0];
@@ -91,13 +116,15 @@ function summarizeArchetype(rows, slot, archetype) {
     maxDistance: Math.max(...sorted.map(r => distance(r.tier, slot.tier))) };
 }
 
-export function buildSeasonGuide(lineup, rows) {
+export function buildSeasonGuide(lineup, rows, overrides = null) {
+  validateEvidenceOverrides(lineup, overrides);
   const { replays, rejected } = normalizeReplays(rows);
-  const kinds = { exact: 0, pooled: 1, 'distant-tier': 2, 'other-map': 3 };
+  const kinds = { exact: 0, 'cross-map': 0, pooled: 1, 'distant-tier': 2, 'other-map': 3 };
   const slots = lineup.slots.map(slot => {
     const candidates = replays.filter(r => r.boss === slot.boss);
+    const override = overrides?.encounters.find(o => o.tier === slot.tier);
     const recommendations = [...new Set(candidates.map(r => r.archetype))]
-      .map(a => summarizeArchetype(candidates, slot, a)).filter(Boolean)
+      .map(a => summarizeArchetype(candidates, slot, a, override)).filter(Boolean)
       .sort((a, b) => kinds[a.kind] - kinds[b.kind] || (b.sample >= 3 ? 1 : 0) - (a.sample >= 3 ? 1 : 0) || b.average - a.average)
       .slice(0, POLICY.maximumArchetypes);
     const exactCount = candidates.filter(r => r.map === slot.map && r.tier === slot.tier).length;
@@ -106,5 +133,5 @@ export function buildSeasonGuide(lineup, rows) {
     return { tier: slot.tier, rarity: slot.rarity, boss: slot.boss, map: slot.map,
       loop: lineup.loop.includes(slot.tier), exactCount, recommendations };
   });
-  return { ...lineup, policy: POLICY, eligibleReplayCount: replays.length, rejected, slots };
+  return { ...lineup, policy: POLICY, ...(overrides ? { evidenceOverrides: overrides } : {}), eligibleReplayCount: replays.length, rejected, slots };
 }

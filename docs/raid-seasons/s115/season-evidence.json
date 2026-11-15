@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "season": 115,
+  "startDate": "2026-12-02",
+  "observedLocalDate": "2026-11-14",
+  "timeZone": "America/Los_Angeles",
+  "verification": {
+    "kind": "user-confirmation",
+    "source": "Dan’s explicit confirmation in the S115 local guide chat",
+    "question": "Can you confirm S115 starts December 2, 2026 and uses this loop: M3 Lion (Lion_01), M2 Ghazghkull (Ghaz_01), M1 Cawl (Cawl_03), L5 Avatar (Avatar_05), L4 Rogal Dorn (Dorn_06)? This matches production 1.44.88 Config 1, but the existing schedule is marked projected.",
+    "answer": "Yes—use that date and lineup"
+  },
+  "review": {
+    "note": "The season/date association is user-confirmed. All 25 encounters below are taken from the verified production LocalDatabase catalog; no rotation-number or calendar extrapolation was used to establish the binding. Each boss/map normalizes through the existing Replay Library mappings and has local map artwork.",
+    "appVersion": "1.44.88",
+    "channel": "production",
+    "generation": "08c5721cbf6ec4ed5e6a",
+    "catalogSha256": "aefcf4e455062b2ffb1bf52884d81ac77174048302328a24bf1fdb577c6c8fe4",
+    "configId": "guild_boss_season_config_1",
+    "configFingerprint": "1b8ce77a3e7130ae487a860184e38aa9eb0305a61c3f879604ab9401783f8419",
+    "normalizedLineupSha256": "0d00896f9f6fbae13b7d430f473a7b4cffcec6dacc3f2cb6fbc197446f4b8f37"
+  },
+  "loop": [
+    "M3",
+    "M2",
+    "M1",
+    "L5",
+    "L4"
+  ],
+  "slots": [
+    {
+      "tier": "C1",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_01"
+    },
+    {
+      "tier": "C2",
+      "rarity": "Common",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_02"
+    },
+    {
+      "tier": "C3",
+      "rarity": "Common",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_03"
+    },
+    {
+      "tier": "C4",
+      "rarity": "Common",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "U1",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantKronos",
+      "map": "Hive_Tyrant_06"
+    },
+    {
+      "tier": "U2",
+      "rarity": "Uncommon",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonLeviathan",
+      "map": "Tervigon_05"
+    },
+    {
+      "tier": "U3",
+      "rarity": "Uncommon",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantGorgon",
+      "map": "Hive_Tyrant_04"
+    },
+    {
+      "tier": "U4",
+      "rarity": "Uncommon",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_03"
+    },
+    {
+      "tier": "R1",
+      "rarity": "Rare",
+      "boss": "Hive Tyrant",
+      "bossVariant": "HiveTyrantLeviathan",
+      "map": "Hive_Tyrant_02"
+    },
+    {
+      "tier": "R2",
+      "rarity": "Rare",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_02"
+    },
+    {
+      "tier": "R3",
+      "rarity": "Rare",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_05"
+    },
+    {
+      "tier": "R4",
+      "rarity": "Rare",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_01"
+    },
+    {
+      "tier": "E1",
+      "rarity": "Epic",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_04"
+    },
+    {
+      "tier": "E2",
+      "rarity": "Epic",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_03"
+    },
+    {
+      "tier": "E3",
+      "rarity": "Epic",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_04"
+    },
+    {
+      "tier": "E4",
+      "rarity": "Epic",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_02"
+    },
+    {
+      "tier": "E5",
+      "rarity": "Epic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_02"
+    },
+    {
+      "tier": "L1",
+      "rarity": "Legendary",
+      "boss": "Tervigon",
+      "bossVariant": "TervigonGorgon",
+      "map": "Tervigon_05"
+    },
+    {
+      "tier": "L2",
+      "rarity": "Legendary",
+      "boss": "Screamer",
+      "bossVariant": "ScreamerKiller",
+      "map": "Screamer_01"
+    },
+    {
+      "tier": "L3",
+      "rarity": "Legendary",
+      "boss": "Riptide",
+      "bossVariant": "Riptide",
+      "map": "Riptide_01"
+    },
+    {
+      "tier": "L4",
+      "rarity": "Legendary",
+      "boss": "Dorn",
+      "bossVariant": "RogalDorn",
+      "map": "Dorn_06"
+    },
+    {
+      "tier": "L5",
+      "rarity": "Legendary",
+      "boss": "Avatar",
+      "bossVariant": "AvatarOfKhaine",
+      "map": "Avatar_05"
+    },
+    {
+      "tier": "M1",
+      "rarity": "Mythic",
+      "boss": "Cawl",
+      "bossVariant": "BelisariusRW",
+      "map": "Cawl_03"
+    },
+    {
+      "tier": "M2",
+      "rarity": "Mythic",
+      "boss": "Ghaz",
+      "bossVariant": "Ghazghkull",
+      "map": "Ghaz_01"
+    },
+    {
+      "tier": "M3",
+      "rarity": "Mythic",
+      "boss": "Lion",
+      "bossVariant": "Lion",
+      "map": "Lion_01"
+    }
+  ]
+}
