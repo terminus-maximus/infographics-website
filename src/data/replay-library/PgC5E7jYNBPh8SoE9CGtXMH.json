@@ -62746,5 +62746,33 @@
     "hero_4":"Darkstrider",
     "hero_5":"Lhykis",
     "MoW":"Reanimator"
+  },
+  {
+    "creator":"UltraBrother",
+    "video_id":"EwcaPxivE-8",
+    "video_url":"https:\/\/www.youtube.com\/watch?v=EwcaPxivE-8",
+    "published_at":"11\/15\/2026 10:58 AM",
+    "title":"Tacticus: M2 Lion 1.24m Lavistodes #tacticus #warhammer #warhammer40k #warhammer40000 #gameplay",
+    "tier_guess":"M2",
+    "tier_final":"M2",
+    "boss_guess":"Lion",
+    "boss_final":"Lion",
+    "damage_guess":"1240000",
+    "damage_final":"1240000",
+    "review_status":"VALID_REPLAY",
+    "agent_review":"NEED_HUMAN",
+    "discovered_at":"11\/16\/2026 2:26 AM",
+    "notes":null,
+    "map":"Lion_02",
+    "team_archetype":"Laviscus",
+    "team_key":"Kari|Traj",
+    "Team (no MoW)":"Kari, Traj",
+    "Team":"Kari, Traj, Biovore",
+    "hero_1":null,
+    "hero_2":"Kari",
+    "hero_3":"Traj",
+    "hero_4":null,
+    "hero_5":null,
+    "MoW":"Biovore"
   }
 ]
