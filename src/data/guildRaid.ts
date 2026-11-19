@@ -1,7 +1,7 @@
 import seasonSources from './guild-raid/season-sources.json';
 import { formatGuildRaidStartDate } from '../lib/guildRaidDates';
 
-export const currentGuildRaidSeasonNumber = "113";
+export const currentGuildRaidSeasonNumber = "114";
 const singleImage = seasonSources.seasons.some(season => String(season.season) === currentGuildRaidSeasonNumber);
 const imageName = `guild-raid-s${currentGuildRaidSeasonNumber}${singleImage ? '' : '-mythic'}`;
 
