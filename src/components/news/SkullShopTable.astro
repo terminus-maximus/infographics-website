@@ -1,0 +1,55 @@
+---
+import SkullShopItem from './SkullShopItem.astro';
+import SkullShopIcon from './SkullShopIcon.astro';
+import type shop from '../../data/news/skull-harvest-shop.json';
+
+interface Props {
+  items: (typeof shop.items);
+  label: string;
+  day?: number;
+  totalDays?: number;
+  showShardVariants?: boolean;
+}
+const { items, label, day, totalDays = 1, showShardVariants = false } = Astro.props;
+const number = (value: number) => value.toLocaleString('en-US');
+const columns = showShardVariants ? [17, 21, 10, 10, 12, 15, 15] : [34, 11, 11, 12, 16, 16];
+const groups = items.map(item => {
+  const regular = showShardVariants && 'regularShardOffer' in item ? item.regularShardOffer : undefined;
+  return {
+    item,
+    characterName: regular ? item.name.replace(' Mythic shards', '') : '',
+    offers: regular ? [
+      { ...item, ...regular, name: 'Regular shards', rarity: 'Regular' },
+      { ...item, name: 'Mythic shards' },
+    ] : [item],
+  };
+});
+---
+
+<div class="table-scroll skull-shop-scroll" tabindex="0" role="region" aria-label={label}>
+  <table class:list={['skull-shop-table', { 'skull-shop-table-variants': showShardVariants }]} data-total-days={totalDays}>
+    <caption class="skull-sr-only">{label}. Quantities and skull prices are per pack. Totals assume every daily limit is used across {totalDays} day{totalDays === 1 ? '' : 's'}.</caption>
+    <colgroup>{columns.map(width => <col style={`width: ${width}%`} />)}</colgroup>
+    <thead><tr>
+      <th scope={showShardVariants ? 'colgroup' : 'col'} colspan={showShardVariants ? 2 : 1}>Item</th>
+      <th scope="col">You get</th>
+      <th scope="col">Skulls</th>
+      <th scope="col">Daily limit</th>
+      <th scope="col">Total available<small>{totalDays === 1 ? 'this day' : `all ${totalDays} days`}</small></th>
+      <th scope="col">Total cost<small>{totalDays === 1 ? 'this day' : `all ${totalDays} days`}</small></th>
+    </tr></thead>
+    {groups.map(group => <tbody data-character={group.characterName || undefined}>
+      {group.offers.map((offer, index) => <tr data-shop-row data-quantity={offer.quantity} data-cost={offer.cost} data-limit={offer.dailyLimit}>
+        {group.characterName && index === 0 && <th scope="rowgroup" rowspan="2" class="skull-character-anchor">
+          <div><SkullShopIcon icon={group.item.icon} category="Character" size={64} /><strong>{group.characterName}</strong></div>
+        </th>}
+        <th scope="row" colspan={showShardVariants && !group.characterName ? 2 : 1}><SkullShopItem item={offer} day={day} showRarity={!group.characterName} /></th>
+        <td class="skull-quantity">{number(offer.quantity)}</td>
+        <td class="skull-cost">{offer.cost === 0 ? 'Free' : number(offer.cost)}</td>
+        <td class="skull-limit">{number(offer.dailyLimit)}</td>
+        <td class="skull-quantity skull-total-available">{number(offer.quantity * offer.dailyLimit * totalDays)}</td>
+        <td class="skull-cost skull-total-cost">{offer.cost === 0 ? 'Free' : number(offer.cost * offer.dailyLimit * totalDays)}</td>
+      </tr>)}
+    </tbody>)}
+  </table>
+</div>

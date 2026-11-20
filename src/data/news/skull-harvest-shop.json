@@ -1,0 +1,1556 @@
+{
+  "version": 1,
+  "event": "Skull Harvest",
+  "start": "2026-11-23",
+  "lastEventDay": "2026-11-29",
+  "view": "High-tier shop; account-dependent offers are noted.",
+  "source": {
+    "appVersion": "1.44.88",
+    "configHash": "9bdc534d9850e21cd133d4951d9e46b6",
+    "reviewed": "2026-11-18",
+    "planner": "https://tacticusplanner.app/plan/shop-events/november2026"
+  },
+  "days": [
+    {
+      "index": 0,
+      "short": "Mon",
+      "date": "Nov 23",
+      "iso": "2026-11-23"
+    },
+    {
+      "index": 1,
+      "short": "Tue",
+      "date": "Nov 24",
+      "iso": "2026-11-24"
+    },
+    {
+      "index": 2,
+      "short": "Wed",
+      "date": "Nov 25",
+      "iso": "2026-11-25"
+    },
+    {
+      "index": 3,
+      "short": "Thu",
+      "date": "Nov 26",
+      "iso": "2026-11-26"
+    },
+    {
+      "index": 4,
+      "short": "Fri",
+      "date": "Nov 27",
+      "iso": "2026-11-27"
+    },
+    {
+      "index": 5,
+      "short": "Sat",
+      "date": "Nov 28",
+      "iso": "2026-11-28"
+    },
+    {
+      "index": 6,
+      "short": "Sun",
+      "date": "Nov 29",
+      "iso": "2026-11-29"
+    }
+  ],
+  "items": [
+    {
+      "id": "slot-1-gold",
+      "slot": 1,
+      "itemId": "gold",
+      "name": "Claimed Skulls",
+      "rarity": "",
+      "category": "Free",
+      "quantity": 5,
+      "cost": 0,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/0/0"
+      ],
+      "icon": "/images/news/rewards/claimed-skulls.webp"
+    },
+    {
+      "id": "slot-2-mythicShards_worldKharn",
+      "slot": 2,
+      "itemId": "mythicShards_worldKharn",
+      "name": "Khârn Mythic shards",
+      "rarity": "Mythic",
+      "category": "Shards",
+      "quantity": 8,
+      "cost": 70,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "Eligible characters. Ordinary-shard alternative: 8 for 15 skulls, up to 5 purchases daily.",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/1/2"
+      ],
+      "icon": "/images/heroes/Kharn.webp",
+      "regularShardOffer": {
+        "id": "slot-2-shards_worldKharn",
+        "itemId": "shards_worldKharn",
+        "quantity": 8,
+        "cost": 15,
+        "dailyLimit": 5,
+        "sourceEntries": [
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/1/0",
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/1/1"
+        ]
+      }
+    },
+    {
+      "id": "slot-3-mythicShards_worldExecutions",
+      "slot": 3,
+      "itemId": "mythicShards_worldExecutions",
+      "name": "Tarvakh Mythic shards",
+      "rarity": "Mythic",
+      "category": "Shards",
+      "quantity": 8,
+      "cost": 70,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "Eligible characters. Ordinary-shard alternative: 8 for 15 skulls, up to 5 purchases daily.",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/2/2"
+      ],
+      "icon": "/images/heroes/Tarvakh.webp",
+      "regularShardOffer": {
+        "id": "slot-3-shards_worldExecutions",
+        "itemId": "shards_worldExecutions",
+        "quantity": 8,
+        "cost": 15,
+        "dailyLimit": 5,
+        "sourceEntries": [
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/2/0",
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/2/1"
+        ]
+      }
+    },
+    {
+      "id": "slot-4-mythicShards_worldEightbound",
+      "slot": 4,
+      "itemId": "mythicShards_worldEightbound",
+      "name": "Azkor Mythic shards",
+      "rarity": "Mythic",
+      "category": "Shards",
+      "quantity": 8,
+      "cost": 70,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "Eligible characters. Ordinary-shard alternative: 8 for 15 skulls, up to 5 purchases daily.",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/3/2"
+      ],
+      "icon": "/images/heroes/Azkor.webp",
+      "regularShardOffer": {
+        "id": "slot-4-shards_worldEightbound",
+        "itemId": "shards_worldEightbound",
+        "quantity": 8,
+        "cost": 15,
+        "dailyLimit": 5,
+        "sourceEntries": [
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/3/0",
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/3/1"
+        ]
+      }
+    },
+    {
+      "id": "slot-5-mythicShards_worldJakhal",
+      "slot": 5,
+      "itemId": "mythicShards_worldJakhal",
+      "name": "Macer Mythic shards",
+      "rarity": "Mythic",
+      "category": "Shards",
+      "quantity": 8,
+      "cost": 70,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "Eligible characters. Ordinary-shard alternative: 8 for 15 skulls, up to 5 purchases daily.",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/4/2"
+      ],
+      "icon": "/images/heroes/Macer.webp",
+      "regularShardOffer": {
+        "id": "slot-5-shards_worldJakhal",
+        "itemId": "shards_worldJakhal",
+        "quantity": 8,
+        "cost": 15,
+        "dailyLimit": 5,
+        "sourceEntries": [
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/4/0",
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/4/1"
+        ]
+      }
+    },
+    {
+      "id": "slot-6-mythicShards_worldTerminator",
+      "slot": 6,
+      "itemId": "mythicShards_worldTerminator",
+      "name": "Wrask Mythic shards",
+      "rarity": "Mythic",
+      "category": "Shards",
+      "quantity": 8,
+      "cost": 70,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "Eligible characters. Ordinary-shard alternative: 8 for 15 skulls, up to 5 purchases daily.",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/5/2"
+      ],
+      "icon": "/images/heroes/Wrask.webp",
+      "regularShardOffer": {
+        "id": "slot-6-shards_worldTerminator",
+        "itemId": "shards_worldTerminator",
+        "quantity": 8,
+        "cost": 15,
+        "dailyLimit": 5,
+        "sourceEntries": [
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/5/0",
+          "/clientGameConfig/shop/merchants/November2026EventShop/products/5/1"
+        ]
+      }
+    },
+    {
+      "id": "slot-7-R_Block_DaemonfleshPlate",
+      "slot": 7,
+      "itemId": "R_Block_DaemonfleshPlate",
+      "name": "Daemonflesh Plate",
+      "rarity": "Mythic",
+      "category": "Relics",
+      "quantity": 1,
+      "cost": 125,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "note": "",
+      "alternatives": [
+        {
+          "days": [
+            0
+          ],
+          "name": "Ancient Combat Knife",
+          "cost": 65,
+          "itemId": "I_Crit_M001",
+          "icon": "/images/news/skull-harvest/shop/I_Crit_M001.webp"
+        },
+        {
+          "days": [
+            2
+          ],
+          "name": "Ancient Plated Greaves",
+          "cost": 65,
+          "itemId": "I_Defensive_M003",
+          "icon": "/images/news/skull-harvest/shop/I_Defensive_M003.webp"
+        },
+        {
+          "days": [
+            4
+          ],
+          "name": "Perfected Force Field",
+          "cost": 65,
+          "itemId": "I_Block_M003",
+          "icon": "/images/news/skull-harvest/shop/I_Block_M003.webp"
+        },
+        {
+          "days": [
+            6
+          ],
+          "name": "Daemonic Bolt Pistol",
+          "cost": 65,
+          "itemId": "I_Crit_M006",
+          "icon": "/images/news/skull-harvest/shop/I_Crit_M006.webp"
+        }
+      ],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/6/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/R_Block_DaemonfleshPlate.webp"
+    },
+    {
+      "id": "slot-7-R_Booster_Crit_TalismanOfRage",
+      "slot": 7,
+      "itemId": "R_Booster_Crit_TalismanOfRage",
+      "name": "Talisman of Rage",
+      "rarity": "Mythic",
+      "category": "Relics",
+      "quantity": 1,
+      "cost": 125,
+      "dailyLimit": 1,
+      "days": [
+        1,
+        3,
+        5
+      ],
+      "note": "",
+      "alternatives": [
+        {
+          "days": [
+            1
+          ],
+          "name": "Perfected Force Field Amplifier",
+          "cost": 65,
+          "itemId": "I_Booster_Block_M002",
+          "icon": "/images/news/skull-harvest/shop/I_Booster_Block_M002.webp"
+        },
+        {
+          "days": [
+            3
+          ],
+          "name": "Ancient Combat Knife",
+          "cost": 65,
+          "itemId": "I_Crit_M001",
+          "icon": "/images/news/skull-harvest/shop/I_Crit_M001.webp"
+        },
+        {
+          "days": [
+            5
+          ],
+          "name": "Daemonic Frag Grenades",
+          "cost": 65,
+          "itemId": "I_Booster_Crit_M003",
+          "icon": "/images/news/skull-harvest/shop/I_Booster_Crit_M003.webp"
+        }
+      ],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/6/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/R_Booster_Crit_TalismanOfRage.webp"
+    },
+    {
+      "id": "slot-8-I_Crit_M006",
+      "slot": 8,
+      "itemId": "I_Crit_M006",
+      "name": "Daemonic Bolt Pistol",
+      "rarity": "Mythic",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 65,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/0",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Crit_M006.webp"
+    },
+    {
+      "id": "slot-8-I_Block_M003",
+      "slot": 8,
+      "itemId": "I_Block_M003",
+      "name": "Perfected Force Field",
+      "rarity": "Mythic",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 65,
+      "dailyLimit": 1,
+      "days": [
+        1
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Block_M003.webp"
+    },
+    {
+      "id": "slot-8-I_Booster_Crit_M003",
+      "slot": 8,
+      "itemId": "I_Booster_Crit_M003",
+      "name": "Daemonic Frag Grenades",
+      "rarity": "Mythic",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 65,
+      "dailyLimit": 1,
+      "days": [
+        2,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/2",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Booster_Crit_M003.webp"
+    },
+    {
+      "id": "slot-8-I_Booster_Block_M002",
+      "slot": 8,
+      "itemId": "I_Booster_Block_M002",
+      "name": "Perfected Force Field Amplifier",
+      "rarity": "Mythic",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 65,
+      "dailyLimit": 1,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Booster_Block_M002.webp"
+    },
+    {
+      "id": "slot-8-I_Defensive_M003",
+      "slot": 8,
+      "itemId": "I_Defensive_M003",
+      "name": "Ancient Plated Greaves",
+      "rarity": "Mythic",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 65,
+      "dailyLimit": 1,
+      "days": [
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/7/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Defensive_M003.webp"
+    },
+    {
+      "id": "slot-9-I_Block_L003",
+      "slot": 9,
+      "itemId": "I_Block_L003",
+      "name": "Optimal Force Field",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        0
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Block_L003.webp"
+    },
+    {
+      "id": "slot-9-I_Defensive_L007",
+      "slot": 9,
+      "itemId": "I_Defensive_L007",
+      "name": "Monstrous Spiked Pauldron",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        1
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Defensive_L007.webp"
+    },
+    {
+      "id": "slot-9-I_Booster_Crit_L003",
+      "slot": 9,
+      "itemId": "I_Booster_Crit_L003",
+      "name": "Warpforged Frag Grenades",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        2
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/2"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Booster_Crit_L003.webp"
+    },
+    {
+      "id": "slot-9-I_Block_L006",
+      "slot": 9,
+      "itemId": "I_Block_L006",
+      "name": "Warpforged Sigil of Corruption",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Block_L006.webp"
+    },
+    {
+      "id": "slot-9-I_Booster_Block_L002",
+      "slot": 9,
+      "itemId": "I_Booster_Block_L002",
+      "name": "Optimal Force Field Amplifier",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Booster_Block_L002.webp"
+    },
+    {
+      "id": "slot-9-I_Crit_L006",
+      "slot": 9,
+      "itemId": "I_Crit_L006",
+      "name": "Warpforged Bolt Pistol",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Crit_L006.webp"
+    },
+    {
+      "id": "slot-9-I_Defensive_L003",
+      "slot": 9,
+      "itemId": "I_Defensive_L003",
+      "name": "Grand Plated Greaves",
+      "rarity": "Legendary",
+      "category": "Equipment",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 3,
+      "days": [
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/8/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/I_Defensive_L003.webp"
+    },
+    {
+      "id": "slot-10-upgHpM138C",
+      "slot": 10,
+      "itemId": "upgHpM138C",
+      "name": "Grand Symbol of the World Eaters",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 185,
+      "dailyLimit": 1,
+      "days": [
+        0,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/0",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpM138C.webp"
+    },
+    {
+      "id": "slot-10-upgDmgM213C",
+      "slot": 10,
+      "itemId": "upgDmgM213C",
+      "name": "Ancient Weapon Augmentation",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 150,
+      "dailyLimit": 1,
+      "days": [
+        1
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgM213C.webp"
+    },
+    {
+      "id": "slot-10-upgArmM214C",
+      "slot": 10,
+      "itemId": "upgArmM214C",
+      "name": "Warforged Safeguard",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 140,
+      "dailyLimit": 1,
+      "days": [
+        2
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/2"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmM214C.webp"
+    },
+    {
+      "id": "slot-10-upgDmgM212C",
+      "slot": 10,
+      "itemId": "upgDmgM212C",
+      "name": "Sundering Talons",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 150,
+      "dailyLimit": 1,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgM212C.webp"
+    },
+    {
+      "id": "slot-10-upgArmM212C",
+      "slot": 10,
+      "itemId": "upgArmM212C",
+      "name": "Mutation: Impenetrable Skin",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 140,
+      "dailyLimit": 1,
+      "days": [
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmM212C.webp"
+    },
+    {
+      "id": "slot-10-upgDmgM214C",
+      "slot": 10,
+      "itemId": "upgDmgM214C",
+      "name": "Ancient Power Source",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 150,
+      "dailyLimit": 1,
+      "days": [
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/9/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgM214C.webp"
+    },
+    {
+      "id": "slot-11-upgHpM002",
+      "slot": 11,
+      "itemId": "upgHpM002",
+      "name": "Mutant Form",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 15,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        2,
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/0",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/2",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpM002.webp"
+    },
+    {
+      "id": "slot-11-upgHpM004",
+      "slot": 11,
+      "itemId": "upgHpM004",
+      "name": "Venerable Battle Mark",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 15,
+      "dailyLimit": 5,
+      "days": [
+        1,
+        4,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/1",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/4",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpM004.webp"
+    },
+    {
+      "id": "slot-11-upgHpM003",
+      "slot": 11,
+      "itemId": "upgHpM003",
+      "name": "Ancient Inscription",
+      "rarity": "Mythic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 15,
+      "dailyLimit": 5,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/10/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpM003.webp"
+    },
+    {
+      "id": "slot-12-upgArmL138C",
+      "slot": 12,
+      "itemId": "upgArmL138C",
+      "name": "Collar of Khorne",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 85,
+      "dailyLimit": 4,
+      "days": [
+        0
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmL138C.webp"
+    },
+    {
+      "id": "slot-12-upgDmgL138C",
+      "slot": 12,
+      "itemId": "upgDmgL138C",
+      "name": "Butcher's Nails",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 90,
+      "dailyLimit": 4,
+      "days": [
+        1
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL138C.webp"
+    },
+    {
+      "id": "slot-12-upgHpL138C",
+      "slot": 12,
+      "itemId": "upgHpL138C",
+      "name": "Mark of Khorne",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 90,
+      "dailyLimit": 4,
+      "days": [
+        2
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/2"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpL138C.webp"
+    },
+    {
+      "id": "slot-12-upgArmL038C",
+      "slot": 12,
+      "itemId": "upgArmL038C",
+      "name": "Exalted Cadaere Renissum",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 35,
+      "dailyLimit": 4,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmL038C.webp"
+    },
+    {
+      "id": "slot-12-upgDmgL038C",
+      "slot": 12,
+      "itemId": "upgDmgL038C",
+      "name": "Exalted Chainaxe Teeth",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 30,
+      "dailyLimit": 4,
+      "days": [
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL038C.webp"
+    },
+    {
+      "id": "slot-12-upgHpL038C",
+      "slot": 12,
+      "itemId": "upgHpL038C",
+      "name": "Exalted Brazen Jaws",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 35,
+      "dailyLimit": 4,
+      "days": [
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpL038C.webp"
+    },
+    {
+      "id": "slot-12-upgHpL009C",
+      "slot": 12,
+      "itemId": "upgHpL009C",
+      "name": "Grandiose Skull Ornament",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 4,
+      "days": [
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/11/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpL009C.webp"
+    },
+    {
+      "id": "slot-13-upgHpL118",
+      "slot": 13,
+      "itemId": "upgHpL118",
+      "name": "Boon of Khorne",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        0
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpL118.webp"
+    },
+    {
+      "id": "slot-13-upgDmgL003",
+      "slot": 13,
+      "itemId": "upgDmgL003",
+      "name": "Archeotech Bionics",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        1,
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/1",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL003.webp"
+    },
+    {
+      "id": "slot-13-upgArmL203",
+      "slot": 13,
+      "itemId": "upgArmL203",
+      "name": "Archeotech Remnant",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        2,
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/2",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmL203.webp"
+    },
+    {
+      "id": "slot-13-upgDmgL001",
+      "slot": 13,
+      "itemId": "upgDmgL001",
+      "name": "Master-crafted Ammo",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        3,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/3",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/12/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL001.webp"
+    },
+    {
+      "id": "slot-14-upgDmgL204",
+      "slot": 14,
+      "itemId": "upgDmgL204",
+      "name": "Ancient Power Cell",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        0
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL204.webp"
+    },
+    {
+      "id": "slot-14-upgArmL202",
+      "slot": 14,
+      "itemId": "upgArmL202",
+      "name": "Psyk-Conductive Material",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        1,
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/1",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmL202.webp"
+    },
+    {
+      "id": "slot-14-upgDmgL202",
+      "slot": 14,
+      "itemId": "upgDmgL202",
+      "name": "Psychic Force Conduit",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        2,
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/2",
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgL202.webp"
+    },
+    {
+      "id": "slot-14-upgArmL204",
+      "slot": 14,
+      "itemId": "upgArmL204",
+      "name": "Ancient Alloy",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmL204.webp"
+    },
+    {
+      "id": "slot-14-upgHpL118",
+      "slot": 14,
+      "itemId": "upgHpL118",
+      "name": "Boon of Khorne",
+      "rarity": "Legendary",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 8,
+      "dailyLimit": 15,
+      "days": [
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/13/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpL118.webp"
+    },
+    {
+      "id": "slot-15-upgHpE138C",
+      "slot": 15,
+      "itemId": "upgHpE138C",
+      "name": "Symbol of the World Eaters",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 35,
+      "dailyLimit": 5,
+      "days": [
+        0
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpE138C.webp"
+    },
+    {
+      "id": "slot-15-upgHpE008C",
+      "slot": 15,
+      "itemId": "upgHpE008C",
+      "name": "Mutation: Regenerative Blood",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        1
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpE008C.webp"
+    },
+    {
+      "id": "slot-15-upgDmgE038C",
+      "slot": 15,
+      "itemId": "upgDmgE038C",
+      "name": "Blessed Chainaxe Teeth",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        2
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/2"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgE038C.webp"
+    },
+    {
+      "id": "slot-15-upgDmgE009C",
+      "slot": 15,
+      "itemId": "upgDmgE009C",
+      "name": "Refined Combat Stimms",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        3
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/3"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgDmgE009C.webp"
+    },
+    {
+      "id": "slot-15-upgHpE038C",
+      "slot": 15,
+      "itemId": "upgHpE038C",
+      "name": "Blessed Brazen Jaws",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        4
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/4"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgHpE038C.webp"
+    },
+    {
+      "id": "slot-15-upgArmE005C",
+      "slot": 15,
+      "itemId": "upgArmE005C",
+      "name": "Mutation: Metallic Skin",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/5"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmE005C.webp"
+    },
+    {
+      "id": "slot-15-upgArmE038C",
+      "slot": 15,
+      "itemId": "upgArmE038C",
+      "name": "Blessed Cadaere Renissum",
+      "rarity": "Epic",
+      "category": "Upgrades",
+      "quantity": 1,
+      "cost": 10,
+      "dailyLimit": 5,
+      "days": [
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/14/6"
+      ],
+      "icon": "/images/news/skull-harvest/shop/upgArmE038C.webp"
+    },
+    {
+      "id": "slot-16-heroAscensionOrbMythic_Chaos",
+      "slot": 16,
+      "itemId": "heroAscensionOrbMythic_Chaos",
+      "name": "Mythic Chaos Orbs",
+      "rarity": "Mythic",
+      "category": "Orbs",
+      "quantity": 5,
+      "cost": 225,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/15/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-orbs.webp"
+    },
+    {
+      "id": "slot-17-heroAscensionOrbLegendary_Chaos",
+      "slot": 17,
+      "itemId": "heroAscensionOrbLegendary_Chaos",
+      "name": "Legendary Chaos Orbs",
+      "rarity": "Legendary",
+      "category": "Orbs",
+      "quantity": 10,
+      "cost": 200,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/16/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-orbs.webp"
+    },
+    {
+      "id": "slot-18-heroAscensionOrbEpic_Chaos",
+      "slot": 18,
+      "itemId": "heroAscensionOrbEpic_Chaos",
+      "name": "Epic Chaos Orbs",
+      "rarity": "Epic",
+      "category": "Orbs",
+      "quantity": 10,
+      "cost": 85,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/17/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-orbs.webp"
+    },
+    {
+      "id": "slot-19-abilityTokenMythic_Chaos",
+      "slot": 19,
+      "itemId": "abilityTokenMythic_Chaos",
+      "name": "Mythic Chaos Badges",
+      "rarity": "Mythic",
+      "category": "Badges",
+      "quantity": 5,
+      "cost": 65,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/18/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-badges.webp"
+    },
+    {
+      "id": "slot-20-abilityTokenLegendary_Chaos",
+      "slot": 20,
+      "itemId": "abilityTokenLegendary_Chaos",
+      "name": "Legendary Chaos Badges",
+      "rarity": "Legendary",
+      "category": "Badges",
+      "quantity": 10,
+      "cost": 100,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/19/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-badges.webp"
+    },
+    {
+      "id": "slot-21-abilityTokenEpic_Chaos",
+      "slot": 21,
+      "itemId": "abilityTokenEpic_Chaos",
+      "name": "Epic Chaos Badges",
+      "rarity": "Epic",
+      "category": "Badges",
+      "quantity": 10,
+      "cost": 50,
+      "dailyLimit": 5,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/20/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/chaos-badges.webp"
+    },
+    {
+      "id": "slot-22-xpMythic",
+      "slot": 22,
+      "itemId": "xpMythic",
+      "name": "Mythic XP Book",
+      "rarity": "Mythic",
+      "category": "Resources",
+      "quantity": 1,
+      "cost": 25,
+      "dailyLimit": 10,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/21/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/xpMythic.webp"
+    },
+    {
+      "id": "slot-23-mythicDust",
+      "slot": 23,
+      "itemId": "mythicDust",
+      "name": "Mythic Salvage",
+      "rarity": "Mythic",
+      "category": "Resources",
+      "quantity": 50,
+      "cost": 20,
+      "dailyLimit": 99,
+      "days": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/22/0"
+      ],
+      "icon": "/images/news/skull-harvest/shop/mythicDust.webp"
+    },
+    {
+      "id": "slot-23-dust",
+      "slot": 23,
+      "itemId": "dust",
+      "name": "Salvage",
+      "rarity": "",
+      "category": "Resources",
+      "quantity": 500,
+      "cost": 20,
+      "dailyLimit": 99,
+      "days": [
+        1,
+        3,
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/22/1"
+      ],
+      "icon": "/images/news/skull-harvest/shop/dust.webp"
+    },
+    {
+      "id": "slot-24-gold",
+      "slot": 24,
+      "itemId": "gold",
+      "name": "Coins",
+      "rarity": "",
+      "category": "Resources",
+      "quantity": 100000,
+      "cost": 40,
+      "dailyLimit": 99,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/23/0"
+      ],
+      "icon": "/images/news/rewards/coins.webp"
+    },
+    {
+      "id": "slot-24-gold",
+      "slot": 24,
+      "itemId": "gold",
+      "name": "Coins",
+      "rarity": "",
+      "category": "Resources",
+      "quantity": 2000,
+      "cost": 1,
+      "dailyLimit": 99,
+      "days": [
+        6
+      ],
+      "note": "",
+      "alternatives": [],
+      "sourceEntries": [
+        "/clientGameConfig/shop/merchants/November2026EventShop/products/23/3"
+      ],
+      "icon": "/images/news/rewards/coins.webp"
+    }
+  ]
+}

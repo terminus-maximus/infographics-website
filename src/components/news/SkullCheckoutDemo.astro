@@ -1,0 +1,145 @@
+<figure class="skull-checkout-guide" id="checkout-code-guide">
+  <figcaption>
+    <h3>Where to enter your code</h3>
+    <p>At Web Store checkout, enter <strong>TERMINUS</strong> in <strong>Add promo code</strong>, then select <strong>APPLY</strong>.</p>
+  </figcaption>
+  <div class="checkout-example" aria-hidden="true" data-checkout-demo data-stage="done">
+    <div class="checkout-steps">
+      <div><span>STEP 1 / 2</span><b>CHECK OUT</b></div>
+      <div><span>STEP 2 / 2</span><b>PAY</b></div>
+    </div>
+    <div class="checkout-order">
+      <div class="checkout-order-heading"><span>ORDER SUMMARY</span><small>EDIT</small></div>
+      <div class="checkout-product">
+        <div class="checkout-product-icon"><img src="/images/news/rewards/claimed-skulls.webp" alt="" width="64" height="64" loading="lazy" /></div>
+        <div class="checkout-product-name"><b>Skull Harvest Bonus Shipment</b><span>1,000 Blackstone + bonus rewards</span></div>
+        <div class="checkout-product-price"><b>$9.99</b><span>Quantity: 1</span></div>
+      </div>
+      <div class="checkout-promo-row">
+        <div class="checkout-promo-field"><span data-demo-code>TERMINUS</span><span class="checkout-placeholder">Add promo code</span><span class="checkout-caret"></span></div>
+        <span class="checkout-apply">APPLY<svg class="checkout-pointer" viewBox="0 0 28 36" width="28" height="36"><path d="M3 2v27l7-7 6 12 5-3-6-11h10Z" fill="white" stroke="#0b1422" stroke-width="2" stroke-linejoin="round" /></svg></span>
+      </div>
+      <div class="checkout-totals"><div><span>Subtotal</span><span>$9.99</span></div><div><b>Total</b><b>$9.99</b></div></div>
+      <div class="checkout-secure"><svg viewBox="0 0 20 24" width="16" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 10V7a5 5 0 0 1 10 0v3"/><rect x="2" y="9" width="16" height="13" rx="7"/><path d="M10 14v4"/></svg><span>Your purchase is securely processed by Stash</span></div>
+    </div>
+  </div>
+  <div class="checkout-example-footer"><span>Web Store checkout example</span><button type="button" data-toggle-demo hidden>Pause animation</button></div>
+</figure>
+
+<style>
+  @font-face { font-family: 'Skull Checkout'; src: url('/fonts/checkout/RobotoCondensed.ttf') format('truetype'); font-style: normal; font-weight: 100 900; font-display: swap; }
+  .skull-checkout-guide { margin: 1.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid #4e3a2f; }
+  .skull-checkout-guide figcaption h3 { margin: 0 0 .5rem; }
+  .skull-checkout-guide figcaption p { font-size: .9rem; margin: 0 0 1.25rem; }
+  .checkout-example { font-family: 'Skull Checkout', 'Arial Narrow', sans-serif; max-width: 660px; margin: 0 auto; padding: 1.5rem; border-radius: 10px; background: radial-gradient(ellipse at 72% 0%, #1a9797 0%, #085968 45%, #071421 80%); color: #fff; line-height: 1.25; }
+  .checkout-steps { display: flex; gap: 4rem; padding: .3rem 1rem 1.4rem; }
+  .checkout-steps > div { display: grid; gap: .45rem; }
+  .checkout-steps > div:last-child { opacity: .36; }
+  .checkout-steps span { font-size: .875rem; letter-spacing: .18em; font-weight: 700; }
+  .checkout-steps b { font-size: 1.85rem; font-weight: 400; }
+  .checkout-order { background: #0b1422; border: 1px solid #21334e; border-radius: 6px; padding: 1.7rem 1.5rem 1.3rem; box-shadow: 0 8px 20px #0003; }
+  .checkout-order-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: 1.85rem; font-weight: 700; }
+  .checkout-order-heading small { font-size: 1.2rem; font-weight: 400; letter-spacing: .03em; }
+  .checkout-product { display: grid; grid-template-columns: 56px minmax(0,1fr) auto; align-items: center; gap: .8rem; padding: 2rem 0; border-bottom: 2px solid #21334e; }
+  .checkout-product-icon { display: grid; place-items: center; width: 56px; height: 60px; border-radius: 10px; background: linear-gradient(150deg, #20435c, #0a7585); }
+  .checkout-product-icon img { width: 48px; height: 48px; object-fit: contain; }
+  .checkout-product-name b, .checkout-product-price b { display: block; font-size: 1.2rem; font-weight: 700; }
+  .checkout-product-name span, .checkout-product-price span { display: block; color: #8b909a; font-size: .95rem; margin-top: .4rem; }
+  .checkout-product-price { text-align: right; white-space: nowrap; }
+  .checkout-promo-row { display: flex; align-items: center; gap: 1rem; margin: 1.6rem 0 1.2rem; }
+  .checkout-promo-field { display: flex; align-items: center; position: relative; flex: 1; min-width: 0; height: 64px; padding: 0 1rem; border: 1px solid #283d58; border-radius: 5px; font-size: 1.35rem; color: #fff; transition: border-color .2s, box-shadow .2s; }
+  .checkout-placeholder { display: none; color: #8b909a; }
+  [data-demo-code]:empty + .checkout-placeholder { display: inline; }
+  .checkout-caret { display: none; width: 1px; height: 1.4rem; margin-left: 2px; background: #fff; }
+  .checkout-apply { position: relative; display: grid; place-items: center; min-width: 60px; height: 48px; color: #fff; border-radius: 4px; font-size: 1.25rem; letter-spacing: .03em; transition: background .2s, color .2s, box-shadow .2s; }
+  .checkout-pointer { position: absolute; right: 4px; bottom: -15px; opacity: 0; }
+  [data-stage='ready'] .checkout-apply { color: #8b909a; }
+  [data-stage='typing'] .checkout-promo-field, [data-stage='apply'] .checkout-promo-field { border-color: #74d3d7; box-shadow: 0 0 0 1px #74d3d733; }
+  [data-stage='typing'] .checkout-caret { display: inline; animation: checkout-cursor .65s step-end infinite; }
+  [data-stage='apply'] .checkout-apply { background: #174c5a; box-shadow: 0 0 0 2px #74d3d7; }
+  [data-stage='apply'] .checkout-pointer { opacity: 1; }
+  .checkout-totals { display: grid; gap: .5rem; font-size: 1.3rem; font-weight: 700; }
+  .checkout-totals > div { display: flex; justify-content: space-between; gap: 1rem; }
+  .checkout-totals > div:first-child { color: #8b909a; }
+  .checkout-secure { display: flex; align-items: center; gap: .35rem; color: #8b909a; font-size: .9rem; margin-top: 1.1rem; }
+  .checkout-secure svg { flex-shrink: 0; }
+  .checkout-example-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; max-width: 660px; margin: .7rem auto 0; font-size: .8rem; color: #aaa; }
+  .checkout-example-footer button { padding: .2rem 0; border: 0; background: none; color: var(--skull-gold); font: inherit; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+  @keyframes checkout-cursor { 50% { opacity: 0; } }
+  @media(max-width: 650px) {
+    .checkout-example { padding: .75rem; }
+    .checkout-steps { padding: .3rem .25rem 1rem; gap: 2rem; }
+    .checkout-steps b { font-size: 1.55rem; }
+    .checkout-steps span { font-size: .8rem; }
+    .checkout-order { padding: 1.2rem .8rem; }
+    .checkout-order-heading { font-size: 1.5rem; }
+    .checkout-order-heading small { font-size: 1rem; }
+    .checkout-product { grid-template-columns: 42px minmax(0, 1fr); gap: .6rem; padding: 1.4rem 0; }
+    .checkout-product-icon { width: 42px; height: 48px; }
+    .checkout-product-icon img { width: 38px; height: 38px; }
+    .checkout-product-name b { font-size: 1.05rem; }
+    .checkout-product-name span { font-size: .875rem; }
+    .checkout-product-price { grid-column: 2; display: flex; align-items: baseline; gap: .8rem; text-align: left; }
+    .checkout-product-price span { margin: 0; }
+    .checkout-promo-row { gap: .65rem; margin-top: 1.3rem; }
+    .checkout-promo-field { height: 56px; padding: 0 .65rem; font-size: 1.15rem; }
+    .checkout-apply { min-width: 47px; font-size: 1.1rem; }
+    .checkout-example-footer { align-items: start; font-size: .75rem; }
+    .checkout-example-footer button { flex-shrink: 0; }
+  }
+  @media(max-width: 380px) {
+    .checkout-steps { gap: 1rem; }
+    .checkout-steps span { font-size: .7rem; white-space: nowrap; }
+    .checkout-steps b { font-size: 1.3rem; white-space: nowrap; }
+    .checkout-order-heading { font-size: 1.2rem; gap: .5rem; }
+    .checkout-order-heading small { font-size: .875rem; }
+  }
+  @media(prefers-reduced-motion: reduce) {
+    .checkout-promo-field, .checkout-apply { transition: none; }
+    .checkout-caret { animation: none !important; }
+  }
+</style>
+
+<script>
+  const guide = document.querySelector<HTMLElement>('#checkout-code-guide');
+  const demo = guide?.querySelector<HTMLElement>('[data-checkout-demo]');
+  const typedCode = guide?.querySelector<HTMLElement>('[data-demo-code]');
+  const toggle = guide?.querySelector<HTMLButtonElement>('[data-toggle-demo]');
+  if (guide && demo && typedCode && toggle) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const playbackRate = 1.5;
+    let frame = 0;
+    let paused = false;
+    let inView = false;
+    const complete = () => {
+      cancelAnimationFrame(frame);
+      typedCode.textContent = 'TERMINUS';
+      demo.dataset.stage = 'done';
+    };
+    const update = () => {
+      cancelAnimationFrame(frame);
+      toggle.hidden = reducedMotion.matches;
+      toggle.textContent = paused ? 'Resume animation' : 'Pause animation';
+      if (paused || !inView || document.hidden || reducedMotion.matches) { complete(); return; }
+      typedCode.textContent = '';
+      demo.dataset.stage = 'ready';
+      const start = performance.now();
+      const tick = (now: number) => {
+        const elapsed = ((now - start) * playbackRate) % 6500;
+        typedCode.textContent = 'TERMINUS'.slice(0, Math.max(0, Math.floor((elapsed - 500) / 180)));
+        demo.dataset.stage = elapsed < 500 ? 'ready' : elapsed < 2600 ? 'typing' : elapsed < 4000 ? 'apply' : 'done';
+        frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+    };
+    toggle.addEventListener('click', () => { paused = !paused; update(); });
+    const observer = new IntersectionObserver(entries => {
+      inView = entries.some(entry => entry.isIntersecting);
+      update();
+    }, { threshold: .5 });
+    observer.observe(demo);
+    document.addEventListener('visibilitychange', update);
+    reducedMotion.addEventListener('change', update);
+    update();
+  }
+</script>

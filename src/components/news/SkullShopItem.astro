@@ -1,0 +1,29 @@
+---
+import type shop from '../../data/news/skull-harvest-shop.json';
+import SkullShopIcon from './SkullShopIcon.astro';
+
+interface Props {
+  item: (typeof shop.items)[number];
+  day?: number;
+  showRarity?: boolean;
+}
+const { item, day, showRarity = true } = Astro.props;
+const alternatives = item.alternatives.filter(alt => day === undefined || alt.days.includes(day));
+---
+
+<div class="skull-shop-item" data-offer-id={item.id} data-slot={item.slot}>
+  <div class="skull-item-name">
+    <SkullShopIcon icon={item.icon} category={item.category} rarity={item.rarity} />
+    <div>
+      <strong>{item.name}</strong>
+      {showRarity && item.rarity && <span class:list={['skull-item-type', { 'skull-mythic-text': item.rarity === 'Mythic' }]}>{item.rarity}</span>}
+    </div>
+  </div>
+  {alternatives.length > 0 && <details class="skull-alternatives">
+    <summary>Alternate if you have relic</summary>
+    {alternatives.map(alt => <div class="skull-item-name">
+      <SkullShopIcon icon={alt.icon} category="Equipment" rarity="Mythic" size={40} />
+      <div><strong>{alt.name}</strong><small>1 for {alt.cost} skulls · Limit 1/day</small></div>
+    </div>)}
+  </details>}
+</div>

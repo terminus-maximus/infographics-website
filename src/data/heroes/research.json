@@ -2192,6 +2192,65 @@
         "threshold_definition": "inferred cumulative; not administrator-confirmed"
       }
     },
+    "worldExecutions": {
+      "raid": {
+        "recommended_score": 7.0,
+        "display_score": 7.0,
+        "short_justification": "Offers strong conditional value alongside Laviscus, with add kills, critical hits and boss health determining how consistently the combination performs.",
+        "confidence": "medium",
+        "score_status": "scored",
+        "rating_status": "scored",
+        "evidence_score_status": "scored",
+        "last_updated": "2026-11-20T10:41:39-08:00",
+        "last_community_research_completed": "2026-10-30T10:49:59-07:00",
+        "scoring_revision": "guild-raid-tarvakh-manual-2026-11-20-v1",
+        "main_boss_findings": "Repeated reports describe a niche Laviscus flex; current opinions conflict. [1wqy5s1](https://www.reddit.com/r/WH40KTacticus/comments/1wqy5s1/infographic_guild_raid_boss_meta_guide_september/) [1xevx4r](https://www.reddit.com/r/WH40KTacticus/comments/1xevx4r/lavistodes_flex_picks/) [1twc79g](https://www.reddit.com/r/WH40KTacticus/comments/1twc79g/chaos_and_xenos_guild_raid_team/)",
+        "prime_side_boss_findings": "No separately validated prime specialty established.",
+        "score_rationale": "The current Guild Raid recommendation is **7/10**. Offers strong conditional value alongside Laviscus, with add kills, critical hits and boss health determining how consistently the combination performs.\n\nThis is a manual editorial rating approved on November 20, 2026. The existing conditional Laviscus role remains the basis of the explanation; the score change does not establish broader boss coverage or new controlled performance results. Confidence, source findings and completed-research dates are retained.\n\nManual score decision · Current ranking."
+      },
+      "war": {
+        "recommended_score": 3.5,
+        "display_score": 3.5,
+        "short_justification": "Teams featuring Tarvakh clear 59.2% of Meds Up attacks across equally weighted battlefields, providing the stronger supported role.",
+        "confidence": "medium",
+        "score_status": "scored",
+        "last_updated": "2026-11-02T21:18:00-08:00",
+        "last_community_research_completed": "Not performed for Guild War",
+        "source_captures_end": "2026-10-06T22:58:28.089Z",
+        "score_basis": "BF-balanced Meds Up team success, stronger supported role, lower-tail calibration and +0.5 per accepted Meta role",
+        "scoring_revision": "guild-war-approved-rates-4.0",
+        "publication_note": "Approved local S23–27/BF3–5 assessment; evidence captured through October 6; current availability and live meta freshness not independently reviewed."
+      },
+      "horde": {
+        "recommended_score": 4.5,
+        "display_score": 4.5,
+        "short_justification": "Area burst and accumulating critical chance reward prolonged fighting, but limited sustain and multi-target output keep Tarvakh below premier clearers.",
+        "confidence": "medium",
+        "status": "assessed",
+        "last_updated": "2026-11-03T09:01:30-08:00",
+        "as_of": "2026-11-01",
+        "score_basis": "developed hero; relevant relic potential included",
+        "scoring_revision": "horde-equal-weight-approved-3.0",
+        "score_rationale": "The approved Horde recommendation is **4.5/10**.\n\nSurvival, Legendary Release Events and Onslaught each receive one-third weight. The strongest supported contribution in each mode can be clearing, sustain or enabling teammates. Assess developed heroes in realistic legal teams, counting reliability and setup once within each mode.\n\n| Mode | Assessment | Evidence basis | Reasoning |\n| --- | ---: | --- | --- |\n| Survival | 4.0 | I | One area burst and personally secured kills provide limited repeated wave output. |\n| LRE | 4.5 | R | Community discussion supports kill-stacking and a restricted niche without rewarding eligibility itself. |\n| Onslaught | 4.5 | I | Inferred finisher alongside Rotbone, dependent on access to kills. |\n\nThe diagnostic arithmetic mean is **4.333333**. Rounding once to the nearest half-point, with halfway values rounded up, gives **4.5**. This exact final half-point is used for ranking and overall averages. There is no population curve or separate bonus for featured deployment, eligibility, guide membership or MVP placement.\n\n**R:** Mode-specific published recommendations or community discussion, including counterevidence; not a controlled outcome measure. **I:** Kit inference or transfer from another mode; no mode-specific performance claim. **P:** Preview projection from the frozen research; no live performance claim.\n\nThese are authored assessments of the frozen November 1 research, not measured win rates or newly collected battle results. Existing confidence, provisional/preview labels, named relic assumptions and completed-research dates are retained.\n\nApproved methodology · Current ranking · Frozen approved proposal · Prior scores and explanations."
+      },
+      "popularity": {
+        "recommended_score": 2.8546042341756164,
+        "display_score": 2.85,
+        "short_justification": "Planner records show 1,884 players at Gold I or higher, 386 at Diamond I or higher and 84 at Adamantine II or higher. Five equally weighted milestones determine this investment-based Popularity score.",
+        "score_status": "scored",
+        "score_basis": "Planner investment milestones; cumulative interpretation inferred",
+        "scoring_revision": "planner-milestones-1.0",
+        "counts": {
+          "S1": 4048,
+          "G1": 1884,
+          "D1": 386,
+          "D3": 261,
+          "A2": 84
+        },
+        "measurement_date": null,
+        "threshold_definition": "inferred cumulative; not administrator-confirmed"
+      }
+    },
     "adeptCanoness": {
       "raid": {
         "recommended_score": 6.5,
@@ -2419,65 +2478,6 @@
           "D1": 91,
           "D3": 33,
           "A2": 2
-        },
-        "measurement_date": null,
-        "threshold_definition": "inferred cumulative; not administrator-confirmed"
-      }
-    },
-    "worldExecutions": {
-      "raid": {
-        "recommended_score": 6,
-        "display_score": 6,
-        "short_justification": "Offers strong conditional value alongside Laviscus, with add kills, critical hits and boss health determining how consistently the combination performs.",
-        "confidence": "medium",
-        "score_status": "scored",
-        "rating_status": "scored",
-        "evidence_score_status": "scored",
-        "last_updated": "2026-11-02T15:01:49-08:00",
-        "last_community_research_completed": "2026-10-30T10:49:59-07:00",
-        "scoring_revision": "hero-scores-manual-review-1.0",
-        "main_boss_findings": "Repeated reports describe a niche Laviscus flex; current opinions conflict. [1wqy5s1](https://www.reddit.com/r/WH40KTacticus/comments/1wqy5s1/infographic_guild_raid_boss_meta_guide_september/) [1xevx4r](https://www.reddit.com/r/WH40KTacticus/comments/1xevx4r/lavistodes_flex_picks/) [1twc79g](https://www.reddit.com/r/WH40KTacticus/comments/1twc79g/chaos_and_xenos_guild_raid_team/)",
-        "prime_side_boss_findings": "No separately validated prime specialty established.",
-        "score_rationale": "The current Guild Raid recommendation is **6/10**. Offers strong conditional value alongside Laviscus, with add kills, critical hits and boss health determining how consistently the combination performs.\n\nThe manual rating places his documented Laviscus option in a stronger conditional band. Existing disagreements and dependence on add kills, critical hits and boss health remain material; no new matchup or controlled performance result is claimed.\n\nThe workbook supplies scores, not new supporting explanations or battle evidence. This commentary reconciles the existing findings with the manual placement; it does not attribute an unstated rationale to the reviewer. Completed research dates and source findings remain unchanged.\n\nManual review and current scoring policy · Current ranking."
-      },
-      "war": {
-        "recommended_score": 3.5,
-        "display_score": 3.5,
-        "short_justification": "Teams featuring Tarvakh clear 59.2% of Meds Up attacks across equally weighted battlefields, providing the stronger supported role.",
-        "confidence": "medium",
-        "score_status": "scored",
-        "last_updated": "2026-11-02T21:18:00-08:00",
-        "last_community_research_completed": "Not performed for Guild War",
-        "source_captures_end": "2026-10-06T22:58:28.089Z",
-        "score_basis": "BF-balanced Meds Up team success, stronger supported role, lower-tail calibration and +0.5 per accepted Meta role",
-        "scoring_revision": "guild-war-approved-rates-4.0",
-        "publication_note": "Approved local S23–27/BF3–5 assessment; evidence captured through October 6; current availability and live meta freshness not independently reviewed."
-      },
-      "horde": {
-        "recommended_score": 4.5,
-        "display_score": 4.5,
-        "short_justification": "Area burst and accumulating critical chance reward prolonged fighting, but limited sustain and multi-target output keep Tarvakh below premier clearers.",
-        "confidence": "medium",
-        "status": "assessed",
-        "last_updated": "2026-11-03T09:01:30-08:00",
-        "as_of": "2026-11-01",
-        "score_basis": "developed hero; relevant relic potential included",
-        "scoring_revision": "horde-equal-weight-approved-3.0",
-        "score_rationale": "The approved Horde recommendation is **4.5/10**.\n\nSurvival, Legendary Release Events and Onslaught each receive one-third weight. The strongest supported contribution in each mode can be clearing, sustain or enabling teammates. Assess developed heroes in realistic legal teams, counting reliability and setup once within each mode.\n\n| Mode | Assessment | Evidence basis | Reasoning |\n| --- | ---: | --- | --- |\n| Survival | 4.0 | I | One area burst and personally secured kills provide limited repeated wave output. |\n| LRE | 4.5 | R | Community discussion supports kill-stacking and a restricted niche without rewarding eligibility itself. |\n| Onslaught | 4.5 | I | Inferred finisher alongside Rotbone, dependent on access to kills. |\n\nThe diagnostic arithmetic mean is **4.333333**. Rounding once to the nearest half-point, with halfway values rounded up, gives **4.5**. This exact final half-point is used for ranking and overall averages. There is no population curve or separate bonus for featured deployment, eligibility, guide membership or MVP placement.\n\n**R:** Mode-specific published recommendations or community discussion, including counterevidence; not a controlled outcome measure. **I:** Kit inference or transfer from another mode; no mode-specific performance claim. **P:** Preview projection from the frozen research; no live performance claim.\n\nThese are authored assessments of the frozen November 1 research, not measured win rates or newly collected battle results. Existing confidence, provisional/preview labels, named relic assumptions and completed-research dates are retained.\n\nApproved methodology · Current ranking · Frozen approved proposal · Prior scores and explanations."
-      },
-      "popularity": {
-        "recommended_score": 2.8546042341756164,
-        "display_score": 2.85,
-        "short_justification": "Planner records show 1,884 players at Gold I or higher, 386 at Diamond I or higher and 84 at Adamantine II or higher. Five equally weighted milestones determine this investment-based Popularity score.",
-        "score_status": "scored",
-        "score_basis": "Planner investment milestones; cumulative interpretation inferred",
-        "scoring_revision": "planner-milestones-1.0",
-        "counts": {
-          "S1": 4048,
-          "G1": 1884,
-          "D1": 386,
-          "D3": 261,
-          "A2": 84
         },
         "measurement_date": null,
         "threshold_definition": "inferred cumulative; not administrator-confirmed"
@@ -25163,10 +25163,10 @@
     ]
   },
   "release": {
-    "id": "2026-11-13-live-144",
+    "id": "2026-11-20-tarvakh-raid-v1",
     "policy": "overall-popularity-3.0",
-    "date": "2026-11-13",
-    "generated_at": "2026-11-13T10:02:25-08:00",
+    "date": "2026-11-20",
+    "generated_at": "2026-11-20T10:41:41-08:00",
     "rank_convention": "competition",
     "coverage": {
       "roster": 119,
@@ -25181,8 +25181,8 @@
     "inputs": {
       "mode_exports": {
         "raid": {
-          "path": "analysis/guild-raid-community/2026-11-03-breadth-review-v2/website-cards.json",
-          "sha256": "ead3ed68e855c00632fbcbeaff1d8d0f087cf2b80f29bba45c354a2c315ba4a7"
+          "path": "analysis/guild-raid-community/2026-11-20-tarvakh-raid-v1/website-cards.json",
+          "sha256": "23a08b397735373f967d7f77a69280afc9e79d4961b7712f7ca47ad9bb798cf0"
         },
         "war": {
           "path": "analysis/guild-war/2026-11-02-approved-rate-review-v1/website-cards.json",
@@ -25200,9 +25200,9 @@
       "roster_sha256": "ef6c8c902ba2ba96998bdc624abe2cfe498499072f184ef60716d15c2f3f517a",
       "policy_sha256": "eab638cd19d5c7307ec2d20f746fea11204251656670a26d97617049d8843656"
     },
-    "scores_sha256": "2570008a9f793294d50d0f79a5035aa28cf187abb6c43e132bac1fbe39bc6c4c",
-    "guide_evidence_sha256": "26b72c1a8fb49aeb0feba633cc2f371f36154cc2ff8be162abeff4950bb9aa79",
-    "source_manifest_sha256": "01d9bb86803e021fdbc081bfddd7ee4967bc24f97aa92141ecfaaa6d96e373e2",
+    "scores_sha256": "6f98f444c30c76ffccbf5c0c8551aaa0ce6113b55bc46352078de3f07acf71a7",
+    "guide_evidence_sha256": "9c70b332acf766bcb6734ce5da030db93ad900895594b5a14f58e0b34057a330",
+    "source_manifest_sha256": "5e17d9c4e7bf7bfc07a6c18c40005c9d155ab1f3d59f916a37a78ae7aa165164",
     "heroes": [
       {
         "unit_id": "custoBladeChampion",
@@ -26762,6 +26762,32 @@
         "rank": 75
       },
       {
+        "unit_id": "worldExecutions",
+        "name": "Tarvakh",
+        "raid": 7.0,
+        "war": 3.5,
+        "horde": 4.5,
+        "popularity": 2.8546042341756164,
+        "equal_weight_average": 4.463651058543904,
+        "guide_bonus": 0.25,
+        "final_score": 4.713651058543904,
+        "display_score": 4.71,
+        "status": "scored",
+        "missing_modes": [],
+        "guide_categories": [
+          "event_campaign"
+        ],
+        "guides": [
+          {
+            "category": "event_campaign",
+            "slug": "sisters",
+            "title": "Sisters Event Campaign",
+            "url": "https://terminusmaximus.com/campaign-event/sisters/"
+          }
+        ],
+        "rank": 76
+      },
+      {
         "unit_id": "eldarAutarch",
         "name": "Aethana",
         "raid": 2,
@@ -26785,7 +26811,7 @@
             "url": "https://terminusmaximus.com/campaigns/saim-hann/"
           }
         ],
-        "rank": 76
+        "rank": 77
       },
       {
         "unit_id": "tyranParasite",
@@ -26802,7 +26828,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 77
+        "rank": 78
       },
       {
         "unit_id": "eldarMauganRa",
@@ -26819,7 +26845,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 78
+        "rank": 79
       },
       {
         "unit_id": "darkaAzrael",
@@ -26836,7 +26862,7 @@
         "missing_modes": [],
         "guide_categories": [],
         "guides": [],
-        "rank": 79
+        "rank": 80
       },
       {
         "unit_id": "orksNob",
@@ -26862,7 +26888,7 @@
             "url": "https://terminusmaximus.com/campaign-event/blood-angels/"
           }
         ],
-        "rank": 80
+        "rank": 81
       },
       {
         "unit_id": "astraPrimarisPsy",
@@ -26888,7 +26914,7 @@
             "url": "https://terminusmaximus.com/campaigns/fall-of-cadia-mirror/"
           }
         ],
-        "rank": 81
+        "rank": 82
       },
       {
         "unit_id": "necroPlasmancer",
@@ -26914,7 +26940,7 @@
             "url": "https://terminusmaximus.com/campaign-event/dark-angels/"
           }
         ],
-        "rank": 82
+        "rank": 83
       },
       {
         "unit_id": "worldEightbound",
@@ -26927,32 +26953,6 @@
         "guide_bonus": 0.25,
         "final_score": 4.5299226643239425,
         "display_score": 4.53,
-        "status": "scored",
-        "missing_modes": [],
-        "guide_categories": [
-          "event_campaign"
-        ],
-        "guides": [
-          {
-            "category": "event_campaign",
-            "slug": "sisters",
-            "title": "Sisters Event Campaign",
-            "url": "https://terminusmaximus.com/campaign-event/sisters/"
-          }
-        ],
-        "rank": 83
-      },
-      {
-        "unit_id": "worldExecutions",
-        "name": "Tarvakh",
-        "raid": 6,
-        "war": 3.5,
-        "horde": 4.5,
-        "popularity": 2.8546042341756164,
-        "equal_weight_average": 4.213651058543904,
-        "guide_bonus": 0.25,
-        "final_score": 4.463651058543904,
-        "display_score": 4.46,
         "status": "scored",
         "missing_modes": [],
         "guide_categories": [

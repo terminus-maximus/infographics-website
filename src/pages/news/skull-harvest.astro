@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SkullShopTable from '../../components/news/SkullShopTable.astro';
+import SkullCheckoutDemo from '../../components/news/SkullCheckoutDemo.astro';
+import { heroById } from '../../lib/heroes.mjs';
+import { factionIcon } from '../../data/news/icons';
+import shop from '../../data/news/skull-harvest-shop.json';
+import { skullHarvest as article } from '../../data/news';
+import '../../styles/news.css';
+import '../../styles/skull-harvest.css';
+
+const priorities = [
+  { id: 'worldKharn', label: 'First priority', role: 'Broad combat value', copy: 'The strongest general pick of the five. Prioritize Khârn for Guild War and supported Guild Raid teams. His repeated attacks hit hard, but you need to manage friendly fire.' },
+  { id: 'worldTerminator', label: 'Next priority', role: 'Chaos team protection', copy: 'Wrask is the next pick when your Chaos teams need survivability. His shields reward reliable kills and close positioning, with more value in War and Horde than in Raids.' },
+  { id: 'worldExecutions', label: 'Team dependent', role: 'Laviscus Raid option', copy: 'Move Tarvakh up your list if you are building a Laviscus Raid team. His damage depends on kills, critical hits and the boss’s health, so he needs the right setup.' },
+  { id: 'worldEightbound', label: 'Team dependent', role: 'Chaos melee support', copy: 'Choose Azkor for a specific Chaos melee team or Guild War defense. He offers useful support, but his broad Guild Raid value is limited.' },
+  { id: 'worldJakhal', label: 'Low general priority', role: 'A niche pick', copy: 'Macer is mainly a collection or personal-goal choice. Burst damage and stuns give him a niche, while fragility limits his value across game modes.' },
+].map(priority => {
+  const hero = heroById.get(priority.id)!;
+  return { ...priority, hero, portrait: hero.portrait, href: `/heroes/${hero.slug}/` };
+});
+const number = (value: number) => value.toLocaleString('en-US');
+const everydayItems = shop.items
+  .filter(item => item.days.length === shop.days.length)
+  .sort((a, b) => Number(a.category === 'Free') - Number(b.category === 'Free'));
+const rotatingItems = shop.items.filter(item => item.days.length !== shop.days.length);
+const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const dayOffers = shop.days.map(day => {
+  const items = rotatingItems.filter(item => item.days.includes(day.index));
+  const mythic = items.filter(item => item.rarity === 'Mythic');
+  const other = items.filter(item => item.rarity !== 'Mythic');
+  const legendary = other.filter(item => item.rarity === 'Legendary').length;
+  const epic = other.filter(item => item.rarity === 'Epic').length;
+  const coins = other.find(item => item.itemId === 'gold');
+  const salvage = other.find(item => item.itemId === 'dust');
+  const summary = [
+    `${legendary} Legendary items`,
+    `${epic} Epic item${epic === 1 ? '' : 's'}`,
+    coins ? `${number(coins.quantity)} Coins per pack` : '',
+    salvage ? `${number(salvage.quantity)} Salvage per pack` : '',
+  ].filter(Boolean).join(' · ');
+  return { ...day, name: dayNames[day.index], mythic, other, summary };
+});
+const payoutSources = [
+  { label: 'Event milestones', count: 16, conditional: false },
+  { label: 'Premium missions', count: 10, conditional: false },
+  { label: 'Free offers', count: 9, conditional: false },
+  { label: 'Quest rewards', count: 4, conditional: false },
+  { label: 'Blood Tithe', count: 1, conditional: true },
+  { label: 'World Eaters Faction Boost', count: 13, conditional: true },
+];
+const bonusPerPayout = 8;
+const baseBonus = payoutSources.filter(source => !source.conditional).reduce((sum, source) => sum + source.count * bonusPerPayout, 0);
+const maximumBonus = payoutSources.reduce((sum, source) => sum + source.count * bonusPerPayout, 0);
+const upfrontSkulls = 200;
+const missionSkulls = 500;
+---
+
+<Layout title="Skull Harvest: World Eaters & Mythic Shop | Terminus Maximus" description={article.description} image={article.webImage} url={article.href} showReferralWidget={false}>
+  <Header />
+  <main class="news-page skull-page">
+    <article>
+      <header class="news-hero skull-hero">
+        <h1>Skull Harvest</h1>
+        <p>Starts November 23</p>
+      </header>
+
+      <section id="infographic" aria-label="Skull Harvest infographic">
+        <figure class="infographic-figure">
+          <a href={article.image} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={article.title} data-ga4-link-source="image">
+            <img src={article.webImage} width="700" height="394" alt="Skull Harvest infographic covering World Eater priorities, the Bonus Shipment, daily shop prices, and the relic and Mythic material schedule. Details follow below." fetchpriority="high" />
+          </a>
+          <figcaption><a href={article.image} target="_blank" rel="noopener noreferrer" data-ga4-infographic-open data-ga4-infographic-title={article.title} data-ga4-link-source="caption">Open full-size infographic ↗</a></figcaption>
+        </figure>
+      </section>
+
+      <section id="bonus-shipment" class="skull-shipment" aria-labelledby="shipment-heading">
+        <div class="skull-offer-heading"><div><h2 id="shipment-heading">Skull Harvest Bonus Shipment</h2></div><div class="skull-price"><strong>US$9.99</strong><span>US price</span></div></div>
+        <div class="skull-benefits">
+          <div><img src="/images/blackstone.webp" alt="" width="44" height="44" loading="lazy" /><h3>1,000 Blackstone</h3><p>Plus <strong>200 Claimed Skulls</strong> immediately.</p></div>
+          <div><img src="/images/news/rewards/claimed-skulls.webp" alt="" width="44" height="44" loading="lazy" /><h3>+8 skulls per payout</h3><p>On eligible payouts, including those earned before purchase.</p></div>
+          <div><p class="skull-mission-number" aria-hidden="true">10</p><h3>Premium missions</h3><p>Complete the chain for <strong>500 skulls</strong> and <strong>900 event points</strong>.</p></div>
+        </div>
+        <div class="skull-shipment-total">
+          <div><h3>Calculated extra skulls</h3><strong>{number(upfrontSkulls + missionSkulls + baseBonus)}–{number(upfrontSkulls + missionSkulls + maximumBonus)}</strong></div>
+          <p><b>{number(upfrontSkulls)}</b> upfront + <b>{number(missionSkulls)}</b> from missions + <b>{baseBonus}–{maximumBonus}</b> in payout bonuses.</p>
+          <p class="skull-small">Full completion with the shipment: the upper total includes 14 Home Screen Event payouts whose bonus eligibility is unconfirmed.</p>
+          <details class="skull-payout-calculation">
+            <summary>How the +8 bonus adds up</summary>
+            <dl>{payoutSources.map(source => <div><dt>{source.label}{source.conditional && <small>Bonus eligibility unconfirmed</small>}</dt><dd>{source.count} × {bonusPerPayout} = <strong>{source.count * bonusPerPayout}</strong></dd></div>)}</dl>
+            <p class="skull-small">Assumes every listed reward is claimed; excludes additional paid offers.</p>
+          </details>
+        </div>
+        <div class="skull-referral">
+          <div><h3>Support Terminus Maximus</h3><p>Buying the shipment? Enter <strong>TERMINUS</strong> at Web Store checkout.</p></div>
+          <div class="skull-code">
+            <label for="creator-code">Creator code</label>
+            <div class="skull-code-control"><input id="creator-code" type="text" value="TERMINUS" readonly spellcheck="false" /><button type="button" id="copy-creator-code" aria-label="Copy creator code TERMINUS">Copy</button></div>
+            <p id="copy-code-status" role="status" aria-live="polite"></p>
+            <a href="https://hub.tacticusgame.com/store" target="_blank" rel="noopener noreferrer">Visit the Tacticus Web Store</a></div>
+        </div>
+        <p class="skull-disclosure">Creator partnership: I receive Blackstone from qualifying purchases.</p>
+        <SkullCheckoutDemo />
+      </section>
+
+      <section id="mythic-shop" aria-labelledby="shop-heading">
+        <h2 id="shop-heading">What’s in the Mythic Shop?</h2>
+        <p class="skull-small">Prices in <strong>Claimed Skulls</strong>. High-tier offers shown; availability depends on your account.</p>
+
+        <h3 id="everyday-heading">Everyday items</h3>
+        <p class="skull-table-hint">Scroll sideways to see quantities and totals.</p>
+        <SkullShopTable items={everydayItems} label="Everyday items" totalDays={shop.days.length} showShardVariants />
+        <p class="skull-small">Totals cover all seven days at the daily limit. Regular and Mythic shard rows are alternative offers, based on character progression.</p>
+
+        <h3 id="rotation-heading">Daily rotation</h3>
+        <p class="skull-small">Mythic items are shown first. Each day’s totals cover that day only.</p>
+        <p class="skull-table-hint">Scroll sideways to see quantities and totals.</p>
+        <div class="skull-day-boxes">
+          {dayOffers.map(day => <article class="skull-day-box" data-shop-day={day.index}>
+            <header class="skull-day-header"><h4>{day.name}</h4><time datetime={day.iso}>{day.date}</time><span>Mythic items</span></header>
+            <SkullShopTable items={day.mythic} day={day.index} label={`${day.name} Mythic items`} />
+            <details class="skull-other-items">
+              <summary><strong>Other items</strong><span>{day.summary}</span></summary>
+              <SkullShopTable items={day.other} day={day.index} label={`${day.name} other items`} />
+            </details>
+          </article>)}
+        </div>
+        <p class="skull-small">Equipment alternatives replace the relic in that slot.</p>
+      </section>
+
+      <section class="skull-event-notes" aria-labelledby="event-notes-heading">
+        <h2 id="event-notes-heading">A few things to remember</h2>
+        <div class="skull-notes-grid"><div><h3>Earn, then spend</h3><p>Skulls come from missions, event milestones, Zapspitta’s Quest, Blood Tithe, Faction Boost and free calendar offers. The shop also has a free daily claim of 5 skulls.</p></div><div><h3>Spending unlocks more rewards</h3><p>Spending <strong>1,845 skulls</strong> reaches the last of 20 spending crates. Together they contain 150 random World Eater shards, coins and the event theme. These are event rewards, not extra items delivered with the shipment.</p></div></div>
+      </section>
+
+      <section id="world-eaters" aria-labelledby="world-eaters-heading">
+        <div class="skull-section-heading"><div><p class="skull-eyebrow">Hero Guide breakdown</p><h2 id="world-eaters-heading">Which World Eaters should you prioritize?</h2></div><img src={factionIcon('World Eaters').src} alt="World Eaters" width="64" height="64" loading="lazy" /></div>
+        <p class="skull-lead"><strong>Khârn first, then Wrask for Chaos survivability.</strong> Tarvakh and Azkor depend on the team you are building. An unlock, promotion or missing teammate can change your personal order.</p>
+        <div class="skull-hero-list">
+          {priorities.map(({hero, portrait, href, label, role, copy}, i) => <article class="skull-hero-row" id={hero.slug}>
+            <img src={portrait.src} alt="" width="175" height="230" loading="lazy" />
+            <div class="skull-hero-copy">
+              <p class:list={['skull-priority', { 'skull-priority-top': i < 2 }]}>{label}</p>
+              <h3><a href={href}>{hero.name}</a><span>{role}</span></h3>
+              <p>{copy}</p>
+              <a class="skull-guide-link" href={href}>Read {hero.name}’s Hero Guide</a>
+            </div>
+            <dl class="skull-ratings">
+              <div class="skull-overall"><dt>Overall</dt><dd>{hero.overall.final_score?.toFixed(2)}</dd></div>
+              <div><dt>Raid</dt><dd>{hero.overall.raid?.toFixed(1)}</dd></div>
+              <div><dt>War</dt><dd>{hero.overall.war?.toFixed(1)}</dd></div>
+              <div><dt>Horde</dt><dd>{hero.overall.horde?.toFixed(1)}</dd></div>
+            </dl>
+          </article>)}
+        </div>
+        <p class="skull-small skull-score-note">Scores are out of 10 and come from the current Hero Guides. Overall also includes Popularity and any guide bonus. Shard offers depend on that character’s progression.</p>
+      </section>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const code = document.querySelector<HTMLInputElement>('#creator-code');
+  const copy = document.querySelector<HTMLButtonElement>('#copy-creator-code');
+  const status = document.querySelector<HTMLElement>('#copy-code-status');
+  if (code && copy && status) {
+    code.addEventListener('click', () => code.select());
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.value);
+        copy.textContent = 'Copied!';
+        status.textContent = 'TERMINUS copied to clipboard.';
+      } catch {
+        code.focus();
+        code.select();
+        copy.textContent = 'Copy';
+        status.textContent = 'Code selected. Use your device’s copy command.';
+      }
+    });
+  }
+</script>

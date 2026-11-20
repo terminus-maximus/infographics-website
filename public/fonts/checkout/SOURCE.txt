@@ -1,0 +1,3 @@
+Roboto Condensed, the font family used by the Tacticus Web Store.
+Font and SIL Open Font License from https://github.com/google/fonts/tree/main/ofl/robotocondensed
+Downloaded 2026-11-19. Scoped to the Skull Harvest checkout demonstration.

@@ -3,19 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import RequiredHeroIcons from "../components/campaign/RequiredHeroIcons.astro";
-import { gameUpdate144, newsArticles } from "../data/news";
+import NewsCard from "../components/news/NewsCard.astro";
+import { newsArticles, skullHarvest } from "../data/news";
 import { discoveryGraphics } from "../data/graphics";
 
-const gameUpdateCaption = "Details about the newest heroes & game events";
 const featuredContent = [
-  {
-    title: "Campaign Event Guide",
-    description: "Next CE begins Nov 19",
-    href: "/campaign-event",
-    image: "/images/web/campaign-event.webp",
-    imageAlt: "Campaign Event Guide infographic",
-    height: 392,
-  },
   {
     title: "Daras HRE Guide",
     description: "Unlock the new Night Lords hero on Nov 22",
@@ -23,6 +15,14 @@ const featuredContent = [
     image: "/images/web/hre.webp",
     imageAlt: "Daras Hero Release Event guide infographic",
     height: 393,
+  },
+  {
+    title: "Skull Harvest Event Guide",
+    description: skullHarvest.description,
+    href: skullHarvest.href,
+    image: skullHarvest.webImage,
+    imageAlt: "Skull Harvest event guide infographic",
+    height: 394,
   },
 ];
 
@@ -102,22 +102,7 @@ const aboutPages = discoveryGraphics.filter((g) => g.category === "about");
   <section id="news" data-ga4-nav-location="home_news">
     <h2><a class="news-heading-link" href="/news/" data-ga4-nav-section="news">News</a></h2>
     <div class="card-grid">
-      {newsArticles.map((article) => (
-        <a class="card" href={article.href} data-ga4-nav-section="news">
-          <div class="card-image-wrap">
-            <img
-              src={article.thumbnail}
-              alt={`${article.title} infographic preview`}
-              class="card-image"
-              loading="lazy"
-            />
-          </div>
-          <div class="card-title-row">
-            <h3>{article.title}</h3>
-          </div>
-          <p>{article.href === gameUpdate144.href ? gameUpdateCaption : article.description}</p>
-        </a>
-      ))}
+      {newsArticles.map((article) => <NewsCard article={article} />)}
     </div>
   </section>
 

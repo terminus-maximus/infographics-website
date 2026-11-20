@@ -5,7 +5,8 @@ const {
 	title = "Terminus Maximus Infographics",
 	description = "Tacticus infographics, strategy guides, Guild Raid resources, and Legendary Event planning.",
 	image = "/images/web/TerminusMaximusInfographics.webp",
-	url
+	url,
+	showReferralWidget = true
 } = Astro.props;
 
 const siteUrl = "https://terminusmaximus.com";
@@ -122,7 +123,7 @@ const absoluteUrl = new URL(url || Astro.url.pathname, siteUrl).href;
 		<slot />
 		<div class="floating-widgets">
 			<slot name="floating-widgets" />
-			<ReferralSupportWidget />
+			{showReferralWidget && <ReferralSupportWidget />}
 		</div>
 	</body>
 </html>

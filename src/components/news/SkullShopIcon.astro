@@ -1,0 +1,47 @@
+---
+interface Props {
+  icon: string;
+  category: string;
+  rarity?: string;
+  size?: number;
+}
+const { icon, category, rarity = '', size = 52 } = Astro.props;
+const tier = rarity.toLowerCase();
+const frame = (name: string) => `/images/news/skull-harvest/shop/frames/${name}.webp`;
+const layers: { src: string; art?: boolean }[] = [];
+let artScale = 1;
+
+// Match the game's separate rarity layers, as used by Planner's item renderers.
+if (category === 'Orbs') {
+  layers.push({ src: frame(`ui_hero_ascension_orbs_${tier}`) });
+  artScale = .6;
+} else if (category === 'Badges') {
+  layers.push({ src: frame(`ui_ability_badges_${tier}`) });
+  artScale = .7;
+} else if (category === 'Upgrades') {
+  layers.push({ src: frame('ui_underlay_upgrades') });
+  artScale = .78;
+} else if (category === 'Equipment' || category === 'Relics') {
+  artScale = .7;
+} else if (category === 'Shards') {
+  layers.push({ src: frame(rarity === 'Mythic' ? 'ui_icon_character_shard_mythic' : 'ui_icon_character_shard_default') });
+  artScale = .76446;
+}
+layers.push({ src: icon, art: true });
+if (category === 'Upgrades') layers.push({ src: frame(`ui_frame_upgrades_${tier}`) });
+if (category === 'Equipment' || category === 'Relics') layers.push({ src: frame(`ui_frame_items_${tier}`) });
+if (category === 'Relics') layers.push({ src: frame('ui_frame_items_relic') });
+---
+
+<span class="skull-shop-icon" data-icon-category={category} data-icon-rarity={rarity} aria-hidden="true" style={`--icon-size: ${size}px; --icon-art-size: ${artScale * 100}%`}>
+  {layers.map(layer => <img class:list={['skull-icon-layer', { 'skull-icon-art': layer.art }]} src={layer.src} alt="" width="128" height="128" loading="lazy" />)}
+</span>
+
+<style>
+  .skull-shop-icon { position: relative; display: inline-block; width: var(--icon-size); height: var(--icon-size); flex-shrink: 0; }
+  .skull-shop-icon > .skull-icon-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; margin: auto; pointer-events: none; }
+  .skull-shop-icon > .skull-icon-art { width: var(--icon-art-size); height: var(--icon-art-size); }
+  .skull-shop-icon[data-icon-category='Orbs'] > .skull-icon-layer:not(.skull-icon-art),
+  .skull-shop-icon[data-icon-category='Shards'] > .skull-icon-layer:not(.skull-icon-art) { object-fit: fill; }
+  .skull-shop-icon[data-icon-category='Shards'] > .skull-icon-art { border-radius: 50%; }
+</style>
