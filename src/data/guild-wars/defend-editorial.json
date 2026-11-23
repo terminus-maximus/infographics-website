@@ -1,21 +1,34 @@
 {
-  "edition": "October 2026",
+  "edition": "November 2026",
   "title": "Guild War Top 10 Defend Teams",
   "description": "Explore ten Guild War defend teams and their most common counters.",
   "cardDescription": "Guild War Top 10 Defend Teams and their most common counters",
-  "captureDate": "October 6, 2026",
-  "reportDate": "October 18, 2026",
-  "presentationDate": "October 19, 2026",
+  "captureDate": "November 13, 2026",
+  "reportDate": "November 21, 2026",
+  "presentationDate": "November 22, 2026",
   "infographic": {
     "png": "/images/guild-wars-defend.png",
     "webp": "/images/web/guild-wars-defend.webp",
     "thumbnail": "/images/thumbnails/guild-wars-defend-thumb.png",
     "width": 700,
-    "height": 394,
+    "height": 397,
     "thumbnailWidth": 600,
-    "thumbnailHeight": 337
+    "thumbnailHeight": 340
   },
   "teams": [
+    {
+      "id": "D_ed8c5c5018c5d1",
+      "title": "Death Guard v1",
+      "anchor": "death-guard",
+      "heroes": [
+        "deathBlightlord",
+        "deathRotbone",
+        "deathTyphus",
+        "blackAbaddon",
+        "blackObliterator"
+      ],
+      "sourceTitle": "Death Guard · Volk/Abaddon"
+    },
     {
       "id": "D_bef6bbe9854322",
       "title": "Z’kar Psykers",
@@ -29,27 +42,28 @@
       ]
     },
     {
-      "id": "D1",
-      "title": "Death Guard",
-      "anchor": "death-guard",
+      "id": "D_debd99b36f0b2a",
+      "title": "Mech Medley",
+      "anchor": "mech-medley",
       "heroes": [
-        "deathBlightlord",
-        "deathRotbone",
-        "deathBlightbringer",
-        "deathTyphus",
-        "thousTerminator"
-      ]
+        "admecDestroyer",
+        "necroChronomancer",
+        "necroOverlord",
+        "necroPlasmancer",
+        "votanMemnyr"
+      ],
+      "sourceTitle": "Necron support"
     },
     {
-      "id": "D_08f961bcca1238",
+      "id": "D_3e6edeb13c74bb",
       "title": "GSC",
       "anchor": "genestealers",
       "heroes": [
         "genesKelermorph",
         "genesPrimus",
         "genesBiophagus",
-        "genesMagus",
-        "emperLucius"
+        "genesPatriarch",
+        "genesMagus"
       ]
     },
     {
@@ -65,15 +79,27 @@
       ]
     },
     {
-      "id": "D_a266055437f16b",
-      "title": "DG Ranged",
-      "anchor": "dg-ranged",
+      "id": "D_3cc9a9305f2d82",
+      "title": "Necrons",
+      "anchor": "necrons",
       "heroes": [
-        "blackObliterator",
-        "tauMarksman",
-        "deathBlightlord",
-        "deathRotbone",
-        "blackAbaddon"
+        "necroDestroyer",
+        "necroOverlord",
+        "necroSpyder",
+        "necroPlasmancer",
+        "necroWarden"
+      ]
+    },
+    {
+      "id": "D_d41523e1a57cab",
+      "title": "Orks/T’au",
+      "anchor": "orks-tau",
+      "heroes": [
+        "orksWarboss",
+        "orksRuntherd",
+        "tauAunShi",
+        "tauCrisis",
+        "tauMarksman"
       ]
     },
     {
@@ -89,16 +115,17 @@
       ]
     },
     {
-      "id": "D_585c5519ff4ba9",
-      "title": "Mechs",
-      "anchor": "mechs",
+      "id": "D_d5844d7393f6fe",
+      "title": "Death Guard v2",
+      "anchor": "death-guard-v2",
       "heroes": [
-        "admecMarshall",
-        "admecManipulus",
-        "necroSpyder",
-        "orksWarboss",
-        "tauCrisis"
-      ]
+        "deathBlightlord",
+        "deathRotbone",
+        "deathBlightbringer",
+        "emperLucius",
+        "tauMarksman"
+      ],
+      "sourceTitle": "Death Guard · Lucius/Sho’syl"
     },
     {
       "id": "D5",
@@ -110,30 +137,6 @@
         "orksBigMek",
         "orksKillaKan",
         "orksNob"
-      ]
-    },
-    {
-      "id": "D9",
-      "title": "Custodes",
-      "anchor": "custodes",
-      "heroes": [
-        "custoBladeChampion",
-        "custoTrajann",
-        "worldKharn",
-        "spaceBlackmane",
-        "bloodDante"
-      ]
-    },
-    {
-      "id": "D_23f1d8cc6ad754",
-      "title": "AdMech",
-      "anchor": "admech",
-      "heroes": [
-        "admecRuststalker",
-        "admecMarshall",
-        "admecManipulus",
-        "admecDominus",
-        "tauMarksman"
       ]
     }
   ],
@@ -151,17 +154,6 @@
       ]
     },
     {
-      "id": "c_eldarAutarch_tauCrisis_tauFarsight_ultraCalgar",
-      "title": "Revas OW",
-      "anchor": "tau-team",
-      "core": [
-        "tauCrisis",
-        "ultraCalgar",
-        "tauFarsight",
-        "eldarAutarch"
-      ]
-    },
-    {
       "id": "c_custoBladeChampion_spaceBlackmane_tauAunShi_worldKharn",
       "title": "Double Howl",
       "anchor": "double-howl",
@@ -170,16 +162,6 @@
         "tauAunShi",
         "worldKharn",
         "custoBladeChampion"
-      ]
-    },
-    {
-      "id": "c_deathTyphus_spaceStormcaller_thousTerminator",
-      "title": "Z’kar Psykers",
-      "anchor": "zkar-psykers",
-      "core": [
-        "deathTyphus",
-        "thousTerminator",
-        "spaceStormcaller"
       ]
     },
     {
@@ -206,6 +188,27 @@
       ]
     },
     {
+      "id": "c_deathTyphus_spaceStormcaller_thousTerminator",
+      "title": "Z’kar Psykers",
+      "anchor": "zkar-psykers",
+      "core": [
+        "deathTyphus",
+        "thousTerminator",
+        "spaceStormcaller"
+      ]
+    },
+    {
+      "id": "c_eldarAutarch_tauCrisis_tauFarsight_ultraCalgar",
+      "title": "Revas OW",
+      "anchor": "tau-team",
+      "core": [
+        "tauCrisis",
+        "ultraCalgar",
+        "tauFarsight",
+        "eldarAutarch"
+      ]
+    },
+    {
       "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
       "title": "Imperial Summons",
       "anchor": "imperials",
@@ -217,6 +220,30 @@
       ]
     },
     {
+      "id": "c_necroChronomancer_necroDestroyer_necroOverlord_necroPlasmancer_necroSpyder",
+      "title": "Necrons · Thothmek",
+      "anchor": "necrons",
+      "core": [
+        "necroChronomancer",
+        "necroOverlord",
+        "necroSpyder",
+        "necroDestroyer",
+        "necroPlasmancer"
+      ]
+    },
+    {
+      "id": "c_darkaAzrael_darkaCompanion_darkaHellblaster_darkaSternguard_darkaTerminator",
+      "title": "Dark Angels · Ramus",
+      "anchor": "dark-angels",
+      "core": [
+        "darkaTerminator",
+        "darkaAzrael",
+        "darkaCompanion",
+        "darkaHellblaster",
+        "darkaSternguard"
+      ]
+    },
+    {
       "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
       "title": "Death Guard",
       "anchor": "death-guard",
@@ -225,29 +252,7 @@
         "deathRotbone",
         "blackAbaddon"
       ]
-    },
-    {
-      "id": "c_orksBigMek_orksKillaKan_orksNob_orksRuntherd_orksWarboss",
-      "title": "Orks",
-      "anchor": "waaagh",
-      "core": [
-        "orksWarboss",
-        "orksRuntherd",
-        "orksBigMek",
-        "orksNob",
-        "orksKillaKan"
-      ]
-    },
-    {
-      "id": "c_admecDominus_admecManipulus_admecMarshall_admecRuststalker",
-      "title": "AdMech",
-      "anchor": "admech",
-      "core": [
-        "admecRuststalker",
-        "admecMarshall",
-        "admecManipulus",
-        "admecDominus"
-      ]
     }
-  ]
+  ],
+  "statsUpdatedOn": "2026-11-22"
 }

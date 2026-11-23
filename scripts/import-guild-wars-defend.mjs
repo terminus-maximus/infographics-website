@@ -68,7 +68,8 @@ export async function normalizeDefendReport(report, recordsPath) {
     const source = report.defenders.find(d => d.defender_id === meta.id);
     assert(source, `Missing defense: ${meta.id}`);
     assert.equal(canonical(source.heroes), canonical(meta.heroes), `Defender membership changed: ${meta.title}`);
-    assert.equal(source.name, meta.title, `Defender name changed: ${meta.id}`);
+    // Approved display names can change without rewriting the frozen analytical report.
+    assert.equal(source.name, meta.sourceTitle ?? meta.title, `Defender source name changed: ${meta.id}`);
     if (source.captain) {
       assert.deepEqual(source.heroes, meta.heroes, `Defender portrait order changed: ${meta.id}`);
       assert.equal(meta.heroes[0], source.captain);
@@ -209,7 +210,7 @@ export async function normalizeDefendReport(report, recordsPath) {
     const name = (overrides[id] || existing?.name || source.short_name || source.name).replaceAll('√¢', 'â').replaceAll('√Ç', 'Â').replaceAll('√õ', 'Û');
     return [id, { name, image, kind: source.kind }];
   }));
-  return { schemaVersion: 2, scope: { seasons: report.config.seasons, tiers: report.config.battlefields, wars: wars.size, records: seen.size, eligibleAttacks: eligible, exactDefenseAttempts: report.summary.selected_attempts }, units, teams };
+  return { schemaVersion: 2, scope: { seasons: report.config.seasons, tiers: report.config.battlefields, wars: wars.size, records: seen.size, eligibleAttacks: eligible, exactDefenseAttempts: report.summary.selected_attempts }, support: report.config.support, units, teams };
 }
 
 async function main() {

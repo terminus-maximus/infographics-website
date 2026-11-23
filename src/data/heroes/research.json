@@ -7818,7 +7818,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
           }
         ],
         "status": "current"
@@ -8213,6 +8213,26 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Mech Medley Defense Team",
+            "url": "/guild-wars/defend/#mech-medley"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "admecDominus": [
@@ -8372,26 +8392,6 @@
             "url": "/guild-raid/boss-meta/#tervigon-meta-team"
           }
         ]
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "AdMech Defense Team",
-            "url": "/guild-wars/defend/#admech"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
-          }
-        ],
-        "status": "current"
       }
     ],
     "admecManipulus": [
@@ -8579,34 +8579,6 @@
           }
         ],
         "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Mechs Defense Team",
-            "url": "/guild-wars/defend/#mechs"
-          },
-          {
-            "label": "AdMech Defense Team",
-            "url": "/guild-wars/defend/#admech"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
-          },
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
-          }
-        ],
-        "status": "current"
       }
     ],
     "admecMarshall": [
@@ -8766,34 +8738,6 @@
             "url": "/guild-raid/boss-meta/#tervigon-meta-team"
           }
         ]
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Mechs Defense Team",
-            "url": "/guild-wars/defend/#mechs"
-          },
-          {
-            "label": "AdMech Defense Team",
-            "url": "/guild-wars/defend/#admech"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
-          },
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
-          }
-        ],
-        "status": "current"
       }
     ],
     "admecRuststalker": [
@@ -8929,26 +8873,6 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/attackers.json.teams[7].flexAnalysis.flex"
-          }
-        ],
-        "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "AdMech Defense Team",
-            "url": "/guild-wars/defend/#admech"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -10173,14 +10097,14 @@
         "role": "team",
         "appearances": [
           {
-            "label": "DG Ranged Defense Team",
-            "url": "/guild-wars/defend/#dg-ranged"
+            "label": "Death Guard v1 Defense Team",
+            "url": "/guild-wars/defend/#death-guard"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
           }
         ],
         "status": "current"
@@ -10558,12 +10482,12 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Z’kar Psykers Defense Team",
-            "url": "/guild-wars/defend/#zkar-psykers"
+            "label": "Death Guard v1 Defense Team",
+            "url": "/guild-wars/defend/#death-guard"
           },
           {
-            "label": "DG Ranged Defense Team",
-            "url": "/guild-wars/defend/#dg-ranged"
+            "label": "Z’kar Psykers Defense Team",
+            "url": "/guild-wars/defend/#zkar-psykers"
           }
         ],
         "evidence": [
@@ -10573,7 +10497,7 @@
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
           }
         ],
         "status": "current"
@@ -11077,20 +11001,12 @@
           {
             "label": "Blood Angels Defense Team",
             "url": "/guild-wars/defend/#blood-angels"
-          },
-          {
-            "label": "Custodes Defense Team",
-            "url": "/guild-wars/defend/#custodes"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
-          },
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
           }
         ],
         "status": "current"
@@ -11292,7 +11208,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
           }
         ],
         "status": "current"
@@ -11510,7 +11426,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
           }
         ],
         "status": "current"
@@ -11658,11 +11574,11 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
           }
         ],
         "status": "current"
@@ -11807,7 +11723,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
           }
         ],
         "status": "current"
@@ -12315,26 +12231,6 @@
           }
         ],
         "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Custodes Defense Team",
-            "url": "/guild-wars/defend/#custodes"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
-          }
-        ],
-        "status": "current"
       }
     ],
     "custoKyrus": [
@@ -12681,26 +12577,6 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/attackers.json.teams[1].flex"
-          }
-        ],
-        "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Custodes Defense Team",
-            "url": "/guild-wars/defend/#custodes"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -13601,14 +13477,14 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Death Guard Defense Team",
-            "url": "/guild-wars/defend/#death-guard"
+            "label": "Death Guard v2 Defense Team",
+            "url": "/guild-wars/defend/#death-guard-v2"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -13755,22 +13631,22 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Death Guard Defense Team",
+            "label": "Death Guard v1 Defense Team",
             "url": "/guild-wars/defend/#death-guard"
           },
           {
-            "label": "DG Ranged Defense Team",
-            "url": "/guild-wars/defend/#dg-ranged"
+            "label": "Death Guard v2 Defense Team",
+            "url": "/guild-wars/defend/#death-guard-v2"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -14084,22 +13960,22 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Death Guard Defense Team",
+            "label": "Death Guard v1 Defense Team",
             "url": "/guild-wars/defend/#death-guard"
           },
           {
-            "label": "DG Ranged Defense Team",
-            "url": "/guild-wars/defend/#dg-ranged"
+            "label": "Death Guard v2 Defense Team",
+            "url": "/guild-wars/defend/#death-guard-v2"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -14244,12 +14120,12 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Z’kar Psykers Defense Team",
-            "url": "/guild-wars/defend/#zkar-psykers"
+            "label": "Death Guard v1 Defense Team",
+            "url": "/guild-wars/defend/#death-guard"
           },
           {
-            "label": "Death Guard Defense Team",
-            "url": "/guild-wars/defend/#death-guard"
+            "label": "Z’kar Psykers Defense Team",
+            "url": "/guild-wars/defend/#zkar-psykers"
           }
         ],
         "evidence": [
@@ -15704,18 +15580,18 @@
             "url": "/guild-wars/defend/#zkar-psykers"
           },
           {
-            "label": "GSC Defense Team",
-            "url": "/guild-wars/defend/#genestealers"
+            "label": "Death Guard v2 Defense Team",
+            "url": "/guild-wars/defend/#death-guard-v2"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -16070,7 +15946,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
           }
         ],
         "status": "current"
@@ -16202,11 +16078,11 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
           }
         ],
         "status": "current"
@@ -16372,7 +16248,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
           }
         ],
         "status": "current"
@@ -16546,6 +16422,26 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/editorial.json.teams[0].core"
+          }
+        ],
+        "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "GSC Defense Team",
+            "url": "/guild-wars/defend/#genestealers"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
           }
         ],
         "status": "current"
@@ -16757,11 +16653,11 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
           }
         ],
         "status": "current"
@@ -17085,6 +16981,26 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Mech Medley Defense Team",
+            "url": "/guild-wars/defend/#mech-medley"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "necroDestroyer": [
@@ -17302,6 +17218,26 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Necrons Defense Team",
+            "url": "/guild-wars/defend/#necrons"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "necroOverlord": [
@@ -17486,6 +17422,34 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Mech Medley Defense Team",
+            "url": "/guild-wars/defend/#mech-medley"
+          },
+          {
+            "label": "Necrons Defense Team",
+            "url": "/guild-wars/defend/#necrons"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+          },
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "necroPlasmancer": [
@@ -17648,6 +17612,34 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/editorial.json.teams[7].core"
+          }
+        ],
+        "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Mech Medley Defense Team",
+            "url": "/guild-wars/defend/#mech-medley"
+          },
+          {
+            "label": "Necrons Defense Team",
+            "url": "/guild-wars/defend/#necrons"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+          },
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
           }
         ],
         "status": "current"
@@ -17892,14 +17884,14 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Mechs Defense Team",
-            "url": "/guild-wars/defend/#mechs"
+            "label": "Necrons Defense Team",
+            "url": "/guild-wars/defend/#necrons"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
           }
         ],
         "status": "current"
@@ -18028,6 +18020,26 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/attackers.json.teams[7].flexAnalysis.flex"
+          }
+        ],
+        "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Necrons Defense Team",
+            "url": "/guild-wars/defend/#necrons"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[5].heroes"
           }
         ],
         "status": "current"
@@ -18173,7 +18185,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -18328,7 +18340,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -18445,7 +18457,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -18598,6 +18610,10 @@
         "role": "team",
         "appearances": [
           {
+            "label": "Orks/T’au Defense Team",
+            "url": "/guild-wars/defend/#orks-tau"
+          },
+          {
             "label": "Orks Defense Team",
             "url": "/guild-wars/defend/#orks"
           }
@@ -18605,7 +18621,11 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
+          },
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -18935,8 +18955,8 @@
         "role": "team",
         "appearances": [
           {
-            "label": "Mechs Defense Team",
-            "url": "/guild-wars/defend/#mechs"
+            "label": "Orks/T’au Defense Team",
+            "url": "/guild-wars/defend/#orks-tau"
           },
           {
             "label": "Orks Defense Team",
@@ -18950,7 +18970,7 @@
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[7].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
           }
         ],
         "status": "current"
@@ -19150,26 +19170,6 @@
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/editorial.json.teams[1].core"
-          }
-        ],
-        "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Custodes Defense Team",
-            "url": "/guild-wars/defend/#custodes"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -19650,6 +19650,26 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Orks/T’au Defense Team",
+            "url": "/guild-wars/defend/#orks-tau"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "tauCrisis": [
@@ -20002,14 +20022,14 @@
             "url": "/guild-wars/defend/#crimj"
           },
           {
-            "label": "Mechs Defense Team",
-            "url": "/guild-wars/defend/#mechs"
+            "label": "Orks/T’au Defense Team",
+            "url": "/guild-wars/defend/#orks-tau"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[3].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
           },
           {
             "kind": "published_team",
@@ -20492,22 +20512,22 @@
         "role": "team",
         "appearances": [
           {
-            "label": "DG Ranged Defense Team",
-            "url": "/guild-wars/defend/#dg-ranged"
+            "label": "Orks/T’au Defense Team",
+            "url": "/guild-wars/defend/#orks-tau"
           },
           {
-            "label": "AdMech Defense Team",
-            "url": "/guild-wars/defend/#admech"
+            "label": "Death Guard v2 Defense Team",
+            "url": "/guild-wars/defend/#death-guard-v2"
           }
         ],
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[4].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[6].heroes"
           },
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[9].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
           }
         ],
         "status": "current"
@@ -22225,17 +22245,9 @@
           {
             "label": "Z’kar Psykers Defense Team",
             "url": "/guild-wars/defend/#zkar-psykers"
-          },
-          {
-            "label": "Death Guard Defense Team",
-            "url": "/guild-wars/defend/#death-guard"
           }
         ],
         "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
-          },
           {
             "kind": "published_team",
             "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
@@ -24344,6 +24356,26 @@
           }
         ],
         "status": "current"
+      },
+      {
+        "category": "war",
+        "slug": "defend",
+        "title": "Guild War Defenders",
+        "url": "/guild-wars/defend/",
+        "role": "team",
+        "appearances": [
+          {
+            "label": "Mech Medley Defense Team",
+            "url": "/guild-wars/defend/#mech-medley"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "published_team",
+            "path": "src/data/guild-wars/defend-editorial.json.teams[2].heroes"
+          }
+        ],
+        "status": "current"
       }
     ],
     "votanUthar": [
@@ -25051,26 +25083,6 @@
           }
         ],
         "status": "current"
-      },
-      {
-        "category": "war",
-        "slug": "defend",
-        "title": "Guild War Defenders",
-        "url": "/guild-wars/defend/",
-        "role": "team",
-        "appearances": [
-          {
-            "label": "Custodes Defense Team",
-            "url": "/guild-wars/defend/#custodes"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[8].heroes"
-          }
-        ],
-        "status": "current"
       }
     ],
     "worldTerminator": [
@@ -25231,7 +25243,7 @@
         "evidence": [
           {
             "kind": "published_team",
-            "path": "src/data/guild-wars/defend-editorial.json.teams[0].heroes"
+            "path": "src/data/guild-wars/defend-editorial.json.teams[1].heroes"
           }
         ],
         "status": "current"

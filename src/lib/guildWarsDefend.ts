@@ -5,6 +5,7 @@ import type { Unit } from './guildWars';
 
 export const units = source.units as Record<string, Unit>;
 export const scope = source.scope;
+export const support = source.support;
 export const teams = source.teams.map(data => {
   const meta = editorial.teams.find(team => team.id === data.id);
   if (!meta) throw new Error(`Missing defender metadata for ${data.id}`);

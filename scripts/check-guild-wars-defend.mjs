@@ -25,7 +25,20 @@ assert(!/Heroes exactly|Complete Team exactly|Hard Maps|Popular flex options|Fle
 assert.equal(all(page, /Team Tips coming soon/g).length, 10);
 assert.equal(data.teams.length, 10);
 assert.equal(data.teams.reduce((n, t) => n + t.attempts, 0), data.scope.exactDefenseAttempts);
-if (meta.edition === 'October 2026') {
+if (meta.edition === 'November 2026') {
+  assert.equal(new Set(data.teams.flatMap(t => t.heroes)).size, 36);
+  assert.deepEqual(data.scope, { seasons: [26, 27, 28], tiers: [4, 5], wars: 194, records: 105806, eligibleAttacks: 81960, exactDefenseAttempts: 3747 });
+  assert.deepEqual(data.support, { attacks: 100, wars: 10, guilds: 5, max_war_share: .2, max_guild_share: .5 });
+  assert.deepEqual(data.teams.map(t => [t.failures, t.attempts]), [[42,107],[157,402],[46,126],[320,948],[398,1355],[35,121],[33,129],[27,113],[27,114],[51,332]]);
+  assert.deepEqual(meta.teams.map(t => t.title), ['Death Guard v1','Z’kar Psykers','Mech Medley','GSC','CRIMJ','Necrons','Orks/T’au','Blood Angels','Death Guard v2','Orks']);
+  assert.equal(data.teams.flatMap(t => t.counters).reduce((n, c) => n + c.attempts, 0), 8234);
+  assert.deepEqual(data.teams.map(t => t.flex.length), [7,1,0,2,0,0,0,0,3,0]);
+  const evidenceCounts = Object.fromEntries(['Supported', 'Low support', 'No data'].map(label => [label, data.teams.flatMap(t => t.counters).filter(c => c.evidence === label).length]));
+  assert.deepEqual(evidenceCounts, { Supported: 46, 'Low support': 53, 'No data': 1 });
+  assert(strip(page).includes('10 complete teams, 36 distinct heroes.'));
+  assert(strip(page).includes('at least 100 attempts, 10 wars and 5 known defending guilds'));
+  assert(!/Graphic coming soon/i.test(page));
+} else if (meta.edition === 'October 2026') {
   assert.equal(new Set(data.teams.flatMap(t => t.heroes)).size, 35);
   assert.deepEqual(data.scope, { seasons: [25, 26, 27], tiers: [4, 5], wars: 162, records: 89116, eligibleAttacks: 69521, exactDefenseAttempts: 2275 });
   assert.deepEqual(data.teams.map(t => [t.failures, t.attempts]), [[127,274],[44,109],[30,95],[294,983],[28,99],[24,89],[32,141],[43,277],[12,103],[3,105]]);

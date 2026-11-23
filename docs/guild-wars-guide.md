@@ -1,5 +1,18 @@
 # Guild Wars guide maintenance
 
+## November 22, 2026 — Defender S26–28 refresh
+
+The Defender page now uses the accepted revision-2 November report at `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/defender_core_discovery/2026-11-21-s26-s28-r2/exports/report_data.json`. It covers 105,806 recorded attacks, 81,960 eligible attacks across 194 observed wars, and 3,747 exact selected-defense attempts. Ten defenses use 36 distinct heroes; the 100-attempt / 10-war / 5-guild starting support threshold allows ten under the existing overlap and concentration caps.
+
+The approved display names are **Death Guard v1** (#1), **Mech Medley** (#3), and **Death Guard v2** (#9). `sourceTitle` binds each renamed entry to its frozen report identity without modifying the source. Unchanged team identities retain their anchors; the stronger Death Guard keeps `#death-guard`. The full hero orders, all headline/Meds Up rates, 20 Battlefield breakdowns, MoW frequencies, 13 supported swaps, and exploratory Observed Defenses are refreshed. MoW popularity still includes excluded outcomes and unknown Machines in its denominator; headline performance remains exact five plus selected MoW.
+
+`counterTeams` now pins the November attacker roster, including Necrons/Thothmek and Dark Angels/Ramus. All 100 counter cells reconcile to the report. The website retains its previously requested total-clears-first ordering and four metrics, distinct from the report's supported-first top-five recommendations. There are 46 Supported, 53 Low support and one No data cells; sparse results remain labelled. Counter matching continues to require the whole attacking core and at least three of the five defenders, with any Machines.
+
+Only Defender team relationships were refreshed in the Hero Guides; all scores, Attack relationships and non-War links remain unchanged. Dan supplied updated PNG/WebP/thumbnail artwork while the statistics update was in progress. Those files are preserved as supplied; display dimensions now match the 700×397 WebP and 600×340 thumbnail. The header uses the PNG revision date, 2026-11-22, from artwork commit `a449074688eb5ebdc43c8011c8e64ebf07b065f0`. No pending-graphic text was added. Dan approved committing and pushing the November Defender page and final graphic on November 22, 2026.
+
+Validation: the 197-page production build, Astro checks, source reconciliation, Hero Guide memberships/anchors and independent observed-configuration audit pass. Responsive review covers 1440/1024/390 widths, all ordered portraits, 100 counters, disclosures, links, image loading and page overflow. Evidence lives in the research review's `defender-website-update/` directory. The October and Attack-only notes below are historical.
+
+
 ## November 22, 2026 — Attack S26–28 refresh
 
 Accepted Attack source: `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/attacker_core_discovery/2026-11-21-s26-s28-r2/exports/report-data.json`. The importer supports its `exports/` layout and uses sibling `assets/`. Scope is S26–28/BF4–5, 81,960 eligible attacks, 194 observed wars; 42 exclusive core heroes. Necrons/Thothmek and Dark Angels/Ramus replace Orks and AdMech. Main metrics, MoW lists, exact observed teams and map/Medicae results all come from the same frozen report.

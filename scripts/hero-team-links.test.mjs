@@ -36,8 +36,8 @@ test('memberships follow published teams, choices and visible flex limits',()=>{
 test('current Re’vas and Abaddon memberships retain multiple named roles',()=>{
   const links=loadTeamGuideRelationships();
   const war=id=>links[id]?.filter(g=>g.category==='war').flatMap(g=>g.appearances.map(a=>a.label));
-  assert.deepEqual(war('tauCrisis'),['Revas OW Attack Team','Necrons · Thothmek Attack Team — Flex','CRIMJ Defense Team','Mechs Defense Team']);
-  assert.deepEqual(war('blackAbaddon'),['Death Guard Attack Team','DG Ranged Defense Team']);
+  assert.deepEqual(war('tauCrisis'),['Revas OW Attack Team','Necrons · Thothmek Attack Team — Flex','CRIMJ Defense Team','Orks/T’au Defense Team']);
+  assert.deepEqual(war('blackAbaddon'),['Death Guard Attack Team','Death Guard v1 Defense Team']);
   assert.equal(links.emperKakophonist,undefined);
   assert.equal(links.blackAbaddon.find(g=>g.category==='raid').appearances[0].label,'Alternate on Avatar');
 });
