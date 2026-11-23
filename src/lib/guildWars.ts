@@ -4,6 +4,7 @@ import editorial from '../data/guild-wars/editorial.json';
 export interface Unit { name: string; kind: string; image: string | null }
 export interface Counts { attempts: number; clears: number; failures: number; perfect: number; withDeaths: number; wars: number; clearRate: number | null }
 export interface Usage { unit: string; attempts: number; share: number | null }
+export interface FlexUsage extends Usage { denominator: number; clears: number; clearRate: number | null; wars: number }
 export interface Evidence extends Counts { share: number | null; team?: string[]; unit?: string; mow?: string; omittedCore?: string[] }
 export interface EvidenceSet { total: number; rows: Evidence[] }
 export interface ObservedSet {
@@ -15,11 +16,12 @@ export interface Team extends Counts {
   id: string; core: string[]; interval: number[] | null; perfectPerAttempt: number | null;
   metrics: Record<string, Metric>;
   contexts: (Counts & { map: string; medicae: string })[];
-  flex: Usage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet; observed: ObservedSet;
+  flex: FlexUsage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet; observed: ObservedSet;
   flexAnalysis?: Counts & {
     mode: string; minimumCoreMembers: number; completeCoreAttempts: number; replacementAttempts: number;
     metrics: Record<string, Metric>; contexts: (Counts & { map: string; medicae: string })[];
-    flex: Usage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet;
+    flex: FlexUsage[]; combinations: EvidenceSet; mows: EvidenceSet; teamMows: EvidenceSet;
+    replacementLineups: (Counts & { team: string[]; omittedCore: string[]; replacement: string })[];
   };
 }
 export const units = source.units as Record<string, Unit>;

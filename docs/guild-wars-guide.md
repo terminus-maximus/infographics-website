@@ -1,5 +1,18 @@
 # Guild Wars guide maintenance
 
+## November 22, 2026 — Attack S26–28 refresh
+
+Accepted Attack source: `/Users/danfoster01/Documents/Websites/TacticusXYZ/analysis/attacker_core_discovery/2026-11-21-s26-s28-r2/exports/report-data.json`. The importer supports its `exports/` layout and uses sibling `assets/`. Scope is S26–28/BF4–5, 81,960 eligible attacks, 194 observed wars; 42 exclusive core heroes. Necrons/Thothmek and Dark Angels/Ramus replace Orks and AdMech. Main metrics, MoW lists, exact observed teams and map/Medicae results all come from the same frozen report.
+
+Conditional summaries always feature Winged Prime for GSC and Cezare for Blood Angels; other teams show five most-used options without the previous 3.8% visibility cutoff. Each summary separates usage numerator/denominator from clears/attempts, rate and wars. All flex evidence retains every option with limited-sample and historical cross-core labels. Five-core teams additionally show all actual replacement lineups and omitted heroes. Full-core headline and MoW denominators stay separate. `visibleFlexOptions` is shared with Hero Guide relationships; this update changes War guide links only, preserving scores and all non-War relationships.
+
+Defense remains October. `defend-editorial.json.counterTeams` pins its historical counter labels and ordered heroes; refresh this mapping with its accepted source when updating Defense. Still-current cores link to Attack sections; removed cores remain identified without dead fragment links. Defender counts and rankings are unchanged.
+
+Dan finalized the November artwork in the existing PNG/WebP/thumbnail paths. The header uses the shared `InfographicUpdated` component and the PNG's committed revision date from `infographicRevisions.json`. Statistics provenance remains in `statsUpdatedOn`; the seasonal scope and edition appear in Methods & Definitions.
+
+Validation: production prebuild checks and all 197 pages pass; Astro reports zero errors/warnings; both source reconciliation checks pass, including unchanged October Defender counts. Hero guide relationships and built anchors pass. Responsive checks at 1440/1024/390 verify all ten visible summaries, full flex/replacement evidence, portrait order, images and no page overflow. Hash-bound evidence is in the research review’s `website-update/validation.json`. Earlier sections document historical behavior and are superseded for Attack.
+
+
 The local dataset builds independently of the analysis project. Normal `npm run dev` and `npm run build` never read or refresh the research source. No new package is required.
 
 ## October 24, 2026 — Observed Teams and Observed Defenses

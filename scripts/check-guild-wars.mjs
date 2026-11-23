@@ -85,19 +85,31 @@ for (const [index, meta] of editorial.teams.entries()) {
   }
   for (const row of t.flex) assert.equal(row.share, row.attempts / t.attempts);
   assert.equal(t.flex.reduce((n,r) => n + r.attempts,0), (5-t.core.length)*t.attempts);
-  const usageLists = all(section, /<ul class="usage-options"[^>]*>([\s\S]*?)<\/ul>/g);
+  const usageLists = all(section, /<ul class="usage-options(?: flex-options)?"[^>]*>([\s\S]*?)<\/ul>/g);
   assert.equal(usageLists.length, 2);
   for (const [listIndex, candidates, minimum, limit] of [[0, t.flexAnalysis?.flex || t.flex, .038, 5], [1, t.mows.rows, .1, 3]]) {
     const displayed = all(usageLists[listIndex][1], /data-unit-id="([^"]+)"/g).map(([, id]) => id);
-    const eligible = candidates.filter(row => row.share !== null && row.share >= minimum).slice(0, limit);
+    const eligible = listIndex === 0 ? (meta.featuredReplacements?.length ? meta.featuredReplacements.map(id => candidates.find(row => row.unit === id)) : candidates.slice(0, 5)) : candidates.filter(row => row.share !== null && row.share >= minimum).slice(0, limit);
     assert.deepEqual(displayed, eligible.map(row => row.unit), `${meta.title} usage cutoff/order differs`);
     for (const row of eligible) {
-      assert(strip(usageLists[listIndex][1]).includes(`${row.attempts.toLocaleString('en-US')} attacks`));
+      assert(strip(usageLists[listIndex][1]).includes(listIndex === 0 ? `${ratio(row.attempts, row.denominator)} attacks` : `${row.attempts.toLocaleString('en-US')} attacks`));
       assert(strip(usageLists[listIndex][1]).includes(percent(row.share)));
+      if (listIndex === 0) {
+        assert(strip(usageLists[0][1]).includes(percent(row.clearRate)));
+        assert(strip(usageLists[0][1]).includes(`${ratio(row.clears, row.attempts)} clears / attempts`));
+        assert(strip(usageLists[0][1]).includes(`${row.wars.toLocaleString('en-US')} wars`));
+      }
     }
   }
   checkObserved(section, t.observed, meta.core, data.units);
-  const tables = all(section, /<tbody\b[^>]*>([\s\S]*?)<\/tbody>/g);
+  const flexRows = t.flexAnalysis?.flex || t.flex;
+  assert.deepEqual(all(section, /data-flex-evidence-id="([^"]+)"/g).map(([,id]) => id), flexRows.map(row => row.unit));
+  for (const row of flexRows) {
+    assert.equal(row.share, fraction(row.attempts, row.denominator));
+    assert.equal(row.clearRate, fraction(row.clears, row.attempts));
+    assert.equal(row.denominator, t.flexAnalysis?.attempts || t.attempts);
+  }
+  const tables = all(section.slice(section.indexOf('<div class="evidence"')), /<tbody\b[^>]*>([\s\S]*?)<\/tbody>/g);
   assert.equal(tables.length, 2);
   assert.equal(all(tables[1][1], /<tr\b[^>]*>/g).length, t.contexts.length);
   if (t.flexAnalysis) {
@@ -106,6 +118,22 @@ for (const [index, meta] of editorial.teams.entries()) {
     for (const row of f.flex) assert.equal(row.share,row.attempts/f.attempts);
     assert(bodyText.includes('Each attack counts once.'));
   }
+}
+
+if (editorial.edition === 'November 2026') {
+  assert.deepEqual(data.scope, { seasons: [26,27,28], tiers: [4,5], wars: 194, eligibleAttacks: 81960 });
+  assert.deepEqual(data.teams.map(t => [t.clears,t.attempts]), [[2713,2865],[932,1034],[2240,2569],[1726,1984],[440,510],[220,256],[394,460],[172,201],[68,81],[2320,2786]]);
+  assert.equal(new Set(data.teams.flatMap(t => t.core)).size, 42);
+  assert(editorial.teams.some(t => t.core.includes('darkaSternguard')));
+  assert(editorial.teams.some(t => t.core.includes('necroChronomancer')));
+  assert(!editorial.teams.some(t => t.core.includes('spaceBaldr')));
+  const gsc = data.teams[0].flexAnalysis.flex.find(r => r.unit === 'tyranWingedPrime');
+  const blood = data.teams[2].flexAnalysis.flex.find(r => r.unit === 'bloodTerminator');
+  assert.deepEqual([gsc.attempts,gsc.denominator,gsc.clears,gsc.wars],[948,5032,910,180]);
+  assert.deepEqual([blood.attempts,blood.denominator,blood.clears,blood.wars],[763,3997,643,185]);
+  assert(page.includes('Last updated on') && page.includes('datetime="2026-11-22"'));
+  assert(!page.includes('October 2026 infographic'));
+  assert(!page.includes('3.8% occurrence'));
 }
 
 // Accepted October V9: full-core counts and independent four-of-five cohorts.
@@ -143,6 +171,20 @@ if (process.argv[2]) {
   for (const t of data.teams) {
     const raw = report.cards.find(c => c.core_id === t.id);
     for (const [cohort, sourceCohort] of [[t,raw], ...(t.flexAnalysis ? [[t.flexAnalysis,raw.flex_analysis]] : [])]) {
+    for (const row of cohort.flex) {
+      const option = sourceCohort.individual_flex.find(r => r.unit === row.unit);
+      if (option) assert.deepEqual([row.attempts,row.denominator,row.clears,row.clearRate,row.wars], [option.attacks,sourceCohort.attacks,option.clears,option.clear_rate,option.wars]);
+      else assert.deepEqual([row.attempts,row.clears,row.clearRate,row.wars],[0,0,null,0]);
+    }
+    if (cohort.replacementLineups) {
+      assert.equal(cohort.replacementLineups.length, sourceCohort.variants.filter(row => row.omitted_core.length).length);
+      for (const row of cohort.replacementLineups) {
+        const original = sourceCohort.variants.find(v => JSON.stringify(v.team) === JSON.stringify(row.team));
+        assert.deepEqual(row.omittedCore, original.omitted_core);
+        assert.deepEqual(row.team.filter(id => !t.core.includes(id)), [row.replacement]);
+        assert.deepEqual([row.attempts,row.clears,row.wars],[original.attacks,original.clears,original.wars]);
+      }
+    }
     for (const [key, sourceKey] of [['combinations','variants'],['mows','mows'],['teamMows','exact']]) {
       const identity = r => JSON.stringify([r.team || [], r.unit || '', r.mow || '']);
       const ordered = [...sourceCohort[sourceKey]].sort((a,b) => b.attacks-a.attacks || (b.clear_rate ?? -1)-(a.clear_rate ?? -1) || (identity(a)<identity(b)?-1:identity(a)>identity(b)?1:0));

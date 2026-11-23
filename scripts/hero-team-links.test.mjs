@@ -29,14 +29,14 @@ test('memberships follow published teams, choices and visible flex limits',()=>{
   ]);
   assert.equal(result.h0[1].appearances[0].label,'Example Attack Team');
   assert.equal(result.h0[2].appearances[0].label,'Defense Defense Team');
-  assert.deepEqual(Object.keys(result).sort(),['h0','h4','h5','h6','h7','h8']);
+  assert.deepEqual(Object.keys(result).sort(),['h0','h3','h4','h5','h6','h7']);
   assert.deepEqual(result.h4[0].appearances,[{label:'Example Attack Team — Flex',url:'/guild-wars/attack/#example-flex'}]);
 });
 
 test('current Re’vas and Abaddon memberships retain multiple named roles',()=>{
   const links=loadTeamGuideRelationships();
   const war=id=>links[id]?.filter(g=>g.category==='war').flatMap(g=>g.appearances.map(a=>a.label));
-  assert.deepEqual(war('tauCrisis'),['Revas OW Attack Team','AdMech Attack Team — Flex','CRIMJ Defense Team','Mechs Defense Team']);
+  assert.deepEqual(war('tauCrisis'),['Revas OW Attack Team','Necrons · Thothmek Attack Team — Flex','CRIMJ Defense Team','Mechs Defense Team']);
   assert.deepEqual(war('blackAbaddon'),['Death Guard Attack Team','DG Ranged Defense Team']);
   assert.equal(links.emperKakophonist,undefined);
   assert.equal(links.blackAbaddon.find(g=>g.category==='raid').appearances[0].label,'Alternate on Avatar');

@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { visibleFlexOptions } from '../src/lib/guildWarsFlex.mjs';
 
 const normalize = value => value.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 // These Replay Library tokens differ from the LocalDatabase identity aliases.
@@ -70,7 +71,7 @@ export function teamGuideRelationships({heroes,bosses,bossTeams,attackData,attac
       label:`${team.title} Attack Team`,url:`${attackGuide.url}#${team.anchor}`,
     },`src/data/guild-wars/editorial.json.teams[${index}].core`);
     const flexField = team.flexAnalysis?.flex ? 'flexAnalysis.flex' : 'flex';
-    const flex = (team.flexAnalysis?.flex || team.flex).filter(option=>option.share!==null && option.share>=0.038).slice(0,5);
+    const flex = visibleFlexOptions(team);
     for (const option of flex) add(option.unit,attackGuide,{
       label:`${team.title} Attack Team — Flex`,url:`${attackGuide.url}#${team.anchor}-flex`,
     },`src/data/guild-wars/attackers.json.teams[${dataIndex}].${flexField}`);

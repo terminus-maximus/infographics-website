@@ -1,0 +1,63 @@
+---
+import UnitPortrait from './UnitPortrait.astro';
+import { units, teams, number, percent, ratio, type GuideTeam, type FlexUsage } from '../../lib/guildWars';
+import { heroHrefById } from '../../lib/heroes.mjs';
+import { visibleFlexOptions } from '../../lib/guildWarsFlex.mjs';
+interface Props { team: GuideTeam }
+const { team } = Astro.props;
+const cohort = team.flexAnalysis;
+const options = cohort?.flex || team.flex;
+const featured = team.featuredReplacements || [];
+const visible: FlexUsage[] = visibleFlexOptions(team);
+const owner = (id: string) => teams.find(other => other.id !== team.id && other.core.includes(id));
+const lineups = cohort?.replacementLineups || [];
+const ordered = (ids: string[]) => [...team.core.filter(id => ids.includes(id)), ...ids.filter(id => !team.core.includes(id))];
+---
+<p class="cohort-note">{cohort ? <>Replacements for one core hero. Usage is out of {number(cohort.attempts)} distinct attacks with at least four of these five heroes: {number(cohort.completeCoreAttempts)} with the full core and {number(cohort.replacementAttempts)} with a replacement. Each attack counts once.</> : <>Options for the {5 - team.core.length} open {team.core.length === 4 ? 'slot' : 'slots'}. Usage is out of all {number(team.attempts)} eligible full-core attacks.</>}</p>
+<ul class="usage-options flex-options">
+  {visible.map(option => <li data-flex-id={option.unit}>
+    <UnitPortrait id={option.unit} linkToGuide />
+    {featured.includes(option.unit) && <span class="featured">Named replacement</span>}
+    <span class="usage"><strong>{percent(option.share)} usage</strong><span>{ratio(option.attempts, option.denominator)} attacks</span></span>
+    <span class="performance">{option.attempts ? <><strong>{percent(option.clearRate)} clear rate</strong><span>{ratio(option.clears, option.attempts)} clears / attempts</span><span>{number(option.wars)} wars</span></> : <span>No observations in this window</span>}</span>
+    {option.attempts > 0 && option.attempts < 20 && <small>Limited sample</small>}
+    {owner(option.unit) && <small>Historical flex · {owner(option.unit)!.title} core</small>}
+  </li>)}
+</ul>
+{!visible.length && <p>No observed flex options in this window.</p>}
+<details class="flex-evidence"><summary>All flex evidence</summary><div class="disclosure-body">
+  <p>Every observed option, in usage order. Clear rates describe the lineups containing that option; they do not measure the effect of a substitution. Samples below 20 attempts are limited.</p>
+  <div class="flex-scroll" role="region" tabindex="0" aria-label={`${team.title} complete flex evidence, horizontally scrollable`}>
+    <table><caption>{cohort ? 'Single-hero replacements' : 'Open-slot options'} · {number(options.length)} options</caption>
+      <thead><tr><th scope="col">Option</th><th scope="col">Usage</th><th scope="col">Clear rate</th><th scope="col">Clears / attempts</th><th scope="col">Wars</th></tr></thead>
+      <tbody>{options.map(option => <tr data-flex-evidence-id={option.unit}><th scope="row"><UnitPortrait id={option.unit} compact linkToGuide />{owner(option.unit) && <small>Historical flex · {owner(option.unit)!.title} core</small>}{featured.includes(option.unit) && <small>Named replacement</small>}</th><td>{percent(option.share)}<small>{ratio(option.attempts, option.denominator)} attacks</small></td><td>{percent(option.clearRate)}{option.attempts < 20 && <small>{option.attempts ? 'Limited sample' : 'No observations'}</small>}</td><td>{ratio(option.clears, option.attempts)}</td><td>{number(option.wars)}</td></tr>)}</tbody>
+    </table>
+  </div>
+  {cohort && <details class="replacement-lineups"><summary>Replacement lineups</summary><div class="disclosure-body">
+    <p>Actual five-hero lineups with one core hero replaced. Machines of War are combined here; the Observed Teams table separates them.</p>
+    <div class="flex-scroll" role="region" tabindex="0" aria-label={`${team.title} replacement lineups, horizontally scrollable`}>
+      <table><caption>{number(lineups.length)} observed replacement lineups</caption><thead><tr><th scope="col">Replacement</th><th scope="col">Actual lineup</th><th scope="col">Clear rate</th><th scope="col">Clears / attempts</th><th scope="col">Wars</th></tr></thead>
+        <tbody>{lineups.map(row => <tr><th scope="row">{row.omittedCore.map(id => units[id].name).join(', ')} → {units[row.replacement].name}</th><td class="lineup-names">{ordered(row.team).map((id, index) => <>{index > 0 && ' + '}<a href={heroHrefById(id)}>{units[id].name}</a></>)}</td><td>{percent(row.clearRate)}{row.attempts < 20 && <small>Limited sample</small>}</td><td>{ratio(row.clears, row.attempts)}</td><td>{number(row.wars)}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </div></details>}
+</div></details>
+<style>
+  .cohort-note, .disclosure-body p { font-size: .85rem; line-height: 1.6; color: #bbb; }
+  .flex-options { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; margin: 0; list-style: none; }
+  .flex-options li { display: flex; flex: 1 1 142px; max-width: 190px; flex-direction: column; align-items: center; gap: .6rem; padding: .9rem .6rem; border: 1px solid #333; border-radius: 8px; background: #161616; text-align: center; }
+  .usage, .performance { display: flex; flex-direction: column; gap: .25rem; font-size: .75rem; line-height: 1.5; color: #bbb; }
+  .usage strong { color: #f5d76e; font-size: 1rem; font-weight: 500; }
+  .performance strong { color: #eee; font-weight: 500; }
+  .featured { color: #f5d76e; font-size: .72rem; }
+  small { display: block; color: #aaa; font-size: .72rem; line-height: 1.5; }
+  .flex-evidence { margin-top: 1rem; }
+  .flex-scroll { max-width: 100%; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .8rem; text-align: left; font-variant-numeric: tabular-nums; }
+  caption { text-align: left; margin-bottom: .75rem; color: #bbb; }
+  th, td { border-bottom: 1px solid #333; padding: .75rem; white-space: nowrap; }
+  th { font-weight: 500; }
+  thead th { color: #d4af37; background: #202020; }
+  .lineup-names { min-width: 300px; max-width: 440px; white-space: normal; line-height: 1.7; }
+  @media(max-width:480px) { .flex-options { gap: .5rem; } .flex-options li { flex-basis: 130px; max-width: none; } }
+</style>

@@ -1,8 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
-import InfographicUpdated from '../../components/InfographicUpdated.astro';
 import Footer from '../../components/Footer.astro';
+import InfographicUpdated from '../../components/InfographicUpdated.astro';
 import RecommendationSections from '../../components/RecommendationSections.astro';
 import TeamSection from '../../components/guild-wars/TeamSection.astro';
 import FloatingTeamList from '../../components/guild-wars/FloatingTeamList.astro';
@@ -38,6 +38,7 @@ const span = (values: number[]) => values.join('–');
               <li><strong>10 distinct team cores.</strong> Three to five heroes per core, with no repeated core heroes. Historical flex choices may overlap other cores.</li>
               <li><strong>Ordered by Clear Rate.</strong> Highest unrounded win rate first, using the accepted rosters and complete-core results across multiple wars. A win defeats all five defenders, with or without attacker losses.</li>
               <li><strong>Complete battle records.</strong> Cleanup attacks and incomplete records were excluded; both wins and failures counted.</li>
+              <li><strong>New-team evidence:</strong> At least 75 full-core attempts across 50 wars and five recorded attacking guilds, with no more than 20% from one war or 50% from one guild. Established cores retain their accepted eligibility.</li>
             </ul>
           </div>
         </details>
@@ -65,7 +66,7 @@ const span = (values: number[]) => values.join('–');
               <div><dt>Meds Up</dt><dd>At least one recorded Defender Health (Medicae) buff.</dd></div>
               <div><dt>Meds Up clear rate</dt><dd>Meds Up clears / Meds Up attempts, including failures.</dd></div>
               <div><dt>Perfect share of Meds Up wins</dt><dd>Perfect Meds Up clears / all Meds Up clears.</dd></div>
-              <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core. GSC, Blood Angels and Orks flex usage uses separately labelled pools with at least four of their five core heroes.</dd></div>
+              <div><dt>Flex / MoW usage</dt><dd>Matching attacks / all eligible attacks containing the core. Five-hero teams use a separate at-least-four-of-five pool for replacement usage. MoW usage always requires the full core.</dd></div>
             </dl>
           </div>
         </details>
@@ -74,7 +75,7 @@ const span = (values: number[]) => values.join('–');
           <div class="disclosure-body">
             <ul class="methodology-notes">
               <li><strong>Core teams:</strong> Main metrics, Machines of War and Hard Maps require every listed core hero. Eligible attacks exclude cleanups and include failures. Five-hero cores use a separate four-of-five pool for popular flex and Observed Teams; each attack counts once in that pool.</li>
-              <li><strong>Popular flex:</strong> Up to five heroes are shown, ranked by observed usage, with at least 3.8% occurrence. Shares can add up to more than 100% because teams have multiple flex slots.</li>
+              <li><strong>Conditional flex:</strong> Named replacements are featured for GSC and Blood Angels; other teams show up to five most-used options. All observed options remain in All flex evidence, including limited samples. Shares can add up to more than 100% because teams have multiple flex slots. Historical flex identifies heroes assigned to another ranked core.</li>
               <li><strong>Machines of War:</strong> Up to three options are shown, ranked by observed usage, with at least 10% occurrence. Recorded support does not establish that its abilities were activated.</li>
               <li><strong>MoW not recorded:</strong> The source does not identify a Machine of War; this does not confirm that none was deployed.</li>
               <li><strong>Observed Teams:</strong> Each row is an exact five-hero lineup plus its recorded Machine of War. Three- and four-hero cores require every core hero; five-hero cores also include single-hero swaps. Win Rate is clears / attempts for that exact combination.</li>

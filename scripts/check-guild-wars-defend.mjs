@@ -86,9 +86,13 @@ for (const [index, team] of data.teams.entries()) {
     const row = counterRows[i][0];
     assert(row.includes(`data-counter-id="${counter.id}"`));
     const linked = attackMeta.teams.find(t => t.id === counter.id);
-    assert(row.includes(`href="/guild-wars/attack/#${linked.anchor}"`));
-    assert(attack.includes(`id="${linked.anchor}"`));
-    assert.deepEqual(all(row, /<img[^>]*src="([^"]+)"/g).map(([, src]) => src), linked.core.map(id => data.units[id].image), 'Counter portrait order');
+    const historical = meta.counterTeams.find(t => t.id === counter.id);
+    assert(historical, 'Historical counter identity must survive Attack refreshes');
+    if (linked) {
+      assert(row.includes(`href="/guild-wars/attack/#${linked.anchor}"`));
+      assert(attack.includes(`id="${linked.anchor}"`));
+    } else assert(!row.includes('href="/guild-wars/attack/#'), 'Removed cores must not link to a missing section');
+    assert.deepEqual(all(row, /<img[^>]*src="([^"]+)"/g).map(([, src]) => src), historical.core.map(id => data.units[id].image), 'Counter portrait order');
     assert.equal(counter.perfectPerAttempt, fraction(counter.perfect, counter.attempts));
     assert.equal(counter.perfectPerClear, fraction(counter.perfect, counter.clears));
     assert.deepEqual(all(row, /<td[^>]*>([\s\S]*?)<\/td>/g).map(([, cell]) => strip(cell)), [

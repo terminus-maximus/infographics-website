@@ -9,9 +9,10 @@ export const teams = source.teams.map(data => {
   const meta = editorial.teams.find(team => team.id === data.id);
   if (!meta) throw new Error(`Missing defender metadata for ${data.id}`);
   const counters = data.counters.map(counter => {
-    const attack = attackEditorial.teams.find(team => team.id === counter.id);
-    if (!attack) throw new Error(`Missing Attack page link for ${counter.id}`);
-    return { ...counter, title: attack.title, heroes: attack.core, href: `/guild-wars/attack/#${attack.anchor}` };
+    const attack = editorial.counterTeams.find(team => team.id === counter.id);
+    if (!attack) throw new Error(`Missing historical counter metadata for ${counter.id}`);
+    const current = attackEditorial.teams.find(team => team.id === counter.id);
+    return { ...counter, title: attack.title, heroes: attack.core, href: current ? `/guild-wars/attack/#${current.anchor}` : undefined };
   });
   const tiers = [...data.tiers].sort((a, b) => a.tier - b.tier);
   const commonTier = tiers.reduce((mostCommon, tier) => tier.attempts > mostCommon.attempts ? tier : mostCommon);

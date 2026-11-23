@@ -10,7 +10,7 @@ import { observedTeams } from './guild-wars-observed.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const readJSON = path => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
 const editorial = readJSON('src/data/guild-wars/defend-editorial.json');
-const attackEditorial = readJSON('src/data/guild-wars/editorial.json');
+const attackEditorial = { teams: readJSON('src/data/guild-wars/defend-editorial.json').counterTeams };
 const attackData = readJSON('src/data/guild-wars/attackers.json');
 const characters = readJSON('src/data/campaigns/characters.json').characters;
 const canonical = heroes => [...heroes].sort().join('|');

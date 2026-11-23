@@ -73,6 +73,12 @@ export function normalizeReport(report, mapping = editorial) {
   const teams = mapping.teams.map(meta => {
     const card = cards.get(meta.id);
     assert.deepEqual([...meta.core].sort(), [...card.core].sort(), `Core membership changed: ${meta.id}`);
+    const presentation = report.config?.team_presentation?.[card.family_id];
+    if (presentation) {
+      assert.deepEqual(meta.core, presentation.display_order, `Hero presentation changed: ${meta.id}`);
+      assert.equal(meta.title, presentation.name, `Team name changed: ${meta.id}`);
+    }
+    assert.deepEqual(meta.featuredReplacements || [], card.featured_replacements || [], `Named replacements changed: ${meta.id}`);
     if (card.display_order) {
       assert.deepEqual(meta.core, card.display_order, `Hero presentation changed: ${meta.id}`);
       assert.equal(meta.core[0], card.captain, `Captain changed: ${meta.id}`);
@@ -109,7 +115,7 @@ export function normalizeReport(report, mapping = editorial) {
       stats(row);
       assert(!card.core.includes(row.unit), 'Core member listed as flex');
       usedUnits.add(row.unit);
-      return { unit: row.unit, attempts: row.attacks, share: fraction(row.attacks, base.attempts) };
+      return { unit: row.unit, attempts: row.attacks, denominator: base.attempts, share: fraction(row.attacks, base.attempts), clears: row.clears, clearRate: row.clear_rate, wars: row.wars };
     });
     assert.equal(new Set(flex.map(r => r.unit)).size, flex.length);
     assert.equal(sum(flex, 'attempts'), (5 - card.core.length) * base.attempts, 'Flex slot totals');
@@ -182,17 +188,26 @@ export function normalizeReport(report, mapping = editorial) {
         const containing = source.variants.filter(v => v.team.includes(row.unit));
         for (const key of ['attacks','clears','failures']) assert.equal(sum(containing,key),row[key], 'Replacement evidence differs from actual lineups');
         usedUnits.add(row.unit);
-        return { unit: row.unit, attempts: row.attacks, share: fraction(row.attacks,cohort.attempts) };
+        return { unit: row.unit, attempts: row.attacks, denominator: cohort.attempts, share: fraction(row.attacks,cohort.attempts), clears: row.clears, clearRate: row.clear_rate, wars: row.wars };
       });
       assert.equal(new Set(flexRows.map(row => row.unit)).size,flexRows.length);
       assert.equal(sum(flexRows,'attempts'),source.replacement_attacks,'Replacement slot totals');
       flexAnalysis = { mode: source.mode, minimumCoreMembers: 4, ...cohort,
         completeCoreAttempts: base.attempts, replacementAttempts: source.replacement_attacks,
         metrics: flexMetrics, contexts: flexContexts, flex: flexRows,
+        replacementLineups: [...source.variants].sort(usageOrder).filter(row => row.omitted_core.length).map(row => ({
+          ...stats(row), team: row.team, omittedCore: row.omitted_core,
+          replacement: row.team.find(id => !card.core.includes(id)),
+        })),
         combinations: evidence(source.variants,'variants',cohort,4),
         mows: evidence(source.mows,'mows',cohort,4), teamMows: evidence(source.exact,'exact',cohort,4) };
     }
     if (card.core.length === 5) assert(card.flex_analysis, 'Five-hero cores require the complete replacement cohort');
+    for (const id of meta.featuredReplacements || []) {
+      usedUnits.add(id);
+      const options = flexAnalysis?.flex || flex;
+      if (!options.some(row => row.unit === id)) options.push({ unit: id, attempts: 0, denominator: flexAnalysis?.attempts ?? base.attempts, share: fraction(0, flexAnalysis?.attempts ?? base.attempts), clears: 0, clearRate: null, wars: 0 });
+    }
     const observed = observedTeams((card.flex_analysis || card).exact.map(row => {
       const counts = stats(row);
       return { team: row.team, mow: row.mow, attempts: counts.attempts, wins: counts.clears, wars: counts.wars };
@@ -226,12 +241,13 @@ function main() {
   const [input, output = 'src/data/guild-wars/attackers.json'] = process.argv.slice(2);
   assert(input, 'Usage: node scripts/import-guild-wars.mjs /explicit/path/to/index.html [output.json]');
   const reportPath = resolve(input);
+  const assetRoot = basename(dirname(reportPath)) === 'exports' ? resolve(dirname(reportPath), '..') : dirname(reportPath);
   const report = readReport(reportPath);
   const data = normalizeReport(report);
   // Validate every planned copy before writing data or assets. Never write into the source project.
   const copies = Object.entries(data.units).filter(([,u]) => u.image?.startsWith('/images/guild-wars/')).map(([id, unit]) => {
-    const source = resolve(dirname(reportPath), report.registry[id].image);
-    assert(!relative(dirname(reportPath), source).startsWith('..'), 'Portrait must be a sibling report asset');
+    const source = resolve(assetRoot, report.registry[id].image);
+    assert(!relative(assetRoot, source).startsWith('..'), 'Portrait must be a sibling report asset');
     assert(existsSync(source), `Missing canonical portrait: ${id}`);
     return [source, resolve(root, `public${unit.image}`)];
   });

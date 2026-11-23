@@ -34,7 +34,7 @@ const mowOptions = team.mows.filter(option => option.share !== null && option.sh
           <thead><tr><th scope="col">Attack team · clears ↓</th><th scope="col">Clear Rate</th><th scope="col">Meds Up<br />Clear Rate</th><th scope="col">Perfect share<br />of Attempts</th><th scope="col">Perfect share<br />of Clears</th></tr></thead>
           <tbody>{team.counters.map(counter => <tr data-counter-id={counter.id}>
             <th scope="row" class="counter-team">
-              <a href={counter.href}>{counter.title}</a>
+              {counter.href ? <a href={counter.href}>{counter.title}</a> : <span>{counter.title}</span>}
               <div class="counter-portraits" aria-label="Required attack heroes">{counter.heroes.map(id => <a href={heroHrefById(id)} aria-label={`${units[id].name} Hero Guide`} title={`${units[id].name} Hero Guide`} data-unit-id={id} data-hero-guide-link><img src={units[id].image!} alt="" width="32" height="32" loading="lazy" /></a>)}</div>
               <span class="counter-count">{number(counter.clears)} clears <span aria-hidden="true">·</span> {number(counter.wars)} wars</span>
               <span class:list={['evidence-label', { 'low-support': counter.evidence !== 'Supported' }]}>{counter.evidence}</span>

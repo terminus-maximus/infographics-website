@@ -136,5 +136,118 @@
         "tauMarksman"
       ]
     }
+  ],
+  "counterTeams": [
+    {
+      "id": "c_genesBiophagus_genesKelermorph_genesMagus_genesPatriarch_genesPrimus",
+      "title": "GSC",
+      "anchor": "genestealers",
+      "core": [
+        "genesKelermorph",
+        "genesPrimus",
+        "genesBiophagus",
+        "genesPatriarch",
+        "genesMagus"
+      ]
+    },
+    {
+      "id": "c_eldarAutarch_tauCrisis_tauFarsight_ultraCalgar",
+      "title": "Revas OW",
+      "anchor": "tau-team",
+      "core": [
+        "tauCrisis",
+        "ultraCalgar",
+        "tauFarsight",
+        "eldarAutarch"
+      ]
+    },
+    {
+      "id": "c_custoBladeChampion_spaceBlackmane_tauAunShi_worldKharn",
+      "title": "Double Howl",
+      "anchor": "double-howl",
+      "core": [
+        "spaceBlackmane",
+        "tauAunShi",
+        "worldKharn",
+        "custoBladeChampion"
+      ]
+    },
+    {
+      "id": "c_deathTyphus_spaceStormcaller_thousTerminator",
+      "title": "Z’kar Psykers",
+      "anchor": "zkar-psykers",
+      "core": [
+        "deathTyphus",
+        "thousTerminator",
+        "spaceStormcaller"
+      ]
+    },
+    {
+      "id": "c_bloodDante_bloodDeathCompany_bloodIntercessor_bloodMephiston_bloodSanguinary",
+      "title": "Blood Angels",
+      "anchor": "blood-angels",
+      "core": [
+        "bloodMephiston",
+        "bloodDeathCompany",
+        "bloodIntercessor",
+        "bloodSanguinary",
+        "bloodDante"
+      ]
+    },
+    {
+      "id": "c_blackPossession_thousAhriman_thousInfernalMaster_thousTzaangor",
+      "title": "Yaz/Abrax",
+      "anchor": "yaz-abrax",
+      "core": [
+        "thousInfernalMaster",
+        "thousTzaangor",
+        "thousAhriman",
+        "blackPossession"
+      ]
+    },
+    {
+      "id": "c_adeptCelestine_adeptHospitaller_astraDreir_astraYarrick",
+      "title": "Imperial Summons",
+      "anchor": "imperials",
+      "core": [
+        "adeptCelestine",
+        "adeptHospitaller",
+        "astraDreir",
+        "astraYarrick"
+      ]
+    },
+    {
+      "id": "c_blackAbaddon_deathBlightlord_deathRotbone",
+      "title": "Death Guard",
+      "anchor": "death-guard",
+      "core": [
+        "deathBlightlord",
+        "deathRotbone",
+        "blackAbaddon"
+      ]
+    },
+    {
+      "id": "c_orksBigMek_orksKillaKan_orksNob_orksRuntherd_orksWarboss",
+      "title": "Orks",
+      "anchor": "waaagh",
+      "core": [
+        "orksWarboss",
+        "orksRuntherd",
+        "orksBigMek",
+        "orksNob",
+        "orksKillaKan"
+      ]
+    },
+    {
+      "id": "c_admecDominus_admecManipulus_admecMarshall_admecRuststalker",
+      "title": "AdMech",
+      "anchor": "admech",
+      "core": [
+        "admecRuststalker",
+        "admecMarshall",
+        "admecManipulus",
+        "admecDominus"
+      ]
+    }
   ]
 }
